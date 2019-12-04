@@ -13,7 +13,7 @@
 
 certificates*
 
-
+temp/*
 
 *.out
 *.aux
