@@ -1,0 +1,31 @@
+SlidesSourceHeader: LaTeX-materials/Curriculum-800-Cryptography/Lecture-header.tex
+HomeworkSourceHeader: LaTeX-materials/Curriculum-800-Cryptography/Homework-header.tex
+LoadTopicBundles: topiclists/topicBundles.txt
+
+Chapter: Large number arithmetics
+Section: Decimal large integer arithmetics
+Topic: The four arithmetic operations base 10
+
+Title: <lectureTag>&#8466;</lectureTag>Addition and subtraction in base 10
+SlidesLatex: \section{Addition}
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-review
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-with-table-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-with-table-columns-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-2
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-3
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-4
+SlidesSource: freecalc/modules/large-integers/integer-addition-algorithm
+SlidesLatex: \section{Subtraction}
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-review
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-one-digit-positive-result-example-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-one-digit-positive-result-with-table-example-1
+
+Topic: Addition
+Title: One digit addition base 10
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-with-table-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-with-table-columns-example-1
+
+

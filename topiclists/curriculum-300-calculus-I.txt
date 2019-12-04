@@ -1,0 +1,61 @@
+SlidesSourceHeader: LaTeX-materials/Curriculum-300-Calculus-I/Lecture-header.tex
+HomeworkSourceHeader: LaTeX-materials/Curriculum-300-Calculus-I/Homework-header.tex
+LoadTopicBundles: topiclists/topicBundles.txt
+
+Chapter: Prerequistes
+Section: Precalculus prerequisites
+Topic: Precalculus prerequisites, full lecture
+TopicBundle: PrecalculusPrerequisites_ReviewBasicFunctions_Theory
+Topic: Function composition
+
+Title: Type 1:  Composing fractional linear transformations
+Problem: problems/Functions-composing-fractional-linear-1.html
+SlidesSource: freecalc/modules/precalculus/composition-example-2
+
+
+Section: Trigonometry prerequisites
+TopicBundle: Trigonometry_Theory_ReviewCalcI
+
+Chapter: Limits and continuity
+TopicBundle: LimitsContinuity_TheoryAndExercises
+
+Chapter: Inverse functions and Logarithms
+TopicBundle: InverseFunctions_Basics_TheoryAndExercises
+Section: Problems involving exponents and logarithms.
+Topic: Review of exponents and logarithms, full lecture
+
+TopicBundle: ExponentsLogarithms_ReviewForCalcI_TheoryAndExercises
+
+Chapter: Derivatives
+TopicBundle: Derivatives_BasicRulesNoChainRule_TheoryAndExercises
+
+Section: The chain rule
+TopicBundle: Derivatives_ChainRuleTheory
+TopicBundle: Derivatives_ChainRuleExercises_NoExponentsTrigsLogs
+TopicBundle: Derivatives_ChainRuleExercises_WithTrig
+TopicBundle: Derivatives_ChainRuleExercises_WithExponents
+TopicBundle: Derivatives_ChainRule_WithLogarithms
+TopicBundle: Derivatives_ChainRuleExercises_ArbitraryExponents
+
+Section: The algebra behind derivatives
+TopicBundle: Derivatives_AdvancedTheory_AlgebraBehindDerivatives
+
+Section: Tangents to graphs of functions
+TopicBundle: Derivatives_TangentEquations_ExercisesAndTheory
+Section: Linearizations and differentials
+TopicBundle: LinearizationAndDifferentials_TheoryAndExercises
+
+Section: Implicit derivatives
+TopicBundle: DerivativesImplicit_TheoryAndExercises
+
+
+TopicBundle: DerivativeApplications_OptimizationAndCurveSketchingAndNewtonsMethod_TheoryAndExercises
+
+Chapter: Integration
+TopicBundle: Integration_Basics_ExercisesAndTheory
+TopicBundle: Integration_Basics_FTC_TheoryAndExercises
+
+Chapter: Applications of integration
+Section: Volumes
+TopicBundle: Integration_Volumes_SolidsRevolution_TheoryAndExercises
+
