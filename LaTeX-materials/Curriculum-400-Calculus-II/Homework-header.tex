@@ -1,0 +1,132 @@
+\documentclass{article}
+
+
+\providecommand{\autopstpdfConflictResolutionTemporary}{}
+
+\renewcommand{\autopstpdfConflictResolutionTemporary}{
+\usepackage[
+dvips={-o -Ppdf}, 
+pspdf={
+-dNOSAFER
+-dAutoRotatePages=/None %<-breaks in windows:%
+}, 
+pdfcrop={}, 
+crop=off%without crop=off breaks in windows
+]{auto-pst-pdf}
+}
+
+\usepackage{pgfpages}
+%\mode<handout>{\pgfpagesuselayout{4 on 1}[landscape, border shrink=5mm]}
+
+\addtolength{\hoffset}{-3.5cm}
+\addtolength{\textwidth}{6.8cm}
+\addtolength{\voffset}{-3cm}
+\addtolength{\textheight}{6cm}
+
+%Please keep the following command as a single line.
+%I need the one-line-command to simplify one of my auto-build scripts.
+\usepackage{amsmath, amsfonts, amssymb, verbatim, hyperref, ifthen}
+\usepackage{amsthm}
+\usepackage{longtable}
+\usepackage{etoolbox}
+\usepackage{comment}
+\usepackage{cleveref}
+\usepackage{enumitem}
+%\usepackage{fourier}
+
+\crefformat{footnote}{#2\footnotemark[#1]#3}
+
+\newtoggle{solutions}
+\newtoggle{solutionsExtra}
+\newtoggle{answers}
+
+%Please keep the following command as a single line.
+%I need the one-line-command to simplify one of my auto-build scripts.
+\input{../../freecalc/lectures/example-templates}
+%<-warning this path is relative to the file that uses the \usepackage command, not relative to the style file.
+\renewcommand{\freecalcBaseFolder}{../../freecalc/}
+
+%Please keep the following command as a single line.
+%I need the one-line-command to simplify one of my auto-build scripts.
+\input{../../freecalc/lectures/pstricks-commands}
+%<-warning this path is relative to the file that uses the \usepackage command, not relative to the style file.
+
+\renewcommand{\Re}{\mathrm{Re~}}
+\renewcommand{\Im}{\mathrm{Im~}}
+\newcommand{\doublebrace}[4]{\left\{\begin{array}{ll} #1 & #2 \\#3 & #4  \end{array} \right.}
+\newcommand{\triplebrace}[6]{\left\{\begin{array}{ll} #1 & #2 \\#3 & #4  \\#5 & #6\end{array} \right.}
+
+\newenvironment{solutionEnvironment}%
+{\begin{proof}[\bfseries\upshape Solution]\renewcommand{\qedsymbol}{}}%
+{\end{proof}}%
+\newcommand{\solution}[1]{\iftoggle{solutions}{\begin{solutionEnvironment}#1\end{solutionEnvironment}}{}}
+%solutionExtra is identical to the solution command, except that it useses a different toggle. 
+%The solutionExtra command should only be used for
+%problems that have already extremely similar counterparts solved. 
+%solutionExtra serves to archive LaTeX'ed solution which 
+%are to never be given to the students.
+\newcommand{\solutionExtra}[1]{\iftoggle{solutionsExtra}{\begin{solutionEnvironment}#1\end{solutionEnvironment}}{}}
+
+\newcommand{\homeworkEnd}{\end{enumerate}}
+\newcommand{\homeworkStart}[2]{\title{\course \\ Homework \ #1}\date{%
+\ifthenelse{\equal{#2}{}}{}{%
+Due #2 at \deadline}}%
+\maketitle\begin{enumerate}[]
+}%
+\newcommand{\points}[1]{\stepcounter{enumi}\item[ ({\bf #1 mark\ifthenelse{\equal{#1}{1}}{}{s}}) \arabic{enumi}.]}
+\newcommand{\pointsii}[1]{\stepcounter{enumii}\item[ ({\bf #1 mark\ifthenelse{\equal{#1}{1}}{}{s}}) (\alph{enumii})]}
+%Default answer command
+\newcommand{\answer}[1]{\iftoggle{answers}{ \hfill{~} \rotatebox{180}{\tiny answer: #1}}{}} %
+\newcommand{\hiddenanswer}[1]{\iftoggle{solutions}{ %
+\iftoggle{answers}{ %
+\hfill{~} \rotatebox{180}{\tiny answer: #1}}
+{}} %
+{}} %
+%I am using \renewcommand{\answer} to redo the command to suit my taste; feel free to modify the above line any way you please.
+
+
+% Default course name
+\newcommand{\course}{Freecalc}
+% Default deadline
+\newcommand{\deadline}{ (to be announced)}
+
+\newcommand{\fcProblemRef}{\theenumi.\theenumii}
+\newcommand{\fcSubProblemRef}{\theenumii.\theenumiii}
+
+
+%warning folder paths are relative to the file that uses the includepackage
+
+\renewcommand{\answer}[1]{\iftoggle{answers}{ \hfill{~} \rotatebox{180}{\tiny answer: #1}}{} }
+\renewcommand{\hiddenanswer}{\answer}
+\renewcommand{\points}[1]{\item}
+\renewcommand{\pointsii}[1]{\item}
+\renewcommand{\Arctan}{\arctan}
+\renewcommand{\Arccos}{\arccos}
+\renewcommand{\Arcsin}{\arcsin}
+\renewcommand{\Arccot}{\operatorname{arccot}}
+\renewcommand{\Arcsec}{\operatorname{arcsec}}
+
+
+
+
+
+\renewcommand{\fcProblemRef}{\theenumi.\alph*}
+
+\toggletrue{solutions}
+\toggletrue{answers}
+%\togglefalse{solutions}
+\newcommand{\homeworkOnATopic}[4]{
+\ifnum#3=\currentHW
+\homeworkStart{#2}{#1}
+#4
+\homeworkEnd
+\else
+%
+\fi
+}
+
+\newcommand{\standardHomeworkSubtitle}{asdf}
+
+
+\renewcommand{\course}{Calculus II}
+\newcommand{\tooeasy}{ \textbf{The problem is too easy to appear on a quiz or test. }}

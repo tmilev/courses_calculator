@@ -1,0 +1,90 @@
+\documentclass
+%[handout]
+{beamer}
+\newcommand{\semester}{2019}
+\usepackage[breakwords]{truncate}
+\input{../../freecalc/lectures/example-templates}
+\input{../../freecalc/lectures/system-specific-config-Ubuntu-texlive} %
+\input{../../freecalc/lectures/pstricks-commands}
+\renewcommand{\Arcsin}{\arcsin}
+\renewcommand{\Arccos}{\arccos}
+\renewcommand{\Arctan}{\arctan}
+\renewcommand{\Arccot}{\text{arccot\hspace{0.03cm}}}
+\renewcommand{\Arcsec}{\text{arcsec\hspace{0.03cm}}}
+\renewcommand{\Arccsc}{\text{arccsc\hspace{0.03cm}}}
+\useinnertheme{rounded}
+\useoutertheme{infolines}
+\usecolortheme{orchid}
+\usecolortheme{whale}
+
+
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\setbeamertemplate{navigation symbols}{}
+
+\newcommand{\lect}[4]{
+\ifnum#3=\currentLecture
+  \date{#1}
+  \lecture[#1]{#2}{#3}
+#4
+\else
+%include nothing
+\fi
+}
+
+\setbeamertemplate{headline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{title in head/foot}{\insertsectionhead}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}{\insertsubsectionhead}
+  \end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{date in head/foot}%
+\insertframenumber/\inserttotalframenumber
+  \end{beamercolorbox}
+}
+}
+
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}{\insertshorttitle}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+\AtBeginLecture{%
+\title[{\truncate{4.2cm}{\insertlecture}}]{
+\textbf{\color{green}{Arithmetics}}
+\\
+\textbf{\insertlecture} \\
+{\color{green}{\textbf{calculator-algebra.org}}}
+}
+\author[{\color{green}{\bf calculator-algebra.org}}, Todor Milev]{
+~\\~\\~\\
+\begin{tabular}{c}
+\Large Todor Milev 
+\end{tabular}
+}
+
+
+\date{\insertshortlecture}
+
+\begin{frame}
+\titlepage
+\end{frame}
+}
