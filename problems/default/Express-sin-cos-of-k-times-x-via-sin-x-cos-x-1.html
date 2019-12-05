@@ -1,0 +1,40 @@
+<span class="setCalculatorExamProblem">
+</span>
+Simplify to an expression that depends only on \(\sin x\) and \(\cos x\).
+
+<span class="calculatorHidden">
+a=SelectAtRandom(2,3);
+sign=SelectAtRandom(1,-1);
+trigFun=SelectAtRandom(sin, cos);
+trigToVars=CommandEnclosure{}( \sin x=s; \cos x=c);
+f=trigFun{}(a*sign*x);
+TurnOnRules("PowerImaginaryUnit");
+eulerFla= Polynomialize( (\cos {}x+sign*i *\sin{}x)^a);
+</span>
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+f
+</span>\(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer", buttons="algebra, trig">
+MakeExpression{} ( 
+PolyDivRemainder (
+if (trigFun==\sin, CoefficientOf(i, eulerFla),  ConstantTerm(i, eulerFla) )
+-
+AlgebraAnswer,
+1-\sin^2 x- \cos^2 x
+)
+) ==0;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+\(
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,none)
+\)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+if (trigFun==\sin, CoefficientOf(i, eulerFla),  ConstantTerm(i, eulerFla))
+</span>
+
+
+
+

@@ -1,0 +1,93 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+aCoeff=RandomInteger{}( (1,2));
+bCoeff=RandomInteger{}( -5,5);
+cCoeff=RandomInteger{}( (-3,3));
+leftPoint=RandomInteger{}(-4,4);
+rightPoint=leftPoint+RandomInteger{}( (1,5));
+curve1= x^2+bCoeff x +cCoeff;
+curve2= aCoeff (x-leftPoint)(x-rightPoint) + curve1;
+theDifference=curve1-curve2;
+theInt=\int theDifference dx;
+TurnOffRules
+("IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+</span>
+<span class="calculatorShowToUserOnly">
+PlotFill(
+Plot2D(curve1, leftPoint,rightPoint)
++Plot2D(curve2, rightPoint, leftPoint)
+, cyan)
++Plot2D(curve1, leftPoint-1,rightPoint+1)
++Plot2D(curve2, leftPoint-1,rightPoint+1)
++PlotWindow(300,300)
+</span>
+<br>
+Find the area locked between the curve \(y=\)
+<span class="calculator">
+\displaystyle curve1
+</span> and the curve \(y=\)
+<span class="calculator">
+\displaystyle curve2
+</span>. Do not include units in your answer.
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+AlgebraAnswer==(x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2
+</span>
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">  
+finalAnswer=(x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2;
+TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational",
+"CombineExponents", "AddRationals",  "AddTerms", "MultiplyRationals",  "ConstantExtraction");
+leftSub=(x=leftPoint; theInt)_2;
+rightSub=(x=rightPoint; theInt)_2;
+</span>
+<br>
+We start by finding the intersection of the two curves.
+
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+curve1&=&curve2 &&\text{Transfer all terms to one side}\\\\
+theDifference&=&0&& \displaystyle \text{Solve using }x_1,x_2=\frac{-b\pm \sqrt{b^2-4 a c}}{2a}\\\\
+x_1&=&leftPoint\\\\
+x_2&=&rightPoint
+\end{array}
+"
+)
+</span>
+<br>
+Since both parabolas open upwards, the ``steeper'' (higher leading coefficient) parabola must be the lower one (as seen on the computer generated plot). 
+Therefore, between the two intersection points, we have that <span class="calculator"> curve1>curve2</span>, and so the area \(A\) between the two curves becomes:
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+A&=&\displaystyle \int_{leftPoint}^{rightPoint} \left|curve1-\left(curve2\right) \right|\diff x && curve1>curve2,
+\text{ so we can drop the absolute values}\\\\
+&=&\displaystyle \int_{leftPoint}^{rightPoint} \left(curve1-\left(curve2\right) \right)\diff x\\\\
+&=&\displaystyle \int_{leftPoint}^{rightPoint} \left(theDifference \right)\diff x\\\\
+&=&\displaystyle \left[theInt\right]_{leftPoint}^{rightPoint} \\\\
+&=&\displaystyle \left(rightSub\right)-\left(leftSub\right)\\\\
+&=&\displaystyle finalAnswer
+\end{array}
+"
+)
+</span>
+</span>

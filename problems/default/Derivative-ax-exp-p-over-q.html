@@ -1,0 +1,63 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function. 
+
+<span class="calculatorHidden">
+a=RandomInteger((2,6));
+p=RandomInteger((-1,-10), (1,15));
+q=RandomInteger((-1,-10), (1,15));
+e=RandomInteger((-1,-10), (1,15));
+poverq = p/q;
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
+</span>
+<br>
+<span class="calculator">
+\displaystyle f{}{{x}} = a x^{poverq}
+</span>.
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "DistributeMultiplication");\)
+</span>
+<answerCalculatorHighlight>
+\(f'(x)=\)    
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0.2, 2, 100, 0.000001);
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules("DistributeMultiplication");
+d/dx (f{}x)
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+btwo=2b;
+an = a n;
+TurnOnRules("DistributeMultiplication");
+term = a x^{poverq};
+finalAnswer = a (poverq) x^{poverq-1};
+TurnOffRules("AddTerms", "AddRationals", "MultiplyRationals", "ConstantExtraction");
+intermediate=a \cdot poverq \cdot  x^{poverq-1};
+atimespoverq=a*poverq; 
+</span>
+
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \frac{\diff }{\diff x}(term) &=&\displaystyle atimespoverq \cdot  x^{poverq-1}
+&&\displaystyle \text{Using: }  \frac{\diff}{\diff x}(A x^m) = A m x^{m-1} \text{ }  \\\\
+&=&\displaystyle  finalAnswer   &&\displaystyle \text{ } \\\\
+\end{array}
+"
+)
+</span>
+</span>
+
+

@@ -1,0 +1,56 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+TurnOffRules("DistributeMultiplication");
+a=RandomInteger((-3,-1));
+b=RandomInteger((-2,-1));
+c=RandomInteger((1,3));
+%UseLnInsteadOfLog
+f{}{{x}}=(x-b) e^{a x^2} ;
+</span>
+<span class="calculatorShowToUserOnly">
+Plot2D(f{}x,-3, 3, "red" )
++PlotGrid 0
++PlotWindow(300,300)
+</span>
+
+<br>
+
+Find the values of \(x\) for which the maximum value of \(f\) is attained over the given interval. 
+<br>
+\(f(x)=\)
+<span class="calculator">
+\displaystyle
+f{}x;
+</span>
+<br>
+<span class="calculatorHidden">
+TurnOnRules("DistributeMultiplication");
+theCFs=CoefficientsPowersOf(x, CoefficientOf(e^{a x^2},d/dx f{}x));
+</span>
+over the closed interval \(\displaystyle x\in[-3,3]\).
+<br>
+<b>The value of \(x\) for which \(f\) attains its maximum is: </b>
+<answerCalculatorHighlight>
+\(x_{max}=\) 
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerMax" buttons="algebra">
+AlgebraAnswerMax== (-theCFs_2-sqrt((theCFs_2)^2-4(theCFs_1) (theCFs_3)))/(2theCFs_3)  ;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerMax,none)
+</span>
+<br>
+<span style="color:red"> Please do not give numerical approximations for your 
+answer.</span> Instead, use square roots to give an exact answer. To write \(\sqrt{5}\) you need to type sqrt(5) or \sqrt(5). 
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+Plot2D(f{}x,-3, 3, "red" )
++PlotWindow(300,300)
++PlotGrid 0
++PlotPoint((AlgebraAnswerMax, f{}AlgebraAnswerMax), "blue");
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(-theCFs_2-sqrt((theCFs_2)^2-4(theCFs_1) (theCFs_3)))/(2theCFs_3) 
+</span>

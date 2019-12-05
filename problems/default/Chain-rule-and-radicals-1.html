@@ -1,0 +1,33 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function. 
+
+<span class="calculatorHidden">
+a=RandomInteger((1,5));
+b=RandomInteger((-5,-1), (1,5));
+c=RandomInteger((-5,-1), (1,5));
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
+</span>
+<br>
+<span class="calculator">
+\displaystyle f{}{{x}}=\sqrt{a x^2+b x +c}
+</span>.
+<span class="calculatorHidden">
+TurnOnRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
+</span>
+<answerCalculatorHighlight>
+\(f'(x)=\)    
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 50, 55, 50, 0.0001);
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules("DistributeMultiplication");
+d/dx(f{}x)
+</span>
+
+

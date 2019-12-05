@@ -1,0 +1,61 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+g= RandomInteger{}(2,5);
+h= RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((1,4));
+B=RandomInteger{}((-5,5));
+K=RandomInteger{}((-5,5));
+leftPoint = Floor(-b/(2a))-RandomInteger{}(1,4);
+rightPoint=leftPoint+RandomInteger{}(2,8);
+1/(B^2-4A K<0);
+theParabola= A x^2+B x +K;
+theIntegrand =Polynomialize( ( d/dx (theParabola))^2+1);
+theCoeffs=CoefficientsPowersOf(x, theIntegrand);
+a=theCoeffs_3;
+b=theCoeffs_2;
+c=theCoeffs_1;
+D=\frac{4a c-b^2}{4a^2};
+theAntiderivative=
+\frac{\sqrt{a}D}{2}\left( \ln \left(\sqrt{\left(\frac{2 x a+b}{2\sqrt{D}a}\right)^2 +1 }+\frac{2 x a+b}{2\sqrt{D}a}\right)+ \frac{2 x a+b}{2\sqrt{D}a} \sqrt{\left( \frac{2 x a+b}{2\sqrt{D}a} \right)^2+1}\right)
+</span>
+<span class="calculatorShowToUserOnly">
+Plot2D( theParabola,  leftPoint,rightPoint, red )+
+PlotSegment((leftPoint,0),(rightPoint,0), green,4);
+</span> 
+<br>
+Find the length of the curve given by \(y=\)<span class="calculator">theParabola </span>
+for \(x\in \)<span class="calculator">(leftPoint,rightPoint)</span>. 
+
+In your solution, you may use the fact that 
+\(\displaystyle \int \sqrt{1+x^2}\diff x=\frac{1}{2}\left(x\sqrt{x^2+1}+\ln \left(x+\sqrt{x^2+1}\right)\right)+C\).
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+|DoubleValue{}(
+AlgebraAnswer-   
+(
+(x=rightPoint; theAntiderivative)_2
+-
+(x=leftPoint; theAntiderivative)_2
+)
+
+)|<0.00000001
+</textarea>
+
+
+<span class="calculatorAnswerOnGiveUp">
+(
+(x=rightPoint; theAntiderivative)_2
+-
+(x=leftPoint; theAntiderivative)_2
+)
+</span>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations(0);
+none;
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none);
+</span>

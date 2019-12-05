@@ -1,0 +1,62 @@
+<span class="setCalculatorExamProblem">
+</span>
+Find the vertical and horizontal asymptotes of the function.
+
+<span class="calculatorHidden">
+af= RandomInteger((-5,-1), (1,5));
+bf= RandomInteger(-5,5);
+cf= RandomInteger(-5,5);
+1/(af*df-bf*cf) ;  
+ag= RandomInteger((-5,-1), (1,5));
+xOne= RandomInteger((-5,-1), (1,5));
+xTwo= RandomInteger((-5,-1), (1,5));
+1/(xOne-xTwo);
+num{}{{x}}=af x^2+ bf x + cf;
+1/num{}(xOne);
+1/num{}(xTwo);
+den=ag(x-xOne)(x-xTwo);
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+f{}(x)=\frac{num{}x}{den };
+</span>.
+
+<br>
+If there is more than one vertical/horizontal asymptote, separate your answers by comma. For example, if you enter 1,2 in the text area below, that corresponds to the two asymptotes   \(x= 1\) and \(x=2\).
+
+<br>
+<answerCalculatorHighlight>
+Vertical asymptotes: \(x=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="VerticalAsymptotes" buttons="algebra, variables">
+(VerticalAsymptotes== (Sequence{}(xOne) \sqcup Sequence{}(xTwo))) 
+or 
+(VerticalAsymptotes== (Sequence{}(xTwo) \sqcup Sequence{}(xOne)))
+or 
+((VerticalAsymptotes==xOne) and (VerticalAsymptotes==xTwo))
+;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(VerticalAsymptotes,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+Sequence{}(xOne) \sqcup Sequence{}(xTwo)
+</span>
+<br>
+<answerCalculatorHighlight>
+The horizontal asymptotes of the function are: \(y=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="HorizontalAsymptotes" buttons="algebra, variables">
+HorizontalAsymptotes==af/ag
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(HorizontalAsymptotes,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+af/ag
+</span>
+
+

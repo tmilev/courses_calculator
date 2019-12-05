@@ -1,0 +1,117 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+poverq = SelectAtRandom( 1/5, 1/4, 2/7, 1/3, 3/7, 2/5, 4/7,5/7,6/7, 1/2, 3/5, 2/3, 3/4, 4/5,5/6, 4/3, 5/4);
+a=RandomInteger(2,6);
+b=RandomInteger{}( (-2,-10),(2,10));
+theFun = ( a x + b)^{poverq};
+leftPoint=Floor(-b/a+1);
+rightPoint=leftPoint + RandomInteger{}(1,4);
+leftHeight=(x=leftPoint; theFun)_2;
+rightHeight=(x=rightPoint; theFun)_2;
+theIndefiniteIntegral=((a x +b)^{poverq+1})/(a(poverq+1));
+</span>
+
+<span class="calculatorShowToUserOnly">
+PlotFill(
+PlotSegment((leftPoint, 0), (leftPoint,leftHeight))
++Plot2D(theFun, leftPoint,rightPoint )
++PlotSegment((rightPoint, rightHeight), (rightPoint,0))
++PlotSegment((rightPoint,0), (leftPoint,0)), cyan)
++
+PlotWindow(300,300)
+;
+</span>
+<br>
+Integrate. The integral is definite so your answer should be a constant expression/number. 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} theFun dx
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+%LogEvaluation
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+| DoubleValue(( x=rightPoint; theIndefiniteIntegral)_2-
+(x=leftPoint; theIndefiniteIntegral)_2 -AlgebraAnswer) |<0.0001
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+
+(x=rightPoint; theIndefiniteIntegral)_2-
+(x=leftPoint; theIndefiniteIntegral)_2
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+outTerm = A/a;
+nplus1= n+1;
+term = a x + b;
+poverqplus1 = poverq + 1;
+diffX=1/a\diff u;
+diffU=a\diff x;
+term1 = 1/(a*poverqplus1);
+term2 = (a rightPoint + b)^poverqplus1;
+term3 = (a leftPoint + b)^poverqplus1;
+answer = term1(term2-term3);
+TurnOnRules("DistributeMultiplication");
+finalAnswer=term1 ( term2 - term3 );
+approxFinalAnswer=DoubleValue(finalAnswer);
+TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",
+"AddTerms", "MultiplyRationals",  "ConstantExtraction");
+leftSub=(a rightPoint + b)^{poverqplus1} ;
+rightSub= (a leftPoint + b)^{poverqplus1};
+</span>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int_{leftPoint}^{rightPoint} ( term)^{poverq} \diff x   &=&\displaystyle \int u^{poverq}diffX &&
+\text{Substitute: } {\begin{array}{rcl}term&=&u \\\\
+diffU&=&\diff u\\ \diff x&=&diffX \end{array}}\\\\
+\displaystyle &=&\displaystyle
+\left[ \frac{1}{a} \left( \frac{u^{poverq +1}}{poverq +1} \right) \right]_{x=leftPoint}^{x=rightPoint}  \\\\
+\displaystyle &=&\displaystyle  \frac{1}{a (poverqplus1)}
+\left[ u^{poverqplus1} \right]_{x=leftPoint}^{x=rightPoint} &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left[ (term)^{poverqplus1} \right]_{x=leftPoint}^{x=rightPoint}
+&&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left[(leftSub\right] - \left[rightSub \right]   &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left[ term2 - term3 \right]  &&\displaystyle \text{ }  \\\\
+\displaystyle &\approx&\displaystyle  approxFinalAnswer &&\displaystyle \text{Step requires calculator}  \\\\
+\end{array}
+"
+)
+</span>
+</span>

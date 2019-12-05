@@ -1,0 +1,89 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+a=RandomInteger{}((-15,-2),(2,15));
+b=RandomInteger{}((1,30));
+m=RandomInteger{}((-15,-2), (2,15));
+g=RandomInteger{}( 2, 9);
+h=RandomInteger{}( -2,-10);
+theIntegral{}{{x}}= (1/m)(x sin(m x) + ((cos(m x))/m));
+f=x cos(m x);
+</span>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
+or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx  
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral{}x,
+(theDifference= AlgebraAnswer-theIntegral{}x; x=1; theDifference)_3, 0.00001, x\in (0.5,1), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+</textarea>
+
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+</span>
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("DistributeMultiplication");
+theIntegral{}x+C
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+btwo=2b;
+b2 = 2*b;
+px = p*x;
+outdenom = m;
+outterm = 1/outdenom;
+finalTerm = x sin(m x) + ((cos(m x))/m);
+denominator = b + c(cos(px));
+TurnOnRules("DistributeMultiplication");
+finalAnswer=theIntegral{}x;
+</span>
+
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int f \diff x&=&\displaystyle  \frac{1}{(m)}  \int x(m)\cos(m x) \diff x
+&&\displaystyle \text{Note that } (m) \cos(m x) \diff x = \diff \left( \sin(m x) \right)  \\\\
+&=&\displaystyle  \frac{1}{outdenom}  \int x \diff \left( \sin(m x) \right)
+&&\displaystyle \text{Set } u = x \text{ and }  v = \sin(m x)  \\\\
+&=&\displaystyle  outterm \left(x \sin(m x) - \int \sin(m x) \diff x \right)
+&&\displaystyle \text{Using } \int u dv = uv - \int v du \\\\
+&=&\displaystyle  outterm \left(finalTerm \right) + C &&\displaystyle \text{ }\\\\
+\end{array}
+"
+)
+</span>
+</span>

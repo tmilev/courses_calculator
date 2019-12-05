@@ -1,0 +1,67 @@
+<span class="setCalculatorExamProblem">
+</span>
+This visualization was inspired by a question of M. Aliberti and the excellent <a href="https://en.wikipedia.org/wiki/Cardioid">Wikipedia page on cardiods</a>. 
+
+Cardiods can be obtained in the following fashion. 
+<ul>
+<li>Roll a circle (blue) along a fixed circle (gray) of the same radius without any slipping (``rolling with perfect friction''). </li>
+<li>Fix a pen on the rolling circle (magenta point). </li>
+<li>The curve plotted by the tip of the pen on the underlying canvas is called a cardiod. </li>
+<li>The distance rolled is manipulated by the ``rollingAngle'' variable.  </li>
+<li>
+    <ul>
+        <li>If rather than attaching the pen on rolling circle, we attach it on a frame firmly glued to the rolling circle but of larger radius, we get a new cardiod curve. </li>
+        <li>The radius of the frame is manipulated via the ``frameRadius'' variable. </li>
+        <li>The difference between the rolling circle and the frame is drawn in gray. </li>
+        <li>As we vary the frame radius, we get a one-parameter family of cardiod curves</li>
+    </ul>
+</li>
+<li>What if we change the ratio of the rolling circle radius to the fixed circle radius? We get another infinite family of curves. </li>
+<li>Notice how a tiny change in the ratios of the two circle radii produces dramatic changes in the shape of the curve. 
+This shape change would be even more drastic if the ratio of the radii is irrational - in fact then the resulting curve would appear ``fill'' an entire section of the screen. </li>
+
+<li>You can manipulate the fixed circle radius and the rolling circle radius via the ``rollingRadius'' and ``fixedRadius'' variables. </li>
+</ul>
+
+
+<br>
+<button style="color:green" onclick="if(this.toggleTag===undefined || this.toggleTag==false) this.toggleTag=true; else this.toggleTag=false; if (this.toggleTag){ document.getElementById('thePlotContainer').style.display=''; document.getElementById('thePlotContainer').style.opacity=1;} else {document.getElementById('thePlotContainer').style.display='none';  document.getElementById('thePlotContainer').style.opacity=0;}">
+Show/hide visualization f-las
+</button>
+<br>
+<span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
+Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
+<br>
+<span class="calculator" noTags="true">
+%HideLHS
+fixedCircle=(fixedRadius (cos t), fixedRadius (sin t) );
+
+contact= ( t=rollingAngle; fixedCircle)_2  ;
+centerRolling=( (fixedRadius+rollingRadius)cos rollingAngle,(fixedRadius+rollingRadius)sin rollingAngle);
+
+
+rollingCircle=centerRolling + ( rollingRadius (cos t), rollingRadius (sin t));
+frameCircle=centerRolling + ( frameRadius (cos t), frameRadius (sin t));
+thePoint=(t= \pi+2*rollingAngle* fixedRadius/rollingRadius; frameCircle)_2;
+pointTrajectory=(rollingAngle=t; thePoint)_2;
+</span>
+</span>
+
+<span class="calculator" noTags="true">
+rollingAngle=\pi MakeInputBox(name=smallB, value=4)/40;
+frameRadius=MakeInputBox(name=frameRad, value=40)/40;
+rollingRadius=MakeInputBox(name=rollRad, value=40)/40;
+fixedRadius=MakeInputBox(name=fixedRad, value=40)/40;
+PlotFill(PlotCurve(rollingCircle, 0, \pi,blue)
++PlotCurve(frameCircle, \pi, 0,cyan),lightgrey )
++PlotFill(PlotCurve(rollingCircle, \pi, 2\pi,blue)
++PlotCurve(frameCircle, 2\pi, \pi,cyan),lightgrey )
++PlotCurve(fixedCircle, 0, 2\pi,gray)
++PlotCurve(rollingCircle, 0, 2\pi,blue)
++PlotCurve(frameCircle, 0, 2\pi,cyan)
++PlotPoint(contact,black)
++PlotPoint(centerRolling,black)
++PlotCurve(pointTrajectory, 0,  20\pi, red)
++PlotPoint(thePoint, magenta)
+;
+</span> 

@@ -1,0 +1,91 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+TurnOffRules ("Sine", "Cosine");
+theTrigFun=SelectAtRandom(\sin, \cos);
+signLeft=SelectAtRandom(-1,1);
+signRight=SelectAtRandom(-1,1);
+cf1=RandomInteger((-4,-1), (1,4));
+cf2=RandomInteger((-4,-1), (1,4));
+
+leftSummand= signLeft theTrigFun{}(cf1 x);
+rightSummand=signRight theTrigFun{}(cf2 x);
+1/((leftSummand+rightSummand)*(leftSummand-rightSummand));
+leftSide=leftSummand+rightSummand;
+leftSideTransformed=
+(TurnOnRules("TrigSumToTrigProduct");
+ leftSide
+)_2;
+mults=GetMultiplicandList(leftSideTransformed);
+multOne=mults_2;
+multTwo=mults_3;
+twoAngles{}{{a}}= Freeze(
+if (ChildExpression(a, 1)==sin, 
+k \pi/ CoefficientOf{}(x, ChildExpression(a,2)) ,
+(2k+1)\pi /2 /  CoefficientOf{}(x, ChildExpression(a,2))
+))
+;
+a1=Thaw (twoAngles{}multOne);
+a2=Thaw(twoAngles{}multTwo);
+candidateList=
+(k=-8; (a1, a2))_2 \sqcup
+(k=-7; (a1, a2))_2 \sqcup
+(k=-6; (a1, a2))_2 \sqcup
+(k=-5; (a1, a2))_2 \sqcup
+(k=-4; (a1, a2))_2 \sqcup
+(k=-3; (a1, a2))_2 \sqcup
+(k=-2; (a1, a2))_2 \sqcup
+(k=-1; (a1, a2))_2 \sqcup
+(k=0; (a1, a2))_2  \sqcup 
+(k=1; (a1, a2))_2  \sqcup 
+(k=2; (a1, a2))_2  \sqcup 
+(k=3; (a1, a2))_2  \sqcup 
+(k=4; (a1, a2))_2  \sqcup 
+(k=5; (a1, a2))_2  \sqcup 
+(k=6; (a1, a2))_2  \sqcup 
+(k=7; (a1, a2))_2  \sqcup 
+(k=8; (a1, a2))_2 ;
+answerList=Sort( SubList(candidateList, ({{a}}\leq 2\pi) and  (a\geq -2\pi))); 
+leftSideAsFun{}{{a}}= (a, (x=a; leftSide)_2) ;
+leftPoint =-2\pi; 
+rightPoint=2\pi;
+secondPlot=Plot2D(leftSide, -2\pi, 2\pi, red, 2)+
+PlotGrid(0);
+</span>
+<ul>
+<li>Find all solutions of the equation in the interval \([-2\pi, 2\pi]\).</li>
+<li>You may use either degrees or radians; if using degrees, your answer should be in the interval \([-360^\circ, 360^\circ]\).</li>
+<li>Separate multiple answers by commas.</li>
+<li>The red plot is the graph of the left-hand side.</li>
+</ul>
+<span class="calculator">
+\displaystyle
+leftSide
+</span>\(=\)<span class="calculator">
+\displaystyle
+0
+</span>
+<answerCalculatorHighlight>
+\(\theta=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, angles, commas">
+Sort{} algebraAnswer == answerList 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer, none);
+secondPlot+
+PlotPoint( ApplyToList(leftSideAsFun, algebraAnswer), blue)+ 
+PlotSetId("secondPlotID");
+</span>
+<span class="calculatorAnswerOnGiveUp">
+%UseBracketForIntervals
+answerList
+
+</span>
+<br>
+<span class="calculator">
+secondPlot+PlotSetId("secondPlotID");
+</span>

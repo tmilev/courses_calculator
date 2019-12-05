@@ -1,0 +1,70 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function. 
+
+<span class="calculatorHidden">
+a=RandomInteger((-10,10));
+b=RandomInteger((-10,10));
+p=RandomInteger((-1,-15), (1,15));
+q=RandomInteger((-1,-15), (1,15));
+r=RandomInteger((-1,-15), (1,15));
+s=RandomInteger((-1,-15), (1,15));
+poverq = p/q;
+rovers = r/s;
+TurnOffRules("ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
+</span>
+<br>
+<span class="calculator">
+\displaystyle f{}{{x}} = a \sqrt{x}
+</span>.
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+TurnOffRules("ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "DistributeMultiplication");
+</span>
+<answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 1, 2, 100, 0.000000001);
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules("DistributeMultiplication");
+d/dx (f{}x)
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
+"DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+btwo=2b;
+an = a n;
+aover2 = a/2;
+TurnOnRules("DistributeMultiplication");
+finalAnswer = \frac{a}{2 \sqrt{x}};
+</span>
+ 
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \frac{\diff }{\diff x} \left( a \sqrt{x} \right) &=&
+\displaystyle  \frac{\diff }{\diff x} \left( a x^{\frac{1}{2}} \right)
+&&\displaystyle \text{ } \\\\
+&=&\displaystyle  a \left( \frac{1}{2} \right) x^{\left( \frac{1}{2} - 1 \right)}
+&&\displaystyle \text{Using: }
+\frac{\diff }{\diff x}(A x^m)=A\frac{\diff }{\diff x}( x^m) = A m x^{m-1} \text{ } \\\\
+&=&\displaystyle  aover2 x^{-\frac{1}{2}}   &&\displaystyle \text{ } \\\\
+&=&\displaystyle  finalAnswer   &&\displaystyle \text{ } \\\\
+\end{array}
+"
+)
+</span>
+</span>
+
+
+

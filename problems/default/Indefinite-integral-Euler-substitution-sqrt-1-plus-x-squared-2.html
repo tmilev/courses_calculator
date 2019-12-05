@@ -1,0 +1,56 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+a=RandomInteger{}((2,5));
+b=RandomInteger{}((-6,-2), (2,6));
+c=RandomInteger{}((-5,-1),(1,5));
+g= RandomInteger{}(2,5);
+h= RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+TurnOffRules("ExpressTanViaSineCosine", "ExpressSecViaCosine",
+"IntegratePullConstant");
+1/(b^2-4a c<0);
+f= g \sqrt{a x^2+b x +c};
+D=\frac{4a c-b^2}{4a^2};
+theAnswer=
+g(
+\frac{\sqrt{a}D}{2}\left(\ln \left(\sqrt{4a\left(a x^2+b x+c\right)}+2x a+b\right)+\frac{\left(2x a+b\right)}{2\sqrt{D}a}\sqrt{\left(\frac{2 x a+b}{2\sqrt{D}a}\right)^2+1}\right)
+)
+</span>
+
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b>. 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+(
+theBigBadAnswer=a
+;
+
+CompareExpressionsNumerically {} 
+(
+AlgebraAnswer-theAnswer,
+(x=0; AlgebraAnswer-theAnswer)_2, 0.0000001, x\in (0,1), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("ExpressTanViaSineCosine");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer, C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theAnswer
++C
+</span>

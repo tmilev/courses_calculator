@@ -1,0 +1,38 @@
+<span class="setCalculatorExamProblem">
+</span>
+Simplify to an algebraic expression that depends on \(x\) and \(\sqrt{1-x^2}\).
+
+<span class="calculatorHidden">
+a=SelectAtRandom(2,3);
+sign=SelectAtRandom(1,-1);
+trigFun=SelectAtRandom(sin, cos);
+invTrigFun=SelectAtRandom(\arcsin, \arccos);
+f=trigFun{}(a*sign*invTrigFun{}(x));
+i^(0 mod 4)=1;
+i^(1 mod 4)=i;
+i^(2 mod 4)=-1;
+i^(3 mod 4)=-i;
+i^{{k}}:if(IsInteger{}k) = i^(k mod 4) ;
+eulerFla= Polynomialize( (c+sign*i *s)^a);
+c=if (invTrigFun==\arccos, x, \sqrt{1-x^2});
+s=if (invTrigFun==\arcsin, x, \sqrt{1-x^2});
+</span>
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+f
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+CompareFunctionsNumerically{}(if (trigFun==\sin, CoefficientOf(i, eulerFla),  ConstantTerm(i, eulerFla) ), AlgebraAnswer,0, 1,50,0.0001)
+and (not Contains{}(AlgebraAnswer, \sin) )
+and (not Contains{}(AlgebraAnswer, \cos) )
+and (not Contains{}(AlgebraAnswer, \arcsin) )
+and (not Contains{}(AlgebraAnswer, \arccos) );
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,x)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+if (trigFun==\sin, CoefficientOf(i, eulerFla),  ConstantTerm(i, eulerFla))
+</span>

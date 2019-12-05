@@ -1,0 +1,38 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the limit or show that it does not exist. If the limit does not exist, indicate whether it is \(\infty\), \(-\infty\), or neither (write DNE for neither).
+
+<span class="calculatorHidden">
+af= RandomInteger((-3,-1), (1,3));
+bf= RandomInteger(-3,3);
+cf= RandomInteger(-3,3);
+df= RandomInteger(-3,3);
+ag= RandomInteger(-3,3);
+bg= RandomInteger(-3,3);
+cg= RandomInteger(-3,3);
+dg= RandomInteger(-3,3);
+f{}{{x}}=af x^3 + bf x^2 + cf x+ df;   
+g{}{{x}}=ag x^3 + bg x^2 + cg x +dg;   
+1/ag;
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+\lim_{x \to (-\infty)}\frac{f{}x}{g{}x}
+</span>.
+<br>
+<answerCalculatorHighlight>
+Answer: 
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, infinity">
+(AlgebraAnswer-af/ag)==0
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none, \infty)
+</span>
+<br>
+Write infinity or \infty for the infinity sign. Write DNE (capital letters, no spaces) for "does not exist".
+<span class="calculatorAnswerOnGiveUp">
+af/ag
+</span>
+

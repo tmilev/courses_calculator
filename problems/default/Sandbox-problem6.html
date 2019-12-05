@@ -1,0 +1,64 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+a=RandomInteger(-5,5);
+b=a+SelectAtRandom{}(1,2,4,5,7,8);
+c=SelectAtRandom{}(7,8,9,10);
+extraCF=if(a<0, 1/|a|, 1);
+n=3;
+Delta=(b-a)/n;
+sampling{}({{m}})=a+(1+m)*Delta;
+constantCoeff=RandomInteger{}(2,5);
+f{}{{x}}=\frac{c}{(x*extraCF)^3+constantCoeff};
+thePlot{}0=PlotRectangle((a,0),(Delta,f{}(sampling{}(0))));
+thePlot{}{{m}}=PlotRectangle((a+m*Delta,0), (Delta, f{}(sampling{}(m)) )) +thePlot{}(m-1);
+\)
+</span>
+Write down a Riemann sum with <span class="calculator">\(n\)</span> intervals 
+using <span style="color:red"><b>right end points</b></span> in each sampling interval
+to approximate the integral<span class="calculator">
+\(\displaystyle \int_{a}^b f{}x \diff x  \) 
+</span>.
+<br>
+You do not need to simplify your answer: simply enter an algebraic expression that produces your answer.
+<br>
+<span class="calculatorShowToUserOnly">
+\(
+thePlot{}(n-1)+ Plot2D(f{}x, a,b)+PlotLabel((b, -0.1), b)
++PlotWindow(300,300);
+\)
+</span>
+
+<br>
+Riemann sum, right endpoints, <span class="calculator">\(n\)</span> intervals \(=\) <textarea class="calculatorAnswer" id="AlgebraAnswer">
+\(
+AlgebraAnswer==(riemannSum{}(0)=Delta* f{}(sampling{}0);
+riemannSum{}{{m}}=Delta* f{}(sampling{}(m))+riemannSum{}(m-1);
+riemannSum{}(n-1)
+)_3;
+\)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+\(
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+\)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules("DivideRationalByRational", "DivideByNumber", "ConvertShortDenominatorToNegativePower", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "DistributeMultiplication", "DistributeExponent", "PowerIntegerByInteger", "PowerRationalByRational", "AssociateTimesDivision");
+(
+riemannSum{}(0)=Delta* f{}(sampling{}0);
+riemannSum{}{{m}}=Delta* f{}(sampling{}(m))+riemannSum{}(m-1);
+riemannSum{}(n-1)
+)_3;
+"Alternatively,";
+TurnOnRules("DivideRationalByRational", "DivideByNumber", "ConvertShortDenominatorToNegativePower", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "DistributeMultiplication", "DistributeExponent", "PowerIntegerByInteger", "PowerRationalByRational", "AssociateTimesDivision");
+(riemannSum{}(0)=Delta* f{}(sampling{}0);
+riemannSum{}{{m}}=Delta* f{}(sampling{}(m))+riemannSum{}(m-1);
+riemannSum{}(n-1)
+)_3;
+</span>

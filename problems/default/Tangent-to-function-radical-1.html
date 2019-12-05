@@ -1,0 +1,67 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+theSign=SelectAtRandom(-1,1);
+a=RandomInteger{}(1,4)*theSign;
+b=RandomInteger{}(-5,5);
+c=RandomInteger{}(-5,5);
+g=RandomInteger{}((-4,-1),(1,4));
+n=RandomInteger{}(2,5);
+f =g \sqrt(a x+b)+c ;
+theX = -b/a +RandomInteger{}((1,5)) *theSign;
+
+leftPoint=-b/a;
+rightPoint= -b/a + theSign * 8;
+
+theY=(x=theX; f)_2;
+theDerivative=d/dx f;
+theSlope=(x=theX; theDerivative)_2;
+basicPlot=
+Plot2D(f, leftPoint, rightPoint, red)
++PlotPoint((theX, theY), blue)
++PlotWindow(300,300);
+</span>
+<span class="calculatorShowToUserOnly">
+basicPlot
++PlotSetId("canvas1")
+</span>
+<br>
+Find the equation of the tangent to 
+<br>
+\(y=\)<span class="calculator">\displaystyle f</span>
+<br>
+at the point <span class="calculator">\displaystyle (theX, theY)</span>. 
+<br>
+Your answer should be a line equation, of the form \(y-y_0=a(x-x_0)\) or equivalent.
+<answerCalculatorHighlight>Answer:</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, variables">
+(not (CoefficientOf{}(y, EqualityToArithmeticExpression{}(AlgebraAnswer))==0))
+and
+(
+ (
+(y-theY - theSlope(x-theX)) CoefficientOf{}(y, EqualityToArithmeticExpression{}(AlgebraAnswer) )
+-
+EqualityToArithmeticExpression{}(AlgebraAnswer)
+)
+==0
+)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn{}(AlgebraAnswer, x, y)
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+basicPlot
++PlotSegment ( 
+(leftPoint, (x=leftPoint;  SolveFor(y, AlgebraAnswer) )_2 ), 
+(rightPoint, (x=rightPoint;  SolveFor(y, AlgebraAnswer) )_2 ), 
+blue )
++PlotSetId("canvas1")
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
+y-theY= theSlope(x-theX) 
+</span>

@@ -1,0 +1,70 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+theAngleTopDegs=SelectAtRandom(120, 135, 150);
+theAngleTop = theAngleTopDegs^\circ;
+leg1=RandomInteger{}(5,15);
+leg2=RandomInteger{}(1,5);
+theB= -2 leg2 cos{}(theAngleTop) ;
+theC= leg2^2-leg1^2;
+1/(DoubleValue{}(theB^2-4theC) \geq 0);
+leg3= ( -theB+\sqrt{theB^2-4 theC } ) /2;
+theArea=leg3 leg2 sin{}(theAngleTop) /2;
+theHeight= 2 DoubleValue{}theArea/ DoubleValue{}leg1;
+leftHeightSegment=DoubleValue(sqrt(DoubleValue(leg2^2-theHeight^2)));
+vertex2noCamouflage=(leftHeightSegment, theHeight);
+vertex1noCamouflage= (leg1, 0);
+topAngleLeftPart=-90^\circ-arccos(theHeight/leg2);
+
+randomAngle= 2\pi  RandomInteger{}(1,200)/RandomInteger{}(1,200) ;
+randomIsometry=MakeMatrix( (DoubleValue{}( cos randomAngle),DoubleValue{}(  -sin randomAngle)), (DoubleValue{}(sin randomAngle) , DoubleValue{}(cos randomAngle)));
+randomTranslation=(RandomInteger{}(3,8), RandomInteger{}(3,8));
+vertex1=randomTranslation+( randomIsometry vertex1noCamouflage^t)^t ;
+vertex2=randomTranslation+( randomIsometry vertex2noCamouflage^t)^t ;
+labelDist=DoubleValue( Min{}(leg1, leg2) /6);
+leg1LabelLocation=randomTranslation+( randomIsometry (vertex1noCamouflage/2 - (0,labelDist*1.5))^t)^t;
+leg2LabelLocation=randomTranslation+( randomIsometry (vertex2noCamouflage/2 - (labelDist*1.5,0 ))^t)^t;
+
+angleTopLabelLocation= randomTranslation+(randomIsometry*(vertex2noCamouflage-  (0, labelDist ) )^T)^T;
+TurnOffApproximations(0);
+</span>
+<span class="calculator">
+PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)
++PlotCurve( randomTranslation+(randomIsometry*(vertex2noCamouflage+  (labelDist cos{} t, labelDist sin{} t) )^T)^T, topAngleLeftPart,topAngleLeftPart+theAngleTop)
++PlotLabel(angleTopLabelLocation, ToString(theAngleTopDegs)+ "\u00b0")
++PlotLabel(leg1LabelLocation, ToString(leg1))
++PlotLabel(leg2LabelLocation, ToString(leg2))
++PlotWindow(300,300)
++PlotRemoveCoordinateAxes{}0
+;
+</span>
+<br>
+Find the length of the third, non-labeled side of the triangle plotted above. 
+<br>
+The triangle plotted has two sides of length <span class="calculator">leg1</span> and  <span class="calculator">leg2</span> and angle of 
+\(<span class="calculator" noTags="true">theAngleTopDegs</span>^\circ\) agains the longer of the two sides. 
+<br>
+Give exact algebraic values using radicals; calculator approximations will be marked as incorrect.
+
+<answerCalculatorHighlight>Third side length=</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="answerLength" buttons="algebra">
+answerLength==leg3
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(answerLength, none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+leg3
+</span>
+<br>
+Find the area of the triangle. Do not approximate. Exclude units.
+<answerCalculatorHighlight>Area =</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="answerArea" buttons="algebra">
+answerArea==theArea
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(answerArea, none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+theArea
+</span>

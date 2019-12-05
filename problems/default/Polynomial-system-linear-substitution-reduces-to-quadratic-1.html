@@ -1,0 +1,110 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+xTwoCF=RandomInteger{}((-4,-1),(1,4));
+xyCF=RandomInteger{}((-4,-1),(1,4));
+yTwoCF=RandomInteger{}(-2,-2);
+
+xCFOne=RandomInteger{}((-5,-1),(1,5)) ;
+yCFOne=RandomInteger{}((-5,-1),(1,5)) ;
+leftSideOne=xCFOne* x + yCFOne y ;
+leftSideTwo=xTwoCF x^2 + x y xyCF + yTwoCF y^2;
+xOne= RandomInteger{}(-5,5);
+yOne=RandomInteger{}((-5,-1),(1,5));
+
+rightSideOne=(x=xOne; y=yOne; leftSideOne)_3;
+rightSideTwo=(x=xOne; y=yOne; leftSideTwo)_3;
+xSols= (y= (rightSideOne-xCFOne x )/ yCFOne; SolveFor(x,Polynomialize( leftSideTwo-rightSideTwo)))_2;
+xTwo=if (xOne==xSols_1, xSols_2, xSols_1);
+yTwo= (x=xTwo ; (rightSideOne-xCFOne x )/ yCFOne)_2;
+1/(xOne-xTwo);
+</span>
+
+Solve the polynomial system. <br>
+
+\(
+\left|
+\begin{array}{rcl}
+<span class="calculator" noTags="true">
+leftSideOne
+</span>
+&=&
+<span class="calculator" noTags="true">
+rightSideOne
+</span> 
+\\
+<span class="calculator" noTags="true">
+leftSideTwo
+</span>
+&=&
+<span class="calculator" noTags="true">
+rightSideTwo
+</span> 
+\end{array}
+\right.
+\)
+
+<ul>
+<li>Please enter your answer in the format \( { \color{red}{\mathbf (}} x=a{\color{red}{\mathbf,}}y=b{\color{red}{\mathbf )}} or {\color{red}{\mathbf(}}x=c{\color{red}{\mathbf,}}y=d{\color{red}{\mathbf)}}\).
+</li>
+<li> Do not forget to put the parenthesis and punctuation marked in red.
+</li>
+</ul>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="variables, algebra, comma, or">
+(a=MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) or (x={{g}}, y={{h}}));
+ if (a==0, 0,
+     ( a;
+       (b==xOne and c==yOne and g==xTwo and h==yTwo) or 
+       (g==xOne and h==yOne and b==xTwo and c==yTwo)
+     )_2
+    )
+)_2
+</textarea>
+
+<span class="calculatorCommentsBeforeSubmission">
+if (MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{d}}) or (x={{g}}, y={{j}}))==0,
+"<b style='color:red'>Your answer does not match the pattern</b> \((x=a, y=b)\\ or\\ (x=c, y=d)\). 
+<br>Please do not forget the comma, the parenthesis, and the ``or'' expression.
+<br>We also request that you list \(x\) before \(y). "
+,
+"");
+( MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) or (x={{g}}, y={{h}}));
+ if ( IsConstant{}(b) and IsConstant{}(c) and IsConstant{}(g) and IsConstant{}(h),
+     if(
+     (x=b; y=c; leftSideOne)_3==rightSideOne,
+     "", 
+     "<br >When I substituted your <b style='color:red'>first answer in the first equation</b> I got \\("+
+     ToString ( (x=b; y=c; leftSideOne)_3) + "\\) which is not equal to "+ ToString(rightSideOne)
+    )+
+     if(
+     (x=b; y=c; leftSideTwo)_3==rightSideTwo,
+     "", 
+     "<br>When I substituted your <b style='color:red'>first answer in the second equation</b> I got \\("+
+     ToString ( (x=b; y=c; leftSideTwo)_3) + "\\) which is not equal to "+ ToString(rightSideTwo)
+    )+
+     if(
+     (x=g; y=h; leftSideOne)_3==rightSideOne,
+     "", 
+     "<br>When I substituted your <b style='color:red'>second answer in the first equation</b>  I got \\("+
+     ToString ( (x=h; y=g; leftSideOne)_3) + "\\) which is not equal to "+ ToString(rightSideOne)
+    )+
+     if(
+     (x=g; y=h; leftSideTwo)_3==rightSideTwo,
+     "", 
+     "<br>When I substituted your <b style='color:red'>second answer in the second equation</b> I got \\("+
+     ToString ( (x=g; y=h; leftSideTwo)_3) + "\\) which is not equal to "+ ToString(rightSideTwo)
+    )
+   ,
+   "<br>Could not get constants from the values of \(x\) and \(y\). "
+ )
+)_2
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+ (  x=xOne, y=yOne) or( x=xTwo, y=yTwo)
+</span>

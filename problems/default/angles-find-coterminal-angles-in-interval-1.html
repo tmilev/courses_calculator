@@ -1,0 +1,29 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+TurnOffApproximations(0);
+theAngle=\pi * RandomInteger{}((-3,-1),(1,10)) /RandomInteger{}(1,6);
+angleMin= \pi * RandomInteger{}(-3,0) ;
+angleMax=angleMin+ RandomInteger{}(4,7)  *\pi; 
+answerList{}10= MakeSequence{}(theAngle + 2\pi *10);
+answerList{}{{a}}=MakeSequence{}(theAngle+2\pi*a) \cup answerList{}(a+1);
+theList=SubList( answerList{}(-10), ({{a}}\geq angleMin) and (a\leq angleMax)) ;
+</span>
+Find all angles  coterminal with  <span class="calculator">\displaystyle theAngle</span> 
+in the interval \( \left[<span class="calculator" noTags="true">angleMin</span>,<span class="calculator" noTags="true"> angleMax</span>\right]\). 
+<ul>
+<li>
+Separate your answers by a comma. 
+</li>
+<li>
+You may use degrees (if so, make sure to indicate \(^\circ\)). 
+</li>
+</ul>
+
+<answerCalculatorHighlight>Answer:</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, degrees, angles">
+Sort{} AlgebraAnswer== Sort{} theList
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+theList
+</span>

@@ -1,0 +1,41 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+%NoLogarithmExponentShortcut
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower");
+</span>
+Determine whether the series is convergent or divergent. If convergent, write ``convergent'', else write ``divergent''.
+<br>
+In your pen and paper solution, indicate clearly which convergence/divergence tests you used and how you used them.
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=RandomInteger(1,20)}^\infty \frac{ RandomInteger((-20,-1),(1,20)) n^{RandomInteger(0,10)} }{(RandomInteger(2,20))^{n+RandomInteger(0,7)} }
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra">
+(AlgebraAnswerOne
+-
+convergent
+)
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+convergent
+</span>
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=RandomInteger(1,20)}^\infty (  RandomInteger((-20,-1),(1,20)) n^{RandomInteger(0,10)} (RandomInteger(2,20))^{n+RandomInteger(0,7)  } )
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="algebra">
+(AlgebraAnswerTwo
+-
+divergent
+)
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+divergent
+</span>

@@ -1,0 +1,83 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+leg1=RandomInteger(1,10);
+leg2=RandomInteger(1,10);
+hypo=sqrt(leg1^2+leg2^2);
+randomAngle=2\pi  RandomInteger{}(1,200)/RandomInteger{}(1,200) ;
+randomIsometry=( ( cos randomAngle,  -sin randomAngle), (sin randomAngle , cos randomAngle));
+randomTranslation=(RandomInteger{}(-5,5), RandomInteger{}(-5,5));
+vertex1=randomTranslation+( randomIsometry (leg1, 0)^t)^t ;
+vertex2=randomTranslation+( randomIsometry (leg1, leg2)^t)^t ;
+heelSize=Min{}(leg1, leg2) /6;
+heel=(randomTranslation,randomTranslation,randomTranslation)+(randomIsometry * ( (leg1-heelSize, 0), (leg1-heelSize, heelSize), (leg1, heelSize)) ^t)^t;
+theAngle= arctan (leg2/leg1);
+leg1LabelLocation=randomTranslation+( randomIsometry (leg1/2, -heelSize/2)^t)^t;
+leg2LabelLocation=randomTranslation+( randomIsometry (leg1+heelSize/2, leg2/2)^t)^t;
+hypoLabelLocation= randomTranslation+( randomIsometry (leg1/2-heelSize, leg2/2+heelSize)^t)^t;
+angleLabelLocation=randomTranslation+( randomIsometry ( (heelSize*1.2) cos{}(theAngle/2),  (heelSize*1.2) sin{}(theAngle/2))^t)^t;
+TurnOffApproximations(0);
+</span>
+<span class="calculator">
+PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)+
+PlotPath(heel, red)+
+PlotCurve( randomTranslation+(randomIsometry* (heelSize cos{} t, heelSize sin{} t)^T)^T, 0, theAngle)+
+PlotLabel(angleLabelLocation, "\u03b8")+
+PlotLabel(leg1LabelLocation, leg1)+
+PlotLabel(leg2LabelLocation, leg2)
+;
+</span>
+<br>
+Let \(\theta\) be the angle indicated in the plot above. Find the indicated trigonometric functions. 
+<ul>
+<li>Give exact algebraic values using radicals; calculator approximations will be marked as incorrect.</li>    
+</ul>
+
+<br>
+<b>Answer: \(\sin\theta=\)</b>
+<textarea class="calculatorAnswer" id="answerSine">
+answerSine==leg2/hypo
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+leg2/hypo
+</span>
+<br>
+<b>Answer: \(\cos\theta=\)</b>
+<textarea class="calculatorAnswer" id="answerCosine">
+answerCosine==leg1/hypo
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+leg1/hypo
+</span>
+<br>
+<b>Answer: \(\tan\theta=\)</b>
+<textarea class="calculatorAnswer" id="answerTan">
+answerTan==leg2/leg1
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+leg2/leg1
+</span>
+<br>
+<b>Answer: \(\cot\theta=\)</b>
+<textarea class="calculatorAnswer" id="answerCot">
+answerCot==leg1/leg2
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+leg1/leg2
+</span>
+<br>
+<b>Answer: \(\sec\theta=\)</b>
+<textarea class="calculatorAnswer" id="answerSec">
+answerSec==hypo/leg1
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+hypo/leg1
+</span>
+<br>
+<b>Answer: \(\csc\theta=\)</b>
+<textarea class="calculatorAnswer" id="answerCsc">
+answerCsc==hypo/leg2
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+hypo/leg2
+</span>

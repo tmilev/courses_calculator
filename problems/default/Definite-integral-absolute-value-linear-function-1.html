@@ -1,0 +1,50 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+a=RandomInteger{}( (-1,-5),(1,5));
+b=RandomInteger{}( (-1,-5),(1,5));
+c=RandomInteger{}( (2,4));
+leftPoint=-b/a-c;
+rightPoint=-b/a+c;
+f{}{{x}}=|a x+b|;
+</span>
+
+<span class="calculatorShowToUserOnly">
+PlotFill(
+PlotSegment((leftPoint, 0), (leftPoint, f{}leftPoint))
++Plot2D(f{}x, leftPoint,rightPoint)
++PlotWindow(300,300)
++PlotSegment((rightPoint, f{}rightPoint), (rightPoint, 0) )
++PlotSegment((rightPoint,0), (leftPoint, 0)), cyan)
+;
+</span>
+<br>
+Integrate. This is a definite integral so your answer should be a constant expression/number.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+AlgebraAnswer==| c^2a |
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+| c^2a |
+</span>

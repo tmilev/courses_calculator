@@ -1,0 +1,53 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+Solve the equation (over the real numbers).
+
+<span class="calculatorHidden">
+TurnOffRules ("LogBase");
+
+uOne= RandomInteger( 1,10)/RandomInteger{}( 1,5);
+uTwo= RandomInteger(1,10 )/RandomInteger{}( 1,5);
+theBase=SelectAtRandom(2,3,5,6,7,10);
+1/(uOne-uTwo);
+coeffXsquared=(Denominator{}uOne) * Denominator{}uTwo;
+f=coeffXsquared(varU-uOne)(varU-uTwo);
+varU=theBase^x;
+varU^2=(theBase^2)^x;
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+f   
+</span>\(=0\).
+<br>
+If there is more than one answer, separate them by comma. 
+<answerCalculatorHighlight>
+\(x=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+Thaw(if (
+Length{}AlgebraAnswer==2,(TurnOnRules ("LogBase"); Freeze(
+( (|AlgebraAnswer_1 - log_theBase uOne| < 0.0000001) and 
+  (|AlgebraAnswer_2 - log_theBase uTwo| < 0.0000001)) 
+  or 
+( (|AlgebraAnswer_2 - log_theBase uOne|  <0.0000001) and 
+  (|AlgebraAnswer_1 - log_theBase uTwo|) <0.0000001) ))_2,  0
+))  
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations(0);
+TurnOffRules("LogBase");
+
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+TurnOffApproximations(0);
+TurnOffRules("LogBase");
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+TurnOffApproximations(0);
+TurnOffRules ("LogBase");
+
+(log_theBase uOne, log_theBase uTwo)
+</span>

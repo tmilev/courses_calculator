@@ -1,0 +1,72 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+a=RandomInteger(-2,2);
+b=RandomInteger(-2,2);
+c=RandomInteger(2,4);
+leftFun{}({{x}},{{y}})= x^2 + x y + 2/c y^2 ;
+left=leftFun{}(x,y);
+right= leftFun{}(a,b);
+theFun=left-right;
+theFinalSlope=(answer = (d/dx theFun;
+-(d/dx y=0;d/dx theFun)_2 / CoefficientOf{}(d/dx y, d/dx theFun)
+)_2;
+x=a;
+y=b;
+answer
+)_4;
+basicPlot=PlotImplicit(theFun, (-10, -10), (10, 10), (50,50),2600)
++PlotWindow(300,300)
++PlotGrid 0
+
+</span>
+
+<span class="calculatorShowToUserOnly">
+basicPlot+PlotSetId("canvas1")
+</span>
+
+<br>
+Verify that the given point lies on the curve. Find the equation of the tangent line to the curve at the point.
+<br>
+<span class="calculator">
+\displaystyle left
+</span>\(=\)<span class="calculator">
+\displaystyle right
+</span> at the point: \((x,y)=\)
+<span class="calculator">
+\displaystyle  \left(a,b\right)
+</span>.
+<br>
+<answerCalculatorHighlight>
+The tangent line equation:
+</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, variables">
+y-b-(x-a) *( (answer = (d/dx theFun;
+-(d/dx y=0;d/dx theFun)_2 /CoefficientOf{}(d/dx y, d/dx theFun)
+)_2;
+x=a;
+y=b;
+answer
+)_4)- EqualityToArithmeticExpression( AlgebraAnswer)==0
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,y);
+%PlotShowJavascriptOnly
+Thaw
+(
+if (not Contains(AlgebraAnswer,StringToAtom("=")),
+"<br><b style='color:red'>The tangent equation is expected to contain the equality sign.</b>",
+Freeze(
+basicPlot
++Plot2D( (theCF=CoefficientOf(y, EqualityToArithmeticExpression{}AlgebraAnswer); y=0;
+EqualityToArithmeticExpression{}( AlgebraAnswer)/(-theCF))_3, -5,5, "blue" )
++PlotSetId("canvas1")
+)))
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+y-b=theFinalSlope (x-a)
+</span>
+<br>
+Enter the tangent equation in a form such as \(y= 5 x+3 \). 

@@ -1,0 +1,61 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+leftSide=sin \theta;
+aCF=RandomInteger{}((-11,-1)(1,11));
+rightSide= aCF/(|aCF| + RandomInteger{}(1,20));
+IsApproximatelyInteger{}{{a}}=(|Round{}a-a|<0.0001);
+</span>
+Solve the equation. <br>
+<span class="calculator">
+\displaystyle
+leftSide   =rightSide
+</span>. 
+
+
+<ul>
+<li>Enter your answer in the format \(\theta=Angle+2k\pi ~or~ \theta=AnotherAngle+2k\pi \). </li>
+<li>A sample answer: <br>
+\(\theta=\arcsin(0.3)+2k \pi ~or~ \theta=\pi-\arcsin(0.3) +2k\pi \). </li>
+<li> You may use functions such as \(\arcsin\), \(\arccos\) (type the functions with your keyboard).
+<li> Use the word ``or'' - use the button panel - to separate the different choices for \(\theta\). </li>
+<li>Use the letter \(k\) to signify an arbitrary integer.</li>
+</ul>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, or, variables, inversetrig">
+( MatchesPattern(
+algebraAnswer
+, \theta={{angle1}}+2 {{counter1}} \pi or \theta={{angle2}} + 2 {{counter2}} \pi);
+(not IsConstant(counter1)) 
+and
+(not IsConstant(counter2)) 
+and
+(( IsApproximatelyInteger{}( (angle1-\arcsin(rightSide))/(2\pi) )  and 
+   IsApproximatelyInteger{}( (angle2-\pi+\arcsin(rightSide))/(2\pi) ) 
+ ) or
+ ( IsApproximatelyInteger{}( (angle2-\arcsin(rightSide))/(2\pi) ) and 
+   IsApproximatelyInteger{}( (angle1-\pi+\arcsin(rightSide))/(2\pi) ) 
+ )
+) 
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations(0);
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer,\theta, k);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(\theta = \arcsin(rightSide)+ 2k \pi) or (\theta=\pi- \arcsin(rightSide) + 2k \pi)
+
+</span>
+
+
+

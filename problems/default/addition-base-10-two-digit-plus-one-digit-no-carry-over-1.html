@@ -1,0 +1,108 @@
+<span class="setCalculatorExamProblem">
+</span>
+Add the numbers.
+<span class="calculatorHidden">
+a_1 = RandomInteger(0, 7); 
+b_1 = RandomInteger(0, 9); 
+c_1 = a_1 + b_1;
+1/(c_1 < 10);
+A_1 = 10* RandomInteger(1, 9) + a_1;
+C_1 = A_1 + b_1;
+
+a_2 = RandomInteger(0, 7); 
+b_2 = RandomInteger(0, 9); 
+c_2 = a_2 + b_2;
+1/(c_2 < 10);
+A_2 = 10* RandomInteger(1, 9) + a_2;
+C_2 = A_2 + b_2;
+
+
+a_3 = RandomInteger(0, 9); 
+b_3 = RandomInteger(0, 6); 
+c_3 = a_3 + b_3;
+1/(c_3 < 10);
+A_3 = 10 * RandomInteger(1, 9) + a_3;
+C_3 = A_3 + b_3;
+
+a_4 = RandomInteger(0, 9); 
+b_4 = RandomInteger(0, 6); 
+c_4 = a_4 + b_4;
+1/(c_4 < 10);
+A_4 = 10 * RandomInteger(1, 9) + a_4;
+C_4 = A_4 + b_4;
+
+
+TurnOffRules (AddRationals, AddTerms);
+
+</span>
+
+
+<answerCalculatorHighlight>
+\(<span class = "calculator" noTags = "true" buttons = "none"> A_1 + b_1 </span>=\)
+</answerCalculatorHighlight>
+<textarea class = "calculatorAnswer" id = "answer1" buttons = "none" layout = "horizontal">
+answer1 === C_1
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+C_1
+</span>
+
+
+<answerCalculatorHighlight>
+\(<span class = "calculator" noTags = "true" buttons = "none"> A_2 + b_2 </span>=\)
+</answerCalculatorHighlight>
+<textarea class = "calculatorAnswer" id = "answer2" buttons = "none" layout = "horizontal">
+answer2 === C_2
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+C_2
+</span>
+
+<hr>
+Add the numbers. The numbers are written using vertical addition notation.
+
+<table>
+<tr><td>
+\(
++\begin{array}{r}
+<span class = "calculator" noTags = "true" buttons = "none"> A_3 </span>\\
+<span class = "calculator" noTags = "true" buttons = "none"> b_3 </span>\\\hline
+\end{array}
+\)
+</td></tr>
+<tr><td style = "float:right">
+<span id = "answer3MQSpanIdLocation"></span>
+</td></tr>
+</table>
+
+<textarea class = "calculatorAnswer" id = "answer3" buttons = "none" layout = "horizontal">
+answer3 === C_3
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+C_3
+</span>
+
+
+<table>
+<tr><td>
+\(
++\begin{array}{r}
+<span class = "calculator" noTags = "true" buttons = "none"> A_4 </span>\\
+<span class = "calculator" noTags = "true" buttons = "none"> b_4 </span>\\\hline
+\end{array}
+\)
+</td></tr>
+<tr><td style = "float:right">
+<span id = "answer4MQSpanIdLocation"></span>
+</td></tr>
+</table>
+
+<textarea class = "calculatorAnswer" id = "answer4" buttons = "none" layout = "horizontal">
+answer4 === C_4
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+C_4
+</span>
+
+
+

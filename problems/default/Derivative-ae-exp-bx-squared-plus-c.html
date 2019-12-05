@@ -1,0 +1,37 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function.
+
+<span class="calculatorHidden">
+a=RandomInteger((-10,-1), (1,10));
+n= RandomInteger((-1,-5),(2,5));
+b= RandomInteger((-1,-7),(1,7));
+f=a e^{n x^2 + b};
+</span>
+<br>
+\(f(x)=\)
+<span class="calculator">
+f
+</span>.
+<answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="logarithms, algebra">
+CompareFunctionsNumerically(Polynomialize(d/dx ( f)), AlgebraAnswer, 1, 2, 50, 0.0001);
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+Polynomialize(d/dx ( f))
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<hr>
+Compute the <b style="color:red">SECOND</b> derivative of \(f(x)\).
+<answerCalculatorHighlight>\(f''(x)\)=</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="logarithms, algebra">
+CompareFunctionsNumerically( Polynomialize(d/dx( d/dx  f)), AlgebraAnswerTwo, 1, 2, 50, 0.0001);
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+Polynomialize(d/dx (d/dx f))
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerTwo,x)
+</span>

@@ -1,0 +1,93 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+a=RandomInteger{}((-12,-2),(2,20));
+p=RandomInteger{}((-12,-2),(2,20));
+q=RandomInteger{}((-12,-2),(2,20));
+poverq = p/q;
+b=RandomInteger{}((-15,-1),(1, 15));
+h=RandomInteger{}( -2,-10);
+theIntegral{}{{x}}= (1/a)((a x + b)^((poverq)+1))/((poverq)+1);
+f=((a x) + b)^(poverq);
+leftPoint= -b/a+a;
+rightPoint=-b/a+2a;
+</span>
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", 
+"ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+</span>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
+or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx 
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral{}x,
+(theDifference= AlgebraAnswer-theIntegral{}x; x=leftPoint; theDifference)_3, 0.00001, x\in (leftPoint,rightPoint), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+</textarea>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("DistributeMultiplication");
+theIntegral{}x+C
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
+"DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+btwo=2b;
+b2 = 2*b;
+aoverbtwo = a/btwo;
+poverqplus1 = (p/q) + 1;
+integrandU=1/a u^poverq\diff u;
+diffU= a \diff x;
+diffX= 1/a \diff u;
+inTerm=a x+b;
+outTerm = (1/a)/poverqplus1;
+TurnOnRules("DistributeMultiplication");
+finalAnswer=outTerm (a x + b)^{poverqplus1};
+</span>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int f \diff x&=&\displaystyle  \int integrandU
+&&{\begin{array}{l}\text{Set } u=inTerm \\\\
+\diff u=diffU \\ \diff x=diffX\end{array} } \\\\
+&=&\displaystyle  \frac{1}{a}  \frac{u^{poverqplus1}}{poverqplus1} + C    &&\displaystyle \text{ } \\\\
+&=&\displaystyle   finalAnswer+ C    &&\displaystyle \text{ } \\\\
+\end{array}
+"
+)
+</span>
+</span>

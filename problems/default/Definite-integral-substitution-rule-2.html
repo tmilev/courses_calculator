@@ -1,0 +1,51 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+a= RandomInteger(2,10);
+leftPoint=1/a;
+rightPoint=e/a;
+b=RandomInteger{}( (-1,-5),(1,5));
+theIndefiniteIntegral{}{{x}}= -1/pi \cos (\pi \ln (a x));
+f{}{{x}}= \frac{\sin (\pi ln{}(a x) ) }{x};
+</span>
+
+<span class="calculatorShowToUserOnly">
+PlotFill(
+PlotCurve((leftPoint, t), 0 , f{}leftPoint)
++Plot2D(f{}x, leftPoint,rightPoint)
++PlotCurve((rightPoint, t), f{}rightPoint,0)
++PlotCurve((t,0), rightPoint, leftPoint), cyan)
++PlotWindow(300,300)
+;
+</span>
+<br>
+Integrate. This is a definite integral so your answer should be a constant expression/number. 
+If your answer involves natural logarithm do not approximate with calculator (but enter them algebraically).
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, trig">
+AlgebraAnswer==theIndefiniteIntegral{}rightPoint-theIndefiniteIntegral{}leftPoint
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theIndefiniteIntegral{}rightPoint-theIndefiniteIntegral{}leftPoint
+</span>

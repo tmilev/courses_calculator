@@ -1,0 +1,52 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+Solve the equation (over the real numbers). 
+
+<span class="calculatorHidden">
+TurnOffRules ("LogBase");
+
+uOne= RandomInteger( 1,7);
+uTwo=uOne+RandomInteger(1,5);
+1/(uTwo+uOne)+1/uTwo;
+theBase=e;
+f=(varU-uOne)(varU-uTwo);
+varU=e^x;
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+f   
+</span>\(=0\).
+<br>
+If there is more than one answer, separate them by comma. 
+<answerCalculatorHighlight>
+\(x=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, comma">
+Thaw(if (
+Length{}AlgebraAnswer==2,(TurnOnRules ("LogBase"); Freeze(
+( (|AlgebraAnswer_1 - (ln uOne)| < 0.0000001) and 
+  (|AlgebraAnswer_2 - (ln uTwo)| < 0.0000001)) 
+  or 
+( (|AlgebraAnswer_2 - (ln uOne)|  <0.0000001) and 
+  (|AlgebraAnswer_1 - (ln uTwo)|) <0.0000001) ))_2,  0
+))  
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("LogBase");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+TurnOffApproximations(0);
+%UseLnInsteadOfLog
+TurnOffRules ("LogBase");
+
+(\ln uOne, ln uTwo)
+</span>
+
+
+

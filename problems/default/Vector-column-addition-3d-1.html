@@ -1,0 +1,73 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+TurnOffRules("AddSequences", "ScalarTimesSequence", "AddMatrices");
+u=(  RandomInteger{}(-3,3), RandomInteger{}(-3,3), RandomInteger{}(-3,3)  )^t;
+v=(  RandomInteger{}(-3,3), RandomInteger{}(-3,3), RandomInteger{}(-3,3)  )^t;
+uRegular=( (u_1)_1, (u_2)_1, (u_3)_1);
+vRegular=( (v_1)_1, (v_2)_1, (v_3)_1);
+zeroV=(0,0,0);
+w=\begin{array}{c}
+RandomInteger{}(-10,10) \\
+RandomInteger{}(-10,10)
+\end{array};
+a=RandomInteger{}((-10,-1),(1,10));
+b=RandomInteger{}((-10,-1),(1,10));
+c=RandomInteger{}((-10,-1),(1,10));
+theActualAnswer=  u +  v;
+\)
+</span>
+<span class="calculatorShowToUserOnly">
+\(
+PlotSegment(zeroV, uRegular, blue )+
+PlotSegment(zeroV, vRegular, red )
++PlotCoordinateSystem( (-3,-3,-3),(3,3,3));
+\) 
+</span>
+
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+\(
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+SeparatorBetweenSpans;
+\)
+</span>
+
+<br>
+Simplify the linear combination to a single vector. 
+<br>
+<span class="calculator">
+\(\displaystyle u + v\) 
+</span>=
+<textarea class="calculatorAnswer" id="AlgebraAnswer" mqMatrices="true">
+TurnOnRules("AddSequences", "ScalarTimesSequence", "AddMatrices");
+AlgebraAnswer==theActualAnswer
+</textarea>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+PlotSegment(zeroV, uRegular, blue )+
+PlotSegment(zeroV, vRegular, red )+
+PlotSegment(zeroV,   ( (AlgebraAnswer_1)_1, (AlgebraAnswer_2)_1, (AlgebraAnswer_3)_1) )+
+PlotSegment(vRegular,( (AlgebraAnswer_1)_1, (AlgebraAnswer_2)_1, (AlgebraAnswer_3)_1), blue )+
+PlotSegment(uRegular,( (AlgebraAnswer_1)_1, (AlgebraAnswer_2)_1, (AlgebraAnswer_3)_1), red )
++PlotCoordinateSystem( (-3,-3,-3),(3,3,3));
+</span>
+
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("AddSequences", "ScalarTimesSequence", "AddMatrices");
+
+theActualAnswer
+</span>
+

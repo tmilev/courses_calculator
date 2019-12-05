@@ -1,0 +1,34 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function. 
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+a=RandomInteger((2,6));
+b=RandomInteger((2,6));
+TurnOffRules("ConvertShortDenominatorToNegativePower", "sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+</span>
+
+<br>
+<span class="calculator">
+\displaystyle f{}{{x}}= \ln (a x)
+</span>.
+<answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 1, 2, 50, 0.0001);
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%UseLnInsteadOfLog
+TurnOffRules("\log");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<br>
+To write \(\ln (x)\) you need to enter \ln(x), ln(x) or log(x) or \log(x). Please note that in the calculator log stands for the (complex) natural logarithm, i.e., the logarithm base e. 
+<span class="calculatorAnswerOnGiveUp">
+MakeExpression(MakeRationalFunction(
+d/dx (f{}x)
+))
+</span>
+

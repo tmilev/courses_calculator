@@ -1,0 +1,71 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules ("DegreesToRadians", "Sine", "Cosine");
+aCF=RandomInteger{}(0,10);
+theConst=3* aCF/(|aCF+RandomInteger{}(1,20)|);
+theConstTwo=RandomInteger{}((-6,-3),(3,6));
+theRegularAngle=theConstTwo-Floor{}( theConstTwo/(2\pi)) 2\pi;
+quadrant=Floor{}( theRegularAngle/(\pi/2));
+qMod4=quadrant mod 4;
+finalAnswer= 
+if(qMod4==0 mod 4, theRegularAngle,
+if(qMod4==1 mod 4, theRegularAngle,
+if(qMod4==2 mod 4, 2\pi-theRegularAngle,
+2\pi-theRegularAngle
+)
+)
+);
+</span>
+<ul>
+<li> Find the exact numerical value of the expression without using calculator.</li>
+<li> Do not approximate \(\pi\): enter it with the buttons/keyboard.</li>
+</ul>
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+\arccos(\cos{}( theConst))
+</span>\(=\) </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, angles">
+algebraAnswer==theConst
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer,none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+theConst
+</span>
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+\arccos(cos{}( theConstTwo))
+</span>\(=\)</answerCalculatorHighlight>
+
+<textarea class="calculatorAnswer" id="algebraAnswerTwo" buttons="algebra, angles">
+algebraAnswerTwo==finalAnswer
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswerTwo, none);
+TurnOnRules("DegreesToRadians", "Sine", "Cosine");
+TurnOnApproximations(0);
+if ((algebraAnswerTwo\leq \pi) and (algebraAnswerTwo\geq 0), "", 
+"<br><b style='color:red'>Your angle does not lie between \\(0\\) and \\(\\pi\\). </b>
+<br> Your angle equals in radians (approx.): " +ToString(DoubleValue{} algebraAnswerTwo)+ ". "
+)
+;
+"<br>Cosine of your angle equals (approx.):";
+\cos (algebraAnswerTwo);
+"Cosine of " +ToString(theConstTwo)+ " equals (approx.):";
+\cos(theConstTwo);
+TurnOffRules("DegreesToRadians", "Sine", "Cosine");
+</span>
+<span class="calculatorAnswerOnGiveUp">
+finalAnswer
+</span>

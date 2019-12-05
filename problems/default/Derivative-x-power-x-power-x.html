@@ -1,0 +1,28 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function. 
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules("\log");
+</span>
+
+<br>
+<span class="calculator">
+\displaystyle f{}{{x}}= x^{x^x}  
+</span>.
+<answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 1.2, 1.6, 50, 0.0001);
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%UseLnInsteadOfLog
+TurnOffRules("\log");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+d/dx (f{}x)
+</span>
+

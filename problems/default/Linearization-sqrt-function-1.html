@@ -1,0 +1,43 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+a=RandomInteger((1,5));
+b=RandomInteger((-4,-1),(2,5));
+sign=if(b>0, 1, -1);
+f{}{{x}}=\sqrt{}(b x +a^2);
+fd=d/dx f{}x;
+basicPlot=
+Plot2D(f{}x, -a^2/b+0.01 *sign, 3*sign)
++PlotWindow(300,300)
+</span>
+<span class="calculatorShowToUserOnly">
+basicPlot+PlotSetId("canvas1")
+</span>
+
+<br>
+Find the linearization \(L\) of \(f(x)=\)<span class="calculator">
+\displaystyle f{}x
+</span> at \(x=0\).
+<br>
+<answerCalculatorHighlight>
+\(L(x)=\) 
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, variables">
+CompareFunctionsNumerically(AlgebraAnswer,(f{}0+ ((x=0; fd)_2)x ), 0,10,50,0.00000001 )
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+basicPlot
++Plot2D(AlgebraAnswer, -a^2/b+0.01 *sign, 3*sign, "blue")
++PlotWindow(300,300)
++PlotSetId("canvas1")
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(f{}0+ ((x=0; fd)_2)x )
+</span>

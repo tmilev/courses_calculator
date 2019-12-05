@@ -1,0 +1,29 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+%NoLogarithmExponentShortcut
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower");
+p = RandomInteger(2,14);
+q = RandomInteger(1,5);
+1/(p-q);
+</span>
+Determine whether the series is convergent or divergent. If convergent, write ``convergent'', else write ``divergent''.
+<br>
+In your pen and paper solution, indicate clearly which convergence/divergence tests you used and how you used them.
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=RandomInteger(1,20)}^\infty ( \frac{n!}{ n^n} \left(p/q\right)^n)
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra">
+(AlgebraAnswerOne
+-
+if (p/q> 2.72, divergent, convergent)
+)
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+if (p/q> 2.72, divergent, convergent)
+</span>

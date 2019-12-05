@@ -1,0 +1,101 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+aCF=RandomInteger((-5,-1),(1,5));
+bCF=RandomInteger((-5,-1),(1,5));
+cCF=RandomInteger(-5,5);
+f=aCF x^2+bCF x + cCF;
+extremumName=if (aCF>0, "minimum", "maximum");
+thePlot=Plot2D (f, -bCF/(2aCF)-2, -bCF/(2aCF)+2, red) +PlotGrid{}0;
+</span>
+Complete the square.
+<answerCalculatorHighlight>
+<span class="calculator">  
+f
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerZero" buttons="algebra">
+if ( 
+(
+(not MatchesPattern( AlgebraAnswerZero, {{a}} ({{b}} x + {{c}})^2+{{d}}))
+and 
+(not MatchesPattern( AlgebraAnswerZero, {{a}} (x + {{c}})^2+{{d}}))
+and 
+(not MatchesPattern( AlgebraAnswerZero, ({{b}} x + {{c}})^2+{{d}}))
+and 
+(not MatchesPattern( AlgebraAnswerZero, ( x + {{c}})^2+{{d}}))
+and
+(not MatchesPattern( AlgebraAnswerZero, {{a}} ({{b}} x + {{c}})^2))
+and 
+(not MatchesPattern( AlgebraAnswerZero, {{a}} (x + {{c}})^2))
+and 
+(not MatchesPattern( AlgebraAnswerZero, ({{b}} x + {{c}})^2))
+and 
+(not MatchesPattern( AlgebraAnswerZero, ( x + {{c}})^2))
+) ==1
+,
+0,
+Polynomialize(AlgebraAnswerZero-(aCF x^2+bCF x + cCF))==0
+)
+
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+if ( 
+(
+(not MatchesPattern( AlgebraAnswerZero, {{a}} ({{b}} x + {{c}})^2+{{d}}))
+and 
+(not MatchesPattern( AlgebraAnswerZero, {{a}} (x + {{c}})^2+{{d}}))
+and 
+(not MatchesPattern( AlgebraAnswerZero, ({{b}} x + {{c}})^2+{{d}}))
+and 
+(not MatchesPattern( AlgebraAnswerZero, ( x + {{c}})^2+{{d}}))
+and
+(not MatchesPattern( AlgebraAnswerZero, {{a}} ({{b}} x + {{c}})^2))
+and 
+(not MatchesPattern( AlgebraAnswerZero, {{a}} (x + {{c}})^2))
+and 
+(not MatchesPattern( AlgebraAnswerZero, ({{b}} x + {{c}})^2))
+and 
+(not MatchesPattern( AlgebraAnswerZero, ( x + {{c}})^2))
+
+) ==1
+,
+"<br><b style='color:red'>Your expression does not appear to match the pattern ?(x+?)^2+?</b>",
+if(not(Polynomialize(AlgebraAnswerZero-(aCF x^2+bCF x + cCF))==0),
+"<br><b style='color:red'>Did you check your answer by uncovering parenthesis?</b>","")
+)
+
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+aCF (x+ bCF/(2aCF))^2 + cCF - aCF (bCF/(2aCF))^2
+</span>
+<br>
+<span class="calculator">
+thePlot+PlotSetId("theCanvas");
+</span>
+
+<br>Find the <span class="calculator">extremumName</span> point on the curve \(y=\)<span class="calculator">f</span>. 
+<br>Your answer should be in the format \((a,b)\).
+<answerCalculatorHighlight>
+<span class="calculator">extremumName</span> point=</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="algebra, comma">
+(AlgebraAnswerTwo_1 +bCF/(2 aCF) == 0)
+and
+(AlgebraAnswerTwo_2 - (x=-bCF/(2 aCF); f)_2 == 0)
+</textarea>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerTwo,none);
+if (
+MatchesPattern (AlgebraAnswerTwo, ({{a}},{{b}})) ==0,
+"<b style='color:red'>Your answer does not match the pattern (a,b)</b> ",
+""
+);
+%PlotShowJavascriptOnly
+thePlot+PlotSetId("theCanvas")+PlotPoint {}(AlgebraAnswerTwo, blue)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(-bCF/(2aCF),(x=-bCF/(2 aCF); f)_2)
+</span>

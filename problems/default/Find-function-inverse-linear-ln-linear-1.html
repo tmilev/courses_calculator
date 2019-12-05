@@ -1,0 +1,44 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+af= RandomInteger((-5,-1), (1,5));
+bf= RandomInteger((-5,-1), (1,5));
+cf= RandomInteger((-5,-1), (1,5));
+df= RandomInteger((-5,-1), (1,5));
+leftPoint = -bf/af+(af / |af|) ;
+rightPoint= -bf/af+(5 af / |af|) ;
+\displaystyle
+f{}{{x}}=cf \ln{}(af x +bf)+df ;   
+basicPlot=
+Plot2D(f{}x, leftPoint,rightPoint, "red")
++PlotWindow(200,200)
++PlotGrid 0
+</span>
+<span class="calculator">
+basicPlot+PlotSetId("canvas1")
+</span>
+<br>
+Find the inverse function \(f^{-1}\), where
+<br>
+\(f(x)=\)<span class="calculator">f{}x</span>.
+<answerCalculatorHighlight>
+\(f^{-1}(x)=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+CompareFunctionsNumerically( AlgebraAnswer, (e^{\frac{x-df}{cf}}-bf)/af, -5, 5, 50, 0.0001)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+basicPlot
++Plot2D(AlgebraAnswer, f{}leftPoint,f{}rightPoint, "blue")
++PlotSegment((-5,-5),(5,5))
++PlotSetId("canvas1")
+</span>
+<span class="calculatorAnswerOnGiveUp">
+ (e^{\frac{x-df}{cf}}-bf)/af
+</span>

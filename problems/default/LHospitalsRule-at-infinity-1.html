@@ -1,0 +1,50 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+a=RandomInteger{}((1,50));
+b=RandomInteger{}((-50,-1),(1,50));
+c=RandomInteger{}((-5,-1));
+theTrigFunction=SelectAtRandom{}(sin,cos);
+h=RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+thePoint=0;
+f=\left(\arctan(a x)-\frac{\pi}{2}\right);
+g=1/x;
+</span>
+Find the limit using L'Hospital's rule.
+
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \lim_{x \to \infty}1/g f
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer"  buttons="algebra, angles">
+AlgebraAnswer==(
+x=1/y;
+fDifferentiated=MakeExpression( MakeRationalFunction(d/dy(f)));
+gDifferentiated=MakeExpression( MakeRationalFunction(d/dy(g)));
+y=thePoint;
+fDifferentiated/gDifferentiated
+)_5
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("ExpressTanViaSineCosine");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(
+x=1/y;
+fDifferentiated=MakeExpression( MakeRationalFunction(d/dy(f)));
+gDifferentiated=MakeExpression( MakeRationalFunction(d/dy(g)));
+y=thePoint;
+fDifferentiated/gDifferentiated
+)_5
+</span>

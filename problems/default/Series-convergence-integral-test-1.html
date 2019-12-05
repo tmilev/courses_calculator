@@ -1,0 +1,43 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%NoLogarithmExponentShortcut
+TurnOffApproximations(0);
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower");
+p = RandomInteger{}(1,20)^{SelectAtRandom(-1,1)};
+q=RandomInteger{}(1,20)^{if(p<1,1,-1)}
+</span>
+Determine whether the series is convergent or divergent. If convergent, write ``convergent'', else write ``divergent''.
+<br>
+In your pen and paper solution, indicate clearly which convergence/divergence tests you used and how you used them.
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=RandomInteger(2,20)}^\infty \frac{ RandomInteger((-20,-1),(1,20)) }{n(\ln n)^p}
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra">
+(AlgebraAnswerOne
+-
+if (p>1, convergent, divergent) 
+)
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+if (p>1, convergent, divergent) 
+</span>
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=RandomInteger(2,20)}^\infty \frac{RandomInteger((-20,-1),(1,20))}{n(\ln n)^q}
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="algebra">
+(AlgebraAnswerTwo
+-
+if (q>1, convergent, divergent) 
+)
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+if (q>1, convergent, divergent) 
+</span>

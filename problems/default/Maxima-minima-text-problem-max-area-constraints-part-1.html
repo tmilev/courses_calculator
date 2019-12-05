@@ -1,0 +1,106 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+TurnOffRules("DistributeMultiplication");
+width = 2*RandomInteger(3,10);
+height=RandomInteger{}(5,12);
+pythagoreanTripleGenerator=1+RandomInteger{}(1,10)/RandomInteger{}(1,10);
+theSecant=(pythagoreanTripleGenerator^2+1)/(pythagoreanTripleGenerator^2-1);
+theTangent = sqrt{}(theSecant^2-1) ;
+1/(Denominator{}theSecant < 50);
+thePerimeter=width+height*2+diagonal*2;
+diagonal = (width/2) theSecant;
+tipY=height+ sqrt(diagonal^2-(width/2)^2);
+tipX=width/2;
+theUnit= tipY/30;
+leftDirection=(-(tipY-height),tipX)/(sqrt (tipX^2+(tipY-height)^2 ));
+rightDirection=(-(tipY-height),tipX)/(sqrt (tipX^2+(tipY-height)^2 ));
+areaFormula= x^2* theTangent+2x(thePerimeter-2*x*theSecant-2x  )/2;
+finalAnswerArea=(x= -1/2  CoefficientOf{}(x, Polynomialize {}areaFormula)/CoefficientOf{}(x^2, Polynomialize {}areaFormula);areaFormula)_2
+</span>
+<span class="calculatorShowToUserOnly">
+PlotPath ( 
+(
+(0,0),
+(width,0),
+(width,height),
+(tipX, tipY),
+(0,height),
+(0,0)
+), black)
++PlotMarkSegment( (tipX, tipY),(0,height))
++PlotMarkSegment( (tipX, tipY),(width,height))
++PlotPath ( ((tipX, height+theUnit), (tipX+theUnit, height+theUnit),(tipX+theUnit, height)),pink)
++PlotRemoveCoordinateAxes 0
++PlotSegment( (0, height), (width, height), silver)
++PlotSegment( (tipX, height), (tipX, tipY), silver)
++PlotLabel( (-theUnit* sqrt{}(1/2), -theUnit sqrt{}(1/2)), "D")
++PlotLabel( (-theUnit* sqrt{}(1/2), height+theUnit sqrt{}(1/2)), "A")
++PlotLabel( (width+theUnit* sqrt{}(1/2), -theUnit *sqrt{}(1/2)), "C")
++PlotLabel( (width+theUnit* sqrt{}(1/2), height+theUnit *sqrt{}(1/2)), "B")
++PlotLabel( (tipX, tipY+theUnit ), "E")
++PlotLabel( (tipX, height-theUnit ), "F")
++PlotLabel( (tipX,-theUnit), "2x")
+</span>
+<br>
+The diagram shows a window in the shape of a rectangle \(ABCD\) and a triangular isosceles triangle \(ABE\) 
+arranged as indicated. The segment \(AB\) has length \(2x\) and the 
+length \(|AE|=\)<span class="calculator">theSecant</span>\(|AB|\).
+The total perimiter of \(AEBCDA\) is <span class="calculator">thePerimeter</span> units. 
+
+
+Let \(F\) be the heel of the perpendicular dropped from point \(E\) onto \(AB\).
+
+Find the length of the perpendicular \(EF\) as a function of \(x\). 
+Your answer should be expression that <b style="color:red">depends on \(x\)</b>.
+
+<answerCalculatorHighlight> 
+\(|EF|=\)
+</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="AlgebraAnswerHeight" buttons="algebra">
+Polynomialize(AlgebraAnswerHeight-theTangent*x)==0
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswerHeight,x);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theTangent*x
+</span>
+<br>
+Find the window area \(A\) as a function of \(x\). 
+<b style="color:red">Exclude units</b> in your answer, <b style="color:red">exclude units</b>. 
+<answerCalculatorHighlight>
+\(A(x)=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerArea" buttons="algebra">
+Polynomialize(AlgebraAnswerArea-areaFormula) == 0  ;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswerArea,x);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+areaFormula;
+"\(="+ToString(Polynomialize areaFormula)+"\)"
+</span>
+<br>
+Find the maximal possible area of the window. <b style="color:red">Exclude units</b> from your answer.
+
+<answerCalculatorHighlight>
+\(A_{max}=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerAreaMax" buttons="algebra">
+finalAnswerArea
+-AlgebraAnswerAreaMax==0
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerAreaMax,none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+finalAnswerArea;
+
+"\(\approx "+ToString(DoubleValue finalAnswerArea)+"\)"
+</span>
+

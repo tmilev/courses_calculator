@@ -1,0 +1,47 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+a=SelectAtRandom{}(1,3,5,7);
+b=RandomInteger{}(1,10);
+c=RandomInteger{}((-5,-1),(1,5));
+g= RandomInteger{}(2,5);
+h= RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+1/(|a-4|+|b-4|);
+1/(|a|+|b|);
+TurnOffRules("ExpressTanViaSineCosine", "ExpressSecViaCosine", "IntegratePullConstant");
+f= c(\tan x)^{a} (\sec x)^{b};
+theBigBadAnswer=\int f dx;
+TurnOffRules("IntegrateTanPowerNSecPowerM");
+</span>
+
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b>. 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig, logarithms">
+CompareExpressionsNumerically {} 
+(
+AlgebraAnswer-theBigBadAnswer,
+(x=0; AlgebraAnswer-theBigBadAnswer)_2, 0.0000001, x\in (0,1), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("ExpressTanViaSineCosine");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theBigBadAnswer+C
+</span>

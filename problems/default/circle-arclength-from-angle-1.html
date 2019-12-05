@@ -1,0 +1,30 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+TurnOffApproximations(0);
+TurnOffRules("DegreesToRadians", "ConvertShortDenominatorToNegativePower");
+angleinDegrees=RandomInteger(30,350);
+angleInRads=angleinDegrees*\pi/180 ;
+radius=RandomInteger(1,10);
+</span>
+<span class="calculator">
+PlotSegment((0,0),(1,0) )+
+PlotSegment((0,0),(radius \cos{} angleInRads,radius \sin{} angleInRads) )+
+PlotCurve((radius \cos{} t,radius \sin{} t),0,angleInRads)
+</span>
+<br>
+Find the arclength of an arc of <span class="calculator">angleinDegrees^\circ</span> 
+of a circle of radius <span class="calculator"> radius</span>.
+<b>You do not need to indicate any measurement units</b>.
+<answerCalculatorHighlight>Answer:</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, angles, degrees">
+AlgebraAnswer==(angleinDegrees/180) *\pi *radius
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+(angleinDegrees/180) *\pi *radius
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+"<br><b>Numerical approximation of your answer: " + ToString(DoubleValue(AlgebraAnswer))+"</b>"; 
+</span>
+

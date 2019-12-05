@@ -1,0 +1,56 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+
+xCF=RandomInteger{}(1, 7);
+yCF=RandomInteger{}(1, 7);
+theSum = RandomInteger(5, 20);
+theQuadraticForm= x y +RandomInteger(1,5) x + RandomInteger(1,5) y ;
+theQuadratic =  (y= (theSum - x xCF )/yCF; theQuadraticForm )_2 ;
+xOne = - CoefficientOf{}(x, theQuadratic) / (2  CoefficientOf{}(x^2, theQuadratic));
+yOne = ( theSum - xOne xCF )/yCF
+</span>
+
+The sum <span class="calculator">x xCF+y yCF </span> is given to be <span class="calculator">theSum</span>. 
+Find \(x\) and \(y\) so the expression <span class="calculator">theQuadraticForm</span>
+is maximal.
+
+<ul>
+<li>Please enter your answer in the format \( x=a{\color{red}{\mathbf,}}y=b\).
+</li>
+<li> Do not forget to put the comma marked in red.
+</li>
+</ul>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+(p=MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}));
+ q=MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}));
+ if (p==0 and q==0, 0,
+     ( p; q;
+       (b==xOne and c==yOne)
+     )_3
+    )
+)_3
+
+</textarea>
+
+<span class="calculatorCommentsBeforeSubmission">
+if (
+MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) )==0 
+and 
+MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}) )==0 
+,
+"<br><b style='color:red'>Your answer does not match the pattern</b> \(x=a, y=b\). 
+<br>Please do not forget the comma."
+,
+"");
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(x=xOne, y=yOne);
+
+</span>

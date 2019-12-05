@@ -1,0 +1,66 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+
+a=RandomInteger(2,5);
+b=RandomInteger(3,6);
+%UseLnInsteadOfLog
+f{}{{x}}=x e^{a x} ;
+theCFs=CoefficientsPowersOf(x, CoefficientOf(e^{a x},d/dx f{}x));
+</span>
+
+<span class="calculatorShowToUserOnly">
+Plot2D(f{}x,-1, 1/b, "red" )
++PlotWindow(300,300)
+</span>
+<br>
+Find the values of \(x\) for which the maximum and minimum value of \(f\) is attained over the given interval. 
+<br>\(f(x)=\)
+<span class="calculator">
+\displaystyle
+f{}x;
+</span>
+<br>
+over the closed interval \(\displaystyle x\in[-3,\)<span class="calculator">1/b</span>\(]\).
+<br>
+The value of \(x\) for which \(f\) attains its maximum is: 
+<answerCalculatorHighlight>\(x_{max}=\) </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerMax" buttons="algebra">
+AlgebraAnswerMax==1/b;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerMax,none)
+</span>
+<br>
+<span style="color:red"> Please do not give numerical approximations for your 
+answer.</span> Instead, use square roots to give an exact answer. To write \(\sqrt{5}\) you need to type sqrt(5) or \sqrt(5). 
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+Plot2D(f{}x,-1, 1/b, "red" )
++PlotWindow(300,300)
++PlotPoint((AlgebraAnswerMax, f{}AlgebraAnswerMax), "blue");
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+1/b
+</span>
+
+<br>
+The value of \(x\) for which \(f\) attains its maximum is: 
+<answerCalculatorHighlight>\(x_{min}=\)</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="AlgebraAnswerMin" buttons="algebra">
+-theCFs_1/(theCFs_2)==AlgebraAnswerMin;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerMin,none)
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+Plot2D(f{}x,-1, 1/b, "red" )
++PlotWindow(300,300)
++PlotPoint((AlgebraAnswerMin, f{}AlgebraAnswerMin), "blue")
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+-theCFs_1/(theCFs_2)
+</span>

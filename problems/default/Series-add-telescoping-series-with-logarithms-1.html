@@ -1,0 +1,26 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+startIndex=RandomInteger(2,10);
+theAnswer=ln (startIndex-1)-ln startIndex;
+</span>
+Sum the series.
+<answerCalculatorHighlight>
+<span class="calculator">\displaystyle
+\sum_{n=startIndex}^\infty \ln(1-1/n^2)
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+|theAnswer
+-
+AlgebraAnswer |
+<0.0000001
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+theAnswer
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, divergent);
+</span>

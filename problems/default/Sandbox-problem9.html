@@ -1,0 +1,75 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+a=RandomInteger{}((-1,-4),(1,4));
+b=RandomInteger{}((-5,-1),(1,5));
+c=RandomInteger{}((-5,-1),(1,5));
+g= RandomInteger{}(2,5);
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+1/((a-b)(a-c)(b-c));
+fDenMultipliedOut=A/(g x-a)+B/(x-b)+K/(x-c);
+TurnOffRules("DistributeMultiplication", "ConvertShortDenominatorToNegativePower", "CommonDenominator", "CommonDenominatorOneNonFraction");
+f=(Numerator{}fDenMultipliedOut)/( (g x-a)(x-b)(x-c)  );
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+\)
+</span>
+
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b>. 
+<br>
+<span class="calculator">
+\(\displaystyle \int f dx  \)  
+</span>= 
+<textarea class="calculatorAnswer" id="AlgebraAnswer">
+\(
+(
+( 
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+theIntegral=\int f dx;
+)_2;
+CompareExpressionsNumerically {} 
+(
+AlgebraAnswer-theIntegral,
+(x=|a/g|+|b|+|c|+5; AlgebraAnswer-theIntegral)_2, 0.0000001, x\in (|a/g|+|b|+|c|+5,|a/g|+|b|+|c|+10), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+) _2
+\)
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+\(
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+SeparatorBetweenSpans;
+\)
+</span>
+
+
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+\(
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+\)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOnRules
+( "DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+\int f dx+C
+</span>

@@ -1,0 +1,62 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+a=RandomInteger{}((-15,-1));
+b=RandomInteger{}((-4,4));
+c=RandomInteger{}((1,50));
+h=RandomInteger{}((1,6));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+theExponent=b/c;
+thePoint=0;
+f=a x e^{a x^2};
+
+\)
+</span>
+<span class="calculator">
+PlotFill(
+Plot2D(f,-10,10)+
+PlotSegment((10,0),(-10,0)),
+blue);
+</span>
+If the integral is convergent, compute it. Otherwise, determine whether the integral is \(\infty, -\infty\) or \(DNE\) (does not exist and is not \(\pm\infty\)). 
+<br>
+<span class="calculator">
+\displaystyle \int_{ 0}^{\infty} f  dx
+</span>= 
+<textarea class="calculatorAnswer" id="AlgebraAnswerFirst">
+\(
+AlgebraAnswerFirst==1/2
+\)
+</textarea>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerFirst,\infty, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+1/2
+
+</span>
+
+<br>
+<span class="calculator">
+\displaystyle \int_{ -\infty}^{\infty} f  dx
+</span>= 
+<textarea class="calculatorAnswer" id="AlgebraAnswerSecond">
+\(
+AlgebraAnswerSecond==0
+\)
+</textarea>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerSecond,\infty, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+0
+
+</span>

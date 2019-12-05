@@ -1,0 +1,30 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function. 
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules("\log", ExpressTanViaSineCosine, ExpressCotViaSineCosine, ExpressSecViaCosine, ExpressCscViaSine);
+aofx= (SelectAtRandom{}( sin, cos, tan, cot, sec, csc)){}x ;
+bofx= (SelectAtRandom{}( sin, cos, tan, cot, sec, csc)){}x 
+</span>
+
+<br>
+<span class="calculator">
+\displaystyle f= aofx^bofx  
+</span>.
+<answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, trig">
+CompareFunctionsNumerically(d/dx f, AlgebraAnswer, 0.312, 0.531, 50, 0.0001);
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%UseLnInsteadOfLog
+TurnOffRules("\log");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+d/dx f
+</span>
+

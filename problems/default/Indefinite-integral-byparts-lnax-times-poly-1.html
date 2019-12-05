@@ -1,0 +1,55 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules("DistributeMultiplication");
+a=RandomInteger{}((-30,-2),(2,30));
+b=RandomInteger{}( (-1,-30), (1,30));
+m=RandomInteger{}((-30,-2), (3,30));
+g=RandomInteger{}( 2, 9);
+h=RandomInteger{}( -2,-10);
+theV=a x^2/2+b x;
+theIntegral= Polynomialize( theV ln{}(m x)-\int (theV/x )dx);
+f=(a x+b) ln {}(m x);
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+</span>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
+or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx 
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral,
+(x=m; AlgebraAnswer-theIntegral)_2, 0.000000001, x\in (m,m/2), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+</span>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("DistributeMultiplication");
+theIntegral+C
+</span>

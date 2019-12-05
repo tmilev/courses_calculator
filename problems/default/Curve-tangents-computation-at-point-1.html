@@ -1,0 +1,48 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+theT = SelectAtRandom(\pi/3, \pi/4, \pi/2);
+a=RandomInteger{}((-20, -1),(1,20));
+b=RandomInteger{}((-20,-1), (1,20));
+theX=sin (a t);
+theY= cos(b t);
+thePoint=(t=theT; (theX,theY))_2;
+1/ (cos{}(a theT));
+1/ (sin{}(b theT));
+</span>
+<span class="calculatorShowToUserOnly">
+PlotCurve( (theX,theY), 0, 2\pi ) +PlotPoint(thePoint, blue);
+</span> 
+<br>
+Compute an equation of the tangent line to the curve 
+\( \left|\begin{array}{rcl} x&=&<span class="calculator" noTags="true">theX</span> \\y&=&<span class="calculator" noTags="true">theY</span> \end{array}\right., t\in (0,2\pi)\) 
+at the parameter value \(t=\)<span class="calculator">theT</span>. 
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+(linearizedAnswer=EqualityToArithmeticExpression{}AlgebraAnswer;
+ actualAnswer= ((a cos {}(a theT) ) (y- cos{} (b theT)) - (-b sin {}(b theT))(x- sin{} (a theT)) );
+ CFY=CoefficientOf{}(y,  linearizedAnswer);
+ CFX=CoefficientOf{}(x,  linearizedAnswer);
+ theConst=(x=0; y=0; linearizedAnswer)_3;
+ realCFY=CoefficientOf{}(y,  actualAnswer);
+ realCFX=CoefficientOf{}(x,  actualAnswer);
+ realConst=(x=0; y=0; actualAnswer)_3;
+ (CFX*realCFY-CFY*realCFX==0) and (CFX* realConst-theConst*realCFX==0) and (not ( linearizedAnswer ==0 ))
+) _9
+</textarea>
+
+
+<span class="calculatorAnswerOnGiveUp">
+(a cos {}(a theT) ) (y- cos{} (b theT)) = (-b sin {}(b theT))(x- sin{} (a theT))
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,y);
+%PlotShowJavascriptOnly
+PlotCurve( (theX,theY), 0, 2\pi ) +PlotPoint(thePoint, blue)
++Plot2D ( ( theCF=CoefficientOf(y, EqualityToArithmeticExpression{}AlgebraAnswer); y=0;EqualityToArithmeticExpression{}( AlgebraAnswer)/(-theCF) )_3, -1,1, "blue" )
+</span>
+
+<br>Enter your answer in format such as \(5(x-3)=2(y-2) \) or such as \(5x+2y-4=0 \).

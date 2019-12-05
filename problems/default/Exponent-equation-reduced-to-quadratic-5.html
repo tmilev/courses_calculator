@@ -1,0 +1,56 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+Solve the equation (over the real numbers). 
+<span class="calculatorHidden">
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+theBase=SelectAtRandom(2,3,5,6,7,10);
+uOne= RandomInteger( 1,10);
+uTwo=RandomInteger(1,10);
+1/(uOne-uTwo);
+powerShiftTwo=RandomInteger(1,2);
+powerShiftOne=-1;
+1/(uTwo+uOne)+1/uTwo;
+f=(varU-uOne)(oneOverVarU-uTwo);
+varU=theBase^{x+powerShiftOne};
+oneOverVarU=theBase^powerShiftTwo/theBase^{x}
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+f   
+</span>\(=0\).
+<br>
+If there is more than one answer, separate them by comma. 
+<answerCalculatorHighlight>
+\(x=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+(TurnOnRules ("LogBase");
+Thaw(if (
+Length{}AlgebraAnswer==2,
+Freeze(
+( (|AlgebraAnswer_1 - (log_theBase uOne-powerShiftOne)| < 0.0000001) and 
+  (|AlgebraAnswer_2 - (powerShiftTwo-log_theBase uTwo)| < 0.0000001)) 
+  or 
+( (|AlgebraAnswer_2 - (log_theBase uOne-powerShiftOne)|  <0.0000001) and 
+  (|AlgebraAnswer_1 - (powerShiftTwo-log_theBase uTwo)|) <0.0000001) ),  0
+)  
+))_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("LogBase");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+TurnOffApproximations(0);
+%UseLnInsteadOfLog
+TurnOffRules ("LogBase");
+(
+log_theBase uOne-powerShiftOne,
+powerShiftTwo-log_theBase uTwo
+)
+</span>

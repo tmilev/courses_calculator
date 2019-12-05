@@ -1,0 +1,65 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+%UseBracketForIntervals
+%UseLnInsteadOfLog
+TurnOffRules("ExpressTanViaSineCosine");
+leftPart=d/dx y;
+a=RandomInteger{}(1,4);
+b=RandomInteger{}(-5,5);
+c=RandomInteger(-10,10);
+D=RandomInteger{}(-4,4);
+thePoly=a x^2+b x+c;
+rightPart=y^2 thePoly;
+finalAnswer=-1/  ((\int thePoly dx) +D );
+f{}{{z}}=(x=z; finalAnswer)_2;
+leftX= -5.00001;
+rightX= 5;
+lowY=-5;
+highY=5;
+theVLength=0.3;
+thePoint=0;
+initialY=f{}thePoint;
+</span>
+<span class ="calculatorShowToUserOnly">
+
+PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)
++
+PlotViewRectangle((leftX, lowY), (rightX, highY))
+
+</span>
+<br>
+Solve the separable differential equation 
+
+<span class="calculator">\displaystyle
+leftPart
+</span>\(=\)
+<span class="calculator">\displaystyle
+rightPart
+</span>
+<br>
+with initial condition
+<br>
+\(\displaystyle y\left(<span class="calculator" noTags="true">thePoint</span>\right)=<span class="calculator" noTags="true">initialY</span>
+\).
+<answerCalculatorHighlight>Answer: \(y=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra">
+CompareFunctionsNumerically(AlgebraAnswerOne, finalAnswer, leftX, rightX, 20, 0.000001)
+</textarea>
+<br>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+Plot2D(AlgebraAnswerOne,leftX,rightX,red,2)+
+PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)
++
+PlotViewRectangle((leftX, lowY), (rightX, highY))
++
+PlotWindow(300,300)
+;
+</span>
+<span class="calculatorAnswerOnGiveUp">
+\displaystyle
+finalAnswer
+</span>

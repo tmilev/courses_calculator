@@ -1,0 +1,58 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+leftSide=cos \theta;
+aCF=RandomInteger{}((-11,-1),(1,11));
+rightSide= aCF/(|aCF| + RandomInteger{}(1,20));
+IsApproximatelyInteger{}{{a}}=(|Round{}a-a|<0.0001);
+</span>
+Solve the equation. 
+<br>
+
+<span class="calculator">
+\displaystyle
+leftSide   =rightSide
+</span>. 
+
+<ul>
+<li>Enter your answer in the format \(\theta=Angle+2k\pi ~or~ \theta=AnotherAngle+2k\pi \). </li>
+<li>A sample answer: <br>
+\(\theta=\frac{\pi}{3}+2k \pi ~or~ \theta=-\frac{\pi}{3}+2k\pi \). </li>
+<li>You may also use degrees, example: \(\theta=60^\circ+k360^\circ ~or~ \theta=120^\circ+k360^\circ \). </li>
+
+<li> Use the word ``or'' to separate the different choices for \(\theta\). </li>
+<li>Use the letter \(k\) to signify an arbitrary integer.</li>
+</ul>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, inversetrig, or, variables">
+( MatchesPattern(
+algebraAnswer
+, \theta={{angle1}}+2 {{counter1}} \pi or \theta={{angle2}} + 2 {{counter2}} \pi);
+(not IsConstant(counter1)) 
+and
+(not IsConstant(counter2)) 
+and
+((IsApproximatelyInteger{}( (angle1-\arccos(rightSide))/(2\pi) ) and 
+  IsApproximatelyInteger{}( (angle2+\arccos(rightSide))/(2\pi) ) 
+ ) or
+ (IsApproximatelyInteger{}( (angle2-\arccos(rightSide))/(2\pi) ) and 
+  IsApproximatelyInteger{}( (angle1+\arccos(rightSide))/(2\pi) ) 
+ )
+) 
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer,\theta, k);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(\theta = \arccos(rightSide)+ 2k \pi) or (\theta=- \arccos(rightSide) + 2k \pi)
+
+</span>
+
+
+

@@ -1,0 +1,56 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%DontUseDiff
+TurnOffApproximations(0);
+pointLeft=0;
+a=SelectAtRandom(1,2,3, 1/2,1/3,2/3, 1/4,3/4, 1/5,2/5,3/5,4/5 );
+n=SelectAtRandom{}(2,3,4,5,6,7,8, 1/2,1/3,1/4,1/5,1/6,1/7,1/8);
+b=RandomInteger{}((1,50));
+c=RandomInteger{}((1,50));
+h=RandomInteger{}((1,6));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+theExponent=b/c;
+pointRight=pointLeft+RandomInteger(1,20);
+f=\frac{ln (a x)}{x^n};
+fIntegral= 1/(-n+1) x^{-n+1} ln{}(a x) -1/((-n+1)^2) x^{-n+1} ;
+epsilon= 0.05;
+</span>
+<span class="calculator">
+PlotFill(
+Plot2D(f, pointLeft+epsilon, pointRight, red, 2,500)+
+PlotSegment((pointRight,0),( pointLeft+epsilon, 0)) 
+, cyan)
++PlotViewRectangle((-2, -10), (pointRight+2, 5))
++PlotWindow(300,300)
+
+;
+</span> 
+<br>
+If the integral is convergent, compute it. Otherwise, determine whether the integral is \(\infty, -\infty\) or \(DNE\) (does not exist and is not \(\pm\infty\)). 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{ pointLeft}^{pointRight} f  dx
+</span>\(=\) 
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, infty">
+if (n>1, (AlgebraAnswer+\infty)==0, 
+|DoubleValue{}(AlgebraAnswer-(x=pointRight; fIntegral)_2)|  
+<
+0.0000001
+)
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("ExpressTanViaSineCosine");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,\infty, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+if (n>1, -\infty, (x=pointRight; fIntegral)_2) ;
+</span>

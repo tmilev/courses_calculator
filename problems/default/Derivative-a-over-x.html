@@ -1,0 +1,70 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function. 
+
+<span class="calculatorHidden">
+a=RandomInteger((2,30));
+b=RandomInteger((-30,30));
+p=RandomInteger((-1,-25), (1,30));
+q=RandomInteger((-1,-25), (1,30));
+r=RandomInteger((-1,-25), (1,30));
+s=RandomInteger((-1,-25), (1,30));
+poverq = p/q;
+rovers = r/s;
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
+</span>
+<br>
+<span class="calculator">
+\displaystyle f{}{{x}} = \frac{a}{x}
+</span>.
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "DistributeMultiplication");
+</span>
+<answerCalculatorHighlight>
+\(f'(x)=\)
+</answerCalculatorHighlight>
+
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 1, 2, 100, 0.0001);
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules("DistributeMultiplication");
+d/dx (f{}x)
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
+"DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+btwo=2b;
+an = a n;
+TurnOnRules("DistributeMultiplication");
+term = \frac{a}{x};
+finalAnswer = - \left( \frac{a}{(x^2)} \right);
+</span>
+
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \frac{\diff }{\diff x} \left( term \right) &=&\displaystyle
+\frac{\diff }{\diff x} \left( a x^{-1} \right)   &&\displaystyle \text{Using: }
+\frac{\diff }{\diff x}(A x^m) = A m x^{m-1} \text{ }  \\\\
+&=&\displaystyle  a (-1) x^{(-1-1)}   &&\displaystyle \text{ }     \\\\
+&=&\displaystyle  -a x^{-2}   &&\displaystyle \text{ }  \\\\
+&=&\displaystyle  finalAnswer   &&\displaystyle \text{ } \\\\
+\end{array}
+"
+)
+</span>
+</span>
+
+

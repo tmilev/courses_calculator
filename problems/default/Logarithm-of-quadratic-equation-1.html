@@ -1,0 +1,50 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+Solve the equation (over the real numbers). 
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+theBase=SelectAtRandom(2,3,5,7,10);
+theQCF=RandomInteger(2,8);
+theConst=RandomInteger(1,10);
+rightSide=RandomInteger(3,30)/RandomInteger{}(1,2);
+leftSide= \log_theBase (theQCF z^2+theConst);
+TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
+1/(theBase^rightSide-theConst>0);
+TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational");
+theFinalAnswer= (\sqrt{ (theBase^rightSide-theConst)/theQCF},-\sqrt{ (theBase^rightSide-theConst)/theQCF});
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+leftSide   
+</span>\(=\)<span class="calculator">
+\displaystyle
+rightSide   
+</span> .
+<br>
+If there is more than one answer, separate them by comma. 
+<answerCalculatorHighlight>\(z=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer"  buttons="algebra, logarithms, comma">
+((DoubleValue |AlgebraAnswer_1-theFinalAnswer_1|<0.00001) and (DoubleValue|AlgebraAnswer_2-theFinalAnswer_2|<0.00001))
+or
+((DoubleValue|AlgebraAnswer_2-theFinalAnswer_1|<0.00001) and (DoubleValue|AlgebraAnswer_1-theFinalAnswer_2|<0.00001))
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("LogBase");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
+if(ChildExpression(AlgebraAnswer,1)==StringToAtom("Sequence"),"",
+"<br><b style='color:red'>Perhaps your need more than one answer.</b> 
+<br><b>Separate multiple answers by commas.</b><br>"  )
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theFinalAnswer
+</span>
+
+

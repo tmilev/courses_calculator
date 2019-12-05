@@ -1,0 +1,40 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations{}0;
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower", "sqrt", DistributeMultiplication);
+baseTrue=RandomInteger(2,7);
+
+baseRadical=RandomInteger(2,5);
+basePower=RandomInteger(2,5);
+baseIntermediate=baseTrue^basePower;
+
+argRadical=RandomInteger(2,5);
+argPower=RandomInteger(2,5);
+argIntermediate=baseTrue^argPower;
+
+1/(argIntermediate <400) +1/(baseIntermediate<500) +1/(argIntermediate-baseIntermediate) + 1/(baseRadical- argRadical);
+
+base= 1/ (\sqrt[baseRadical] {baseIntermediate});
+argument=\sqrt[argRadical]{argIntermediate};
+
+</span>
+Using the properties of logarithm to compute without a calculator. 
+<answerCalculatorHighlight>
+<span class="calculator" >  \log_base argument</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerZero" buttons="algebra">
+AlgebraAnswerZero- (- (baseRadical/basePower) * (argPower/argRadical))==0
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerZero, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+- (baseRadical/basePower) * (argPower/argRadical)
+</span>

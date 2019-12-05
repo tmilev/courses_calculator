@@ -1,0 +1,72 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+TurnOffApproximations(0);
+a=1;
+b=0;
+c=RandomInteger{}((1,5));
+g= 1;
+h= RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+leftPoint=RandomInteger{}(-3,3);
+rightPoint=leftPoint+RandomInteger{}(1,6);
+TurnOffRules("ExpressTanViaSineCosine", "ExpressSecViaCosine",
+"IntegratePullConstant");
+1/(b^2-4a c<0);
+f= g \sqrt{a x^2+b x +c};
+D=\frac{4a c-b^2}{4a^2};
+theAnswer=
+g(
+\frac{\sqrt{a}D}{2}\left(\ln \left(\sqrt{4a\left(a x^2+b x+c\right)}+2x a+b\right)+\frac{\left(2x a+b\right)}{2\sqrt{D}a}\sqrt{\left(\frac{2 x a+b}{2\sqrt{D}a}\right)^2+1}\right)
+)
+</span>
+<span class="calculator">
+PlotFill(
+Plot2D(f, leftPoint, rightPoint, "cyan", 2)
++
+PlotSegment( (rightPoint, (x=rightPoint; f)_2  ), ( rightPoint, 0 ) )
++
+PlotSegment( (rightPoint, 0), (leftPoint, 0)  )
++
+PlotSegment( (leftPoint, 0 ), (leftPoint, (x=leftPoint; f)_2  )  )
+,
+"cyan"
+)
++Plot2D(f, -12,12 )
++PlotSegment((-12,-12),(12,12), brown, 0.5)
++PlotSegment((-12,12),(12,-12), brown, 0.5)
++Plot2D(-f, -12,12,"pink" )
++Plot2D(f, leftPoint, rightPoint, "blue", 2)
+</span>
+<br>
+Compute the definite integral.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} f dx
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+|
+(x=rightPoint; theAnswer)_2
+-
+(x=leftPoint; theAnswer)_2
+ -AlgebraAnswer|<0.000001
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("ExpressTanViaSineCosine");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(x=rightPoint; theAnswer)_2
+-
+(x=leftPoint; theAnswer)_2
+</span>

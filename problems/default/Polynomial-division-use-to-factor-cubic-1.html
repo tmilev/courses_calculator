@@ -1,0 +1,78 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+linearCF=RandomInteger((-4,-2),(2,4));
+constLinearCF=RandomInteger((-7,-1),(1,7));
+quadraticA=RandomInteger((-3,-1),(1,3));
+quadraticB=RandomInteger((-5,-1),(1,5));
+quadraticC=RandomInteger((-5,-1),(1,5));
+1/(quadraticB^2-4quadraticA quadraticC <0);
+divisor= linearCF x-constLinearCF;
+dividend= divisor(quadraticA x^2+quadraticB x+ quadraticC);
+
+quotient= PolyDivQuotient(dividend, divisor);
+remainder=PolyDivRemainder(dividend,divisor);
+TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
+</span>
+Divide the polynomial
+<br>
+<span class="calculator">
+\displaystyle
+dividend
+</span>
+<br>by 
+<span class="calculator">
+\displaystyle
+divisor
+</span>
+<br>
+using polynomial long division. 
+<answerCalculatorHighlight>Quotient:</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="quotientAnswer" buttons="algebra">
+Polynomialize(quotientAnswer-quotient)==0
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(quotientAnswer, x);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+quotient
+</span>
+<answerCalculatorHighlight>Remainder:</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="remainderAnswer" buttons="algebra">
+remainderAnswer-remainder==0
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(remainderAnswer, x);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+remainder
+</span>
+<br>
+Using your computations from above, 
+factor the cubic into a product of a linear term and a quadratic term (all with real coefficients).
+<answerCalculatorHighlight> 
+<span class="calculator">
+\displaystyle
+dividend
+</span>\(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+IsProductTermsUpToPower{}(x^2, factorizationAnswer) and
+( Polynomialize( factorizationAnswer- dividend)==0 )
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(factorizationAnswer, x);
+if (Polynomialize( factorizationAnswer- dividend)==0, "", "<b style='color:red'>Did you check your answer by uncovering parenthesis?</b>")
+</span>
+<span class="calculatorAnswerOnGiveUp">
+divisor(quadraticA x^2+quadraticB x+ quadraticC)
+</span>
+
+

@@ -1,0 +1,37 @@
+<span class="setCalculatorExamProblem">
+</span>
+Determine whether the sequence converges, and if convergent, compute the limit. If divergent/\(\pm\infty\), write <b>divergent</b> as your answer. 
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+a=1/(RandomInteger{}(2,5));
+b=RandomInteger{}((-7,-1),(1,7));
+c=RandomInteger{}((1,5));
+g=RandomInteger{}(-5,5);
+theSequence{}{{n}}= (a+b/n)^{c n+g};
+theActualAnswer=
+if ( (((|a|>1) and (c>0)) or ((|a|<1) and (c<0)))  , divergent,
+if ( (((|a|<1) and (c>0)) or ((|a|>1) and (c<0))), 0,
+if ( (a==-1) and (not (IsEven{}c)), divergent,
+if ( (a==-1) and (IsEven{}g), e^{-b*c},
+if ( (a==-1) and (not(IsEven{}g)), -e^{-b*c},
+if ( (a==1), e^{b*c}, "Terrible error has occured"
+) ) ))))  ;
+</span>
+<br>
+\(a_n=\)<span class="calculator">\displaystyle theSequence{}n </span> 
+<answerCalculatorHighlight>\(\displaystyle \lim\limits_{n\to\infty} a_n=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+theActualAnswer-AlgebraAnswer ==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+theActualAnswer
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, divergent);
+</span>
+<br>
+For this problem, we recall that \(\displaystyle \lim\limits_{x\to \infty}\left(1+\frac{k}{x}\right)^x=e^k\).
+<br>    
+When solving the problem on paper, make sure to provide a clear explanation of your answer.

@@ -1,0 +1,60 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+a=RandomInteger(-5,5);
+b=RandomInteger((2,5))+a;
+p=SelectAtRandom(1,1/2, 1/3, 2/3,-1, -1/2,-1/3, -2/3);
+q=RandomInteger((-5,-1),(1,5));
+h{}{{x}}=p x +q;
+g{}{{x}}=(x-a)(x-b)+h{}x ;
+f{}{{x}}=h{}x-g{}x;
+c=Floor( g{}((a+b)/2) + RandomInteger((-5,-1)));
+</span>
+<span class="calculator">
+PlotSurface(
+(v, (h{}v-c) cos {}u+c, (h{}v-c) sin {}u),    u\in(0, 2\pi), v\in(a+0.0001,b-0.0001), color1=pink, color2=orange, numSegments1=12, numSegments2=12,
+lineWidth=0.2
+)
++PlotSurface(
+(v, (g{}v-c) cos {}u+c, (g{}v-c) sin {}u),    u\in(0, 2\pi), v\in(a+0.0001,b-0.0001), color1=pink, color2=orange, numSegments1=12, numSegments2=12,
+lineWidth=0.2
+)
++PlotCoordinateSystem(( Min(a-2, -3), -1+g{}((a+b) /2), -1+g{}((a+b) /2)) ,( Max( b+2,3), -g{}((a+b) /2)+1, -g{}((a+b) /2)+1 ) )
++PlotCurve((x,h{}x,0),a-0.5, b+0.5, red, 4, 300)
++PlotCurve((x,g{}x,0),a-0.5, b+0.5, red, 4, 300)
++PlotSegment((a-2, c,0),(b+2, c,0), green,2)
++PlotSetProjectionScreen((1,0,-0.2),(0,1,-0.3))
++PlotWindow(300,300)
+</span>
+<br>
+Find the volume of the solid of revolution obtained by rotating the area 
+between \(y=\)<span class="calculator">g{}x</span> and \(y=\)<span class="calculator">h{}x</span> 
+around the axis given by \(y=\)<span class="calculator">c</span>.
+<br>
+<answerCalculatorHighlight>
+Answer: \(V=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, angles">
+AlgebraAnswer==
+\pi
+(
+(theInt= \int (h{}x -c)^2 dx -  \int (g{}x -c)^2 dx; x=b; theInt)_3
+-
+(theInt= \int (h{}x -c)^2 dx -  \int (g{}x -c)^2 dx; x=a; theInt)_3
+)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+\pi
+(
+(theInt= \int (h{}x -c)^2 dx -  \int (g{}x -c)^2 dx ; x=b; theInt)_3
+-
+(theInt= \int (h{}x -c)^2 dx -  \int (g{}x -c)^2 dx ; x=a; theInt)_3
+)
+</span>
+<span class="calculatorSolution"></span>

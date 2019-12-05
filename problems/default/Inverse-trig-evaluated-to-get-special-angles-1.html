@@ -1,0 +1,38 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+finalAnswerInDegs=SelectAtRandom(-90, -60, -45, -30, 0, 30, 45, 60, 90, 120, 135, 150, 180);
+theTrigFun=SelectAtRandom(sin, cos);
+theInverseTrig=
+if (theTrigFun==sin, \arcsin, \arccos);
+theTrigValue= theTrigFun{} (finalAnswerInDegs^\circ);
+theFinalAnswer=theInverseTrig{} theTrigValue;
+TurnOffRules("\arccos", "\arcsin", "arcsinAlgebraic", "arccosAlgebraic");
+</span>
+Find the exact value of the expression without using calculator. 
+<ul>
+<li>You may enter your answer in degrees or in radians.
+</li>
+<li>If using degrees, make sure to use the degrees symbol \(^\circ\).
+</li>
+<li>If using radians, do not indicate any measurement units.
+</li>
+</ul>
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+theInverseTrig{} theTrigValue
+</span> \(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, angles">
+algebraAnswer==theFinalAnswer
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer, none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+theFinalAnswer
+</span>

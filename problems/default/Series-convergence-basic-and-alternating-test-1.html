@@ -1,0 +1,170 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+theAnswer=ln (startIndex-1)-ln startIndex;
+startIndexZero=RandomInteger(1,20);
+shiftPowerZero=RandomInteger{}(0,1);
+startIndexOne=RandomInteger(1,20);
+shiftPowerOne=RandomInteger{}(0,1);
+startIndexTwo=RandomInteger(1,20);
+shiftPowerTwo=RandomInteger{}(0,1);
+startIndexThree=RandomInteger(1,20);
+shiftPowerThree=RandomInteger{}(0,1);
+startIndexFour=RandomInteger(1,20);
+shiftPowerFour=RandomInteger{}(0,1);
+</span>
+Determine whether the series is convergent or divergent. If convergent, write ``convergent'', else write ``divergent''.
+<br>
+In your pen and paper solution, indicate clearly which convergence/divergence tests you used and how you used them.
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=startIndexZero}^\infty \left( (-1)^{n+shiftPowerZero} 1/n\right)
+</span>    
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerZero" buttons="algebra">
+AlgebraAnswerZero
+-
+convergent 
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+convergent
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswerZero">
+<br>
+The series is alternating as it is of the form 
+(positive number)\(\cdot\)<span class="calculator">\displaystyle (-1)^{n+shiftPowerZero}</span>. 
+We have that
+\(\displaystyle  \frac{1}{n}\) is a decreasing function and so 
+<span class="calculator">
+\displaystyle |\left( (-1)^{n+shiftPowerZero} 1/n\right)
+|</span>\(\displaystyle = \frac{1}{n}\searrow 0 \) and the alternating series test applies.
+Therefore, by the alternating series test, 
+<span class="calculator">\displaystyle \sum_{n=startIndexZero}^\infty \left( (-1)^{n+shiftPowerZero} 1/n\right)
+</span> is convergent.
+</span>
+
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=startIndexOne}^\infty \left( (-1)^{n+shiftPowerOne} ln(n)\right)
+</span>    
+
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra">
+AlgebraAnswerOne
+-
+divergent 
+==0
+</textarea>
+<span class="calculatorSolution" name="AlgebraAnswerOne">
+<br>
+As \(n\to \infty\), we get that 
+<span class="calculator">|(-1)^{n+shiftPowerOne} ln(n)|</span>\(=\ln n\to \infty\). 
+Therefore the limit 
+\(\displaystyle \lim_{n\to\infty}<span class="calculator" noTags="true">(-1)^{n+shiftPowerOne} ln(n)</span>\) 
+does not exist as the terms of the sequence oscillate between very large and very negative values.
+As the terms of the series do not not tend to zero, 
+the series <span class="calculator">\displaystyle
+\sum_{n=startIndexOne}^\infty \left( (-1)^{n+shiftPowerOne} ln(n)\right)
+</span> is divergent by the Basic Divergence Test.
+</span>
+<span class="calculatorAnswerOnGiveUp">
+divergent
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+\sum_{n=startIndexTwo}^\infty  \left((-1)^{n+shiftPowerTwo} 1/(ln(n))\right)
+</span>    
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="algebra">
+AlgebraAnswerTwo
+-
+convergent 
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+convergent
+</span>
+<span class="calculatorSolution" name="AlgebraAnswerTwo">
+<br>
+The series is alternating as it is of the form 
+(positive number)\(\cdot\)<span class="calculator">\displaystyle (-1)^{n+shiftPowerTwo}</span>. 
+We have that
+\(\displaystyle  \ln n\) is an increasing function of positive 
+(for <span class="calculator">n\geq startIndexTwo </span>) numbers which tends to \(\infty \) and so 
+<span class="calculator">
+\displaystyle |\left( (-1)^{n+shiftPowerTwo} 1/(\ln n)\right)
+|</span>\(\displaystyle = \frac{1}{\ln n}\searrow 0 \) and the alternating series test applies.
+Therefore, by the alternating series test, 
+<span class="calculator">\displaystyle \sum_{n=startIndexTwo}^\infty \left( (-1)^{n+shiftPowerTwo} 1/(\ln n)\right)
+</span> is convergent.
+</span>
+
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=startIndexThree}^\infty  \left((-1)^{n+shiftPowerThree} n/(ln(n))\right)
+</span>    
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerThree" buttons="algebra">
+AlgebraAnswerThree
+-
+divergent 
+==0
+</textarea>
+
+<span class="calculatorSolution" name="AlgebraAnswerThree">
+<br>
+As \(n\to \infty\), we get that 
+\(\displaystyle \lim_{n\to \infty}
+<span class="calculator" noTags="true">
+|(-1)^{n+shiftPowerThree} \frac{n}{ln(n)}|</span>
+=\lim_{n\to \infty} \frac{n}{\ln n} \stackrel{\text{L'Hospital}}{=} 
+\lim_{n\to \infty} \frac{1}{\frac{1}{n}}=\lim_{n\to \infty} n=\infty
+\). 
+Therefore the limit 
+\(\displaystyle \lim_{n\to\infty}<span class="calculator" noTags="true">(-1)^{n+shiftPowerThree} ln(n)</span>\) 
+does not exist as the terms of the sequence oscillate between very large and very negative values.
+As the terms of the series do not not tend to zero, 
+the series <span class="calculator">\displaystyle
+\sum_{n=startIndexThree}^\infty \left( (-1)^{n+shiftPowerThree} n/(ln(n))\right)
+</span> is divergent by the Basic Divergence Test.
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+divergent
+</span>
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=startIndexFour}^\infty  \left((-1)^{n+shiftPowerFour} \ln{}(n)/(n)\right)
+</span>    
+
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerFour" buttons="algebra">
+AlgebraAnswerFour
+-
+convergent 
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+convergent
+</span>
+<span class="calculatorSolution" name="AlgebraAnswerFour">
+<br>
+The series is alternating as it is of the form 
+(positive number)\(\cdot\)<span class="calculator">\displaystyle (-1)^{n+shiftPowerFour}</span>. 
+We claim that the function \( \displaystyle f(n)=\frac{\ln n}{n}\) is decreasing for \(n\geq 3\): indeed, 
+\(\displaystyle f'(n)=\frac{\frac{1}{n}\cdot n -\ln n }{n^2}= \frac{1-\ln n}{n^2}\), 
+and so \(\displaystyle f'(n) \lt 0\) whenever \(\displaystyle 1-\ln n \lt 0\), i.e., when 
+\(\displaystyle n\gt e\).
+Thus
+<span class="calculator">
+\displaystyle |\left( (-1)^{n+shiftPowerFour} (ln n)/(n)\right)
+|</span>\(\displaystyle = \frac{\ln n}{n}\searrow 0 \) and the alternating series test applies.
+Therefore, by the alternating series test, 
+<span class="calculator">\displaystyle \sum_{n=startIndexFour}^\infty \left( (-1)^{n+shiftPowerFour} (ln n)/(n)\right)
+</span> is convergent.
+</span>

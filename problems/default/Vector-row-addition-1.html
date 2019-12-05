@@ -1,0 +1,61 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+TurnOffRules("AddSequences", "ScalarTimesSequence");
+u=(RandomInteger{}(-10,10), RandomInteger{}(-10,10));
+v=(RandomInteger{}(-10,10), RandomInteger{}(-10,10));
+a=RandomInteger{}((-10,-1),(1,10));
+b=RandomInteger{}((-10,-1),(1,10));
+c=RandomInteger{}((-10,-1),(1,10));
+theActualAnswer=  u +  v;
+\)
+</span>
+<span class="calculatorShowToUserOnly">
+\(
+PlotSegment((0,0),  u, blue  )+
+PlotSegment((0,0),  v,red )
+\) 
+</span>
+
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+</span>
+
+<br>
+Simplify the linear combination to a single vector. 
+<br>
+<span class="calculator">
+\(\displaystyle u + v\) 
+</span>=
+<textarea class="calculatorAnswer" id="AlgebraAnswer" mqMatrices="true">
+\(
+TurnOnRules("AddSequences", "ScalarTimesSequence");
+AlgebraAnswer==theActualAnswer
+\)
+</textarea>
+
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+PlotSegment((0,0), u, blue )+
+PlotSegment((0,0), v, red )+
+PlotSegment((0,0), AlgebraAnswer )+
+PlotSegment( v, AlgebraAnswer, blue )+
+PlotSegment( u, AlgebraAnswer, red )
+;
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none);
+</span>
+
+
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("AddSequences", "ScalarTimesSequence");
+
+theActualAnswer
+</span>
+

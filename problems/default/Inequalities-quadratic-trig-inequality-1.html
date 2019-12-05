@@ -1,0 +1,118 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules ("Sine", "Cosine");
+rootOne=SelectAtRandom{} (-1, -\sqrt{3}/2, -\sqrt{2}/2, -1/2, 0, 1/2, \sqrt{2}/2, \sqrt{3}/2, 1);
+rootTwo=SelectAtRandom{}(-1, -\sqrt{3}/2, -\sqrt{2}/2, -1/2, 0, 1/2, \sqrt{2}/2, \sqrt{3}/2, 1);
+1/((rootTwo>rootOne)   IsRational{}(rootOne*rootTwo)   IsRational{}(rootOne+rootTwo));
+angleTwo=arccos(rootOne);
+angleOne=arccos(rootTwo);
+theScale=LCM(Denominator{}(rootOne*rootTwo), Denominator{}(rootOne+rootTwo));
+thePoly= theScale( u^2 -(rootOne+rootTwo) u + rootOne*rootTwo);
+rightSide= RandomInteger{}((-3,-1),(1,3)) u +RandomInteger{}(-3,3) ;
+leftSide=thePoly+rightSide;
+inequalityAnswer=[rootOne, rootTwo];
+finalAnswer=
+NormalizeIntervals
+(
+(
+[angleOne-6\pi, angleTwo-6\pi] \cup [-6\pi-angleTwo,-6\pi-angleOne]\cup
+[angleOne-4\pi, angleTwo-4\pi] \cup [-4\pi-angleTwo,-4\pi-angleOne]\cup
+[angleOne-2\pi, angleTwo-2\pi] \cup [-2\pi-angleTwo,-2\pi-angleOne]\cup
+[angleOne     , angleTwo     ] \cup [-angleTwo,          -angleOne]\cup
+[angleOne+2\pi, angleTwo+2\pi] \cup [2\pi-angleTwo,  2\pi-angleOne]\cup
+[angleOne+4\pi, angleTwo+4\pi] \cup [4\pi-angleTwo,  4\pi-angleOne]\cup
+[angleOne+6\pi, angleTwo+6\pi] \cup [6\pi-angleTwo,  6\pi-angleOne]
+)\cap [-2\pi,2\pi]
+)
+;
+leftPoint =-1+rootOne;
+rightPoint=rootTwo+1;
+thePlotVar=Plot2D(leftSide, leftPoint, rightPoint , red, 2 )+
+Plot2D(rightSide, leftPoint, rightPoint, pink, 2 )
++PlotGrid(0);
+</span>
+<span class="calculator">
+thePlotVar+PlotSetId("thePlot");
+</span><br>
+Solve the inequality.
+<br>
+
+<span class="calculator">
+\displaystyle
+leftSide
+</span>\(\leq \)<span class="calculator">
+\displaystyle
+rightSide
+</span>
+<answerCalculatorHighlight>\(u\in\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="studentInequalityAnswer" buttons="algebra, intervals">
+NormalizeIntervals{} studentInequalityAnswer ==inequalityAnswer
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%UseBracketForIntervals
+""
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(studentInequalityAnswer,none);
+thePlotVar+
+Plot2D(leftSide,  studentInequalityAnswer, blue, 2)+
+Plot2D(rightSide, studentInequalityAnswer, green, 2)+
+PlotSetId("thePlot")
+</span>
+<span class="calculatorAnswerOnGiveUp">
+%UseBracketForIntervals
+inequalityAnswer
+</span>
+
+<br>
+<span class="calculatorHidden">
+u=cos \theta;
+secondPlot=Plot2D(leftSide, -2\pi, 2\pi, red, 2)+
+Plot2D(rightSide, -2\pi, 2\pi, pink, 2)+
+PlotGrid(0);
+</span>
+<ul>
+<li>
+Using your previous work, find the solutions of the following inequality that lie in the interval \(\left[-360^\circ, 360^\circ \right]\). 
+</li>
+<li>
+You may use either degrees or radians; if using radians, your answer should be in the interval \([-2\pi, 2\pi]\).
+</li>
+<li>Your answer should be in the format \([a,b]\cup[c,d]\dots\) (you may or may not need more than 2 intervals).
+</li>
+</ul>
+<span class="calculator">
+\displaystyle
+leftSide
+</span>\(\leq \)<span class="calculator">
+\displaystyle
+rightSide
+</span>
+<answerCalculatorHighlight>
+\(\theta\in\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer"  buttons="algebra, intervals, angles">
+NormalizeIntervals{} algebraAnswer ==finalAnswer
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer,none);
+secondPlot+
+Plot2D(leftSide, algebraAnswer, green, 2 )+
+Plot2D(rightSide, algebraAnswer, blue, 2 )+
+PlotSetId("secondPlotID");
+</span>
+<span class="calculatorAnswerOnGiveUp">
+%UseBracketForIntervals
+finalAnswer
+</span>
+<br>
+<span class="calculator">
+secondPlot+PlotSetId("secondPlotID");
+</span>

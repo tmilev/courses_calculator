@@ -1,0 +1,94 @@
+<span class="setCalculatorExamProblem">
+</span>
+<calculatorHidden>
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+theBase=RandomInteger{}(2,6) /RandomInteger{}(2,6);
+1/(1-theBase);
+a=RandomInteger(-3,-1);
+b=RandomInteger(-5,5);
+c=RandomInteger(2,10);
+curve1{}{{x}}=  a x^2 +b x+c ;
+curve2{}{{x}}= theBase^x;
+theIntegrand{}{{x}}=curve2{}x-curve1{}x;
+leftPoint=NewtonsMethod( curve1{}x-curve2{}x,  Floor(-b/(2a)-5),20);
+rightPoint=NewtonsMethod( curve1{}x-curve2{}x, Floor(-b/(2a)+6),20);
+leftPlotView=leftPoint-1.5;
+leftPlotHeight=Min (curve1{}leftPlotView, curve2{}leftPlotView,-1);
+rightPlotView=rightPoint+1.5;
+rightPlotHeight=Max (curve1{}(-b/(2a))+2, curve2{}rightPlotView,1);
+basicPlot=PlotFill(
+Plot2D(curve1{}x, leftPoint,rightPoint)
++Plot2D(curve2{}x, rightPoint, leftPoint)
+, cyan)
++Plot2D(curve1{}x, leftPlotView-5,rightPlotView+5)
++Plot2D(curve2{}x, leftPlotView-5,rightPlotView+5)
++PlotViewRectangle( (leftPlotView,leftPlotHeight),(rightPlotView,rightPlotHeight))
++PlotWindow(300,300);
+theAntiderivative= \int curve1{}x dx - theBase^x / ln{}theBase;
+
+</calculatorHidden>
+
+<calculatorShowToUserOnly>
+basicPlot+PlotSetId("theCanvas");
+</calculatorShowToUserOnly>
+<br>
+Above, we have plotted the curves 
+ \(y=\)
+<calculator>
+\displaystyle curve1{}x
+</calculator> and the curve \(y=\)
+<calculator>
+\displaystyle curve2{}x 
+</calculator>. 
+Find the \(x\)-coordinates of the two curve intersections 
+with a precision of 5 digits after the decimal point. 
+In order to do that, set up Newton's method using the provided button. 
+The function NewtonsMethod takes on three arguments: 
+the first is the function whose zeroes you are trying to find, 
+the second is your first guess for the zero, 
+and the last argument is the number of iterations.
+
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<calculatorAnswer id="thePointsAnswer" buttons="algebra, logarithms, NewtonsMethod">
+(theV=(Sort(thePointsAnswer)-(leftPoint, rightPoint));
+|theV_1|+|theV_2|<0.0000001)_2
+</calculatorAnswer>
+
+<calculatorCommentsBeforeSubmission>
+%PlotShowJavascriptOnly
+EnsureExpressionDependsOnlyOn(thePointsAnswer,none);
+basicPlot
++PlotSetId("theCanvas")
++PlotPoint ( (thePointsAnswer_1, curve1{}(thePointsAnswer_1)),red)
++PlotPoint ( (thePointsAnswer_1, curve2{}(thePointsAnswer_1)),purple)
++PlotPoint ( (thePointsAnswer_2, curve1{}(thePointsAnswer_2)), red)
++PlotPoint ( (thePointsAnswer_2, curve2{}(thePointsAnswer_2)), purple)
+;
+</calculatorCommentsBeforeSubmission>
+
+<calculatorAnswerOnGiveUp>
+TurnOffRules(NewtonsMethod);
+(NewtonsMethod(curve1{}x-curve2{}x, Floor(-b/(2a)-5), 20),NewtonsMethod(curve1{}x-curve2{}x, Floor(-b/(2a)+6), 20));
+"<br>\(=\)<br>";
+(leftPoint, rightPoint)
+</calculatorAnswerOnGiveUp>
+<br>
+
+Find the area locked between the two curves with precision of 3 digits after the decimal point. 
+
+<answerCalculatorHighlight>Area: </answerCalculatorHighlight>
+<calculatorAnswer id="answerArea" buttons="algebra, logarithm">
+DoubleValue|((x=rightPoint; theAntiderivative)_2
+-
+(x=leftPoint; theAntiderivative)_2)-answerArea|<0.001
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(answerArea, none);
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
+TurnOnApproximations{}0;
+(x=rightPoint; theAntiderivative)_2
+-
+(x=leftPoint; theAntiderivative)_2
+</calculatorAnswerOnGiveUp>

@@ -1,0 +1,236 @@
+<span class="setCalculatorExamProblem">
+</span>
+The function \(f\)  is plotted below.<br>
+<span class="calculatorHidden">
+%UseBracketForIntervals
+a=SelectAtRandom(-3,3);
+b=SelectAtRandom(-2,-1,1,2);
+c=RandomInteger(-3, 3);
+%UseLnInsteadOfLog
+den{}{{x}}=MakeExpression( Polynomial (( x-a/b )^2)-1);
+f{}{{x}}= (b*( x-a/b ))/(b*den{}x) +3( x-a/b)+c;
+fd= (d/dx f{}x);
+sd= (d/dx (d/dx(f{}x)));
+TurnOffRules("DistributeMultiplication");
+sdNumFactors= FactorOneVarPolyOverRationals{}( Numerator{}(sd));
+fdNumFactors= FactorOneVarPolyOverRationals{}( Numerator{}(fd));
+fdNumZeroes=Sort( SolveFor{}(x, fdNumFactors_1) \cup SolveFor{}(x, fdNumFactors_2));
+increaseInterval=((-\infty, fdNumZeroes_1)\cup(fdNumZeroes_2, fdNumZeroes_3)\cup (fdNumZeroes_4, \infty));
+inflectionPoint =(SolveFor(x, sdNumFactors_1));
+verticalAsymptotes=(a/b-1, a/b+1);
+concaveUpIntervals=((verticalAsymptotes_1, inflectionPoint)\cup(verticalAsymptotes_2, \infty));
+</span>
+
+<span class="calculatorShowToUserOnly">
+Plot2D(f{}x,-12, -1+a/b, "red" )
++Plot2D(f{}x, -1+a/b, 1+a/b, "red" )
++Plot2D(f{}x,1+a/b, 12, "red" )
++PlotWindow(300,300)
++PlotViewRectangle((-12,-12),(12,12))
++PlotSetId("canvas1");
+</span>
+<br>
+The function is given by the following formula.
+<br>
+\(f(x)=\)
+<span class="calculatorShowToUserOnly">
+\displaystyle
+f{}x;
+</span>
+<br>
+Computation shows the first derivative is 
+<br>\(f'(x)=\)
+<span class="calculatorShowToUserOnly">
+\displaystyle
+fd
+</span>=
+<span class="calculatorShowToUserOnly">
+\displaystyle
+Product{}(fdNumFactors )/(Denominator{}(fd))
+</span>
+<br>
+and the second derivative is <br> \(f''(x)=\)
+<span class="calculatorShowToUserOnly">
+\displaystyle
+sd
+</span>=
+<span class="calculatorShowToUserOnly">
+\displaystyle
+Product{}(sdNumFactors )/(Denominator(sd))
+</span>
+
+<br>
+Find the vertical asymptotes of \(f\). 
+Enter your vertical asymptotes in the form x=1. 
+If there is more than one, separate them by commas, in a format similar to: x=1,x=2.
+<answerCalculatorHighlight>Vertical asymptotes: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="userVerticalAsymptotes" buttons="algebra, variables">
+(
+ userVerticalAsymptotes==  
+ (
+  x=verticalAsymptotes_1,
+  x=verticalAsymptotes_2
+ )  
+)
+or
+(
+userVerticalAsymptotes== 
+ (
+  x=verticalAsymptotes_2,
+  x=verticalAsymptotes_1
+ )  
+);
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+(x=(SolveFor(x, den{}x))_1,x=(SolveFor(x, den{}x))_2)
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(userVerticalAsymptotes,x);
+%PlotShowJavascriptOnly
+Plot2D(f{}x,-12, -1+a/b, "red" )
++Plot2D(f{}x, -1+a/b, 1+a/b , "red" )
++Plot2D(f{}x,1+a/b, 12, "red" )
++PlotWindow(300,300)
++ PlotSetId("canvas1")
++PlotViewRectangle((-12,-12),(12,12))+
+if (Length(userVerticalAsymptotes)==2,
+PlotCurve((SolveFor(x, userVerticalAsymptotes_1), t), -50, 50, "blue", 1.5)+
+PlotCurve((SolveFor(x, userVerticalAsymptotes_2), t), -50, 50, "blue", 1.5)
+,0
+)
+</span>
+
+<br>
+Find the <b>open</b> interval(s) on which \(f\) is increasing. Use the union sign to indicate multiple intervals; for example, 
+to enter the intervals (2,3) and (5,6), type in \((2,3)\cup (5,6)\). 
+<br>
+<b>\(f\) increases for:</b>
+<answerCalculatorHighlight>\(x\in\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="userIncreaseInterval" buttons="intervals, algebra">
+CompareIntervalsNumerically( userIncreaseInterval, increaseInterval, 0.000000000000001)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+Plot2D(f{}x,-12, -1+a/b, "red" )
++Plot2D(f{}x, -1+a/b, 1+a/b, "red" )
++Plot2D(f{}x,1+a/b, 12, "red" )
++PlotWindow(300,300)
++PlotViewRectangle((-12,-12),(12,12))
++PlotSetId("canvas1")
++Plot2D(f{}x, userIncreaseInterval, "blue", 4)
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(userIncreaseInterval,\infty)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+increaseInterval
+</span>
+<br>
+Find the \(x\)-coordinates of the local maxima of \(f\).
+Separate the different \(x\)-coordinates of the local maxima by commas, for example \(1+\sqrt{2},2+\sqrt{3}\).
+<br>
+<b>The local maxima of \(f\) are achieved for the following values of \(x\):</b>
+<answerCalculatorHighlight>
+\(x_{max}=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="xMax" buttons="algebra, comma">
+((fdNumZeroes_1, fdNumZeroes_3)==xMax ) or ((fdNumZeroes_3, fdNumZeroes_1)==xMax )  
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(xMax,none)
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+if (Length(xMax)==2, 
+Plot2D(f{}x,-12, -1+a/b, "red" )
++Plot2D(f{}x, -1+a/b, 1+a/b, "red" )
++Plot2D(f{}x,1+a/b, 12, "red" )
++PlotWindow(300,300)
++PlotViewRectangle((-12,-12),(12,12))
++PlotSetId("canvas1")
++PlotPoint((xMax_1, f{}xMax_1), "blue" )
++PlotPoint((xMax_2, f{}xMax_2), "blue" )
+, "<br><b>Did not get the expected number of x coordinates.</b>"
+);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(fdNumZeroes_1, fdNumZeroes_3)
+</span>
+<br>
+<b>The local minima of \(f\) are achieved for \(x\) equal to:</b>
+<answerCalculatorHighlight>
+\(x_{min}=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="xMin" buttons="comma, algebra">
+((xMin_1,xMin_2) == (fdNumZeroes_2, fdNumZeroes_4) ) or
+((xMin_2,xMin_1) == (fdNumZeroes_2, fdNumZeroes_4) ) 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+EnsureExpressionDependsOnlyOn(xMin,none);
+if (Length(xMin)==2,
+Plot2D(f{}x,-12, -1+a/b, "red" )
++Plot2D(f{}x, -1+a/b, 1+a/b, "red" )
++Plot2D(f{}x,1+a/b, 12, "red" )
++PlotWindow(300,300)
++PlotViewRectangle((-12,-12),(12,12))
++PlotSetId("canvas1")
++PlotPoint((xMin_1, f{}xMin_1), "blue" )
++PlotPoint((xMin_2, f{}xMin_2), "blue" )
+,
+"Wrong number of local minima"
+)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(fdNumZeroes_2, fdNumZeroes_4)
+</span>
+<br>
+Find the union of the <b>open</b> intervals on which \(f\) is concave up. 
+Enter more than one interval using the union sign.
+<br>
+<b>\(f\) is concave up when: </b>
+<answerCalculatorHighlight>  \(x\in\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="userConcaveUp" buttons="algebra, intervals">
+CompareIntervalsNumerically( userConcaveUp,concaveUpIntervals,0.000000000001)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(userConcaveUp,\infty);
+%PlotShowJavascriptOnly
+Plot2D(f{}x,-12, -1+a/b, "red" )
++Plot2D(f{}x, -1+a/b, 1+a/b, "red" )
++Plot2D(f{}x,1+a/b, 12, "red" )
++PlotWindow(300,300)
++PlotSetId("canvas1")
++PlotViewRectangle((-12,-12),(12,12))
++Plot2D(f{}x, userConcaveUp, "blue" , 2)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+concaveUpIntervals
+</span>
+<br>
+Find the \(x\)-coordinates of the inflection point(s). 
+If more than one, separate them by commas. 
+How many inflection points do you see on the graph?
+<br><b>List the \(x\)-coordinates of the inflection point(s).</b>
+<answerCalculatorHighlight>Answer:</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="userInflectionPoints" buttons="algebra">
+userInflectionPoints==inflectionPoint;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(userInflectionPoints,none);
+%PlotShowJavascriptOnly
+Plot2D(f{}x,-12, -1+a/b, "red" )
++Plot2D(f{}x, -1+a/b, 1+a/b, "red" )
++PlotSetId("canvas1")
++Plot2D(f{}x,1+a/b, 12, "red" )
++PlotWindow(300,300)
++PlotViewRectangle((-12,-12),(12,12))
++PlotPoint((inflectionPoint, f{}inflectionPoint), "blue")
+;
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+inflectionPoint
+</span>
+

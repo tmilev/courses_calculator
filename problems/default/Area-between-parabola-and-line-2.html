@@ -1,0 +1,110 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+coeffA=RandomInteger{}( (-3,-1), (1,3));
+coeffB=RandomInteger{}( -5,5);
+coeffC=RandomInteger{}( (-3,3));
+coeffG=RandomInteger{}( (4,10));
+leftPoint=coeffC;
+rightPoint=coeffC+coeffG;
+curve2= coeffA x +coeffB;
+curve1= -(x-coeffC)(x-coeffG-coeffC)+curve2;
+secondIntersection=coeffG+coeffC;
+theDifference=curve1-curve2;
+theInt=\int theDifference dx;
+TurnOffRules
+("IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+</span>
+<span class="calculatorShowToUserOnly">
+PlotFill(
+Plot2D(curve1, coeffC,coeffC+coeffG )
++Plot2D(curve2, coeffC,coeffC+coeffG )
+, cyan)
++Plot2D(curve1, coeffC-1,coeffC+coeffG+1 )
++Plot2D(curve2, coeffC-1,coeffC+coeffG+1 )
++PlotWindow(300,300)
+</span>
+<br>
+Find the area locked between the curve \(y=\)
+<span class="calculator">
+\displaystyle curve1 
+</span> and the curve \(y=\)
+<span class="calculator">
+\displaystyle curve2
+</span>. Do not include units in your answer.
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+AlgebraAnswer==
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+(x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2
+)_2;
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+
+(x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2
+
+)_2;
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">  
+finalAnswer=(x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2;
+TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",  "AddTerms", "MultiplyRationals",  "ConstantExtraction");
+leftSub=(x=coeffC; theInt)_2;
+rightSub=(x=secondIntersection; theInt)_2;
+</span>
+<br>
+We start by finding the intersection of the two curves.
+
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+curve1&=&curve2 &&\text{Transfer all terms to one side}\\\\
+theDifference&=&0&& \displaystyle \text{Solve using }x_1,x_2=\frac{-b\pm \sqrt{b^2-4 a c}}{2a}\\\\
+x_1&=&coeffC\\\\
+x_2&=&secondIntersection
+\end{array}
+"
+)
+</span>
+<br>
+Since the parabola opens downwards, the section between the two intersection points must lie above the line (as seen on the computer generated plot). 
+Therefore, between the two intersection points, we have that <span class="calculator"> curve1>curve2</span>, and so the area \(A\) between the two curves becomes:
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+A&=&\displaystyle \int_{coeffC}^{secondIntersection} \left|curve1-\left(curve2\right) \right|\diff x && curve1>curve2,
+\text{ so we can drop the absolute values}\\\\
+&=&\displaystyle \int_{coeffC}^{secondIntersection} \left(curve1-\left(curve2\right) \right)\diff x\\\\
+&=&\displaystyle \int_{coeffC}^{secondIntersection} \left(theDifference \right)\diff x\\\\
+&=&\displaystyle \left[theInt\right]_{coeffC}^{secondIntersection} \\\\
+&=&\displaystyle \left(rightSub\right)-\left(leftSub\right)\\\\
+&=&\displaystyle finalAnswer
+\end{array}
+"
+)
+</span>
+</span>

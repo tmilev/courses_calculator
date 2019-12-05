@@ -1,0 +1,67 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+uOne=RandomInteger{}(-8,8)/RandomInteger{}(1,3);
+uTwo=Floor(uOne)+RandomInteger{}(1,6);
+uThree=uTwo+RandomInteger{}(1,6);
+1/(uOne*uTwo*uThree);
+leftSide=Denominator{}uOne  (x-uOne)(x-uTwo)(x-uThree);
+TurnOffRules{}(DistributeMultiplication);
+multList1 = (Denominator{}uOne, x-uOne, x-uTwo, x-uThree);
+theCoeff=Denominator{}uOne;
+leftSideFactored= (theCoeff (x-uOne)) ( x-uTwo) (x-uThree);
+TurnOffRules{}(DistributeMultiplicationConstants);
+</span>
+Plot the cubic.
+<br>
+<span class="calculator">
+\displaystyle
+leftSide   
+</span>
+<br>
+<button class="showAnswerButton" onclick="if(this.toggleTag===undefined || this.toggleTag==false) this.toggleTag=true; else this.toggleTag=false; if (this.toggleTag){ document.getElementById('thePlotContainer').style.display=''; document.getElementById('thePlotContainer').style.opacity=1;} else {document.getElementById('thePlotContainer').style.display='none';  document.getElementById('thePlotContainer').style.opacity=0;}">
+Show plot
+</button>
+<br>
+<span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
+Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
+<br>
+<span class="calculator">
+PlotGrid{}(0)+
+Plot2D(leftSide, uOne-0.5, uThree+0.5, red, 2)+
+PlotSetId("thePlot")
+;
+</span>
+</span>
+<br>
+Fully factor the cubic using real numbers. Use radicals if necessary. 
+You may use the plot to help you guess the factors of the cubic.
+<br>
+<b>Factorization:</b>    
+<answerCalculatorHighlight><span class="calculator">
+\displaystyle
+leftSide   
+</span>\(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+IsProductLinearOrConstantTermsIn{}(x, factorizationAnswer) and 
+Polynomialize{} (factorizationAnswer-leftSide) ==0
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%PlotShowJavascriptOnly    
+TurnOffRules{}(DistributeMultiplication,DistributeMultiplicationConstants);
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(factorizationAnswer,x);
+if (not (Polynomialize{} (factorizationAnswer-leftSide) ==0), "<b style='color:red'>Did you check your answer by uncovering parenthesis? </b>","" )
+</span>
+<span class="calculatorAnswerOnGiveUp">
+leftSideFactored
+</span>
+
+

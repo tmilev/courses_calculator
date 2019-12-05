@@ -1,0 +1,32 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations{}0;
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower", "sqrt");
+
+base = RandomInteger(2,7);
+powerNum=SelectAtRandom(2,8);
+1/(base^powerNum <400);
+powerDen=RandomInteger(2,8);
+argument= \sqrt[powerDen]{base^powerNum};
+</span>
+Compute without a calculator. Use the properties of logarithms. Give an exact rational number answer.
+<answerCalculatorHighlight>
+<span class="calculator" >  \log_base( argument)</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerZero" buttons="algebra">
+AlgebraAnswerZero- powerNum/powerDen==0
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerZero, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOnRules("LogBaseSimpleCases", "\\log", "LogBase","ConvertShortDenominatorToNegativePower");
+powerNum/powerDen
+</span>

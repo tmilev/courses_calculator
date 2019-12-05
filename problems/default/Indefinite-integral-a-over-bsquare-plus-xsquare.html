@@ -1,0 +1,90 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", 
+"IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb",
+"IntegratePullConstant");
+a=RandomInteger{}((-5,-1),(1,10));
+b=RandomInteger{}( (1,15));
+c=RandomInteger{}((1, 20));
+d=RandomInteger{}((1, 20));
+g=RandomInteger{}( 2, 9);
+h=RandomInteger{}( -2,-10);
+theIntegral{}{{x}}= a/d((d/c)^0.5)(arctan(x (d/c)^0.5));
+f= a/(c+(d x^2));
+</span>
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+SeparatorBetweenSpans;
+</span>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
+or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral{}x,
+(theDifference= AlgebraAnswer-theIntegral{}x; x=1; theDifference)_3, 0.00001, x\in (0.5,1), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+</textarea>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+theIntegral{}x+C
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOnRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+aFormatted=a\phantom;
+aOverDformatted=a/d\phantom;
+btwo=2b;
+coverd=c/d;
+TurnOnRules("DistributeMultiplication");
+finalAnswer=theIntegral{}x;
+</span>
+<span class="calculator">
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int f \diff x&=&\displaystyle  aFormatted
+\int \frac {1}{d \left( \frac{c}{d}+x^2 \right) }\diff x \\\\
+&=&\displaystyle aOverDformatted \int \frac{1}{\left(\sqrt{coverd}\right)^2 + x^2} \diff x
+&&\displaystyle \text{Using } \int \frac{1}{w^2 + x^2} \diff x = \left(\frac{1}{w} \right) \arctan \left(\frac{x}{w}\right) + C\\\\
+&=&\displaystyle aOverDformatted \left( \frac{1}{\sqrt{coverd}} \right) \arctan \left( \frac{x}{\sqrt{coverd}} \right) + C \\\\
+&=&\displaystyle  finalAnswer+C\\\\
+\end{array}
+"
+)
+</span>
+</span>

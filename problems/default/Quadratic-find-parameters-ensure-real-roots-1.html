@@ -1,0 +1,56 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseBracketForIntervals
+theA=RandomInteger((-5,-1),(1,5));
+bCF=RandomInteger((-5,-1),(1,5));
+bCF2=RandomInteger((-5,-1),(1,5));
+theB =bCF k +bCF2;
+theC=RandomInteger((-5,-1),(1,5)) k+RandomInteger(-5,5) ;
+
+TurnOffRules("DistributeMultiplication");
+f=theA x^2+ theB x + theC;
+inequality=if (theA>0, "\gt", "\lt");
+theAnswerRoots=SolveFor(k, Polynomialize(theB^2-4 theA theC));
+1/(theAnswerRoots_1-theAnswerRoots_2 );
+1/ (IsReal(theAnswerRoots_1));
+theAnswer= (-\infty, Min(theAnswerRoots_1, theAnswerRoots_2))\cup (Max(theAnswerRoots_1, theAnswerRoots_2),\infty);
+kPlot=Max(theAnswerRoots_1,theAnswerRoots_2)+1;
+plotOneParam{}({{kIn}}, {{colorIn}}  )=
+( fForPlot=(k=kIn; f)_2;
+  midPt = - CoefficientOf{}(x, fForPlot) / (2 CoefficientOf{}(x^2, fForPlot));
+  leftPt=midPt-2;
+  rightPt=midPt+2;
+  Plot2D( fForPlot, leftPt, rightPt, {{colorIn}},2);
+)_5;
+</span>
+Find the values of the parameter \(k\) for which the quadratic has two distinct real roots.
+
+<br>
+<span class="calculator">  
+f 
+</span><span class="calculator">  
+StringToAtom inequality
+</span>\(0\)
+<answerCalculatorHighlight>Answer: \(k\in \)</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, intervals">
+CompareIntervalsNumerically(theAnswer, AlgebraAnswer, 0.0000001);
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%UseBracketForIntervals
+"";
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theAnswer
+</span>
+<br>
+<span class="calculator">
+plotOneParam{}(kPlot, red) + PlotGrid{}0 + PlotSetId("theCanvas");
+</span>
+
+

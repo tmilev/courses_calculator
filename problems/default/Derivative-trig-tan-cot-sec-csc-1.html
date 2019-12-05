@@ -1,0 +1,36 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function. 
+
+<span class="calculatorHidden">
+a= RandomInteger((-5,-1), (1,5));
+b= RandomInteger((-5,-1), (1,5));
+c= RandomInteger((-5,-1), (1,5));
+h= RandomInteger((-5,-1), (1,5));
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate", "CommonDenominator",
+"ExpressCotViaSineCosine", "ExpressTanViaSineCosine", "ExpressCscViaSine", "ExpressSecViaCosine"
+);
+</span>
+<br>
+<span class="calculator">
+\displaystyle f{}{{x}}= a\tan x + b \cot x + c\sec x + h \csc x
+</span>.
+<span class="calculatorHidden">
+</span>
+<answerCalculatorHighlight>
+\(f'(x)=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0.05, \pi/2.1, 50, 0.0001);
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate", "CommonDenominator",
+"ExpressCotViaSineCosine", "ExpressTanViaSineCosine", "ExpressCscViaSine", "ExpressSecViaCosine"
+);
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+d/dx (f{}x)
+</span>

@@ -1,0 +1,51 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules ("DegreesToRadians", "Sine", "Cosine");
+rightSide=\pi RandomInteger{}(-10,10) /RandomInteger{}(1,4);
+trigFun=SelectAtRandom(\sin, \cos);
+</span>
+Compute the exact value. 
+In your answers, use exact radical notation (expressions such as \(\frac{\sqrt{2}}{2}\)).
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+trigFun{}( rightSide)
+</span>\(=\) 
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra">
+algebraAnswer==(TurnOnRules("DegreesToRadians", "Sine", "Cosine"); (trigFun {}rightSide))_2
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer,none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(TurnOnRules("DegreesToRadians", "Sine", "Cosine"); (trigFun {}rightSide))_2
+</span>
+
+<span class="calculatorHidden">
+rightSideTwo=(SelectAtRandom{}(30, 45) * RandomInteger{}(-13,13))^\circ;
+trigFunTwo=SelectAtRandom(\sin, \cos);
+</span>
+<br>
+Find the exact value.
+<answerCalculatorHighlight><span class="calculator">
+\displaystyle
+trigFunTwo{}( rightSideTwo)
+</span>\(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswerTwo" buttons="algebra">
+algebraAnswerTwo==(TurnOnRules("DegreesToRadians", "Sine", "Cosine"); (trigFunTwo {}rightSideTwo))_2
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswerTwo,none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(TurnOnRules("DegreesToRadians", "Sine", "Cosine"); (trigFunTwo {}rightSideTwo))_2
+</span>

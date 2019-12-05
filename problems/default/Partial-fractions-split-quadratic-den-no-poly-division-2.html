@@ -1,0 +1,51 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+a=RandomInteger{}((-1,-4),(1,4));
+b=a+RandomInteger{}((1,5));
+c=RandomInteger{}((-4,-1),( 1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+g=SelectAtRandom{}( 2,4,6,8);
+h=RandomInteger{}( -2,-10);
+1/(b^2-4a c>0);
+f=\frac{1}{a x^2+ b x +c};
+frac1=(UnivariatePartialFractions(f))_1;
+frac2=(UnivariatePartialFractions(f))_2;
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "IntegrateBlockIIaIIIa");
+</span>
+
+Split into partial fractions.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle f
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+(
+answer1=  ChildExpression(AlgebraAnswer,2); 
+answer2=ChildExpression(AlgebraAnswer,3); 
+TurnOnRules("DistributeMultiplication", "CommonDenominator", "CommonDenominatorOneNonFraction");
+((frac1-answer1==0)and(frac2-answer2==0))
+or
+((frac2-answer1==0)and(frac1-answer2==0))
+)_4
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules
+("ConvertShortDenominatorToNegativePower",
+"CommonDenominator", "CommonDenominatorOneNonFraction"
+);
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+frac1+frac2
+</span>

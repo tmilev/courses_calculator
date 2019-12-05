@@ -1,0 +1,31 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+TurnOffApproximations{}0;
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase");
+base = RandomInteger(2,7);
+power= RandomInteger(2,6);
+1/(base^power<400);
+</span>
+Compute without the use of calculator.
+<answerCalculatorHighlight>
+<span class="calculator" >  \log_base( base^power)</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerZero" buttons="algebra">
+AlgebraAnswerZero== 
+(TurnOnRules("LogBaseSimpleCases", "\\log", "LogBase");
+\log_base( base^power)
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerZero, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOnRules("LogBaseSimpleCases", "\\log", "LogBase");
+  \log_base( base^power)
+</span>

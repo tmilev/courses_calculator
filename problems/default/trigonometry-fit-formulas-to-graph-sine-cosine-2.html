@@ -1,0 +1,57 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+theTrigFun=SelectAtRandom(sin, cos);
+A= RandomInteger{}((-7,-1), (1,7));
+b=SelectAtRandom{}(1,2,3,4,5,6, 1/2,1/3,1/4,1/5,1/6)  * SelectAtRandom{}(-1,1);
+c=0;
+
+theFun= A theTrigFun{}( b (x+ c*\pi));
+xPeak= if (theTrigFun==sin, \pi/(2 b)- c \pi ,-c\pi);
+yPeak = (x=xPeak; theFun)_2;
+
+xPeak2= xPeak - \pi/b;
+yPeak2 = (x=xPeak2; theFun)_2;
+xPeak3= xPeak + \pi/b;
+yPeak3 = (x=xPeak3; theFun)_2;
+
+thePlot=Plot2D( theFun, - Max{}(2, 2/|b|)\pi , Max{}(2, 2/|b|)\pi)+PlotGrid{}0
++
+PlotPoint ( (xPeak, yPeak), blue)+
+PlotLabel ( (xPeak, yPeak), ToUTF8String( (xPeak, yPeak)) )+
+PlotPoint ( (xPeak2, yPeak2), blue)+
+PlotLabel ( (xPeak2, yPeak2), ToUTF8String( (xPeak2, yPeak2)) )+
+PlotPoint ( (xPeak3, yPeak3), blue)+
+PlotLabel ( (xPeak3, yPeak3), ToUTF8String( (xPeak3, yPeak3)) )
+;
+</span>
+<span class="calculator">
+thePlot+PlotSetId("plotid1")
+</span>
+<br>
+<ul>
+<li>
+The graph above was generated using a formula of the form 
+\(f(x)=A \cos (a x+b)\) or a formula of the form \(f(x)=A \sin (a x+b)\). 
+</li>
+<li>
+Some points on the graph have been labeled. Zoom in with the mouse wheel.
+</li>
+<li>Find a formula which generates the same graph.</li> 
+<li>
+Please note that this problem may have 
+more than one correct answer (in fact, it must - why? Is there a relationship between \(\sin \left(\frac{\pi}{2}-x\right)\) and \(\cos x\)?).
+</li>
+</ul>
+<answerCalculatorHighlight>\(f(x)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, trig">
+CompareFunctionsNumerically(algebraAnswer, theFun, 0, 5, 50, 0.0000001)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+EnsureExpressionDependsOnlyOn (algebraAnswer, x);
+thePlot+Plot2D(algebraAnswer,-\infty, \infty, blue,2)+PlotSetId("plotid1")
+</span>
+<span class="calculatorAnswerOnGiveUp">
+theFun
+</span>

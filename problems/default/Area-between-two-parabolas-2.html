@@ -1,0 +1,69 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+TurnOffRules
+("IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+a=RandomInteger{}( (2,3));
+b=RandomInteger{}( -5,5);
+c=RandomInteger{}( (-3,3));
+leftPoint=RandomInteger{}(-4,4);
+rightPoint=leftPoint+RandomInteger{}( (4,10));
+curve1{}{{x}}= x^2+b x +c;
+curve2{}{{x}}= -a (x-leftPoint)(x-rightPoint) + curve1{}x;
+theArea{}{{x}}=curve2{}x-curve1{}x;
+</span>
+
+<span class="calculatorShowToUserOnly">
+PlotFill(
+Plot2D(curve1{}x, leftPoint,rightPoint)
++Plot2D(curve2{}x, rightPoint, leftPoint)
+, cyan)
++Plot2D(curve1{}x, leftPoint-1,rightPoint+1)
++Plot2D(curve2{}x, leftPoint-1,rightPoint+1)
++PlotWindow(300,300)
+</span>
+<br>
+Find the area locked between the curve \(y=\)
+<span class="calculator">
+\displaystyle curve1{}x
+</span> and the curve \(y=\)
+<span class="calculator">
+\displaystyle curve2{}x 
+</span>. Do not include units in your answer.
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+AlgebraAnswer==
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+-(theInt=(\int theArea{}x dx); x=leftPoint; theInt)_3+
+(theInt=(\int theArea{}x dx); x=rightPoint; theInt)_3
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+-(theInt=(\int theArea{}x dx); x=leftPoint; theInt)_3+
+(theInt=(\int theArea{}x dx); x=rightPoint; theInt)_3
+)_2
+</span>

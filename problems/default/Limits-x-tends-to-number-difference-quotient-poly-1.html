@@ -1,0 +1,70 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the limit. 
+
+<span class="calculatorHidden">
+af=RandomInteger{}((-5,-1),(1,5));
+bf=RandomInteger{}(-5,5);
+cf=RandomInteger{}((-5,-1),(1,5));
+f{}{{x}}=af x^2+ bf x + cf;
+theDerivative=d/dx(f{}x);
+TurnOffRules("AddRationals", "AddTerms", "MultiplyRationals", "ConstantExtraction", "PowerIntegerByInteger", "PowerRationalByRational", "DistributeMultiplication");
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+\lim_{h\to 0}\frac{f{}(x+h)-f{}x}{h}
+</span>.
+<br>
+<answerCalculatorHighlight>
+Answer: 
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+CompareFunctionsNumerically( AlgebraAnswer-theDerivative,0, 0, 5, 50, 0.000001) 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,none)
+</span><span class="calculatorAnswerOnGiveUp">
+theDerivative
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<br>
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+fx=f{}x;
+fxplush=f{}(x+h);
+theDifference=fxplush-fx;
+theDifferenceSimplified=Polynomialize{}theDifference;
+theDifferenceDivh=MakeExpression (MakeRationalFunction{}(theDifferenceSimplified/h));
+answerNonSimplified=(h=0; theDifferenceDivh)_2;
+</span>
+When \(h=0\), both the numerator and the denominator vanish. Therefore the limit is of the form "\(\frac{0}{0}\)" and we need to use algebra.
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle  \require{cancel}
+\displaystyle \lim\limits_{h\to 0}\frac{theDifference}{h}&=&
+\displaystyle \lim\limits_{h\to 0} \frac{theDifferenceSimplified}{h} &&
+{\begin{array}{l}\text{Uncover the parenthesis }\\\\
+ \text{Using }(a+b)^2=a^2+2ab+b^2 \\\\
+\end{array}}\\\\
+&=&\displaystyle \lim\limits_{h\to 0} \frac{ \cancel{h}(theDifferenceDivh)}{\cancel{h}} 
+&&\text{Factor }h\\\\
+&=&\displaystyle \lim\limits_{h\to 0} theDifferenceDivh\\\\
+&=&\displaystyle answerNonSimplified\\\\
+&=&\displaystyle theDerivative
+\end{array}
+"
+)
+</span>
+</span>
+
+
+

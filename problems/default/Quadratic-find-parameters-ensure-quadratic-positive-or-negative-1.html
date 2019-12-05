@@ -1,0 +1,58 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+theA=RandomInteger((-5,-1),(1,5));
+bCF=RandomInteger((-5,-1),(1,5));
+bCF2=RandomInteger((-5,-1),(1,5));
+theB =bCF k +bCF2;
+theC=RandomInteger((-5,-1),(1,5)) k+RandomInteger(-5,5) ;
+
+TurnOffRules("DistributeMultiplication");
+f=theA x^2+ theB x + theC;
+inequality=if (theA>0, "\gt", "\lt");
+theAnswer=SolveFor(k, Polynomialize(theB^2-4 theA theC));
+1/(theAnswer_1-theAnswer_2 );
+1/ (IsReal(theAnswer_1));
+kPlot=(theAnswer_1+theAnswer_2)/2;
+
+plotOneParam{}({{kIn}}, {{colorIn}}  )=
+( fForPlot=(k=kIn; f)_2;
+  midPt = - CoefficientOf{}(x, fForPlot) / (2 CoefficientOf{}(x^2, fForPlot));
+  leftPt=midPt-2;
+  rightPt=midPt+2;
+  Plot2D( fForPlot, leftPt, rightPt, {{colorIn}},2);
+)_5;
+</span>
+Find the values of the parameter \(k\) for which the function satisfies the given inequality.
+
+<br>
+<span class="calculator">  
+f 
+</span><span class="calculator">  
+StringToAtom inequality
+</span>\(0\)
+<answerCalculatorHighlight>Answer: \(k\in \)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, intervals">
+theAnswer-AlgebraAnswer==0;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
+%PlotShowJavascriptOnly
+ plotOneParam{}(AlgebraAnswer_1,orange)  
++plotOneParam{}(2/3AlgebraAnswer_1 + 1/3 AlgebraAnswer_2,orange)  
++plotOneParam{}(1/3AlgebraAnswer_1 + 2/3 AlgebraAnswer_2, orange)  
++plotOneParam{}(AlgebraAnswer_2, orange)  
++PlotGrid{}0+PlotSetId("theCanvas");
+
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theAnswer
+</span>
+<br>
+<span class="calculator">
+plotOneParam{}(kPlot, red) + PlotGrid{}0 + PlotSetId("theCanvas");
+</span>
+
+

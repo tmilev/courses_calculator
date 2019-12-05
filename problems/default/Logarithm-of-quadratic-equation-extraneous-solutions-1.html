@@ -1,0 +1,46 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+Solve the equation (over the real numbers). 
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+uOne=RandomInteger{}(-8,8);
+uTwo=uOne+RandomInteger{}(1,8);
+wOne=RandomInteger(-12,12);
+wTwo=uOne+uTwo-wOne;
+preBase=wTwo*wOne-uOne*uTwo;
+extraFactor=if(IsPower(preBase), Length(FactorInteger(preBase)) ,1);
+theBase= if (IsPower(preBase), (FactorInteger{}(preBase))_1, preBase);
+1/(preBase*(preBase-1)*(preBase>0)*(wOne-wTwo));
+leftSide=\log_theBase (x-wOne) +\log_{theBase} (x-wTwo);
+rightSide=extraFactor;
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+leftSide   
+</span>\(=\)<span class="calculator">
+\displaystyle
+rightSide   
+</span> .
+<br>
+If there is more than one answer, separate them by comma. 
+<answerCalculatorHighlight>\(x=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+AlgebraAnswer== uTwo
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("LogBase");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+uTwo
+</span>
+
+

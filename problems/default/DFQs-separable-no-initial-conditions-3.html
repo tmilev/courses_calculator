@@ -1,0 +1,60 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+%UseBracketForIntervals
+%UseLnInsteadOfLog
+TurnOffRules("ExpressTanViaSineCosine");
+leftPart=d/dx y;
+a=1/RandomInteger{}(1,9);
+b=1/RandomInteger{}(1,10);
+c=RandomInteger(-10,10);
+D=RandomInteger{}((1,4));
+rightPart=a^2 y^2+b^2;
+finalAnswer=b/a \tan (a b x+D);
+f{}{{z}}=(x=z; finalAnswer)_2;
+leftX=-D/(a b)- (0.7 +0.29 /(10 a b+ 1) )\pi/(2 a b);
+rightX=-D/(a b)+(0.7 +0.29 /(10 a b+ 1) )\pi/(2 a b);
+lowY=1/(a b );
+highY=-1/(a b);
+theVLength=0.1* 1/(a*b);
+thePoint=-D/(b a) ;
+initialY=0;
+</span>
+<span class ="calculatorShowToUserOnly">
+
+PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3);
+
+</span>
+<br>
+Solve the separable differential equation 
+
+<span class="calculator">\displaystyle
+leftPart
+</span>\(=\)
+<span class="calculator">\displaystyle
+rightPart
+</span>
+<br>
+with initial condition
+<br>
+\(\displaystyle y\left(<span class="calculator" noTags="true">thePoint</span>\right)=<span class="calculator" noTags="true">initialY</span>
+\).
+<answerCalculatorHighlight>Answer: \(y=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra, trig, logarithms">
+CompareFunctionsNumerically(AlgebraAnswerOne, finalAnswer, leftX, rightX, 20, 0.000001)
+</textarea>
+<br>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+Plot2D(AlgebraAnswerOne,leftX,rightX,red,2)
++
+PlotWindow(300,300)
++
+PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+\displaystyle
+finalAnswer
+</span>

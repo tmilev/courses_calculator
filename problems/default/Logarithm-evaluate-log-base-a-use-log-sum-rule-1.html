@@ -1,0 +1,39 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations{}0;
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
+
+halfBase = RandomInteger(2,7);
+base=halfBase^2;
+power=SelectAtRandom(2,4,6,8);
+leftPower=SelectAtRandom(1,3,5,7);
+argumentTrue=halfBase^power;
+1/(leftPower < power);
+1/(argumentTrue<700);
+rightPower=power-leftPower;
+leftArgument=halfBase^leftPower;
+rightArgument=halfBase^rightPower;
+</span>
+Using the properties of logarithms, compute the expression. 
+<answerCalculatorHighlight>
+<span class="calculator" >  \log_base( leftArgument)+\log_base( rightArgument)</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerZero" buttons="algebra">
+(DoubleValue{}|AlgebraAnswerZero-  (\log_base( leftArgument)+\log_base( rightArgument))|< 0.0000000001 )
+and (not ( Contains(AlgebraAnswerZero, StringToAtom("LogBase") ) ) ) 
+and (not ( Contains(AlgebraAnswerZero, StringToAtom("\\log") ) ) )
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerZero, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOnRules("LogBaseSimpleCases", "\\log", "LogBase");
+\log_base( leftArgument)+\log_base( rightArgument)
+</span>

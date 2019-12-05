@@ -1,0 +1,114 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+leftPoint=RandomInteger{}(0,8);
+rightPoint=RandomInteger{}(leftPoint+1,10);
+a=RandomInteger{}(1,10);
+b=RandomInteger{}( (-1,-10),(1,10));
+n=RandomInteger{}( (-2,-3),(1,3));
+f{}{{x}} = a x;
+</span>
+
+
+<span class="calculatorShowToUserOnly">
+PlotFill(
+PlotSegment((leftPoint, 0), (leftPoint , f{}leftPoint) )
++Plot2D(f{}x, leftPoint,rightPoint)
++PlotSegment((rightPoint, f{}rightPoint), (rightPoint,0))
++PlotSegment((rightPoint,0), (leftPoint,0) ) , cyan)
+;
+</span>
+<br>
+Integrate. The integral is definite so your answer should be a constant expression/number.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} f{}x dx 
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+%LogEvaluation
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+| DoubleValue((theIndefiniteIntegral= \int f{}x dx; x=rightPoint; theIndefiniteIntegral)_3-
+(theIndefiniteIntegral= \int f{}x dx; x=leftPoint; theIndefiniteIntegral)_3 -AlgebraAnswer) |<0.0000001
+)_2
+</textarea>
+
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span> 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+
+(theIndefiniteIntegral= \int f{}x dx; x=rightPoint; theIndefiniteIntegral)_3-
+(theIndefiniteIntegral= \int f{}x dx; x=leftPoint; theIndefiniteIntegral)_3
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+outTerm = A/a;
+nplus1= n+1;
+term1 = a/2;
+term2 = rightPoint^2;
+term3 = leftPoint^2;
+answer = term1(term2 - term3);
+sideLeft= a*leftPoint;
+sideRight=a*rightPoint;
+width=rightPoint-leftPoint;
+TurnOnRules("DistributeMultiplication");
+finalAnswer=theIntegral{}x;
+</span>
+<br>
+<b>Variant I</b>
+<br>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int_{leftPoint}^{rightPoint} a x dx   &=&
+\displaystyle  a \left[ \frac{x^{1+1}}{1+1} \right]_{leftPoint}^{rightPoint}  \\\\
+\displaystyle &=&\displaystyle  \frac{a}{2} \left[ x^{2} \right]_{leftPoint}^{rightPoint}   &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left[ rightPoint^2 - leftPoint^2 \right]  &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left[ term2 - term3 \right]  &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  answer &&\displaystyle \text{ }  \\\\
+\end{array}
+"
+)
+</span>
+<br>
+<b>Variant II</b>
+<br>
+The integral represents the area of a trapezoid of height 
+<span class="calculator"> EvaluateSymbols("\(rightPoint-leftPoint= width\)")</span> 
+whose bases have lengths 
+<span class="calculator"> EvaluateSymbols("\(a\cdot leftPoint=sideLeft\)")  </span>
+and 
+<span class="calculator"> EvaluateSymbols("\(a\cdot rightPoint=sideRight\)")  </span>.
+The area of the trapezoid is therefore 
+\(\displaystyle height\cdot \frac{(\text{base 1})(\text{base 2})}{2}=\)<span class="calculator"> EvaluateSymbols("\(\displaystyle width\cdot \frac{sideLeft+sideRight}{2}=answer\)")  </span>.
+
+</span>

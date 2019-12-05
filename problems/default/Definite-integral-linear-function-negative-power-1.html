@@ -1,0 +1,138 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+n = RandomInteger(2,5);
+sign = SelectAtRandom(-1,1);
+a=RandomInteger{}(1,6) * sign;
+b=RandomInteger{}( (-1,-10),(1,10));
+point1= if (sign==1,Floor(-b/a+1),  Floor(-b/a-1));
+point2=point1 +sign* RandomInteger{}(1,4);
+leftPoint=if (point2>point1, point1, point2);
+rightPoint=if (point2>point1, point2, point1);
+thePreFun = 1/( a x + b)^{n};
+largerHeight=(x=point1; thePreFun)_2;
+theFunPreCF=Floor{}(1/largerHeight /10) *10 ;
+theFunCF= (if(theFunPreCF==0,  1,theFunPreCF) );
+theFun= theFunCF thePreFun;
+thePower=-n;
+leftHeight=(x=leftPoint; theFun)_2;
+rightHeight=(x=rightPoint; theFun)_2;
+
+theIndefiniteIntegral= theFunCF  ((a x +b)^{thePower+1})/(a(thePower+1));
+</span>
+
+<span class="calculatorShowToUserOnly">
+PlotFill(
+PlotSegment((leftPoint, 0), (leftPoint,leftHeight))
++Plot2D(theFun, leftPoint,rightPoint )
++PlotSegment((rightPoint, rightHeight), (rightPoint,0))
++PlotSegment((rightPoint,0), (leftPoint,0)), cyan)
++PlotWindow(300,300)
+;
+</span>
+<br>
+Integrate. The integral is definite so your answer should be a constant expression/number. 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} theFun dx
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+%LogEvaluation
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+| DoubleValue(( x=rightPoint; theIndefiniteIntegral)_2-
+(x=leftPoint; theIndefiniteIntegral)_2 -AlgebraAnswer) |<0.0001
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+
+(x=rightPoint; theIndefiniteIntegral)_2-
+(x=leftPoint; theIndefiniteIntegral)_2
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+outTerm = A/a;
+nplus1= n+1;
+term = a x + b;
+theFunIntoPowerMode=theFunCF ( term)^{thePower};
+thePowerplus1 = thePower + 1;
+diffX=1/a\diff u;
+diffU=a\diff x;
+uLeft= a leftPoint+b;
+uRight= a rightPoint+b;
+term1 = theFunCF/(a*thePowerplus1);
+term2 = (a rightPoint + b)^thePowerplus1;
+term3 = (a leftPoint + b)^thePowerplus1;
+answer = term1(term2-term3);
+TurnOnRules("DistributeMultiplication");
+finalAnswer=term1 ( term2 - term3 );
+approxFinalAnswer=DoubleValue(finalAnswer);
+TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",
+"AddTerms", "MultiplyRationals",  "ConstantExtraction");
+funVarChangeddiffU=(theFunCF u^thePower 1/a) \diff u;
+
+leftSub=(a rightPoint + b)^{thePowerplus1} ;
+rightSub= (a leftPoint + b)^{thePowerplus1};
+</span>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int_{leftPoint}^{rightPoint} theFun \diff x 
+&=&\displaystyle \int_{leftPoint}^{rightPoint} theFunIntoPowerMode \diff x   \\\\
+&=&\displaystyle 
+\int \limits_
+{ \begin{array} {rcl}x&=&leftPoint \\\\ u&=&uLeft \end{array} }^
+{\begin{array} {rcl}x&=&rightPoint \\\\ u&=&uRight \end{array}} 
+funVarChangeddiffU &&
+\text{Substitute: } {\begin{array}{rcl}
+term&=&u \\\\
+diffU&=&\diff u \\\\ 
+\diff x&=&diffX \end{array}}\\\\
+\displaystyle &=&\displaystyle
+\left[ \frac{theFunCF}{a} \left( \frac{u^{thePower +1}}{thePower +1} \right) \right]_{x=leftPoint}^{x=rightPoint}  \\\\
+\displaystyle &=&\displaystyle  \frac{theFunCF}{a (thePowerplus1)}
+\left[ u^{thePowerplus1} \right]_{x=leftPoint}^{x=rightPoint} &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left[ (term)^{thePowerplus1} \right]_{x=leftPoint}^{x=rightPoint}
+&&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left[(leftSub\right] - \left[rightSub \right]   &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left[ term2 - term3 \right]  &&\displaystyle \text{ }  \\\\
+\displaystyle &\approx&\displaystyle  approxFinalAnswer &&\displaystyle \text{Step requires calculator}  \\\\
+\end{array}
+"
+)
+</span>
+</span>

@@ -1,0 +1,57 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+radius = RandomInteger{}(1,10);
+extraHeight=radius / RandomInteger{}(3,10);
+startingAngle=30^\circ;
+shipTotalHeight=radius + extraHeight;
+shipBottom= (radius cos {}startingAngle, radius sin{}startingAngle);
+shipTip=(shipTotalHeight cos {}startingAngle, shipTotalHeight sin{}startingAngle);
+extraAngle= arccos(radius/shipTotalHeight);
+totalAngle=startingAngle+extraAngle;
+horizon= ( radius cos {}(totalAngle), radius sin {}totalAngle);
+heelV1= horizon/10;
+heelV2= (heelV1_2, -heelV1_1 );
+
+thePlot=
+PlotCurve((radius cos{}(t), radius sin{} (t)), 0, 2\pi, red)+
+PlotCurve((radius cos{}(t), radius sin{} (t)), startingAngle, totalAngle, blue, 4)+
+PlotSegment(shipTip, (0,0), orange)+
+PlotSegment(shipTip, horizon, blue)+
+PlotPath( ( horizon-heelV1, horizon+heelV2-heelV1, horizon+heelV2), black ) +
+PlotLabel((0,-radius/20),"O")+
+PlotLabel(shipTip-(0,radius/20),"A")+
+PlotLabel(shipTip/2 -(0,radius/20), ToUTF8String( radius+extraHeight))+
+PlotLabel(horizon/2 +(-radius/30,radius/20), radius)+
+
+PlotSegment(horizon, (0,0), green)+PlotRemoveCoordinateAxes {}0
+;
+TurnOffApproximations{}0;
+finalAnswer = arccos(radius /(radius+extraHeight ));
+
+</span>
+<span class="calculator">
+thePlot+ PlotSetId("canvas1");
+</span>
+<br>
+Find the length of the highlighted arc. The radius of the circle is <span class="calculator">\displaystyle radius </span> 
+and the length of the segment \(OA\) is <span class="calculator">\displaystyle extraHeight+radius </span>.
+<ul>
+<li>Give an exact expression using inverse trig function such as \(\arcsin, \arccos\).</li>    
+</ul>
+<answerCalculatorHighlight>Arc length\(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, inversetrig">
+(DoubleValue|algebraAnswer-finalAnswer|)<0.000001;
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations{}0;
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(algebraAnswer, none);
+"<br>Your answer is approximately equal to: " + ToString( (TurnOnApproximations{}0;
+algebraAnswer
+)_2)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+finalAnswer
+</span>

@@ -1,0 +1,47 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+TurnOffApproximations{} 0;
+TurnOffRules("DegreesToRadians"
+,"ExpressSecViaCosine", "ExpressCscViaSine",
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine"
+);
+theTrigFun=SelectAtRandom(sec,csc,tan, cot);
+aNoPi= SelectAtRandom{}(1/2, 1/3, 1/4, 1/6, 2/3, 3/4,5/6) *  SelectAtRandom{}(-1,1);
+bNoPi=SelectAtRandom{}(1/2, 1/3, 1/4, 1/6, 2/3, 3/4,5/6)*  SelectAtRandom{}(-1,1);
+
+angleNoPi =aNoPi + bNoPi;
+1/
+( (Denominator{}(angleNoPi) -1)
+(Denominator{}(angleNoPi) -2)
+(Denominator{}(angleNoPi) -3)
+(Denominator{}(angleNoPi) -4)
+(Denominator{}(angleNoPi) -6)
+);
+camouflageAngleNoPi=RandomInteger{}(-3,3)/2;
+theAngleDegs= (angleNoPi + camouflageAngleNoPi)*180;
+theRightSide=theTrigFun{}( theAngleDegs^\circ);
+finalAnswer=(TurnOnRules("ExploitCosEvenness", "ExploitSinOddness", "SineOfAngleSum", "CosineOfAngleSum", "DegreesToRadians"
+,"ExpressSecViaCosine", "ExpressCscViaSine",
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine"
+);
+simplified =theTrigFun{}(a+b+camouflageAngleNoPi*\pi );
+a=aNoPi*\pi;
+b=bNoPi*\pi;
+simplified
+)_5
+</span>
+Compute an exact algebraic expression using the four arithmetic operations and the radicals \(\sqrt{\dots} \).
+<answerCalculatorHighlight> \(<span class="calculator" noTags="true"> theRightSide</span>=\) </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra">
+finalAnswer-algebraAnswer==0 
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("DegreesToRadians");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn (algebraAnswer, none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+finalAnswer
+</span>

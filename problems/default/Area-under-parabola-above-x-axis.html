@@ -1,0 +1,91 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+a=1;
+xOne=RandomInteger(-8,8);
+xTwo=xOne+ 2* RandomInteger(1,4);
+leftPoint=xOne-RandomInteger{}(0,3);
+rightPoint=xTwo+RandomInteger{}(0,3);
+theFunShifted= a (x-xOne)(x-xTwo)  ;
+theFun=theFunShifted+2-(x=(xOne+xTwo)/2; theFunShifted)_2;
+theCoeffs=CoefficientsPowersOf (x, theFun);
+c=theCoeffs_1;
+b=theCoeffs_2;
+
+theIntegral=\int theFun dx;
+finalAnswer=(x=rightPoint; theIntegral)_2- (x=leftPoint; theIntegral)_2;
+TurnOffRules
+("IntegratePowerRule", "DistributeMultiplication",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+</span>
+<span class="calculatorShowToUserOnly">
+PlotFill(
+Plot2D(theFun, leftPoint, rightPoint)+
+PlotSegment((rightPoint, 0), (leftPoint,0), black)
+, cyan
+)
++PlotGrid 0
++PlotViewRectangle((leftPoint-1, -1), (rightPoint+1, Max ((x=rightPoint; theFun)_2, (x=rightPoint; theFun)_2)))
++PlotWindow(200,200)
+</span>
+<br>
+Find the area between the parabola <span class="calculator">theFun</span> and the \(x\) axis from \(x=\)<span class="calculator"> leftPoint </span> 
+to \(x=\)<span class="calculator"> rightPoint </span>. In other words, compute:
+<answerCalculatorHighlight>
+<span class="calculator">\displaystyle \int_{leftPoint}^{rightPoint} 
+theFun \diff x</span>\(=\)
+</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+AlgebraAnswer==
+finalAnswer
+</textarea>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+finalAnswer
+</span>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+cftwo=CoefficientOf(x^2,theFun);
+cfone=CoefficientOf(x,theFun);
+constTerm=(CoefficientsPowersOf(x,theFun))_1;
+TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",  "AddTerms");
+integralNonSimplified=if (constTerm==0, cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1},
+cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1}+constTerm x);
+rightSub=(x=rightPoint; theIntegral)_2;
+leftSub=(x=leftPoint; theIntegral)_2;
+</span>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int_{leftPoint}^{rightPoint} \left( theFun \right)\diff x&=&
+\displaystyle \left[integralNonSimplified \right]_{leftPoint}^{rightPoint}   \\\\
+&=&\displaystyle  \left[ theIntegral\right]_{leftPoint}^{rightPoint}   \\\\
+&=&\displaystyle   \left(rightSub\right) - \left(leftSub\right)      \\\\
+&=&\displaystyle  finalAnswer     &&\displaystyle \text{ } \\\\
+\end{array}
+"
+)
+
+</span>
+</span>

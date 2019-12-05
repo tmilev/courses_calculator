@@ -1,0 +1,70 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+TurnOffApproximations(0);
+a=-1;
+b=0;
+c=RandomInteger{}((1,15));
+g= RandomInteger{}(2,5);
+h= RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+TurnOffRules("ExpressTanViaSineCosine", "ExpressSecViaCosine", "IntegratePullConstant");
+1/(b^2-4a c>0);
+f= \sqrt{a x^2+b x +c};
+theAnswer=\int f dx;
+radius=\sqrt{-c/a};
+leftPoint= - Floor(radius)+  RandomInteger{}(0,Floor( radius) );
+rightPoint=leftPoint+ RandomInteger{}(1,Floor( \sqrt{-c/a}) );
+1/(leftPoint*rightPoint*(leftPoint+radius)*(rightPoint-radius));
+1/( (  leftPoint>-\sqrt{-c/a} ) and (rightPoint<\sqrt{-c/a}) );
+TurnOffRules("ExpressTanViaSineCosine", "ExpressSecViaCosine",
+"IntegratePullConstant", "IntegrateSqrtOneminusXsquared");
+</span>
+<span class="calculator">
+PlotFill(
+Plot2D(f, leftPoint, rightPoint, "cyan", 2)
++PlotSegment( (rightPoint, (x=rightPoint; f)_2  ), ( rightPoint, 0 ) )
++PlotSegment( (rightPoint, 0), (leftPoint, 0)  )
++PlotSegment( (leftPoint, 0 ), (leftPoint, (x=leftPoint; f)_2  )  )
+,
+"cyan"
+)
++PlotCurve(( \sqrt{-c/a} \cos t , \sqrt{c} \sin t  ),0, \pi )
++PlotCurve(( \sqrt{-c/a} \cos t , \sqrt{c} \sin t  ),0, -\pi,"pink" )
++Plot2D(f, leftPoint, rightPoint, "blue", 2)
+</span>
+<br>
+Compute the definite integral.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} f dx
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+(TurnOnApproximations(0);
+|
+(x=rightPoint; theAnswer)_2
+-
+(x=leftPoint; theAnswer)_2
+ -AlgebraAnswer|<0.000001
+ )_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations(0);
+TurnOffRules("ExpressTanViaSineCosine");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(x=rightPoint; theAnswer)_2
+-
+(x=leftPoint; theAnswer)_2
+</span>

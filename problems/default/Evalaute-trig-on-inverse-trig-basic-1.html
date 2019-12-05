@@ -1,0 +1,57 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules("ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "ExpressCscViaSine", "ExpressSecViaCosine", "arcsinAlgebraic", "arccosAlgebraic");
+sign=1;
+theTrigValue=sign*RandomInteger{}(1,15)/RandomInteger{}(1,15);
+1/(theTrigValue\leq 1);
+1/(not (theTrigValue==1));
+theTrigFun=SelectAtRandom(tan, cot, sin, cos, sec, csc);
+theInverseTrigFun= SelectAtRandom(\arcsin,\arccos); 
+1/(not ( ( (theTrigFun==cos) and (theInverseTrigFun==\arccos))  or ((theTrigFun==sin) and (theInverseTrigFun==\arcsin))  )  );
+if (theInverseTrigFun==\arccos, 
+CommandEnclosure{}(
+theX=sign* Numerator{}theTrigValue;
+theHypo=Denominator{}theTrigValue;
+theY= sqrt{}(theHypo^2-theX^2);
+)
+,
+CommandEnclosure{}(
+theY=sign*Numerator{}theTrigValue;
+theHypo=Denominator{}theTrigValue;
+theX=  sqrt{}(theHypo^2-theY^2) ;
+)
+);
+finalAnswer=
+(
+TurnOnRules("ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "ExpressCscViaSine", "ExpressSecViaCosine");
+sin{}A=theY/theHypo;
+cos{}A=theX/theHypo;
+theTrigFun{}A;
+)_4;
+</span>
+Find the exact value of the expression without using calculator. 
+<ul>
+<li>Do not use approximations, use radicals in your answer.
+</li>
+</ul>
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+theTrigFun{} ( theInverseTrigFun{} theTrigValue)
+</span> \(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra">
+algebraAnswer==finalAnswer
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer, none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+finalAnswer
+</span>

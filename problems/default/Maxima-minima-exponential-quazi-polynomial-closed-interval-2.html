@@ -1,0 +1,75 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+TurnOffRules("DistributeMultiplication");
+b=RandomInteger((-2,-1));
+c=RandomInteger((1,3));
+%UseLnInsteadOfLog
+f{}{{x}}=(x-b)(x-c)  e^{x} ;
+</span>
+<span class="calculatorShowToUserOnly">
+Plot2D(f{}x,-5, c+0.03, "red" )
++PlotWindow(300,300)+PlotGrid 0
+</span>
+<br>
+Find the values of \(x\) for which the maximum and minimum value of \(f\) is attained over the given interval. 
+<br>
+
+\(f(x)=\)<span class="calculator">
+\displaystyle
+f{}x;
+
+</span>
+<br>
+<span class="calculatorHidden">
+TurnOnRules("DistributeMultiplication");
+</span>
+over the closed interval \(\displaystyle x\in[\)
+<span class="calculator"> -5</span>,
+<span class="calculator">c</span>\(]\).
+
+<br>
+The value of \(x\) for which \(f\) attains its maximum is: 
+<answerCalculatorHighlight>\(x_{max}=\)</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="AlgebraAnswerMax" buttons="algebra">
+AlgebraAnswerMax== (SolveFor{}(x, CoefficientOf(e^{x},d/dx f{}x)))_1 ;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerMax,none)
+</span>
+<br>
+<span style="color:red"> Please do not give numerical approximations for your 
+answer.</span> Instead, use square roots to give an exact answer. To write \(\sqrt{5}\) you need to type sqrt(5) or \sqrt(5). 
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+Plot2D(f{}x,-5, c+0.03, "red" )
++PlotWindow(300,300)
++PlotPoint( (AlgebraAnswerMax, f{}AlgebraAnswerMax) , "blue")
++PlotGrid 0
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(SolveFor(x, CoefficientOf(e^{x},d/dx f{}x)))_1
+</span>
+
+<br>
+The value of \(x\) for which \(f\) attains its minimum is: 
+<answerCalculatorHighlight>\(x_{min}=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerMin" buttons="algebra">
+(SolveFor(x, CoefficientOf(e^{x},d/dx f{}x)))_2 ==AlgebraAnswerMin;
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerMin,none)
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+Plot2D(f{}x,-5, c+0.03, "red" )
++PlotWindow(300,300)
++PlotPoint((AlgebraAnswerMin, f{}AlgebraAnswerMin), "blue")
++PlotGrid 0
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(SolveFor(x, CoefficientOf(e^{x},d/dx f{}x)))_2
+</span>

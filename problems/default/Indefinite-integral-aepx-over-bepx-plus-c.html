@@ -1,0 +1,96 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+a=RandomInteger{}((-15,-1),(2,15));
+b=RandomInteger{}( (1,30));
+c=RandomInteger{}((-12,-1),(1,15));
+g=RandomInteger{}( 2, 9);
+h=RandomInteger{}( -2,-10);
+p=RandomInteger{}((-12,-1),(1,15));
+theIntegral{}{{x}}= (a/(b*p))(ln(b (e^(p x)) + c));
+leftPoint = 1.2 (ln |c|)/p;
+rightPoint = 1.5 (ln |c|)/p;
+f=(a e^(p x))/(b e^(p x) + c);
+\)
+</span>
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+\(
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+SeparatorBetweenSpans;
+\)
+</span>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
+or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+<br>
+<span class="calculator">
+\(\displaystyle \int f dx  \) 
+</span>=
+<textarea class="calculatorAnswer" id="AlgebraAnswer">
+\(
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral{}x,
+(theDifference= AlgebraAnswer-theIntegral{}x; x=leftPoint; theDifference)_3, 0.00001, x\in (leftPoint,rightPoint), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+\)
+</textarea>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+\(
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+\)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("DistributeMultiplication");
+theIntegral{}x+C
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
+"DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+btwo=2b;
+bp = p*b;
+aoverbp = a/bp;
+denominator = b*(e^(p x)) + c; 
+TurnOnRules("DistributeMultiplication");
+finalAnswer=theIntegral{}x;
+</span>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int f \diff x&=&\displaystyle  a  \int \frac{e^{p x}}{denominator} \diff x
+&&\displaystyle \text{Set }  w(x) = denominator  \text {,  so that   }  w'(x) = p \cdot b e^{p x}  \\\\
+&=&\displaystyle  \frac{a}{p \cdot b}  \int \frac{p \cdot b e^{p x}}{denominator} \diff x
+&&\displaystyle \text{Adjust the nominator of the integrand so that it equals }   w'(x)  \\\\
+&=&\displaystyle  aoverbp \ln \left| denominator \right| + C
+&&\displaystyle \text{Using } \int \frac {w'(x)}{w(x)} = \ln |w(x)| + C\\\\
+\end{array}
+"
+)
+</span>
+</span>

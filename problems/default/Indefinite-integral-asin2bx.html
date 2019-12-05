@@ -1,0 +1,90 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+a=RandomInteger{}((-5,-1),(1,10));
+b=RandomInteger{}( (1, 15));
+c=RandomInteger{}((-5,-2), (2,5));
+g=RandomInteger{}( 2, 9);
+h=RandomInteger{}( -2,-10);
+theIntegral{}{{x}}= a/2(x-(sin(2 b x)/2));
+f=a sin^2(b x);
+\)
+</span>
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+\(
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+SeparatorBetweenSpans;
+\)
+</span>
+
+<br>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
+or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+<br>
+<span class="calculator">
+\(\displaystyle \int f dx  \) 
+</span>=
+<textarea class="calculatorAnswer" id="AlgebraAnswer">
+\(
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral{}x,
+(theDifference= AlgebraAnswer-theIntegral{}x; x=1; theDifference)_3, 0.00001, x\in (0.5,1), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+\)
+</textarea>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+\(
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+\)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("DistributeMultiplication");
+theIntegral{}x+C
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+btwo=2b;
+TurnOnRules("DistributeMultiplication");
+finalAnswer=theIntegral{}x;
+</span>
+<span class="calculator">
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int f \diff x&=&\displaystyle  a  \int \sin^2(b x) \diff x   \\\\
+&=&\displaystyle   a  \int \frac{1-\cos(2 \cdot b x)}{2} \diff x
+&&\displaystyle \text{Set } \sin^2 w=\frac{1-\cos(2w)}{2}\\\\
+&=&\displaystyle  a \left(  \frac{ x}{2}-\frac{\sin(btwo x)}{4}  \right)+C \\\\
+&=&\displaystyle  finalAnswer+C\\\\
+\end{array}
+"
+)
+</span>
+</span>

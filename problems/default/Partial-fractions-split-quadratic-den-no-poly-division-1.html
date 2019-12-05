@@ -1,0 +1,49 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+a=RandomInteger{}((-1,-4),(1,4));
+b=a+RandomInteger{}((1,5));
+c=RandomInteger{}((-4,-1),( 1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+g=SelectAtRandom{}( 2,4,6,8);
+h=RandomInteger{}( -2,-10);
+1/((-B/A-a)(-B/A-b));
+f=\frac{A x+B}{(x-a)(x-b)};
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+frac1=(UnivariatePartialFractions(f))_1;
+frac2=(UnivariatePartialFractions(f))_2;
+</span>
+
+Split into partial fractions.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle f   
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+(
+answerList=GetSummandList(AlgebraAnswer);
+x=(10!+1)/5!;
+Sort(answerList) - Sort(frac1,frac2)==0
+)_3
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules
+("IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "ConvertShortDenominatorToNegativePower");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+frac1+frac2
+</span>

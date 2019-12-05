@@ -1,0 +1,52 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+%UseBracketForIntervals
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower");
+indexShift=RandomInteger(1,20);
+powerShift=RandomInteger(1,20);
+p=RandomInteger{}((-20,-1),(1,20)) /RandomInteger{}(1,20);
+1/((p-1));
+q=RandomInteger{}(1,5);
+a=RandomInteger{}(-5,5);
+r=SelectAtRandom{}(-4,-3,-2,-1,-1/2,-1/3,0,1,2);
+n^{{x}}:if (x<0) = 1/(n^{-x});
+leftPt=(a/q) - 1/|p q|;
+rightPt=(a/q) + 1/|p q|;
+theAnswer=
+if(r<-1,
+  [leftPt, rightPt]
+  ,
+  if(r<0,
+    if(p>0,
+      [ leftPt, rightPt)
+      ,
+      ( leftPt, rightPt]
+      )
+    ,
+    (leftPt, rightPt)
+    )
+  )
+</span>
+Compute the interval of convergence.
+<br>
+In your pen and paper solution, indicate clearly how you carried out your computation.
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=indexShift}^\infty ( (p^{n+powerShift} (q x-a)^n)*(n^r))
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra, brackets">
+theAnswer-AlgebraAnswerOne
+==0
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%UseBracketForIntervals
+""
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theAnswer
+</span>

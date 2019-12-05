@@ -1,0 +1,133 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+uOne=RandomInteger{}(-8,8)/RandomInteger{}(1,3);
+uTwo=Floor(uOne)+RandomInteger{}(1,6);
+1/(uOne*uTwo);
+leftSide=Denominator{}uOne  (x-uOne)(x-uTwo);
+TurnOffRules{}(DistributeMultiplication);
+leftSideFactored= (Denominator{}uOne (x-uOne)) ( x-uTwo);
+TurnOffRules{}(DistributeMultiplicationConstants);
+multList = GetMultiplicandList(leftSideFactored);
+multListAlt=(Denominator{}uOne, (x-uOne), ( x-uTwo));
+SolveForX{}{{a}}=SolveFor{}(x,a);
+</span>
+Fully factor the quadratic
+
+<span class="calculator">
+\displaystyle
+leftSide   
+</span>. 
+<answerCalculatorHighlight> 
+<span class="calculator">
+\displaystyle
+leftSide   
+</span>\(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+IsProductLinearOrConstantTermsIn{}(x, factorizationAnswer) and
+
+(TurnOnRules("DistributeMultiplication", "DistributeMultiplicationConstants");
+factorizationAnswer-leftSide==0)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%PlotShowJavascriptOnly    
+TurnOffRules{}(DistributeMultiplication,DistributeMultiplicationConstants);
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(factorizationAnswer,x);
+(theSols=SolveFor(x, Polynomialize{} factorizationAnswer);
+PlotPoint((theSols_1,0), blue)+
+PlotPoint((theSols_2,0), blue)
+)_2+
+PlotGrid{}(0)+
+Plot2D(leftSide, uOne-0.5, uTwo+0.5, red, 2)+
+PlotSetId("thePlot")
+</span>
+<span class="calculatorAnswerOnGiveUp">
+leftSideFactored
+</span>
+
+
+<br>Once you are done factoring, plot the function with the calculator you plan on bringing to your exam(s). 
+Where should the graph intersect the \(x\) axis?
+<br>
+<button class="showAnswerButton" onclick="if(this.toggleTag===undefined || this.toggleTag==false) this.toggleTag=true; else this.toggleTag=false; if (this.toggleTag){ document.getElementById('thePlotContainer').style.display=''; document.getElementById('thePlotContainer').style.opacity=1;} else {document.getElementById('thePlotContainer').style.display='none';  document.getElementById('thePlotContainer').style.opacity=0;}">
+Show plot
+</button>
+<br>
+<span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
+Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
+<br>
+<span class="calculator">
+PlotGrid{}(0)+
+Plot2D(leftSide, uOne-0.5, uTwo+0.5, red, 2)+
+PlotSetId("thePlot")
+;
+</span>
+</span>
+<br>
+
+
+<span class="calculatorSolution" name="factorizationAnswer">
+<br>
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+aCF=Denominator{}uOne;
+bCF=CoefficientOf(x, leftSide);
+cCF=ConstantTerm(x,leftSide);
+termOne=x-uOne;
+termTwo=x-uTwo;
+twoaf=2aCF;
+minusbf=-bCF;
+minusbg=-bg;
+DiscriminantTop= bCF^2-4aCF cCF;
+TurnOffRules("AddRationals", "AddTerms");
+DiscriminantTopSemiSimplified= bCF^2-4aCF cCF;
+
+TurnOffRules(MultiplyRationals, ConstantExtraction, PowerIntegerByInteger, PowerRationalByRational);
+TopSubbed= af xOne^2+ bf xOne+ cf;
+BottomSubbed= ag xOne^2+ bg xOne+ cg;
+DiscriminantTopNonSimplified= bCF^2-4aCF cCF;
+DiscriminantBottomNonSimplified=bg^2-4ag cg;
+
+fourACtop= 4 af cf;
+fourACbottom= 4 ag cg;
+termTwoSubbed=xOne-xTwoTop;
+termThreeSubbed=xOne-xTwoBottom;
+</span>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle 
+\displaystyle leftSide&=&\displaystyle 
+leftSideFactored &&
+{\begin{array}{l}\text{If we can't guess factorization: }\\\\
+ax^2+bx+c=a(x-x_1)(x-x_2)\\\\ 
+\text{ then use:}\\\\
+\begin{array}{rcl}
+x_1,x_2&=&\frac{-b\pm \sqrt{b^2-4 a c}}{2 a}\\\\
+&=&\frac{ minusbf\pm \sqrt{DiscriminantTopNonSimplified }}{2( aCF)}\\\\
+&=&\frac{ minusbf\pm \sqrt{ DiscriminantTopSemiSimplified}}{twoaf}\\\\
+&=&\frac{ minusbf\pm \sqrt{ DiscriminantTop}}{twoaf}\\\\
+&=&\left\{\begin{array}{l} uOne\\\\ uTwo\end{array} \right. \\\\
+\end{array}
+\end{array}}
+\end{array}
+"
+)
+</span>
+</span>
+
+

@@ -1,0 +1,48 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+a=RandomInteger{}((1,9),(11,19));
+b=RandomInteger{}(101,999);
+</span>
+Convert the cyclic decimal notation to a rational number (quotient of two integers).
+
+<answerCalculatorHighlight>
+\(
+<span class="calculator" noTags="true">
+DoubleValue{}(a/10)
+</span>
+\overline{
+<span class="calculator" noTags="true">
+b
+</span>
+}=
+<span class="calculator" noTags="true">
+DoubleValue{}(a/10)
+</span>
+<span class="calculator" noTags="true">
+b
+</span>
+<span class="calculator" noTags="true">
+b
+</span>
+<span class="calculator" noTags="true">
+b
+</span>
+\dots
+=
+\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+a/10+(1/10000) *b* 1/(1-1/1000)
+-AlgebraAnswer ==0
+</textarea>
+
+
+<span class="calculatorAnswerOnGiveUp">
+a/10+(1/10000) *b* 1/(1-1/1000)
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,divergent);
+</span>

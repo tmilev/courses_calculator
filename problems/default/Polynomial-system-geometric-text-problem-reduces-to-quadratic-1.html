@@ -1,0 +1,108 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+cfXOne= RandomInteger{}(1,3);
+cfXTwo=RandomInteger{}(1,3);
+cfY=RandomInteger{}(1,3);
+KnownLength=SelectAtRandom{}(1,2,3) *20;
+xSolution = SelectAtRandom(5,10,15,18,20,25,27,30,35,37,40);
+
+areaFactor=RandomInteger(2,4);
+yFromX= (fencingTotal- cfXTwo* x*2-cfXOne*x*2-KnownLength)/2;
+thePoly=(y=yFromX;  cfY y (cfXOne x+KnownLength )- areaFactor * cfXTwo* x*KnownLength)_2;
+
+fencingTotal=(x=xSolution; y=yFromX; SolveFor(fencingTotal, thePoly))_3;
+1/(IsInteger{}(ConstantTerm{}(x,yFromX)));
+
+xLengthOne = xSolution *cfXOne;
+xLengthTwo = xSolution *cfXTwo;
+yLength = cfY* (x=xSolution; yFromX)_2 ;
+theUnit=Min( KnownLength, xLengthOne, xLengthTwo, yLength);
+theAnswer=(xLengthTwo+yLength) m
+</span>
+
+<span class="calculator">
+PlotRemoveCoordinateAxes {}0+
+PlotPath( 
+( (0,0),
+  (yLength+xLengthTwo,0), 
+  (yLength+xLengthTwo,KnownLength), 
+  (yLength,KnownLength),
+  (yLength,KnownLength+xLengthOne ),
+  (0, KnownLength+xLengthOne),
+  (0,0)
+) , black
+)
++
+PlotSegment( (0,0), (0,KnownLength), blue,5)
++
+PlotSegment( (yLength,0), (yLength,KnownLength), gray,1)
++PlotViewRectangle( (-theUnit,-theUnit),(yLength+xLengthTwo+theUnit,KnownLength+xLengthOne+theUnit )  )
++
+PlotLabel( (-theUnit/4,-theUnit/4), "H")
++
+PlotLabel( (yLength,-theUnit/4), "G")
++
+PlotLabel( (yLength+xLengthTwo,-theUnit/4), "F")
++
+PlotLabel( (yLength+xLengthTwo+theUnit/4,KnownLength), "E")
++
+PlotLabel( (yLength-theUnit/4,KnownLength), "D")
++
+PlotLabel( (yLength+theUnit/4,KnownLength+xLengthOne), "C")
++
+PlotLabel( (-theUnit/4,KnownLength+xLengthOne), "B")
++
+PlotLabel( (-theUnit/4,KnownLength), "A")
++
+PlotLabel( (yLength+xLengthTwo/2,KnownLength+theUnit/6),cfXTwo x)
++
+PlotLabel( (yLength+theUnit/6,KnownLength+ xLengthOne/2),cfXOne x)
++
+PlotLabel( (yLength/2,KnownLength+ xLengthOne+theUnit/4),cfY y)
++
+PlotLabel( (-theUnit/3,KnownLength+ xLengthOne/2),cfXOne x)
++
+PlotLabel( (yLength+xLengthTwo+ theUnit/3, KnownLength/2), KnownLength)
++
+PlotPath( ( (0,theUnit/4),(theUnit/4,theUnit/4),(theUnit/4,0)), gray)
++
+PlotPath( ( (yLength+xLengthTwo-theUnit/4,0),(yLength+xLengthTwo-theUnit/4,theUnit/4),(yLength+xLengthTwo,theUnit/4)), gray)
++
+PlotPath( ( (yLength+xLengthTwo-theUnit/4,KnownLength),(yLength+xLengthTwo-theUnit/4,KnownLength-theUnit/4),(yLength+xLengthTwo,KnownLength-theUnit/4)), gray)
++
+PlotPath( ( (yLength+theUnit/4,KnownLength),(yLength+theUnit/4,KnownLength+theUnit/4),(yLength,KnownLength+theUnit/4)), gray)
++
+PlotPath( ( (yLength-theUnit/4,KnownLength+xLengthOne),(yLength-theUnit/4,KnownLength+xLengthOne-theUnit/4),(yLength,KnownLength+xLengthOne-theUnit/4)), gray)
++
+PlotPath( ( (0+theUnit/4,KnownLength+xLengthOne),(0+theUnit/4,KnownLength+xLengthOne-theUnit/4),(0,KnownLength+xLengthOne-theUnit/4)), gray)
+</span>
+<br>
+The diagram shows a field enclosed by a wall \(AH\) and fencing along the rest of the boundary \(ABCDEFGH\). 
+The angles marked with the corner symbol are right, the segment \(EF\) equals <span class="calculator">KnownLength</span> \(m\), 
+\(BC=\)<span class="calculator">y cfY</span> \(m\), \(AB=DC=\)<span class="calculator">x cfXOne</span> \(m\) 
+and \(DE=\)<span class="calculator">x cfXTwo</span> \(m\). It is given that the total length of the fencing (excluding the wall) is 
+<span class="calculator">fencingTotal</span> \(m\) and that the area of the rectangle \(HBCG\) is 
+<span class="calculator">areaFactor</span> times the area of rectangle \(DEFG\). 
+
+<ul>
+    <li>Show that \(y=\)<span class="calculator">yFromX</span>. </li>
+    <li>Show that <span class="calculator">1/ GCD{}( CoefficientOf(x, thePoly), CoefficientOf(x^2, thePoly) ,ConstantTerm(x, thePoly))  thePoly</span>\(=0\) </li>
+    <li>Find the length of \(HF\). Do not forget to include the measurement unit \(m\).</li>
+</ul>
+<answerCalculatorHighlight>\(|HF|=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+theAnswer-AlgebraAnswer==0
+</textarea>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer, m);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theAnswer 
+</span>

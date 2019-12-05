@@ -1,0 +1,59 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+f{}0=RandomInteger(0,A);
+f{}{{a}}=RandomInteger ((0,A)) n^a+f{}(a-1);
+A=5;
+bottomPower=RandomInteger(3,6);
+topPower=bottomPower-RandomInteger(2, bottomPower);
+topTerm= n^topPower;
+bottomExpression=n^bottomPower+ f{}bottomPower;
+leadingCoefficient=CoefficientOf(n^bottomPower, bottomExpression);
+leadingTerm=leadingCoefficient n^bottomPower;
+powerDifference = bottomPower-topPower;
+startIndex=RandomInteger(1,20);
+TurnOffRules("ConvertShortDenominatorToNegativePower");
+</span>
+Determine whether the series is convergent or divergent. If convergent, write ``<b>convergent</b>'', else write ``<b>divergent</b>''.
+<br>
+In your pen and paper solution, indicate clearly which convergence/divergence tests you used and how you used them.
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression}
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+AlgebraAnswer
+-
+convergent 
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+convergent
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer"><br>
+The convergence of a sum whose terms are 
+rational functions of \(n\) can be determined by the
+comparison or the limit-comparison test. 
+For positive \(n\), we have that 
+<span class="calculatorHidden">
+leadingTermSimplified=if (topPower>0, "="+ToString(\frac{1}{leadingCoefficient n^powerDifference}), "");
+</span>
+<span class="calculator"> bottomExpression>leadingTerm</span> and so
+\(\displaystyle <span class="calculator">EvaluateSymbols{}("\frac{topTerm }{bottomExpression}
+\lt \frac{topTerm}{leadingTerm} leadingTermSimplified")</span>\).
+Therefore 
+<span class="calculator">\displaystyle 0< \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression} 
+\lt \sum_{n=startIndex}^\infty  \frac{1}{leadingCoefficient n^powerDifference}</span>. Furthermore,
+<span class="calculator">\displaystyle \sum_{n=startIndex}^\infty  \frac{1}{leadingCoefficient n^powerDifference}</span> 
+is a (part of a multiple of) 
+\(p\)-seires with \(\displaystyle p=<span class="calculator" noTags="true">powerDifference</span> \gt 1\) and is therefore convergent. Since all terms of the series 
+<span class="calculator">\displaystyle \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression} </span>
+are positive and dominated by the terms of a convergent series, 
+the comparison test implies that <span class="calculator">\displaystyle \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression} </span>
+is convergent.
+</span>
+

@@ -1,0 +1,63 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+theT = SelectAtRandom(-3,-2,-1,0,1,2,3);
+aX=SelectAtRandom{}(1/2, 1/3, 1/4, -1/2, -1/3, -1/4);
+bX=SelectAtRandom{}(2,1,3/4, 2/3, 1/2, 1/3, 1/4,  -2,-1,-3/4, -2/3, -1/2, -1/3, -1/4 );
+cX= RandomInteger{}(-5,5);
+gX= RandomInteger{}(-5,5);
+aY=SelectAtRandom{}(1/2, 1/3, 1/4, -1/2, -1/3, -1/4);
+bY=SelectAtRandom{}(2,1,3/4, 2/3, 1/2, 1/3, 1/4,  -2,-1,-3/4, -2/3, -1/2, -1/3, -1/4 );
+cY= RandomInteger{}(-5,5);
+gY= RandomInteger{}(-5,5);
+1/(aX*bY-bX*aY);
+theX=aX t^3+bX t^2 + cX t + gX ;
+theY=aY t^3+bY t^2 + cY t + gY ;
+thePoint=(t=theT; (theX,theY))_2;
+derivativeX=(theDer= d/dt theX; t=theT; theDer)_3;
+derivativeY=(theDer= d/dt theY; t=theT; theDer)_3;
+1/(|derivativeX|+|derivativeY|)
+</span>
+<span class="calculatorShowToUserOnly">
+PlotCurve( (theX,theY),  -3.5,3.5 ) +PlotPoint(thePoint, blue);
+</span> 
+<br>
+Compute an equation of the tangent line to the curve 
+\( \left|\begin{array}{rcl} x&=&\displaystyle <span class="calculator" noTags="true">theX</span> \\y&=&\displaystyle <span class="calculator" noTags="true">theY</span> \end{array}\right., t\in (-3.5,3.5)\) 
+at the parameter value \(t=\)<span class="calculator">theT</span>. 
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="variables, algebra">
+(linearizedAnswer=EqualityToArithmeticExpression{}AlgebraAnswer;
+ actualAnswer=derivativeX (y-thePoint_2)- derivativeY (x-thePoint_1) ;
+ CFY=CoefficientOf{}(y,  linearizedAnswer);
+ CFX=CoefficientOf{}(x,  linearizedAnswer);
+ theConst=(x=0; y=0; linearizedAnswer)_3;
+ realCFY=CoefficientOf{}(y,  actualAnswer);
+ realCFX=CoefficientOf{}(x,  actualAnswer);
+ realConst=(x=0; y=0; actualAnswer)_3;
+ (CFX*realCFY-CFY*realCFX==0) and (CFX* realConst-theConst*realCFX==0) and (not ( linearizedAnswer ==0 ))
+) _9
+</textarea>
+
+
+<span class="calculatorAnswerOnGiveUp">
+derivativeX (y-thePoint_2)= derivativeY (x-thePoint_1)
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,y);
+%PlotShowJavascriptOnly
+PlotCurve( (theX,theY),  -3.5,3.5 )
++PlotPoint(thePoint, blue)
++(
+cfY=CoefficientOf(y, EqualityToArithmeticExpression{}AlgebraAnswer);
+cfX=CoefficientOf(x, EqualityToArithmeticExpression{}AlgebraAnswer);
+startPt= thePoint + (-cfY, cfX)*2;
+endPt= thePoint + (-cfY, cfX)*(-2);
+PlotSegment(startPt, endPt, blue,2)
+)_5
+</span>
+
+<br>Enter your answer in format such as \(5(x-3)=2(y-2) \) or such as \(5x+2y-4=0 \).

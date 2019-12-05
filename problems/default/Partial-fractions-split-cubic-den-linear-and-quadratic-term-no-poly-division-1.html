@@ -1,0 +1,46 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+a=RandomInteger{}((-1,-4),(1,4));
+b=RandomInteger{}((-5,-1),(1,5));
+c=RandomInteger{}((-5,-1),(1,5));
+g= RandomInteger{}(1,4);
+h= RandomInteger{}(1,4);
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+C=RandomInteger{}((-4,-1),(1,4));
+1/((b^2-4a c)<0);
+fDenMultipliedOut=A/(g x-h)+(B x+C)/(a x^2+b x +c);
+TurnOffRules("DistributeMultiplication", "ConvertShortDenominatorToNegativePower", "CommonDenominator", "CommonDenominatorOneNonFraction");
+f=(Numerator{}fDenMultipliedOut)/( (g x-h)(a x^2+b x +c)  );
+</span>
+
+Split into partial fractions.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle f
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+Sort ((theList= (GetSummandList(AlgebraAnswer));  x=12!+1; theList)_3)
+==
+Sort((theList=GetSummandList(\sum (UnivariatePartialFractions(f))); x=12!+1; theList )_3)
+;
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules
+("DistributeMultiplication",
+"ConvertShortDenominatorToNegativePower",
+"CommonDenominator", "CommonDenominatorOneNonFraction"
+);
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+\sum(UnivariatePartialFractions(f));
+</span>

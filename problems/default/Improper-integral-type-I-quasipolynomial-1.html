@@ -1,0 +1,49 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+pointLeft=0;
+a=RandomInteger{}(1,5);
+b=RandomInteger{}(1,5);
+
+n=SelectAtRandom{}(1,2);
+c=RandomInteger{}((1,50));
+h=RandomInteger{}((1,6));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+theExponent=b/c;
+pointRight=(pointLeft +20)*b/a;
+f=x^n e^{-a/b x};
+epsilon= 0.05;
+</span>
+<span class="calculator">
+PlotFill(
+Plot2D(f, pointLeft+epsilon, pointRight,red, 2,500)+
+PlotSegment((pointRight,0),( pointLeft+epsilon, 0)) 
+, cyan)
++PlotWindow(200,200)
++PlotViewRectangle((-2, -10), (pointRight+2, 5))
+;
+</span> <br>
+If the integral is convergent, compute it. Otherwise, determine whether the integral is \(\infty, -\infty\) or \(DNE\) (does not exist and is not \(\pm\infty\)). 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{ pointLeft}^{\infty} f  dx
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, infty">
+(AlgebraAnswer  + ((theInt= \int f dx; x=pointLeft; theInt )_3))==0
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("IntegrateXpowerNePowerAx");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,\infty, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+-(theInt= \int f dx; x=pointLeft; theInt )_3
+</span>

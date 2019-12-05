@@ -1,0 +1,283 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0); 
+TurnOffRules("LogBase");
+
+uOne=RandomInteger{}((1,7)) /RandomInteger{}(1,3);
+uTwo=Floor(uOne)+RandomInteger{}(1,5);
+1/(uTwo );
+sign =SelectAtRandom(-1,1);
+leadingCoeff=sign*Denominator{}uOne;
+thePoly= leadingCoeff(u-uOne)(u-uTwo);
+leftSide=thePoly;
+rightSide=0;
+ComparisonOpString=SelectAtRandom("\geq",">", "\leq", "<");
+ComparisonOp=StringToAtom(ComparisonOpString);
+
+TurnOffRules{}(DistributeMultiplication);
+leftSideFactored= (leadingCoeff (u-uOne)) ( u-uTwo) ;
+TurnOffRules{}(DistributeMultiplicationConstants);
+inequalityAnswer
+=
+if (  ( ComparisonOpString=="\geq"   and sign>0 ) or  ( ComparisonOpString=="\leq"   and sign<0 ),
+(-\infty, uOne]\cup [uTwo, \infty)
+,
+if (  ( ComparisonOpString=="\leq"   and sign>0 ) or  ( ComparisonOpString=="\geq"   and sign<0 ),
+[uOne, uTwo]
+,
+if (  ( ComparisonOpString==">"   and sign>0 ) or  ( ComparisonOpString=="<"   and sign<0 ),
+(-\infty, uOne)\cup (uTwo, \infty)
+,
+if (  ( ComparisonOpString=="<"   and sign>0 ) or  ( ComparisonOpString==">"   and sign<0 ),
+(uOne, uTwo)
+,
+""
+)
+)
+)
+)
+
+</span>
+Plot the quadratic on your graphing device.
+<span class="calculator">
+\displaystyle
+leftSide
+</span>.
+<br>
+<button class="showAnswerButton" onclick="if(this.toggleTag===undefined || this.toggleTag==false) this.toggleTag=true; else this.toggleTag=false; if (this.toggleTag){ document.getElementById('thePlotContainer').style.display=''; document.getElementById('thePlotContainer').style.opacity=1;} else {document.getElementById('thePlotContainer').style.display='none';  document.getElementById('thePlotContainer').style.opacity=0;}">
+Show plot
+</button><br>
+<span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
+Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
+<br>
+<span class="calculator">
+PlotGrid{}(0)+
+Plot2D(leftSide, uOne-0.5, uTwo+0.5, red, 2)+
+PlotSetId("thePlot")
+;
+</span>
+</span>
+
+Factor the polynomial. You should be able to factor the polynomial without using its graph. 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+leftSide
+</span>\(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+(Polynomialize{}(factorizationAnswer-leftSide)==0) and 
+(IsProductLinearOrConstantTermsIn {}(u,factorizationAnswer))
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(factorizationAnswer,u);
+if(
+(Polynomialize{}(factorizationAnswer-leftSide)==0),
+""
+,
+"<br><b style='color:red'>Did you check your answer by uncovering the parenthesis?</b>"
+)
+
+</span>
+<span class="calculatorAnswerOnGiveUp">
+%UseBracketForIntervals
+leftSideFactored
+</span>
+<br>
+Solve the inequality.
+<br>
+<span class="calculator">
+\displaystyle
+leftSide
+</span><span class="calculator">ComparisonOp</span><span class="calculator">
+\displaystyle
+rightSide
+</span>
+<br>
+Your answer should be a single interval or a union of intervals. 
+<br>
+When should you use open intervals \((a,b)\) and when closed intervals \([a,b]\)? 
+<br>
+What about intervals involving \(\pm \infty\)?
+<answerCalculatorHighlight>\(u\in\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, intervals">
+NormalizeIntervals{} AlgebraAnswer ==inequalityAnswer
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%UseBracketForIntervals
+""
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+%UseBracketForIntervals
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
+TurnOffRules("LogBase");
+Thaw(
+if ( ChildExpression(AlgebraAnswer,1)==StringToAtom("\\cup"),
+Freeze(
+(
+(\infty=uTwo+0.5; 
+theB=(ChildExpression(AlgebraAnswer,2))_2;
+)_2;
+(\infty=uTwo+0.5; 
+theD=(ChildExpression(AlgebraAnswer,3))_2;
+)_2;
+(-\infty=uOne-0.5;
+theA=(ChildExpression(AlgebraAnswer,2))_1;
+)_2;
+(-\infty=uOne-0.5;
+theC=(ChildExpression(AlgebraAnswer,3))_1;
+)_2;
+
+if (IsConstant{}(theA) and IsConstant{}(theB) and IsConstant{}(theC) and IsConstant{}(theD),
+PlotGrid{}(0)+
+Plot2D(leftSide, uOne-0.5, uTwo+0.5, red, 1)+
+Plot2D(leftSide,  theA, theB, blue, 4)+
+Plot2D(leftSide,  theC, theD, blue, 4)+
+PlotSetId("thePlot")
+,""
+))_5)
+,
+Freeze(
+(
+(
+\infty=uTwo+0.5; 
+theB=AlgebraAnswer_2;
+)_2;
+(
+-\infty=uOne-0.5;
+theA=AlgebraAnswer_1;
+)_2;
+if (IsConstant{}(theA) and IsConstant{}(theB),
+PlotGrid{}(0)+
+Plot2D(leftSide, uOne-0.5, uTwo+0.5, red,1)+
+Plot2D(leftSide, theA, theB, blue, 4)+
+PlotSetId("thePlot")
+,""
+))_3 
+)
+)
+);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+%UseBracketForIntervals
+inequalityAnswer
+</span>
+<span class="calculatorHidden">
+theBase=SelectAtRandom(2,3,4,5,6,e);
+theExpLeadingCF=1/( RandomInteger(1,5));
+u=theBase^{theExpLeadingCF x};
+leftEroot=(log_theBase uOne )/theExpLeadingCF;
+rightEroot=(log_theBase uTwo )/theExpLeadingCF;
+leftPtPlot2=leftEroot-0.2;
+rightPtPlot2=rightEroot+0.2;
+theSecondPlot=  
+PlotGrid{}(0)+
+Plot2D(leftSide, leftPtPlot2,rightPtPlot2, red, 1)
+;
+finalAnswer=
+if (  ( ComparisonOpString=="\geq"   and sign>0 ) or  ( ComparisonOpString=="\leq"   and sign<0 ),
+(-\infty, leftEroot]\cup [rightEroot, \infty)
+,
+if (  ( ComparisonOpString=="\leq"   and sign>0 ) or  ( ComparisonOpString=="\geq"   and sign<0 ),
+[leftEroot, rightEroot]
+,
+if (  ( ComparisonOpString==">"   and sign>0 ) or  ( ComparisonOpString=="<"   and sign<0 ),
+(-\infty, leftEroot)\cup (rightEroot, \infty)
+,
+if (  ( ComparisonOpString=="<"   and sign>0 ) or  ( ComparisonOpString==">"   and sign<0 ),
+(leftEroot, rightEroot)
+,
+""
+)
+)
+)
+)
+</span>
+<br>
+Using your previous work, solve the inequality.
+<br>
+<span class="calculator">
+leftSide
+</span>
+<span class="calculator">
+ComparisonOp
+</span>\(0\)
+<answerCalculatorHighlight>
+\(x\in\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="studentFinalAnswer" buttons="algebra, logarithms, intervals">
+CompareIntervalsNumerically(studentFinalAnswer, finalAnswer, 0.001);
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules("LogBase");
+</span>
+<br>
+<span class="calculator">
+theSecondPlot+PlotSetId("theSecondPlotID");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+%UseBracketForIntervals
+EnsureExpressionDependsOnlyOn(studentFinalAnswer, none);
+TurnOffRules("LogBase");
+Thaw(
+if ( ChildExpression(studentFinalAnswer,1)==StringToAtom("\\cup"),
+Freeze(
+(
+(\infty=rightPtPlot2; 
+theB=(ChildExpression(studentFinalAnswer,2))_2;
+)_2;
+(\infty=rightPtPlot2; 
+theD=(ChildExpression(studentFinalAnswer,3))_2;
+)_2;
+(-\infty=leftPtPlot2;
+theA=(ChildExpression(studentFinalAnswer,2))_1;
+)_2;
+(-\infty=leftPtPlot2;
+theC=(ChildExpression(studentFinalAnswer,3))_1;
+)_2;
+
+if (IsConstant{}(theA) and IsConstant{}(theB) and IsConstant{}(theC) and IsConstant{}(theD),
+theSecondPlot+
+Plot2D(leftSide,  theA, theB, blue, 4)+
+Plot2D(leftSide,  theC, theD, blue, 4)+
+PlotSetId("theSecondPlotID")
+,""
+))_5)
+,
+Freeze(
+(
+(
+\infty=rightPtPlot2; 
+theB=studentFinalAnswer_2;
+)_2;
+(
+-\infty=leftPtPlot2;
+theA=studentFinalAnswer_1;
+)_2;
+if (IsConstant{}(theA) and IsConstant{}(theB),
+theSecondPlot+
+Plot2D(leftSide, theA, theB, blue, 4)+
+PlotSetId("theSecondPlotID")
+,""
+))_3 
+)
+)
+);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+%UseBracketForIntervals
+finalAnswer
+</span>

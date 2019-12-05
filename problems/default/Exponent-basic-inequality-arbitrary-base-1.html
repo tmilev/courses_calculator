@@ -1,0 +1,124 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+theBase=SelectAtRandom(2,3,4,5,6,7,8);
+theLinCF=RandomInteger((-7,-1),(1,7));
+theLinConst=RandomInteger(-7,7);
+theConst=RandomInteger{}(1,30);
+rightSide=theConst;
+leftSide=theBase^{theLinCF x + theLinConst};
+theComparisonOpString= "\\geq";
+
+
+if (theConst>0, thePoint=(\log_theBase theConst- theLinConst)/theLinCF, thePoint =theLinConst/theLinCF);
+
+if ( theComparisonOpString=="\\geq",
+if (theConst\leq 0,
+finalAnswer=(-\infty,\infty),
+if ( theLinCF>0,
+finalAnswer=[(\log_theBase theConst- theLinConst)/theLinCF, \infty)
+,
+finalAnswer=(-\infty,(\log_theBase theConst- theLinConst)/theLinCF]
+)
+)
+,
+if ( theComparisonOpString==">",
+if (theConst\leq 0,
+finalAnswer=(-\infty,\infty),
+if ( theLinCF>0,
+finalAnswer=((\log_theBase theConst- theLinConst)/theLinCF, \infty)
+,
+finalAnswer=(-\infty,(\log_theBase theConst- theLinConst)/theLinCF)
+)
+)
+,
+if ( theComparisonOpString=="\\leq",
+if (theConst\leq 0,
+finalAnswer=\emptyset,
+if ( theLinCF>0,
+finalAnswer=(-\infty ,(\log_theBase theConst- theLinConst)/theLinCF]
+,
+finalAnswer=[(\log_theBase theConst- theLinConst)/theLinCF, \infty)
+)
+)
+,
+if ( theComparisonOpString=="<",
+if (theConst\leq 0,
+finalAnswer=\emptyset,
+if ( theLinCF>0,
+finalAnswer=(-\infty ,(\log_theBase theConst- theLinConst)/theLinCF)
+,
+finalAnswer=( (\log_theBase theConst- theLinConst)/theLinCF, \infty)
+)
+)
+,""
+)
+)
+)
+);
+
+theMark=(log_theBase (|theConst|+3)-theLinConst)/theLinCF;
+leftPoint=if (theLinCF>0, theMark-11, theMark);
+rightPoint=if(theLinCF> 0, theMark, theMark+11);
+thePic=Plot2D(leftSide, leftPoint, rightPoint, red ,2 )+
+PlotGrid{}(0)+
+PlotSegment((leftPoint-4, theConst), (rightPoint+4, theConst), green, 2)
+
+</span>
+Solve the inequality. 
+<br>
+<span class="calculator">
+\displaystyle
+leftSide   
+</span><span class="calculator">StringToAtom(theComparisonOpString)</span> <span class="calculator">
+\displaystyle
+rightSide   
+</span> .
+<ol>
+<li>Your answer should be an interval in a format such as \([a,b]\), \([a,\infty)\), etc.</li>
+<li>If there is no solution, your answer should be \(\emptyset \) (the empty set). <br>
+You can enter it through the buttons or by typing-in \emptyset.</li>
+</ol>
+<answerCalculatorHighlight>
+\(x\in\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, intervals">
+CompareIntervalsNumerically( AlgebraAnswer, finalAnswer, 0.00001);
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%UseBracketForIntervals
+TurnOffRules("LogBase");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
+(
+\infty=Max(|leftPoint|+1, |rightPoint|+1);
+newLeft=Max(leftPoint, AlgebraAnswer_1) ;
+newRight= Min(rightPoint, AlgebraAnswer_2);
+thePic+PlotSetId("thePlot")
++Plot2D(leftSide,
+newLeft
+,
+newRight
+,blue, 2
+)
+)_4
+;
+</span>
+<span class="calculatorAnswerOnGiveUp">
+finalAnswer
+</span>
+
+<br>
+<span class="calculator">
+thePic+PlotSetId("thePlot");
+</span>
+
+

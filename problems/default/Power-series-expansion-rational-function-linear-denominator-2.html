@@ -1,0 +1,35 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+%UseBracketForIntervals
+thePoint=0;
+xPower=RandomInteger{}(0,5);
+theConst=RandomInteger{}(2,6);
+theLinCf=RandomInteger{}((-6,-1),(1,6));
+f=x^xPower /(theConst-theLinCf x);
+theSummands{}({{A}},0)= Sequence{}( GetSummand(A,0)); 
+theSummands{}({{A}},{{a}})= Sequence{}( GetSummand(A,a)) \cup theSummands{}(A,a-1); 
+theAnswer=\sum_{n=0}^\infty ( 1/theConst (theLinCf/theConst)^n x^{n+xPower} );
+</span>
+Expand the function into Taylor/Maclaurin series around \(a=\)<span class="calculator">thePoint</span>. 
+<br>
+\(f(x)=\)<span class="calculator">\displaystyle
+f
+</span>.
+<answerCalculatorHighlight>Power series:</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, series">
+( theSummands{}(theAnswer,5)-theSummands{}(AlgebraAnswer,5)
+==0) and 
+(
+ChildExpression( ChildExpression( Last{} (GetMultiplicandList{}( AlgebraAnswer)) ,2),3)-\infty==0
+)
+</textarea>
+
+<span class="calculatorAnswerOnGiveUp">
+\displaystyle
+theAnswer
+</span>
+<br>
+Write your answer using proper \(\sum\)-notation, for example \(\displaystyle \sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!}\).

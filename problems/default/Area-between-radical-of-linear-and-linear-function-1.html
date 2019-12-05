@@ -1,0 +1,49 @@
+<span class="setCalculatorExamProblem">
+</span>
+<calculatorHidden>
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+a1=RandomInteger{}(1,10);
+b1=RandomInteger{}(-5,5);
+leftHeight=RandomInteger{}(1,5);
+rightHeight = leftHeight+RandomInteger{}(4,8);
+leftPoint = (leftHeight^2-b1)/a1;
+rightPoint=(rightHeight^2-b1)/a1;
+curve1{}{{x}}=\sqrt{a1 x+b1};
+slope= (rightHeight-leftHeight)/(rightPoint-leftPoint);
+curve2{}{{x}}= slope (x-leftPoint)+leftHeight;
+theIntegrand{}{{x}}=curve2{}x-curve1{}x;
+theInt=(a1 x+b1)^{3/2}/(3/2 a1) - \int curve2{}x dx 
+</calculatorHidden>
+
+<calculatorShowToUserOnly>
+PlotFill(
+Plot2D(curve1{}x, leftPoint+0.000000001,rightPoint)
++Plot2D(curve2{}x, rightPoint, leftPoint+0.00000001)
+, cyan)
++PlotWindow(300,300)
+</calculatorShowToUserOnly>
+<br>
+
+Find the area locked between the curve \(y=\)
+<calculator>
+\displaystyle curve1{}x
+</calculator> and the curve \(y=\)
+<calculator>
+\displaystyle curve2{}x 
+</calculator>. Do not include units in your answer.
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
+AlgebraAnswer==
+-( x=leftPoint; theInt)_2+
+(x=rightPoint; theInt)_2
+</calculatorAnswer>
+
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</calculatorCommentsBeforeSubmission>
+
+<calculatorAnswerOnGiveUp>
+-( x=leftPoint; theInt)_2+
+(x=rightPoint; theInt)_2
+</calculatorAnswerOnGiveUp>

@@ -1,0 +1,96 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+a=RandomInteger{}(2,5);
+b=RandomInteger{}((-1,-3), (1,3));
+leftPoint=RandomInteger{}(-10, -3);
+rightPoint=-b/a+RandomInteger{}(0,1)/a;
+theFun = e^(a x + b);
+leftHeight=(x=leftPoint; theFun)_2;
+rightHeight=(x=rightPoint; theFun)_2;
+theInt=theFun/a;
+</span>
+
+<span class="calculatorShowToUserOnly">
+PlotFill(
+ PlotSegment((leftPoint, 0),(leftPoint, leftHeight))
++Plot2D(theFun, leftPoint,rightPoint)
++PlotSegment((rightPoint, rightHeight), (rightPoint, rightHeight))
++PlotSegment( (rightPoint,0),(leftPoint,0)), cyan)
++
+PlotWindow(300,300)
+
+;
+</span>
+<br>
+Integrate. This is a definite integral so your answer should be a constant expression/number. 
+Enter your answer as an expression depending on \(e\). <b style="color:red">Do not approximate \(e\).</b>
+<br>
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} theFun dx
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+(x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2 -AlgebraAnswer==0
+</textarea>
+
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+
+(x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+term = a x + b;
+term1 = 1/a;
+term2 = e^(a(rightPoint) + b);
+term3 = e^(a(leftPoint) + b); 
+answer = term1(term2-term3);
+TurnOnRules("DistributeMultiplication");
+finalAnswer=theIntegral{}x;
+TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational",
+"CombineExponents", "AddRationals",  "AddTerms", "MultiplyRationals",  "ConstantExtraction");
+leftSub=e^{a(leftPoint) + b};
+rightSub=e^{a(rightPoint) + b};
+</span>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int_{leftPoint}^{rightPoint} e^{term} \diff x   &=&
+\displaystyle  \left[ \frac{1}{a} e^{term}\right]_{leftPoint}^{rightPoint}  \\\\
+\displaystyle &=&\displaystyle  \frac{1}{a} \left[ e^{term} \right]_{leftPoint}^{rightPoint}   &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left(rightSub  -  leftSub \right)  &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left( term2 - term3 \right)  &&\displaystyle \text{ }  \\\\
+\end{array}
+"
+)
+
+</span>
+</span>

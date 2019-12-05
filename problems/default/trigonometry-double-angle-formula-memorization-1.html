@@ -1,0 +1,85 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+TurnOnRules("ExploitCosEvenness", "ExploitSinOddness", "SineOfAngleSum", "CosineOfAngleSum");
+</span>
+<ul>
+<li>
+Derive the theoretical formulas without looking up your textbook/notes.
+</li>
+<li>
+Should you need to review your notes, restart the problem from the beginning.
+</li>
+</ul>
+State the double angle sum formula by expressing \(\sin(2\alpha)\) via \(\sin\alpha\) and \(\cos\alpha\).
+<answerCalculatorHighlight>\(\sin(2\alpha)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="sinTwoAanswer" buttons="algebra, trig, angles">
+Polynomialize( sinTwoAanswer-2sin{}\alpha \cos{}\alpha
+)==0 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(sinTwoAanswer, \alpha);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+2sin{}\alpha \cos{}\alpha
+</span>
+
+<br>State the formula that expresses \(\cos(2\alpha)\) via both \(\sin^2\alpha\) and \(\cos^2\alpha\).
+<answerCalculatorHighlight>\(\cos(2\alpha)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="cosTwoAstandardAnswer" buttons="algebra, trig, angles">
+Polynomialize(cosTwoAstandardAnswer-(\cos^2\alpha-\sin^2\alpha))==0 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(cosTwoAstandardAnswer, \alpha );
+</span>
+<span class="calculatorAnswerOnGiveUp">
+\cos^2\alpha-\sin^2\alpha
+</span>
+
+<br>State the formula that expresses \(\cos(2\alpha)\) via \(\cos^2\alpha\) without using \(\sin^2\alpha\).
+<answerCalculatorHighlight>\(\cos(2\alpha)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="cosTwoANoSinAnswer" buttons="algebra, trig, angles">
+Polynomialize(cosTwoANoSinAnswer-(2\cos^2\alpha-1))==0 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(cosTwoANoSinAnswer, \alpha);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+2\cos^2\alpha-1
+</span>
+
+<br>State the formula that expresses \(\cos(2\alpha)\) via \(\sin^2\alpha\) without using \(\cos^2\alpha\).
+<answerCalculatorHighlight>\(\cos(2\alpha)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="cosTwoAviaSinSquaredAnswer" buttons="algebra, trig, angles">
+Polynomialize(cosTwoAviaSinSquaredAnswer-(1-2\sin^2\alpha))==0 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(cosTwoAviaSinSquaredAnswer, \alpha);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+1-2\sin^2\alpha
+</span>
+
+<br>State the degree lowering formula that expresses \(\cos^2\alpha\) via \(\cos(2\alpha)\).
+<answerCalculatorHighlight>\(\cos^2\alpha=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="cosSquaredViaCosTwoAngleAnswer" buttons="algebra, trig, angles">
+Polynomialize(cosSquaredViaCosTwoAngleAnswer-(\cos(2\alpha)+1)/2)==0 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(cosSquaredViaCosTwoAngleAnswer, \alpha);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(\cos(2\alpha)+1)/2
+</span>
+
+<br>State the degree lowering formula that expresses \(\sin^2\alpha\) via \(\cos(2\alpha)\).
+<answerCalculatorHighlight>\(\sin^2\alpha=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="sinSquaredViaCosTwoAngleAnswer" buttons="algebra, trig, angles">
+Polynomialize(sinSquaredViaCosTwoAngleAnswer-(1-\cos(2\alpha))/2)==0 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(sinSquaredViaCosTwoAngleAnswer, \alpha);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(1-\cos(2\alpha))/2
+</span>

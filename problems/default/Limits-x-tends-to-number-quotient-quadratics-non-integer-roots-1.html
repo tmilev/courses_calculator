@@ -1,0 +1,119 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the limit. 
+
+<span class="calculatorHidden">
+xOne= RandomInteger((-5,-1), (1,5));
+xTwoTop= xOne+RandomInteger{}((-5,-1), (1,5))/RandomInteger{}((-5,-2), (2,5));
+xTwoBottom= xOne+RandomInteger{}((-5,-1), (1,5))/RandomInteger{}((-5,-2), (2,5));
+1/(xTwoTop-xTwoBottom);
+1/(Denominator{}xTwoTop-1)+1/(Denominator{}xTwoBottom-1);
+af=(-Denominator{}xTwoTop);
+ag=Denominator{}xTwoBottom;
+bf= af(-xOne -xTwoTop);
+bg=ag(-xOne -xTwoBottom);
+cf= af(xOne*xTwoTop);
+cg= ag(xOne*xTwoBottom);
+f=af(x-xOne)(x-xTwoTop);   
+g=ag(x-xOne)(x-xTwoBottom);
+theVeryFinalAnswer=(x=xOne; af/ag (x-xTwoTop)/(x-xTwoBottom) )_2;
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+\lim_{x \to xOne}\frac{f}{g}
+</span>.
+<br>
+<answerCalculatorHighlight>
+Answer: 
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+AlgebraAnswer-theVeryFinalAnswer ==0
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span><span class="calculatorAnswerOnGiveUp">
+theVeryFinalAnswer
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<br>
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+termOne=x-xOne;
+termTwo=x-xTwoTop;
+termThree=x-xTwoBottom;
+twoaf=2af;
+twoag=2ag;
+minusbf=-bf;
+minusbg=-bg;
+DiscriminantTop= bf^2-4af cf;
+DiscriminantBottom=bg^2-4ag cg;
+TurnOffRules("AddRationals", "AddTerms");
+DiscriminantTopSemiSimplified= bf^2-4af cf;
+DiscriminantBottomSemiSimplified=bg^2-4ag cg;
+
+TurnOffRules(MultiplyRationals, ConstantExtraction, PowerIntegerByInteger, PowerRationalByRational);
+TopSubbed= af xOne^2+ bf xOne+ cf;
+BottomSubbed= ag xOne^2+ bg xOne+ cg;
+DiscriminantTopNonSimplified= bf^2-4af cf;
+DiscriminantBottomNonSimplified=bg^2-4ag cg;
+
+fourACtop= 4 af cf;
+fourACbottom= 4 ag cg;
+termTwoSubbed=xOne-xTwoTop;
+termThreeSubbed=xOne-xTwoBottom;
+</span>
+Check denominator: 
+<span class="calculator"> 
+StringToAtom(EvaluateSymbols{}( "TopSubbed=0") )
+</span> <br>
+Check numerator: 
+<span class="calculator">
+StringToAtom(EvaluateSymbols{}( "BottomSubbed=0"))
+</span>. <br>
+Therefore the limit is of the form "\(\frac{0}{0}\)" and we need to use algebra.
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle  \require{cancel}
+\displaystyle \lim\limits_{x \to xOne}\frac{f}{g}&=&\displaystyle 
+\lim\limits_{x \to xOne} \frac{af(termOne)(termTwo)}{ag(termOne)(termThree)} &&
+{\begin{array}{l}\text{If we can't guess factorization: }\\\\
+ax^2+bx+c=a(x-x_1)(x-x_2)\\\\ 
+\text{ then use:}\\\\
+\text{Numerator: }\\\\
+\begin{array}{rcl}
+x_1,x_2&=&\frac{-b\pm \sqrt{b^2-4 a c}}{2 a}\\\\
+&=&\frac{ minusbf\pm \sqrt{DiscriminantTopNonSimplified }}{2( af)}\\\\
+&=&\frac{ minusbf\pm \sqrt{ DiscriminantTopSemiSimplified}}{twoaf}\\\\
+&=&\frac{ minusbf\pm \sqrt{ DiscriminantTop}}{twoaf}\\\\
+&=&xOne, xTwoTop\\\\
+\end{array}
+\\\\
+\text{Denominator: }\\\\
+\begin{array}{rcl}
+x_1,x_2&=&\frac{-b\pm \sqrt{b^2-4 a c}}{2 a}\\\\
+&=&\frac{ minusbg\pm \sqrt{DiscriminantBottomNonSimplified }}{2 ag}\\\\
+&=&\frac{ minusbg\pm \sqrt{ DiscriminantBottomSemiSimplified}}{twoag}\\\\
+&=&\frac{ minusbg\pm \sqrt{ DiscriminantBottom}}{twoag}\\\\
+&=&xOne, xTwoBottom\\\\
+\end{array}
+\end{array}}\\\\
+&=&\displaystyle \lim\limits_{x \to xOne} \frac{af(\cancel{termOne})(termTwo)}{ag(\cancel{termOne})(termThree)} &&\text{Allowed to substitute }x=af\\\\
+&=&\displaystyle \frac{af(termTwoSubbed)}{ag(termThreeSubbed)}\\\\
+&=&\displaystyle theVeryFinalAnswer
+\end{array}
+"
+)
+</span>
+</span>
+
+
+

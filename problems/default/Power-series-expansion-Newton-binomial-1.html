@@ -1,0 +1,47 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+%UseBracketForIntervals
+%UseLnInsteadOfLog
+thePoint=0;
+thePower=SelectAtRandom{}(-2/3,-1/2,-1/3,1/3,1/2,2/3);
+theConst=SelectAtRandom(-1,1);
+f=(1+theConst x)^thePower;
+theSummands{}({{A}},0)= Sequence{}( GetSummand(A,0)); 
+theSummands{}({{A}},{{a}})= Sequence{}( GetSummand(A,a)) \cup theSummands{}(A,a-1); 
+theAnswerOne=\sum_{n=0}^\infty (thePower \choose n)  (theConst x)^n
+
+</span>
+For this problem, recall that the binomial coefficient, denoted by \(\displaystyle \binom{n}{k}\) (read "n choose k"), is defined by:
+\(\displaystyle  \binom{n}{k} = \frac{\overbrace{ n(n-1)\dots (n-k+1)}^{k\text{ multiplicands}} }{k!}\)
+<br>
+Expand the function(s) into Taylor/Maclaurin series around \(a=\)<span class="calculator">thePoint</span>. 
+<br>
+<br>
+
+\(f(x)=\)<span class="calculator">\displaystyle
+f
+</span>.
+
+<answerCalculatorHighlight>
+Power series:
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra, series">
+(  
+Sort ( (tmpSummands = theSummands{}(theAnswerOne,5);   x=12/11; tmpSummands)_3)
+-
+Sort ( (tmpSummands = theSummands{}(AlgebraAnswerOne,5); x=12/11; tmpSummands)_3)
+==0
+) and 
+(
+ChildExpression ( ChildExpression( Last{} (GetMultiplicandList{}(GetFirstSummandContaining( AlgebraAnswerOne, \sum))) ,2),3)-\infty==0
+)
+</textarea>
+<br>
+<span class="calculatorAnswerOnGiveUp">
+\displaystyle
+theAnswerOne
+</span>
+Write your answer using proper \(\sum\)-notation, for example \(\displaystyle \sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!}\).

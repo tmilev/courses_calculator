@@ -1,0 +1,67 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+a=RandomInteger{}((-1,-4),(1,4));
+b=RandomInteger{}((-5,-1),(1,5));
+c=RandomInteger{}((-5,-1),(1,5));
+g= RandomInteger{}(1,5);
+h= RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+1/(a-b);
+fDenMultipliedOut=MakeExpression{}(MakeRationalFunction {}(A/(x-a)+(B x+K)/(x-b)^2));
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", 
+"CommonDenominatorOneNonFraction",  "IntegrateBlockIIaIIIa");
+f=(Numerator{}fDenMultipliedOut)/( (x-a)(x-b)^2  );
+</span>
+
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b>. 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+(
+( 
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction",  "IntegrateBlockIIaIIIa");
+theIntegral=\int f dx;
+)_2;
+CompareExpressionsNumerically {} 
+(
+AlgebraAnswer-theIntegral,
+(x=|a|+|b|+1; AlgebraAnswer-theIntegral)_2, 0.0000001, x\in (|a|+|b|+1,|a|+|b|+2), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+) _2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", 
+"CommonDenominatorOneNonFraction", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", 
+"CommonDenominatorOneNonFraction",  "IntegrateBlockIIaIIIa");
+\int f dx+C
+</span>

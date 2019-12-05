@@ -1,0 +1,92 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", 
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
+"DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", 
+"IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb", 
+"IntegrateEpowerX", "IntegratePullConstant");
+a=RandomInteger{}((-12,-1),(2,15));
+A=RandomInteger{}((-12,-2),(2,15));
+b=RandomInteger{}((-12,-1),(1, 15));
+h=RandomInteger{}( -2,-10);
+c = a x;
+theIntegral{}{{x}}= (A/a) e^(c);
+f=A e^(c);
+</span>
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "IntegratePullConstant");
+</span>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
+or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx 
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral{}x,
+(theDifference= AlgebraAnswer-theIntegral{}x; x=1; theDifference)_3, 0.00001, x\in (0.5,1), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+</textarea>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+\(
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+\)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("DistributeMultiplication");
+theIntegral{}x+C
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
+"DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+outTerm = A/a;
+diffU=a\diff x;
+diffX=1/a\diff u;
+TurnOnRules("DistributeMultiplication");
+finalAnswerU= outTerm e^{u} ;
+finalAnswer= outTerm e^{c} ;
+</span>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int f \diff x&=& \displaystyle \int \frac{A}{a}e^u \diff u &&
+{\begin{array}{l}\text{Set }u=c \\\\
+\diff u= diffU \\\\
+\diff x =diffX\end{array}} \\\\
+&=&\displaystyle  finalAnswerU + C &&\displaystyle \\\\
+\displaystyle &=&\displaystyle finalAnswer+ C &&\displaystyle \text{ }  \\\\
+\end{array}
+"
+)
+</span>
+</span>

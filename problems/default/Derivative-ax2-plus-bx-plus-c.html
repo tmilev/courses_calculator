@@ -1,0 +1,61 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the derivative of the function. 
+
+<span class="calculatorHidden">
+a=RandomInteger((2,6));
+b=RandomInteger((-1,-10), (1, 15));
+c=RandomInteger((-1,-10), (1, 15));
+e=RandomInteger((-1,-10), (1, 15));
+g=RandomInteger((100,200));
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
+</span>
+<br>
+<span class="calculator">
+\displaystyle f{}{{x}}=(a x^2 + b x + c)
+</span>.
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "DistributeMultiplication");\)
+</span>
+<answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0, 1, 100, 0.000000001);
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules("DistributeMultiplication");
+d/dx (f{}x)
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+TurnOnRules("DistributeMultiplication");
+btwo=2b;
+term1 = a x^2 + b x + c;
+finalAnswer = a (2) x + b;
+TurnOffRules("AddRationals", "AddTerms");
+TurnOffRules("MultiplyRationals", "ConstantExtraction");
+intermediateComputation=a (2) x^{2-1} + b (1) x^{1-1}; 
+</span>
+
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \frac{\diff }{\diff x}(term1) &=&\displaystyle intermediateComputation
+&&\displaystyle \text{Using: }  \frac{\diff }{\diff x}(A x^m) = A m x^{m-1} \text{ }  \\\\
+&=&\displaystyle  finalAnswer   &&\displaystyle \text{ } \\\\
+\end{array}
+"
+)
+</span>
+</span>
+
+

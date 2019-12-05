@@ -1,0 +1,72 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the limit. 
+
+<span class="calculatorHidden">
+af=RandomInteger{}((-5,-1),(1,5));
+bf=RandomInteger{}(-5,5);
+cf=RandomInteger{}((-5,-1),(1,5));
+f{}{{x}}=af /x^2;
+thePoint=RandomInteger{}((-5,-1),(1,5));
+theDerivative=d/dx(f{}x);
+theFinalAnswer=(x=thePoint ;theDerivative)_2;
+TurnOffRules("AddRationals", "MultiplyRationals",  "PowerIntegerByInteger", "PowerRationalByRational", "DistributeMultiplication", "ConstantExtraction");
+</span>
+<br>
+<span class="calculator">
+\displaystyle
+\lim_{h\to 0}\frac{f{}(thePoint+h)-f{}thePoint}{h}
+</span>.
+<br>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+theFinalAnswer-AlgebraAnswer==0
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span><span class="calculatorAnswerOnGiveUp">
+theFinalAnswer
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<br>
+<span class="calculatorHidden">  
+TurnOnRules("AddRationals", "MultiplyRationals",  "PowerIntegerByInteger",
+"PowerRationalByRational", "DistributeMultiplication", "ConstantExtraction");
+
+theNum= f{}(thePoint+h)-f{}thePoint;
+TurnOffRules("AddTerms");
+theNumPtThree=af/(thePoint+h)^2-af/thePoint^2;
+TurnOffRules("CommonDenominatorOneNonFraction");
+theNumPtTwo=af/(thePoint+h)^2-af/thePoint^2;
+theNumPtFour=Numerator {}theNumPtThree;
+theDenPtFour=h Denominator {}theNumPtThree;
+leftNumPtFive=ChildExpression(theNumPtFour, 2) ;
+rightNumPtFive=Polynomialize(ChildExpression(theNumPtFour, 3));
+TurnOnRules("AddTerms");
+theNumPtSix=leftNumPtFive+rightNumPtFive;
+numDivH=MakeExpression{}( MakeRationalFunction{}( theNumPtSix/h));
+denDivH=Denominator {}theNumPtThree;
+TurnOffRules("AddTerms", "MultiplyRationals",
+"ConstantExtraction", "DivideByNumber",
+"ConvertShortDenominatorToNegativePower", "AddRationals");
+answerNonSimplified= (h=0;numDivH/denDivH)_2;
+</span>
+When \(h=0\), both the numerator and the denominator vanish. Therefore the limit is of the form "\(\frac{0}{0}\)" and we need to use algebra.
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle  \require{cancel}
+\displaystyle \lim\limits_{h\to 0}\frac{theNum}{h}&=&\displaystyle \lim\limits_{h\to 0} \frac{theNumPtTwo }{h} 
+&&\text{Common denominator}\\\\
+&=&\displaystyle \lim\limits_{h\to 0} \frac{theNumPtFour }{theDenPtFour}&&\text{use }(a+b)^2=a^2+2ab+b^2\\\\
+&=&\displaystyle \lim\limits_{h\to 0} \frac{leftNumPtFive+\left(rightNumPtFive\right) }{theDenPtFour}\\\\
+&=&\displaystyle \lim\limits_{h\to 0} \frac{theNumPtSix }{theDenPtFour}\\\\
+&=&\displaystyle \lim\limits_{h\to 0} \frac{\cancel{h} (numDivH) }{\cancel{h} denDivH}  \\\\
+&=&\displaystyle answerNonSimplified \\\\
+&=&\displaystyle theFinalAnswer
+\end{array}
+"
+)
+</span>
+</span>

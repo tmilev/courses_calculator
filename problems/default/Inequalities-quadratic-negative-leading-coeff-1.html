@@ -1,0 +1,59 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+uOne=RandomInteger{}(-8,8)/RandomInteger{}((-8,-1),(1,8));
+uTwo=Floor(uOne+1)+RandomInteger{}(1,8)/RandomInteger{}(1,2);
+rightSide=RandomInteger{}(-5,5) x + RandomInteger{}(-5,5);
+leftSide=- Denominator{}uOne Denominator{}uTwo (x-uOne)(x-uTwo)+rightSide;
+
+</span>
+<span class="calculator">
+Plot2D(leftSide, uOne-1.5, uTwo+1.5)+
+Plot2D(rightSide, uOne-1.5, uTwo+1.5)+
+PlotSetId("thePlot");
+</span>
+<br>
+Solve the inequality. 
+<br>
+<span class="calculator">
+\displaystyle
+leftSide   
+</span>\(\geq\)<span class="calculator">
+\displaystyle
+rightSide
+</span>.
+<answerCalculatorHighlight>\(x\in\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer", buttons="algebra, intervals">
+AlgebraAnswer==[uOne,uTwo]
+</textarea>
+
+<span class="calculatorCommentsBeforeInterpretation">
+%UseBracketForIntervals
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+TurnOffRules("LogBase");
+(\infty=20;
+theA=AlgebraAnswer_1;
+theB=AlgebraAnswer_2;
+if (IsConstant{}(theA) and IsConstant{}(theB),
+Plot2D(leftSide, uOne-1.5, uTwo+1.5, red,1)+
+Plot2D(rightSide, uOne-1.5, uTwo+1.5, red,1)+
+Plot2D(leftSide, theA, theB, blue, 4)+
+Plot2D(rightSide, theA, theB, green, 4)+
+PlotSetId("thePlot")
+,""
+))_4
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+[uOne,uTwo]
+</span>
+
+

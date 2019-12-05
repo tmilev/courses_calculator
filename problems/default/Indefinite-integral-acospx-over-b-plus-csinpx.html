@@ -1,0 +1,97 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+a=RandomInteger{}((-10,-2),(2,15));
+b=RandomInteger{}( (1,15));
+c=RandomInteger{}((-15,-2), (2,15));
+g=RandomInteger{}( 2, 9);
+h=RandomInteger{}( -2,-10);
+p=RandomInteger{}(1,15);
+theIntegral{}{{x}}= (a/(c p))(ln(b + c sin(p x)));
+f=(a cos(p x))/(b + c sin(p x));
+\)
+</span>
+<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+\(
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+SeparatorBetweenSpans;
+\)
+</span>
+
+<br>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
+or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+<br>
+<span class="calculator">
+\(\displaystyle \int f dx  \) 
+</span>=
+<textarea class="calculatorAnswer" id="AlgebraAnswer">
+\(
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral{}x,
+(theDifference= AlgebraAnswer-theIntegral{}x; x=1/(p c); theDifference)_3, 0.00001, x\in (0.5/(p c),1/(p c)), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+\)
+</textarea>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+\(
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+\)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("DistributeMultiplication");
+theIntegral{}x+C
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+btwo=2b;
+b2 = 2*b;
+px = p*x;
+aovercp = a/(c*p);
+denominator = b + c(sin(px));
+TurnOnRules("DistributeMultiplication");
+finalAnswer=theIntegral{}x;
+</span>
+
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int f \diff x&=&\displaystyle  a  \int \frac{\cos(px)}{denominator} \diff x
+&&\displaystyle \text{Take } w(x) = denominator  \text{, so that }  w'(x) = p(c) \cos(p x)  \\\\
+&=&\displaystyle  \frac{a}{p(c)}  \int \frac{p(c) \cos(px)}{denominator} \diff x   &&\displaystyle
+\text{Adjust the nominator of the integrand so that it equals }   w'(x)  \\\\
+&=&\displaystyle  aovercp \ln \left|denominator \right| + C
+&&\displaystyle \text{Using } \int \frac {w'(x)}{w(x)} = \ln |w(x)| + C\\\\
+\end{array}
+"
+)
+</span>
+</span>

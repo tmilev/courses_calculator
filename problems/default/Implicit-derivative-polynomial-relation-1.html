@@ -1,0 +1,43 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+a=RandomInteger((-1,-7),(1,7));
+b=RandomInteger((-1,-7),(1,7));
+c=RandomInteger((-1,-7),(1,7));
+g=RandomInteger((-1,-7),(1,7));
+theFun=a x^3+ y^3+c x y-1 ;
+plotBasic=
+PlotImplicit(theFun, (-5, -5), (5, 5), (40,40))
++PlotWindow(300,300)
++PlotGrid 0
+</span>
+
+<span class="calculatorShowToUserOnly">
+plotBasic+PlotSetId("canvas1")
+</span>
+
+<br>
+Express \(\displaystyle  \frac{\diff y}{\diff x}\) as a function of \(x\) and \(y\), where \(x\) and \(y\) are related by:
+<br>
+<span class="calculator">
+\displaystyle theFun+1=1
+</span>.
+<br>
+<answerCalculatorHighlight>
+Answer: \(\displaystyle  \frac{\diff y}{\diff x}=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, variables">
+CompareExpressionsNumerically(
+(d/dx theFun;
+-(d/dx y=0;d/dx theFun)_2 /CoefficientOf{}(d/dx y, d/dx theFun)
+)_2, AlgebraAnswer, 0.000001, x\in (-1,1), 20, y\in (-1,1), 20)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,y)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(d/dx theFun;
+-(d/dx y=0;d/dx theFun)_2 /CoefficientOf{}(d/dx y, d/dx theFun)
+)_2
+</span>

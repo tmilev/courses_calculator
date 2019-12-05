@@ -1,0 +1,80 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa",
+"IntegratePullConstant");
+a=RandomInteger{}((-1,-5),(2,5));
+b=RandomInteger{}( (-1,-5),(2,5));
+c=SelectAtRandom{}( 3,5,7,9);
+g=SelectAtRandom{}( 2,4,6,8);
+h=RandomInteger{}( -2,-10);
+
+theIntegral{}{{x}}=b/2 \ln |a+ x^2| ;
+f=\frac{b x}{a+x^2};
+</span>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b>. 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx
+</span>\(=\) 
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral{}x,
+(theDifference= AlgebraAnswer-theIntegral{}x; x=10; theDifference)_3, 0.001, x\in (10,10.5), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theIntegral{}x+C
+</span>
+<br>
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<table><tr><td>
+<span class="calculatorHidden">  
+simplifiedB=b/2\phantom;
+denominator=x^2+a;
+bFormatted=b\phantom;
+</span>
+<span class="calculator">
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int f \diff x&=&\displaystyle  bFormatted \int\frac{ \diff \left(\frac{x^2}{2}\right)}{denominator}  \\\\
+&=&\displaystyle simplifiedB \int\frac{ \diff \left(denominator\right)}{denominator} &&\text{Set } u=denominator \\\\
+&=&\displaystyle simplifiedB \int\frac{ \diff u}{u} \\\\
+&=&\displaystyle simplifiedB \ln |u| +C \\\\
+&=&\displaystyle simplifiedB \ln |denominator| +C
+\end{array}
+"
+)
+</span>
+</span>

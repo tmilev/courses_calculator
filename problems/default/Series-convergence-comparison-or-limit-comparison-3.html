@@ -1,0 +1,75 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+TurnOffRules("sqrt");
+g{}0=RandomInteger(0,A);
+f{}{{a}}=RandomInteger (1,A) n^a+g{}(a-1);
+g{}{{a}}=RandomInteger (-A,A) n^a+g{}(a-1);
+A=5;
+sqrtTopOne=RandomInteger(2,4) ;
+sqrtBottomOne=RandomInteger(2,4) ;
+bottomPowerOne=RandomInteger(2,7);
+topPowerOne=RandomInteger(2, 4);
+dOne=bottomPowerOne /  sqrtBottomOne-topPowerOne / sqrtTopOne ;
+
+sqrtTopTwo=RandomInteger(2,4) ;
+sqrtBottomTwo=RandomInteger(2,4) ;
+bottomPowerTwo=RandomInteger(2,7);
+topPowerTwo=RandomInteger(2, 4);
+dTwo=bottomPowerTwo /  sqrtBottomTwo-topPowerTwo / sqrtTopTwo ;
+
+
+sqrtTopThree=RandomInteger(2,4) ;
+sqrtBottomThree=RandomInteger(2,4) ;
+bottomPowerThree=RandomInteger(2,7);
+topPowerThree=RandomInteger(2, 4);
+dThree=bottomPowerThree /  sqrtBottomThree-topPowerThree / sqrtTopThree ;
+</span>
+Determine whether the series is convergent or divergent. 
+If convergent, write ``<b>convergent</b>'', else write ``<b>divergent</b>''.
+<br>
+In your pen and paper solution, indicate clearly which convergence/divergence tests you used and how you used them.
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=10+RandomInteger(1,20)}^\infty \frac{\sqrt[sqrtTopOne]{  f{}topPowerOne} }{\sqrt[sqrtBottomOne]{f{}bottomPowerOne}}
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra">
+(AlgebraAnswerOne
+-
+if (dOne>1, convergent, divergent) )
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+if (dOne>1, convergent, divergent)
+</span>
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=10+RandomInteger(1,20)}^\infty \frac{\sqrt[sqrtTopTwo]{  f{}topPowerTwo} }{\sqrt[sqrtBottomTwo]{f{}bottomPowerTwo}}
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="algebra">
+(AlgebraAnswerTwo
+-
+if (dTwo>1, convergent, divergent) )
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+if (dTwo>1, convergent, divergent)
+</span>
+<br>
+<span class="calculator">\displaystyle
+\sum_{n=10+RandomInteger(1,20)}^\infty \frac{\sqrt[sqrtTopThree]{  f{}topPowerThree} }{\sqrt[sqrtBottomThree]{f{}bottomPowerThree}}
+</span>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerThree" buttons="algebra">
+(AlgebraAnswerThree
+-
+if (dThree>1, convergent, divergent) )
+==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+if (dThree>1, convergent, divergent)
+</span>

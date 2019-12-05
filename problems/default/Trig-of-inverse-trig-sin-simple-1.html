@@ -1,0 +1,76 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules ("DegreesToRadians", "Sine", "Cosine");
+aCF=RandomInteger{}(-10,10);
+theConst=1.5 aCF/(|aCF+ aCF/|aCF| RandomInteger{}(1,20)|);
+theConstTwo=RandomInteger{}((-6,-2),(2,6));
+theRegularAngle=theConstTwo-Floor{}( theConstTwo/(2\pi)) 2\pi;
+quadrant=Floor{}( theRegularAngle/(\pi/2));
+qMod4=quadrant mod 4;
+finalAnswer= 
+if(qMod4==0 mod 4, theRegularAngle,
+if(qMod4==1 mod 4, \pi-theRegularAngle,
+if(qMod4==2 mod 4, \pi-theRegularAngle,
+theRegularAngle-2\pi
+)
+)
+);
+</span>
+<ul>
+<li> Find the exact numerical value of the expression without using calculator.</li>
+<li> Do not approximate \(\pi\): enter it with the buttons/keyboard.</li>
+</ul>
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+\arcsin(sin{}( theConst))
+</span>\(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, angles">
+algebraAnswer==theConst
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer,none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+theConst
+</span>
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+\arcsin(sin{}( theConstTwo))
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswerTwo" buttons="algebra, angles">
+(TurnOnRules("DegreesToRadians");
+algebraAnswerTwo==finalAnswer
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswerTwo, none);
+TurnOnRules("DegreesToRadians", "Sine", "Cosine");
+TurnOnApproximations(0);
+if (IsConstant(algebraAnswerTwo),
+if ((algebraAnswerTwo\leq \pi/2) and (algebraAnswerTwo\geq -\pi/2), "", 
+"<br><b style='color:red'>Your angle does not lie between \\(-\\frac{\\pi}{2}\\) and \\(\\frac{\\pi}{2} \\). </b>
+<br> Your angle equals in radians (approx.): " +ToString(DoubleValue{} algebraAnswerTwo)+ ". "
+),
+"<br><b style='color:red'>I fail to interpret your answer as a number. </b>"
+)
+;
+"<br>Sine of your angle equals (approx.):";
+\sin (algebraAnswerTwo);
+"Sine of " +ToString(theConstTwo)+ " equals (approx.):";
+\sin(theConstTwo);
+TurnOffRules("DegreesToRadians", "Sine", "Cosine");
+</span>
+<span class="calculatorAnswerOnGiveUp">
+finalAnswer
+</span>

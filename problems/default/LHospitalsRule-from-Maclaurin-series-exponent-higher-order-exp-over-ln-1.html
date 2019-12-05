@@ -1,0 +1,51 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+a=RandomInteger{}((-50,-1),(1,50));
+b=RandomInteger{}((-50,-1),(1,50));
+c=RandomInteger{}((-5,-1));
+theTrigFunction=SelectAtRandom{}(sin,cos);
+h=RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+thePoint=0;
+fPrototype=e^(a x)-1;
+gPrototype=ln(1+b x);
+cfFone=(newVar= d/dx fPrototype; x=0; newVar )_3;
+cfGone=(newVar= d/dx gPrototype; x=0; newVar )_3;
+f=fPrototype-cfFone x;
+g=gPrototype-cfGone x;
+</span>
+Find the limit using L'Hospital's rule.
+
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \lim_{x \to 0} (f/g)
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+AlgebraAnswer==(
+fDifferentiated=d/dx( d/dx(f));
+gDifferentiated=d/dx( d/dx(g));
+x=thePoint;
+fDifferentiated/gDifferentiated
+)_4
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("ExpressTanViaSineCosine");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(
+fDifferentiated=d/dx( d/dx(f));
+gDifferentiated=d/dx( d/dx (g));
+x=thePoint;
+fDifferentiated/gDifferentiated
+)_4
+</span>

@@ -1,0 +1,92 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+TurnOffRules ("Sine", "Cosine");
+rootOne=SelectAtRandom{} (-1, -\sqrt{3}/2, -\sqrt{2}/2, -1/2, 0, 1/2, \sqrt{2}/2, \sqrt{3}/2, 1);
+rootTwo=SelectAtRandom{}(-1, -\sqrt{3}/2, -\sqrt{2}/2, -1/2, 0, 1/2, \sqrt{2}/2, \sqrt{3}/2, 1);
+1/((rootTwo>rootOne)   IsRational{}(rootOne*rootTwo)   IsRational{}(rootOne+rootTwo));
+theTrigFun=SelectAtRandom(\sin, \cos);
+theInverseTrigFun=if (theTrigFun==\sin, \arcsin, \arccos);
+
+angle11=theInverseTrigFun{}(rootOne);
+angle12= if (theTrigFun==\sin, \pi-angle11, -angle11);
+angle21=theInverseTrigFun{}(rootTwo);
+angle22=if (theTrigFun==\sin, \pi-angle21, -angle21);
+theScale=LCM(Denominator{}(rootOne*rootTwo), Denominator{}(rootOne+rootTwo));
+thePoly= theScale( u^2 -(rootOne+rootTwo) u + rootOne*rootTwo);
+u=theTrigFun{} \theta;
+rightSide= 
+
+RandomInteger{}((-3,-1),(1,3)) u +RandomInteger{}(-3,3) 
+;
+leftSide=
+(
+TurnOnRules("ExpressSinViaExponent", "ExpressCosViaExponent", "PowerImaginaryUnit");
+a=Polynomialize( thePoly+rightSide);
+TurnOffRules("ExpressSinViaExponent", "ExpressCosViaExponent");
+TurnOnRules("EulerFormula", "ExploitCosEvenness", "ExploitSinOddness");
+a
+)_5
+;
+
+leftSideAsFun{}{{a}}= (a, (\theta=a; leftSide)_2) ;
+rightSideAsFun{}{{a}}=(a, (\theta=a; rightSide)_2);
+leftPoint =-1+rootOne;
+rightPoint=rootTwo+1;
+angleList=
+Sort{}(
+(angle11-4\pi, angle11-2\pi, angle11, angle11+2\pi, angle11+4\pi)\sqcup
+(angle12-4\pi, angle12-2\pi, angle12, angle12+2\pi, angle12+4\pi)\sqcup
+(angle21-4\pi, angle21-2\pi, angle21, angle21+2\pi, angle21+4\pi)\sqcup
+(angle22-4\pi, angle22-2\pi, angle22, angle22+2\pi, angle22+4\pi)
+);
+finalAnswer= SubList(angleList, ({{a}}\leq 360^\circ) and (a\geq -360^\circ) )  ;
+
+
+thePlotVar=Plot2D(leftSide, leftPoint, rightPoint , red, 2 )+
+Plot2D(rightSide, leftPoint, rightPoint, pink, 2 )
++PlotGrid(0);
+</span>
+<span class="calculatorHidden">
+secondPlot=Plot2D(leftSide, -2\pi, 2\pi, red, 2)+
+Plot2D(rightSide, -2\pi, 2\pi, pink, 2)+
+PlotGrid(0);
+</span>
+<ul>
+<li>Find all solutions of the equation in the interval \([-2\pi, 2\pi]\).</li>
+<li>You may use either degrees or radians; if using degrees, your answer should be in the interval \([-360^\circ, 360^\circ]\).</li>
+<li>Separate multiple answers by commas.</li>
+<li>The red plot is the graph of the left-hand side; the pink one is the graph of the right-hand side.</li>
+<li>The value of the left-hand side and right-hand side at your answers will be labeled on the graph. </li>
+</ul>
+<span class="calculator">
+\displaystyle
+leftSide
+</span>\(=\)<span class="calculator">
+\displaystyle
+rightSide
+</span>
+<answerCalculatorHighlight>
+\(\theta=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, angles, comma">
+Sort{} algebraAnswer == finalAnswer 
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer, none);
+secondPlot+
+PlotPoint( ApplyToList(leftSideAsFun, algebraAnswer), green)+ 
+PlotPoint( ApplyToList(rightSideAsFun, algebraAnswer), blue)+ 
+PlotSetId("secondPlotID");
+</span>
+<span class="calculatorAnswerOnGiveUp">
+%UseBracketForIntervals
+finalAnswer
+</span>
+<br>
+<span class="calculator">
+secondPlot+PlotSetId("secondPlotID");
+</span>

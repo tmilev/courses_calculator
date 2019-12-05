@@ -1,0 +1,63 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules ("Sine", "Cosine");
+leftSide=SelectAtRandom{}(-\sqrt{3}/2, -\sqrt{2}/2, -1/2, 1/2, \sqrt{2}/2);
+rightSide=SelectAtRandom{}(-\sqrt{2}/2, -1/2, 1/2, \sqrt{2}/2, \sqrt{3}/2);
+1/(rightSide>leftSide);
+angleLeft=arcsin(leftSide);
+angleRight=arcsin(rightSide);
+
+
+finalAnswer= 
+NormalizeIntervals
+(
+(
+[angleLeft-6\pi, angleRight-6\pi]\cup [-5\pi- angleRight,-5\pi-angleLeft] \cup
+[angleLeft-4\pi, angleRight-4\pi]\cup [-3\pi- angleRight,-3\pi-angleLeft] \cup
+[angleLeft-2\pi, angleRight-2\pi]\cup [-\pi- angleRight,  -\pi-angleLeft] \cup
+[angleLeft,      angleRight     ]\cup [ \pi- angleRight,   \pi-angleLeft] \cup
+[angleLeft+2\pi, angleRight+2\pi]\cup [3\pi- angleRight,  3\pi-angleLeft] \cup
+[angleLeft+4\pi, angleRight+4\pi]\cup [5\pi- angleRight,  5\pi-angleLeft] \cup
+[angleLeft+6\pi, angleRight+6\pi]\cup [7\pi- angleRight,  7\pi-angleLeft] )
+\cap
+[-360^\circ, 360^\circ]
+)
+;
+
+
+finalAnswerList=GetOpandList(StringToAtom( "\\cup") , finalAnswer);
+</span>
+Find all solutions of the inequalities that lie in the interval \(\left[-360^\circ, 360^\circ \right]\). 
+<br>
+You may use either degrees or radians; if using radians, your answer should be in the interval \([-2\pi, 2\pi]\).
+<br>
+<span class="calculator">
+\displaystyle
+leftSide
+</span>\(\leq \)<span class="calculator">
+\displaystyle
+\sin(\theta)
+</span>\(\leq \)<span class="calculator">
+\displaystyle
+rightSide
+</span>
+<br>
+Your answer should be in the format \([a,b]\cup[c,d]\dots\) (you may need more than 2 intervals).
+<answerCalculatorHighlight>\(\theta\in\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, intervals, comma, angles">
+Sort(GetOpandList(StringToAtom( "\\cup") , algebraAnswer ))==Sort(finalAnswerList)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer,none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+%UseBracketForIntervals
+finalAnswer
+</span>

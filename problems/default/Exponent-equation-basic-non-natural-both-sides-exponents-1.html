@@ -1,0 +1,65 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+Solve.
+
+<span class="calculatorHidden">
+TurnOffApproximations(0);
+TurnOffRules ("LogBase");
+%UseLnInsteadOfLog
+theA= RandomInteger((-10,-1),(2,10));
+theB= RandomInteger((-10,-1),(1,10));
+theC= RandomInteger((-10,-1),(2,10));
+theD= RandomInteger((-10,-1),(1,10));
+1/(theA-theC);
+theBase=RandomInteger(2,11);
+theConst=RandomInteger(-2,25);
+rightPower=theC x +theD;
+leftPower=theA x+theB;
+rightSide=theConst theBase^{rightPower};
+leftSide=theBase^{leftPower};
+</span>
+<br>
+<span class="calculator">
+\displaystyle leftSide
+</span>\(=\)<span class="calculator">
+\displaystyle rightSide
+</span>.
+<answerCalculatorHighlight>\(x=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, comma">
+Thaw
+(
+if (theConst==0, (AlgebraAnswer== nosolution) or (AlgebraAnswer==no solution) or (AlgebraAnswer==nosolutions) or (AlgebraAnswer==no solutions),
+if (theConst<0, (AlgebraAnswer==norealsolution) or (AlgebraAnswer==no real solution) or (AlgebraAnswer==norealsolutions) or (AlgebraAnswer==no real solutions),
+Freeze( |AlgebraAnswer-    (\log_theBase(theConst)-theB+theD)/(theA-theC) | <0.000000001)
+)
+)
+)
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations(0);
+TurnOffRules("LogBase");
+
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+TurnOffRules("LogBase");
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none, no, real, solutions, solution, norealsolution, norealsolutions, nosolutions, nosolution)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules ("LogBase");
+Thaw (
+if (theConst==0, "no solution", 
+if (theConst<0, "no real solution",
+Freeze ((\log_theBase(theConst)-theB+theD)/(theA-theC)))
+)
+)
+</span>
+
+<br>
+<ul>
+<li>If there is more than one answer, separate the answers by commas. </li>
+<li>If there are no real solutions, write <b>no real solution</b> (you can ignore the space bars and write <b>norealsolution</b>).</li>
+<li>If there aren't any solutions (even over the complex numbers), write <b>no solution</b> (you can ignore the space bars and write <b>nosolution</b>).</li>  
+</ul>
+
+

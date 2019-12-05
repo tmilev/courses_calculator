@@ -1,0 +1,59 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+%UseLnInsteadOfLog
+%UseLnAbsInsteadOfLog
+a=RandomInteger{}((-4,-1),(1,4));
+b=RandomInteger{}(-4,4);
+c=RandomInteger{}((-5,-1),(1,5));
+g=|a|+ RandomInteger{}(2,5);
+h= RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+1/(|a|+|b|);
+f= 1/(g+ a \cos x );
+TurnOffRules("ExpressTanViaSineCosine",
+"IntegratePullConstant");
+</span>
+
+Integrate. Do not forget to <b><span style="color:red">include +C</span> 
+(case sensitive) <span style="color:red">in your answer</span></b>. 
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, trig">
+( 
+theIntegral=
+(\sin x = \frac{2t}{1+t^2};
+\cos x = \frac{1-t^2}{1+t^2};
+answerInTermsOfT=\int f  2/(1+t^2) dt+C;
+t=\tan(x/2);
+answerInTermsOfT)_5
+;
+CompareExpressionsNumerically {} 
+(
+AlgebraAnswer-theIntegral,
+(x=0; AlgebraAnswer-theIntegral)_2, 0.0000001, x\in (0,1), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+) _2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("ExpressTanViaSineCosine");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(\sin x = \frac{2t}{1+t^2};
+\cos x = \frac{1-t^2}{1+t^2};
+answerInTermsOfT=\int f   2/(1+t^2) dt+C;
+t=\tan(x/2);
+answerInTermsOfT)_5
+</span>

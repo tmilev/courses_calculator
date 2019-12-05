@@ -1,0 +1,58 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffApproximations(0);
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+leftSide=sin \theta;
+rightSide= SelectAtRandom(\sqrt{2} /2, -\sqrt{2} /2, \sqrt{3} /2,-\sqrt{3} /2, 1/2, -1/2);
+</span>
+Solve the equation. 
+<br>
+<span class="calculator">
+\displaystyle
+leftSide   =rightSide
+</span>. 
+
+
+<ul>
+<li>Enter your answer in the format \(\theta=Angle+2k\pi ~or~ \theta=AnotherAngle+2k\pi \). </li>
+<li>A sample answer: <br>
+\(\theta=\frac{\pi}{3}+2k \pi ~or~ \theta=\frac{2\pi}{3}+2k\pi \). </li>
+<li>You may also use degrees, example: \(\theta=60^\circ+k360^\circ ~or~ \theta=120^\circ+k360^\circ \). </li>
+
+<li> Use the word ``or'' - enter with the button panel - to separate the different choices for \(\theta\). </li>
+<li>Use the letter \(k\) to signify an arbitrary integer.</li>
+</ul>
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, or, variables">
+( MatchesPattern(
+algebraAnswer
+, \theta={{angle1}}+2 {{counter1}} \pi or \theta={{angle2}} + 2 {{counter2}} \pi);
+(not IsConstant(counter1)) 
+and
+(not IsConstant(counter2)) 
+and
+((IsInteger{}( (angle1-\arcsin(rightSide))/(2\pi) ) and 
+  IsInteger{}( (angle2-\pi+\arcsin(rightSide))/(2\pi) ) 
+ ) or
+ (IsInteger{}( (angle2-\arcsin(rightSide))/(2\pi) ) and 
+  IsInteger{}( (angle1-\pi+\arcsin(rightSide))/(2\pi) ) 
+ )
+) 
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswer,\theta, k);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(\theta = \arcsin(rightSide)+ 2k \pi) or (\theta=\pi- \arcsin(rightSide) + 2k \pi)
+
+</span>
+
+
+

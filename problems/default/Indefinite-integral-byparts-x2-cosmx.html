@@ -1,0 +1,105 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+a=RandomInteger{}((-30,-2),(2,30));
+b=RandomInteger{}( (1,30));
+m=RandomInteger{}((-30,-2), (2,30));
+g=RandomInteger{}( 2, 9);
+h=RandomInteger{}( -2,-10);
+theIntegral{}{{x}}= (1/m)(sin(m x))(x^2) + (2/(m^2))(cos(m x))(x) - (2/(m^3))(sin(m x));
+f=(x^2) cos(m x);
+</span>
+Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
+or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int f dx 
+</span>\(=\)</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+
+CompareExpressionsNumerically {}(
+AlgebraAnswer-theIntegral{}x,
+(theDifference= AlgebraAnswer-theIntegral{}x; x=1; theDifference)_3, 0.000000001, x\in (0,0.5), 20, C\in (0,3), 4)
+and
+(EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
+)_2
+</textarea>
+
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+</span>
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+%UseLnAbsInsteadOfLog
+TurnOnRules("DistributeMultiplication");
+theIntegral{}x+C
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
+"DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator",
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+btwo=2b;
+b2 = 2*b;
+px = p*x;
+outTerm1 = 1/m;
+outTerm2 = (e^(mx))/m;
+inTerm = 2/m;
+inTerm2 = -1/m;
+term1 = (x^2)sin(m x)/m;
+term2 = x(2/(m^2))cos(m x);
+term3 = -2sin(m x)/(m^3);
+term12 = (x^2)sin(m x) + inTerm;
+finalterm = term1+term2+term3;
+denominator = b + c(cos(px));
+TurnOnRules("DistributeMultiplication");
+finalAnswer=theIntegral{}x;
+</span>
+
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int f \diff x&=&\displaystyle  \frac{1}{m}  \int {x^2}(m \cos(m x)) \diff x
+&&\displaystyle \text{Note that } m \cos(m x) \diff x = \diff \left( \sin(m x) \right)  \\\\
+&=&\displaystyle  outTerm1  \int {x^2} \diff \left( \sin(m x) \right)
+&&\displaystyle \text{Set } u = x^2 \text{ and }  v = \sin(m x)  \\\\
+&=&\displaystyle  outTerm1 \left[{x^2} \sin(m x) - \int \sin(m x) \diff \left(x^2\right) \right]
+&&\displaystyle \text{Using } \int u \diff v = uv - \int v \diff u\\\\
+&=&\displaystyle  outTerm1 \left[{x^2} \sin(m x) - 2 \int x \sin(m x) \diff x \right]
+&&\displaystyle \text{ }\\\\
+&=&\displaystyle  outTerm1 \left[{x^2} \sin(m x) - \frac{2}{-(m)} \int x (-(m) \sin(m x)) \diff x \right]
+&&\displaystyle \text{ }\\\\
+&=&\displaystyle  outTerm1 \left[term12 \int x \diff \left( \cos(m x) \right) \right]
+&&\displaystyle \text{Set } u = x \text{ and }  v = \cos(m x) \\\\
+&=&\displaystyle  outTerm1 \left[term12 \left(x \cos(m x) - \int \cos(m x) \diff x \right) \right]
+&&\displaystyle \text{Again, using } \int u \diff v = uv - \int v \diff u \\\\
+&=&\displaystyle  outTerm1 \left[term12 \left(x \cos(m x) - \frac{\sin(m x)}{m}\right) \right] + C
+&&\displaystyle \text{ }\\\\
+&=&\displaystyle  finalterm + C  &&\displaystyle \text{ }\\\\
+\end{array}
+"
+)
+</span>
+</span>

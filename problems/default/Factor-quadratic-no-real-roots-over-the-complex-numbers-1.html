@@ -1,0 +1,80 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+%UseBracketForIntervals
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+aCF=RandomInteger((-3,-1),(1,3));
+bCF=RandomInteger((-8,-1),(1,8));
+cCF=RandomInteger((-10,-1),(1,10));
+leftSide=  aCF x^2+ bCF x+ cCF;
+1/((bCF^2-4aCF cCF)<0);
+uOne=(SolveFor{}(x, leftSide))_1;
+uTwo=(SolveFor{}(x, leftSide))_2;
+i=\sqrt{-1};
+TurnOffRules{}(DistributeMultiplication);
+multList1 = GetMultiplicandList( (aCF (x-uOne)) ( x-uTwo));
+multList2 = GetMultiplicandList((x-uOne) (aCF ( x-uTwo)));
+TurnOffRules{}(DistributeMultiplicationConstants);
+leftSideFactored=(aCF (x-uOne)) ( x-uTwo);
+multList3=(aCF, (x-uOne), ( x-uTwo));
+SolveForX{}{{a}}=SolveFor{}(x,a);
+</span>
+The quadratic <span class="calculator">
+\displaystyle
+leftSide   
+</span> has no real roots. Fully factor it using complex numbers. 
+You may use square roots of negative numbers and you may use the imaginary unit \(i=\sqrt{-1}\).
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle
+leftSide   
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra, complex">
+(
+answerList=GetMultiplicandList( factorizationAnswer);
+x=10!+1; 
+((Sort( multList1)- Sort(answerList) )==0)
+or
+((Sort( multList2)- Sort(answerList) )==0)
+or
+((Sort( multList3)- Sort(answerList) )==0)
+)_3
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+%PlotShowJavascriptOnly    
+TurnOffRules{}(DistributeMultiplication,DistributeMultiplicationConstants);
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(factorizationAnswer,x);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+leftSideFactored
+</span>
+
+
+<br>Once you are done factoring, plot the function with the calculator you plan on bringing to your exam(s). 
+Should the graph intersect the \(x\) axis?
+<br>
+<button class="showAnswerButton" onclick="if(this.toggleTag===undefined || this.toggleTag==false) this.toggleTag=true; else this.toggleTag=false; if (this.toggleTag){ document.getElementById('thePlotContainer').style.display=''; document.getElementById('thePlotContainer').style.opacity=1;} else {document.getElementById('thePlotContainer').style.display='none';  document.getElementById('thePlotContainer').style.opacity=0;}">
+Show plot
+</button>
+<br>
+<span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
+Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
+<br>
+<span class="calculator">
+PlotGrid{}(0)+
+Plot2D(leftSide, -bCF/(2aCF)-3, -bCF/(2aCF)+3, red, 2)+
+PlotSetId("thePlot")
+;
+</span>
+</span>
+<br>
+
+
+

@@ -1,0 +1,110 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+trigFun=SelectAtRandom{}(sin, cos);
+a = RandomInteger((2,15));
+b=RandomInteger(2,6);
+theR= b+trigFun{}(a \theta);
+theX=theR cos{} (\theta);
+theY=theR sin{} (\theta);
+leftPoint=0;
+rightPoint=2\pi;
+theAntiDerivative=\int 1/2 theR^2 \diff{} \theta
+\)
+</span>
+<span class="calculatorShowToUserOnly">
+PlotFill(
+PlotCurve( (theX, theY), 0, 2\pi, blue )
+,
+pink
+)
+</span> 
+<br>
+Find the area locked by the curve given in polar coordinates by \(r=\) <span class="calculator">theR</span>.
+
+<br>
+<textarea class="calculatorAnswer" id="AlgebraAnswer">
+(\theta=rightPoint; theAntiDerivative)_2
+-
+(\theta=leftPoint; theAntiDerivative)_2-AlgebraAnswer==0
+</textarea>
+
+
+<span class="calculatorAnswerOnGiveUp">
+(\theta=rightPoint; theAntiDerivative)_2
+-
+(\theta=leftPoint; theAntiDerivative)_2;
+</span>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations(0);
+none;
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none);
+</span>
+
+<span class="calculatorSolution">
+<br>
+Suppose a curve given in polar coordinates by \(r=r(\theta)\) intersects itself 
+for two parameter values \(\theta_1,\theta_2\). 
+This can happen only when exactly one the three mutually exclusive conditions holds:
+<ul>
+<li> \(\theta_1=\theta_2+2k\pi \), \(k\)-integer and \(r(\theta_1)=r(\theta_2)\neq 0\);
+</li>
+<li> \(\theta_1=\theta_2+(2k+1)\pi \), \(k\)-integer and \(r(\theta_1)=-r(\theta_2)\neq 0\);
+</li>
+<li> \(r(\theta_1)=r(\theta_2)=0\).
+</li>
+</ul>
+Since \(-1\leq <span class="calculator" noTags="true">trigFun{}(a \theta)</span>\leq 1\) it follows that 
+\(r(\theta)=<span class="calculator" noTags="true">trigFun{}(a \theta)+b</span> \gt 0\) for all \(\theta\) and so 
+the first option is the only one possible. If the curve parameter starts at \(\theta=0\), 
+this implies the curve cannot self-intersect for \(\theta\lt 2\pi\), and since   
+<span class="calculator">trigFun{}(a \theta)</span> 
+is \(2\pi\)-periodic (it is actually <span class="calculator">2\pi/a</span>-periodic),
+it follows that the curve self-intersects for the the first time at \(\theta=2\pi\).
+In other words, a full loop of the curve is traversed for no interval shorter than \(0\leq \theta\leq 2\pi\).
+
+By theory, the area swept by a curve given in polar coordinates by \(r=r(\theta)\) for \(\theta_1\leq \theta\leq \theta_2 \) is
+\(A=\displaystyle \frac{1}{2}\int_{\theta_1}^{\theta_2}r^2(\theta)\diff \theta  \).
+Therefore
+<span class="calculatorHidden">
+rSquaredExpanded=Polynomialize(theR^2);
+theFlaTimesTwo=if (trigFun==sin, (1-\cos(2z)), (1+cos(2z)));
+theTrigFunSquaredReduced=if (trigFun==sin, ((1-\cos(a\theta 2))/2), ((1+\cos(a\theta 2))/2));
+theRestFromTrigFun=rSquaredExpanded- (trigFun{}(a\theta))^2;
+simplifiedIntegrand=rSquaredExpanded- (trigFun{}(a\theta))^2+theTrigFunSquaredReduced;
+theIndefiniteIntegral=\int theR^2 \diff\theta;
+TurnOffRules("Sine", "Cosine", "AddTerms");
+
+theDifferenceAtTwoPi = (\theta=2\pi; theIndefiniteIntegral)_2;
+theDifferenceAtZero  = (\theta=0; theIndefiniteIntegral)_2;
+theDifferenceSimplified=(TurnOnRules("Sine", "Cosine"); theDifferenceAtTwoPi-theDifferenceAtZero)_2;
+finalAnswer=(TurnOnRules("Sine", "Cosine", "AddTerms");
+
+
+(\theta=rightPoint; theAntiDerivative)_2
+-
+(\theta=leftPoint; theAntiDerivative)_2;
+)_2
+</span>
+
+<span class="calculator">
+\displaystyle EvaluateSymbols(
+"
+\begin{array}{rcll|l}
+\displaystyle A&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(theR\right)^2 \diff \theta\\\\
+&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(rSquaredExpanded\right) \diff \theta&&\displaystyle \text{Use }trigFun^2 (z)=\frac{theFlaTimesTwo}{2}\\\\
+&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(\left( theTrigFunSquaredReduced \right)+ theRestFromTrigFun\right) \diff \theta\\\\
+&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(simplifiedIntegrand\right) \diff \theta\\\\
+&=&\displaystyle \frac{1}{2}\left[ theIndefiniteIntegral\right]_{0}^{2\pi}\\\\
+&=&\displaystyle \frac{1}{2}\left(theDifferenceAtTwoPi-\left(theDifferenceAtZero\right)\right)\\\\
+&=&\displaystyle \frac{1}{2}\left(theDifferenceSimplified\right)\\\\
+&=&\displaystyle finalAnswer
+\end{array}
+")
+</span>
+</span>

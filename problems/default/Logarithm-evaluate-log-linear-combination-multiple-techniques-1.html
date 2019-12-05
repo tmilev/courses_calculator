@@ -1,0 +1,42 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations{}0;
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower", "sqrt", DistributeMultiplication);
+baseTrue=RandomInteger{}(2,7);
+extraFactor=RandomInteger{}(2,7);
+1/(GCD{}(baseTrue,extraFactor)==1);
+power1=RandomInteger(2,5);
+power2=RandomInteger(1,5);
+power3=RandomInteger(2,5);
+radical3=RandomInteger{}(2,5);
+1/(GCD{}(power3,radical3) ==1);
+
+arg1=baseTrue^power1 extraFactor;
+arg2=extraFactor  baseTrue^power2;
+arg3=\sqrt[radical3]{baseTrue^power3};
+
+1/(arg1<500)+1/(arg2<500)+1/(arg3<500);
+
+toBeSimplified=\log_baseTrue (arg1) + \log_(1/baseTrue) (arg2)+log_{baseTrue} arg3;
+
+</span>
+Using the properties of logarithm to compute without a calculator. 
+<answerCalculatorHighlight>
+<span class="calculator" >  toBeSimplified</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswerZero" buttons="algebra">
+AlgebraAnswerZero- (power1-power2+power3/radical3)==0
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswerZero, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(power1-power2+power3/radical3)
+</span>

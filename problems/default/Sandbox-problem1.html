@@ -1,0 +1,88 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+\(
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+TurnOffRules
+("IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+a=RandomInteger{}( (-3,-1), (1,3));
+b=RandomInteger{}( -5,5);
+c=RandomInteger{}( (-3,3));
+g=RandomInteger{}( (4,10));
+leftPoint=c;
+rightPoint=c+g;
+curve1{}{{x}}= a x +b;
+curve2{}{{x}}= (x-c)(x-g-c)+a x +b;
+theArea{}{{x}}=curve1{}x-curve2{}x;
+
+\)
+</span>
+
+<span class="calculatorShowToUserOnly">
+\(
+PlotFill(
+Plot2D(curve1{}x, c,c+g )
++
+Plot2D(curve2{}x, c,c+g )
+, cyan)
++
+Plot2D(curve1{}x, c-1,c+g+1)
++
+Plot2D(curve2{}x, c-1,c+g+1)
++
+PlotWindow(300,300)
+;
+\) 
+</span>
+<br>
+Find the area locked between the curve \(y=\)
+<span class="calculator">
+\(\displaystyle curve1{}x  \) 
+</span> and the curve \(y=\)
+<span class="calculator">
+\(\displaystyle curve2{}x  \) 
+</span>
+<textarea class="calculatorAnswer" id="AlgebraAnswer">
+\(
+AlgebraAnswer==
+
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+
+-(theInt=(\int theArea{}x dx); x=leftPoint; theInt)_3+
+(theInt=(\int theArea{}x dx); x=rightPoint; theInt)_3
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+\(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+SeparatorBetweenSpans;
+\)
+</span>
+ 
+<span class="calculatorCommentsBeforeSubmission">
+\(
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+\)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+
+-(theInt=(\int theArea{}x dx); x=leftPoint; theInt)_3+
+(theInt=(\int theArea{}x dx); x=rightPoint; theInt)_3
+)_2
+</span>

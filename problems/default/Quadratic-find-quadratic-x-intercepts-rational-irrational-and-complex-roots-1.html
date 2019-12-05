@@ -1,0 +1,112 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+aCF=RandomInteger((-5,-1),(1,5));
+bCF=RandomInteger((-5,-1),(1,5));
+cCF=RandomInteger((-5,-1),(1,5));
+aCFtwo=RandomInteger((-7,-2),(2,7));
+bCFtwo=RandomInteger((-5,-1),(1,5));
+cCFtwo=RandomInteger((-8,-1),(1,8));
+1/(bCFtwo^2-4aCFtwo cCFtwo<0);
+1/(bCF^2-4aCF cCF>0) ;
+1/(not IsSquare{}(bCF^2-4aCF cCF));
+uOne=RandomInteger{}((-5,-1),(1,5));
+uTwo=uOne+RandomInteger{}(1,5)/RandomInteger{}(1,5);
+quadraticTwo=Denominator{}uTwo (x-uOne)(x-uTwo);
+quadraticOne= aCF x^2+bCF x + cCF;
+tSols= SolveFor(x, quadraticOne);
+quadraticThree=aCFtwo x^2+bCFtwo x + cCFtwo;
+</span>
+<span class="calculator">
+PlotGrid{}(0)+
+Plot2D(quadraticOne,  Min(tSols_1, tSols_2)-0.5, Max(tSols_1, tSols_2)+0.5, red, 2)+
+PlotSetId("plotOne")
+;
+</span>
+<br>
+Find the \(x\)-intercepts of the quadratic.
+<ul>
+    <li>If more than one, separete the intercepts by comma.</li>
+    <li>If there are no intercepts, write <b>none</b> as you answer.</li>
+    <li>Do not use approximations.</li>
+    <li>In this problem we are working with real numbers only. </li>
+</ul>
+\(y=\)<span class="calculator">\displaystyle 
+quadraticOne
+</span>
+<answerCalculatorHighlight>\(x\)-intercepts: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswerT" buttons="algebra, comma">
+(algebraAnswerT-tSols==0) or 
+(algebraAnswerT-(tSols_2, tSols_1)==0)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswerT,none);
+PlotGrid{}(0)+
+Plot2D(quadraticOne,  Min(tSols_1, tSols_2)-0.5,  Max(tSols_1, tSols_2)+0.5, red, 2)+
+PlotSetId("plotOne")+
+PlotPoint( 
+(
+(algebraAnswerT_1, (x=algebraAnswerT_1; quadraticOne)_2) ,
+(algebraAnswerT_2, (x=algebraAnswerT_2; quadraticOne)_2) 
+) , blue)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+tSols
+</span>
+
+<br>
+<span class="calculator">
+PlotGrid{}(0)+
+Plot2D(quadraticTwo, uOne-0.5, uTwo+0.5, red, 2)+
+PlotSetId("plotTwo")
+;
+</span>
+<br>
+\(y=\)<span class="calculator">\displaystyle 
+quadraticTwo
+</span>
+<answerCalculatorHighlight>\(x\)-intercepts:</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="algebraAnswerU" buttons="algebra, comma">
+(algebraAnswerU-(uOne, uTwo)==0) or 
+(algebraAnswerU-(uTwo, uOne)==0)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswerU,none);
+PlotGrid{}(0)+
+Plot2D(quadraticTwo, uOne-0.5, uTwo+0.5, red, 2)+
+PlotSetId("plotTwo")+
+PlotPoint( 
+(
+(algebraAnswerU_1, (x=algebraAnswerU_1; quadraticTwo)_2) ,
+(algebraAnswerU_2, (x=algebraAnswerU_2; quadraticTwo)_2) 
+) , blue)
+</span>
+<span class="calculatorAnswerOnGiveUp">
+(uOne,uTwo)
+</span>
+
+<br>
+<span class="calculator">
+PlotGrid{}(0)+
+Plot2D(quadraticThree, -bCFtwo/(2aCFtwo)-2, -bCFtwo/(2aCFtwo)+2, red, 2)+
+PlotSetId("plotThree")
+;
+</span>
+<br>
+\(y=\)<span class="calculator">\displaystyle 
+quadraticThree
+</span>
+<answerCalculatorHighlight>\(x\)-intercepts:</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="algebraAnswerW" buttons="algebra, comma">
+algebraAnswerW==none
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(algebraAnswerW, none);
+</span>
+<span class="calculatorAnswerOnGiveUp">
+none
+</span>
+

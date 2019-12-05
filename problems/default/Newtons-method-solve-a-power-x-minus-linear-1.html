@@ -1,0 +1,313 @@
+<span class="setCalculatorExamProblem">
+</span>
+<calculatorHidden>
+%UseBracketForIntervals
+%UseLnInsteadOfLog
+TurnOffApproximations 0;
+TurnOffRules(PowerRationalByRational);
+sign=SelectAtRandom(-1,1);
+a=RandomInteger{}(1,5) * (-sign);
+b=SelectAtRandom(1,10);
+c=(RandomInteger{}(2,9))^(sign);
+leftSide= c^x;
+rightSide=a x +b;
+f=leftSide-rightSide;
+1/((x=0; f)_2);
+1/((x=1; f)_2);
+1/((x=2; f)_2);
+1/((x=3; f)_2);
+1/((x=-1; f)_2);
+1/((x=-2; f)_2);
+1/((x=-3; f)_2);
+theNewtonMap= x- f/(d/dx f);
+theNewtonMapAsFun{}{{a}}=( (x={{a}}; theNewtonMap)_2);
+theNewtonMapApprox{}{{a}}=DoubleValue(theNewtonMapAsFun{}a);
+x_2=theNewtonMapApprox{}0;
+x_3=theNewtonMapApprox{}(x_2);
+x_4=theNewtonMapApprox{}(x_3);
+x_5=theNewtonMapApprox{}(x_4);
+x_6=theNewtonMapApprox{}(x_5);
+x_7=theNewtonMapApprox{}(x_6);
+leftPoint = Min ( if(sign>0, -10, x_7-0.5), x_7-0.5,-2);
+rightPoint = Max ( if(sign>0, x_7+1, 10), x_7-0.5,2);
+basicPlot=Plot2D(leftSide, leftPoint, rightPoint,purple,1.5)
++ Plot2D(rightSide, leftPoint, rightPoint,red, 1.5)
++ PlotViewRectangle ( (leftPoint,-2), (rightPoint, Max( c^{x_7}, 5))) 
+</calculatorHidden>
+<calculator>
+basicPlot+PlotSetId("theCanvas");
+</calculator>
+<br>
+
+The goal of this problem is to solve numerically the equation 
+<br>
+<calculator>\displaystyle leftSide</calculator>\(=\)<calculator>\displaystyle rightSide</calculator>.
+<br>
+The left hand side and the right hand side are plotted above; solving the equation will give us the 
+\(x\)-coordinate of the intersection of the two curves.
+We transfter the right hand to the left to get
+<br>
+<calculator>\displaystyle f</calculator>\(=0\).
+<br>
+Set \(f(x)=\)<calculator>\displaystyle f</calculator>; solving the original equation now boils down to 
+finding zeroes of \(f\).
+<br>
+<b>Compute the derivative of \(f\).</b>
+<answerCalculatorHighlight>\(\displaystyle \frac{\diff f}{\diff x}=\)</answerCalculatorHighlight>
+<calculatorAnswer id="derivativeAnswer" buttons="algebra, logarithms">
+CompareFunctionsNumerically(derivativeAnswer, d/dx f, 0, 1, 50, 0.00000001) 
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+d/dx f    
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(derivativeAnswer,x);
+</calculatorCommentsBeforeSubmission>
+<br>
+The Newton map is the transformation which we iterate when performing the Newton method, i.e., 
+<br>
+\(\displaystyle N{}(x)=x-\frac{f(x)}{f'(x)} \). 
+<br>
+<b>Compute the Newton map.</b>
+<answerCalculatorHighlight>\(\displaystyle N(x)=\)</answerCalculatorHighlight>
+<calculatorAnswer id="newtonMap" buttons="algebra, logarithms">
+CompareFunctionsNumerically(newtonMap, theNewtonMap, 0.1, 1.12, 53, 0.00000001);
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+theNewtonMap
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(theNewtonMap,x);
+</calculatorCommentsBeforeSubmission>
+<br>
+We start by setting our first approximation for a solution of the equation to be  \(x_1=0\). 
+Any number other than \(0\) can be chosen as first approximation; 
+\(0\) was chosen as it is the ``simplest'' real number.
+Now set 
+<br>
+\(
+\begin{array}{rcl}
+x_2&=& N(x_1)\\
+x_3&=& N(x_2)\\
+x_4&=& N(x_3)\\
+x_5&=& N(x_4)\\
+&\vdots
+\end{array}
+\).
+
+<br>
+Compute \(x_2\) with precision \(5\) digits after the decimal point. 
+You may directly enter the algebraic expression that produces your answer.
+To do that quickly, you may sipmly copy+paste your previous answer and 
+replace \(x\) by \(0\).
+
+Alternatively, you may use your personal calculator to compute the approximation directly.
+Don't forget to use the calculator you plan on bringing to your exams.
+
+<answerCalculatorHighlight>\(x_2=N(0)=\)</answerCalculatorHighlight>
+<calculatorAnswer id="answerXtwo" buttons="algebra, logarithms">
+DoubleValue|theNewtonMapApprox {}0- answerXtwo| < 0.001
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(answerXtwo, none);
+"<br>\(\approx" +ToString{} DoubleValue{} answerXtwo +"\)";
+"<br>\(f(" + ToString{} DoubleValue{} answerXtwo + ")\approx" +ToString{}( (x=answerXtwo; DoubleValue{}f)_2)+"\)";
+%PlotShowJavascriptOnly
+basicPlot+PlotSetId("theCanvas")
++PlotPoint((answerXtwo, c^answerXtwo),red)
++PlotPoint((answerXtwo, a*answerXtwo+b),purple)
+</calculatorCommentsBeforeSubmission>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerRationalByRational);
+TurnOffApproximations 0;
+</calculatorCommentsBeforeInterpretation>
+<calculatorAnswerOnGiveUp>
+theNewtonMapApprox {}0;
+TurnOffRules (AddRationals, PowerIntegerByInteger, 
+PowerRationalByRational, PowerAnytoZero, ConstantExtraction, AddTerms);
+"\(=\)\(\displaystyle "+ ToString (theNewtonMapAsFun{}0)  +"\)"
+</calculatorAnswerOnGiveUp>
+<br>
+Use the value of \(x_2\) you found in the previous step to compute \(x_3\) 
+with precision \(5\) digits after the decimal point.
+
+<answerCalculatorHighlight>\(x_3=N(x_2)=\)</answerCalculatorHighlight>
+<calculatorAnswer id="answerXthree" buttons="algebra, logarithms">
+DoubleValue|theNewtonMapApprox{}theNewtonMapApprox {}0- answerXthree| < 0.001
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerRationalByRational);
+TurnOffApproximations 0;    
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(answerXthree, none);
+"<br>\(\approx" +ToString{} DoubleValue{} answerXthree +"\)";
+"<br>\(f(" + ToString{} DoubleValue{} answerXthree + ")\approx" +ToString{}( (x=answerXthree; DoubleValue{}f)_2)+"\)";
+%PlotShowJavascriptOnly
+basicPlot+PlotSetId("theCanvas")
++PlotPoint((answerXthree, c^answerXthree),red)
++PlotPoint((answerXthree, a*answerXthree+b),purple)
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
+theNewtonMapApprox {}theNewtonMapApprox{}0;
+TurnOffRules (AddRationals, PowerIntegerByInteger, 
+PowerRationalByRational, PowerAnytoZero, ConstantExtraction, 
+AddTerms, AddDoubleToRational, MultiplyDoubleByRational, PowerDoubleToDouble);
+"\(\approx\)\(\displaystyle "+ ToString (theNewtonMapAsFun{}theNewtonMapApprox {}0)  +"\)"
+</calculatorAnswerOnGiveUp>
+<br>
+Use the value of \(x_3\) you found in the previous step to compute \(x_4\) 
+with precision \(5\) digits after the decimal point.
+
+<answerCalculatorHighlight>\(x_4=N(x_3)=\)</answerCalculatorHighlight>
+<calculatorAnswer id="answerXfour" buttons="algebra, logarithms">
+DoubleValue|x_4- answerXfour| < 0.001
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerRationalByRational);
+TurnOffApproximations 0;    
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(answerXfour, none);
+"<br>\(\approx" +ToString{} DoubleValue{} answerXfour +"\)";
+"<br>\(f(" + ToString{} DoubleValue{} answerXfour + ")\approx" +ToString{}( (x=answerXfour; DoubleValue{}f)_2)+"\)";
+%PlotShowJavascriptOnly
+basicPlot+PlotSetId("theCanvas")
++PlotPoint((answerXfour, c^answerXfour),red)
++PlotPoint((answerXfour, a*answerXfour+b),purple)
+
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
+x_4;
+TurnOffRules (AddRationals, PowerIntegerByInteger, 
+PowerRationalByRational, PowerAnytoZero, ConstantExtraction, 
+AddTerms, AddDoubleToRational, MultiplyDoubleByRational, PowerDoubleToDouble);
+"\(\approx\)\(\displaystyle "+ ToString (theNewtonMapAsFun{}x_3 )  +"\)"
+</calculatorAnswerOnGiveUp>
+
+<br>
+Use the value of \(x_4\) you found in the previous step to compute \(x_5\) 
+with precision \(5\) digits after the decimal point.
+
+<answerCalculatorHighlight>\(x_5=N(x_4)=\)</answerCalculatorHighlight>
+<calculatorAnswer id="answerXfive" buttons="algebra, logarithms">
+DoubleValue|x_5- answerXfive| < 0.001
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerRationalByRational);
+TurnOffApproximations 0;    
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(answerXfive, none);
+"<br>\(\approx" +ToString{} DoubleValue{} answerXfive +"\)";
+"<br>\(f(" + ToString{} DoubleValue{} answerXfive + ")\approx" +ToString{}( (x=answerXfive; DoubleValue{}f)_2)+"\)";
+%PlotShowJavascriptOnly
+basicPlot+PlotSetId("theCanvas")
++PlotPoint((answerXfive, c^answerXfive),red)
++PlotPoint((answerXfive, a*answerXfive+b),purple)
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
+x_5;
+TurnOffRules (AddRationals, PowerIntegerByInteger, 
+PowerRationalByRational, PowerAnytoZero, ConstantExtraction, 
+AddTerms, AddDoubleToRational, MultiplyDoubleByRational, PowerDoubleToDouble);
+"\(\approx\)\(\displaystyle "+ ToString (theNewtonMapAsFun{}x_4 )  +"\)"
+</calculatorAnswerOnGiveUp>
+
+<br>
+Use the value of \(x_5\) you found in the previous step to compute \(x_6\) 
+with precision \(5\) digits after the decimal point.
+
+<answerCalculatorHighlight>\(x_6=N(x_5)=\)</answerCalculatorHighlight>
+<calculatorAnswer id="answerXsix" buttons="algebra, logarithms">
+DoubleValue|x_6- answerXsix| < 0.001
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerRationalByRational);
+TurnOffApproximations 0;    
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(answerXsix, none);
+"<br>\(\approx " +ToString{} DoubleValue{} answerXsix +"\)";
+"<br>\(f(" + ToString{} DoubleValue{} answerXsix + ")\approx" +ToString{}( (x=answerXsix; DoubleValue{}f)_2)+"\)";
+%PlotShowJavascriptOnly
+basicPlot+PlotSetId("theCanvas")
++PlotPoint((answerXsix, c^answerXsix),red)
++PlotPoint((answerXsix, a*answerXsix+b),purple)
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
+x_6;
+TurnOffRules (AddRationals, PowerIntegerByInteger, 
+PowerRationalByRational, PowerAnytoZero, ConstantExtraction, 
+AddTerms, AddDoubleToRational, MultiplyDoubleByRational, PowerDoubleToDouble);
+"\(\approx\)\(\displaystyle "+ ToString (theNewtonMapAsFun{}x_5 )  +"\)"
+</calculatorAnswerOnGiveUp>
+
+<br>
+Use the value of \(x_6\) you found in the previous step to compute \(x_7\) 
+with precision \(5\) digits after the decimal point.
+
+<answerCalculatorHighlight>\(x_7=N(x_6)=\)</answerCalculatorHighlight>
+<calculatorAnswer id="answerXseven" buttons="algebra, logarithms">
+DoubleValue|x_7- answerXseven| < 0.001
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerRationalByRational);
+TurnOffApproximations 0;    
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(answerXseven, none);
+"<br>\(\approx " +ToString{} DoubleValue{} answerXseven +"\)";
+"<br>\(f(" + ToString{} DoubleValue{} answerXseven + ")\approx" +ToString{}( (x=answerXseven; DoubleValue{}f)_2)+"\)";
+%PlotShowJavascriptOnly
+basicPlot+PlotSetId("theCanvas")
++PlotPoint((answerXseven, c^answerXseven),red)
++PlotPoint((answerXseven, a*answerXseven+b),purple)
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
+x_7;
+TurnOffRules (AddRationals, PowerIntegerByInteger, 
+PowerRationalByRational, PowerAnytoZero, ConstantExtraction, 
+AddTerms, AddDoubleToRational, MultiplyDoubleByRational, PowerDoubleToDouble);
+"\(\approx\)\(\displaystyle "+ ToString (theNewtonMapAsFun{}x_6 )  +"\)"
+</calculatorAnswerOnGiveUp>
+
+
+<br>
+Newton's method is available as a built-in function in our calculator. 
+Check whether your calculator supports Newton's method. 
+
+<br>
+<b>Find the value of \(x_{20}\)</b> using our built-in Newton method implementation. 
+To do that, enter \(NewtonsMethod(<calculator noTags="true">f</calculator>,0,20)\). 
+<br>
+The first argument is the function whose zeroes we are trying to find. 
+The second argument is the starting point. The third and final argument is the number of iterations  we are performing.
+<br>
+<b>Enter the string ``NewtonsMethod'' using the provided button</b>, or with the keyboard, 
+<b style="color:red">case sensitive</b>.
+
+<answerCalculatorHighlight>\(x_{20}=\)</answerCalculatorHighlight>
+<calculatorAnswer id="answerNewton20" buttons="algebra, logarithms, NewtonsMethod">
+DoubleValue|answerNewton20- NewtonsMethod(f,0,20) | < 0.000001
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerRationalByRational);
+TurnOffApproximations 0;    
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(answerNewton20, none);
+"<br>\(= " +ToString{} DoubleValue{} answerNewton20 +"\)";
+"<br>\(f(" + ToString{} DoubleValue{} answerNewton20 + ")\approx" +ToString{}( (x=answerNewton20; DoubleValue{}f)_2)+"\)";
+%PlotShowJavascriptOnly
+basicPlot+PlotSetId("theCanvas")
++PlotPoint((answerNewton20, c^answerNewton20),red)
++PlotPoint((answerNewton20, a*answerNewton20+b),purple)
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
+TurnOffRules (NewtonsMethod);
+NewtonsMethod(f,0,20);
+TurnOnRules(NewtonsMethod);
+"\(=\)\(\displaystyle "+ ToString (NewtonsMethod(f, 0, 20) )  +"\)"
+</calculatorAnswerOnGiveUp>
+

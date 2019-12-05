@@ -1,0 +1,52 @@
+<span class="setCalculatorExamProblem">
+</span>
+<calculatorHidden>
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+a=1/ RandomInteger{}( (-6,-1),(1,6));
+b=1/ RandomInteger{}( (-6,-1),(1,6));
+powerOne=1 / RandomInteger{}(2,6);
+powerTwo=1 / RandomInteger{}(2,6);
+1/(powerOne-powerTwo);
+leftPoint=RandomInteger(1,5);
+rightPoint=leftPoint+RandomInteger(1,10);
+theFun=(a x^{powerOne}+b x^powerTwo)^2 ;
+theIntegral=\int theFun dx;
+finalAnswer=(x=rightPoint; theIntegral)_2- (x=leftPoint; theIntegral)_2;
+TurnOffRules
+("IntegratePowerRule", "DistributeMultiplication",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+</calculatorHidden>
+<calculatorShowToUserOnly>
+PlotFill(Plot2D(theFun, leftPoint, rightPoint, red)+PlotSegment((rightPoint, 0), (leftPoint,0), red), cyan)
++PlotGrid 0
++PlotWindow(300,300)
+;
+</calculatorShowToUserOnly>
+<br>
+Find the area locked between the parabola <calculator>theFun</calculator> and the \(x\) axis. 
+
+In other words, compute:
+<answerCalculatorHighlight>
+<calculator>\displaystyle \int_leftPoint^rightPoint</calculator><calculator>
+theFun \diff x</calculator>\(=\)
+</answerCalculatorHighlight> 
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
+|AlgebraAnswer- finalAnswer|<0.00001;
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</calculatorCommentsBeforeInterpretation>
+
+ 
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</calculatorCommentsBeforeSubmission>
+
+<calculatorAnswerOnGiveUp>
+finalAnswer
+</calculatorAnswerOnGiveUp>

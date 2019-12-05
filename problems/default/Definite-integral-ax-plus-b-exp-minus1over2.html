@@ -1,0 +1,112 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+a=RandomInteger{}(2,10);
+b=RandomInteger{}( (-2,-10),(2,10));
+p=RandomInteger{}( (-1,-10),(1,10));
+q=RandomInteger{}( (-1,-10),(1,10));
+leftPoint=Floor( -b/a)+1+ RandomInteger{}(0,8);
+rightPoint=leftPoint+RandomInteger{}(1,10);
+poverq = -1/2;
+f{}{{x}} =  \frac{1}{ \sqrt{ a x + b}};
+theIndefiniteIntegral=((a x +b)^{poverq+1})/(a(poverq+1));
+finalAnswer=(TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+ ( x=rightPoint; theIndefiniteIntegral)_2-
+(x=leftPoint; theIndefiniteIntegral)_2)_2;
+</span>
+
+
+<span class="calculatorShowToUserOnly">
+PlotFill (
+Plot2D(f{}x, leftPoint, rightPoint)
++PlotSegment( (rightPoint,f{}rightPoint), (rightPoint,0) )   
++PlotSegment( (rightPoint,0),             (leftPoint,0) )
++PlotSegment( (leftPoint,0),              (leftPoint, f{}leftPoint) )
++PlotWindow(300,300)
+, cyan)
+;
+</span>
+<br>
+Integrate. This is a definite integral so your answer should be a constant expression/number.
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+%LogEvaluation
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+| DoubleValue{}(finalAnswer -AlgebraAnswer) |<0.0000001
+)_2
+</textarea>
+
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span> 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+
+finalAnswer
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction",
+"sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+outTerm = A/a;
+nplus1= n+1;
+term =  a x + b;
+uLeft=(x=leftPoint; term)_2;
+uRight=(x=rightPoint; term)_2;
+diffUviaDiffX=a \diff x;
+diffXviaDiffU=1/a  \diff u;
+poverqplus1 = poverq + 1;
+term1 = 1/(a*poverqplus1);
+term2 = (a rightPoint + b)^poverqplus1;
+term3 = (a leftPoint + b)^poverqplus1;
+answer = term1(term2-term3);
+TurnOnRules("DistributeMultiplication");
+</span>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int_{leftPoint}^{rightPoint} ( term)^{poverq} \diff x   &=&
+\displaystyle \int_{u=uLeft}^{u=uRight} u^{poverq}diffXviaDiffU &&
+ {\begin{array}{l}
+\text{Set } u=term, \diff u=diffUviaDiffX, \diff x=diffXviaDiffU \\\\
+\text{When } x=leftPoint, u=uLeft, \text{ and when } x=rightPoint,u=uRight
+\end{array}}
+\\\\
+&=&\displaystyle  \left[ \frac{1}{a} \left( \frac{u^{poverq +1}}{poverq +1} \right) \right]_{uLeft}^{uRight}  \\\\
+\displaystyle &=&\displaystyle  \frac{1}{a (poverqplus1)} \left[ u^{poverqplus1} \right]_{uLeft}^{uRight}     \\\\
+\displaystyle &=&\displaystyle  term1 \left[ term2 - term3 \right]    \\\\
+&=&\displaystyle finalAnswer
+\end{array}
+"
+)
+
+</span>
+</span>

@@ -1,0 +1,72 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+leftPoint=1;
+rightPoint=64;
+a=RandomInteger{}( (-1,-5),(1,5));
+b=RandomInteger{}( (-1,-5),(1,5));
+c=RandomInteger{}( (-1,-5),(1,5));
+f{}{{x}}=\frac{a \sqrt[3]x+b \sqrt{x}+c}{x};
+</span>
+
+<span class="calculatorShowToUserOnly">
+PlotFill(
+ PlotSegment((leftPoint,0), (leftPoint, f{}leftPoint))
++Plot2D(f{}x, leftPoint,rightPoint)
++PlotSegment((rightPoint, f{}rightPoint),(rightPoint,0))
++PlotSegment((rightPoint,0), (leftPoint,0)), cyan)
++
+PlotWindow(300,300)
+;
+</span>
+<br>
+Integrate. This is a definite integral so your answer should be a constant expression/number. 
+If your answer involves natural logarithm(s) 
+do not approximate with calculator (enter your answer algebraically, e.g., ln(5) ).
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+| DoubleValue((theIndefiniteIntegral= \int f{}x dx; x=rightPoint; theIndefiniteIntegral)_3-
+(theIndefiniteIntegral= \int f{}x dx; x=leftPoint; theIndefiniteIntegral)_3-AlgebraAnswer) | <DoubleValue{}( 0.0000001)
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations(0);
+%UseLnInsteadOfLog
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+ 
+<span class="calculatorCommentsBeforeSubmission">
+TurnOffApproximations(0);
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+Polynomialize(
+(theIndefiniteIntegral= \int f{}x dx; x=rightPoint; theIndefiniteIntegral)_3-
+(theIndefiniteIntegral= \int f{}x dx; x=leftPoint; theIndefiniteIntegral)_3
+)
+)_2
+</span>

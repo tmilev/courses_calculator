@@ -1,0 +1,103 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
+leftPoint=RandomInteger{}(1,10);
+rightPoint=RandomInteger{}(11,20);
+a=RandomInteger{}(1,10);
+b=RandomInteger{}( (-1,-10),(1,10));
+f{}{{x}} = a;
+</span>
+
+<span class="calculatorShowToUserOnly">
+PlotFill(
+PlotSegment((leftPoint, 0),(leftPoint, f{}leftPoint))
++Plot2D(f{}x, leftPoint,rightPoint )
++PlotSegment((rightPoint, f{}rightPoint), (rightPoint,0))
++PlotSegment((rightPoint,0), (leftPoint,0))
++
+PlotWindow(300,300)
+, cyan)
+;
+</span>
+<br>
+Integrate (the integral is definite so your answer should be a constant expression/number).
+
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
+</span>\(=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+%LogEvaluation
+(
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions");
+| DoubleValue((theIndefiniteIntegral= \int f{}x dx; x=rightPoint; theIndefiniteIntegral)_3-
+(theIndefiniteIntegral= \int f{}x dx; x=leftPoint; theIndefiniteIntegral)_3 -AlgebraAnswer) |<0.0000001
+)_2
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+</span>
+
+ 
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+
+TurnOnRules
+("DistributeMultiplication", "IntegratePowerRule", 
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
+"IntegratePartialFractions");
+
+(theIndefiniteIntegral= \int f{}x dx; x=rightPoint; theIndefiniteIntegral)_3-
+(theIndefiniteIntegral= \int f{}x dx; x=leftPoint; theIndefiniteIntegral)_3
+</span>
+
+<span class="calculatorSolution" name="AlgebraAnswer">
+<span class="calculatorHidden">
+TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+</span>
+<span class="calculatorHidden">  
+outTerm = A/a;
+answer = a(rightPoint - leftPoint);
+TurnOnRules("DistributeMultiplication");
+finalAnswer=theIntegral{}x;
+widthRectangle=rightPoint - leftPoint;
+</span>
+<br>
+<b> Variant I.</b>
+<br>
+<span class="calculator"> 
+EvaluateSymbols{}(
+"\begin{array}{rcll|l}
+\displaystyle \int_{leftPoint}^{rightPoint} a dx   &=&\displaystyle  a \left[ x \right]_{leftPoint}^{rightPoint}  \\\\
+\displaystyle &=&\displaystyle  a \left[ rightPoint - leftPoint \right]  &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  answer &&\displaystyle \text{ }  \\\\
+\end{array}
+"
+)
+</span>
+<br>
+<b> Variant II.</b>
+<br>
+The integral represents the area of a rectangle of width 
+<span class="calculator">EvaluateSymbols("\(rightPoint-leftPoint=widthRectangle\)") </span>
+and height <span class="calculator">a</span>, 
+which equals <span class="calculator">EvaluateSymbols("\(widthRectangle\cdot a= answer\)")</span>.
+</span>

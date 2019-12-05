@@ -1,0 +1,193 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations{}0;
+a=RandomInteger{}(1,4);
+b=RandomInteger{}(1,5);
+c=RandomInteger{}(-5,5);
+g=RandomInteger{}((-4,-1),(1,4));
+n=RandomInteger{}(2,5);
+f = a ln (b x+c);
+theX = Floor( (1-c)/b )+ RandomInteger{}(1,5);
+
+leftPoint=(0.5-c)/b;
+rightPoint=theX+2;
+LinearizationF= theSlope(x-theX)+theY;
+theTX= SolveFor(x, LinearizationF);
+theY=(x=theX; f)_2;
+theDerivative=d/dx f;
+theSlope=(x=theX; theDerivative)_2;
+normalSlope=-1/theSlope;
+NormalFun = normalSlope(x-theX)+theY;
+theNX=SolveFor(x,NormalFun);
+theUnit=theY/5;
+basicPlot=
+Plot2D(f, leftPoint, rightPoint, red)
++PlotPoint((theX, theY), blue)
++Plot2D(LinearizationF, theTX-1,rightPoint, blue) 
++Plot2D(NormalFun, theX-1,theNX+2, brown) 
++PlotLabel( (theTX,-theUnit),"T")
++PlotLabel( (theNX,-theUnit),"N")
++PlotLabel( (theX,theY+theUnit),"P")
++PlotWindow(300,300);
+</span>
+<span class="calculatorShowToUserOnly">
+basicPlot
++PlotSetId("canvas1")
+
+</span>
+
+<br>
+Find the equation of the tangent to 
+<br>
+\(y=\)<span class="calculator">\displaystyle f</span>
+<br>
+at the point <span class="calculator">\displaystyle (theX, theY)</span>.
+<br>
+Your answer should be a line equation, of the form \(y-y_0=a(x-x_0)\) or equivalent.
+<answerCalculatorHighlight>Answer:</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="tangentEquationAnswer" buttons="algebra, variables, logarithms">
+(not (CoefficientOf{}(y, EqualityToArithmeticExpression{}(tangentEquationAnswer))==0))
+and
+(
+ (
+(y-theY - theSlope(x-theX)) CoefficientOf{}(y, EqualityToArithmeticExpression{}(tangentEquationAnswer) )
+-
+EqualityToArithmeticExpression{}(tangentEquationAnswer)
+)
+==0
+)
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations{}0
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn{}(tangentEquationAnswer, x, y);
+%PlotShowJavascriptOnly
+basicPlot
++PlotSegment ( 
+(theTX-1, (x=theTX-1;  SolveFor(y, tangentEquationAnswer) )_2 ), 
+(rightPoint, (x=rightPoint;  SolveFor(y, tangentEquationAnswer) )_2 ), 
+blue, 3 )
++PlotSetId("canvas1")
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
+y-theY= theSlope(x-theX) 
+</span>
+<br> 
+The tangent intersects the \(x\)-axis at the point \(T\). Find the \(x\)-coordinate of \(T\).
+<answerCalculatorHighlight>Answer:</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id ="answerPointTxcoord" buttons="algebra, logarithms">
+|DoubleValue(theTX -answerPointTxcoord)| <0.00001
+</textarea>
+
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations{}0
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn{}(answerPointTxcoord, none);
+%PlotShowJavascriptOnly
+basicPlot
++PlotPoint (  (answerPointTxcoord, 0), blue)
++PlotSetId("canvas1")
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theTX
+</span>
+
+<br>
+Find the equation of the normal to the same curve \(y=\)<span class="calculator">\displaystyle f</span> 
+at the same point <span class="calculator">\displaystyle (theX, theY)</span>.
+<br>
+Your answer should be a line equation, of the form \(y-y_0=a(x-x_0)\) or equivalent.
+<answerCalculatorHighlight>Answer:</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id="normalEquationAnswer" buttons="algebra, variables, logarithms">
+(not (CoefficientOf{}(y, EqualityToArithmeticExpression{}(normalEquationAnswer))==0))
+and
+(
+ (
+(y-theY - normalSlope(x-theX)) CoefficientOf{}(y, EqualityToArithmeticExpression{}(normalEquationAnswer) )
+-
+EqualityToArithmeticExpression{}(normalEquationAnswer)
+)
+==0
+)
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations{}0
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn{}(normalEquationAnswer, x, y);
+%PlotShowJavascriptOnly
+basicPlot
++PlotSegment ( 
+(theX-1, (x=theX-1;  SolveFor(y, normalEquationAnswer) )_2 ), 
+(theNX+2, (x=theNX+2;  SolveFor(y, normalEquationAnswer) )_2 ), 
+brown,3 )
++PlotSetId("canvas1")
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
+y-theY=-1/theSlope(x-theX)
+</span>
+<br> 
+
+
+The normal intersects the \(x\)-axis at the point \(N\). Find the \(x\)-coordinate of \(N\).
+<answerCalculatorHighlight>Answer:</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id ="answerPointNxcoord" buttons="algebra, logarithms">
+|DoubleValue(theNX -answerPointNxcoord)| <0.00001
+</textarea>
+
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations{}0
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn{}(answerPointNxcoord, none);
+%PlotShowJavascriptOnly
+basicPlot
++PlotPoint (  (answerPointNxcoord, 0), blue)
++PlotSetId("canvas1")
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+theNX
+</span>
+<br>
+
+Find the area of triangle \(\triangle TNP\).
+<answerCalculatorHighlight>Answer:</answerCalculatorHighlight> 
+<textarea class="calculatorAnswer" id ="answerArea" buttons="algebra, logarithms">
+|DoubleValue(
+sqrt{}
+(
+((theX-theTX)^2 + theY^2)
+*
+((theX-theNX)^2 + theY^2)
+)
+/2
+ -answerArea)| <0.00001
+</textarea>
+
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations{}0
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn{}(answerArea, none);
+%PlotShowJavascriptOnly
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+sqrt{}
+(
+((theX-theTX)^2 + theY^2)
+*
+((theX-theNX)^2 + theY^2)
+)
+/2
+</span>

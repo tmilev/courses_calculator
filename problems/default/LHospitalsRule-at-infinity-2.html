@@ -1,0 +1,34 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+a=RandomInteger{}((1,50));
+b=RandomInteger{}((1,50));
+c=RandomInteger{}((-5,-1));
+theTrigFunction=SelectAtRandom{}(sin,cos);
+h=RandomInteger{}((-4,-1),(1,4));
+A=RandomInteger{}((-4,-1),(1,4));
+B=RandomInteger{}((-4,-1),(1,4));
+K=RandomInteger{}((-4,-1),(1,4));
+</span>
+Find the limit using L'Hospital's rule.
+
+<answerCalculatorHighlight>
+<span class="calculator">
+\displaystyle \lim_{x \to \infty}\frac{\ln (a x)}{b x}
+</span>\(= \)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer"  buttons="algebra, logarithms">
+AlgebraAnswer==0
+</textarea>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffRules("ExpressTanViaSineCosine");
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+0
+</span>

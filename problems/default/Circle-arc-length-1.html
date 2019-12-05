@@ -1,0 +1,31 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+r = RandomInteger(1,20);
+leftPoint=-r*RandomInteger{}(1,10)/10;
+rightPoint=r*RandomInteger{}(1,10)/10;
+TurnOffRules(arccos);
+tLeft=\arccos(leftPoint/r);
+tRight=\arccos(rightPoint/r);
+</span>
+<span class="calculatorShowToUserOnly">
+PlotCurve( (r cos{} t,r sin{} t),  0,2\pi, red )+PlotCurve( (r cos{} t,r sin{} t),  tLeft,tRight, blue,2*r^{1/2} ) +
+PlotSegment((leftPoint,0),(rightPoint,0), green,2* r^{1/2} );
+</span> 
+<br>
+Find the length of the curve given by \(y=\)<span class="calculator">\sqrt{r^2-x^2} </span>
+for \(x\in \)<span class="calculator">\displaystyle (leftPoint,rightPoint)</span>. 
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, angles">
+|DoubleValue{}(AlgebraAnswer-r*|tLeft-tRight|)|<0.00000001
+</textarea>
+
+<span class="calculatorAnswerOnGiveUp">
+r*(tLeft-tRight)
+</span>
+
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
+</span>

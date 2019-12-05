@@ -1,0 +1,43 @@
+<span class="setCalculatorExamProblem">
+</span>
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+trigFun=SelectAtRandom{}(sin, cos);
+a = RandomInteger((-10,-2), (2,10));
+theR= trigFun{}(a \theta);
+theX=theR cos{} (\theta);
+theY=theR sin{} (\theta);
+leftPoint=if (trigFun==sin, 0, -\pi/(2|a|) );
+rightPoint=if (trigFun==sin, \pi/|a|, \pi/(2|a|) );
+theAntiDerivative=\int 1/2 theR^2 \diff{} \theta
+</span>
+<span class="calculatorShowToUserOnly">
+PlotFill(
+PlotCurve( (theX, theY), 0, 2\pi, blue )
+,pink
+)
++PlotFill(
+PlotCurve( (theX, theY), leftPoint , rightPoint, blue )
+,cyan
+)
+</span> 
+<br>
+Find the area of one leaf of the curve given in polar coordinates by \(r=\) <span class="calculator">theR</span>.
+<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig, angles">
+(\theta=rightPoint; theAntiDerivative)_2
+-
+(\theta=leftPoint; theAntiDerivative)_2-AlgebraAnswer==0
+</textarea>
+<span class="calculatorAnswerOnGiveUp">
+(\theta=rightPoint; theAntiDerivative)_2
+-
+(\theta=leftPoint; theAntiDerivative)_2;
+</span>
+<span class="calculatorCommentsBeforeInterpretation">
+TurnOffApproximations(0);
+</span>
+<span class="calculatorCommentsBeforeSubmission">
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,none);
+</span>

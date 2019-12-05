@@ -1,0 +1,52 @@
+<span class="setCalculatorExamProblem">
+</span>
+Find the volume of the solid of revolution obtained by rotating the indicated curve around the \(x\)-axis.
+
+<span class="calculatorHidden">
+%UseLnInsteadOfLog
+a=RandomInteger(-5,5);
+b=RandomInteger((2,5))+a;
+c=RandomInteger((1,2));
+sign=SelectAtRandom(-1,1);
+g=RandomInteger((1,5));
+f{}{{x}}=sign*(x-a)(x-b);
+</span>
+<br>
+<span class="calculator">
+PlotSurface(
+(v, f{}v cos {}u, f{}v sin {}u),    u\in(0, 2\pi), v\in(a+0.0001,b-0.0001), color1=pink, color2=orange, numSegments1=25, numSegments2=12)
++PlotCoordinateSystem(( Min(a-2, -1), -1+f{}((a+b) /2), -1+f{}((a+b) /2)) ,( Max( b+2,1), -f{}((a+b) /2)+1, -f{}((a+b) /2)+1 ) )
++PlotCurve((x,f{}x,0),a-0.5, b+0.5, red, 4, 300)
++PlotSetProjectionScreen((1,0,-0.2),(0,1,-0.3))
++PlotWindow(300,300)
+</span><br>
+\(f(x)=\)<span class="calculator">
+f{}x 
+</span>.
+<br>
+Answer: \(V=\)<textarea class="calculatorAnswer" id="AlgebraAnswer">
+
+AlgebraAnswer==
+
+\pi
+(
+(theInt= \int (f{}x )^2 dx; x=b; theInt)_3
+-
+(theInt= \int (f{}x )^2 dx; x=a; theInt)_3
+)
+</textarea>
+<span class="calculatorCommentsBeforeSubmission">
+\(
+EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
+\)
+</span>
+
+<span class="calculatorAnswerOnGiveUp">
+\pi
+(
+(theInt= \int (f{}x )^2 dx; x=b; theInt)_3
+-
+(theInt= \int (f{}x )^2 dx; x=a; theInt)_3
+)
+</span>
+
