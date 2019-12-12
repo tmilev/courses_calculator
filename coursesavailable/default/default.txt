@@ -1,21 +1,21 @@
-Html: Curriculum-100-Arithmetics.html
+Html: curriculum-100-arithmetics.html
 Topics: curriculum-100-arithmetics.txt
 Title: Arithmetics
 
 
-Html: Curriculum-200-Precalculus.html
+Html: curriculum-200-precalculus.html
 Topics: curriculum-200-precalculus.txt
 Title: Precalculus
 
-Html: Curriculum-300-Calculus-I.html
+Html: curriculum-300-calculus-I.html
 Topics: curriculum-300-calculus-I.txt
 Title: Calculus I
 
-Html: Curriculum-400-Calculus-II.html
+Html: curriculum-400-calculus-II.html
 Topics: curriculum-400-calculus-II.txt
 Title: Calculus II
 
-Html: Curriculum-800-Cryptography.html
+Html: curriculum-800-cryptography.html
 Topics: curriculum-800-cryptography.txt
 Title: Cryptography 101
 RoughDraft: true
