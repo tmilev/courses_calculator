@@ -30,6 +30,7 @@ temp/*
 workingfile*.*
 *.mp4
 
+
 public_html/MathJax-2.7-latest
 public_html/MathJax-2.7.2
 slides-video/modules-video
