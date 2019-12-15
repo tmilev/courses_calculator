@@ -84,10 +84,10 @@ SlidesSource: freecalc/modules/logarithms/power-rule-minus-one
 
 Section: Review of the substitution rule
 
-Title: Integrals of the form \(\displaystyle \int \cos(m x)\diff x\), \(\int \sin(m x)\diff x\)
+Title: Integrals of the form \(\displaystyle \int \cos(m x){\text{d}} x\), \(\int \sin(m x){\text{d}} x\)
 Problem: DefaultProblemLocation/Indefinite-integral-sinmx-or-cosmx-1.html
 
-Title: Integrals of the form \(\displaystyle \int e^{ax}\diff x\)
+Title: Integrals of the form \(\displaystyle \int e^{ax}{\text{d}} x\)
 Problem: DefaultProblemLocation/Indefinite-integral-Ae-exp-ax.html
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-ex4
 

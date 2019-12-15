@@ -2300,7 +2300,7 @@ SlidesSource: freecalc/modules/substitution-rule/substitution-rule-definite-inte
 
 HomeworkSource: freecalc/modules/substitution-rule/homework/substitution-rule-1
 HomeworkSolutionSource: freecalc/modules/substitution-rule/homework/substitution-rule-1-solutions
-HomeworkLatex: \textbf{To solve problem \ref{problemIntArctan(x)/(1+x^2)dx} please use the formula $\int \frac{1}{1+x^2}\diff x=\Arctan x+C $. Here, $\Arctan x$ is the arctangent function - the inverse function to \(\tan y\).}
+HomeworkLatex: \textbf{To solve problem \ref{problemIntArctan(x)/(1+x^2)dx} please use the formula $\int \frac{1}{1+x^2}{\text d} x=\Arctan x+C $. Here, $\Arctan x$ is the arctangent function - the inverse function to \(\tan y\).}
 HomeworkSource: freecalc/modules/substitution-rule/homework/substitution-rule-2
 HomeworkSolutionSource: freecalc/modules/substitution-rule/homework/substitution-rule-2-solutions
 HomeworkSource: freecalc/modules/substitution-rule/homework/substitution-rule-definite-1
@@ -2309,69 +2309,69 @@ HomeworkSolutionSource: freecalc/modules/substitution-rule/homework/substitution
 
 Topic: Substitutions in indefinite integrals
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> \(\displaystyle \int (ax+b)^p\diff x\), part 1
+Title: <actualExamProblem>\(\S\)</actualExamProblem> \(\displaystyle \int (ax+b)^p{\text d} x\), part 1
 Problem: problems/Indefinite-integral-linear-function-power-1.html
 
-Title: \(\displaystyle \int (ax+b)^p\diff x\), part 2
+Title: \(\displaystyle \int (ax+b)^p{\text d} x\), part 2
 Problem: problems/Indefinite-integral-linear-function-radical-1.html
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-ex2
 
-Title: \(\displaystyle \int (ax+b)^p\diff x\), part 3
+Title: \(\displaystyle \int (ax+b)^p{\text d} x\), part 3
 Problem: problems/Indefinite-integral-linear-function-rational-power-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> \(\displaystyle \int (ax+b)^p\diff x\), part 4
+Title: <actualExamProblem>\(\S\)</actualExamProblem> \(\displaystyle \int (ax+b)^p{\text d} x\), part 4
 Problem: problems/Indefinite-integral-linear-function-rational-power-2.html
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-definite-integrals-ex7
 
-Title: \(\displaystyle \int (ax+b)^p\diff x\), part 5
+Title: \(\displaystyle \int (ax+b)^p{\text d} x\), part 5
 Problem: problems/Indefinite-integral-linear-function-rational-power-3.html
 
-Title: \(\displaystyle \int \frac{a x }{b x^2+c}\diff x\)
+Title: \(\displaystyle \int \frac{a x }{b x^2+c}{\text d} x\)
 Problem: problems/Indefinite-integral-ax-over-bx2-plus-c-building-block-ii-a-1.html
 
-Title: \(\displaystyle \int \frac{a x }{\left(b x^2+c\right)^n}\diff x\)
+Title: \(\displaystyle \int \frac{a x }{\left(b x^2+c\right)^n}{\text d} x\)
 Problem: problems/Indefinite-integral-ax-over-bx2-plus-c-power-n-building-block-ii-b-1.html
 
-Title: \(\displaystyle \int x\sqrt{a x^2+b}\diff x\)
+Title: \(\displaystyle \int x\sqrt{a x^2+b}{\text d} x\)
 Problem: problems/Indefinite-integral-x-sqrt-quadratic-no-lin-term-1.html
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-ex3
 
-Title: \(\displaystyle \int x^3\sqrt{a x^2+b}\diff x\)
+Title: \(\displaystyle \int x^3\sqrt{a x^2+b}{\text d} x\)
 Problem: problems/Indefinite-integral-x-cubed-sqrt-quadratic-no-lin-term-1.html
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-difficult-ex
 
-Title: \(\displaystyle \int x^3\sqrt[n]{a x^2+b}\diff x\)
+Title: \(\displaystyle \int x^3\sqrt[n]{a x^2+b}{\text d} x\)
 Problem: problems/Indefinite-integral-x-cubed-nth-radical-quadratic-no-lin-term-1.html
 
-Title: \(\displaystyle \int f (a x+b)\diff x\), \(f=\sin\) or \(\cos\) part 1
+Title: \(\displaystyle \int f (a x+b){\text d} x\), \(f=\sin\) or \(\cos\) part 1
 Problem: problems/Indefinite-integral-sin-cos-of-linear-function-1.html
 
-Title: \(\displaystyle \int f (a x+b)\diff x\), \(f=\sin\) or \(\cos\) part 2
+Title: \(\displaystyle \int f (a x+b){\text d} x\), \(f=\sin\) or \(\cos\) part 2
 Problem: problems/Indefinite-integral-sin-cos-of-linear-function-2.html
 
-Title: \(\displaystyle \int \frac{f (\ln x)}{x}\diff x\)
+Title: \(\displaystyle \int \frac{f (\ln x)}{x}{\text d} x\)
 Problem: problems/Indefinite-integral-poly-ln-x-over-x-1.html
 
-Title: \(\displaystyle \int \frac{f (\ln u)}{u}\diff u\), \(u=ax+b\), part 1
+Title: \(\displaystyle \int \frac{f (\ln u)}{u}{\text{d}} u\), \(u=ax+b\), part 1
 Problem: problems/Indefinite-integral-poly-ln-x-over-x-linear-subbed-1.html
 
-Title: \(\displaystyle \int \frac{f (\ln u)}{u}\diff u\), \(u=ax+b\), part 2
+Title: \(\displaystyle \int \frac{f (\ln u)}{u}{\text{d}} u\), \(u=ax+b\), part 2
 Problem: problems/Indefinite-integral-function-ln-x-over-x-linear-subbed-1.html
 Topic: Indefinite integral substitutions and exponents
-Title: \(\displaystyle \int A e^{ax+b} \diff x\), part 1
+Title: \(\displaystyle \int A e^{ax+b} {\text{d}} x\), part 1
 Problem: problems/Indefinite-integral-Ae-exp-ax.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> \(\displaystyle \int A e^{ax+b} \diff x\), part 2
+Title: <actualExamProblem>\(\S\)</actualExamProblem> \(\displaystyle \int A e^{ax+b} {\text d} x\), part 2
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-ex4
 Problem: problems/Indefinite-integral-Ae-exp-ax-plus-b.html
 
-Title: \(\displaystyle \int A e^{ax+b} \diff x\), part 3
+Title: \(\displaystyle \int A e^{ax+b} {\text d} x\), part 3
 Problem: problems/Indefinite-integral-e-power-ax-2.html
 
-Title: \(\displaystyle \int A e^{ax+b} \diff x\), part 4
+Title: \(\displaystyle \int A e^{ax+b} {\text d} x\), part 4
 Problem: problems/Indefinite-integral-e-power-linear-function-1.html
 
-Title: \(\displaystyle \int x e^{ax^2+b}\diff x\)
+Title: \(\displaystyle \int x e^{ax^2+b}{\text d} x\)
 Problem: problems/Indefinite-integral-e-power-quadratic-no-lin-term-times-x-1.html
 
 Topic: Substitutions in definite integrals
@@ -2523,34 +2523,34 @@ Title: Reference:  strategy for integrating by parts
 SlidesSource: freecalc/modules/integration-by-parts/integration-by-parts-intro-version2
 SlidesSource: freecalc/modules/integration-by-parts/integration-by-parts-LIPET-mnemonic
 
-Title: Integrals of the form \(\displaystyle \int x \cos(m x)\diff x\)
+Title: Integrals of the form \(\displaystyle \int x \cos(m x){\text d} x\)
 Problem: problems/Indefinite-integral-byparts-x-cosmx.html
 
-Title: Integrals of the form \(\displaystyle \int x \sin(m x)\diff x\)
+Title: Integrals of the form \(\displaystyle \int x \sin(m x){\text d} x\)
 Problem: problems/Indefinite-integral-byparts-x-sinmx.html
 SlidesSource: freecalc/modules/integration-by-parts/integration-by-parts-ex1-version2
 
-Title: Integrals of the form \(\displaystyle \int x e^{mx}\diff x\)
+Title: Integrals of the form \(\displaystyle \int x e^{mx}{\text d} x\)
 Problem: problems/Indefinite-integral-byparts-x-emx.html
 
-Title: Integrals of the form \(\displaystyle \int x^2\cos(m x)\diff x\)
+Title: Integrals of the form \(\displaystyle \int x^2\cos(m x){\text d} x\)
 Problem: problems/Indefinite-integral-byparts-x2-cosmx.html
 
-Title: Integrals of the form \(\displaystyle \int x^2\sin(m x)\diff x\)
+Title: Integrals of the form \(\displaystyle \int x^2\sin(m x){\text d} x\)
 Problem: problems/Indefinite-integral-byparts-x2-sinmx.html
 
-Title: Integrals of the form \(\displaystyle \int x^2e^{mx}\diff x\)
+Title: Integrals of the form \(\displaystyle \int x^2e^{mx}{\text d} x\)
 Problem: problems/Indefinite-integral-byparts-x2-emx.html
 
 Topic: Integration by parts involving logarithms and inverse trig
-Title: Integrals of the form \(\displaystyle \int \ln(mx)\diff x\)
+Title: Integrals of the form \(\displaystyle \int \ln(mx){\text d} x\)
 Problem: problems/Indefinite-integral-byparts-lnax-times-poly-0.html
 SlidesSource: freecalc/modules/integration-by-parts/integration-by-parts-ex2-version2
 
-Title: Integrals of the form \(\displaystyle \int p(x) \ln(mx)\diff x\), \(p(x)\)-polynomial
+Title: Integrals of the form \(\displaystyle \int p(x) \ln(mx){\text d} x\), \(p(x)\)-polynomial
 Problem: problems/Indefinite-integral-byparts-lnax-times-poly-1.html
 
-Title: Integrals of the form \(\displaystyle \int \arctan (mx)\diff x\)
+Title: Integrals of the form \(\displaystyle \int \arctan (mx){\text d} x\)
 Problem: problems/Indefinite-integral-byparts-arctanax-times-poly-1.html
 SlidesSource: freecalc/modules/integration-by-parts/integration-by-parts-ex5-version2
 BundleEnd: Integration_ByParts_TheoryAndExercises
@@ -2590,42 +2590,42 @@ SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-bloc
 
 Topic: Building block I
 
-Title: Integrals of the form \(\displaystyle \int \frac{a}{bx+c}\diff x\)
+Title: Integrals of the form \(\displaystyle \int \frac{a}{bx+c}{\text d} x\)
 Problem: problems/Indefinite-integral-a-over-bx-plus-c-building-block-i-a-1.html
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-block-1a
 
-Title: Integrals of the form \(\displaystyle \int \frac{a}{(bx+c)^n}\diff x\)
+Title: Integrals of the form \(\displaystyle \int \frac{a}{(bx+c)^n}{\text d} x\)
 Problem: problems/Indefinite-integral-a-over-bx-plus-c-power-n-building-block-i-b-1.html
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-block-1b
 
-Title: Integrals of the form \(\displaystyle \int \frac{ax+d}{bx+c}\diff x\)
+Title: Integrals of the form \(\displaystyle \int \frac{ax+d}{bx+c}{\text d} x\)
 Problem: problems/Indefinite-integral-ax-plus-d-over-bx-plus-c-building-block-i-a-1.html
 
 Topic: Building block II
 Title: Integrals with irreducible quadratic denomonimator
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-blocks-2a-and-3a-intro
 
-Title: Integrals of the form \(\displaystyle \int \frac{ax}{bx^2+c}\diff x\)
+Title: Integrals of the form \(\displaystyle \int \frac{ax}{bx^2+c}{\text d} x\)
 Problem: problems/Indefinite-integral-ax-over-bx2-plus-c-building-block-ii-a-1.html
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-blocks-2a-quadratic-no-lin-term
 
-Title: Integrals of the form \(\displaystyle \int \frac{ax}{(bx^2+c)^n}\diff x\)
+Title: Integrals of the form \(\displaystyle \int \frac{ax}{(bx^2+c)^n}{\text d} x\)
 Problem: problems/Indefinite-integral-ax-over-bx2-plus-c-power-n-building-block-ii-b-1.html
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-block-2b
 
 Topic: Building block IIIa
-Title: Integrals of the form \(\displaystyle \displaystyle \int \frac{a}{bx^2+c}\diff x\), \(c>0\)
+Title: Integrals of the form \(\displaystyle \displaystyle \int \frac{a}{bx^2+c}{\text d} x\), \(c>0\)
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-blocks-3a-quadratic-no-lin-term
 Problem: problems/Indefinite-integral-a-over-bsquare-plus-xsquare.html
 
 Topic: Building blocks IIa and IIIa combined
-Title: Integrals of the form \(\displaystyle \int \frac{Ax+B}{ax^2+bx+c}\diff x\), denominator has no real roots
+Title: Integrals of the form \(\displaystyle \int \frac{Ax+B}{ax^2+bx+c}{\text d} x\), denominator has no real roots
 Problem: problems/Indefinite-integral-Ax-plus-B-over-ax2-plus-bx-plus-c-building-block-ii-and-iii-a-1.html
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-blocks-2a-and-3a-quadratic-no-real-roots-intro
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-blocks-2a-and-3a-quadratic-no-real-roots-ex1
 
 Topic: Building block IIIb
-Title: Integrals of the form \(\displaystyle \int \frac{Ax+B}{(ax^2+bx+c)^n}\diff x\), denominator has no real roots
+Title: Integrals of the form \(\displaystyle \int \frac{Ax+B}{(ax^2+bx+c)^n}{\text d} x\), denominator has no real roots
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-block-3b-example-n-equals-2
 SlidesSource: freecalc/modules/partial-fractions/partial-fractions-building-block-3b
 
@@ -2677,10 +2677,10 @@ Problem: problems/Partial-fractions-split-cubic-den-linear-and-quadratic-term-no
 Title: Split partial fraction: cubic denominator, part 3
 Problem: problems/Partial-fractions-split-cubic-den-linear-term-squared-linear-term-no-poly-division-1.html
 
-Title: Integrals of the form \(\displaystyle \int \frac{Ax+B}{ax^2+bx+c}\diff x\), denominator has real roots, part 1
+Title: Integrals of the form \(\displaystyle \int \frac{Ax+B}{ax^2+bx+c}{\text d} x\), denominator has real roots, part 1
 Problem: problems/Indefinite-integral-Ax-plus-B-over-quadratic-with-real-roots.html
 
-Title: Integrals of the form \(\displaystyle \int \frac{Ax+B}{ax^2+bx+c}\diff x\), denominator has real roots, part 2
+Title: Integrals of the form \(\displaystyle \int \frac{Ax+B}{ax^2+bx+c}{\text d} x\), denominator has real roots, part 2
 Problem: problems/Indefinite-integral-Ax-plus-B-over-denominator-is-square.html
 
 Title: Integral of rational function with cubic denominator, part 1
@@ -2750,29 +2750,29 @@ Title: Weierstrass substitution, part 2
 Problem: problems/Indefinite-integral-trig-integral-Weierstrass-substitution-2.html
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-rationalizing-substitution-ex1
 
-Topic: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x \diff x\)
+Topic: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x {\text d} x\)
 
-Title: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x \diff x\), theory
+Title: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x {\text d} x\), theory
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-sin-cos-version2
 
-Title: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x \diff x\), at least one power is odd
+Title: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x {\text d} x\), at least one power is odd
 Problem: problems/Indefinite-integral-trig-integral-sin-power-n-cos-power-m-not-both-even-1.html
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-ex9
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-ex10
 
-Title: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x \diff x\), both powers even
+Title: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x {\text d} x\), both powers even
 Problem: problems/Indefinite-integral-trig-integral-sin-power-n-cos-power-m-both-even-1.html
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-ex11
 
-Title: Integrals of the form \(\displaystyle \int \tan^m x \sec^n x \diff x\), \(n,m>0\), \(m\)-odd
+Title: Integrals of the form \(\displaystyle \int \tan^m x \sec^n x {\text d} x\), \(n,m>0\), \(m\)-odd
 Problem: problems/Indefinite-integral-trig-integral-tan-power-n-sec-power-m-sec-sub-works-1.html
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-ex13
 
-Title: Integrals of the form \(\displaystyle \int \tan^m x \sec^n x \diff x\), \(n\)-positive and even
+Title: Integrals of the form \(\displaystyle \int \tan^m x \sec^n x {\text d} x\), \(n\)-positive and even
 Problem: problems/Indefinite-integral-trig-integral-tan-power-n-sec-power-m-tan-sub-works-1.html
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-ex12
 
-Title: Integrals of the form \(\displaystyle \int \sin(n x)\cos (m x) \diff x\)
+Title: Integrals of the form \(\displaystyle \int \sin(n x)\cos (m x) {\text d} x\)
 Problem: problems/Indefinite-integral-trig-sinmx-cosnx-1.html
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-sinm-cosn
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-sinm-cosn-ex9
@@ -2783,7 +2783,7 @@ Section: Integrals involving radicals of quadratics
 Topic: Overview of integrals involving radicals of quadratics
 Title: <lectureTag>&#8466;</lectureTag> Integrals of involving radicals of quadratics
 SlidesSource: freecalc/modules/lecture-frequently-encountered-elements/table-of-contents-and-license
-SlidesLatex: \section[\truncate{5.2cm}{Integrals of form $\int R(x, \sqrt{ ax^2+bx+c}) \diff x$, $R$ - rational function} ]{Integrals of form $\int R(x,\sqrt{ax^2+bx+c}) \diff x$, $R$ - rational function}
+SlidesLatex: \section[\truncate{5.2cm}{Integrals of form $\int R(x, \sqrt{ ax^2+bx+c}) {\text d} x$, $R$ - rational function} ]{Integrals of form $\int R(x,\sqrt{ax^2+bx+c}) {\text d} x$, $R$ - rational function}
 SlidesSource: freecalc/modules/trig-substitution/quadratic-radicals-integrals-intro
 SlidesSource: freecalc/modules/trig-substitution/trig-substitutions-intro
 SlidesLatex: \subsection[\truncate{5.2cm}{Transforming to the forms $\sqrt{x^2+1}, \sqrt{-x^2+1}, \sqrt{x^2-1} $}]{Transforming to the forms $\sqrt{x^2+1}, \sqrt{-x^2+1}, \sqrt{x^2-1} $}
@@ -2869,34 +2869,34 @@ Title: Integrals involving radicals of quadratics, table of substitutions
 SlidesSource: freecalc/modules/trig-substitution/trig-substitutions-euler-substitutions-table
 
 Topic: Radicals reduced to the form \(\displaystyle \sqrt{x^2+1}\) 
-Title: Integrals of the form \(\displaystyle \int \sqrt{a x^2 +c}\diff x\), \(a,c>0\)
+Title: Integrals of the form \(\displaystyle \int \sqrt{a x^2 +c}{\text d} x\), \(a,c>0\)
 Problem: problems/Indefinite-integral-Euler-substitution-sqrt-1-plus-x-squared-1.html
 SlidesSource: freecalc/modules/trig-substitution/integral-radical-x-squared-plus-one
 SlidesSource: freecalc/modules/trig-substitution/trig-substitutions-ex1-freecalc
 
-Title: Definite integrals of the form \(\displaystyle \int_{p}^q \sqrt{a x^2 +c}\diff x\), \(a,c>0\)
+Title: Definite integrals of the form \(\displaystyle \int_{p}^q \sqrt{a x^2 +c}{\text d} x\), \(a,c>0\)
 Problem: problems/Definite-integral-Euler-substitution-sqrt-1-plus-x-squared-1.html
 SlidesSource: freecalc/modules/trig-substitution/area-under-hyperbola-ex1
 
-Title: Integrals of the form \(\displaystyle \int \sqrt{a x^2+b x +c}\diff x\), quadratic has no real roots.
+Title: Integrals of the form \(\displaystyle \int \sqrt{a x^2+b x +c}{\text d} x\), quadratic has no real roots.
 Problem: problems/Indefinite-integral-Euler-substitution-sqrt-1-plus-x-squared-2.html
 SlidesSource: freecalc/modules/trig-substitution/quadratic-radicals-linear-substitution-preparation-ex1
 
 Topic: Radicals reduced to the form \(\displaystyle \sqrt{1-x^2}\) 
-Title: Integrals of the form \(\displaystyle \int \sqrt{-ax^2+c}\diff x\), \(a,c>0\)
+Title: Integrals of the form \(\displaystyle \int \sqrt{-ax^2+c}{\text d} x\), \(a,c>0\)
 Problem: problems/Indefinite-integral-Euler-substitution-sqrt-1-minus-x-squared-1.html
 
-Title:  Definite integrals of the form \(\displaystyle \int_{p}^q \sqrt{-ax^2+c}\diff x\), \(a,c>0\)
+Title:  Definite integrals of the form \(\displaystyle \int_{p}^q \sqrt{-ax^2+c}{\text d} x\), \(a,c>0\)
 Problem: problems/Definite-integral-Euler-substitution-sqrt-one-minus-x-squared-1.html
 
-Title: Integrals of the form \(\displaystyle \int \sqrt{-ax^2+bx+c}\diff x\), \(a,c>0\)
+Title: Integrals of the form \(\displaystyle \int \sqrt{-ax^2+bx+c}{\text d} x\), \(a,c>0\)
 Problem: problems/Indefinite-integral-Euler-substitution-sqrt-1-minus-x-squared-2.html
 
 Topic: Radicals reduced to the form \(\displaystyle \sqrt{x^2-1}\) 
-Title: Integrals of the form \(\displaystyle \int \sqrt{ax^2-c}\diff x\), \(a,c>0\)
+Title: Integrals of the form \(\displaystyle \int \sqrt{ax^2-c}{\text d} x\), \(a,c>0\)
 Problem: problems/Indefinite-integral-Euler-substitution-sqrt-x-squared-mius-one-1.html
 
-Title: Definite integrals of the form \(\displaystyle \int_{p}^q \sqrt{ax^2-c}\diff x\), \(a,c>0\)
+Title: Definite integrals of the form \(\displaystyle \int_{p}^q \sqrt{ax^2-c}{\text d} x\), \(a,c>0\)
 Problem: problems/Definite-integral-Euler-substitution-sqrt-x-squared-minus-one-1.html
 BundleEnd: Integration_IntegrationOfRadicalsOfQuadratics_TheoryAndExercises
 
@@ -2996,19 +2996,19 @@ HomeworkSource: freecalc/modules/improper-integrals/homework/improper-integral-c
 
 
 Topic: Type I improper integrals related to powers of x.
-Title: Improper integrals of the form \(\displaystyle \int_{b}^\infty (x-a)^n\diff x\), part 1
+Title: Improper integrals of the form \(\displaystyle \int_{b}^\infty (x-a)^n{\text d} x\), part 1
 Problem: problems/Improper-integral-type-I-powers-of-x-1.html
-Title: Improper integrals of the form \(\displaystyle \int_{b}^\infty x^n e^{-ax}\diff x\), \(a>0\), part 1
+Title: Improper integrals of the form \(\displaystyle \int_{b}^\infty x^n e^{-ax}{\text d} x\), \(a>0\), part 1
 Problem: problems/Improper-integral-type-I-quasipolynomial-1.html
 
 Section: Improper integrals type II
 
 Topic: Type II imporoper integrals related to powers of x.
-Title: Improper integrals of the form \(\displaystyle \int_{a}^b \frac{1}{(x-c)^n}\diff x\), part 1
+Title: Improper integrals of the form \(\displaystyle \int_{a}^b \frac{1}{(x-c)^n}{\text d} x\), part 1
 Problem: problems/Improper-integral-type-II-power-x-translated-1.html
-Title: Improper integrals of the form \(\displaystyle \int_{a}^b \frac{1}{(x-a)^n}\diff x\), part 2
+Title: Improper integrals of the form \(\displaystyle \int_{a}^b \frac{1}{(x-a)^n}{\text d} x\), part 2
 Problem: problems/Improper-integral-type-II-power-x-translated-2.html
-Title: Improper integrals of the form \(\displaystyle \int_{0}^b \frac{\ln(a x)}{x^n}\diff x\)
+Title: Improper integrals of the form \(\displaystyle \int_{0}^b \frac{\ln(a x)}{x^n}{\text d} x\)
 Problem: problems/Improper-integral-type-II-power-x-natural-log-x-1.html
 BundleEnd: Integration_ImproperIntegrals_TheoryAndExercises
 
