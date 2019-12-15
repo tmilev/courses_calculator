@@ -1,6 +1,6 @@
 SlidesSourceHeader: LaTeX-materials/Curriculum-400-Calculus-II/Lecture-header.tex
 HomeworkSourceHeader: LaTeX-materials/Curriculum-400-Calculus-II/Homework-header.tex
-LoadTopicBundles: topiclists/topicBundles.txt
+LoadTopicBundles: topiclists/topicbundles.txt
 
 Chapter: Trigonometry review
 Section: Trigonometry review, full lecture

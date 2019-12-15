@@ -1,6 +1,6 @@
 SlidesSourceHeader: LaTeX-materials/Curriculum-300-Calculus-I/Lecture-header.tex
 HomeworkSourceHeader: LaTeX-materials/Curriculum-300-Calculus-I/Homework-header.tex
-LoadTopicBundles: topiclists/topicBundles.txt
+LoadTopicBundles: topiclists/topicbundles.txt
 
 Chapter: Prerequistes
 Section: Precalculus prerequisites

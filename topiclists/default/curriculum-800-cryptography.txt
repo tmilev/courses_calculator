@@ -1,6 +1,6 @@
 SlidesSourceHeader: LaTeX-materials/Curriculum-800-Cryptography/Lecture-header.tex
 HomeworkSourceHeader: LaTeX-materials/Curriculum-800-Cryptography/Homework-header.tex
-LoadTopicBundles: topiclists/topicBundles.txt
+LoadTopicBundles: topiclists/topicbundles.txt
 
 Chapter: Large number arithmetics
 Section: Decimal large integer arithmetics

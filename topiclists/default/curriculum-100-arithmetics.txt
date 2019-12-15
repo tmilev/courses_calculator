@@ -1,6 +1,6 @@
 SlidesSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Lecture-header.tex
 HomeworkSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Homework-header.tex
-LoadTopicBundles: topiclists/topicBundles.txt
+LoadTopicBundles: topiclists/topicbundles.txt
 
 Chapter: Addition and subtraction
 Topic: Addition base 10
