@@ -1,0 +1,156 @@
+SlidesSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Lecture-header.tex
+HomeworkSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Homework-header.tex
+LoadTopicBundles: topiclists/topicbundles.txt
+
+Chapter: Addition and subtraction
+Topic: Addition base 10
+
+Title: <lectureTag>&#8466;</lectureTag> Addition base 10
+SlidesLatex: \section{Addition}
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-with-table-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-with-table-columns-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-2
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-3
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-4
+SlidesSource: freecalc/modules/large-integers/integer-addition-algorithm
+
+Title: One-digit addition
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-with-table-example-1
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-one-digit-addition-with-table-columns-example-1
+Problem: problems/addition-base-10-one-digit-plus-one-digit.html
+
+Title: Two-digit plus one-digit number, no carry-over
+Problem: problems/addition-base-10-two-digit-plus-one-digit-no-carry-over-1.html
+
+Title: Two-digit addition, no carry-over
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-1
+%Problem: problems/addition-base-10-two-digit-plus-two-digit-no-carry-over-1.html
+
+Title: Two-digit plus one-digit number
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-2
+%Problem: problems/addition-base-10-two-digit-plus-one-digit-1.html
+
+Title: Two-digit plus two-digit number
+%Problem: problems/addition-base-10-two-digit-plus-two-digit-1.html
+
+
+Title: Several-digit number addition
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-3
+
+Title: Many-digit number addition
+SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-4
+
+
+Topic: Subtraction base 10
+Title: <lectureTag>&#8466;</lectureTag> Subtraction base 10
+SlidesLatex: \section{One-digit subtraction}
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-one-digit-positive-result-example-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-one-digit-positive-result-with-table-example-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-one-digit-positive-result-with-table-columns-example-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-two-digit-minus-one-digit-result-one-digit-positive-columns-example-1
+SlidesLatex: \section{Algebra rules involving the negative sign}
+SlidesSource: freecalc/modules/large-integers/negative-integers-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-algebra-minus-sign-as-operator-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-algebra-magnitude-of-a-number-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-algebra-negative-of-a-negative-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-algebra-sum-with-negative-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-algebra-negative-of-sum-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-algebra-rules-summary-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-equation-a-plus-x-equals-b-example-with-theory-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-equation-a-plus-x-equals-b-answer-negative-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-equation-a-plus-x-equals-b-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-decimal-represent-minus-one-digit-as-ten-plus-digit-1
+SlidesLatex: \section{Subtraction: complete algorithm}
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-decimal-two-digit-minus-one-digit-example-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-decimal-full-algorithm-example-1
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-decimal-full-algorithm-example-2
+SlidesSource: freecalc/modules/large-integers/integer-subtraction-decimal-full-algorithm-example-large-1
+
+Chapter: Multiplication
+Topic: Multiplication base 10
+Title: <lectureTag>&#8466;</lectureTag> Multiplication base 10
+SlidesLatex: \section{Multiplication}
+SlidesLatex: \subsection{Multiplication of one-digit numbers}
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-decimal-one-digit-multiplication-no-table-example-1
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-decimal-one-digit-multiplication-with-table-example-1
+
+SlidesLatex: \subsection{Multiplication of one-digit number by multi-digit number}
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-by-power-of-base-10-theory-and-example-1
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-decimal-example-one-digit-by-larger-no-carry-over-1
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-decimal-example-one-digit-by-larger-with-carry-over-1
+
+SlidesLatex: \subsection{Multiplication of multi-digit numbers}
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-decimal-example-1
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-decimal-example-2
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-decimal-example-3
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-decimal-example-4
+SlidesSource: freecalc/modules/large-integers/integer-multiplication-decimal-example-5
+
+
+Chapter: Division
+Topic: Fractions basics
+Title: <lectureTag>&#8466;</lectureTag> Fraction basics
+SlidesLatex: \section{Fraction basics}
+SlidesLatex: \subsection{Fractions definition}
+SlidesSource: freecalc/modules/division/fractions-and-the-number-line
+SlidesSource: freecalc/modules/division/fractions-denominator-one
+SlidesSource: freecalc/modules/division/fractions-reading-1
+SlidesLatex: \subsection{Add fractions with same denominator}
+SlidesSource: freecalc/modules/division/fractions-rules-add-same-denominator
+SlidesSource: freecalc/modules/division/fractions-add-same-denominator-exercise-1
+SlidesLatex: \subsection{Number factorization and prime numbers}
+SlidesSource: freecalc/modules/division/factor-a-number
+SlidesSource: freecalc/modules/division/prime-numbers
+SlidesSource: freecalc/modules/division/factorization
+SlidesSource: freecalc/modules/division/factorization-small-example-1
+SlidesSource: freecalc/modules/division/factorization-terminology
+SlidesSource: freecalc/modules/division/factorization-algorithmic-difficulty-1
+SlidesLatex: \subsection{Number factorization and fraction reduction}
+SlidesSource: freecalc/modules/division/fractions-rules-scaling
+SlidesSource: freecalc/modules/division/fractions-reduced
+SlidesSource: freecalc/modules/division/fractions-cancel-notation
+SlidesSource: freecalc/modules/division/fractions-simplify-example-1
+SlidesSource: freecalc/modules/division/fractions-simplify-algorithm-promise
+SlidesLatex: \subsection{Multiply fraction by integer}
+SlidesSource: freecalc/modules/division/fractions-multiplication-by-integer
+SlidesSource: freecalc/modules/division/fractions-multiplication-by-integer-example-1
+
+
+Topic: Division and fractions
+Title: <lectureTag>&#8466;</lectureTag> Division and fractions
+SlidesLatex: \section{Division and fractions}
+SlidesSource: freecalc/modules/division/division-and-fractions
+SlidesSource: freecalc/modules/division/division-with-remainder-definitions
+SlidesSource: freecalc/modules/division/division-with-remainder-interpretation
+SlidesSource: freecalc/modules/division/division-with-remainder-addition-notation-exercise-with-guidance-question-1
+SlidesSource: freecalc/modules/division/division-with-remainder-addition-notation-one-digit-divisor-one-digit-dividend-1
+SlidesSource: freecalc/modules/division/division-with-remainder-addition-notation-exercise-one-digit-divisor-one-digit-quotient-1
+SlidesSource: freecalc/modules/continuity/greatest-integer-function-rationals-no-negatives
+SlidesSource: freecalc/modules/continuity/greatest-integer-function-some-rules-with-example
+SlidesSource: freecalc/modules/division/division-with-remainder-integer-part-of-fraction
+SlidesSource: freecalc/modules/division/division-with-remainder-integer-part-of-fraction-exercise-1
+
+Topic: Long division, base 10
+Title: <lectureTag>&#8466;</lectureTag> Long division
+SlidesLatex: \section{Long division}
+
+SlidesSource: freecalc/modules/division/integer-long-division-intro-1
+SlidesSource: freecalc/modules/division/integer-long-division-one-digit-one-step-example-1
+SlidesSource: freecalc/modules/division/integer-long-division-intro-2
+SlidesSource: freecalc/modules/division/integer-long-division-one-digit-multiple-step-example-1
+SlidesSource: freecalc/modules/division/integer-long-division-one-digit-multiple-step-example-2
+SlidesSource: freecalc/modules/division/integer-long-division-one-digit-multiple-step-example-3
+SlidesSource: freecalc/modules/division/integer-long-division-intro-3
+SlidesSource: freecalc/modules/division/integer-long-division-multi-digit-divisor-example-1
+SlidesSource: freecalc/modules/division/integer-long-division-multi-digit-divisor-example-2
+SlidesSource: freecalc/modules/division/integer-long-division-multi-digit-divisor-example-3
+SlidesSource: freecalc/modules/division/integer-long-division-multi-digit-divisor-example-4
+SlidesSource: freecalc/modules/division/integer-long-division-multi-digit-divisor-example-5
+SlidesSource: freecalc/modules/division/integer-long-division-multi-digit-divisor-example-6
+SlidesSource: freecalc/modules/division/integer-long-division-multi-digit-divisor-example-7
+SlidesSource: freecalc/modules/division/integer-long-division-how-many-quotient-rows-1
+SlidesSource: freecalc/modules/division/integer-long-division-multi-digit-divisor-example-8
+SlidesSource: freecalc/modules/division/integer-long-division-knuth-optimization-1
