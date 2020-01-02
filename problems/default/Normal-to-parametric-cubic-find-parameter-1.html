@@ -4,47 +4,46 @@
 %UseLnInsteadOfLog
 TurnOffApproximations{}0;
 TurnOffRules(CommonDenominator, CommonDenominatorOneNonFraction);
-b=RandomInteger{}((-5,-1),(1,5));
-c=RandomInteger{}(-5,5);
-f = x^3 - a x^2+b x +c;
-theA=1;
-theFSpecialized=(a=theA; f)_2;
-theX = RandomInteger((-2,-1),(1,2));
-theY = (x=theX; f)_2;
-theYspecialized = (x=theX; theFSpecialized)_2;
-leftPoint=-3.5;
-rightPoint=3.5;
-d/dx a=0;
-theDerivative=d/dx f;
-theSlope=(x=theX; theDerivative)_2;
-normalSlope=-1/theSlope;
-tangentFun=(x-theX)*theSlope+theY;
-normalFun= (x-theX)*normalSlope+theY;
-tangentFunSpecialized= (a=theA; tangentFun)_2;
-theUnit= (x=3.5; theFSpecialized)_2 /40 ;
-theAanswer=RandomInteger{}(-6,6)/RandomInteger{}(1,6);
-normalEquationXpart=(-1/theSlope(x-theX)+(x=theX; f)_2) ;
-normalEquation=y-normalEquationXpart;
-xPtOnNormalOne=theX+RandomInteger((-5,-1),(1,5));
-yPtOnNormalOne= (x=xPtOnNormalOne; a= theAanswer; normalEquationXpart)_3;
+b=RandomInteger{}((- 5, - 1), (1, 5));
+c=RandomInteger{}(- 5, 5);
+f = x^3 - a x^2 + b x + c;
+theA = 1;
+theFSpecialized = (a = theA; f)_2;
+theX = RandomInteger((- 2, - 1), (1, 2));
+theY = (x = theX; f)_2;
+theYspecialized = (x = theX; theFSpecialized)_2;
+leftPoint = - 3.5;
+rightPoint = 3.5;
+d/dx a = 0;
+theDerivative = d/dx f;
+theSlope = (x = theX; theDerivative)_2;
+normalSlope = - 1 / theSlope;
+(a = theA; normalSlope);
+tangentFun = (x - theX) * theSlope + theY;
+normalFun = (x - theX) * normalSlope + theY;
+tangentFunSpecialized = (a = theA; tangentFun)_2;
+theUnit = (x = 3.5; theFSpecialized)_2 / 40 ;
+theAanswer = RandomInteger{}(- 6, 6) / RandomInteger{}(1, 6);
+normalEquationXpart = (- 1 / theSlope(x - theX) + (x = theX; f)_2);
+normalEquation = y - normalEquationXpart;
+xPtOnNormalOne = theX + RandomInteger((- 5,- 1), (1, 5));
+yPtOnNormalOne = (x = xPtOnNormalOne; a = theAanswer; normalEquationXpart)_3;
 
-theQuadratic=Numerator{}( MakeExpression(MakeRationalFunction (x=xPtOnNormalOne; y=yPtOnNormalOne; normalEquation)_3));
+theQuadratic = Numerator{}(MakeExpression(MakeRationalFunction(x = xPtOnNormalOne; y = yPtOnNormalOne; normalEquation)_3));
 
-basicPlot=
-PlotWindow(300,300)
-+PlotViewRectangle(
-(leftPoint, Min(-5, theYspecialized-1, (x=-2.5; theFSpecialized)_2, yPtOnNormalOne-2)), 
-(rightPoint, Max(theYspecialized+1, (x=2.5; theFSpecialized)_2, 5, yPtOnNormalOne+2 )))
-+PlotPoint((xPtOnNormalOne,yPtOnNormalOne),brown)
-;
+basicPlot =
+PlotWindow(300, 300) + PlotViewRectangle(
+(leftPoint, Min(- 5, theYspecialized - 1, (x = - 2.5; theFSpecialized)_2, yPtOnNormalOne - 2)), 
+(rightPoint, Max(theYspecialized + 1, (x = 2.5; theFSpecialized)_2, 5, yPtOnNormalOne + 2 )))
++ PlotPoint((xPtOnNormalOne, yPtOnNormalOne), brown);
 
 </span>
 <span class="calculatorShowToUserOnly">
 basicPlot
-+PlotPoint((theX, theYspecialized), blue)
-+Plot2D(theFSpecialized, leftPoint, rightPoint, red)
-+PlotLabel( (theX,theYspecialized+theUnit),"P")
-+PlotSetId("canvas1")
++ PlotPoint((theX, theYspecialized), blue)
++ Plot2D(theFSpecialized, leftPoint, rightPoint, red)
++ PlotLabel((theX, theYspecialized + theUnit), "P")
++ PlotSetId("canvas1")
 </span>
 
 <br>
@@ -68,11 +67,11 @@ TurnOffApproximations{}0
 EnsureExpressionDependsMandatoryVariables{}(normalSlopeAnswer, a);
 %PlotShowJavascriptOnly
 basicPlot
-+PlotPoint((theX, theYspecialized), blue)
-+Plot2D(theFSpecialized, leftPoint, rightPoint, red)
-+PlotLabel( (theX,theYspecialized+theUnit),"P")
-+Plot2D( theYspecialized+(x-theX)(a=theA; normalSlopeAnswer)_2, -10, 10, purple)
-+PlotSetId("canvas1")
++ PlotPoint((theX, theYspecialized), blue)
++ Plot2D(theFSpecialized, leftPoint, rightPoint, red)
++ PlotLabel((theX, theYspecialized + theUnit), "P")
++ Plot2D(theYspecialized + (x - theX) (a = theA; normalSlopeAnswer)_2, - 10, 10, purple)
++ PlotSetId("canvas1")
 </span>
 
 <span class="calculatorAnswerOnGiveUp">
@@ -82,16 +81,17 @@ normalSlope
 <hr>
 Find the equation of the normal to the same curve \(y=\)<span class="calculator">\displaystyle f</span> 
 at the same point \(P\) where \(x=\)<span class="calculator">theX</span>. 
-The equation of the line should be in the form  \(y=(\text{expression depending on }a)x+(\text{another expression depending on }a)\) or equivalent.
+The equation of the line should be in the form 
+\(y = (\text{expression depending on }a) x + (\text{another expression depending on }a)\) or equivalent.
 <answerCalculatorHighlight>Line equation:</answerCalculatorHighlight>
 <textarea class="calculatorAnswer" id="normalEquationAnswer" buttons="algebra, variables">
 CompareExpressionsNumerically (
-EqualityToArithmeticExpression( normalEquationAnswer)  / (y=1.123; x=2.3456; a=3.4566;EqualityToArithmeticExpression normalEquationAnswer)_4, 
+EqualityToArithmeticExpression(normalEquationAnswer) / (y = 1.123; x = 2.3456; a = 3.4566; EqualityToArithmeticExpression normalEquationAnswer)_4, 
 normalEquation/ (y=1.123; x=2.3456; a=3.4566; normalEquation)_4,
 0.00000001,
-x\in (-1,1), 8,
-y\in (-1,1), 8,
-a\in (1.1,1.2), 8
+x \in (-1, 1), 8,
+y \in (-1, 1), 8,
+a \in (1.1, 1.2), 8
 )
 </textarea>
 <span class="calculatorCommentsBeforeInterpretation">
@@ -102,9 +102,9 @@ TurnOffRules("CommonDenominator", "CommonDenominatorOneNonFraction");
 EnsureExpressionDependsOnlyOn {}(normalEquationAnswer, x, y,a);
 </span>
 
-<span class="calculatorAnswerOnGiveUp">
+<span class="calculatorAnswerOnGiveUp"> 
 TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
-y=-1/theSlope(x-theX)+(x=theX; f)_2
+y = - 1 / theSlope(x - theX) + (x = theX; f)_2
 </span>
 <br>
 Find the value(s) of the parameter \(a\) for which  
@@ -113,7 +113,7 @@ the normal line passes through the point with coordinates
 If there is more one answer, separate them by commas. 
 <answerCalculatorHighlight>\(a=\)</answerCalculatorHighlight>
 <textarea class="calculatorAnswer" id="parameterAnswer" buttons="algebra, variables">
-(Sort(SolveFor(a, theQuadratic)) - Sort( parameterAnswer) ) ==0;
+(Sort(SolveFor(a, theQuadratic)) - Sort(parameterAnswer)) == 0;
 </textarea>
 <span class="calculatorCommentsBeforeInterpretation">
 TurnOffApproximations{}0;
@@ -122,16 +122,16 @@ TurnOffRules("CommonDenominator", "CommonDenominatorOneNonFraction");
 <span class="calculatorCommentsBeforeSubmission">
 EnsureExpressionDependsOnlyOn {}(parameterAnswer, none);
 %PlotShowJavascriptOnly
-basicPlot
-+
-if (IsRational(parameterAnswer_1),
-Plot2D( (a=parameterAnswer_1; f)_2, leftPoint, rightPoint, blue)
-+Plot2D( (a=parameterAnswer_2; f)_2,  leftPoint, rightPoint, green)
-+Plot2D( (a=parameterAnswer_1; normalFun)_2, Min(xPtOnNormalOne-1, leftPoint), Max(rightPoint, xPtOnNormalOne+1), cyan)
-+Plot2D( (a=parameterAnswer_2; normalFun)_2, Min(xPtOnNormalOne-1, leftPoint), Max(rightPoint, xPtOnNormalOne+1), lightgreen)
-+PlotPoint( (theX,(a=parameterAnswer_1; x=theX; f)_3),red  )
-+PlotPoint( (theX,(a=parameterAnswer_2; x=theX; f)_3),red )
-,Plot2D( (a=parameterAnswer; f)_2, leftPoint, rightPoint, blue)
+basicPlot 
++ if ( 
+  IsRational(parameterAnswer_1),
+  Plot2D((a=parameterAnswer_1; f)_2, leftPoint, rightPoint, blue)
+  + Plot2D((a=parameterAnswer_2; f)_2,  leftPoint, rightPoint, green)
+  + Plot2D((a=parameterAnswer_1; normalFun)_2, Min(xPtOnNormalOne - 1, leftPoint), Max(rightPoint, xPtOnNormalOne + 1), cyan)
+  + Plot2D((a=parameterAnswer_2; normalFun)_2, Min(xPtOnNormalOne - 1, leftPoint), Max(rightPoint, xPtOnNormalOne + 1), lightgreen)
+  + PlotPoint((theX,(a=parameterAnswer_1; x=theX; f)_3), red)
+  + PlotPoint((theX,(a=parameterAnswer_2; x=theX; f)_3), red),
+  Plot2D((a=parameterAnswer; f)_2, leftPoint, rightPoint, blue)
 )
 +PlotSetId("canvas1");
 </span>

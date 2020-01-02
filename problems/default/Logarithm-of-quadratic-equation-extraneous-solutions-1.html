@@ -5,31 +5,33 @@ Solve the equation (over the real numbers).
 
 <span class="calculatorHidden">
 %UseLnInsteadOfLog
-TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
-uOne=RandomInteger{}(-8,8);
-uTwo=uOne+RandomInteger{}(1,8);
-wOne=RandomInteger(-12,12);
-wTwo=uOne+uTwo-wOne;
-preBase=wTwo*wOne-uOne*uTwo;
-extraFactor=if(IsPower(preBase), Length(FactorInteger(preBase)) ,1);
-theBase= if (IsPower(preBase), (FactorInteger{}(preBase))_1, preBase);
-1/(preBase*(preBase-1)*(preBase>0)*(wOne-wTwo));
-leftSide=\log_theBase (x-wOne) +\log_{theBase} (x-wTwo);
-rightSide=extraFactor;
+TurnOffRules("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+uOne = RandomInteger(0, 7);
+distance = RandomInteger(1, 7);
+uTwo = uOne + distance;
+baseFactorOne = RandomInteger(2, 5);
+baseFactorTwo = baseFactorOne + distance;
+preBase = baseFactorOne * baseFactorTwo;
+theBase = if( IsPower(preBase), (FactorInteger(preBase))_1, preBase);
+rightHandSide = log_theBase preBase;
+limitThis =  theBase ^ rightHandSide;
+1 / (limitThis < 300);
+leftHandSide = \log_theBase (x - uOne) + \log_{theBase} (x - uTwo);
+theSolution = uOne + baseFactorTwo;
 </span>
 <br>
 <span class="calculator">
 \displaystyle
-leftSide   
+leftHandSide   
 </span>\(=\)<span class="calculator">
 \displaystyle
-rightSide   
+rightHandSide   
 </span> .
 <br>
 If there is more than one answer, separate them by comma. 
 <answerCalculatorHighlight>\(x=\)</answerCalculatorHighlight>
 <textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
-AlgebraAnswer== uTwo
+AlgebraAnswer == theSolution
 </textarea>
 <span class="calculatorCommentsBeforeInterpretation">
 TurnOffRules("LogBase");
@@ -40,7 +42,7 @@ EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
 </span>
 
 <span class="calculatorAnswerOnGiveUp">
-uTwo
+theSolution
 </span>
 
 
