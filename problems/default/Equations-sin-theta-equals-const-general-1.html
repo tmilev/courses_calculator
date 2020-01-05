@@ -7,15 +7,15 @@
 %UseBracketForIntervals
 TurnOffApproximations(0);
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
-leftSide=sin \theta;
-aCF=RandomInteger{}((-11,-1)(1,11));
-rightSide= aCF/(|aCF| + RandomInteger{}(1,20));
-IsApproximatelyInteger{}{{a}}=(|Round{}a-a|<0.0001);
+leftSide = sin \theta;
+aCF = RandomInteger{}((-11, -1), (1, 11));
+rightSide= aCF/(|aCF| + RandomInteger{}(1, 20));
+IsApproximatelyInteger{}{{a}} = |Round{}a - a| < 0.0001;
 </span>
 Solve the equation. <br>
 <span class="calculator">
 \displaystyle
-leftSide   =rightSide
+leftSide = rightSide
 </span>. 
 
 
