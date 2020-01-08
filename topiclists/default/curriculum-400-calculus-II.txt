@@ -15,51 +15,51 @@ SlidesSource: freecalc/modules/complex-numbers/complex-numbers-definition
 SlidesSource: freecalc/modules/complex-numbers/overview-of-numbers
 
 Title: Complex addition/subtraction.
-Problem: DefaultProblemLocation/Complex-addition-z-minus-w.html
+Problem: problems/Complex-addition-z-minus-w.html
 SlidesSource: freecalc/modules/complex-numbers/complex-numbers-addition-multiplication-example-1
 
 Title: Complex multiplication
-Problem: DefaultProblemLocation/Complex-multiplication-z-times-w.html
+Problem: problems/Complex-multiplication-z-times-w.html
 SlidesSource: freecalc/modules/complex-numbers/complex-numbers-addition-multiplication-example-1
 
 Topic: Angle multiple trig formulas
 
 Title: Express \(\sin (kx), \cos(kx)\) via \(\sin x, \cos x\)
-Problem: DefaultProblemLocation/Express-sin-cos-of-k-times-x-via-sin-x-cos-x-1.html
+Problem: problems/Express-sin-cos-of-k-times-x-via-sin-x-cos-x-1.html
 
 Title: Express \(\sin (kx), \cos(kx)\) via \(\sin x, \cos x\) using Euler's formula.
-Problem: DefaultProblemLocation/Express-sin-cos-of-k-times-x-via-sin-x-cos-x-via-EulerFla-1.html
+Problem: problems/Express-sin-cos-of-k-times-x-via-sin-x-cos-x-via-EulerFla-1.html
 SlidesSource: freecalc/modules/trigonometry/trig-identities-example-3-with-Eulers-Formula
 
 Section: Inverse trigonometric functions
 
 Topic: Inverse trig basics
 Title: Inverse trig and special angles
-Problem: DefaultProblemLocation/Inverse-trig-evaluated-to-get-special-angles-1.html
+Problem: problems/Inverse-trig-evaluated-to-get-special-angles-1.html
 SlidesSource: freecalc/modules/inverse-trig/arcsin-frequently-encountered-example-1
 
 Topic: Simplify inverse trig functions with trig arguments
 
 Title: Simplify \(\arcsin( \sin (x))\)
-Problem: DefaultProblemLocation/Trig-of-inverse-trig-sin-simple-1.html
+Problem: problems/Trig-of-inverse-trig-sin-simple-1.html
 SlidesSource: freecalc/modules/inverse-trig/arcsin-sin-ex1
 SlidesSource: freecalc/modules/inverse-trig/arcsin-sin-ex2
 
 Title: Simplify \(\arccos( \cos (x))\)
-Problem: DefaultProblemLocation/Trig-of-inverse-trig-cos-simple-1.html
+Problem: problems/Trig-of-inverse-trig-cos-simple-1.html
 SlidesSource: freecalc/modules/inverse-trig/arccos-cos-example-1
 
 Topic: Simplify trigonometric functions evaluated on inverse trigonometric functions
 
 Title: Simplify basic trigonometric functions evaluated on basic inverse trigonometric functions
-Problem: DefaultProblemLocation/Evalaute-trig-on-inverse-trig-basic-1.html
+Problem: problems/Evalaute-trig-on-inverse-trig-basic-1.html
 SlidesSource: freecalc/modules/inverse-trig/tan-arcsin-example-1
 
 Title: Simplify basic trigonometric functions evaluated on basic inverse trigonometric functions, negative argument
-Problem: DefaultProblemLocation/Evalaute-trig-on-inverse-trig-basic-2.html
+Problem: problems/Evalaute-trig-on-inverse-trig-basic-2.html
 
 Title: Simplify \(\sin(k\arcsin x)\), \(\cos (k\arcsin x)\), \(\sin (k\arccos x)\), \(\cos (k\arccos x)\)
-Problem: DefaultProblemLocation/Evaluate-sin-cos-of-k-times-arcsin-arccos.html
+Problem: problems/Evaluate-sin-cos-of-k-times-arcsin-arccos.html
 
 SlidesSource: freecalc/modules/inverse-trig/trig-applied-to-inverse-trig-ex1
 SlidesSource: freecalc/modules/inverse-trig/trig-applied-to-inverse-trig-ex2
@@ -85,10 +85,10 @@ SlidesSource: freecalc/modules/logarithms/power-rule-minus-one
 Section: Review of the substitution rule
 
 Title: Integrals of the form \(\displaystyle \int \cos(m x){\text{d}} x\), \(\int \sin(m x){\text{d}} x\)
-Problem: DefaultProblemLocation/Indefinite-integral-sinmx-or-cosmx-1.html
+Problem: problems/Indefinite-integral-sinmx-or-cosmx-1.html
 
 Title: Integrals of the form \(\displaystyle \int e^{ax}{\text{d}} x\)
-Problem: DefaultProblemLocation/Indefinite-integral-Ae-exp-ax.html
+Problem: problems/Indefinite-integral-Ae-exp-ax.html
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-ex4
 
 TopicBundle: Integration_ByParts_TheoryAndExercises
