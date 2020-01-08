@@ -6,13 +6,13 @@
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
-uOne=RandomInteger{}((-8,-1)(1,8));
-aCF=RandomInteger{}((-3,-1),(1,3));
-bCF=RandomInteger{}((-8,-1),(1,8));
-cCF=RandomInteger{}((-8,-1),(1,8));
-theQuadratic=aCF x^2+bCF x+cCF;
-1/(bCF^2-4aCF cCF<0);
-leftSide=(x-uOne)( theQuadratic);
+uOne = RandomInteger{}((- 8, - 1), (1, 8));
+aCF = RandomInteger{}((- 3, - 1), (1, 3));
+bCF = RandomInteger{}((- 8, - 1), (1, 8));
+cCF = RandomInteger{}((- 8, - 1), (1, 8));
+theQuadratic = aCF x^2 + bCF x + cCF;
+1/(bCF^2 - 4aCF cCF < 0);
+leftSide = (x - uOne)(theQuadratic);
 
 TurnOffRules{}(DistributeMultiplication);
 
