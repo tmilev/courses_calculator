@@ -26,14 +26,11 @@ Problem: problems/addition-base-10-two-digit-plus-one-digit-no-carry-over-1.html
 
 Title: Two-digit addition, no carry-over
 SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-1
-Problem: problems/addition-base-10-two-digit-plus-two-digit-no-carry-over-1.html
 
 Title: Two-digit plus one-digit number
 SlidesSource: freecalc/modules/large-integers/integer-addition-decimal-example-2
-Problem: problems/addition-base-10-two-digit-plus-one-digit-1.html
 
 Title: Two-digit plus two-digit number
-Problem: problems/addition-base-10-two-digit-plus-two-digit-1.html
 
 
 Title: Several-digit number addition
