@@ -90,8 +90,8 @@ nplus1= n+1;
 term = a x + b;
 theFunIntoPowerMode=theFunCF ( term)^{thePower};
 thePowerplus1 = thePower + 1;
-diffX=1/a\diff u;
-diffU=a\diff x;
+diffX=1/a{\text d} u;
+diffU=a{\text d} x;
 uLeft= a leftPoint+b;
 uRight= a rightPoint+b;
 term1 = theFunCF/(a*thePowerplus1);
@@ -103,7 +103,7 @@ finalAnswer=term1 ( term2 - term3 );
 approxFinalAnswer=DoubleValue(finalAnswer);
 TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",
 "AddTerms", "MultiplyRationals",  "ConstantExtraction");
-funVarChangeddiffU=(theFunCF u^thePower 1/a) \diff u;
+funVarChangeddiffU=(theFunCF u^thePower 1/a) {\text d} u;
 
 leftSub=(a rightPoint + b)^{thePowerplus1} ;
 rightSub= (a leftPoint + b)^{thePowerplus1};
@@ -111,8 +111,8 @@ rightSub= (a leftPoint + b)^{thePowerplus1};
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int_{leftPoint}^{rightPoint} theFun \diff x 
-&=&\displaystyle \int_{leftPoint}^{rightPoint} theFunIntoPowerMode \diff x   \\\\
+\displaystyle \int_{leftPoint}^{rightPoint} theFun {\text d} x 
+&=&\displaystyle \int_{leftPoint}^{rightPoint} theFunIntoPowerMode {\text d} x   \\\\
 &=&\displaystyle 
 \int \limits_
 { \begin{array} {rcl}x&=&leftPoint \\\\ u&=&uLeft \end{array} }^
@@ -120,8 +120,8 @@ EvaluateSymbols{}(
 funVarChangeddiffU &&
 \text{Substitute: } {\begin{array}{rcl}
 term&=&u \\\\
-diffU&=&\diff u \\\\ 
-\diff x&=&diffX \end{array}}\\\\
+diffU&=&{\text d} u \\\\ 
+{\text d} x&=&diffX \end{array}}\\\\
 \displaystyle &=&\displaystyle
 \left[ \frac{theFunCF}{a} \left( \frac{u^{thePower +1}}{thePower +1} \right) \right]_{x=leftPoint}^{x=rightPoint}  \\\\
 \displaystyle &=&\displaystyle  \frac{theFunCF}{a (thePowerplus1)}

@@ -71,17 +71,17 @@ nplus1 = n + 1;
 outTerm = (1/a)/nplus1;
 inTerm = (a x + b);
 uTerm = 1/a u^n;
-diffU= a \diff x;
-diffX= 1/a \diff u;
+diffU= a {\text d} x;
+diffX= 1/a {\text d} u;
 TurnOnRules("DistributeMultiplication");
 finalAnswer= oneovera  \frac{inTerm^{n + 1}}{n +1};
 </span>
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int f \diff x&=&\displaystyle \int u^{n}\frac{1}{a} \diff u
+\displaystyle \int f {\text d} x&=&\displaystyle \int u^{n}\frac{1}{a} {\text d} u
 && {\begin{array}{l}\text{Set } u=inTerm \\\\
-\diff u=diffU \\ \diff x=diffX\end{array} }\\\\
+{\text d} u=diffU \\ {\text d} x=diffX\end{array} }\\\\
 &=&\displaystyle oneovera  \frac{u^{n + 1}}{n +1} + C &&\displaystyle \text{ }  \\\\
 &=&\displaystyle  finalAnswer+ C &&\displaystyle \text{ }  \\\\
 \end{array}

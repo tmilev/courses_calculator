@@ -81,8 +81,8 @@ nplus1= n+1;
 term =  a x + b;
 uLeft=(x=leftPoint; term)_2;
 uRight=(x=rightPoint; term)_2;
-diffUviaDiffX=a \diff x;
-diffXviaDiffU=1/a  \diff u;
+diffUviaDiffX=a {\text d} x;
+diffXviaDiffU=1/a  {\text d} u;
 poverqplus1 = poverq + 1;
 term1 = 1/(a*poverqplus1);
 term2 = (a rightPoint + b)^poverqplus1;
@@ -93,10 +93,10 @@ TurnOnRules("DistributeMultiplication");
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int_{leftPoint}^{rightPoint} ( term)^{poverq} \diff x   &=&
+\displaystyle \int_{leftPoint}^{rightPoint} ( term)^{poverq} {\text d} x   &=&
 \displaystyle \int_{u=uLeft}^{u=uRight} u^{poverq}diffXviaDiffU &&
  {\begin{array}{l}
-\text{Set } u=term, \diff u=diffUviaDiffX, \diff x=diffXviaDiffU \\\\
+\text{Set } u=term, {\text d} u=diffUviaDiffX, {\text d} x=diffXviaDiffU \\\\
 \text{When } x=leftPoint, u=uLeft, \text{ and when } x=rightPoint,u=uRight
 \end{array}}
 \\\\

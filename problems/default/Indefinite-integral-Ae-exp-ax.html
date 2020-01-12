@@ -70,8 +70,8 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 </span>
 <span class="calculatorHidden">  
 outTerm = A/a;
-diffU=a\diff x;
-diffX=1/a\diff u;
+diffU=a{\text d} x;
+diffX=1/a{\text d} u;
 TurnOnRules("DistributeMultiplication");
 finalAnswerU= outTerm e^{u} ;
 finalAnswer= outTerm e^{c} ;
@@ -79,10 +79,10 @@ finalAnswer= outTerm e^{c} ;
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int f \diff x&=& \displaystyle \int \frac{A}{a}e^u \diff u &&
+\displaystyle \int f {\text d} x&=& \displaystyle \int \frac{A}{a}e^u {\text d} u &&
 {\begin{array}{l}\text{Set }u=c \\\\
-\diff u= diffU \\\\
-\diff x =diffX\end{array}} \\\\
+{\text d} u= diffU \\\\
+{\text d} x =diffX\end{array}} \\\\
 &=&\displaystyle  finalAnswerU + C &&\displaystyle \\\\
 \displaystyle &=&\displaystyle finalAnswer+ C &&\displaystyle \text{ }  \\\\
 \end{array}

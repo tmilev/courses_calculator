@@ -83,19 +83,19 @@ finalAnswer=theIntegral{}x;
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int f \diff x&=&\displaystyle  \frac{1}{m}  \int {x^2}(m e^{m x}) \diff x
-&&\displaystyle \text{Note that } m e^{m x} \diff x = \diff \left( e^{m x} \right)  \\\\
-&=&\displaystyle  outTerm1  \int {x^2} \diff \left(e^{m x} \right)
+\displaystyle \int f {\text d} x&=&\displaystyle  \frac{1}{m}  \int {x^2}(m e^{m x}) {\text d} x
+&&\displaystyle \text{Note that } m e^{m x} {\text d} x = {\text d} \left( e^{m x} \right)  \\\\
+&=&\displaystyle  outTerm1  \int {x^2} {\text d} \left(e^{m x} \right)
 &&\displaystyle \text{Set } u = x^2 \text{ and }  v = e^{m x}  \\\\
-&=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - \int e^{m x} \diff (x^2) \right]
+&=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - \int e^{m x} {\text d} (x^2) \right]
 &&\displaystyle \text{Using } \int u dv = uv - \int v du\\\\
-&=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - 2 \int x e^{m x} \diff x \right]
+&=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - 2 \int x e^{m x} {\text d} x \right]
 &&\displaystyle \text{ }\\\\
-&=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - \frac{2}{m} \int x (m e^{m x}) \diff x \right]
+&=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - \frac{2}{m} \int x (m e^{m x}) {\text d} x \right]
 &&\displaystyle \text{ }\\\\
-&=&\displaystyle  outTerm1 \left[term12 \int x \diff \left( e^{m x} \right) \right]
+&=&\displaystyle  outTerm1 \left[term12 \int x {\text d} \left( e^{m x} \right) \right]
 &&\displaystyle \text{Set } u = x \text{ and }  v = e^{m x}\\\\
-&=&\displaystyle  outTerm1 \left[term12 \left(x e^{m x} - \int e^{m x} \diff x \right) \right]
+&=&\displaystyle  outTerm1 \left[term12 \left(x e^{m x} - \int e^{m x} {\text d} x \right) \right]
 &&\displaystyle \text{Again, using } \int u dv = uv - \int v du \\\\
 &=&\displaystyle  outTerm1 \left[term12 \left(x e^{m x} - \frac{e^{m x}}{m}\right) \right] + C    
 &&\displaystyle \text{ }\\\\

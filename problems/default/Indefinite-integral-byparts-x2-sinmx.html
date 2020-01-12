@@ -82,18 +82,18 @@ finalAnswer=theIntegral{}x;
 <span class="calculator"> 
 EvaluateSymbols{}( 
 "\begin{array}{rcll|l}
-\displaystyle \int f \diff x&=&\displaystyle  \frac{1}{-(m)}  \int {x^2}(m)[-\sin(m x)] \diff x
-&&\displaystyle \text{Note that } m [-\sin(m x)] \diff x = \diff \left[ \cos(m x) \right]  \\\\
-&=&\displaystyle  outTerm1  \int {x^2} \diff \left[cos(m x) \right]
+\displaystyle \int f {\text d} x&=&\displaystyle  \frac{1}{-(m)}  \int {x^2}(m)[-\sin(m x)] {\text d} x
+&&\displaystyle \text{Note that } m [-\sin(m x)] {\text d} x = {\text d} \left[ \cos(m x) \right]  \\\\
+&=&\displaystyle  outTerm1  \int {x^2} {\text d} \left[cos(m x) \right]
 &&\displaystyle \text{Set } u = x^2 \text{ and }  v = \cos(m x)  \\\\
-&=&\displaystyle  outTerm1 \left[{x^2} \cos(m x) - \int \cos(m x) \diff (x^2) \right]
+&=&\displaystyle  outTerm1 \left[{x^2} \cos(m x) - \int \cos(m x) {\text d} (x^2) \right]
 &&\displaystyle \text{Using } \int u dv = uv - \int v du\\\\
-&=&\displaystyle  outTerm1 \left[{x^2} \cos(m x) - 2 \int x \cos(m x) \diff x \right]   &&\displaystyle \text{ }\\\\
-&=&\displaystyle  outTerm1 \left[{x^2} \cos(m x) - \frac{2}{m} \int x (m) \cos(m x) \diff x \right]
+&=&\displaystyle  outTerm1 \left[{x^2} \cos(m x) - 2 \int x \cos(m x) {\text d} x \right]   &&\displaystyle \text{ }\\\\
+&=&\displaystyle  outTerm1 \left[{x^2} \cos(m x) - \frac{2}{m} \int x (m) \cos(m x) {\text d} x \right]
 &&\displaystyle \text{ }\\\\
-&=&\displaystyle  outTerm1 \left[term12 \int x \diff \left( \sin(m x) \right) \right]
+&=&\displaystyle  outTerm1 \left[term12 \int x {\text d} \left( \sin(m x) \right) \right]
 &&\displaystyle \text{Set } u = x \text{ and }  v = \sin(m x)\\\\
-&=&\displaystyle  outTerm1 \left[term12 \left(x \sin(m x) - \int \sin(m x) \diff x \right) \right]
+&=&\displaystyle  outTerm1 \left[term12 \left(x \sin(m x) - \int \sin(m x) {\text d} x \right) \right]
 &&\displaystyle \text{Again, using } \int u dv = uv - \int v du \\\\
 &=&\displaystyle  outTerm1 \left[term12 \left(x \sin(m x) - \frac{-\cos(m x)}{m}\right) \right] + C
 &&\displaystyle \text{ }\\\\

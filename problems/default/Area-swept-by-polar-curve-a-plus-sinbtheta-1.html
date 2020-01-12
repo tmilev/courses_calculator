@@ -11,7 +11,7 @@ theX=theR cos{} (\theta);
 theY=theR sin{} (\theta);
 leftPoint=0;
 rightPoint=2\pi;
-theAntiDerivative=\int 1/2 theR^2 \diff{} \theta
+theAntiDerivative=\int 1/2 theR^2 {\text d}{} \theta
 </span>
 <span class="calculatorShowToUserOnly">
 PlotFill(
@@ -64,7 +64,7 @@ it follows that the curve self-intersects for the the first time at \(\theta=2\p
 In other words, a full loop of the curve is traversed for no interval shorter than \(0\leq \theta\leq 2\pi\).
 
 By theory, the area swept by a curve given in polar coordinates by \(r=r(\theta)\) for \(\theta_1\leq \theta\leq \theta_2 \) is
-\(A=\displaystyle \frac{1}{2}\int_{\theta_1}^{\theta_2}r^2(\theta)\diff \theta  \).
+\(A=\displaystyle \frac{1}{2}\int_{\theta_1}^{\theta_2}r^2(\theta){\text d} \theta  \).
 Therefore
 <span class="calculatorHidden">
 rSquaredExpanded=Polynomialize(theR^2);
@@ -72,7 +72,7 @@ theFlaTimesTwo=if (trigFun==sin, (1-\cos(2z)), (1+cos(2z)));
 theTrigFunSquaredReduced=if (trigFun==sin, ((1-\cos(a\theta 2))/2), ((1+\cos(a\theta 2))/2));
 theRestFromTrigFun=rSquaredExpanded- (trigFun{}(a\theta))^2;
 simplifiedIntegrand=rSquaredExpanded- (trigFun{}(a\theta))^2+theTrigFunSquaredReduced;
-theIndefiniteIntegral=\int theR^2 \diff\theta;
+theIndefiniteIntegral=\int theR^2 {\text d}\theta;
 TurnOffRules("Sine", "Cosine", "AddTerms");
 
 theDifferenceAtTwoPi = (\theta=2\pi; theIndefiniteIntegral)_2;
@@ -91,10 +91,10 @@ finalAnswer=(TurnOnRules("Sine", "Cosine", "AddTerms");
 \displaystyle EvaluateSymbols(
 "
 \begin{array}{rcll|l}
-\displaystyle A&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(theR\right)^2 \diff \theta\\\\
-&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(rSquaredExpanded\right) \diff \theta&&\displaystyle \text{Use }trigFun^2 (z)=\frac{theFlaTimesTwo}{2}\\\\
-&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(\left( theTrigFunSquaredReduced \right)+ theRestFromTrigFun\right) \diff \theta\\\\
-&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(simplifiedIntegrand\right) \diff \theta\\\\
+\displaystyle A&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(theR\right)^2 {\text d} \theta\\\\
+&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(rSquaredExpanded\right) {\text d} \theta&&\displaystyle \text{Use }trigFun^2 (z)=\frac{theFlaTimesTwo}{2}\\\\
+&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(\left( theTrigFunSquaredReduced \right)+ theRestFromTrigFun\right) {\text d} \theta\\\\
+&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(simplifiedIntegrand\right) {\text d} \theta\\\\
 &=&\displaystyle \frac{1}{2}\left[ theIndefiniteIntegral\right]_{0}^{2\pi}\\\\
 &=&\displaystyle \frac{1}{2}\left(theDifferenceAtTwoPi-\left(theDifferenceAtZero\right)\right)\\\\
 &=&\displaystyle \frac{1}{2}\left(theDifferenceSimplified\right)\\\\

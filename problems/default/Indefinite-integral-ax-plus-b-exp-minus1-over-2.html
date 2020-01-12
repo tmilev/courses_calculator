@@ -69,8 +69,8 @@ b2 = 2*b;
 aoverbtwo = a/btwo;
 oneovera=1/a;
 poverqplus1 = (-1/2) + 1;
-diffU= a \diff x;
-diffX= 1/a \diff u;
+diffU= a {\text d} x;
+diffX= 1/a {\text d} u;
 outTerm = (1/a)/poverqplus1;
 inTerm = a x + b;
 oneoverAtimesInt=1/a \int;
@@ -83,10 +83,10 @@ integrandU=\frac{1}{u^{-poverq}}\frac{1}{a} ;
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int f \diff x&=&\displaystyle  \int \left( integrandU\right) \diff u
+\displaystyle \int f {\text d} x&=&\displaystyle  \int \left( integrandU\right) {\text d} u
 &&\displaystyle {\begin{array}{l}\text{Set } u=inTerm \\\\
-\diff u=diffU \\ \diff x=diffX\end{array} }  \\\\
-&=&\displaystyle  oneoverAtimesInt u^{poverq} \diff u    &&\displaystyle \text{ } \\\\
+{\text d} u=diffU \\ {\text d} x=diffX\end{array} }  \\\\
+&=&\displaystyle  oneoverAtimesInt u^{poverq} {\text d} u    &&\displaystyle \text{ } \\\\
 &=&\displaystyle  oneovera\frac{ (inTerm)^{poverq+1}}{poverq+1} + C    &&\displaystyle \text{ } \\\\
 &=&\displaystyle  finalAnswer + C    &&\displaystyle \text{ } \\\\
 \end{array}

@@ -81,8 +81,8 @@ outTerm = A/a;
 nplus1= n+1;
 term = a x + b;
 poverqplus1 = poverq + 1;
-diffX=1/a\diff u;
-diffU=a\diff x;
+diffX=1/a{\text d} u;
+diffU=a{\text d} x;
 term1 = 1/(a*poverqplus1);
 term2 = (a rightPoint + b)^poverqplus1;
 term3 = (a leftPoint + b)^poverqplus1;
@@ -98,9 +98,9 @@ rightSub= (a leftPoint + b)^{poverqplus1};
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int_{leftPoint}^{rightPoint} ( term)^{poverq} \diff x   &=&\displaystyle \int u^{poverq}diffX &&
+\displaystyle \int_{leftPoint}^{rightPoint} ( term)^{poverq} {\text d} x   &=&\displaystyle \int u^{poverq}diffX &&
 \text{Substitute: } {\begin{array}{rcl}term&=&u \\\\
-diffU&=&\diff u\\ \diff x&=&diffX \end{array}}\\\\
+diffU&=&{\text d} u\\ {\text d} x&=&diffX \end{array}}\\\\
 \displaystyle &=&\displaystyle
 \left[ \frac{1}{a} \left( \frac{u^{poverq +1}}{poverq +1} \right) \right]_{x=leftPoint}^{x=rightPoint}  \\\\
 \displaystyle &=&\displaystyle  \frac{1}{a (poverqplus1)}

@@ -75,11 +75,11 @@ finalAnswer=theIntegral{}x;
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int f \diff x&=&\displaystyle  \frac{1}{(m)}  \int x(m)\cos(m x) \diff x
-&&\displaystyle \text{Note that } (m) \cos(m x) \diff x = \diff \left( \sin(m x) \right)  \\\\
-&=&\displaystyle  \frac{1}{outdenom}  \int x \diff \left( \sin(m x) \right)
+\displaystyle \int f {\text d} x&=&\displaystyle  \frac{1}{(m)}  \int x(m)\cos(m x) {\text d} x
+&&\displaystyle \text{Note that } (m) \cos(m x) {\text d} x = {\text d} \left( \sin(m x) \right)  \\\\
+&=&\displaystyle  \frac{1}{outdenom}  \int x {\text d} \left( \sin(m x) \right)
 &&\displaystyle \text{Set } u = x \text{ and }  v = \sin(m x)  \\\\
-&=&\displaystyle  outterm \left(x \sin(m x) - \int \sin(m x) \diff x \right)
+&=&\displaystyle  outterm \left(x \sin(m x) - \int \sin(m x) {\text d} x \right)
 &&\displaystyle \text{Using } \int u dv = uv - \int v du \\\\
 &=&\displaystyle  outterm \left(finalTerm \right) + C &&\displaystyle \text{ }\\\\
 \end{array}

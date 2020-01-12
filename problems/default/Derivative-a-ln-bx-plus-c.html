@@ -43,11 +43,11 @@ finalAnswer = MakeExpression(MakeRationalFunction(a b/term));
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \frac{\diff }{\diff x}\left(a \ln (term)\right) &=&
-\displaystyle  a  \frac{\diff}{\diff x}\left(\ln \left(term\right)\right)
-&&\displaystyle \text{Use the chain rule: }  \frac{\diff }{\diff x} \left(G(w(x))\right) =
-\frac{ \diff G}{\diff w} \cdot \frac{\diff w}{\diff x}  \\\\
-\displaystyle  &=&\displaystyle   a\frac{ \frac{\diff}{\diff x}\left(term\right) }{term}  
+\displaystyle \frac{{\text d} }{{\text d} x}\left(a \ln (term)\right) &=&
+\displaystyle  a  \frac{{\text d}}{{\text d} x}\left(\ln \left(term\right)\right)
+&&\displaystyle \text{Use the chain rule: }  \frac{{\text d} }{{\text d} x} \left(G(w(x))\right) =
+\frac{ {\text d} G}{{\text d} w} \cdot \frac{{\text d} w}{{\text d} x}  \\\\
+\displaystyle  &=&\displaystyle   a\frac{ \frac{{\text d}}{{\text d} x}\left(term\right) }{term}  
 &&\displaystyle \text{where we've set }  G(w)=\ln w \text{ and } w = term \\\\
 \displaystyle &=&\displaystyle   a\frac{ b }{term}  \\\\
 \displaystyle &=&\displaystyle finalAnswer
