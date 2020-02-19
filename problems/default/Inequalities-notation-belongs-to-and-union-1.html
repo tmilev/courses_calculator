@@ -1,44 +1,44 @@
 <span class="setCalculatorExamProblem">
 </span>
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseBracketForIntervals
 uOne=RandomInteger(-8,8);
 uTwo=uOne+RandomInteger{}(1,10);
 uThree=uTwo+RandomInteger{}(1,10);
-</span>
+</calculatorHidden>
 This is an exercise in mathematical notation. Recall that \(\in\) is the ``belongs to'' symbol and that \(x\in [a,b]\) 
 is read as ``x belongs to the closed interval from \(a\) to \(b\)'' (``closed'' means including the endpoints).
 <br>
 Suppose you have solved a system of inequalities and you got that 
-\(<span class="calculator" noTags="true">  uOne</span>\lt  x\leq <span class="calculator" noTags="true">  uTwo</span>\).
+\(<calculator noTags="true"> uOne</calculator>\lt  x\leq <calculator noTags="true">uTwo</calculator>\).
 <answerCalculatorHighlight>Then \(x\in \)</answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswerZero" buttons="algebra, brackets, intervals">
+<calculatorAnswer id="AlgebraAnswerZero" buttons="algebra, brackets, intervals">
 AlgebraAnswerZero==(uOne, uTwo]
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %UseBracketForIntervals
 TurnOffRules("LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (uOne, uTwo]
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Suppose you have solved another system of inequalities and you got that 
-\(<span class="calculator" noTags="true">  uOne</span>\lt  x\leq <span class="calculator" noTags="true">  uTwo</span>\) 
-<b>or</b> \(<span class="calculator" noTags="true">  uThree</span>\lt x\).
+\(<calculator noTags="true">uOne</calculator>\lt  x\leq <calculator noTags="true">uTwo</calculator>\) 
+<b>or</b> \(<calculator noTags="true">uThree</calculator>\lt x\).
 <answerCalculatorHighlight>Then \(x\in \)</answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra, brackets, intervals">
+<calculatorAnswer id="AlgebraAnswerOne" buttons="algebra, brackets, intervals">
 (AlgebraAnswerOne==((uOne, uTwo]\cup (uThree, \infty )))
 or
 (AlgebraAnswerOne==((uThree, \infty ) \cup (uOne, uTwo]))
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %UseBracketForIntervals
 TurnOffRules("LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (uOne, uTwo]\cup (uThree,\infty)
-</span>
+</calculatorAnswerOnGiveUp>

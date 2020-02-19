@@ -1,91 +1,90 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<setCalculatorExamProblem></setCalculatorExamProblem>
+<calculatorHidden>
 TurnOffApproximations(0);
 TurnOffRules("DegreesToRadians", "ConvertShortDenominatorToNegativePower");
 angle1inDegrees=SelectAtRandom(30,45,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360);
 angle2inDegrees=RandomInteger(1,700);
 angle1inRadians=\pi RandomInteger{}(1,10) /SelectAtRandom{}(1,2,3,4,6,8,12);
 angle2inRadians=RandomInteger{}(1,10) /SelectAtRandom{}(1,2,3,4,6,8,12);
-</span>
+</calculatorHidden>
 Convert from degrees to radians. Do not approximate, use the constant \(\pi\).
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle
 angle1inDegrees^\circ
-</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra, degrees">
+</calculator>\(=\)</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerOne" buttons="algebra, degrees">
 AlgebraAnswerOne==\pi*angle1inDegrees/180
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 \pi*angle1inDegrees/180
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariablesIncludeNamedConstants (AlgebraAnswerOne,\pi,none);
 "<br><b>Numerical approximation of your answer: " + ToString(DoubleValue(AlgebraAnswerOne))+"</b>"; 
-</span>
+</calculatorCommentsBeforeSubmission>
 <br>
 Convert from degrees to radians.
-<answerCalculatorHighlight><span class="calculator">
+<answerCalculatorHighlight><calculator>
 \displaystyle
 angle2inDegrees^\circ
-</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="algebra, degrees, angles">
+</calculator>\(=\)</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerTwo" buttons="algebra, degrees, angles">
 AlgebraAnswerTwo==\pi*angle2inDegrees/180;
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 \pi*angle2inDegrees/180
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariablesIncludeNamedConstants(AlgebraAnswerTwo,\pi,none);
 "<br><b>Numerical approximation of your answer: " + ToString(DoubleValue(AlgebraAnswerTwo))+"</b>";
-</span>
+</calculatorCommentsBeforeSubmission>
 
 <br>
 Convert from radians to degrees. Use the degrees symbol.
-<answerCalculatorHighlight><span class="calculator">
+<answerCalculatorHighlight><calculator>
 \displaystyle
 angle1inRadians
-</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerThree" buttons="algebra, degrees, angles">
+</calculator>\(=\)</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerThree" buttons="algebra, degrees, angles">
 (TurnOnRules("ConvertShortDenominatorToNegativePower");
 
 AlgebraAnswerThree==(180 angle1inRadians/\pi)^\circ
 )_2
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 TurnOnRules("ConvertShortDenominatorToNegativePower");
 (180 angle1inRadians/\pi)^\circ 
-</span>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("DegreesToRadians","ConvertShortDenominatorToNegativePower");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 if (not Contains{} (AlgebraAnswerThree, StringToAtom("\\circ")),
 "<b style='color:red'> Your expression needs to have the degrees symbol \\(\circ\\).",
 "")
-</span>
+</calculatorCommentsBeforeSubmission>
 <br>
 Convert from radians to degrees. Use the degrees symbol.
-<answerCalculatorHighlight><span class="calculator">
+<answerCalculatorHighlight><calculator>
 \displaystyle
 angle2inRadians
-</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerFour" buttons="algebra, degrees, angles">
+</calculator>\(=\)</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerFour" buttons="algebra, degrees, angles">
 AlgebraAnswerFour==(180 angle2inRadians/\pi)^\circ 
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 (180 angle2inRadians/\pi)^\circ 
-</span>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("DegreesToRadians","ConvertShortDenominatorToNegativePower");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 if (not Contains{} (AlgebraAnswerFour, StringToAtom("\\circ")),
 "<b style='color:red'> Your expression needs to have the degrees symbol \\(\circ\\).",
 "");
 TurnOnRules("DegreesToRadians");
 "<br><b>Numerical approximation of your answer: \(" + ToString( DoubleValue{}( AlgebraAnswerFour 180/\pi) )+"^\circ\)</b>";
-</span>
+</calculatorCommentsBeforeSubmission>
