@@ -2,7 +2,6 @@
 </span>
 The function \(f\)  is plotted below.<br>
 <span class="calculatorHidden">
-%UseBracketForIntervals
 a=SelectAtRandom(-3,3);
 b=SelectAtRandom(-2,-1,1,2);
 c=RandomInteger(-3, 3);
@@ -14,9 +13,9 @@ sd= (d/dx (d/dx(f{}x)));
 TurnOffRules("DistributeMultiplication");
 sdNumFactors= FactorOneVarPolyOverRationals{}( Numerator{}(sd));
 fdNumFactors= FactorOneVarPolyOverRationals{}( Numerator{}(fd));
-fdNumZeroes=Sort( SolveFor{}(x, fdNumFactors_1) \cup SolveFor{}(x, fdNumFactors_2));
+fdNumZeroes=Sort( SolveFor{}(x, fdNumFactors_2) \cup SolveFor{}(x, fdNumFactors_3));
 increaseInterval=((-\infty, fdNumZeroes_1)\cup(fdNumZeroes_2, fdNumZeroes_3)\cup (fdNumZeroes_4, \infty));
-inflectionPoint =(SolveFor(x, sdNumFactors_1));
+inflectionPoint =(SolveFor(x, sdNumFactors_2));
 verticalAsymptotes=(a/b-1, a/b+1);
 concaveUpIntervals=((verticalAsymptotes_1, inflectionPoint)\cup(verticalAsymptotes_2, \infty));
 </span>
@@ -141,7 +140,7 @@ EnsureExpressionDependsOnlyOn(xMax,none)
 </span>
 <span class="calculatorCommentsBeforeSubmission">
 %PlotShowJavascriptOnly
-if (Length(xMax)==2, 
+if (Length(xMax) == 2, 
 Plot2D(f{}x,-12, -1+a/b, "red" )
 +Plot2D(f{}x, -1+a/b, 1+a/b, "red" )
 +Plot2D(f{}x,1+a/b, 12, "red" )
