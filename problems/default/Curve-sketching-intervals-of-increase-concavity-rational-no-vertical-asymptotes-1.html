@@ -18,13 +18,8 @@ sdNum= Numerator(secondDerivative);
 sdNumFactors=FactorOneVarPolyOverRationals( Numerator(secondDerivative));
 sdNumFactorLin=sdNumFactors_1;
 sdNumFactorQuad=MakeExpression(MakeRationalFunction (sdNum/sdNumFactorLin));
-sdQuadCfs=CoefficientsPowersOf(x, sdNumFactorQuad);
-sdLinCFs=CoefficientsPowersOf(x, sdNumFactorLin);
-inflectionPoints=Sort(- sdLinCFs_1 /sdLinCFs_2, 
-(-sdQuadCfs_2 -\sqrt((sdQuadCfs_2)^2 -4 sdQuadCfs_1 sdQuadCfs_3))/(2 sdQuadCfs_3),
-(-sdQuadCfs_2 +\sqrt((sdQuadCfs_2)^2-4 sdQuadCfs_1 sdQuadCfs_3))/(2 sdQuadCfs_3)
-) ;
-concaveUpIntervals= (inflectionPoints_1, inflectionPoints_2)\cup (inflectionPoints_3, \infty)  ;
+inflectionPoints = Sort(SolveFor( x, sdNumFactorQuad));
+concaveUpIntervals = (inflectionPoints_1, inflectionPoints_2)\cup (inflectionPoints_3, \infty)  ;
 TurnOffRules("DistributeMultiplication");
 </span>
 
