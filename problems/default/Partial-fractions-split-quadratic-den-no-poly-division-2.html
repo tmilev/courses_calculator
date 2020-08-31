@@ -16,7 +16,7 @@ frac1=(UnivariatePartialFractions(f))_1;
 frac2=(UnivariatePartialFractions(f))_2;
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
-"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "IntegrateBlockIIaIIIa");
+"IntegratePartialFractions", "CommonDenominator","CommonDenominatorSimple", "CommonDenominatorOneNonFraction", "IntegrateBlockIIaIIIa");
 </span>
 
 Split into partial fractions.
@@ -38,7 +38,7 @@ or
 <span class="calculatorCommentsBeforeInterpretation">
 TurnOffRules
 ("ConvertShortDenominatorToNegativePower",
-"CommonDenominator", "CommonDenominatorOneNonFraction"
+"CommonDenominator",CommonDenominatorSimple, "CommonDenominatorOneNonFraction"
 );
 </span>
 

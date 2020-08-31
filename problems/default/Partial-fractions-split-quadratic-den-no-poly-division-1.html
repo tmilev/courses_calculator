@@ -28,16 +28,13 @@ Split into partial fractions.
 <textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
 (
 answerList=GetSummandList(AlgebraAnswer);
-x=(10!+1)/5!;
+x=(10!+1)/5!; 
 Sort(answerList) - Sort(frac1,frac2)==0
 )_3
 </textarea>
 <calculatorCommentsBeforeInterpretation>
 TurnOffRules
-("IntegratePowerRule", 
-"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
-"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
-"ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "ConvertShortDenominatorToNegativePower");
+("ConvertShortDenominatorToNegativePower", "CommonDenominator", "CommonDenominatorSimple", "CommonDenominatorOneNonFraction");
 </calculatorCommentsBeforeInterpretation>
 
 <calculatorCommentsBeforeSubmission>

@@ -13,7 +13,10 @@ B=RandomInteger{}((-4,-1),(1,4));
 C=RandomInteger{}((-4,-1),(1,4));
 1/(a-(h/g));
 fDenMultipliedOut=MakeExpression(MakeRationalFunction(  A/(g x-h)+(B x+C)/(x-a)^2));
-TurnOffRules("DistributeMultiplication", "ConvertShortDenominatorToNegativePower", "CommonDenominator", "CommonDenominatorOneNonFraction");
+TurnOffRules("DistributeMultiplication", 
+"ConvertShortDenominatorToNegativePower", 
+"CommonDenominator", CommonDenominatorSimple,
+"CommonDenominatorOneNonFraction");
 f=(Numerator{}fDenMultipliedOut)/( (g x-h)(x-a)^2  );
 </span>
 
@@ -33,7 +36,7 @@ Sort((theList=GetSummandList(\sum (UnivariatePartialFractions(f))); x=12!+1; the
 TurnOffRules
 ("DistributeMultiplication",
 "ConvertShortDenominatorToNegativePower",
-"CommonDenominator", "CommonDenominatorOneNonFraction"
+"CommonDenominator", CommonDenominatorSimple, "CommonDenominatorOneNonFraction"
 );
 </span>
 

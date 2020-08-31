@@ -12,7 +12,7 @@ g=RandomInteger{}((-5,-1),(1,5));
 h=RandomInteger{}(-5,5);
 1/a+1/b;
 f=A/(x-a)+B/(x-b)+g x^2+ h x+c ;
-TurnOffRules("ConvertShortDenominatorToNegativePower", "CommonDenominator", "CommonDenominatorOneNonFraction");
+TurnOffRules("ConvertShortDenominatorToNegativePower", "CommonDenominator", CommonDenominatorSimple, "CommonDenominatorOneNonFraction");
 </span>
 
 Split into partial fractions.
@@ -30,7 +30,7 @@ Sort((theList=GetSummandList(\sum (UnivariatePartialFractions(f))); x=12!+1; the
 <span class="calculatorCommentsBeforeInterpretation">
 TurnOffRules
 ("ConvertShortDenominatorToNegativePower",
-"CommonDenominator", "CommonDenominatorOneNonFraction"
+"CommonDenominator",CommonDenominatorSimple, "CommonDenominatorOneNonFraction"
 );
 </span>
 

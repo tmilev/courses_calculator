@@ -12,7 +12,7 @@ B=RandomInteger{}((-4,-1),(1,4));
 C=RandomInteger{}((-4,-1),(1,4));
 1/((a-b)(a-c)(b-c));
 fDenMultipliedOut=A/(g x-a)+B/(x-b)+C/(x-c);
-TurnOffRules("DistributeMultiplication", "ConvertShortDenominatorToNegativePower", "CommonDenominator", "CommonDenominatorOneNonFraction");
+TurnOffRules("DistributeMultiplication", "ConvertShortDenominatorToNegativePower", "CommonDenominator",CommonDenominatorSimple, "CommonDenominatorOneNonFraction");
 f=(Numerator{}fDenMultipliedOut)/( (g x-a)(x-b)(x-c)  )
 </span>
 
@@ -32,7 +32,7 @@ Sort((theList=GetSummandList(\sum (UnivariatePartialFractions(f))); x=12!+1; the
 TurnOffRules
 ("DistributeMultiplication",
 "ConvertShortDenominatorToNegativePower",
-"CommonDenominator", "CommonDenominatorOneNonFraction"
+"CommonDenominator", CommonDenominatorSimple, "CommonDenominatorOneNonFraction"
 );
 </span>
 
