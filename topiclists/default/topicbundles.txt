@@ -1047,9 +1047,6 @@ Title: Find extremum of quadratic, text problem.
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-function-maximum-or-minimum
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-max-min-word-problem-1
 Problem: problems/Quadratic-find-max-min-quadratic-text-problem-1.html
-
-
-
 BundleEnd: QuadraticFunctions_NoFactorizationAndVieta
 
 BundleBegin: QuadraticFunctions_ExtremaViaCompletingTheSquare_Exercises

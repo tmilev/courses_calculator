@@ -108,7 +108,6 @@ TopicBundle: QuadraticFunctions_NoFactorizationAndVieta
 
 Section: Factorization of polynomials
 
-
 TopicBundle: PolynomialFactorization_QuadraticPolynomialFactorization
 
 TopicBundle: PolynomialFactorizationTheory_Lecture 

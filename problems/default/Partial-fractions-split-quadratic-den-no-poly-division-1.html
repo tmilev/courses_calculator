@@ -1,6 +1,6 @@
 <span class="setCalculatorExamProblem">
 </span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 a=RandomInteger{}((-1,-4),(1,4));
@@ -14,16 +14,16 @@ h=RandomInteger{}( -2,-10);
 f=\frac{A x+B}{(x-a)(x-b)};
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
-"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
+"IntegratePartialFractions", "CommonDenominator","CommonDenominatorSimple", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
 frac1=(UnivariatePartialFractions(f))_1;
 frac2=(UnivariatePartialFractions(f))_2;
-</span>
+</calculatorHidden>
 
 Split into partial fractions.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle f   
-</span>\(= \)
+</calculator>\(= \)
 </answerCalculatorHighlight>
 <textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
 (
@@ -32,18 +32,18 @@ x=(10!+1)/5!;
 Sort(answerList) - Sort(frac1,frac2)==0
 )_3
 </textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "ConvertShortDenominatorToNegativePower");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 frac1+frac2
-</span>
+</calculatorAnswerOnGiveUp>
