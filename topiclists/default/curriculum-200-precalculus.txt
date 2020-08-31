@@ -103,7 +103,11 @@ Section: Exponential and logarithmic models
 TopicBundle: Logarithms_LogarithmicModels_TheoryAndExercises
 
 Chapter: Polynomial equations and inequalities
+Section: Quadratic Functions
+TopicBundle: QuadraticFunctions_NoFactorizationAndVieta
+
 Section: Factorization of polynomials
+
 
 TopicBundle: PolynomialFactorization_QuadraticPolynomialFactorization
 

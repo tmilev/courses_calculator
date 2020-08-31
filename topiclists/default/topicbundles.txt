@@ -1031,6 +1031,12 @@ Title: Compute parabola with given vertex and passing through a point
 SlidesSource: freecalc/modules/quadratic-functions/write-equation-parabola-given-vertex-and-point-example-1
 Problem: problems/Quadratic-compute-parabola-given-vertex-passing-through-point-1.html
 
+Title: Solve a quadratic equation
+SlidesSource: freecalc/modules/quadratic-functions/quadratic-equation-solution-example-2
+SlidesSource: freecalc/modules/quadratic-functions/quadratic-equation-solution-example-1
+SlidesSource: freecalc/modules/quadratic-functions/quadratic-equation-solution-example-3
+Problem: problems/solve_quadratic_equation_rational_roots_non_standard_form.html
+
 Title: Find \(x\)-intercepts of a quadratic
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-equation-solution-example-2
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-equation-solution-example-1
@@ -1041,6 +1047,9 @@ Title: Find extremum of quadratic, text problem.
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-function-maximum-or-minimum
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-max-min-word-problem-1
 Problem: problems/Quadratic-find-max-min-quadratic-text-problem-1.html
+
+
+
 BundleEnd: QuadraticFunctions_NoFactorizationAndVieta
 
 BundleBegin: QuadraticFunctions_ExtremaViaCompletingTheSquare_Exercises
