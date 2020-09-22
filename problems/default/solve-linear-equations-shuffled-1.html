@@ -5,12 +5,18 @@ Solve the equations.
 TurnOffRules (AddTerms, DistributeMultiplication, DistributeMultiplicationConstants);
 leftHandSide1 = RandomInteger((-10,-1), (1,10));
 rightHandSide1 = RandomInteger((-10,-1), (1,10)) x + RandomInteger((-10,-1), (1,10)) x;
-desiredAnswer1 = SolveFor(x, leftHandSide1-rightHandSide1);
+desiredAnswer1 = SolveFor(x, 
+(TurnOnRules(DistributeMultiplicationConstants, AddTerms, DistributeMultiplication); 
+leftHandSide1-rightHandSide1)_2
+);
 
 leftHandSide2 = RandomInteger((-10,-1), (1,10)) x + RandomInteger((-10,-1), (1,10));
 rightHandSide2 = RandomInteger((-10,-1), (1,10)) x + RandomInteger((-10,-1), (1,10)) ;
 1/CoefficientOf(x, leftHandSide2-rightHandSide2);
-desiredAnswer2 = SolveFor(x, leftHandSide2-rightHandSide2);
+desiredAnswer2 = SolveFor(x, 
+(TurnOnRules(DistributeMultiplicationConstants, AddTerms, DistributeMultiplication); 
+leftHandSide2-rightHandSide2)_2
+);
 
 
 leftHandSide3 =RandomInteger(2,10) (  RandomInteger((-10,-1), (1,10)) x + RandomInteger((-10,-1), (1,10)));
@@ -32,6 +38,11 @@ answer1 === desiredAnswer1
 desiredAnswer1
 </calculatorAnswerOnGiveUp>
 
+<calculatorCommentsBeforeSubmission>
+    EnsureExpressionDependsOnlyOn(answer1, none);
+</calculatorCommentsBeforeSubmission>
+
+
 <answerCalculatorHighlight>
 \(<calculator noTags = "true" buttons = "none">leftHandSide2 </calculator>=
 <calculator noTags="true" buttons="none">rightHandSide2</calculator>\),
@@ -45,6 +56,10 @@ answer2 === desiredAnswer2
 <calculatorAnswerOnGiveUp>
 desiredAnswer2
 </calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+    EnsureExpressionDependsOnlyOn(answer2, none);
+</calculatorCommentsBeforeSubmission>
+
 
 <answerCalculatorHighlight>
 \(<calculator noTags = "true" buttons = "none">leftHandSide3 </calculator>=
@@ -59,4 +74,7 @@ answer3 === desiredAnswer3
 <calculatorAnswerOnGiveUp>
 desiredAnswer3
 </calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+    EnsureExpressionDependsOnlyOn(answer3, none);
+</calculatorCommentsBeforeSubmission>
 
