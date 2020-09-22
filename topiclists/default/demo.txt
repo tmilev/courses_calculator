@@ -1,0 +1,18 @@
+SlidesSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Lecture-header.tex
+HomeworkSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Homework-header.tex
+LoadTopicBundles: topiclists/topicbundles.txt
+
+Chapter: Linear equations
+Topic: <lectureTag>&#8466;</lectureTag>Linear equations
+
+Title: Solving linear equations, basic.
+Problem: problems/solve-linear-equations-1.html
+
+Title: Solving linear equations, leading coefficient non-unit.
+Problem: problems/solve-linear-equations-leading-coefficients-1.html
+
+Title: Solving linear equations, non-integer answers
+Problem: problems/solve-linear-equations-non-integer-answers-1.html
+
+Title: Solving linear equations, shuffled
+Problem: problems/solve-linear-equations-shuffled-1.html

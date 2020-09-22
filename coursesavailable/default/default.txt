@@ -1,7 +1,11 @@
+Html: demo.html
+Topics: demo.txt
+Title: Demo
+RoughDraft: true
+
 Html: curriculum-100-arithmetics.html
 Topics: curriculum-100-arithmetics.txt
 Title: Arithmetics
-
 
 Html: curriculum-200-precalculus.html
 Topics: curriculum-200-precalculus.txt

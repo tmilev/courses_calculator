@@ -1,0 +1,62 @@
+<span class="setCalculatorExamProblem">
+</span>
+Solve the equations.
+<span class="calculatorHidden">
+a1 = RandomInteger(2,7);
+b1 = RandomInteger(2,10);
+c1 = RandomInteger(2,10);
+desiredAnswer1 = (c1-b1)/a1;
+
+a2 = RandomInteger(2,7);
+b2 = RandomInteger(-10,-1);
+c2 = RandomInteger(2,10);
+desiredAnswer2 = (c2-b2)/a2;
+
+a3 = RandomInteger((-9,-2),(2,9));
+b3 = RandomInteger((-10,-1), (1,10));
+c3 = RandomInteger((-10,-1), (1,10));
+desiredAnswer3 = (c3-b3)/a3;
+
+TurnOffRules (AddRationals, AddTerms);
+</span>
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">a1 x +b1 </calculator>=
+<calculator noTags="true" buttons="none">c1</calculator>\),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\(x=\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer1" buttons = "none" layout = "horizontal">
+answer1 === desiredAnswer1
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+desiredAnswer1
+</calculatorAnswerOnGiveUp>
+
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">a2 x +b2 </calculator>=
+<calculator noTags="true" buttons="none">c2</calculator>\),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\(x=\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer2" buttons = "none" layout = "horizontal">
+answer2 === desiredAnswer2
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+desiredAnswer2
+</calculatorAnswerOnGiveUp>
+
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">a3 x +b3 </calculator>=
+<calculator noTags="true" buttons="none">c3</calculator>\),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\(x=\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer3" buttons = "none" layout = "horizontal">
+answer3 === desiredAnswer3
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+desiredAnswer3
+</calculatorAnswerOnGiveUp>

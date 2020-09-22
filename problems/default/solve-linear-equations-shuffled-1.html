@@ -1,0 +1,62 @@
+<span class="setCalculatorExamProblem">
+</span>
+Solve the equations.
+<span class="calculatorHidden">
+TurnOffRules (AddTerms, DistributeMultiplication, DistributeMultiplicationConstants);
+leftHandSide1 = RandomInteger((-10,-1), (1,10));
+rightHandSide1 = RandomInteger((-10,-1), (1,10)) x + RandomInteger((-10,-1), (1,10)) x;
+desiredAnswer1 = SolveFor(x, leftHandSide1-rightHandSide1);
+
+leftHandSide2 = RandomInteger((-10,-1), (1,10)) x + RandomInteger((-10,-1), (1,10));
+rightHandSide2 = RandomInteger((-10,-1), (1,10)) x + RandomInteger((-10,-1), (1,10)) ;
+1/CoefficientOf(x, leftHandSide2-rightHandSide2);
+desiredAnswer2 = SolveFor(x, leftHandSide2-rightHandSide2);
+
+
+leftHandSide3 =RandomInteger(2,10) (  RandomInteger((-10,-1), (1,10)) x + RandomInteger((-10,-1), (1,10)));
+rightHandSide3 = RandomInteger((-10,-1), (1,10));
+desiredAnswer3 = SolveFor(x, (TurnOnRules(DistributeMultiplicationConstants); leftHandSide3-rightHandSide3)_2);
+</span>
+
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">leftHandSide1 </calculator>=
+<calculator noTags="true" buttons="none">rightHandSide1</calculator>\),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\(x=\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer1" buttons = "none" layout = "horizontal">
+answer1 === desiredAnswer1
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+desiredAnswer1
+</calculatorAnswerOnGiveUp>
+
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">leftHandSide2 </calculator>=
+<calculator noTags="true" buttons="none">rightHandSide2</calculator>\),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\(x=\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer2" buttons = "none" layout = "horizontal">
+answer2 === desiredAnswer2
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+desiredAnswer2
+</calculatorAnswerOnGiveUp>
+
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">leftHandSide3 </calculator>=
+<calculator noTags="true" buttons="none">rightHandSide3</calculator>\),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\(x=\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer3" buttons = "none" layout = "horizontal">
+answer3 === desiredAnswer3
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+desiredAnswer3
+</calculatorAnswerOnGiveUp>
+

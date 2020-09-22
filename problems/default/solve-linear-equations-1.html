@@ -1,0 +1,55 @@
+<span class="setCalculatorExamProblem">
+</span>
+Compute the sums. 
+<span class="calculatorHidden">
+a1 = RandomInteger(2,7);
+b1 = a1 *RandomInteger(2,10);
+a2 = RandomInteger(4,12);
+b2 = a2 * RandomInteger(3,12);
+a3 = RandomInteger(-12,12);
+b3 = RandomInteger(-12,-1);
+c3 = b3-a3;
+a4 = RandomInteger(1,12);
+b4 = RandomInteger(-12,12);
+c4 = a4+b4;
+TurnOffRules (AddRationals, AddTerms);
+</span>
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">a1 x </calculator>=<calculator noTags="true" buttons="none">b1</calculator>\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer1" buttons = "none" layout = "horizontal">
+answer1 === b1/a1
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+b1/a1
+</calculatorAnswerOnGiveUp>
+
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">a2 x </calculator>=<calculator noTags="true" buttons="none">b2</calculator>\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer2" buttons = "none" layout = "horizontal">
+answer2 === b2/a2
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+b2/a2
+</calculatorAnswerOnGiveUp>
+
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">a3 +x </calculator>=<calculator noTags="true" buttons="none">b3</calculator>\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer3" buttons = "none" layout = "horizontal">
+answer3 === b3-a3
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+c3
+</calculatorAnswerOnGiveUp>
+<answerCalculatorHighlight>
+
+\(<calculator noTags = "true" buttons = "none">x -a4</calculator>=<calculator noTags="true" buttons="none">b4</calculator>\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer4" buttons = "none" layout = "horizontal">
+answer4 === c4
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+c4
+</calculatorAnswerOnGiveUp>
