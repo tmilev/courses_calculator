@@ -2,7 +2,7 @@ SlidesSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Lecture-header.te
 HomeworkSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Homework-header.tex
 LoadTopicBundles: topiclists/topicbundles.txt
 
-Chapter: Linear equations
+Chapter: Polynomial equations
 Topic: <lectureTag>&#8466;</lectureTag>Linear equations
 
 Title: Solving linear equations, basic.
@@ -14,5 +14,9 @@ Problem: problems/solve-linear-equations-leading-coefficients-1.html
 Title: Solving linear equations, non-integer answers
 Problem: problems/solve-linear-equations-non-integer-answers-1.html
 
-Title: Solving linear equations, shuffled
+Title: Solving linear equations, shuffled.
 Problem: problems/solve-linear-equations-shuffled-1.html
+
+Topic: <lectureTag>&#8466;</lectureTag>Quadratic equations
+Title: Solve a quadratic equation
+Problem: problems/solve_quadratic_equation_rational_roots_non_standard_form.html
