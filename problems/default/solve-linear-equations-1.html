@@ -1,7 +1,7 @@
 <span class="setCalculatorExamProblem">
 </span>
 Solve. 
-<span class="calculatorHidden">
+<calculatorHidden>
 a1 = RandomInteger(2,7);
 b1 = a1 *RandomInteger(2,10);
 a2 = RandomInteger(4,12);
@@ -12,8 +12,9 @@ c3 = b3-a3;
 a4 = RandomInteger(1,12);
 b4 = RandomInteger(-12,12);
 c4 = a4+b4;
+
 TurnOffRules (AddRationals, AddTerms);
-</span>
+</calculatorHidden>
 <answerCalculatorHighlight>
 \(<calculator noTags = "true" buttons = "none">a1 x </calculator>=<calculator noTags="true" buttons="none">b1</calculator>\),
 
@@ -75,4 +76,34 @@ c4
 </calculatorAnswerOnGiveUp>
 <calculatorCommentsBeforeSubmission>
     EnsureExpressionDependsOnlyOn(answer4, none);
+</calculatorCommentsBeforeSubmission>
+
+<br>
+<b>If I were a teacher wanting to select numbers, here would be one potential interface.</b>
+<span style="color:red"> While the previous problems are fully functional at the time of writing, this one is not: 
+there are no means of taking a snapshot of the teacher-selected numbers [yet].</span>
+<calculator noTags = "true">
+a5 = MakeInputBox(name = a5, value = 3);
+b5 = MakeInputBox(name = b5, value = 4);
+c5 = MakeInputBox(name = c5, value = 5);
+</calculator>
+<calculatorHidden>desiredAnswer5 = (c5-b5)/a5;
+</calculatorHidden>
+
+
+<answerCalculatorHighlight>
+\(<calculator noTags = "true" buttons = "none">a5 x +b5 </calculator>=
+<calculator noTags="true" buttons="none">c5</calculator>\),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\(x=\)
+</answerCalculatorHighlight>
+<calculatorAnswer id = "answer5" buttons = "none" layout = "horizontal">
+answer5 === desiredAnswer5
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+desiredAnswer5
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+    EnsureExpressionDependsOnlyOn(answer5, none);
 </calculatorCommentsBeforeSubmission>
