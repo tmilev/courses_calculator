@@ -2,6 +2,40 @@ SlidesSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Lecture-header.te
 HomeworkSourceHeader: LaTeX-materials/Curriculum-100-Arithmetics/Homework-header.tex
 LoadTopicBundles: topiclists/topicbundles.txt
 
+Chapter: Numbers and operations
+Section: Decimal notation 
+Topic: Recurring decimal notation
+
+Title: Convert recurring decimal notation to rational number.
+Problem: problems/series-add-infinite-decimal-to-rational-simple-1.html
+
+Title: [Advanced topic] Convert recurring decimal notation to rational number.
+Problem: problems/Series-add-infinite-decimal-to-rational-1.html
+
+Topic: Exponents basics
+
+Title: Exponent evaluation: basics.
+Problem: problems/evaluate-exponent-basic-1.html
+
+Title: Exponent evaluation: base is negative, exponent is positive integer.
+Problem: problems/evaluate-exponent-basic-negative-base-1.html
+
+Title: Exponent evaluation: base is zero.
+Problem: problems/evaluate-exponent-basic-base-is-zero-1.html
+
+Title: Exponent evaluation: easy but tricky cases.
+Problem: problems/evaluate-exponent-basic-corner-cases-1.html
+
+Topic: Powers of 10
+Title: Rewrite power as power of 10
+Problem: problems/evaluate-exponent-basic-rewrite-as-power-of-ten-1.html
+
+Title: Convert powers of 10 to decimal notation
+Problem: problems/evaluate-exponent-basic-power-of-ten-to-decimal-notation-1.html
+
+Title: Guess power of 10
+Problem: problems/evaluate-exponent-basic-logarithmic-equation-most-basic-form-1.html
+
 Chapter: Polynomial equations
 Topic: <lectureTag>&#8466;</lectureTag>Linear equations
 
@@ -20,3 +54,6 @@ Problem: problems/solve-linear-equations-shuffled-1.html
 Topic: <lectureTag>&#8466;</lectureTag>Quadratic equations
 Title: Solve a quadratic equation
 Problem: problems/solve_quadratic_equation_rational_roots_non_standard_form.html
+
+%Title: Graph of a parabola
+%Problem: problems/graph-of-parabola-1.html

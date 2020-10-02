@@ -1,0 +1,74 @@
+Rewrite the power of 10 to decimal notation.
+<calculatorHidden>
+TurnOffApproximations(0);
+power1 = RandomInteger (2,3);
+power2 = RandomInteger (4,7);
+power3 = RandomInteger (6,10);
+total1 = 10^power1;
+total2 = 10^power2;
+total3 = 10^power3;
+TurnOffRules(PowerIntegerByInteger, PowerRationalByRational);
+</calculatorHidden>
+
+<answerCalculatorHighlight>
+    \(<calculator noTags="true">
+        10^power1
+    </calculator>
+    =\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerOne" layout="horizontal" buttons="none">
+AlgebraAnswerOne - total1 === 0
+</calculatorAnswer>
+
+<calculatorAnswerOnGiveUp>
+total1
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerIntegerByInteger, PowerRationalByRational);
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerOne,none);
+</calculatorCommentsBeforeSubmission>
+
+
+<answerCalculatorHighlight>
+    \(<calculator noTags="true">
+        10^power2
+    </calculator>
+    =\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerTwo" layout="horizontal" buttons="none">
+AlgebraAnswerTwo - total2 === 0
+</calculatorAnswer>
+
+<calculatorAnswerOnGiveUp>
+total2
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerIntegerByInteger, PowerRationalByRational);
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerTwo,none);
+</calculatorCommentsBeforeSubmission>
+
+
+<answerCalculatorHighlight>
+    \(<calculator noTags="true">
+        10^power3
+    </calculator>
+    =\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerThree" layout="horizontal" buttons="none">
+AlgebraAnswerThree - total3 === 0
+</calculatorAnswer>
+
+<calculatorAnswerOnGiveUp>
+total3
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerIntegerByInteger, PowerRationalByRational);
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerThree,none);
+</calculatorCommentsBeforeSubmission>
+

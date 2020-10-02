@@ -1,0 +1,81 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+Solve for \(x\) in the following quadratic equation.
+<calculatorHidden>
+%UseLnInsteadOfLog
+TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+uOneDenominator = RandomInteger(1,3);
+uTwoDenominator = RandomInteger(1,2);
+extraFactor = RandomInteger(2,3);
+rightHandSide = extraFactor * RandomInteger((-5,-1), (1,5)); 
+uOne = RandomInteger(-7,7) / uOneDenominator;
+uTwo = RandomInteger(-7,7) / uTwoDenominator;
+1/(uOne-uTwo);
+leftSide = Polynomialize( extraFactor * uOneDenominator*uTwoDenominator (x-uOne)(x-uTwo)) + rightHandSide ;
+
+bCF = (CoefficientsPowersOf(x,leftSide))_2;
+aCF = (CoefficientsPowersOf(x,leftSide))_3;
+
+thePlot = PlotGrid{}(0)+
+Plot2D(leftSide, (Sort( uOne, uTwo))_1 - 3/ aCF, (Sort( uOne, uTwo))_2 + 3/aCF, red, 2)+
+
+Plot2D(rightHandSide, (Sort( uOne, uTwo))_1 - 3extraFactor, (Sort( uOne, uTwo))_2 + 3 extraFactor, green, 2)
+;
+
+</calculatorHidden>
+The quadratic <calculator>
+\displaystyle
+leftSide   
+</calculator> \(=\)<calculator>rightHandSide</calculator>
+<answerCalculatorHighlight>
+Separate the two answers by comma. \(x=\)
+</answerCalculatorHighlight>
+<textarea class="calculatorAnswer" id="answer" buttons="algebra, complex">
+Sort(answer) - Sort(uOne, uTwo) == (0,0)
+</textarea>
+<calculatorCommentsBeforeSubmission>
+%PlotShowJavascriptOnly    
+
+EnsureExpressionDependsOnlyOn(answer, none);
+if (IsNonEmptySequence {}answer, thePlot
++
+PlotPoint( (answer_1,rightHandSide ), blue)+
+PlotPoint( (answer_2,rightHandSide ), blue)+PlotSetId("thePlot") , "<br><b style='color:red'>Did you forget to use comma?</b>"); 
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
+Sort(uOne, uTwo)
+</calculatorAnswerOnGiveUp>
+
+<br>
+
+Is there a common factor between all coefficient in this equation?
+
+<answerCalculatorHighlight>
+Common factor between all coefficients:
+</answerCalculatorHighlight>
+
+<textarea class="calculatorAnswer" id="answerCommonFactor" buttons="none">
+answerCommonFactor- extraFactor == 0
+</textarea>
+<calculatorCommentsBeforeSubmission>
+%PlotShowJavascriptOnly    
+EnsureExpressionDependsOnlyOn(answerCommonFactor, none);
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
+extraFactor
+</calculatorAnswerOnGiveUp>
+    
+    
+
+
+
+
+<br>The plot below shows the plot of the left hand side and the right hand side.
+<br>
+<calculator>
+thePlot+PlotSetId("thePlot")
+</calculator>
+
+
+

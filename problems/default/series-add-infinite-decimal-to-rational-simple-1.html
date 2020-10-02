@@ -1,0 +1,134 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+<calculatorHidden>
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+c=RandomInteger{}(1,3);
+</calculatorHidden>
+Convert the recurring decimal notation to a rational number (quotient of two integers).
+
+<answerCalculatorHighlight>
+\(
+0.\overline{
+<calculator noTags="true">
+c
+</calculator>
+}=0.
+<calculator noTags="true">
+c</calculator>
+<calculator noTags="true">
+c
+</calculator>
+<calculator noTags="true">
+c
+</calculator>
+\dots
+=
+\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerZero" buttons="none" layout="horizontal">
+c/9 -AlgebraAnswerZero ==0
+</calculatorAnswer>
+
+
+<calculatorAnswerOnGiveUp>
+c/9
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerZero,divergent);
+</calculatorCommentsBeforeSubmission>
+
+
+
+<calculatorHidden>
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+a=RandomInteger{}(0,9);
+b=RandomInteger{}(1,3);
+</calculatorHidden>
+
+<answerCalculatorHighlight>
+\(
+<calculator noTags="true">
+DoubleValue{}(a)
+</calculator>.
+\overline{
+<calculator noTags="true">
+b
+</calculator>
+}=
+<calculator noTags="true">
+a
+</calculator>.
+<calculator noTags="true">
+b
+</calculator>
+<calculator noTags="true">
+b
+</calculator>
+<calculator noTags="true">
+b
+</calculator>
+\dots
+=
+\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerOne" buttons="none" layout="horizontal">
+a+ b* 1/9-AlgebraAnswerOne ==0
+</calculatorAnswer>
+
+
+<calculatorAnswerOnGiveUp>
+a+b* 1/9
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerOne,divergent);
+</calculatorCommentsBeforeSubmission>
+
+
+
+<calculatorHidden>
+%UseLnInsteadOfLog
+TurnOffApproximations(0);
+p=RandomInteger{}(0,9);
+q=RandomInteger{}(0,9);
+r=RandomInteger{}(1,8);
+</calculatorHidden>
+
+
+<answerCalculatorHighlight>
+\(
+<calculator noTags="true">p</calculator>.<calculator noTags="true">q</calculator>
+\overline{
+<calculator noTags="true">
+r
+</calculator>
+}=
+<calculator noTags="true">
+p
+</calculator>.
+<calculator noTags="true">
+q
+</calculator>
+<calculator noTags="true">
+r
+</calculator>
+<calculator noTags="true">
+r
+</calculator>
+\dots
+=
+\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerTwo" buttons="none" layout="horizontal">
+p+q/10+  r/90-AlgebraAnswerTwo ==0
+</calculatorAnswer>
+
+
+<calculatorAnswerOnGiveUp>
+p+q/10 + r/90
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerTwo,divergent);
+</calculatorCommentsBeforeSubmission>

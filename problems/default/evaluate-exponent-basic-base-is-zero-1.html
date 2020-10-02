@@ -1,0 +1,53 @@
+Evaluate without a calculator. These cases may be tricky!
+<calculatorHidden>
+TurnOffApproximations(0);
+base1 = 0;
+exponent1 = RandomInteger (1,100000);
+base2 =0;
+exponent2 = 0;
+</calculatorHidden>
+
+<answerCalculatorHighlight>
+    \(
+    <calculator noTags="true">
+        base1
+    </calculator>^{
+    <calculator noTags="true">
+        exponent1
+    </calculator>}
+    =\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerOne" layout="horizontal" buttons="none">
+base1^exponent1 === AlgebraAnswerOne
+</calculatorAnswer>
+
+
+<calculatorAnswerOnGiveUp>
+base1^exponent1
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerOne,none);
+</calculatorCommentsBeforeSubmission>
+
+
+<answerCalculatorHighlight>
+    \(
+    <calculator noTags="true">
+        base2
+    </calculator>^
+    <calculator noTags="true">
+        exponent2
+    </calculator>
+    =\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerTwo" layout="horizontal" buttons="none">
+base2^exponent2 === AlgebraAnswerTwo
+</calculatorAnswer>
+
+
+<calculatorAnswerOnGiveUp>
+base2^exponent2
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerTwo,none);
+</calculatorCommentsBeforeSubmission>

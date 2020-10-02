@@ -1,0 +1,77 @@
+Rewrite as a power of 10.
+<calculatorHidden>
+TurnOffApproximations(0);
+power1 = RandomInteger (2,3);
+power2 = RandomInteger (4,7);
+power3 = RandomInteger (6,10);
+1/ ( (total1-total2)(total2-total3)(total3-total1));
+total1 = 10^power1;
+total2 = 10^power2;
+total3 = 10^power3;
+TurnOffRules(PowerIntegerByInteger, PowerRationalByRational);
+</calculatorHidden>
+
+<answerCalculatorHighlight>
+    \(<calculator noTags="true">
+        total1
+    </calculator>
+    =\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerOne" layout="horizontal" buttons="algebra">
+AlgebraAnswerOne - 10^power1 === 0
+</calculatorAnswer>
+
+<calculatorAnswerOnGiveUp>
+10^power1
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerIntegerByInteger, PowerRationalByRational);
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerOne,none);
+</calculatorCommentsBeforeSubmission>
+
+
+
+<answerCalculatorHighlight>
+    \(<calculator noTags="true">
+        total2
+    </calculator>
+    =\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerTwo" layout="horizontal" buttons="algebra">
+AlgebraAnswerTwo - 10^power2 === 0
+</calculatorAnswer>
+
+<calculatorAnswerOnGiveUp>
+10^power2
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerIntegerByInteger, PowerRationalByRational);
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerTwo,none);
+</calculatorCommentsBeforeSubmission>
+
+
+
+<answerCalculatorHighlight>
+    \(<calculator noTags="true">
+        total3
+    </calculator>
+    =\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="AlgebraAnswerThree" layout="horizontal" buttons="algebra">
+AlgebraAnswerThree - 10^power3 === 0
+</calculatorAnswer>
+
+<calculatorAnswerOnGiveUp>
+10^power3
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
+TurnOffRules(PowerIntegerByInteger, PowerRationalByRational);
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
+EnsureExpressionDependsOnlyOn(AlgebraAnswerThree,none);
+</calculatorCommentsBeforeSubmission>
+
