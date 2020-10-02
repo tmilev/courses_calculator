@@ -53,17 +53,22 @@ Problem: problems/solve-linear-equations-shuffled-1.html
 
 Topic: <lectureTag>&#8466;</lectureTag>Quadratic equations
 Title: Solve a quadratic equation, integer roots.
-Problem: problems/solve_quadratic_equation_integer_roots-1.html
+Problem: problems/solve-quadratic-equation-integer-roots-1.html
+
+Title: Solve a quadratic equation, integer roots and non-trivial content.
+Problem: problems/solve-quadratic-equation-integer-roots-non-trivial-content-1.html
 
 Title: Solve a quadratic equation, integer and rational root.
-Problem: problems/solve_quadratic_equation_rational_and_integer_root-1.html
+Problem: problems/solve-quadratic-equation-rational-and-integer-root-1.html
 
 Title: Solve a quadratic equation, two rational roots.
-Problem: problems/solve_quadratic_equation_two_rational_roots-1.html
+Problem: problems/solve-quadratic-equation-two-rational-roots-1.html
 
+Title: Solve a quadratic equation, two rational roots, non-trivial content.
+Problem: problems/solve-quadratic-equation-two-rational-roots-1-non-trivial-content-1.html
 
 Title: Solve a quadratic equation
-Problem: problems/solve_quadratic_equation_rational_roots_non_standard_form.html
+Problem: problems/solve-quadratic-equation-rational-roots-non-standard-form.html
 
 %Title: Graph of a parabola
 %Problem: problems/graph-of-parabola-1.html

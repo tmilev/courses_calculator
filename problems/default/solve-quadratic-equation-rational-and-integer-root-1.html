@@ -1,0 +1,29 @@
+<span class="setCalculatorExamProblem">
+</span>
+
+Solve the equation.
+<calculatorHidden>
+uOne = RandomInteger((-7,-1), (1,7));
+uTwo = RandomInteger((-7,-1), (1,7)) / RandomInteger{}(2,4);
+denominatorUTwo = Denominator(uTwo);
+1/(1-denominatorUTwo);
+leftSide = denominatorUTwo(x-uOne)(x-uTwo);
+</calculatorHidden>
+<answerCalculatorHighlight>
+\(
+<calculator noTags="true">
+\displaystyle
+leftSide   
+</calculator>=0\) &nbsp;&nbsp;&nbsp;&nbsp;
+\(x_1, x_2=\)
+</answerCalculatorHighlight>
+<calculatorAnswer id="answerOne" buttons="none", layout="horizontal">
+Sort(answerOne) - Sort(uOne, uTwo) == (0,0)
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
+Sort(uOne, uTwo)
+</calculatorAnswerOnGiveUp>
+
+
+
+
