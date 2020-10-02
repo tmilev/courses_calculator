@@ -1,48 +1,48 @@
 <span class="setCalculatorExamProblem">
 </span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 a=RandomInteger{}((1,9),(11,19));
 b=RandomInteger{}(101,999);
-</span>
+</calculatorHidden>
 Convert the cyclic decimal notation to a rational number (quotient of two integers).
 
 <answerCalculatorHighlight>
 \(
-<span class="calculator" noTags="true">
+<calculator noTags="true">
 DoubleValue{}(a/10)
-</span>
+</calculator>
 \overline{
-<span class="calculator" noTags="true">
+<calculator noTags="true">
 b
-</span>
+</calculator>
 }=
-<span class="calculator" noTags="true">
+<calculator noTags="true">
 DoubleValue{}(a/10)
-</span>
-<span class="calculator" noTags="true">
+</calculator>
+<calculator noTags="true">
 b
-</span>
-<span class="calculator" noTags="true">
+</calculator>
+<calculator noTags="true">
 b
-</span>
-<span class="calculator" noTags="true">
+</calculator>
+<calculator noTags="true">
 b
-</span>
+</calculator>
 \dots
 =
 \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 a/10+(1/10000) *b* 1/(1-1/1000)
 -AlgebraAnswer ==0
-</textarea>
+</calculatorAnswer>
 
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 a/10+(1/10000) *b* 1/(1-1/1000)
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,divergent);
-</span>
+</calculatorCommentsBeforeSubmission>
