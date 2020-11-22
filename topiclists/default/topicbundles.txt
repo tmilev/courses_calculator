@@ -1035,7 +1035,7 @@ Title: Solve a quadratic equation
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-equation-solution-example-2
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-equation-solution-example-1
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-equation-solution-example-3
-Problem: problems/solve_quadratic_equation_rational_roots_non_standard_form.html
+Problem: problems/solve-quadratic-equation-rational-roots-non-standard-form.html
 
 Title: Find \(x\)-intercepts of a quadratic
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-equation-solution-example-2
