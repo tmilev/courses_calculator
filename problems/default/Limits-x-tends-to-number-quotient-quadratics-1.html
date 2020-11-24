@@ -1,8 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the limit. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 af= RandomInteger((-5,-1), (1,5));
 bf= af+RandomInteger((-5,-1), (1,5));
 bg= af+RandomInteger((-5,-1), (1,5));
@@ -11,35 +9,35 @@ bg= af+RandomInteger((-5,-1), (1,5));
 f=(x-af)(x-bf);   
 g=(x-af)(x-bg);
 theVeryFinalAnswer=(x=af; (x-bf)/(x-bg) )_2;
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle
 \lim_{x \to af}\frac{f}{g}
-</span>.
+</calculator>.
 <br>
 <answerCalculatorHighlight>
 Answer: 
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer-theVeryFinalAnswer ==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span><span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission><calculatorAnswerOnGiveUp>
 theVeryFinalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
+<calculatorSolution name="AlgebraAnswer">
 <br>
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 termOne=x-af;
 termTwo=x-bf;
 termThree=x-bg;
@@ -49,37 +47,37 @@ termThreeSubbed=af-bg;
 TurnOffRules(MultiplyRationals, ConstantExtraction, PowerIntegerByInteger, PowerRationalByRational);
 TopSubbed= (x=af; f)_2;
 BottomSubbed= (x=af; g)_2;
-</span>
+</calculatorHidden>
 Check denominator: 
-<span class="calculator"> 
+<calculator> 
 StringToAtom(EvaluateSymbols{}( "TopSubbed=0") )
-</span> <br>
+</calculator> <br>
 Check numerator: 
-<span class="calculator">
+<calculator>
 StringToAtom(EvaluateSymbols{}( "BottomSubbed=0"))
-</span>. <br>
+</calculator>. <br>
 Therefore the limit is of the form "\(\frac{0}{0}\)" and we need to use algebra.
 
-<span class="calculator"> 
+<br>
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle  \require{cancel}
 \displaystyle \lim\limits_{x \to af}\frac{f}{g}&=&
 \displaystyle \lim\limits_{x \to af} \frac{(termOne)(termTwo)}{(termOne)(termThree)} &&
-{\begin{array}{l}\text{Factor: Vieta's formulas help: if: }\\\\
-ax^2+bx+c=a(x-x_1)(x-x_2)\\\\ \text{ then:}\\\\
+{\begin{array}{l}\text{Factor:~Vieta's~formulas help:~if:~}\\\\
+ax^2+bx+c=a(x-x_1)(x-x_2)\\\\ \text{~then:}\\\\
 {\begin{array}{rcl} \displaystyle x_1+x_2&=& \displaystyle - \frac{b}{a}= \\\\  
 \displaystyle x_1 x_2 &=& \displaystyle \frac{c}{a} \end{array}}
 \end{array}}\\\\
 &=&\displaystyle \lim\limits_{x \to af} \frac{(\cancel{termOne})(termTwo)}{(\cancel{termOne})(termThree)} 
-&&\text{Allowed to substitute }x=af\\\\
+&&\text{Allowed~to~substitute~}x=af\\\\
 &=&\displaystyle \frac{termTwoSubbed}{termThreeSubbed}\\\\
 &=&\displaystyle theVeryFinalAnswer
 \end{array}
 "
 )
-</span>
-</span>
+</calculator>\)
+</calculatorSolution>
 
 
 
