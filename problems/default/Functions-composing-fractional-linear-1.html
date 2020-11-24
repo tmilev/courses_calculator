@@ -1,10 +1,8 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the composite functions \((f\circ g)(x)\). Simplify your answer to a single fraction. 
 
 Make sure to indicate the domain of the composite function. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 af= RandomInteger((-5,-1), (1,5));
 bf= RandomInteger((-5,-1), (1,5));
 cf= RandomInteger((-5,-1), (1,5));
@@ -15,33 +13,33 @@ bg= RandomInteger((-5,-1), (1,5));
 cg= RandomInteger((-5,-1), (1,5));
 dg= RandomInteger((-5,-1), (1,5));
 1/(ag*dg-bg*cg) ;  
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle
 f{}({{x}})= \frac{af x +bf}{cf x +df};
-</span>.
+</calculator>.
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle
 g{}({{x}})= \frac{ag x +bg}{cg x +dg};
-</span>.
+</calculator>.
 <br>
 <answerCalculatorHighlight>Answer: \( (f \circ g)(x)=\)</answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 (AlgebraAnswer-f{}(g{}(x))==0);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 f{}g{}x
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 The domain of \(f\circ g\) is:
 <br>
 <answerCalculatorHighlight>\(x\neq\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="DomainAnswer" buttons="algebra">
+<calculatorAnswer id="DomainAnswer" buttons="algebra">
 Thaw(if (
 df cg +cf ag==0,DomainAnswer== -dg/cg, 
 Freeze{}( (DomainAnswer==(
@@ -51,11 +49,11 @@ or
 ((DomainAnswer== (Sequence{}(-(df dg+cf bg)/(df cg 
 +cf ag)) \sqcup Sequence{}(-dg/cg))))
 )))
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 if (not (df cg + cf ag==0), Sequence{}(-dg/cg) \sqcup Sequence{}(-(df dg+cf bg)/(if (df cg + cf ag==0, 1, df cg 
 +cf ag))), -dg/cg)
-</span>
+</calculatorAnswerOnGiveUp>
 <br> 
 If there is more than value outside of the domain, separate the values by commas. 
 <br>
