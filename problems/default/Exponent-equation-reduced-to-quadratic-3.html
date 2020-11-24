@@ -1,9 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
-
 Solve the equation (over the real numbers). 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffRules ("LogBase", "CombineExponents");
 
 uOne= RandomInteger( 1,10);
@@ -18,32 +15,33 @@ f=
 (theBase^{x+powerShiftOne}-uOne)(theBase^{x+powerShiftTwo}-uTwo) 
 );
 theBase^{x+powerShiftTwo}=theBase^{powerShiftTwo-powerShiftOne} theBase^{x+powerShiftOne};
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+\(
+<calculator noTags="true">
 \displaystyle
 f   
-</span>\(=0\).
+</calculator>=0\).
 <br>
 If there is more than one answer, separate them by comma. 
 <answerCalculatorHighlight>
 \(x=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 (TurnOnRules("LogBase");
 |AlgebraAnswer - ( log_theBase uOne -powerShiftOne)| < 0.0000001
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 TurnOffApproximations(0);
 TurnOffRules ("LogBase");
 
 log_theBase uOne -powerShiftOne
-</span>
+</calculatorAnswerOnGiveUp>

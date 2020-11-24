@@ -1,9 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
-
 Solve the equation (over the real numbers). 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffRules ("LogBase");
 
 uOne= RandomInteger( 1,7);
@@ -12,18 +9,18 @@ uTwo=uOne+RandomInteger(1,5);
 theBase=e;
 f=(varU-uOne)(varU-uTwo);
 varU=e^x;
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 f   
-</span>\(=0\).
+</calculator>=0\).
 <br>
 If there is more than one answer, separate them by comma. 
 <answerCalculatorHighlight>
 \(x=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, comma">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms, comma">
 Thaw(if (
 Length{}AlgebraAnswer==2,(TurnOnRules ("LogBase"); Freeze(
 ( (|AlgebraAnswer_1 - (ln uOne)| < 0.0000001) and 
@@ -32,21 +29,21 @@ Length{}AlgebraAnswer==2,(TurnOnRules ("LogBase"); Freeze(
 ( (|AlgebraAnswer_2 - (ln uOne)|  <0.0000001) and 
   (|AlgebraAnswer_1 - (ln uTwo)|) <0.0000001) ))_2,  0
 ))  
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 TurnOffApproximations(0);
 %UseLnInsteadOfLog
 TurnOffRules ("LogBase");
 
 (\ln uOne, ln uTwo)
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 
