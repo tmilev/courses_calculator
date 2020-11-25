@@ -1,8 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 a=RandomInteger((-10,10));
 b=RandomInteger((-10,10));
 p=RandomInteger((-1,-15), (1,15));
@@ -12,44 +10,44 @@ s=RandomInteger((-1,-15), (1,15));
 poverq = p/q;
 rovers = r/s;
 TurnOffRules("ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}} = a \sqrt{x}
-</span>.
-<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+</calculator>.
+<calculatorCommentsBeforeInterpretation name="AlgebraAnswer">
 TurnOffRules("ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "DistributeMultiplication");
-</span>
+</calculatorCommentsBeforeInterpretation>
 <answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 1, 2, 100, 0.000000001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 TurnOffRules("DistributeMultiplication");
 d/dx (f{}x)
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
 "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 btwo=2b;
 an = a n;
 aover2 = a/2;
 TurnOnRules("DistributeMultiplication");
 finalAnswer = \frac{a}{2 \sqrt{x}};
-</span>
+</calculatorHidden>
  
-<span class="calculator"> 
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \frac{{\text d} }{{\text d} x} \left( a \sqrt{x} \right) &=&
@@ -63,8 +61,8 @@ EvaluateSymbols{}(
 \end{array}
 "
 )
-</span>
-</span>
+</calculator>\)
+</calculatorSolution>
 
 
 
