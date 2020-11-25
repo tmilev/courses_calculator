@@ -1,43 +1,41 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 a=RandomInteger((2,6));
 p=RandomInteger((-1,-10), (1,15));
 q=RandomInteger((-1,-10), (1,15));
 e=RandomInteger((-1,-10), (1,15));
 poverq = p/q;
 TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}} = a x^{poverq}
-</span>.
-<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+</calculator>.
+<calculatorCommentsBeforeInterpretation name="AlgebraAnswer">
 TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "DistributeMultiplication");\)
-</span>
+</calculatorCommentsBeforeInterpretation>
 <answerCalculatorHighlight>
 \(f'(x)=\)    
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0.2, 2, 100, 0.000001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 TurnOffRules("DistributeMultiplication");
 d/dx (f{}x)
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 btwo=2b;
 an = a n;
 TurnOnRules("DistributeMultiplication");
@@ -46,9 +44,9 @@ finalAnswer = a (poverq) x^{poverq-1};
 TurnOffRules("AddTerms", "AddRationals", "MultiplyRationals", "ConstantExtraction");
 intermediate=a \cdot poverq \cdot  x^{poverq-1};
 atimespoverq=a*poverq; 
-</span>
+</calculatorHidden>
 
-<span class="calculator"> 
+\(<calculator noTags="true"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \frac{{\text d} }{{\text d} x}(term) &=&\displaystyle atimespoverq \cdot  x^{poverq-1}
@@ -57,7 +55,7 @@ EvaluateSymbols{}(
 \end{array}
 "
 )
-</span>
-</span>
+</calculator>\)
+</calculatorSolution>
 
 
