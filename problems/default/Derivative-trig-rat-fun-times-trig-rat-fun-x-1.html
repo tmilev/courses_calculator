@@ -1,31 +1,29 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 a=RandomInteger((2,6));
 b=RandomInteger((2,6));
 j=SelectAtRandom(\sin, \cos);
 g=SelectAtRandom(\sin, \cos);
 TurnOffRules("ConvertShortDenominatorToNegativePower");
-</span>
+</calculatorHidden>
 
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}}= j{}(x^a  ) g{}(\frac{1}{x^b}) 
-</span>.
+</calculator>.
 <answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, trig">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 1, 2, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("\log");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 d/dx (f{}x)
-</span>
+</calculatorAnswerOnGiveUp>
 

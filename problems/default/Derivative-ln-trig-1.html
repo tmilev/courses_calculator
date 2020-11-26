@@ -1,34 +1,32 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
-a=SelectAtRandom( \tan , \cot, \sec, \csc);
-b=RandomInteger((2,7));
+a = SelectAtRandom( \tan , \cot, \sec, \csc);
+b = RandomInteger((2,7));
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
-</span>
+</calculatorHidden>
 
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}}=  \ln(a{}(b x) )
-</span>.
+</calculator>.
 <answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, trig">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms, trig">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0.3/b, 1/b, 50, 0.000001);
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %UseLnInsteadOfLog
 TurnOffRules("\log", "LogBase");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 MakeExpression(MakeRationalFunction(
 d/dx (f{}x)
 ))
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 To write \(\ln (x)\) you need to enter \ln(x), ln(x) or log(x) or \log(x). Please note that in the calculator log stands for the (complex) natural logarithm, i.e., the logarithm base e. 

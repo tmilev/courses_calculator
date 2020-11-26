@@ -1,27 +1,25 @@
-<span class="setCalculatorExamProblem">
-</span>
-Compute the <span style="color:red"> <b>SECOND</b></span> derivative of the function. 
+Compute the <b style="color:red">SECOND</b> derivative of the function. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 a=RandomInteger( (3,6));
 TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}}=x^a e^x
-</span>.
-<span class="calculatorHidden">
+</calculator>.
+<calculatorHidden>
 TurnOnRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <answerCalculatorHighlight>\(f''(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 CompareFunctionsNumerically(d/dx(d/dx(f{}x)), AlgebraAnswer, 1, 5, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 d/dx(d/dx(f{}x))
-</span>
+</calculatorAnswerOnGiveUp>
 

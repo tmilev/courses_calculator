@@ -1,28 +1,26 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 a=RandomInteger((-2,-6),(2,6));
 b=RandomInteger((-6,-1),(1,6));
 TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}}=b sin(a x)
-</span>.
-<span class="calculatorHidden">
+</calculator>.
+<calculatorHidden>
 TurnOnRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, trig">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0,5, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 d/dx (f{}x)
-</span>
+</calculatorAnswerOnGiveUp>
 
 

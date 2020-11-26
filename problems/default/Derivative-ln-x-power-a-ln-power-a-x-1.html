@@ -1,56 +1,54 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivatives. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 a=RandomInteger((2,11));
 b=RandomInteger((2,11));
 TurnOffRules("ConvertShortDenominatorToNegativePower", "sqrt", "LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
-</span>
+</calculatorHidden>
 
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}}=  \ln( x^b) 
-</span>.
+</calculator>.
 <answerCalculatorHighlight>
 \(f'(x)=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerF" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswerF" buttons="algebra, logarithms">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswerF, 2, 3, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %UseLnInsteadOfLog
 TurnOffRules("\log", "LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerF,x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 MakeExpression(MakeRationalFunction(
 d/dx (f{}x)))
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle g{}{{x}}=  (\ln( x))^b 
-</span>.
+</calculator>.
 <answerCalculatorHighlight>\(g'(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerG" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswerG" buttons="algebra, logarithms">
 CompareFunctionsNumerically(d/dx(g{}x), AlgebraAnswerG, 2, 3, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %UseLnInsteadOfLog
 TurnOffRules("\log", "LogBase");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerG,x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 MakeExpression(MakeRationalFunction(
 d/dx (g{}x)))
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 
 To write \(\ln (x)\) you need to enter \ln(x), ln(x) or log(x) or \log(x). Please note that in the calculator log stands for the (complex) natural logarithm, i.e., the logarithm base e. 

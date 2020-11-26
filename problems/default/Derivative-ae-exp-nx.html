@@ -1,39 +1,37 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function.
 
-<span class="calculatorHidden">
-a=RandomInteger((-30,-1), (1,30));
-n= RandomInteger(2,10);
-c= RandomInteger(2,3);
-h= RandomInteger(1,3);
-g=RandomInteger((-3,-1), (1,3));
-f=a e^{n x} 
-</span>
+<calculatorHidden>
+a = RandomInteger((-30,-1), (1,30));
+n = RandomInteger(2,10);
+c = RandomInteger(2,3);
+h = RandomInteger(1,3);
+g = RandomInteger((-3,-1), (1,3));
+f = a e^{n x} 
+</calculatorHidden>
 <br>
-\(f(x)=\)
-<span class="calculator">f
-</span>.
+\(f(x)=
+<calculator noTags="true">f
+</calculator>\).
 <answerCalculatorHighlight>\(f'(x)=\) </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 CompareFunctionsNumerically(d/dx(f), AlgebraAnswer, 1, 2, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 d/dx f
-</span>
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+</calculatorAnswerOnGiveUp>
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
 "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 btwo=2b;
 an = a n;
 nminus1 = n-1;
@@ -42,9 +40,9 @@ TurnOnRules("DistributeMultiplication");
 finalAnswer = a (n) e^{n x};
 TurnOffRules("MultiplyRationals", "ConstantExtraction");
 intermediate= a (n) e^{n x};
-</span>
+</calculatorHidden>
 
-<span class="calculator"> 
+\(<calculator noTags="true"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \frac{{\text d} }{{\text d} x}(a e^{n x}) &=&\displaystyle intermediate
@@ -55,6 +53,6 @@ A\frac{{\text d} }{{\text d} x}( e^{m x})= A m e^{m x} \text{ }  \\\\
 \end{array}
 "
 )
-</span>
-</span> 
+</calculator>\)
+</calculatorSolution> 
 

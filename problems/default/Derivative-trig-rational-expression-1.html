@@ -1,8 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 a= RandomInteger((-5,-1), (1,5));
 b= RandomInteger((-5,-1), (1,5));
 c= RandomInteger((-5,-1), (1,5));
@@ -10,24 +8,24 @@ h= RandomInteger((-5,-1), (1,5));
 TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate", 
 "ExpressCotViaSineCosine", "ExpressTanViaSineCosine", "ExpressCscViaSine", "ExpressSecViaCosine"
 );
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \(\displaystyle f{}{{x}}=\frac{a \sin x+ b\cos x }{c \sin x + h \cos x }  \) 
-</span>.
-<span class="calculatorHidden">
+</calculator>.
+<calculatorHidden>
 TurnOnRules("ExpressCotViaSineCosine", "ExpressTanViaSineCosine", "ExpressCscViaSine", "ExpressSecViaCosine"
 );
-</span>
+</calculatorHidden>
 <answerCalculatorHighlight>
 \(f'(x)=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, trig">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0.05, \pi/2.1, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 MakeExpression( PolyDivRemainder{}( Numerator{}( d/dx (f{}x)) , \sin^2 x+\cos^2x-1 )) / Denominator{}(d/dx (f{}x))
-</span>
+</calculatorAnswerOnGiveUp>

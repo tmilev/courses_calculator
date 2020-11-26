@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 theSign=SelectAtRandom(-1,1);
 a=RandomInteger{}(1,4)*theSign;
@@ -21,21 +19,21 @@ basicPlot=
 Plot2D(f, leftPoint, rightPoint, red)
 +PlotPoint((theX, theY), blue)
 +PlotWindow(300,300);
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 basicPlot
 +PlotSetId("canvas1")
-</span>
+</calculatorShowToUserOnly>
 <br>
 Find the equation of the tangent to 
 <br>
-\(y=\)<span class="calculator">\displaystyle f</span>
+\(y=<calculator noTags="true">\displaystyle f</calculator>\)
 <br>
-at the point <span class="calculator">\displaystyle (theX, theY)</span>. 
+at the point <calculator>\displaystyle (theX, theY)</calculator>. 
 <br>
 Your answer should be a line equation, of the form \(y-y_0=a(x-x_0)\) or equivalent.
 <answerCalculatorHighlight>Answer:</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, variables">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, variables">
 (not (CoefficientOf{}(y, EqualityToArithmeticExpression{}(AlgebraAnswer))==0))
 and
 (
@@ -46,12 +44,12 @@ EqualityToArithmeticExpression{}(AlgebraAnswer)
 )
 ==0
 )
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn{}(AlgebraAnswer, x, y)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 basicPlot
 +PlotSegment ( 
@@ -59,9 +57,9 @@ basicPlot
 (rightPoint, (x=rightPoint;  SolveFor(y, AlgebraAnswer) )_2 ), 
 blue )
 +PlotSetId("canvas1")
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
 y-theY= theSlope(x-theX) 
-</span>
+</calculatorAnswerOnGiveUp>

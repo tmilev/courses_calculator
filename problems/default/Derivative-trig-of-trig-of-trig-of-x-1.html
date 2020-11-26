@@ -1,27 +1,25 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 j=SelectAtRandom(\sin, \cos);
 g=SelectAtRandom(\sin, \cos);
 h=SelectAtRandom(\sin, \cos);
-</span>
+</calculatorHidden>
 
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}}= j{}g{}h{}x
-</span>.
+</calculator>.
 <answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, trig">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0, 1, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("\log");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 d/dx (f{}x)
-</span>
+</calculatorAnswerOnGiveUp>

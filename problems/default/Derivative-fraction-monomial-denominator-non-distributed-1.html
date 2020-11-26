@@ -1,33 +1,31 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function. 
 
-<span class="calculatorHidden">
-a=RandomInteger((-3,-1), (1,3));
+<calculatorHidden>
+a= RandomInteger((-3,-1), (1,3));
 b= RandomInteger((-3,-1), (1,3));
 c= RandomInteger(3,7);
 g= RandomInteger((3,5));
 h= RandomInteger(2,4);
 TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{t}}=\frac{a \sqrt{t} + b t^{1/c}+g}{t^h} 
-</span>.
-<span class="calculatorHidden">
+</calculator>.
+<calculatorHidden>
 TurnOnRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
-</span>
+</calculatorHidden>
 <answerCalculatorHighlight>
 \(f'(t)=\)    
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 CompareFunctionsNumerically(d/dt(f{}t), AlgebraAnswer, 1, 5, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,t)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 d/dt(f{}t)
-</span>
+</calculatorAnswerOnGiveUp>
 
 

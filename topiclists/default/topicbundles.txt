@@ -941,8 +941,7 @@ Problem: problems/Inequalities-quadratic-negative-leading-coeff-1.html
 Title: Quadratic inequality part 3
 Problem: problems/Inequalities-quadratic-1.html
 
-
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Cubic inequality
+Title: Cubic inequality
 Problem: problems/Inequalities-cubic-1.html
 SlidesSource: freecalc/modules/inequalities-polynomial/inequality-cubic-three-rational-roots-1
 BundleEnd: PolynomialInequalities_Examples_Basics
@@ -972,22 +971,22 @@ SlidesLatex: \section{Ad hoc methods for solving polynomial systems}
 SlidesSource: freecalc/modules/polynomial-systems/polynomial-system-linear-substitution-reduces-to-quadratic-1
 SlidesSource: freecalc/modules/polynomial-systems/polynomial-system-text-problem-linear-substitution-reduces-to-quadratic-1
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Polynomial system that reduces to quadratic, part 1
+Title: \(\S\) Polynomial system that reduces to quadratic, part 1
 Problem: problems/Polynomial-system-linear-substitution-reduces-to-quadratic-1.html
 SlidesSource: freecalc/modules/polynomial-systems/polynomial-system-linear-substitution-reduces-to-quadratic-1
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Text problems leading to polynomial systems
+Title: \(\S\) Text problems leading to polynomial systems
 Problem: problems/Polynomial-system-text-problem-linear-substitution-reduces-to-quadratic-2.html
 SlidesSource: freecalc/modules/polynomial-systems/polynomial-system-text-problem-linear-substitution-reduces-to-quadratic-1
 
 Title: Text problems leading to polynomial systems, part 2
 Problem: problems/Polynomial-system-text-problem-linear-substitution-reduces-to-quadratic-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Geometric-text problems leading to polynomial systems, part 1
+Title: \(\S\) Geometric-text problems leading to polynomial systems, part 1
 Problem: problems/Polynomial-system-geometric-text-problem-reduces-to-quadratic-1.html
 SlidesSource: freecalc/modules/polynomial-systems/polynomial-system-geometric-text-problem-reduces-to-quadratic-1
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Geometric-text problems leading to polynomial systems, part 2
+Title: \(\S\) Geometric-text problems leading to polynomial systems, part 2
 Problem: problems/Polynomial-system-geometric-text-problem-reduces-to-quadratic-2.html
 SlidesSource: freecalc/modules/polynomial-systems/polynomial-system-geometric-text-problem-reduces-to-quadratic-2
 BundleEnd: PolynomialSystems_Basics
@@ -1050,15 +1049,15 @@ Problem: problems/Quadratic-find-max-min-quadratic-text-problem-1.html
 BundleEnd: QuadraticFunctions_NoFactorizationAndVieta
 
 BundleBegin: QuadraticFunctions_ExtremaViaCompletingTheSquare_Exercises
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Find extremum of quadratic via completing the square 
+Title: \(\S\) Find extremum of quadratic via completing the square 
 Problem: problems/Quadratic-find-max-min-quadratic-1.html
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-function-minimum-example-1
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Find parameters for positive/negative quadratic
+Title: \(\S\) Find parameters for positive/negative quadratic
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-find-parameters-to-ensure-quadratic-positive-1
 Problem: problems/Quadratic-find-parameters-ensure-quadratic-positive-or-negative-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Find parameters for quadratic to have real roots
+Title: \(\S\) Find parameters for quadratic to have real roots
 SlidesSource: freecalc/modules/quadratic-functions/quadratic-find-parameters-to-have-two-real-roots-1
 Problem: problems/Quadratic-find-parameters-ensure-real-roots-1.html
 BundleEnd: QuadraticFunctions_ExtremaViaCompletingTheSquare_Exercises
@@ -1082,7 +1081,7 @@ HomeworkSource: freecalc/modules/quadratic-functions/homework/plot-the-quadratic
 HomeworkSource: freecalc/modules/quadratic-functions/homework/maxima-minima-quadratic-1
 
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Factor quadratic with rational roots
+Title: \(\S\) Factor quadratic with rational roots
 Problem: problems/Factor-quadratic-rational-root-1.html
 SlidesSource: freecalc/modules/quadratic-functions/factoring-quadratics-example-example-Vieta-guessing-1
 
@@ -1116,7 +1115,7 @@ Title: Use polynomial division with remainder 0 to factor a polynomial
 Problem: problems/Polynomial-division-use-to-factor-cubic-1.html
 SlidesSource: freecalc/modules/polynomial-factorization/polynomial-division-use-to-factor-1
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Factor cubic with rational roots using its plot
+Title: \(\S\) Factor cubic with rational roots using its plot
 Problem: problems/Factor-cubic-three-rational-roots-1.html
 SlidesSource: freecalc/modules/polynomial-factorization/solve-cubic-rational-roots-using-graph-1
 
@@ -1469,7 +1468,7 @@ Problem: problems/Derivative-fractional-linear-1.html
 SlidesSource: freecalc/modules/product-quotient/quotient-rule
 SlidesSource: freecalc/modules/product-quotient/quotient-rule-rational
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem>Derivative of reciprocal of linear polynomial
+Title: \(\S\)Derivative of reciprocal of linear polynomial
 Problem: problems/Derivative-1-over-linear-polynomial-1.html
 SlidesSource: freecalc/modules/product-quotient/differentiate-1-over-linear-example-1
 
@@ -1699,7 +1698,7 @@ Problem: problems/Derivative-a-ln-negative-bx.html
 Title: Derivative of \(\log_a (bx)\)
 Problem: problems/Derivative-log-base-a-of-b-times-x-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem>Derivative of \(a \ln(bx+c)\)
+Title: \(\S\)Derivative of \(a \ln(bx+c)\)
 Problem: problems/Derivative-a-ln-bx-plus-c.html
 SlidesSource: freecalc/modules/logarithms/derivative-natural-logarithm-of-linear-example-1
 
@@ -1720,7 +1719,7 @@ Problem: problems/Derivative-ln-fractional-linear-1.html
 BundleEnd: Derivatives_ChainRule_WithLogarithms
 
 BundleBegin: Derivatives_ChainRule_WithLogarithms
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Miscellaneous derivatives involving logarithms, part 3
+Title: \(\S\) Miscellaneous derivatives involving logarithms, part 3
 Problem: problems/Derivative-ln-sqrt-linear-1.html
 SlidesSource: freecalc/modules/logarithms/natural-logarithm-derivative-of-radical-example-1
 BundleEnd: Derivatives_ChainRule_WithLogarithms
@@ -1851,17 +1850,17 @@ SlidesSource: freecalc/modules/derivatives/normal-to-graph-of-logarithm-example-
 BundleEnd: Derivatives_Normals_TheoryAndExercises
 
 BundleBegin: Derivatives_TangentEquations_Exercises
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Compute normal to graph of \(y=f(x)\) at a point, part 1
+Title: \(\S\) Compute normal to graph of \(y=f(x)\) at a point, part 1
 Problem: problems/Normal-to-function-logarithm-of-linear-1.html
 SlidesSource: freecalc/modules/derivatives/normal-to-graph-of-logarithm-example-1
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Miscellaneous problems involving normals
+Title: \(\S\) Miscellaneous problems involving normals
 Problem: problems/Normal-to-parametric-cubic-find-parameter-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Miscellaneous problems involving tangents and normals, part 1
+Title: \(\S\) Miscellaneous problems involving tangents and normals, part 1
 Problem: problems/Tangent-to-function-logarithm-of-linear-and-further-tricks-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Miscellaneous problems involving tangents and normals, part 2
+Title: \(\S\) Miscellaneous problems involving tangents and normals, part 2
 Problem: problems/Tangent-to-function-hyperbola-plus-linear-and-further-tricks-1.html
 SlidesSource: freecalc/modules/derivatives/normal-to-graph-of-hyperbola-miscellaneous-example-1
 BundleEnd: Derivatives_TangentEquations_Exercises
@@ -1938,12 +1937,12 @@ BundleEnd: OptimizationUnivariate_TheoryAndExercises
 
 BundleBegin: OptimizationUnivariate_TextProblems_Exercises
 Topic: Optimization text problems 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Maximize box volume under constraints, part 1
+Title: \(\S\) Maximize box volume under constraints, part 1
 Problem: problems/Maxima-minima-text-problem-max-box-volume-constraints-part-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Maximize area, part 1
+Title: \(\S\) Maximize area, part 1
 Problem: problems/Maxima-minima-text-problem-max-area-constraints-part-1.html
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Maximize area, part 2
+Title: \(\S\) Maximize area, part 2
 Problem: problems/Maxima-minima-text-problem-max-area-constraints-part-2.html
 BundleEnd: OptimizationUnivariate_TextProblems_Exercises
 
@@ -2152,7 +2151,7 @@ Problem: problems/Indefinite-integral-constant-1.html
 Title: Integration of \(A x^n\)
 Problem: problems/Indefinite-integral-Ax-exp-n.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Indefinite integral of a polynomial, part 1
+Title: \(\S\) Indefinite integral of a polynomial, part 1
 Problem: problems/Indefinite-integral-polynomial-1.html
 SlidesSource: freecalc/modules/integration/indefinite-integral-example-polynomial-1
 
@@ -2233,7 +2232,7 @@ SlidesSource: freecalc/modules/integration/indefinite-integral-ex3
 Title: Definite integral of monomial
 Problem: problems/Definite-integral-ax-exp-n.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Definite integrals of rational power monomials
+Title: \(\S\) Definite integrals of rational power monomials
 Problem: problems/Definite-integral-rational-power-poly-1.html
 SlidesSource: freecalc/modules/integration/indefinite-integral-ex5
 
@@ -2246,7 +2245,7 @@ Problem: problems/Definite-integral-parabola-1.html
 Title: Definite integral of cubic
 Problem: problems/Definite-integral-cubic-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Miscellaneous definite integrals, part 1
+Title: \(\S\) Miscellaneous definite integrals, part 1
 Problem: problems/Definite-integral-rational-polynomial-squared-1.html
 Topic: Definite integrals and absolute values
 
@@ -2261,9 +2260,9 @@ BundleBegin: Integration_Basics_AreasBetweenCurves_ExercisesAndTheory
 Topic: Area between graphs of functions
 Title: Area between line and parabola, part 1
 Problem: problems/Area-between-parabola-and-line-1.html
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Area between line and parabola, part 2
+Title: \(\S\) Area between line and parabola, part 2
 Problem: problems/Area-between-parabola-and-line-2.html
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Area between two parabolas, part 1
+Title: \(\S\) Area between two parabolas, part 1
 Problem: problems/Area-between-two-parabolas-1.html
 Title: Area between two parabolas, part 2
 Problem: problems/Area-between-two-parabolas-2.html
@@ -2271,16 +2270,16 @@ SlidesSource: freecalc/modules/area-between-curves/area-between-curves-ex2
 BundleEnd: Integration_Basics_AreasBetweenCurves_ExercisesAndTheory
 
 BundleBegin: Integration_Basics_AreasBetweenCurves_ExercisesAndTheory
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Area between hyperbola and parabola
+Title: \(\S\) Area between hyperbola and parabola
 Problem: problems/Area-between-hyperbola-and-parabola-rational-intersection-1.html
 BundleEnd: Integration_Basics_AreasBetweenCurves_ExercisesAndTheory
 
 BundleBegin: Integration_Basics_AreasBetweenCurvesWithSubstitutionRule_ExercisesAndTheory
 Topic: Area between graphs of functions using the substitution rule
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Area between radical of linear function and linear function
+Title: \(\S\) Area between radical of linear function and linear function
 Problem: problems/Area-between-radical-of-linear-and-linear-function-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Area between exponent and parabola with numeric curve intersection
+Title: \(\S\) Area between exponent and parabola with numeric curve intersection
 Problem: problems/Area-between-exponent-and-parabola-numeric-cuve-intersection-1.html
 
 BundleEnd: Integration_Basics_AreasBetweenCurvesWithSubstitutionRule_ExercisesAndTheory
@@ -2315,7 +2314,7 @@ HomeworkSolutionSource: freecalc/modules/substitution-rule/homework/substitution
 
 Topic: Substitutions in indefinite integrals
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> \(\displaystyle \int (ax+b)^p{\text d} x\), part 1
+Title: \(\S\) \(\displaystyle \int (ax+b)^p{\text d} x\), part 1
 Problem: problems/Indefinite-integral-linear-function-power-1.html
 
 Title: \(\displaystyle \int (ax+b)^p{\text d} x\), part 2
@@ -2325,7 +2324,7 @@ SlidesSource: freecalc/modules/substitution-rule/substitution-rule-ex2
 Title: \(\displaystyle \int (ax+b)^p{\text d} x\), part 3
 Problem: problems/Indefinite-integral-linear-function-rational-power-1.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> \(\displaystyle \int (ax+b)^p{\text d} x\), part 4
+Title: \(\S\) \(\displaystyle \int (ax+b)^p{\text d} x\), part 4
 Problem: problems/Indefinite-integral-linear-function-rational-power-2.html
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-definite-integrals-ex7
 
@@ -2367,7 +2366,7 @@ Topic: Indefinite integral substitutions and exponents
 Title: \(\displaystyle \int A e^{ax+b} {\text{d}} x\), part 1
 Problem: problems/Indefinite-integral-Ae-exp-ax.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> \(\displaystyle \int A e^{ax+b} {\text d} x\), part 2
+Title: \(\S\) \(\displaystyle \int A e^{ax+b} {\text d} x\), part 2
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-ex4
 Problem: problems/Indefinite-integral-Ae-exp-ax-plus-b.html
 
@@ -2382,17 +2381,17 @@ Problem: problems/Indefinite-integral-e-power-quadratic-no-lin-term-times-x-1.ht
 
 Topic: Substitutions in definite integrals
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Definite integral of \(\displaystyle \frac{1}{(ax+b)^{n}}\)
+Title: \(\S\) Definite integral of \(\displaystyle \frac{1}{(ax+b)^{n}}\)
 Problem: problems/Definite-integral-linear-function-negative-power-1.html
 SlidesSource: freecalc/modules/substitution-rule/substitution-rule-definite-integrals-ex7
 
 Title: Definite integral of \(\displaystyle (ax+b)^{\frac{p}{q}}\)
 Problem: problems/Definite-integral-ax-plus-b-exp-poverq.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Definite integral of \(\displaystyle \frac{1}{\sqrt{ax+b}}\)
+Title: \(\S\) Definite integral of \(\displaystyle \frac{1}{\sqrt{ax+b}}\)
 Problem: problems/Definite-integral-ax-plus-b-exp-minus1over2.html
 
-Title: <actualExamProblem>\(\S\)</actualExamProblem> Definite integral of \(\displaystyle e^{ax+b}\)
+Title: \(\S\) Definite integral of \(\displaystyle e^{ax+b}\)
 Problem: problems/Definite-integral-e-exp-axplusb.html
 
 Title: Miscellaneous problems, part 1

@@ -1,45 +1,43 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivatives of the two functions. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 a=RandomInteger((2,6));
 TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}}=\sin (x^a)
-</span>.
-<span class="calculatorHidden">
+</calculator>.
+<calculatorHidden>
 TurnOnRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer"  buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswer"  buttons="algebra, trig">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0, 5, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 d/dx (f{}x)
-</span>
+</calculatorAnswerOnGiveUp>
 
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle g{}{{x}}=\sin^a x  
-</span>.
-<span class="calculatorHidden">
+</calculator>.
+<calculatorHidden>
 TurnOnRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <answerCalculatorHighlight>\(g'(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswerTwo" buttons="algebra, trig">
 CompareFunctionsNumerically(d/dx(g{}x), AlgebraAnswerTwo, 0, 5, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerTwo, x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 d/dx (g{}x)
-</span>
+</calculatorAnswerOnGiveUp>
 
 

@@ -1,42 +1,40 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 b=RandomInteger((3,5));
 f{}{{x}}=\sqrt[b](x );
-fd=d/dx f{}x;
-</span>
-<span class="calculatorShowToUserOnly">
+fd=d/dx (f{}x);
+</calculatorHidden>
+<calculatorShowToUserOnly>
 Plot2D(f{}x, 0, 1.5*2^b)
 +PlotSetId("canvas1")
 +PlotWindow(300,300)
-</span>
+</calculatorShowToUserOnly>
 <br>
-Find the linearization \(L\) of \(f(x)=\)<span class="calculator">
+Find the linearization \(L\) of \(f(x)=<calculator noTags="true">
 \displaystyle f{}x
-</span> at \(x=\)
-<span class="calculator">
+</calculator>\) at \(x=
+<calculator noTags="true">
 2^b
-</span>.
+</calculator>\).
 <br>
 <answerCalculatorHighlight>
 \(L(x)=\) 
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, variables">
-CompareFunctionsNumerically(AlgebraAnswer,(f{}(2^b)+ ((x=2^b; fd)_2)(x-2^b) ), 0,10,50,0.00000001 )
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, variables">
+CompareFunctionsNumerically(AlgebraAnswer, f{}(2^b)+((x=2^b; fd)_2)(x-2^b), 0, 10, 50, 0.00000001)
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 Plot2D(f{}x, 0, 1.5*2^b)
 +Plot2D(AlgebraAnswer, 0, 1.5 *2^b, "blue")
 +PlotSetId("canvas1")
 +PlotWindow(300,300)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
-(f{}(2^b)+ ((x=2^b; fd)_2)(x-2^b))
-</span>
+<calculatorAnswerOnGiveUp>
+f{}(2^b)+ ((x=2^b; fd)_2)(x-2^b)
+</calculatorAnswerOnGiveUp>

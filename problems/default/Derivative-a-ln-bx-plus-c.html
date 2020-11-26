@@ -1,60 +1,57 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function.
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
-a=RandomInteger((-30,-2), (2,30));
-n= RandomInteger(2,10);
-b= RandomInteger(1,10);
-h= RandomInteger(1,3);
-c=RandomInteger((-30,-1), (1,30));
-g=RandomInteger((-3,-1), (1,3));
-</span>
+a = RandomInteger((-30,-2), (2,30));
+n = RandomInteger(2,10);
+b = RandomInteger(1,10);
+h = RandomInteger(1,3);
+c = RandomInteger((-30,-1), (1,30));
+g = RandomInteger((-3,-1), (1,3));
+</calculatorHidden>
 <br> 
-\(f{}(x)=\)
-<span class="calculator">
- a \ln {(b x) + c}
-</span>.
+\(f{}(x)=
+<calculator noTags="true">
+a \ln {(b x) + c}
+</calculator>\).
 <answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 AlgebraAnswer==(d/dx (a \ln{{b x + c}}))
-</textarea> 
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer> 
+<calculatorAnswerOnGiveUp>
 \frac{a b}{b x + c}
-</span>
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+</calculatorAnswerOnGiveUp>
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 btwo=2b;
 an = a n;
 nminus1 = n-1;
 term = b x + c;
 TurnOnRules("DistributeMultiplication");
 finalAnswer = MakeExpression(MakeRationalFunction(a b/term));
-</span>
+</calculatorHidden>
  
-<span class="calculator"> 
+\(<calculator noTags="true"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \frac{{\text d} }{{\text d} x}\left(a \ln (term)\right) &=&
 \displaystyle  a  \frac{{\text d}}{{\text d} x}\left(\ln \left(term\right)\right)
-&&\displaystyle \text{Use the chain rule: }  \frac{{\text d} }{{\text d} x} \left(G(w(x))\right) =
+&&\displaystyle \text{Use~the~chain~rule:~}  \frac{{\text d} }{{\text d} x} \left(G(w(x))\right) =
 \frac{ {\text d} G}{{\text d} w} \cdot \frac{{\text d} w}{{\text d} x}  \\\\
 \displaystyle  &=&\displaystyle   a\frac{ \frac{{\text d}}{{\text d} x}\left(term\right) }{term}  
-&&\displaystyle \text{where we've set }  G(w)=\ln w \text{ and } w = term \\\\
-\displaystyle &=&\displaystyle   a\frac{ b }{term}  \\\\
+&&\displaystyle \text{where~we've~set~}  G(w)=\ln w \text{~and~} w = term \\\\
+\displaystyle &=&\displaystyle a\frac{ b }{term}  \\\\
 \displaystyle &=&\displaystyle finalAnswer
 \end{array}
 "
 )
-
-</span>
-</span> 
+</calculator>\)
+</calculatorSolution> 
 

@@ -1,38 +1,36 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of the function. 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 a=RandomInteger((2,6));
 b=RandomInteger((2,6));
 TurnOffRules("ConvertShortDenominatorToNegativePower", "sqrt", "LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
-</span>
+</calculatorHidden>
 
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle f{}{{x}}= \log_a (-b x)
-</span>.
-<span class="calculatorHidden">
+</calculator>.
+<calculatorHidden>
 TurnOnRules("LogBase");
-</span>
+</calculatorHidden>
 <answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, -2, -3, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %UseLnInsteadOfLog
 TurnOffRules("\log", "LogBase");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
+</calculatorCommentsBeforeSubmission>
 <br>
 To write \(\ln (x)\) you need to enter \ln(x), ln(x) or log(x) or \log(x). Please note that in the calculator log stands for the (complex) natural logarithm, i.e., the logarithm base e. 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnInsteadOfLog
 TurnOffRules("\log");
 MakeExpression(MakeRationalFunction(
 d/dx (f{}x)))
-</span>
+</calculatorAnswerOnGiveUp>
 

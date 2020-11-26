@@ -114,6 +114,10 @@ TopicBundle: PolynomialFactorizationTheory_Lecture
 TopicBundle: PolynomialFactorization_PolyDivisionAndCubicFactorizationOneRationalRootWithScientificCalculator
 
 Section: Polynomial inequalities
+Topic: Polynomial inequalities, theory
 TopicBundle: PolynomialInequalities_Basics_Theory
+
 Topic: Basic polynomial inequalities
 TopicBundle: PolynomialInequalities_Examples_Basics
+
+
