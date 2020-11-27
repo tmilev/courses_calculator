@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 leg=RandomInteger(1,10);
 hypo=leg+RandomInteger{}(3,30);
 secondLeg=\sqrt{hypo^2-leg^2};
@@ -20,8 +18,8 @@ leg2LabelLocation=randomTranslation+( randomIsometry (leg1+heelSize/2, leg2/2)^t
 hypoLabelLocation= randomTranslation+( randomIsometry (leg1/2-heelSize, leg2/2+heelSize)^t)^t;
 angleLabelLocation=randomTranslation+( randomIsometry ( (heelSize*1.2) cos{}(theAngle/2),  (heelSize*1.2) sin{}(theAngle/2))^t)^t;
 TurnOffApproximations(0);
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)+
 PlotPath(heel, red)+
 PlotCurve( randomTranslation+(randomIsometry* (heelSize cos{} t, heelSize sin{} t)^T)^T, 0, theAngle)+
@@ -30,7 +28,7 @@ if (selectLegOne, PlotLabel(leg1LabelLocation, leg1),PlotLabel(leg2LabelLocation
  PlotLabel(hypoLabelLocation, hypo)+
  PlotRemoveCoordinateAxes{}0
 ;
-</span>
+</calculator>
 <br>
 Let \(\theta\) be the angle indicated in the plot above. Find the indicated trigonometric functions. 
 <ul>
@@ -38,44 +36,44 @@ Let \(\theta\) be the angle indicated in the plot above. Find the indicated trig
 </ul>
 
 <answerCalculatorHighlight>\(\sin\theta=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerSine" buttons="algebra">
+<calculatorAnswer id="answerSine" buttons="algebra">
 answerSine==leg2/hypo
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 leg2/hypo
-</span>
+</calculatorAnswerOnGiveUp>
 <answerCalculatorHighlight>\(\cos\theta=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerCosine" buttons="algebra">
+<calculatorAnswer id="answerCosine" buttons="algebra">
 answerCosine==leg1/hypo
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 leg1/hypo
-</span>
+</calculatorAnswerOnGiveUp>
 <answerCalculatorHighlight>\(\tan\theta=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerTan" buttons="algebra">
+<calculatorAnswer id="answerTan" buttons="algebra">
 answerTan==leg2/leg1
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 leg2/leg1
-</span>
+</calculatorAnswerOnGiveUp>
 <answerCalculatorHighlight>\(\cot\theta=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerCot" buttons="algebra">
+<calculatorAnswer id="answerCot" buttons="algebra">
 answerCot==leg1/leg2
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 leg1/leg2
-</span>
+</calculatorAnswerOnGiveUp>
 <answerCalculatorHighlight>\(\sec\theta=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerSec" buttons="algebra">
+<calculatorAnswer id="answerSec" buttons="algebra">
 answerSec==hypo/leg1
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 hypo/leg1
-</span>
+</calculatorAnswerOnGiveUp>
 <answerCalculatorHighlight>\(\csc\theta=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerCsc" buttons="algebra">
+<calculatorAnswer id="answerCsc" buttons="algebra">
 answerCsc==hypo/leg2
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 hypo/leg2
-</span>
+</calculatorAnswerOnGiveUp>

@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 theTrigFun=SelectAtRandom(sin,cos);
 otherTrigFun=if (theTrigFun==sin, cos, sin);
 theArg=SelectAtRandom{}(-1,1) \theta+SelectAtRandom{}(-1,1)\frac{\pi}{2};
@@ -8,19 +6,18 @@ finalAnswer=
 (TurnOnRules("SineOfAngleSum", "CosineOfAngleSum", "ExploitCosEvenness", "ExploitSinOddness"); 
 theTrigFun{}(theArg)
 )_2
-
-</span>
-Transform the trigonometric expression \(<span class="calculator" noTags="true">theTrigFun{}(theArg)</span>\) to one that depends on 
- \(<span class="calculator" noTags="true">otherTrigFun{}(\theta)</span>\) only. 
+</calculatorHidden>
+Transform the trigonometric expression \(<calculator noTags="true">theTrigFun{}(theArg)</calculator>\) to one that depends on 
+ \(<calculator noTags="true">otherTrigFun{}(\theta)</calculator>\) only. 
 <answerCalculatorHighlight>
-\(<span class="calculator" noTags="true">theTrigFun{}(theArg)</span>=\)
+\(<calculator noTags="true">theTrigFun{}(theArg)</calculator>=\)
 </answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, trig">
+<calculatorAnswer id="algebraAnswer" buttons="algebra, trig">
 finalAnswer-algebraAnswer==0
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 EnsureExpressionDependsMandatoryVariables(algebraAnswer, \theta);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeInterpretation>
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

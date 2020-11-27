@@ -1,51 +1,47 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffApproximations(0);
 TurnOffRules ("DegreesToRadians", "Sine", "Cosine");
 rightSide=\pi RandomInteger{}(-10,10) /RandomInteger{}(1,4);
 trigFun=SelectAtRandom(\sin, \cos);
-</span>
+</calculatorHidden>
 Compute the exact value. 
 In your answers, use exact radical notation (expressions such as \(\frac{\sqrt{2}}{2}\)).
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle
 trigFun{}( rightSide)
-</span>\(=\) 
+</calculator>\(=\) 
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra">
+<calculatorAnswer id="algebraAnswer" buttons="algebra">
 algebraAnswer==(TurnOnRules("DegreesToRadians", "Sine", "Cosine"); (trigFun {}rightSide))_2
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswer,none);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 (TurnOnRules("DegreesToRadians", "Sine", "Cosine"); (trigFun {}rightSide))_2
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorHidden">
+<calculatorHidden>
 rightSideTwo=(SelectAtRandom{}(30, 45) * RandomInteger{}(-13,13))^\circ;
 trigFunTwo=SelectAtRandom(\sin, \cos);
-</span>
+</calculatorHidden>
 <br>
 Find the exact value.
-<answerCalculatorHighlight><span class="calculator">
+<answerCalculatorHighlight><calculator>
 \displaystyle
 trigFunTwo{}( rightSideTwo)
-</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswerTwo" buttons="algebra">
+</calculator>\(=\)</answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswerTwo" buttons="algebra">
 algebraAnswerTwo==(TurnOnRules("DegreesToRadians", "Sine", "Cosine"); (trigFunTwo {}rightSideTwo))_2
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswerTwo,none);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 (TurnOnRules("DegreesToRadians", "Sine", "Cosine"); (trigFunTwo {}rightSideTwo))_2
-</span>
+</calculatorAnswerOnGiveUp>

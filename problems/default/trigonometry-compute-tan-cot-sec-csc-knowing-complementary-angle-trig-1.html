@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 theTrigFun=SelectAtRandom(cot,tan, sec,csc);
 otherTrigFun=
 if (theTrigFun==cot, tan, 
@@ -19,23 +17,22 @@ finalAnswer=
 (TurnOnRules("SineOfAngleSum", "CosineOfAngleSum", "ExploitCosEvenness", "ExploitSinOddness","ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "ExpressCscViaSine", "ExpressSecViaCosine"); 
 theTrigFun{}(theArg)
 )_2
-
-</span>
-Transform the trigonometric expression \(<span class="calculator" noTags="true">theTrigFun{}(theArg)</span>\) to one that depends on 
- \(\sin\theta, \cos\theta, \tan\theta, \cot \theta, \sec\theta, \csc\theta\) only. 
-<answerCalculatorHighlight>\(<span class="calculator" noTags="true">theTrigFun{}(theArg)</span>=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, trig">
+</calculatorHidden>
+Transform the trigonometric expression \(<calculator noTags="true">theTrigFun{}(theArg)</calculator>\) to one that depends on 
+\(\sin\theta, \cos\theta, \tan\theta, \cot \theta, \sec\theta, \csc\theta\) only. 
+<answerCalculatorHighlight>\(<calculator noTags="true">theTrigFun{}(theArg)</calculator>=\)</answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswer" buttons="algebra, trig">
 (
 TurnOnRules("ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "ExpressCscViaSine", "ExpressSecViaCosine");
 finalAnswer-algebraAnswer==0
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 EnsureExpressionDependsMandatoryVariables(algebraAnswer, \theta);
 TurnOffRules("ConvertShortDenominatorToNegativePower");
 TurnOnRules("ExpressTanViaSineCosine", 
 "ExpressCotViaSineCosine", "ExpressCscViaSine", "ExpressSecViaCosine");
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeInterpretation>
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
