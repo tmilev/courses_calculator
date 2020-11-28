@@ -1,40 +1,36 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 aCF=RandomInteger{}((-5,-1),(1,5))/RandomInteger{}(1,5);
 hCF=RandomInteger((-5,-1),(1,5));
 kCF=RandomInteger(-5,5);
-theParabola= aCF (x- hCF)^2+kCF;
+theParabola = aCF (x- hCF)^2+kCF;
 xGiven=hCF+RandomInteger((-3,-1),(1,3));
 yGiven=(x=xGiven; theParabola)_2;
-leftPoint  = Min(xGiven, hCF)-1;
+leftPoint = Min(xGiven, hCF)-1;
 rightPoint = Max(xGiven, hCF)+1;
-basicPlot=
+basicPlot =
 PlotPoint( ((hCF, kCF ),(xGiven, yGiven )),red)
 +PlotViewRectangle( (Min (hCF, xGiven,0)-2, Min(kCF-2, yGiven-2,-2)), (  Max (hCF, xGiven,0)+2,Max(kCF+2, yGiven+2,0)))
 +PlotGrid{}0
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 basicPlot+PlotSetId("theCanvas")
-</span><br>
+</calculator><br>
 
-Write down the equation of parabola that has a vertex at <span class="calculator">(hCF, kCF )</span> 
-and passes through <span class="calculator">(xGiven, yGiven )</span>.
+Write down the equation of parabola that has a vertex at <calculator>(hCF, kCF)</calculator> 
+and passes through <calculator>(xGiven, yGiven )</calculator>.
 <answerCalculatorHighlight>\(y=\)</answerCalculatorHighlight>
 
-<textarea class="calculatorAnswer" id="AlgebraAnswerZero" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerZero" buttons="algebra">
 Polynomialize(AlgebraAnswerZero-theParabola)==0
-
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 EnsureExpressionDependsOnlyOn(AlgebraAnswerZero,x);
 basicPlot
 +Plot2D(Polynomialize AlgebraAnswerZero, leftPoint, rightPoint, red)
 +PlotSetId("theCanvas")
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theParabola
-</span>
+</calculatorAnswerOnGiveUp>

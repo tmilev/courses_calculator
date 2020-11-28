@@ -1,6 +1,3 @@
-<span class="setCalculatorExamProblem">
-</span>
-
 Solve for \(x\) in the following quadratic equation.
 <calculatorHidden>
 %UseLnInsteadOfLog
@@ -24,10 +21,10 @@ Plot2D(rightHandSide, (Sort( uOne, uTwo))_1 - 3extraFactor, (Sort( uOne, uTwo))_
 ;
 
 </calculatorHidden>
-The quadratic <calculator>
+The quadratic \(<calculator noTags="true">
 \displaystyle
 leftSide   
-</calculator> \(=\)<calculator>rightHandSide</calculator>
+</calculator>=<calculator noTags="true">rightHandSide</calculator>\)
 <answerCalculatorHighlight>
 Separate the two answers by comma. \(x=\)
 </answerCalculatorHighlight>
@@ -35,8 +32,7 @@ Separate the two answers by comma. \(x=\)
 Sort(answer) - Sort(uOne, uTwo) == (0,0)
 </calculatorAnswer>
 <calculatorCommentsBeforeSubmission>
-%PlotShowJavascriptOnly    
-
+%PlotShowJavascriptOnly
 EnsureExpressionDependsOnlyOn(answer, none);
 if (IsNonEmptySequence {}answer, thePlot
 +
@@ -65,11 +61,6 @@ EnsureExpressionDependsOnlyOn(answerCommonFactor, none);
 <calculatorAnswerOnGiveUp>
 extraFactor
 </calculatorAnswerOnGiveUp>
-    
-    
-
-
-
 
 <br>The plot below shows the plot of the left hand side and the right hand side.
 <br>

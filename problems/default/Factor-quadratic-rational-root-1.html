@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
@@ -16,29 +12,28 @@ TurnOffRules{}(DistributeMultiplicationConstants);
 multList = GetMultiplicandList(leftSideFactored);
 multListAlt=(Denominator{}uOne, (x-uOne), ( x-uTwo));
 SolveForX{}{{a}}=SolveFor{}(x,a);
-</span>
+</calculatorHidden>
 Fully factor the quadratic
 
-<span class="calculator">
+<calculator>
 \displaystyle
 leftSide   
-</span>. 
+</calculator>. 
 <answerCalculatorHighlight> 
-<span class="calculator">
+<calculator>
 \displaystyle
 leftSide   
-</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+</calculator>\(=\)</answerCalculatorHighlight>
+<calculatorAnswer id="factorizationAnswer" buttons="algebra">
 IsProductLinearOrConstantTermsIn{}(x, factorizationAnswer) and
-
 (TurnOnRules("DistributeMultiplication", "DistributeMultiplicationConstants");
 factorizationAnswer-leftSide==0)_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %PlotShowJavascriptOnly    
 TurnOffRules{}(DistributeMultiplication,DistributeMultiplicationConstants);
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(factorizationAnswer,x);
 (theSols=SolveFor(x, Polynomialize{} factorizationAnswer);
@@ -48,10 +43,10 @@ PlotPoint((theSols_2,0), blue)
 PlotGrid{}(0)+
 Plot2D(leftSide, uOne-0.5, uTwo+0.5, red, 2)+
 PlotSetId("thePlot")
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 leftSideFactored
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 <br>Once you are done factoring, plot the function with the calculator you plan on bringing to your exam(s). 
@@ -64,26 +59,26 @@ Show plot
 <span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
 Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
 <br>
-<span class="calculator">
+<calculator>
 PlotGrid{}(0)+
 Plot2D(leftSide, uOne-0.5, uTwo+0.5, red, 2)+
 PlotSetId("thePlot")
 ;
-</span>
+</calculator>
 </span>
 <br>
 
 
-<span class="calculatorSolution" name="factorizationAnswer">
+<calculatorSolution name="factorizationAnswer">
 <br>
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 aCF=Denominator{}uOne;
 bCF=CoefficientOf(x, leftSide);
 cCF=ConstantTerm(x,leftSide);
@@ -106,14 +101,14 @@ fourACtop= 4 af cf;
 fourACbottom= 4 ag cg;
 termTwoSubbed=xOne-xTwoTop;
 termThreeSubbed=xOne-xTwoBottom;
-</span>
-<span class="calculator"> 
+</calculatorHidden>
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle 
 \displaystyle leftSide&=&\displaystyle 
 leftSideFactored &&
-{\begin{array}{l}\text{If we can't guess factorization: }\\\\
+{\begin{array}{l}\text{If~we~can't~guess~factorization:~}\\\\
 ax^2+bx+c=a(x-x_1)(x-x_2)\\\\ 
 \text{ then use:}\\\\
 \begin{array}{rcl}
@@ -127,7 +122,7 @@ x_1,x_2&=&\frac{-b\pm \sqrt{b^2-4 a c}}{2 a}\\\\
 \end{array}
 "
 )
-</span>
-</span>
+</calculator>\)
+</calculatorSolution>
 
 
