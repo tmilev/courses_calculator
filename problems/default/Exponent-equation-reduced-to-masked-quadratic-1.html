@@ -1,9 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
-
 Solve the equation (over the real numbers). 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
 theBase=e;
@@ -22,30 +19,30 @@ rightSide=FactorOutNumberContent{}( -theC * e^{-theLinCF x}-theB);
 TurnOffApproximations(0);
 TurnOffRules ("LogBase");
 theFinalAnswer=1/(theLinCF) \ln{}(uOne);
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span>\(=\)<span class="calculator">
+</calculator>=<calculator noTags="true">
 \displaystyle
 rightSide   
-</span> .
+</calculator>\).
 <br>
 If there is more than one answer, separate them by comma. 
 <answerCalculatorHighlight>
 \(x=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 |AlgebraAnswer - theFinalAnswer| < 0.0000001
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 theFinalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

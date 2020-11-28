@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 theAngleTopDegs=SelectAtRandom(120, 135, 150);
 theAngleTop = theAngleTopDegs^\circ;
 leg1=RandomInteger{}(5,15);
@@ -27,8 +25,8 @@ leg2LabelLocation=randomTranslation+( randomIsometry (vertex2noCamouflage/2 - (l
 
 angleTopLabelLocation= randomTranslation+(randomIsometry*(vertex2noCamouflage-  (0, labelDist ) )^T)^T;
 TurnOffApproximations(0);
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)
 +PlotCurve( randomTranslation+(randomIsometry*(vertex2noCamouflage+  (labelDist cos{} t, labelDist sin{} t) )^T)^T, topAngleLeftPart,topAngleLeftPart+theAngleTop)
 +PlotLabel(angleTopLabelLocation, ToString(theAngleTopDegs)+ "\u00b0")
@@ -37,34 +35,34 @@ PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)
 +PlotWindow(300,300)
 +PlotRemoveCoordinateAxes{}0
 ;
-</span>
+</calculator>
 <br>
 Find the length of the third, non-labeled side of the triangle plotted above. 
 <br>
-The triangle plotted has two sides of length <span class="calculator">leg1</span> and  <span class="calculator">leg2</span> and angle of 
-\(<span class="calculator" noTags="true">theAngleTopDegs</span>^\circ\) agains the longer of the two sides. 
+The triangle plotted has two sides of length <calculator>leg1</calculator> and <calculator>leg2</calculator> and angle of 
+\(<calculator noTags="true">theAngleTopDegs</calculator>^\circ\) agains the longer of the two sides. 
 <br>
 Give exact algebraic values using radicals; calculator approximations will be marked as incorrect.
 
 <answerCalculatorHighlight>Third side length=</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerLength" buttons="algebra">
+<calculatorAnswer id="answerLength" buttons="algebra">
 answerLength==leg3
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(answerLength, none);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 leg3
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Find the area of the triangle. Do not approximate. Exclude units.
 <answerCalculatorHighlight>Area =</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerArea" buttons="algebra">
+<calculatorAnswer id="answerArea" buttons="algebra">
 answerArea==theArea
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(answerArea, none);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 theArea
-</span>
+</calculatorAnswerOnGiveUp>

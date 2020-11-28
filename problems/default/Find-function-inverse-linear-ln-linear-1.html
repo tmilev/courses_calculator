@@ -1,7 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 af= RandomInteger((-5,-1), (1,5));
 bf= RandomInteger((-5,-1), (1,5));
@@ -15,30 +12,30 @@ basicPlot=
 Plot2D(f{}x, leftPoint,rightPoint, "red")
 +PlotWindow(200,200)
 +PlotGrid 0
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 basicPlot+PlotSetId("canvas1")
-</span>
+</calculator>
 <br>
 Find the inverse function \(f^{-1}\), where
 <br>
-\(f(x)=\)<span class="calculator">f{}x</span>.
+\(f(x)=<calculator noTags="true">f{}x</calculator>\).
 <answerCalculatorHighlight>
 \(f^{-1}(x)=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 CompareFunctionsNumerically( AlgebraAnswer, (e^{\frac{x-df}{cf}}-bf)/af, -5, 5, 50, 0.0001)
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeSubmission>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 basicPlot
 +Plot2D(AlgebraAnswer, f{}leftPoint,f{}rightPoint, "blue")
 +PlotSegment((-5,-5),(5,5))
 +PlotSetId("canvas1")
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
  (e^{\frac{x-df}{cf}}-bf)/af
-</span>
+</calculatorAnswerOnGiveUp>

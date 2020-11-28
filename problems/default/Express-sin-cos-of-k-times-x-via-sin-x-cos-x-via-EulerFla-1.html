@@ -1,19 +1,17 @@
-<span class="setCalculatorExamProblem">
-</span>
 Euler's formula states that \(e^{ix}=\cos x + i\sin x\). This can be used to derive de Moivre's formula which states that:
 
 \(
 \displaystyle 
 \begin{array}{rcll|l}
-e^{i nx}&=&\cos (nx)+i\sin (nx)&&\text{Euler's formula for nx}\\
-(\cos x+i\sin x)^n&=&\cos (nx)+i\sin (nx)&&\text{de Moivre's formula, follows from above and }\left(e^{ix} \right)^n=e^{inx}
+e^{i nx}&=&\cos (nx)+i\sin (nx)&&\text{Euler's~formula~for~nx}\\
+(\cos x+i\sin x)^n&=&\cos (nx)+i\sin (nx)&&\text{de~Moivre's~formula,~follows~from~above~and~}  \left(e^{ix} \right)^n=e^{inx}
 \end{array}
 \)
 
 
 <br>
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %HidePolynomialDataStructure
 a=SelectAtRandom(3,4,5,6,7,8);
 sign=1;
@@ -21,14 +19,16 @@ trigFun=SelectAtRandom(sin, cos);
 f=trigFun{}(a*sign*x);
 TurnOnRules("PowerImaginaryUnit");
 eulerFla= Polynomialize( (\cos {}x+sign*i *\sin{}x)^a);
-</span>
+</calculatorHidden>
 It can be shown that 
-<span class="calculator">
+\(
+<calculator noTags="true">
 (z+w)^a
-</span>\(=\) 
-<span class="calculator">
+</calculator>=
+<calculator noTags="true">
 Polynomial{}( (z+w)^a)
-</span>
+</calculator>
+\)
 for any \(z\) and \(w\).
 <hr>
 
@@ -36,22 +36,21 @@ for any \(z\) and \(w\).
 Using the information above, simplify the following expression to an expression that depends on \(\sin x\) and \(\cos x\).
 
 
-<answerCalculatorHighlight><span class="calculator">
-\displaystyle
-f
-</span>\(=\)</answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="trig, algebra">
+<answerCalculatorHighlight>
+\(<calculator noTags="true">\displaystyle f
+</calculator>=\)</answerCalculatorHighlight> 
+<calculatorAnswer id="AlgebraAnswer" buttons="trig, algebra">
 MakeExpression(PolyDivRemainder(
 if (trigFun==\sin, CoefficientOf(i, eulerFla),  ConstantTerm(i, eulerFla))-AlgebraAnswer,
 1-\sin^2 x-\cos^2 x
 ))==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,none)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 if (trigFun==\sin, CoefficientOf(i, eulerFla),  ConstantTerm(i, eulerFla))
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 

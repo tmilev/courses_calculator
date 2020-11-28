@@ -1,9 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
-
 Solve.
 
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffApproximations(0);
 TurnOffRules ("LogBase");
 %UseLnInsteadOfLog
@@ -22,29 +19,28 @@ powerDifference=leftPower-rightPower * \log_baseLeft(baseRight)- \log_baseLeft t
 finalAnswer= SolveFor(x, powerDifference);
 leftSide=baseLeft^leftPower;
 rightSide=theConst baseRight^rightPower;
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle leftSide
-</span>\(=\)<span class="calculator">
+</calculator>=<calculator noTags="true">
 \displaystyle rightSide
-</span>.
+</calculator>\).
 <answerCalculatorHighlight>\(x=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, comma">
- |AlgebraAnswer-   finalAnswer | <0.000000001
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms, comma">
+|AlgebraAnswer - finalAnswer| < 0.000000001
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffApproximations(0);
 TurnOffRules("LogBase");
-
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 TurnOffRules("LogBase");
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none, no, real, solutions, solution, norealsolution, norealsolutions, nosolutions, nosolution)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 
 <br>
 <ul>

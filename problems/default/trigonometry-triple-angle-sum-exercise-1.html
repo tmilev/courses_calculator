@@ -1,23 +1,21 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 theTrigFun=SelectAtRandom(sin, cos);
 theRightSide=
 theTrigFun{}( SelectAtRandom(-1,1)\alpha + SelectAtRandom(-1,1)\beta+SelectAtRandom(-1,1)\gamma);
-</span>
+</calculatorHidden>
 Transform to an expression that depends only on \(\sin\alpha, \cos\alpha, \sin \beta, \cos \beta, \sin \gamma, \cos \gamma\).
 
 <answerCalculatorHighlight>
-<span class="calculator"> theRightSide</span>\(=\) </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, trig, angles">
+\(<calculator noTags="true"> theRightSide</calculator>=\) </answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswer" buttons="algebra, trig, angles">
 Polynomialize(
 (TurnOnRules("ExploitCosEvenness", "ExploitSinOddness", "SineOfAngleSum", "CosineOfAngleSum");theRightSide)_2 - algebraAnswer
 )
 ==0 
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(algebraAnswer, (\alpha, \beta, \gamma));
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 (TurnOnRules("ExploitCosEvenness", "ExploitSinOddness", "SineOfAngleSum", "CosineOfAngleSum");theRightSide)_2
-</span>
+</calculatorAnswerOnGiveUp>

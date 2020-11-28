@@ -1,7 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffApproximations(0);
@@ -13,10 +10,7 @@ theConst=RandomInteger{}(1,30);
 rightSide=theConst;
 leftSide=theBase^{theLinCF x + theLinConst};
 theComparisonOpString=SelectAtRandom( "\\geq", ">", "\\leq", "<");
-
-
 if (theConst>0, thePoint=(\log_theBase theConst- theLinConst)/theLinCF, thePoint =theLinConst/theLinCF);
-
 if ( theComparisonOpString=="\\geq",
 if (theConst\leq 0,
 finalAnswer=(-\infty,\infty),
@@ -47,10 +41,10 @@ finalAnswer=[(\log_theBase theConst- theLinConst)/theLinCF, \infty)
 )
 )
 ,
-if ( theComparisonOpString=="<",
+if (theComparisonOpString=="<",
 if (theConst\leq 0,
 finalAnswer=\emptyset,
-if ( theLinCF>0,
+if (theLinCF>0,
 finalAnswer=(-\infty ,(\log_theBase theConst- theLinConst)/theLinCF)
 ,
 finalAnswer=( (\log_theBase theConst- theLinConst)/theLinCF, \infty)
@@ -68,16 +62,16 @@ thePic=Plot2D(leftSide, leftPoint, rightPoint, red ,2 )+
 PlotGrid{}(0)+
 PlotSegment((leftPoint-4, theConst), (rightPoint+4, theConst), green, 2)
 
-</span>
+</calculatorHidden>
 Solve the inequality. 
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span><span class="calculator">StringToAtom(theComparisonOpString)</span> <span class="calculator">
+</calculator><calculator noTags="true">StringToAtom(theComparisonOpString)</calculator> <calculator noTags="true">
 \displaystyle
 rightSide   
-</span> .
+</calculator>\).
 <ol>
 <li>Your answer should be an interval in a format such as \([a,b]\), \([a,\infty)\), etc.</li>
 <li>If there is no solution, your answer should be \(\emptyset \) (the empty set). <br>
@@ -86,15 +80,15 @@ You can enter it through the buttons or by typing-in \emptyset.</li>
 <answerCalculatorHighlight>
 \(x\in\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, intervals">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms, intervals">
 CompareIntervalsNumerically( AlgebraAnswer, finalAnswer, 0.00001);
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %UseBracketForIntervals
 TurnOffRules("LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
 (
@@ -110,14 +104,14 @@ newRight
 )
 )_4
 ;
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
-<span class="calculator">
-thePic+PlotSetId("thePlot");
-</span>
+<calculator>
+thePic + PlotSetId("thePlot");
+</calculator>
 
 
 

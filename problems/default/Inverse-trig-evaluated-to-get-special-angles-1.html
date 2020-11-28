@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffApproximations(0);
@@ -11,7 +9,7 @@ if (theTrigFun==sin, \arcsin, \arccos);
 theTrigValue= theTrigFun{} (finalAnswerInDegs^\circ);
 theFinalAnswer=theInverseTrig{} theTrigValue;
 TurnOffRules("\arccos", "\arcsin", "arcsinAlgebraic", "arccosAlgebraic");
-</span>
+</calculatorHidden>
 Find the exact value of the expression without using calculator. 
 <ul>
 <li>You may enter your answer in degrees or in radians.
@@ -22,17 +20,17 @@ Find the exact value of the expression without using calculator.
 </li>
 </ul>
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 theInverseTrig{} theTrigValue
-</span> \(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, angles">
+</calculator> =\)</answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswer" buttons="algebra, angles">
 algebraAnswer==theFinalAnswer
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswer, none);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 theFinalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

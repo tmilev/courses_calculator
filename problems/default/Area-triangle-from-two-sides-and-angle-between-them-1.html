@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 leg1=RandomInteger(3,10);
 leg2=RandomInteger(3,10);
 vertex1noCamouflage= (leg1, 0);
@@ -18,8 +16,8 @@ leg1LabelLocation=randomTranslation+( randomIsometry (vertex1noCamouflage/2 - (0
 leg2LabelLocation=randomTranslation+( randomIsometry (vertex2noCamouflage/2 -(labelDist, 0))^t)^t;
 angleLabelLocation=randomTranslation+( randomIsometry ( (labelDist*1.2) cos{}(theAngle/2),  (labelDist*1.2) sin{}(theAngle/2))^t)^t;
 TurnOffApproximations(0);
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)
 +PlotCurve( randomTranslation+(randomIsometry* (labelDist cos{} t, labelDist sin{} t)^T)^T, 0, theAngle)
 +PlotLabel(angleLabelLocation, ToString(theAngleDegs)+ "\u00b0")
@@ -28,16 +26,16 @@ PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)
 +PlotWindow(200,200)
 +PlotRemoveCoordinateAxes{}0
 ;
-</span>
+</calculator>
 <br>
 Find the area of the triangle plotted above.
 <ul>
 <li>Give exact algebraic values using radicals; calculator approximations will be marked as incorrect.</li>    
 </ul>
 <answerCalculatorHighlight>Area=</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerArea" buttons="algebra">
+<calculatorAnswer id="answerArea" buttons="algebra">
 answerArea==leg1 * leg2 \sin{}(theAngle) /2
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 leg1 * leg2 \sin{}(theAngle) /2
-</span>
+</calculatorAnswerOnGiveUp>

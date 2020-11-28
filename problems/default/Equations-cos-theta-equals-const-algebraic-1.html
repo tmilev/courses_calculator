@@ -1,20 +1,16 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffApproximations(0);
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
 leftSide=cos \theta;
 rightSide= SelectAtRandom(\sqrt{2} /2, -\sqrt{2} /2, \sqrt{3} /2,-\sqrt{3} /2, 1/2, -1/2);
-</span>
+</calculatorHidden>
 Solve the equation.<br>
-<span class="calculator">
+<calculator>
 \displaystyle
 leftSide   =rightSide
-</span>. 
+</calculator>. 
 
 
 <ul>
@@ -27,7 +23,7 @@ leftSide   =rightSide
 <li>Use the letter \(k\) to signify an arbitrary integer.</li>
 </ul>
 <answerCalculatorHighlight>Answer:</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, or, variables">
+<calculatorAnswer id="algebraAnswer" buttons="algebra, or, variables">
 ( MatchesPattern(
 algebraAnswer
 , \theta={{angle1}}+2 {{counter1}} \pi or \theta={{angle2}} + 2 {{counter2}} \pi);
@@ -43,15 +39,14 @@ and
  )
 ) 
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswer,\theta, k);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 (\theta = \arccos(rightSide)+ 2k \pi) or (\theta=- \arccos(rightSide) + 2k \pi)
-
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 

@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffApproximations(0);
@@ -34,24 +30,24 @@ sin{}A=theY/theHypo;
 cos{}A=theX/theHypo;
 theTrigFun{}A;
 )_4;
-</span>
+</calculatorHidden>
 Find the exact value of the expression without using calculator. 
 <ul>
 <li>Do not use approximations, use radicals in your answer.
 </li>
 </ul>
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 theTrigFun{} ( theInverseTrigFun{} theTrigValue)
-</span> \(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra">
+</calculator> =\)</answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswer" buttons="algebra">
 algebraAnswer==finalAnswer
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswer, none);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

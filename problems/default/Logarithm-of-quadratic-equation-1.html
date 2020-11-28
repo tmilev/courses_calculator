@@ -1,9 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
-
 Solve the equation (over the real numbers). 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
 theBase=SelectAtRandom(2,3,5,7,10);
@@ -15,36 +12,36 @@ TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
 1/(theBase^rightSide-theConst>0);
 TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational");
 theFinalAnswer= (\sqrt{ (theBase^rightSide-theConst)/theQCF},-\sqrt{ (theBase^rightSide-theConst)/theQCF});
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span>\(=\)<span class="calculator">
+</calculator>=<calculator noTags="true">
 \displaystyle
 rightSide   
-</span> .
+</calculator>\).
 <br>
 If there is more than one answer, separate them by comma. 
 <answerCalculatorHighlight>\(z=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer"  buttons="algebra, logarithms, comma">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms, comma">
 ((DoubleValue |AlgebraAnswer_1-theFinalAnswer_1|<0.00001) and (DoubleValue|AlgebraAnswer_2-theFinalAnswer_2|<0.00001))
 or
 ((DoubleValue|AlgebraAnswer_2-theFinalAnswer_1|<0.00001) and (DoubleValue|AlgebraAnswer_1-theFinalAnswer_2|<0.00001))
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
 if(ChildExpression(AlgebraAnswer,1)==StringToAtom("Sequence"),"",
 "<br><b style='color:red'>Perhaps your need more than one answer.</b> 
 <br><b>Separate multiple answers by commas.</b><br>"  )
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theFinalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 
 

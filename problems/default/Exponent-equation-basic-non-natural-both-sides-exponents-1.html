@@ -1,9 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
-
 Solve.
 
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffApproximations(0);
 TurnOffRules ("LogBase");
 %UseLnInsteadOfLog
@@ -18,15 +15,15 @@ rightPower=theC x +theD;
 leftPower=theA x+theB;
 rightSide=theConst theBase^{rightPower};
 leftSide=theBase^{leftPower};
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle leftSide
-</span>\(=\)<span class="calculator">
+</calculator>=<calculator noTags="true">
 \displaystyle rightSide
-</span>.
+</calculator>\).
 <answerCalculatorHighlight>\(x=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, comma">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms, comma">
 Thaw
 (
 if (theConst==0, (AlgebraAnswer== nosolution) or (AlgebraAnswer==no solution) or (AlgebraAnswer==nosolutions) or (AlgebraAnswer==no solutions),
@@ -35,17 +32,16 @@ Freeze( |AlgebraAnswer-    (\log_theBase(theConst)-theB+theD)/(theA-theC) | <0.0
 )
 )
 )
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffApproximations(0);
 TurnOffRules("LogBase");
-
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 TurnOffRules("LogBase");
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none, no, real, solutions, solution, norealsolution, norealsolutions, nosolutions, nosolution)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 TurnOffRules ("LogBase");
 Thaw (
 if (theConst==0, "no solution", 
@@ -53,7 +49,7 @@ if (theConst<0, "no real solution",
 Freeze ((\log_theBase(theConst)-theB+theD)/(theA-theC)))
 )
 )
-</span>
+</calculatorAnswerOnGiveUp>
 
 <br>
 <ul>

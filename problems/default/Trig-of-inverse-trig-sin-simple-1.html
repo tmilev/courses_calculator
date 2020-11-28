@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffApproximations(0);
@@ -21,38 +17,38 @@ theRegularAngle-2\pi
 )
 )
 );
-</span>
+</calculatorHidden>
 <ul>
 <li> Find the exact numerical value of the expression without using calculator.</li>
 <li> Do not approximate \(\pi\): enter it with the buttons/keyboard.</li>
 </ul>
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 \arcsin(sin{}( theConst))
-</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, angles">
+</calculator>=\)</answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswer" buttons="algebra, angles">
 algebraAnswer==theConst
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswer,none);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 theConst
-</span>
+</calculatorAnswerOnGiveUp>
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 \arcsin(sin{}( theConstTwo))
-</span>\(=\)
+</calculator>=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswerTwo" buttons="algebra, angles">
+<calculatorAnswer id="algebraAnswerTwo" buttons="algebra, angles">
 (TurnOnRules("DegreesToRadians");
 algebraAnswerTwo==finalAnswer
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswerTwo, none);
 TurnOnRules("DegreesToRadians", "Sine", "Cosine");
@@ -70,7 +66,7 @@ if ((algebraAnswerTwo\leq \pi/2) and (algebraAnswerTwo\geq -\pi/2), "",
 "Sine of " +ToString(theConstTwo)+ " equals (approx.):";
 \sin(theConstTwo);
 TurnOffRules("DegreesToRadians", "Sine", "Cosine");
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

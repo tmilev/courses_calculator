@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffApproximations{} 0;
 TurnOffRules("DegreesToRadians");
 theTrigFun=SelectAtRandom(sin, cos);
@@ -18,61 +16,60 @@ finalAnswerOne=sqrt{}( (1+finalAnswerZero)/2);
 finalAnswerTwo=
 sign2* sqrt{}( (1 +({if (theTrigFun==sin,-1,1)} )  finalAnswerOne)/2);
 TurnOffRules("Sine", "Cosine");
-</span>
+</calculatorHidden>
 Compute an exact algebraic expression for the given expressions. 
 <br>
 Use only the four arithmetic operations and the radicals \(\sqrt{\dots} \).
 
-<answerCalculatorHighlight> \(<span class="calculator" noTags="true"> rightSideZero</span>=\) </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswerZero" buttons="algebra">
+<answerCalculatorHighlight> \(<calculator noTags="true"> rightSideZero</calculator>=\) </answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswerZero" buttons="algebra">
 finalAnswerZero-algebraAnswerZero==0
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("DegreesToRadians");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 TurnOffRules("DegreesToRadians");
 EnsureExpressionDependsOnlyOn (algebraAnswerZero, none);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswerZero
-</span>
-<answerCalculatorHighlight> \(<span class="calculator" noTags="true"> rightSideOne</span>=\) </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra">
+</calculatorAnswerOnGiveUp>
+<answerCalculatorHighlight> \(<calculator noTags="true"> rightSideOne</calculator>=\) </answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswer" buttons="algebra">
 (|DoubleValue{}(finalAnswerOne- algebraAnswer)|<0.0000000001 )
 and IsAlgebraicRadical{}(algebraAnswer)
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("DegreesToRadians");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 TurnOffRules("DegreesToRadians");
 EnsureExpressionDependsOnlyOn (algebraAnswer, none);
 if (IsAlgebraicRadical{}(algebraAnswer),
 "",
 "<br><b style='color:red'>Your answer must only contain radicals and arithmetic operations. </b>"
 )
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswerOne
-</span>
-<answerCalculatorHighlight> \(<span class="calculator" noTags="true"> rightSideTwo</span>=\) </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswerTwo" buttons="algebra">
+</calculatorAnswerOnGiveUp>
+<answerCalculatorHighlight> \(<calculator noTags="true"> rightSideTwo</calculator>=\) </answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswerTwo" buttons="algebra">
 (|DoubleValue{}(finalAnswerTwo-algebraAnswerTwo)|<0.0000000001)
 and IsAlgebraicRadical{}(algebraAnswerTwo)
-
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("DegreesToRadians");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 TurnOffRules("DegreesToRadians");
 EnsureExpressionDependsOnlyOn (algebraAnswerTwo, none);
-if (IsAlgebraicRadical{}(algebraAnswer),
+if (IsAlgebraicRadical{}(algebraAnswerTwo),
 "",
 "<b style='color:red'><br>Your answer must only contain radicals and arithmetic operations. </b>"
 )
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswerTwo
-</span>
+</calculatorAnswerOnGiveUp>

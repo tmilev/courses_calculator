@@ -1,7 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations{}0;
 TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower", "sqrt", DistributeMultiplication);
@@ -16,22 +13,22 @@ randomcf2=RandomInteger((-5,-1),(1,5)) ;
 1/(GCD(randomcf1,randomcf2)==1)
 factor3base=  randomcf1 z + randomcf2;
 factor3= \sqrt[radical3]{factor3base}
-</span>
+</calculatorHidden>
 Fully expand the expression to a sum of logarithms. Your answer
 should not contain logarithms of products or logarithms of exponents.
 <answerCalculatorHighlight>
-<span class="calculator" > \displaystyle \log_base ( (factor1 *factor2)/(factor3) )</span>\(=\)
+\(<calculator noTags="true"> \displaystyle \log_base ( (factor1 *factor2)/(factor3) )</calculator>=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerZero"  buttons="algebra, logarithms">
-AlgebraAnswerZero- (\log_base factor1 +power2 \log_base factor2base- 1/radical3 \log_base factor3base )==0
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorAnswer id="AlgebraAnswerZero"  buttons="algebra, logarithms">
+AlgebraAnswerZero - (\log_base factor1 +power2 \log_base factor2base- 1/radical3 \log_base factor3base )==0
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswerZero, (x,y,z));
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 \log_base factor1 +power2 \log_base factor2base- 1/radical3 \log_base factor3base 
-</span>
+</calculatorAnswerOnGiveUp>

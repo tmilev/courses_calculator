@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffApproximations(0);
@@ -11,14 +7,12 @@ leftSide = sin \theta;
 aCF = RandomInteger{}((-11, -1), (1, 11));
 rightSide= aCF/(|aCF| + RandomInteger{}(1, 20));
 IsApproximatelyInteger{}{{a}} = (|Round{}a - a| < 0.0001);
-</span>
+</calculatorHidden>
 Solve the equation. <br>
-<span class="calculator">
+<calculator>
 \displaystyle
 leftSide = rightSide
-</span>. 
-
-
+</calculator>. 
 <ul>
 <li>Enter your answer in the format \(\theta=Angle+2k\pi ~or~ \theta=AnotherAngle+2k\pi \). </li>
 <li>A sample answer: <br>
@@ -28,7 +22,7 @@ leftSide = rightSide
 <li>Use the letter \(k\) to signify an arbitrary integer.</li>
 </ul>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, or, variables, inversetrig">
+<calculatorAnswer id="algebraAnswer" buttons="algebra, or, variables, inversetrig">
 ( MatchesPattern(
 algebraAnswer
 , \theta={{angle1}}+2 {{counter1}} \pi or \theta={{angle2}} + 2 {{counter2}} \pi);
@@ -44,18 +38,17 @@ and
  )
 ) 
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffApproximations(0);
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswer,\theta, k);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 (\theta = \arcsin(rightSide)+ 2k \pi) or (\theta=\pi- \arcsin(rightSide) + 2k \pi)
-
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 

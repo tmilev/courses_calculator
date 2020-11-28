@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 leg1=RandomInteger(3,10);
 vertex1noCamouflage= (leg1, 0);
 theAngleLeftDegs=SelectAtRandom(30, 45, 60, 120, 135 );
@@ -22,8 +20,8 @@ leg1LabelLocation=randomTranslation+( randomIsometry (vertex1noCamouflage/2 - (0
 angleLeftLabelLocation=randomTranslation+( randomIsometry ( (labelDist*1.2) DoubleValue{}( cos{}(theAngleLeft/2)),  (labelDist*1.2) DoubleValue{}( sin{}(theAngleLeft/2)))^t)^t;
 angleRightLabelLocation=randomTranslation+( randomIsometry(vertex1noCamouflage+ ( -(labelDist*1.4) DoubleValue{}( cos{}(theAngleRight/2)),  (labelDist*1.4)DoubleValue{}( sin{}(theAngleRight/2))))^t)^t;
 TurnOffApproximations(0);
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)+
 PlotCurve( randomTranslation+(randomIsometry* (labelDist cos{} t, labelDist sin{} t)^T)^T, 0, theAngleLeft) +
 PlotCurve( randomTranslation+(randomIsometry*(vertex1noCamouflage+  (labelDist cos{} t, labelDist sin{} t) )^T)^T, \pi,\pi- theAngleRight) +
@@ -31,9 +29,8 @@ PlotLabel(angleLeftLabelLocation, ToString(theAngleLeftDegs)+ "\u00b0")+
 PlotLabel(angleRightLabelLocation, ToString(theAngleRightDegs)+ "\u00b0")+
 PlotLabel(leg1LabelLocation, leg1)
 +PlotWindow(200,200)
-+PlotRemoveCoordinateAxes{}0
-;
-</span>
++PlotRemoveCoordinateAxes{}0;
+</calculator>
 <br>
 Find the area of the triangle plotted above.
 <ul>
@@ -41,9 +38,9 @@ Find the area of the triangle plotted above.
 </ul>
 
 <answerCalculatorHighlight>Area=</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="answerArea" buttons="algebra">
+<calculatorAnswer id="answerArea" buttons="algebra">
 answerArea==leg1 * leg2 \sin{}(theAngleLeft) /2
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 leg1 * leg2 \sin{}(theAngleLeft) /2
-</span>
+</calculatorAnswerOnGiveUp>

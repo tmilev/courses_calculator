@@ -1,30 +1,27 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations{}0;
 TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
 
 base = RandomInteger(2,30);
 argument=RandomInteger(2,30);
-</span>
+</calculatorHidden>
 Rewrite the logarithm to an expression that uses the natural logarithm \(\ln\) and the arithmetic operations.
 <answerCalculatorHighlight>
-<span class="calculator" >  \log_base( argument)</span>\(=\)
+\(<calculator noTags="true">\log_base( argument)</calculator>=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerZero"  buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswerZero"  buttons="algebra, logarithms">
 (DoubleValue{}|AlgebraAnswerZero- \ln {}argument /ln {}base|< 0.0000000001 )
 and (not ( Contains(AlgebraAnswerZero, StringToAtom("LogBase") ) ) )
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerZero, none);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 TurnOnRules("LogBaseSimpleCases", "\\log", "LogBase");
 \ln {}argument /ln {}base
-</span>
+</calculatorAnswerOnGiveUp>

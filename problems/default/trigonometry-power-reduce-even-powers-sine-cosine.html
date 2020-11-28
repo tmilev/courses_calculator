@@ -1,11 +1,8 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
-    cf1=RandomInteger {}(-4,4);
-    cf2= RandomInteger {}(-4,4);
+<calculatorHidden>
+cf1=RandomInteger {}(-4,4);
+cf2= RandomInteger {}(-4,4);
 theRightSide= cf1(\sin^4 \alpha) + cf2 ( \cos^4\alpha);
 1/(cf1*cf2);
-
 finalAnswer=
 (TurnOnRules("ExpressSinViaExponent", "ExpressCosViaExponent", "PowerImaginaryUnit");
 reduced=Polynomialize{}theRightSide;
@@ -14,23 +11,23 @@ TurnOnRules("EulerFormula", "ExploitSinOddness", "ExploitCosEvenness");
 reduced
 )_5;
 thePlot=Plot2D( theRightSide, -2\pi, 2\pi)+PlotGrid{}0;
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 thePlot+PlotSetId("plotid1")
-</span>
+</calculator>
 <br>
 Transform the trigonometric expression to one that depends only on first degree cosines 
 of even multiples of \(\alpha\), i.e., an expression that depends only on: \(\cos(2k\alpha)\).
 
-<answerCalculatorHighlight><span class="calculator"> theRightSide</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, trig, angles">
+<answerCalculatorHighlight>\(<calculator noTags="true"> theRightSide</calculator>=\)</answerCalculatorHighlight>
+<calculatorAnswer id="algebraAnswer" buttons="algebra, trig, angles">
 Polynomialize(finalAnswer - algebraAnswer)==0 
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 EnsureExpressionDependsMandatoryVariables(algebraAnswer, \alpha);
 thePlot+Plot2D(algebraAnswer,-2\pi,2\pi, blue,2)+PlotSetId("plotid1")
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

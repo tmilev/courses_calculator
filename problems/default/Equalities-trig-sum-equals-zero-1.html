@@ -1,7 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 TurnOffRules ("Sine", "Cosine");
@@ -54,38 +51,37 @@ leftPoint =-2\pi;
 rightPoint=2\pi;
 secondPlot=Plot2D(leftSide, -2\pi, 2\pi, red, 2)+
 PlotGrid(0);
-</span>
+</calculatorHidden>
 <ul>
 <li>Find all solutions of the equation in the interval \([-2\pi, 2\pi]\).</li>
 <li>You may use either degrees or radians; if using degrees, your answer should be in the interval \([-360^\circ, 360^\circ]\).</li>
 <li>Separate multiple answers by commas.</li>
 <li>The red plot is the graph of the left-hand side.</li>
 </ul>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide
-</span>\(=\)<span class="calculator">
+</calculator>=<calculator noTags="true">
 \displaystyle
 0
-</span>
+</calculator>\)
 <answerCalculatorHighlight>
 \(\theta=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, angles, commas">
+<calculatorAnswer id="algebraAnswer" buttons="algebra, angles, commas">
 Sort{} algebraAnswer == answerList 
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswer, none);
 secondPlot+
 PlotPoint( ApplyToList(leftSideAsFun, algebraAnswer), blue)+ 
 PlotSetId("secondPlotID");
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 %UseBracketForIntervals
 answerList
-
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
-<span class="calculator">
+<calculator>
 secondPlot+PlotSetId("secondPlotID");
-</span>
+</calculator>

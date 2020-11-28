@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 radius = RandomInteger{}(1,10);
 extraHeight=radius / RandomInteger{}(3,10);
 startingAngle=30^\circ;
@@ -28,30 +26,34 @@ PlotSegment(horizon, (0,0), green)+PlotRemoveCoordinateAxes {}0
 ;
 TurnOffApproximations{}0;
 finalAnswer = arccos(radius /(radius+extraHeight ));
-
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 thePlot+ PlotSetId("canvas1");
-</span>
+</calculator>
 <br>
-Find the length of the highlighted arc. The radius of the circle is <span class="calculator">\displaystyle radius </span> 
-and the length of the segment \(OA\) is <span class="calculator">\displaystyle extraHeight+radius </span>.
+Find the length of the highlighted arc. The radius of the circle is <calculator>\displaystyle radius </calculator> 
+and the length of the segment \(OA\) is <calculator>\displaystyle extraHeight+radius </calculator>.
 <ul>
-<li>Give an exact expression using inverse trig function such as \(\arcsin, \arccos\).</li>    
+<li>Your answer must be an exact expression using inverse trig function such as \(\arcsin, \arccos\). Please do not compute a numerical answer with a calculator.</li>    
+  <li>
+    If we imagine that point \(A\) represents a satellite orbiting earth, then the length of the highlighted arc would be 
+    the ground distance between the spot on earth below the satellite and the viewing horizon of the satellite (assuming flat earch surface).
+    The formulas you are using here would apply directly in this setting, with \(OA\) replaced by the distance between the satellite and the center of earth.
+  </li>
 </ul>
 <answerCalculatorHighlight>Arc length\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, inversetrig">
+<calculatorAnswer id="algebraAnswer" buttons="algebra, inversetrig">
 (DoubleValue|algebraAnswer-finalAnswer|)<0.000001;
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffApproximations{}0;
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(algebraAnswer, none);
 "<br>Your answer is approximately equal to: " + ToString( (TurnOnApproximations{}0;
 algebraAnswer
 )_2)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

@@ -1,7 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 TurnOffRules ("Sine", "Cosine");
@@ -37,12 +34,12 @@ finalAnswer= SubList(angleList, ({{a}}\leq 360^\circ) and (a\geq -360^\circ) )  
 thePlotVar=Plot2D(leftSide, leftPoint, rightPoint , red, 2 )+
 Plot2D(rightSide, leftPoint, rightPoint, pink, 2 )
 +PlotGrid(0);
-</span>
-<span class="calculatorHidden">
+</calculatorHidden>
+<calculatorHidden>
 secondPlot=Plot2D(leftSide, -2\pi, 2\pi, red, 2)+
 Plot2D(rightSide, -2\pi, 2\pi, pink, 2)+
 PlotGrid(0);
-</span>
+</calculatorHidden>
 <ul>
 <li>Find all solutions of the equation in the interval \([-2\pi, 2\pi]\).</li>
 <li>You may use either degrees or radians; if using degrees, your answer should be in the interval \([-360^\circ, 360^\circ]\).</li>
@@ -50,32 +47,32 @@ PlotGrid(0);
 <li>The red plot is the graph of the left-hand side; the pink one is the graph of the right-hand side.</li>
 <li>The value of the left-hand side and right-hand side at your answers will be labeled on the graph. </li>
 </ul>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide
-</span>\(=\)<span class="calculator">
+</calculator>=<calculator noTags="true">
 \displaystyle
 rightSide
-</span>
+</calculator>\)
 <answerCalculatorHighlight>
 \(\theta=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra, angles, comma">
+<calculatorAnswer id="algebraAnswer" buttons="algebra, angles, comma">
 Sort{} algebraAnswer == finalAnswer 
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(algebraAnswer, none);
 secondPlot+
 PlotPoint( ApplyToList(leftSideAsFun, algebraAnswer), green)+ 
 PlotPoint( ApplyToList(rightSideAsFun, algebraAnswer), blue)+ 
 PlotSetId("secondPlotID");
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 %UseBracketForIntervals
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
-<span class="calculator">
+<calculator>
 secondPlot+PlotSetId("secondPlotID");
-</span>
+</calculator>

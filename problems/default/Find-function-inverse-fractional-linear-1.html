@@ -1,7 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 af= RandomInteger((-5,-1), (1,5));
 bf= RandomInteger((-5,-1), (1,5));
 cf= RandomInteger((-5,-1), (1,5));
@@ -19,25 +16,23 @@ basicPlot=Plot2D(f{}x, leftPoint1, rightPoint1,"red",2,200)+Plot2D(f{}x, leftPoi
 )
 +PlotGrid 0
 +PlotWindow(200,200)
-
-</span>
-<span class="calculatorShowToUserOnly">
-basicPlot+PlotSetId("canvas1")
-;
-</span>
+</calculatorHidden>
+<calculatorShowToUserOnly>
+basicPlot+PlotSetId("canvas1");
+</calculatorShowToUserOnly>
 <br>
 Find the inverse function \(f^{-1}\), where
-\(f(x)=\)<span class="calculator">
+\(f(x)=<calculator noTags="true">
 \displaystyle f{}x
-</span>.
+</calculator>\).
 
 <answerCalculatorHighlight>
 \(f^{-1}(x)=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer- (df x -bf)/(-cf x+af)==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x);
 basicPlot
@@ -46,11 +41,11 @@ basicPlot
 +PlotSegment((-df/cf-5,-df/cf-5),(-df/cf+5,-df/cf+5))
 +PlotWindow(200,200)
 +PlotSetId("canvas1")
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (df x -bf)/(-cf x+af)
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 

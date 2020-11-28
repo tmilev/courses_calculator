@@ -1,9 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
-
 Solve the equation (over the real numbers). 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
 uOne = RandomInteger(0, 7);
@@ -18,31 +15,31 @@ limitThis =  theBase ^ rightHandSide;
 1 / (limitThis < 300);
 leftHandSide = \log_theBase (x - uOne) + \log_{theBase} (x - uTwo);
 theSolution = uOne + baseFactorTwo;
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftHandSide   
-</span>\(=\)<span class="calculator">
+</calculator>=<calculator noTags="true">
 \displaystyle
 rightHandSide   
-</span> .
+</calculator>\).
 <br>
 If there is more than one answer, separate them by comma. 
 <answerCalculatorHighlight>\(x=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 AlgebraAnswer == theSolution
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theSolution
-</span>
+</calculatorAnswerOnGiveUp>
 
 

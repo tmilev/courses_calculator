@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffApproximations{} 0;
 TurnOffRules("DegreesToRadians");
 theTrigFun=SelectAtRandom(sin, cos);
@@ -24,22 +22,22 @@ a=aNoPi*\pi;
 b=bNoPi*\pi;
 simplified
 )_5
-</span>
+</calculatorHidden>
 Compute an exact algebraic expression using the four arithmetic operations and the radicals \(\sqrt{\dots} \).
 <answerCalculatorHighlight> 
-\(<span class="calculator" noTags="true"> theRightSide</span>=\)
+\(<calculator noTags="true"> theRightSide</calculator>=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="algebraAnswer" buttons="algebra">
+<calculatorAnswer id="algebraAnswer" buttons="algebra">
 ((DoubleValue{}(|finalAnswer-algebraAnswer|))<0.0000000001 )
 and
 IsAlgebraicRadical{}(algebraAnswer)
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("DegreesToRadians");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn (algebraAnswer, none);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

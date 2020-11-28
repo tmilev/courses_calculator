@@ -2,7 +2,6 @@ Solve the equation (over the real numbers).
 
 <calculatorHidden>
 TurnOffRules ("LogBase", "CombineExponents");
-
 uOne= RandomInteger( 1,10);
 uTwo= RandomInteger(-1,-10 );
 powerShiftOne=RandomInteger{}(1,3);
@@ -42,6 +41,5 @@ EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
 <calculatorAnswerOnGiveUp>
 TurnOffApproximations(0);
 TurnOffRules ("LogBase");
-
-log_theBase uOne -powerShiftOne
+log_theBase uOne - powerShiftOne
 </calculatorAnswerOnGiveUp>

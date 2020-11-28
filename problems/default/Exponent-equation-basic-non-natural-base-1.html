@@ -1,9 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
-
 Solve.
 
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffApproximations(0);
 TurnOffRules ("LogBase");
 %UseLnInsteadOfLog
@@ -12,16 +9,15 @@ theB= RandomInteger((-10,-1),(1,10));
 theRightSide=RandomInteger(-2,25);
 theBase=RandomInteger(2,12);
 leftSide=theBase^{theA x+ theB};
-
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle leftSide
-</span>\(=\)<span class="calculator">
+</calculator>=<calculator noTags="true">
 \displaystyle theRightSide
-</span>.
+</calculator>\).
 <answerCalculatorHighlight>\(x=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 Thaw
 (
 if (theRightSide==0, (AlgebraAnswer== nosolution) or (AlgebraAnswer==no solution) or (AlgebraAnswer==nosolutions) or (AlgebraAnswer==no solutions),
@@ -30,17 +26,16 @@ Freeze( |AlgebraAnswer-(log_theBase (theRightSide)-theB)/theA| <0.000000001)
 )
 )
 )
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffApproximations(0);
 TurnOffRules("LogBase");
-
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 TurnOffRules("LogBase");
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none, no, real, solutions, solution, norealsolution, norealsolutions, nosolutions, nosolution)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 TurnOffRules ("LogBase");
 Thaw (
 if (theRightSide==0, "no solution", 
@@ -48,10 +43,10 @@ if (theRightSide<0, "no real solution",
 Freeze ((log_theBase (theRightSide)-theB)/theA))
 )
 )
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution"><br>
-<span class="calculatorHidden">
+<calculatorSolution><br>
+<calculatorHidden>
 theLinFun= theA x+ theB;
 simplifiedLn=Thaw (if (theRightSide>0,Freeze(  \log_theBase theRightSide), ""  ));
 logCanBeSimplified=(TurnOffRules("LogBaseSimpleCases"); simplifiedLn===\log_theBase theRightSide)_2;
@@ -59,8 +54,8 @@ simplifiedLnQuote= if( logCanBeSimplified ,"","="+ToString( simplifiedLn));
 theLinTerm=theA x;
 rightSideBeforeDivision=simplifiedLn-theB;
 finalAnswer=Thaw (if (theRightSide >0,Freeze( (\log_theBase(theRightSide)-theB)/theA), ""  ))
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 Thaw(
 if (theRightSide<0, 
 EvaluateSymbols "Exponents (of real numbers) are positive and so the equation \\(leftSide=theRightSide\\) has no real solutions (our final answer).
@@ -71,19 +66,20 @@ Our final answer is ``no solution''. " ,
 Freeze(
 EvaluateSymbols "
 When solving exponential equations with two terms, it is a good idea to keep the two terms on separate sides of the equation.
-\begin{array}{rcll|l}
+<br>
+\(\begin{array}{rcll}
 \displaystyle leftSide &=& \displaystyle  theRightSide\\\\
 \displaystyle theLinFun   &=& \displaystyle  \log_{theBase} theRightSide simplifiedLnQuote\\\\
 \displaystyle theLinTerm  &=& \displaystyle rightSideBeforeDivision\\\\
 \displaystyle x&=&\displaystyle finalAnswer
-\end{array}
+\end{array}\)
 "
 )
 )
 )
 )
-</span>
-</span>
+</calculator>
+</calculatorSolution>
 
 <ul>
 <li>If there is more than one answer, separate the answers by commas. </li>
