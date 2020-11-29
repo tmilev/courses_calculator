@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
@@ -17,12 +13,12 @@ TurnOffRules{}(DistributeMultiplicationConstants);
 multList = GetMultiplicandList(leftSideFactored);
 multListAlt=(Denominator{}uOne, (x-uOne), ( x-uTwo),(x-uThree));
 finalAnswer=[uOne,uTwo]\cup[uThree,\infty)
-</span>
+</calculatorHidden>
 Using your graphing calculator, plot the cubic
-<span class="calculator">
+<calculator>
 \displaystyle
 leftSide   
-</span>. 
+</calculator>. 
 <br>Please make sure to use the same calculator device that you plan on using on your exams.
 <br>
 <button class="showAnswerButton" onclick="if(this.toggleTag===undefined || this.toggleTag==false) this.toggleTag=true; else this.toggleTag=false; if (this.toggleTag){ document.getElementById('thePlotContainer').style.display=''; document.getElementById('thePlotContainer').style.opacity=1;} else {document.getElementById('thePlotContainer').style.display='none';  document.getElementById('thePlotContainer').style.opacity=0;}">
@@ -32,59 +28,55 @@ Show plot
 <span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
 Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
 <br>
-<span class="calculator">
+<calculator>
 PlotGrid{}(0)+
 Plot2D(leftSide, uOne-0.5, uThree+0.5, red, 2)+
-PlotSetId("thePlot")
-;
-</span>
+PlotSetId("thePlot");
+</calculator>
 </span>
 <br>
 Fully factor the cubic.
 <answerCalculatorHighlight> 
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span>\(=\)</answerCalculatorHighlight>
+</calculator>=\)</answerCalculatorHighlight>
 
-<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+<calculatorAnswer id="factorizationAnswer" buttons="algebra">
 IsProductLinearOrConstantTermsIn{}(x,factorizationAnswer) and
 Polynomialize{}(factorizationAnswer-leftSide)==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(factorizationAnswer,x);
 if (Polynomialize{}(factorizationAnswer-leftSide)==0,"",
 "<br><b style='color:red'>Did you check your answer by uncovering parentheses?
 <br>Pay extra attention to the leading coefficient and constant term.  </b>"
 )
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 leftSideFactored
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 <br>
 Using your factorization, solve the inequality. 
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span>\(\geq\)<span class="calculator">
-\displaystyle
-0
-</span>.
+</calculator>\geq 0\).
 <answerCalculatorHighlight>\(x\in\)</answerCalculatorHighlight>
 <textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, intervals">
 (AlgebraAnswer==finalAnswer) or
 (AlgebraAnswer==finalAnswerAlternative)
 </textarea>
 
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorCommentsBeforeInterpretation>
 %UseBracketForIntervals
 ""
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 %UseBracketForIntervals
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
@@ -131,10 +123,10 @@ PlotSetId("thePlot")
 ))_3)
 )
 )
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 
 

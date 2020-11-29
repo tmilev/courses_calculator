@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffRules("DistributeMultiplication");
 width = RandomInteger(5,11);
 height=RandomInteger{}(5,15);
@@ -17,10 +15,9 @@ theUnit= Max(baseTriangle+width,height)/20;
 theY=(thePerimeter-cfRight*x-cfLeft*x-cfLeft*x*theSecant)/2;
 areaFormula= (theY*2+cfLeft*x)/2 * cfRight*x;
 finalAnswerArea=(x= -1/2  CoefficientOf{}(x, Polynomialize {}areaFormula)/CoefficientOf{}(x^2, Polynomialize {}areaFormula);areaFormula)_2
+</calculatorHidden>
 
-</span>
-
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 PlotPath ( 
 (
 (0,0),
@@ -31,7 +28,6 @@ PlotPath (
 ), black)
 +PlotSegment((baseTriangle, height), (baseTriangle,0), gray)
 +PlotPath( ((baseTriangle,theUnit), (baseTriangle+theUnit, theUnit),(baseTriangle+theUnit,0) ), silver)
-
 +PlotLabel((baseTriangle+width/2,height+theUnit),"y"  )
 +PlotLabel((baseTriangle+width-theUnit,height/2),cfRight x  )
 +PlotLabel((baseTriangle/2,theUnit),cfLeft x  )
@@ -42,14 +38,14 @@ PlotPath (
 +PlotLabel((baseTriangle-theUnit,height+theUnit),"A"  )
 +PlotRemoveCoordinateAxes 0
 +PlotViewRectangle((-theUnit*3,-theUnit*3),(baseTriangle+width+theUnit,height+theUnit*3))
-</span>
+</calculatorShowToUserOnly>
 <br>
 The diagram shows a trapezoid \(ABCE\) and let \(D\) be the heel of the perpendicular 
 from \(A\) to \(EC\), as indicated. Furthermore let the trapezoid be such that 
 \(ABCD\) is a rectangle. The segment \(AB\) has length \(y\), the 
-segment \(BC\) has length <span class="calculator">cfRight x</span> and the segment 
-\(ED\) has length <span class="calculator">cfLeft x</span> units.
-The perimiter of \(ABCE\) is <span class="calculator">thePerimeter</span> units. 
+segment \(BC\) has length <calculator>cfRight x</calculator> and the segment 
+\(ED\) has length <calculator>cfLeft x</calculator> units.
+The perimiter of \(ABCE\) is <calculator>thePerimeter</calculator> units. 
 
 <br>
 Find the trapezoid area as a function of \(x\). 
@@ -59,33 +55,32 @@ Find the trapezoid area as a function of \(x\).
 <answerCalculatorHighlight>
 \(A(x)=\)
 </answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswerArea" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerArea" buttons="algebra">
 Polynomialize(AlgebraAnswerArea-areaFormula) == 0  ;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswerArea,x);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 areaFormula;
 "\(="+ToString(Polynomialize areaFormula)+"\)"
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Find the maximal possible area of the trapezoid. 
 <b style="color:red">Exclude units</b> from your answer.
 <answerCalculatorHighlight>
 \(A_{max}=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerAreaMax" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerAreaMax" buttons="algebra">
 finalAnswerArea
 -AlgebraAnswerAreaMax==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerAreaMax,none);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 finalAnswerArea;
 "\(\approx "+ToString(DoubleValue finalAnswerArea)+"\)"
-</span>
-
+</calculatorAnswerOnGiveUp>

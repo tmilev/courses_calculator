@@ -1,8 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
 Find the vertical and horizontal asymptotes of the function.
 
-<span class="calculatorHidden">
+<calculatorHidden>
 af= RandomInteger((-5,-1), (1,5));
 bf= RandomInteger(-5,5);
 cf= RandomInteger(-5,5);
@@ -15,12 +13,12 @@ num{}{{x}}=af x^2+ bf x + cf;
 1/num{}(xOne);
 1/num{}(xTwo);
 den=ag(x-xOne)(x-xTwo);
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle
 f{}(x)=\frac{num{}x}{den };
-</span>.
+</calculator>.
 
 <br>
 If there is more than one vertical/horizontal asymptote, separate your answers by comma. For example, if you enter 1,2 in the text area below, that corresponds to the two asymptotes   \(x= 1\) and \(x=2\).
@@ -29,34 +27,33 @@ If there is more than one vertical/horizontal asymptote, separate your answers b
 <answerCalculatorHighlight>
 Vertical asymptotes: \(x=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="VerticalAsymptotes" buttons="algebra, variables">
+<calculatorAnswer id="VerticalAsymptotes" buttons="algebra, variables">
 (VerticalAsymptotes== (Sequence{}(xOne) \sqcup Sequence{}(xTwo))) 
 or 
 (VerticalAsymptotes== (Sequence{}(xTwo) \sqcup Sequence{}(xOne)))
 or 
-((VerticalAsymptotes==xOne) and (VerticalAsymptotes==xTwo))
-;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+((VerticalAsymptotes==xOne) and (VerticalAsymptotes==xTwo));
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(VerticalAsymptotes,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 Sequence{}(xOne) \sqcup Sequence{}(xTwo)
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 <answerCalculatorHighlight>
 The horizontal asymptotes of the function are: \(y=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="HorizontalAsymptotes" buttons="algebra, variables">
+<calculatorAnswer id="HorizontalAsymptotes" buttons="algebra, variables">
 HorizontalAsymptotes==af/ag
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(HorizontalAsymptotes,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 af/ag
-</span>
+</calculatorAnswerOnGiveUp>
 
 

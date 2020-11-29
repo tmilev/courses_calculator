@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 a=RandomInteger((-1,-3));
 b=SelectAtRandom(2,3,4);
@@ -13,24 +11,24 @@ right=a+ b x^2 y ;
 rightSquared=right^2;
 theFun=left-right;
 theFunModified=leftSquared-rightSquared
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotImplicit(theFunModified, (0, 0), (5, 5), (80,80), 5000)
 +PlotWindow(300,300)
 +PlotGrid 0
-</span>
+</calculatorShowToUserOnly>
 <br>
 Express \(\displaystyle  \frac{{\text d} y }{{\text d} x}\) as a function of \(x\) and \(y\), where \(x\) and \(y\) are related by:
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \(\displaystyle left\) 
-</span>\(=\)<span class="calculator">
+</calculator>=<calculator noTags="true">
 \displaystyle right
-</span>.<br>
+</calculator>\).<br>
 <answerCalculatorHighlight>
 Answer: \(\displaystyle \frac{{\text d} y }{{\text d} x}=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttona="algebra, variables">
+<calculatorAnswer id="AlgebraAnswer" buttona="algebra, variables">
 CompareExpressionsNumericallyAtPoints(
 MakeExpression{}(
 MakeRationalFunction{}(
@@ -39,15 +37,15 @@ MakeRationalFunction{}(
 )_2
 ))
 , AlgebraAnswer, 0.1, (x,y)\in PointsImplicitly{}(theFun, (0,0),(5,5), (10,10)) )
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,y)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 MakeExpression{}(
 MakeRationalFunction{}(
 (d/dx theFunModified;
 -(d/dx y=0;d/dx theFunModified)_2 /CoefficientOf{}(d/dx y, d/dx theFunModified)
 )_2
 ))
-</span>
+</calculatorAnswerOnGiveUp>

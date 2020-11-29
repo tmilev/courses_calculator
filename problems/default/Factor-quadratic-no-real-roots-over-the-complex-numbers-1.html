@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
@@ -21,19 +17,19 @@ TurnOffRules{}(DistributeMultiplicationConstants);
 leftSideFactored=(aCF (x-uOne)) ( x-uTwo);
 multList3=(aCF, (x-uOne), ( x-uTwo));
 SolveForX{}{{a}}=SolveFor{}(x,a);
-</span>
-The quadratic <span class="calculator">
+</calculatorHidden>
+The quadratic <calculator>
 \displaystyle
 leftSide   
-</span> has no real roots. Fully factor it using complex numbers. 
+</calculator> has no real roots. Fully factor it using complex numbers. 
 You may use square roots of negative numbers and you may use the imaginary unit \(i=\sqrt{-1}\).
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span>\(=\)
+</calculator>=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra, complex">
+<calculatorAnswer id="factorizationAnswer" buttons="algebra, complex">
 (
 answerList=GetMultiplicandList( factorizationAnswer);
 x=10!+1; 
@@ -43,18 +39,18 @@ or
 or
 ((Sort( multList3)- Sort(answerList) )==0)
 )_3
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %PlotShowJavascriptOnly    
 TurnOffRules{}(DistributeMultiplication,DistributeMultiplicationConstants);
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(factorizationAnswer,x);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 leftSideFactored
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 <br>Once you are done factoring, plot the function with the calculator you plan on bringing to your exam(s). 
@@ -67,12 +63,11 @@ Show plot
 <span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
 Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
 <br>
-<span class="calculator">
+<calculator>
 PlotGrid{}(0)+
 Plot2D(leftSide, -bCF/(2aCF)-3, -bCF/(2aCF)+3, red, 2)+
-PlotSetId("thePlot")
-;
-</span>
+PlotSetId("thePlot");
+</calculator>
 </span>
 <br>
 

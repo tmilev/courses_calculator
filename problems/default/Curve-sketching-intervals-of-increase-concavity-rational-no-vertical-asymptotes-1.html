@@ -1,7 +1,5 @@
-<span class="setCalculatorExamProblem">
-</span>
 The function \(f\)  is plotted below.<br>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseBracketForIntervals
 a=RandomInteger((1,3));
 b=RandomInteger(1, 2);
@@ -13,7 +11,7 @@ firstDerivative=d/dx(f{}x);
 secondDerivative=d/dx firstDerivative;
 fdNumCfs=CoefficientsPowersOf(x, Numerator(firstDerivative));
 increaseInterval=(( -fdNumCfs_2 + sqrt((fdNumCfs_2)^2-4 fdNumCfs_1 fdNumCfs_3))/(2 fdNumCfs_3), 
- ( -fdNumCfs_2 - sqrt((fdNumCfs_2)^2-4 fdNumCfs_1 fdNumCfs_3))/(2 fdNumCfs_3));
+(- fdNumCfs_2 - sqrt((fdNumCfs_2)^2-4 fdNumCfs_1 fdNumCfs_3))/(2 fdNumCfs_3));
 sdNum= Numerator(secondDerivative);
 sdNumFactors=FactorOneVarPolyOverRationals( Numerator(secondDerivative));
 sdNumFactorLin=sdNumFactors_1;
@@ -21,43 +19,43 @@ sdNumFactorQuad=MakeExpression(MakeRationalFunction (sdNum/sdNumFactorLin));
 inflectionPoints = Sort(SolveFor( x, sdNumFactorQuad));
 concaveUpIntervals = (inflectionPoints_1, inflectionPoints_2)\cup (inflectionPoints_3, \infty)  ;
 TurnOffRules("DistributeMultiplication");
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 Plot2D(f{}x,-6, 6, "red" )+PlotWindow(300,300)
-</span>
+</calculatorShowToUserOnly>
 <br>
 The function is given by the following formula.
 <br>
-\(f(x)=\)<span class="calculatorShowToUserOnly">
+\(f(x)=<calculatorShowToUserOnly noTags="true">
 \displaystyle
 f{}x;
-</span>
+</calculatorShowToUserOnly>\)
 <br>
 Computation shows the first derivative is <br>\(f'(x)=\)
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 \displaystyle
 firstDerivative
-</span>
-and the second derivative is <br> \(f''(x)=\)
-<span class="calculatorShowToUserOnly">
+</calculatorShowToUserOnly>
+and the second derivative is <br> \(f''(x)=
+<calculatorShowToUserOnly noTags="true">
 \displaystyle
 secondDerivative
-</span>=
-<span class="calculatorShowToUserOnly">
+</calculatorShowToUserOnly>=
+<calculatorShowToUserOnly noTags="true">
 \displaystyle
 Product{}(sdNumFactors )/(Denominator(secondDerivative))
-</span>
+</calculatorShowToUserOnly>\)
 
 <br>
 Find the interval(s) on which \(f\) is increasing. 
 <answerCalculatorHighlight>
 \(f\) increases when \(x\in\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="userIncreaseInterval" buttons="algebra, intervals">
+<calculatorAnswer id="userIncreaseInterval" buttons="algebra, intervals">
 userIncreaseInterval== increaseInterval;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(userIncreaseInterval,none);
 %PlotShowJavascriptOnly
 Plot2D(f{}x, -6,6,  "red" )
@@ -70,49 +68,49 @@ if ( (userIncreaseInterval_1)>(userIncreaseInterval_2),
 "<br>Interval highlighted above."),
 ""
 )
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 increaseInterval
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 <b>The maximum of \(f\) is achieved for:</b>
 <answerCalculatorHighlight>
 \(x_{max}=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="xMax" buttons="algebra">
-xMax- increaseInterval_2==0;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorAnswer id="xMax" buttons="algebra">
+xMax - increaseInterval_2==0;
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(xMax,none);
 %PlotShowJavascriptOnly
 Plot2D(f{}x, -6,6, "red" )
 +PlotPoint((xMax, f{}xMax), "blue" )
 +PlotWindow(300,300)
 ;
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 increaseInterval_2
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 <b>The minimum of \(f\) is achieved for:</b>
 <answerCalculatorHighlight>
 \(x_{min}\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="xMin" buttons="algebra">
+<calculatorAnswer id="xMin" buttons="algebra">
 xMin- increaseInterval_1==0;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(xMin,none);
 %PlotShowJavascriptOnly
 Plot2D(f{}x, -6,6, "red" )
 +PlotPoint((xMin, f{}xMin), "blue" )
 +PlotWindow(300,300)
 ;
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 increaseInterval_1
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Find the <b>open</b> interval(s) on which \(f\) is concave up. 
 <br>
@@ -121,29 +119,28 @@ Enter union of intervals using the union sign, for example \((a,b)\cup (c,d)\).
 <b>\(f\) is concave up when: </b>
 <answerCalculatorHighlight>
 \(x\in\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="userConcaveUp" buttons="algebra, intervals">
+<calculatorAnswer id="userConcaveUp" buttons="algebra, intervals">
 CompareIntervalsNumerically( userConcaveUp,concaveUpIntervals, 0.000000001)
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(userConcaveUp,\infty);
 %PlotShowJavascriptOnly
 Plot2D(f{}x, -6,6, "red" )
 +Plot2D(f{}x, userConcaveUp, "blue",5 )
-+PlotWindow(300,300)
-;
-</span>
-<span class="calculatorAnswerOnGiveUp">
++PlotWindow(300,300);
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 concaveUpIntervals
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Find the \(x\)-coordinates of the inflection points. If more than one, separate them by comma. 
 <answerCalculatorHighlight>
 Inflection points:
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="userInflectionPoints" buttons="algebra, comma">
+<calculatorAnswer id="userInflectionPoints" buttons="algebra, comma">
 (Sort(userInflectionPoints))==inflectionPoints;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(userInflectionPoints,none);
 %PlotShowJavascriptOnly
 Plot2D(f{}x, -6,6, "red" )+
@@ -152,10 +149,8 @@ PlotPoint((userInflectionPoints_1, f{}userInflectionPoints_1), "blue" )
 +PlotPoint((userInflectionPoints_2, f{}userInflectionPoints_2), "blue" )
 +PlotPoint((userInflectionPoints_3, f{}userInflectionPoints_3), "blue" )
 ,0);
-</span>
-
-
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 inflectionPoints
-</span>
+</calculatorAnswerOnGiveUp>
 

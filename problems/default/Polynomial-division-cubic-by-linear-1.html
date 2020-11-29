@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
@@ -12,44 +8,44 @@ cCF=RandomInteger((-10,-1),(1,10));
 dCF=RandomInteger((-10,-1),(1,10));
 pCF=SelectAtRandom(-1,1);
 qCF=RandomInteger((-6,-1),(1,6));
-divident=  aCF x^3+ bCF x^2+ cCF x +dCF;
-divisor= pCF x+qCF;
-quotient= PolyDivQuotient(divident, divisor);
-remainder=PolyDivRemainder(divident,divisor);
-</span>
+divident = aCF x^3+ bCF x^2+ cCF x +dCF;
+divisor = pCF x+qCF;
+quotient = PolyDivQuotient(divident, divisor);
+remainder = PolyDivRemainder(divident,divisor);
+</calculatorHidden>
 Divide the polynomial
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle
 divident   
-</span>
+</calculator>
 <br>by 
-<span class="calculator">
+<calculator>
 \displaystyle
 divisor
-</span>
+</calculator>
 <br>
 using polynomial long division. 
 <answerCalculatorHighlight>Quotient:</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="quotientAnswer" buttons="algebra">
+<calculatorAnswer id="quotientAnswer" buttons="algebra">
 quotientAnswer-quotient==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(quotientAnswer, x);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 quotient
-</span>
+</calculatorAnswerOnGiveUp>
 <answerCalculatorHighlight>Remainder:</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="remainderAnswer" buttons="algebra">
+<calculatorAnswer id="remainderAnswer" buttons="algebra">
 remainderAnswer-remainder==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(remainderAnswer, x);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 remainder
-</span>
+</calculatorAnswerOnGiveUp>
 

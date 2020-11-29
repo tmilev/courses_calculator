@@ -1,66 +1,63 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
-
+<calculatorHidden>
 a=RandomInteger(2,5);
 b=RandomInteger(3,6);
 %UseLnInsteadOfLog
 f{}{{x}}=x e^{a x} ;
 theCFs=CoefficientsPowersOf(x, CoefficientOf(e^{a x},d/dx f{}x));
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 Plot2D(f{}x,-1, 1/b, "red" )
 +PlotWindow(300,300)
-</span>
+</calculatorShowToUserOnly>
 <br>
 Find the values of \(x\) for which the maximum and minimum value of \(f\) is attained over the given interval. 
-<br>\(f(x)=\)
-<span class="calculator">
+<br>\(f(x)=
+<calculator noTags="true">
 \displaystyle
 f{}x;
-</span>
+</calculator>\)
 <br>
-over the closed interval \(\displaystyle x\in[-3,\)<span class="calculator">1/b</span>\(]\).
+over the closed interval \(\displaystyle x\in[-3, <calculator noTags="true">1/b</calculator>]\).
 <br>
 The value of \(x\) for which \(f\) attains its maximum is: 
 <answerCalculatorHighlight>\(x_{max}=\) </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerMax" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerMax" buttons="algebra">
 AlgebraAnswerMax==1/b;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerMax,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 <br>
 <span style="color:red"> Please do not give numerical approximations for your 
 answer.</span> Instead, use square roots to give an exact answer. To write \(\sqrt{5}\) you need to type sqrt(5) or \sqrt(5). 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 Plot2D(f{}x,-1, 1/b, "red" )
 +PlotWindow(300,300)
 +PlotPoint((AlgebraAnswerMax, f{}AlgebraAnswerMax), "blue");
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 1/b
-</span>
+</calculatorAnswerOnGiveUp>
 
 <br>
 The value of \(x\) for which \(f\) attains its maximum is: 
 <answerCalculatorHighlight>\(x_{min}=\)</answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswerMin" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerMin" buttons="algebra">
 -theCFs_1/(theCFs_2)==AlgebraAnswerMin;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerMin,none)
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeSubmission>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 Plot2D(f{}x,-1, 1/b, "red" )
 +PlotWindow(300,300)
 +PlotPoint((AlgebraAnswerMin, f{}AlgebraAnswerMin), "blue")
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 -theCFs_1/(theCFs_2)
-</span>
+</calculatorAnswerOnGiveUp>

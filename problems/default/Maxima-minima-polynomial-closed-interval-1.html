@@ -1,74 +1,72 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 a= RandomInteger(-3,3);
 b= RandomInteger(1,4);
 c= RandomInteger(1,4);
 f{}{{x}}=(x-a)(x-(a+b))(x-(a+b+c));
 theCFs=CoefficientsPowersOf(x,d/dx f{}x);
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 Plot2D(f{}x,a, a+b+c, "red" )
 +PlotWindow(300,300)
 +PlotGrid 0
-</span>
+</calculatorShowToUserOnly>
 
 <br>
 Find the values of \(x\) for which the maximum and minimum value of \(f\) is attained over the given interval. 
 <br>
-\(f(x)=\)
-<span class="calculator">
+\(f(x)=
+<calculator noTags="true">
 f{}x;
-</span>
+</calculator>\)
 <br>
-over the closed interval \(x\in[\)
-<span class="calculator">
+over the closed interval \(x\in[
+<calculator noTags="true">
 a
-</span>,<span class="calculator">
+</calculator>,<calculator noTags="true">
 a+b+c
-</span>\(]\).
+</calculator>]\).
 The value of \(x\) for which \(f\) attains its maximum is: 
 <answerCalculatorHighlight>\(x_{max}=\)</answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswerMax" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerMax" buttons="algebra">
 ((-(theCFs_2)-\sqrt{ (theCFs_2)^2-4 (theCFs_1) *( theCFs_3) })/{2 (theCFs_3)}- AlgebraAnswerMax)==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerMax,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 <br>
 <span style="color:red"> Please do not give numerical approximations for your 
 answer.</span> Instead, use square roots to give an exact answer. To write \(\sqrt{5}\) you need to type sqrt(5) or \sqrt(5). 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 Plot2D(f{}x,a, a+b+c, "red" )
 +PlotWindow(300,300)
 +PlotPoint((AlgebraAnswerMax, f{}AlgebraAnswerMax), "blue")
 +PlotGrid 0
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (-(theCFs_2)-\sqrt{ (theCFs_2)^2-4 (theCFs_1) *( theCFs_3) })/{2 (theCFs_3)};
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 The value of \(x\) for which \(f\) attains its minimum is: 
 <answerCalculatorHighlight>\(x_{min}=\) </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerMin" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerMin" buttons="algebra">
 ((-(theCFs_2)+\sqrt{ (theCFs_2)^2-4 (theCFs_1) *( theCFs_3) })/{2 (theCFs_3)}-AlgebraAnswerMin)==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerMin,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 Plot2D(f{}x,a, a+b+c, "red" )
 +PlotWindow(300,300)
 +PlotPoint((AlgebraAnswerMin, f{}AlgebraAnswerMin), "blue")
 +PlotGrid 0
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (-(theCFs_2)+\sqrt{ (theCFs_2)^2-4 (theCFs_1) *( theCFs_3) })/{2 (theCFs_3)}
-</span>
+</calculatorAnswerOnGiveUp>

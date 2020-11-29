@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffRules("DistributeMultiplication");
 width = 2*RandomInteger(3,10);
 height=RandomInteger{}(5,12);
@@ -17,8 +15,8 @@ leftDirection=(-(tipY-height),tipX)/(sqrt (tipX^2+(tipY-height)^2 ));
 rightDirection=(-(tipY-height),tipX)/(sqrt (tipX^2+(tipY-height)^2 ));
 areaFormula= x^2* theTangent+2x(thePerimeter-2*x*theSecant-2x  )/2;
 finalAnswerArea=(x= -1/2  CoefficientOf{}(x, Polynomialize {}areaFormula)/CoefficientOf{}(x^2, Polynomialize {}areaFormula);areaFormula)_2
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotPath ( 
 (
 (0,0),
@@ -41,12 +39,12 @@ PlotPath (
 +PlotLabel( (tipX, tipY+theUnit ), "E")
 +PlotLabel( (tipX, height-theUnit ), "F")
 +PlotLabel( (tipX,-theUnit), "2x")
-</span>
+</calculatorShowToUserOnly>
 <br>
 The diagram shows a window in the shape of a rectangle \(ABCD\) and a triangular isosceles triangle \(ABE\) 
 arranged as indicated. The segment \(AB\) has length \(2x\) and the 
-length \(|AE|=\)<span class="calculator">theSecant</span>\(|AB|\).
-The total perimiter of \(AEBCDA\) is <span class="calculator">thePerimeter</span> units. 
+length \(|AE|=<calculator noTags="true">theSecant</calculator>|AB|\).
+The total perimiter of \(AEBCDA\) is <calculator>thePerimeter</calculator> units. 
 
 
 Let \(F\) be the heel of the perpendicular dropped from point \(E\) onto \(AB\).
@@ -57,50 +55,49 @@ Your answer should be expression that <b style="color:red">depends on \(x\)</b>.
 <answerCalculatorHighlight> 
 \(|EF|=\)
 </answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswerHeight" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerHeight" buttons="algebra">
 Polynomialize(AlgebraAnswerHeight-theTangent*x)==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswerHeight,x);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theTangent*x
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Find the window area \(A\) as a function of \(x\). 
 <b style="color:red">Exclude units</b> in your answer, <b style="color:red">exclude units</b>. 
 <answerCalculatorHighlight>
 \(A(x)=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerArea" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerArea" buttons="algebra">
 Polynomialize(AlgebraAnswerArea-areaFormula) == 0  ;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswerArea,x);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 areaFormula;
 "\(="+ToString(Polynomialize areaFormula)+"\)"
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Find the maximal possible area of the window. <b style="color:red">Exclude units</b> from your answer.
 
 <answerCalculatorHighlight>
 \(A_{max}=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerAreaMax" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerAreaMax" buttons="algebra">
 finalAnswerArea
 -AlgebraAnswerAreaMax==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerAreaMax,none);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 finalAnswerArea;
-
 "\(\approx "+ToString(DoubleValue finalAnswerArea)+"\)"
-</span>
+</calculatorAnswerOnGiveUp>
 

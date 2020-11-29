@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
@@ -13,30 +9,27 @@ cCF = RandomInteger{}((- 8, - 1), (1, 8));
 theQuadratic = aCF x^2 + bCF x + cCF;
 1/(bCF^2 - 4aCF cCF < 0);
 leftSide = (x - uOne)(theQuadratic);
-
 TurnOffRules{}(DistributeMultiplication);
-
 leftSideFactored=(x-uOne)( theQuadratic);
 TurnOffRules{}(DistributeMultiplicationConstants);
 leftPoint = uOne-1;
 rightPoint=uOne+1; 
-</span>
+</calculatorHidden>
 <span id="thePlotContainer" style="opacity:1; transition 0.6s linear;">
 Use the mouse wheel to zoom. Use may use the graph to guess the zero of the function.
 <br>
-<span class="calculator">
+<calculator>
 PlotGrid{}(0)+
 Plot2D(leftSide, leftPoint, rightPoint, red, 2)+
-PlotSetId("thePlot")
-;
-</span>
+PlotSetId("thePlot");
+</calculator>
 </span>
 <ul>
 <li>
-The poloynomial <span class="calculator">
+The polynomial <calculator>
 \displaystyle
 leftSide   
-</span> is plotted above. </li>
+</calculator> is plotted above. </li>
 <li>Practice reproducing the plot on the graphing device you plan on bringing to your exams. </li>
 <li>Using the plot of the cubic and polynomial division, factor the polynomial into product of
 <ol>
@@ -48,27 +41,27 @@ leftSide
 </ul>
 <b>Factorization over the reals:</b>
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span>
-\(=\)
+</calculator>
+=\)
 </answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+<calculatorAnswer id="factorizationAnswer" buttons="algebra">
 IsProductTermsUpToPower{}(x^2,factorizationAnswer)
 and 
 (Polynomialize(factorizationAnswer-leftSide)==0)
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %PlotShowJavascriptOnly    
 TurnOffRules{}(DistributeMultiplication,DistributeMultiplicationConstants);
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(factorizationAnswer,x);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 leftSideFactored
-</span>
+</calculatorAnswerOnGiveUp>
 
 

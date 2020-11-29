@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 leftPoint= RandomInteger{}(-5,5);
 rightPoint=leftPoint+SelectAtRandom{}(1,2,4,5,7,8);
@@ -13,37 +11,37 @@ constantCoeff=RandomInteger{}(2,5);
 f{}{{x}}=\frac{c}{(x*extraXcubedCF)^3+constantCoeff};
 thePlot{}0=PlotRectangle((leftPoint,0),(Delta,f{}(sampling{}(0))));
 thePlot{}{{m}}=PlotRectangle((leftPoint+m*Delta,0), (Delta, f{}(sampling{}(m)) )) +thePlot{}(m-1);
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 thePlot{}(n-1)+ Plot2D(f{}x, leftPoint,rightPoint)+PlotLabel((rightPoint, -0.1), rightPoint)
 +PlotWindow(300,300)
-</span>
+</calculatorShowToUserOnly>
 <br>
-Write down a Riemann sum with <span class="calculator">\(n\)</span> intervals 
-using <span style="color:red"><b>left end points</b></span> in each sampling interval
+Write down a Riemann sum with <calculator>n</calculator> intervals 
+using <b style="color:red">left end points</b> in each sampling interval
 to approximate the integral
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^rightPoint f{}x {\text d} x  
-</span>.
+</calculator>.
 <br>
 You do not need to simplify your answer: simply enter an algebraic expression that produces your answer. 
 <br>
-<b>Riemann sum, left endpoints, <span class="calculator">\(n\)</span> intervals:</b>
+<b>Riemann sum, left endpoints, <calculator>n</calculator> intervals:</b>
 <answerCalculatorHighlight>
 Answer:
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer==(riemannSum{}(0)=Delta* f{}(sampling{}0);
 riemannSum{}{{m}}=Delta* f{}(sampling{}(m))+riemannSum{}(m-1);
 riemannSum{}(n-1)
 )_3;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 TurnOffRules("DivideRationalByRational", "DivideByNumber", "ConvertShortDenominatorToNegativePower", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "DistributeMultiplication", "DistributeExponent", "PowerIntegerByInteger", "PowerRationalByRational", "AssociateTimesDivision");
 (
@@ -58,4 +56,4 @@ TurnOnRules("DivideRationalByRational", "DivideByNumber", "ConvertShortDenominat
 riemannSum{}{{m}}=Delta* f{}(sampling{}(m))+riemannSum{}(m-1);
 riemannSum{}(n-1)
 )_3;
-</span>
+</calculatorAnswerOnGiveUp>

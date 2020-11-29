@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
@@ -18,61 +14,59 @@ dividend= divisor(quadraticA x^2+quadraticB x+ quadraticC);
 quotient= PolyDivQuotient(dividend, divisor);
 remainder=PolyDivRemainder(dividend,divisor);
 TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
-</span>
+</calculatorHidden>
 Divide the polynomial
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle
 dividend
-</span>
+</calculator>
 <br>by 
-<span class="calculator">
+<calculator>
 \displaystyle
 divisor
-</span>
+</calculator>
 <br>
 using polynomial long division. 
 <answerCalculatorHighlight>Quotient:</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="quotientAnswer" buttons="algebra">
+<calculatorAnswer id="quotientAnswer" buttons="algebra">
 Polynomialize(quotientAnswer-quotient)==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(quotientAnswer, x);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 quotient
-</span>
+</calculatorAnswerOnGiveUp>
 <answerCalculatorHighlight>Remainder:</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="remainderAnswer" buttons="algebra">
+<calculatorAnswer id="remainderAnswer" buttons="algebra">
 remainderAnswer-remainder==0
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(remainderAnswer, x);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 remainder
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Using your computations from above, 
 factor the cubic into a product of a linear term and a quadratic term (all with real coefficients).
 <answerCalculatorHighlight> 
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 dividend
-</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+</calculator>=\)</answerCalculatorHighlight>
+<calculatorAnswer id="factorizationAnswer" buttons="algebra">
 IsProductTermsUpToPower{}(x^2, factorizationAnswer) and
 ( Polynomialize( factorizationAnswer- dividend)==0 )
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(factorizationAnswer, x);
 if (Polynomialize( factorizationAnswer- dividend)==0, "", "<b style='color:red'>Did you check your answer by uncovering parenthesis?</b>")
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 divisor(quadraticA x^2+quadraticB x+ quadraticC)
-</span>
-
-
+</calculatorAnswerOnGiveUp>

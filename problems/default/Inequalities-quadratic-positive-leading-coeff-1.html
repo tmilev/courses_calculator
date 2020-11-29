@@ -1,49 +1,42 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
 uOne=RandomInteger{}(-8,8)/RandomInteger{}((-8,-1),(1,8));
 uTwo=Floor(uOne+1)+RandomInteger{}(1,8)/RandomInteger{}(1,2);
 leftSide=Denominator{}uOne Denominator{}uTwo (x-uOne)(x-uTwo);
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 Plot2D(leftSide, uOne-1.5, uTwo+1.5, red,1)+PlotSetId("thePlot")+PlotGrid{}0;
-</span>
+</calculator>
 <br>
 Solve the inequality. 
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span>\(\gt\)<span class="calculator">
-\displaystyle
-0   
-</span>.
+</calculator>\gt 0\).
 <answerCalculatorHighlight>\(x\in\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, intervals">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, intervals">
 (AlgebraAnswer==((-\infty,uOne)\cup(uTwo,\infty)))
 or
 (AlgebraAnswer==((uTwo,\infty)\cup (-\infty,uOne)))
-</textarea>
+</calculatorAnswer>
 
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorCommentsBeforeInterpretation>
 %UseBracketForIntervals
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 TurnOffRules("LogBase");
 Plot2D(leftSide, uOne-1.5, uTwo+1.5, red,1)+PlotSetId("thePlot")+PlotGrid{}0
 +
 Plot2D(leftSide, AlgebraAnswer, blue, 4)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (-\infty,uOne)\cup(uTwo,\infty)
-</span>
+</calculatorAnswerOnGiveUp>
 
 

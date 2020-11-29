@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
 uOne=RandomInteger{}(-8,8)/RandomInteger{}((-8,-1),(1,8));
@@ -18,32 +14,32 @@ finalAnswer=if (expectOneInterval, [uOne,uTwo], (-\infty, uOne]\cup [uTwo,\infty
 finalAnswerAlternative=if (expectOneInterval, [uOne,uTwo], [uTwo,\infty)\cup (-\infty, uOne]);
 theBigBadPlot=Plot2D(leftSide, uOne-1.5, uTwo+1.5)+
 Plot2D(rightSide, uOne-1.5, uTwo+1.5) + PlotGrid {}0;
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 theBigBadPlot+
 PlotSetId("thePlot");
-</span>
+</calculator>
 <br>
 Solve the inequality. 
 <br>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span>\(\geq\)<span class="calculator">
+</calculator>\geq<calculator noTags="true">
 \displaystyle
 rightSide
-</span>.
+</calculator>\).
 <answerCalculatorHighlight>\(x\in\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, intervals">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, intervals">
 (AlgebraAnswer==finalAnswer) or
 (AlgebraAnswer==finalAnswerAlternative)
-</textarea>
+</calculatorAnswer>
 
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorCommentsBeforeInterpretation>
 %UseBracketForIntervals
 ""
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
 TurnOffRules("LogBase");
@@ -52,13 +48,11 @@ theBigBadPlot
 Plot2D(leftSide, AlgebraAnswer, blue, 2)
 + 
 Plot2D(rightSide, AlgebraAnswer, green, 2)
-+PlotSetId("thePlot")
++PlotSetId("thePlot");
+</calculatorCommentsBeforeSubmission>
 
-;
-</span>
-
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 
 

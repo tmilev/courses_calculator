@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
@@ -22,24 +18,23 @@ TurnOffRules{}(DistributeMultiplicationConstants);
 leftSideFactored= aCF (x-uOne) ( x-uTwo) (x-uThree);
 leftPoint = Min (uOne,uTwo, uThree)-0.5;
 rightPoint=Max(uOne,uTwo,uThree)+0.5; 
-</span>
+</calculatorHidden>
 
 <span id="thePlotContainer" style="opacity:1; transition 0.6s linear;">
 Use the mouse wheel to zoom. 
 <br>
-<span class="calculator">
+<calculator>
 PlotGrid{}(0)+
 Plot2D(leftSide, leftPoint, rightPoint, red, 2)+
-PlotSetId("thePlot")
-;
-</span>
+PlotSetId("thePlot");
+</calculator>
 </span>
 
 <ul>
-    <li>The cubic  <span class="calculator">
+    <li>The cubic  <calculator>
 \displaystyle
 leftSide   
-</span> is plotted above.</li>
+</calculator> is plotted above.</li>
 <li> Practice drawing the plot using the graphing device you plan on bringing to your exams.</li>
 <li>Fully factor the polynomial. </li>
 <li>This cubic has at least one root that is easy to guess from the plot.
@@ -49,23 +44,23 @@ division to factor out the linear term that is easy to guess, and the quadratic 
 to fully factor the cubic.</li>
 </ul>
 <b>Factorization: </b>
-<answerCalculatorHighlight> <span class="calculator">
+<answerCalculatorHighlight>\( <calculator noTags="true">
 \displaystyle
 leftSide   
-</span>\(=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+</calculator>=\)</answerCalculatorHighlight>
+<calculatorAnswer id="factorizationAnswer" buttons="algebra">
 IsProductLinearOrConstantTermsIn{}(x, factorizationAnswer) and
 (Polynomialize(factorizationAnswer-leftSide)==0)
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %PlotShowJavascriptOnly    
 TurnOffRules{}(DistributeMultiplication,DistributeMultiplicationConstants);
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(factorizationAnswer,x);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 leftSideFactored
-</span>
+</calculatorAnswerOnGiveUp>
 

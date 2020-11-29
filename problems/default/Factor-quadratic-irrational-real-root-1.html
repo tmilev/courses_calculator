@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
@@ -15,27 +13,27 @@ uTwo=(SolveFor{}(x, leftSide))_2;
 TurnOffRules{}(DistributeMultiplication,DistributeMultiplicationConstants);
 leftSideFactored=aCF (x-uOne)( x-uTwo);
 SolveForX{}{{a}}=SolveFor{}(x,a);
-</span>
-Fully factor the quadratic <span class="calculator">
+</calculatorHidden>
+Fully factor the quadratic <calculator>
 \displaystyle
 leftSide   
-</span> over the real numbers. Use radicals (expressions such as \(\sqrt{5}\)) if needed.
+</calculator> over the real numbers. Use radicals (expressions such as \(\sqrt{5}\)) if needed.
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle
 leftSide   
-</span>\(=\)    
+</calculator>=\)    
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="factorizationAnswer" buttons="algebra">
+<calculatorAnswer id="factorizationAnswer" buttons="algebra">
 IsProductLinearOrConstantTermsIn{}(x,leftSideFactored)
 and
 (Polynomialize(factorizationAnswer-leftSide)==0)
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %PlotShowJavascriptOnly    
 TurnOffRules{}(DistributeMultiplication,DistributeMultiplicationConstants);
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(factorizationAnswer, x);
 
@@ -46,10 +44,10 @@ PlotPoint((theSols_1,0), blue)+
 PlotPoint((theSols_2,0), blue)
 )_2+
 PlotSetId("thePlot")
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 leftSideFactored
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 <br>Once you are done factoring, plot the function with the calculator you plan on bringing to your exam(s). 
@@ -62,18 +60,18 @@ Show plot
 <span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
 Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
 <br>
-<span class="calculator">
+<calculator>
 PlotGrid{}(0)+
 Plot2D(leftSide, Min(uTwo, uOne) - 0.5, Max(uTwo, uOne)+0.5, red, 2)+
 PlotSetId("thePlot")
 ;
-</span>
+</calculator>
 </span>
 <br>
 
-<span class="calculatorSolution" name="factorizationAnswer">
+<calculatorSolution name="factorizationAnswer">
 <br>
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffApproximations("AddTerms");
 theDiscriminant=bCF^2-(4aCF) cCF;
 sqrtDiscriminant=\sqrt(theDiscriminant);
@@ -94,20 +92,20 @@ minusBCFNonSimplified=-bCF;
 theDiscriminantSemiSimplified=discriminantSummandOne-discriminantSummandTwo;
 theDiscriminantNonSimplified=bCF^2-(4aCF) cCF;
 twoACFnonsimplified=2 a;
-</span>
+</calculatorHidden>
 A quadratic can always be factored as \(\displaystyle ax^2+bx+c= a\left(x-x_1\right)\left(x-x_2\right)\), 
 where \(\displaystyle x_1, x_2=\frac{-b\pm \sqrt{b^2-4ac}}{2a}\). 
 <br>
 In order to have an ``easy factorization'' - one that does not involve any roots - we neeed to have that \(\displaystyle \sqrt{b^2-4ac} \) is an integer.
 <br>
 In other words, we need that  \(\displaystyle b^2-4ac=
-<span class="calculator" noTags="true">theDiscriminantNonSimplified</span> = 
-<span class="calculator" noTags="true">theDiscriminantSemiSimplified</span> = 
-<span class="calculator" noTags="true">theDiscriminant</span>
+<calculator noTags="true">theDiscriminantNonSimplified</calculator> = 
+<calculator noTags="true">theDiscriminantSemiSimplified</calculator> = 
+<calculator noTags="true">theDiscriminant</calculator>
 \) be a perfect square, which is not the case here - so we don't have an ``easy'' factorization. 
 <br>
 Therefore we resort to direct use of the quadratic formula for the factorization:
-<span class="calculator"> 
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle 
@@ -126,6 +124,6 @@ uOneNonSimplified = uOne
 \end{array}
 "
 )
-</span>
-</span>
+</calculator>\)
+</calculatorSolution>
 

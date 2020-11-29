@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOffRules("DistributeMultiplication");
 width=RandomInteger(5,10);
 height=RandomInteger(5,10);
@@ -10,9 +8,9 @@ theXcandidates=SolveFor(x, Polynomialize( d/dx theVolume));
 volume1=(x=theXcandidates_1; theVolume)_2;
 volume2=(x=theXcandidates_2; theVolume)_2;
 maxVol=Max(volume1, volume2)
-</span>
+</calculatorHidden>
 <table><tr><td>
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
  PlotPath( ( (0,0), (width,0), (width ,height), (0, height),(0,0)), black)
 +PlotFill( PlotPath( (    (0,pictureX), (pictureX, pictureX), ( pictureX,0), 
 (width-pictureX,0), (width-pictureX, pictureX),
@@ -36,12 +34,10 @@ maxVol=Max(volume1, volume2)
 +PlotLabel ( ( width-pictureX/2,height-pictureX*0.9 ), "x")
 +PlotLabel ( ( width-pictureX*0.9,height-pictureX/2 ), "x")
 +PlotViewRectangle((-pictureX, -pictureX), (width+pictureX, height+pictureX))
-+PlotRemoveCoordinateAxes 0+PlotSetId("canvas1")
-;
-</span></td><td>
-<span class="calculatorShowToUserOnly">
-
-PlotSurface((u,v,0  ), 
++PlotRemoveCoordinateAxes 0+PlotSetId("canvas1");
+</calculatorShowToUserOnly></td><td>
+<calculatorShowToUserOnly>
+PlotSurface((u,v,0), 
 u\in(pictureX, width-pictureX), 
 v\in(pictureX,height-pictureX), color1=cyan, color2=blue, numSegments1=1, numSegments2=1)
 +
@@ -67,12 +63,12 @@ v\in(pictureX, width-pictureX), color1=blue, color2=cyan, numSegments1=1, numSeg
 +PlotLabel( (pictureX*3/4,pictureX*3/4,pictureX/2), "x")
 +PlotSetId("canvas2")
 ;
-</span>
+</calculatorShowToUserOnly>
 </td>
 </tr>
 </table>
 
-The diagram shows a \(<span class="calculator" noTags="true">width</span>\times<span class="calculator" noTags="true">height</span>\) 
+The diagram shows a \(<calculator noTags="true">width</calculator>\times<calculator noTags="true">height</calculator>\) 
 rectangular piece of cardboard. 
 Four equal squares with sides \(x\) are cut off of each corner of the cardboard, as indicated.
 The resulting shape is folded into an open-top box. 
@@ -82,21 +78,21 @@ Give an algebraic formula expressing the volume of the box using the variable \(
 <br>
 <b>Answer in cubic units: </b>
 <answerCalculatorHighlight>\(V(x)=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerVolume" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerVolume" buttons="algebra">
 Polynomialize(AlgebraAnswerVolume -theVolume)== 0 ;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswerVolume,x);
 "<br>";
 Plot2D(AlgebraAnswerVolume, 0, Min{}(width,height)/2)
 +PlotViewRectangle((-pictureX, -2pictureX), (Min{}(width,height)/2,maxVol+2 pictureX))
 +PlotSetId("canvas3")
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theVolume;
 "\(=" +ToString( Polynomialize {}theVolume)+"\)"
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Find the maximum possible volume that the box can have. <b> Do not include units in your answer.</b>
 Please give exact answers using radicals. 
@@ -104,14 +100,14 @@ You may use the interpret button to simplify your answer.
 <br>
 <b>Answer in cubic units: </b>
 <answerCalculatorHighlight>\(V_{max}=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerMax" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerMax" buttons="algebra">
 (AlgebraAnswerMax-maxVol) == 0  ;
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswerMax,none);
 "<br><b style='color:green'>Your answer is \(\approx\) " + ToString(DoubleValue(AlgebraAnswerMax)) + "</b>";
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 maxVol
-</span>
+</calculatorAnswerOnGiveUp>
