@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 a=RandomInteger{}((-1,-4),(1,4));
@@ -13,31 +11,30 @@ h=RandomInteger{}(-5,5);
 1/a+1/b;
 f=A/(x-a)+B/(x-b)+g x^2+ h x+c ;
 TurnOffRules("ConvertShortDenominatorToNegativePower", "CommonDenominator", CommonDenominatorSimple, "CommonDenominatorOneNonFraction");
-</span>
+</calculatorHidden>
 
 Split into partial fractions.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle f
-</span>\(= \)
+</calculator>\(= \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 Sort ((theList= (GetSummandList(AlgebraAnswer));  x=12!+1; theList)_3)
 ==
-Sort((theList=GetSummandList(\sum (UnivariatePartialFractions(f))); x=12!+1; theList )_3)
-;
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+Sort((theList=GetSummandList(\sum (UnivariatePartialFractions(f))); x=12!+1; theList )_3);
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("ConvertShortDenominatorToNegativePower",
 "CommonDenominator",CommonDenominatorSimple, "CommonDenominatorOneNonFraction"
 );
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 \sum(UnivariatePartialFractions(f));
-</span>
+</calculatorAnswerOnGiveUp>

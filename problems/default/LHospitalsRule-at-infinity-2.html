@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 a=RandomInteger{}((1,50));
 b=RandomInteger{}((1,50));
@@ -10,25 +8,25 @@ h=RandomInteger{}((-4,-1),(1,4));
 A=RandomInteger{}((-4,-1),(1,4));
 B=RandomInteger{}((-4,-1),(1,4));
 K=RandomInteger{}((-4,-1),(1,4));
-</span>
+</calculatorHidden>
 Find the limit using L'Hospital's rule.
 
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle \lim_{x \to \infty}\frac{\ln (a x)}{b x}
-</span>\(= \)
+</calculator>= \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer"  buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer"  buttons="algebra, logarithms">
 AlgebraAnswer==0
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("ExpressTanViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 0
-</span>
+</calculatorAnswerOnGiveUp>

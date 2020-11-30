@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
@@ -15,15 +13,15 @@ g=RandomInteger{}( 2, 9);
 h=RandomInteger{}( -2,-10);
 theIntegral{}{{x}}= if (trigFun==\cos, c/a \sin{} (a x), -c/a \cos{}(a x) )  ;
 f= c trigFun{} (a x);
-</span>
+</calculatorHidden>
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
-or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+or else your answer <b style="color:red">will be marked wrong</b>.
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle \int f dx
-</span>\(=\)
+</calculator>=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, trig">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
@@ -36,18 +34,18 @@ AlgebraAnswer-theIntegral{}x,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theIntegral{}x+C
-</span>
+</calculatorAnswerOnGiveUp>

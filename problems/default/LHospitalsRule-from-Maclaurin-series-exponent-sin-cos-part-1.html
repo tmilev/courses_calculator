@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 a=RandomInteger{}((5,2));
@@ -13,35 +11,35 @@ K=RandomInteger{}((-4,-1),(1,4));
 thePoint=0;
 f=e^{a x}-1;
 g=x;
-</span>
+</calculatorHidden>
 Find the limit using L'Hospital's rule.
 
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \lim_{x \to 0} f/g
-</span>\(= \)
+</calculator>\(= \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 AlgebraAnswer==(
 fDifferentiated= d/dx(f);
 gDifferentiated=d/dx (g);
 x=thePoint;
 fDifferentiated/gDifferentiated
 )_4
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("ExpressTanViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (
 fDifferentiated= d/dx(f);
 gDifferentiated=d/dx (g);
 x=thePoint;
 fDifferentiated/gDifferentiated
 )_4
-</span>
+</calculatorAnswerOnGiveUp>

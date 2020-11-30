@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 %UseLnInsteadOfLog
@@ -25,8 +23,8 @@ theAnswer=
 g(
 \frac{\sqrt{a}D}{2}\left(\ln \left(\sqrt{4a\left(a x^2+b x+c\right)}+2x a+b\right)+\frac{\left(2x a+b\right)}{2\sqrt{D}a}\sqrt{\left(\frac{2 x a+b}{2\sqrt{D}a}\right)^2+1}\right)
 )
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotFill(
 Plot2D(f, leftPoint, rightPoint, "cyan", 2)
 +
@@ -43,30 +41,30 @@ PlotSegment( (leftPoint, 0 ), (leftPoint, (x=leftPoint; f)_2  )  )
 +PlotSegment((-12,12),(12,-12), brown, 0.5)
 +Plot2D(-f, -12,12,"pink" )
 +Plot2D(f, leftPoint, rightPoint, "blue", 2)
-</span>
+</calculator>
 <br>
 Compute the definite integral.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} f dx
-</span>\(= \)
+</calculator>\(= \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 |
 (x=rightPoint; theAnswer)_2
 -
 (x=leftPoint; theAnswer)_2
  -AlgebraAnswer|<0.000001
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("ExpressTanViaSineCosine");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (x=rightPoint; theAnswer)_2
 -
 (x=leftPoint; theAnswer)_2
-</span>
+</calculatorAnswerOnGiveUp>

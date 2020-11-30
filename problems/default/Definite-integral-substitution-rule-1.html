@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 TurnOffRules
@@ -14,39 +12,38 @@ a=(64-b^2)/rightPoint^3;
 c=RandomInteger{}( (-1,-5),(1,5));
 theIndefiniteIntegral{}{{x}}= c/(3a) 2/3(a x^3 + b^2)^{3/2};
 f{}{{x}}=c x^2\sqrt{a x^3+b^2};
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 PlotFill(
 PlotSegment((leftPoint, 0), (leftPoint , f{}leftPoint))
 +Plot2D(f{}x, leftPoint,rightPoint)
 +PlotSegment((rightPoint, f{}rightPoint),(rightPoint,0))
 +PlotSegment((rightPoint,0), (leftPoint,0)), cyan)
-+PlotWindow(300,300)
-;
-</span>
++PlotWindow(300,300);
+</calculatorShowToUserOnly>
 <br>
 Integrate. This is a definite integral so your answer should be a constant expression/number. 
 If your answer involves logarithms do not approximate with calculator (enter them algebraically).
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer==theIndefiniteIntegral{}rightPoint-theIndefiniteIntegral{}leftPoint
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theIndefiniteIntegral{}rightPoint-theIndefiniteIntegral{}leftPoint
-</span>
+</calculatorAnswerOnGiveUp>

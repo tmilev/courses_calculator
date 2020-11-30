@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 %UseLnInsteadOfLog
@@ -18,15 +16,15 @@ K=RandomInteger{}((-4,-1),(1,4));
 TurnOffRules("ExpressTanViaSineCosine", "ExpressSecViaCosine", "IntegratePullConstant");
 1/(a-b);
 f= c trigFun1 {}(a x) trigFun2{} (b x);
-</span>
+</calculatorHidden>
 
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b>. 
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int f dx
-</span>\(= \)
+</calculator>\(= \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, trig">
 (
 theBigBadAnswer=
 (TurnOnRules(ExpressSinViaExponent, ExpressCosViaExponent, IntegratePullOutImaginaryUnit, IntegratePullConstant, PowerImaginaryUnit);
@@ -41,14 +39,14 @@ AlgebraAnswer-theBigBadAnswer,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("ExpressTanViaSineCosine");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer, C, x)
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 (
 TurnOnRules(ExpressSinViaExponent, ExpressCosViaExponent, IntegratePullOutImaginaryUnit, IntegratePullConstant, PowerImaginaryUnit);
 theBigBadAnswerComplex=\int Polynomialize{} f dx;
@@ -57,4 +55,4 @@ TurnOnRules(EulerFormula, ExploitCosEvenness, ExploitSinOddness);
 theBigBadAnswerComplex
 )_5
 +C
-</span>
+</calculatorAnswerOnGiveUp>

@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
@@ -13,56 +11,55 @@ g=RandomInteger{}(2, 9);
 h=RandomInteger{}(-2, -10);
 theIntegral{}{{x}}= ((e^(m x))/m)(x^2 - (2/m)(x-(1/m)));
 f=(x^2) e^(m x);
-</span>
+</calculatorHidden>
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
-or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+or else your answer <b style="color:red">will be marked wrong</b>.
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle \int f dx  
-</span>\(=\)
+</calculator>=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions");
-
 CompareExpressionsNumerically {}(
 AlgebraAnswer-theIntegral{}x,
 (theDifference= AlgebraAnswer-theIntegral{}x; x=1; theDifference)_3, 0.000000001, x\in (0,1), 20, C\in (0,3), 4)
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnAbsInsteadOfLog
 TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
 "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 btwo=2b;
 b2 = 2*b;
 px = p*x;
@@ -78,15 +75,15 @@ finalterm = term1+term2+term3;
 denominator = b + c(cos(px));
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
-</span>
+</calculatorHidden>
 
-<span class="calculator"> 
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  \frac{1}{m}  \int {x^2}(m e^{m x}) {\text d} x
-&&\displaystyle \text{Note that } m e^{m x} {\text d} x = {\text d} \left( e^{m x} \right)  \\\\
+&&\displaystyle \text{Note~that~} m e^{m x} {\text d} x = {\text d} \left( e^{m x} \right)  \\\\
 &=&\displaystyle  outTerm1  \int {x^2} {\text d} \left(e^{m x} \right)
-&&\displaystyle \text{Set } u = x^2 \text{ and }  v = e^{m x}  \\\\
+&&\displaystyle \text{Set } u = x^2 \text{~and~}  v = e^{m x}  \\\\
 &=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - \int e^{m x} {\text d} (x^2) \right]
 &&\displaystyle \text{Using } \int u dv = uv - \int v du\\\\
 &=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - 2 \int x e^{m x} {\text d} x \right]
@@ -94,14 +91,12 @@ EvaluateSymbols{}(
 &=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - \frac{2}{m} \int x (m e^{m x}) {\text d} x \right]
 &&\displaystyle \text{ }\\\\
 &=&\displaystyle  outTerm1 \left[term12 \int x {\text d} \left( e^{m x} \right) \right]
-&&\displaystyle \text{Set } u = x \text{ and }  v = e^{m x}\\\\
-&=&\displaystyle  outTerm1 \left[term12 \left(x e^{m x} - \int e^{m x} {\text d} x \right) \right]
-&&\displaystyle \text{Again, using } \int u dv = uv - \int v du \\\\
-&=&\displaystyle  outTerm1 \left[term12 \left(x e^{m x} - \frac{e^{m x}}{m}\right) \right] + C    
+&&\displaystyle \text{Set~} u = x \text{~and~}  v = e^{m x}\\\\
+&=&\displaystyle outTerm1 \left[term12 \left(x e^{m x} - \int e^{m x} {\text d} x \right) \right]
+&&\displaystyle \text{Again, using~} \int u dv = uv - \int v du \\\\
+&=&\displaystyle outTerm1 \left[term12 \left(x e^{m x} - \frac{e^{m x}}{m}\right) \right] + C    
 &&\displaystyle \text{ }\\\\
 &=&\displaystyle  e^{m x} \left[finalterm \right] + C  &&\displaystyle \text{ }\\\\
-\end{array}
-"
-)
-</span>
-</span>
+\end{array}")
+</calculator>\)
+</calculatorSolution>

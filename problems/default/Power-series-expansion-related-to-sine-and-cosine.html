@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 %UseBracketForIntervals
@@ -18,18 +16,18 @@ if (trigFun==sin,
     theAnswerOne=\sum_{n=0}^\infty (-1)^n theLinCf^(2n) x^{thePower(2n)}/(2n)!
    )
 
-</span>
-Expand the function(s) into Taylor/Maclaurin series around \(a=\)<span class="calculator">thePoint</span>. 
+</calculatorHidden>
+Expand the function(s) into Taylor/Maclaurin series around \(a=\)<calculator>thePoint</calculator>. 
 <br>
 
-\(f(x)=\)<span class="calculator">\displaystyle
+\(f(x)=<calculator noTags="true">\displaystyle
 f
-</span>.
+</calculator>\).
 
 <answerCalculatorHighlight>
 Power series:
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra, series">
+<calculatorAnswer id="AlgebraAnswerOne" buttons="algebra, series">
 (  
 Sort ( (tmpSummands = theSummands{}(theAnswerOne,5);   x=12/11; tmpSummands)_3)
 -
@@ -39,10 +37,10 @@ Sort ( (tmpSummands = theSummands{}(AlgebraAnswerOne,5); x=12/11; tmpSummands)_3
 (
 ChildExpression ( ChildExpression( Last{} (GetMultiplicandList{}(GetFirstSummandContaining( AlgebraAnswerOne, \sum))) ,2),3)-\infty==0
 )
-</textarea>
+</calculatorAnswer>
 <br>
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 \displaystyle
 theAnswerOne
-</span>
+</calculatorAnswerOnGiveUp>
 Write your answer using proper \(\sum\)-notation, for example \(\displaystyle \sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!}\).

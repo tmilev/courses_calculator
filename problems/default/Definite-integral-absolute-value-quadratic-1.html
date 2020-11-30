@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 TurnOffRules
@@ -14,25 +12,24 @@ leftPoint=a-1;
 rightPoint=a+b+1;
 g{}{{x}}= c/2(x-a)(x-a-b);
 f{}{{x}}=|g{}x|;
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 PlotFill(
 PlotSegment((leftPoint, 0), (leftPoint, f{}leftPoint) )
 +Plot2D(f{}x, leftPoint,rightPoint)
 +PlotSegment((rightPoint, f{}rightPoint), (rightPoint,0))
 +PlotSegment((rightPoint,0), (leftPoint,0)), cyan)
-+PlotWindow(300,300)
-;
-</span>
++PlotWindow(300,300);
+</calculatorShowToUserOnly>
 <br>
 Integrate. This is a definite integral so your answer should be a constant expression/number.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer==
 2 (
 TurnOnRules
@@ -43,19 +40,19 @@ TurnOnRules
 2(theInt=(\int g{}x dx); x=a; theInt)_3-
 (theInt=(\int g{}x dx); x=a+b/2; theInt)_3
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 2 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -65,4 +62,4 @@ TurnOnRules
 2(theInt=(\int g{}x dx); x=a; theInt)_3-
 (theInt=(\int g{}x dx); x=a+b/2; theInt)_3
 )_2
-</span>
+</calculatorAnswerOnGiveUp>

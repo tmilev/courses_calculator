@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 a=SelectAtRandom(2,3,5,7);
@@ -12,25 +10,24 @@ shiftA=SelectAtRandom(-2,-1,1,2);
 shiftB=SelectAtRandom(-2,-1,1,2);
 startIndex=0;
 f=(coeffA a^{n+shiftA}+coeffB b^{n+shiftB})/(a*b)^n
-</span>
+</calculatorHidden>
 Sum the series to a rational number (quotient of two integers).
 <answerCalculatorHighlight>
 \(\displaystyle
-\sum\limits_{n= <span class="calculator" noTags="true">startIndex</span>}^{\infty} <span class="calculator" noTags="true">f</span>
+\sum\limits_{n= <calculator noTags="true">startIndex</calculator>}^{\infty} <calculator noTags="true">f</calculator>
 =
 \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 coeffA * a^shiftA  (1/b)^startIndex* 1/(1-(1/b))+ coeffB* b^shiftB (1/a)^startIndex * 1/(1-(1/a))
 -
 AlgebraAnswer 
 ==0
-</textarea>
+</calculatorAnswer>
 
-
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 coeffA * a^shiftA  (1/b)^startIndex* 1/(1-(1/b))+ coeffB* b^shiftB (1/a)^startIndex * 1/(1-(1/a))
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,divergent);
-</span>
+</calculatorCommentsBeforeSubmission>

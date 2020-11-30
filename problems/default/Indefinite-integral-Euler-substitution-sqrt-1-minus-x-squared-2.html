@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 %UseLnInsteadOfLog
@@ -16,15 +14,15 @@ K=RandomInteger{}((-4,-1),(1,4));
 TurnOffRules("ExpressTanViaSineCosine", "ExpressSecViaCosine", "IntegrateSqrtOneminusXsquared", "IntegratePullConstant");
 1/(b^2-4a c>0);
 f= g \sqrt{a x^2+b x +c};
-</span>
+</calculatorHidden>
 
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b>. 
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int f dx
-</span>\(= \)
+</calculator>\(= \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 (
 theAnswer=
 (
@@ -40,16 +38,16 @@ AlgebraAnswer-theAnswer,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("ExpressTanViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 TurnOffRules("DistributeMultiplication");
 TurnOnRules("IntegrateSqrtOneminusXsquared", "IntegratePullConstant");
 (theAnswerInW=(x=w-b/(2a);
@@ -57,4 +55,4 @@ TurnOnRules("IntegrateSqrtOneminusXsquared", "IntegratePullConstant");
 w=x+b/(2a);
 theAnswerInW)_3
 +C
-</span>
+</calculatorAnswerOnGiveUp>

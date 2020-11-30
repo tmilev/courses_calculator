@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", 
 "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
@@ -15,22 +13,22 @@ poverq = p/q;
 h=RandomInteger{}( -2,-10);
 theIntegral{}{{x}}=  (x^(-poverq+1))/(-poverq+1);
 f=\frac{1}{  \sqrt[q]{x^{p}}}
-</span>
-<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+</calculatorHidden>
+<calculatorCommentsBeforeInterpretation name="AlgebraAnswer">
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
-or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+or else your answer <b style="color:red">will be marked wrong</b>.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int f dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
@@ -42,42 +40,40 @@ AlgebraAnswer-theIntegral{}x,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
+</calculatorAnswer>
 
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnAbsInsteadOfLog
 TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
 "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 minuspoverqplus1 = -poverq + 1;
 outTerm = 1/(minuspoverqplus1);
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
-</span>
-<span class="calculator"> 
+</calculatorHidden>
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle \int x^{-poverq} {\text d} x \\\\
 &=&\displaystyle   \frac{x^{-poverq+1}}{-poverq+1} + C &&\displaystyle \text{ }  \\\\
 \displaystyle &=&\displaystyle  outTerm x^{minuspoverqplus1} + C &&\displaystyle \text{ }  \\\\
-\end{array}
-"
-)
-</span>
-</span>
+\end{array}")
+</calculator>\)
+</calculatorSolution>

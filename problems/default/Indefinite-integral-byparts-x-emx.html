@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
@@ -13,56 +11,55 @@ g=RandomInteger{}( 2, 9);
 h=RandomInteger{}( -2,-10);
 theIntegral{}{{x}}= (e^(m x)/m)(x - (1/m));
 f=x e^(m x);
-</span>
+</calculatorHidden>
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
-or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+or else your answer <b style="color:red">will be marked wrong</b>.
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle \int f dx  
-</span>\(=\)
+</calculator>=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions");
-
 CompareExpressionsNumerically {}(
 AlgebraAnswer-theIntegral{}x,
 (theDifference= AlgebraAnswer-theIntegral{}x; x=1; theDifference)_3, 0.00000001, x\in (0,1), 20, C\in (0,3), 4)
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
 "IntegrateXpowerNePowerAx");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnAbsInsteadOfLog
 TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
 "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 btwo=2b;
 b2 = 2*b;
 px = p*x;
@@ -70,21 +67,20 @@ finalterm = x-(1/m);
 denominator = b + c(cos(px));
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
-</span>
+</calculatorHidden>
 
-<span class="calculator"> 
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  \frac{1}{m}  \int x(m)e^{m x} {\text d} x
-&&\displaystyle \text{Note that } m e^{m x} {\text d} x = {\text d} \left( e^{m x} \right)  \\\\
+&&\displaystyle \text{Note~that~} m e^{m x} {\text d} x = {\text d} \left( e^{m x} \right)  \\\\
 &=&\displaystyle  \frac{1}{m}  \int x {\text d} \left( e^{m x} \right)
-&&\displaystyle \text{Set } u = x \text{ and }  v = e^{m x}  \\\\
+&&\displaystyle \text{Set~} u = x \text{~and~}  v = e^{m x}  \\\\
 &=&\displaystyle  \frac{1}{m} \left[x e^{m x} - \int e^{m x} {\text d} x \right] + C
 &&\displaystyle \text{Using } \int u {\text d} v = uv - \int v {\text d} u\\\\
-&=&\displaystyle  \frac{1}{m} \left[x e^{m x} - \frac{e^{m x}}{m} \right] + C    &&\displaystyle \text{ }\\\\
-&=&\displaystyle  \frac{e^{m x}}{m} \left[finalterm \right] + C    &&\displaystyle \text{ }\\\\
+&=&\displaystyle \frac{1}{m} \left[x e^{m x} - \frac{e^{m x}}{m} \right] + C    &&\displaystyle \text{ }\\\\
+&=&\displaystyle \frac{e^{m x}}{m} \left[finalterm \right] + C &&\displaystyle \text{ }\\\\
 \end{array}
-"
-)
-</span>
-</span>
+")
+</calculator>\)
+</calculatorSolution>

@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 %UseBracketForIntervals
@@ -22,44 +20,38 @@ highY=5;
 theVLength=0.3;
 thePoint=0;
 initialY=f{}thePoint;
-</span>
-<span class ="calculatorShowToUserOnly">
-
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)
-+
-PlotViewRectangle((leftX, lowY), (rightX, highY))
-
-</span>
++ PlotViewRectangle((leftX, lowY), (rightX, highY))
+</calculatorShowToUserOnly>
 <br>
 Solve the separable differential equation 
 
-<span class="calculator">\displaystyle
+\(<calculator noTags="true">\displaystyle
 leftPart
-</span>\(=\)
-<span class="calculator">\displaystyle
+</calculator>=
+<calculator noTags="true">\displaystyle
 rightPart
-</span>
+</calculator>\)
 <br>
 with initial condition
 <br>
-\(\displaystyle y\left(<span class="calculator" noTags="true">thePoint</span>\right)=<span class="calculator" noTags="true">initialY</span>
+\(\displaystyle y\left(<calculator noTags="true">thePoint</calculator>\right)=<calculator noTags="true">initialY</calculator>
 \).
 <answerCalculatorHighlight>Answer: \(y=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerOne" buttons="algebra">
 CompareFunctionsNumerically(AlgebraAnswerOne, finalAnswer, leftX, rightX, 20, 0.000001)
-</textarea>
+</calculatorAnswer>
 <br>
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 Plot2D(AlgebraAnswerOne,leftX,rightX,red,2)+
-PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)
-+
-PlotViewRectangle((leftX, lowY), (rightX, highY))
-+
-PlotWindow(300,300)
-;
-</span>
-<span class="calculatorAnswerOnGiveUp">
+PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)+
+PlotViewRectangle((leftX, lowY), (rightX, highY))+
+PlotWindow(300,300);
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 \displaystyle
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

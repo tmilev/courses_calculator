@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 g= RandomInteger{}(2,5);
@@ -20,19 +18,19 @@ c=theCoeffs_1;
 D=\frac{4a c-b^2}{4a^2};
 theAntiderivative=
 \frac{\sqrt{a}D}{2}\left( \ln \left(\sqrt{\left(\frac{2 x a+b}{2\sqrt{D}a}\right)^2 +1 }+\frac{2 x a+b}{2\sqrt{D}a}\right)+ \frac{2 x a+b}{2\sqrt{D}a} \sqrt{\left( \frac{2 x a+b}{2\sqrt{D}a} \right)^2+1}\right)
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 Plot2D( theParabola,  leftPoint,rightPoint, red )+
 PlotSegment((leftPoint,0),(rightPoint,0), green,4);
-</span> 
+</calculatorShowToUserOnly> 
 <br>
-Find the length of the curve given by \(y=\)<span class="calculator">theParabola </span>
-for \(x\in \)<span class="calculator">(leftPoint,rightPoint)</span>. 
+Find the length of the curve given by \(y=<calculator noTags="true">theParabola </calculator>\)
+for \(x\in <calculator noTags="true">(leftPoint,rightPoint)</calculator>\). 
 
 In your solution, you may use the fact that 
 \(\displaystyle \int \sqrt{1+x^2}{\text d} x=\frac{1}{2}\left(x\sqrt{x^2+1}+\ln \left(x+\sqrt{x^2+1}\right)\right)+C\).
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 |DoubleValue{}(
 AlgebraAnswer-   
 (
@@ -42,20 +40,20 @@ AlgebraAnswer-
 )
 
 )|<0.00000001
-</textarea>
+</calculatorAnswer>
 
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (
 (x=rightPoint; theAntiderivative)_2
 -
 (x=leftPoint; theAntiderivative)_2
 )
-</span>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
 TurnOffApproximations(0);
 none;
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none);
-</span>
+</calculatorCommentsBeforeSubmission>

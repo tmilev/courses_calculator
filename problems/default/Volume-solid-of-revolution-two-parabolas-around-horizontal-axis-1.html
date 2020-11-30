@@ -1,7 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 a=RandomInteger(-5,5);
 b=RandomInteger((2,5))+a;
@@ -16,8 +13,8 @@ Min( g{}((a+b)/2), g{}a), g{}b
 ) 
 + RandomInteger(-5,-1)
 );
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotSurface(
 (v, (h{}v-c) cos {}u+c, (h{}v-c) sin {}u),    u\in(0, 2\pi), v\in(a+0.0001,b-0.0001), color1=pink, color2=orange, numSegments1=12, numSegments2=12,
 lineWidth=0.2
@@ -32,16 +29,16 @@ lineWidth=0.2
 +PlotSegment((a-2, c,0),(b+2, c,0), green,2)
 +PlotSetProjectionScreen((1,0,-0.2),(0,1,-0.3))
 +PlotWindow(300,300)
-</span>
+</calculator>
 <br>
 Find the volume of the solid of revolution obtained by rotating the area 
-between \(y=\)<span class="calculator">\displaystyle g{}x</span> and \(y=\)<span class="calculator">\displaystyle h{}x</span> 
-around the axis given by \(y=\)<span class="calculator">\displaystyle c</span>.
+between \(y=<calculator noTags="true">\displaystyle g{}x</calculator>\) and \(y=<calculator noTags="true">\displaystyle h{}x</calculator>\)
+around the axis given by \(y=<calculator noTags="true">\displaystyle c</calculator>\).
 <br>
 <answerCalculatorHighlight>
 Answer: \(V=\)    
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, angles">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, angles">
 AlgebraAnswer==
 \pi
 (
@@ -49,16 +46,16 @@ AlgebraAnswer==
 -
 (theInt= \int (h{}x -c)^2 dx -  \int (g{}x -c)^2 dx; x=a; theInt)_3
 )
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 \pi
 (
 (theInt= \int (h{}x -c)^2 dx -  \int (g{}x -c)^2 dx ; x=b; theInt)_3
 -
 (theInt= \int (h{}x -c)^2 dx -  \int (g{}x -c)^2 dx ; x=a; theInt)_3
 )
-</span>
+</calculatorAnswerOnGiveUp>

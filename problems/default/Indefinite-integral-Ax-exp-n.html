@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", 
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
@@ -15,23 +13,23 @@ b=RandomInteger{}((-15,-1),(1, 25));
 h=RandomInteger{}( -2,-10);
 theIntegral{}{{x}}= A (x^(n+1))/(n+1);
 f=A x^(n);
-</span>
-<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+</calculatorHidden>
+<calculatorCommentsBeforeInterpretation name="AlgebraAnswer">
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
-or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+or else your answer <b style="color:red">will be marked wrong</b>.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int f dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
@@ -43,42 +41,42 @@ AlgebraAnswer-theIntegral{}x,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
+</calculatorAnswer>
 
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnAbsInsteadOfLog
 TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
 "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 nplus1 = n + 1;
 outTerm = A/(n+1);
 TurnOnRules("DistributeMultiplication");
 finalAnswer=outTerm x^{nplus1};
-</span>
-<span class="calculator"> 
+</calculatorHidden>
+\(
+<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  A \frac{x^{(n+1)}}{n+1} + C
 &&\displaystyle \text{Use }\int x^q{\text d} x=\frac{x^{q+1}}{q+1}+C\text{ for }q\neq -1  \\\\
 \displaystyle &=&\displaystyle finalAnswer + C &&\displaystyle \text{ }  \\\\
 \end{array}
-"
-)
-</span>
-</span>
+")
+</calculator>\)
+</calculatorSolution>

@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 %UseLnInsteadOfLog
@@ -25,28 +23,26 @@ rightPoint=leftPoint+ RandomInteger{}(1,Floor( \sqrt{-c/a}) );
 1/( (  leftPoint>-\sqrt{-c/a} ) and (rightPoint<\sqrt{-c/a}) );
 TurnOffRules("ExpressTanViaSineCosine", "ExpressSecViaCosine",
 "IntegratePullConstant", "IntegrateSqrtOneminusXsquared");
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotFill(
 Plot2D(f, leftPoint, rightPoint, "cyan", 2)
 +PlotSegment( (rightPoint, (x=rightPoint; f)_2  ), ( rightPoint, 0 ) )
 +PlotSegment( (rightPoint, 0), (leftPoint, 0)  )
-+PlotSegment( (leftPoint, 0 ), (leftPoint, (x=leftPoint; f)_2  )  )
-,
-"cyan"
-)
++PlotSegment( (leftPoint, 0 ), (leftPoint, (x=leftPoint; f)_2  )  ),
+"cyan")
 +PlotCurve(( \sqrt{-c/a} \cos t , \sqrt{c} \sin t  ),0, \pi )
 +PlotCurve(( \sqrt{-c/a} \cos t , \sqrt{c} \sin t  ),0, -\pi,"pink" )
 +Plot2D(f, leftPoint, rightPoint, "blue", 2)
-</span>
+</calculator>
 <br>
 Compute the definite integral.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} f dx
-</span>\(= \)
+</calculator>\(= \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 (TurnOnApproximations(0);
 |
 (x=rightPoint; theAnswer)_2
@@ -54,17 +50,17 @@ Compute the definite integral.
 (x=leftPoint; theAnswer)_2
  -AlgebraAnswer|<0.000001
  )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffApproximations(0);
 TurnOffRules("ExpressTanViaSineCosine");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (x=rightPoint; theAnswer)_2
 -
 (x=leftPoint; theAnswer)_2
-</span>
+</calculatorAnswerOnGiveUp>

@@ -1,22 +1,19 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules("DistributeMultiplication", "IntegratePowerRule");
 a=7;
 b=7;
 c=7;
 g=RandomInteger{}((-5,-1), (1,5));
-
 f{}{{x}}=(a x+b)(c x^2+g);
-</span>
+</calculatorHidden>
 Integrate. My favorite number is 7 and my favorite color is  <b><span style="color:blue">blue</span>.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int f{}x dx 
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
@@ -29,15 +26,15 @@ AlgebraAnswer-\int f{}x dx,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules("DistributeMultiplication", "IntegratePowerRule");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (TurnOnRules("DistributeMultiplication", "IntegratePowerRule");
 \int f{}x dx+C)_2
-</span>
+</calculatorAnswerOnGiveUp>

@@ -1,37 +1,33 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 p=(RandomInteger(1,20) )^(SelectAtRandom(-1,1));
 q=(RandomInteger(1,20) )^(if(p>=1,-1,1 ));
-
-</span>
+</calculatorHidden>
 Determine whether the series is convergent or divergent. If convergent, write ``convergent'', else write ``divergent''.
 <br>
 In your pen and paper solution, indicate clearly which convergence/divergence tests you used and how you used them.
 <br>
     
-<span class="calculator">\displaystyle
+<calculator>\displaystyle
 \sum_{n=RandomInteger(1,20)}^\infty \frac{1}{(n+RandomInteger(0,20))^p}
-</span>    
+</calculator>    
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerOne" buttons="algebra">
 (AlgebraAnswerOne- if (p>1,convergent, divergent)  )==0
-</textarea>
+</calculatorAnswer>
 
-
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 if (p>1,convergent, divergent)
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
-<span class="calculator">\displaystyle
+<calculator>\displaystyle
 \sum_{n=RandomInteger(1,20)}^\infty \frac{1}{(n+RandomInteger(0,20))^q}
-</span>    
+</calculator>    
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerTwo" buttons="algebra">
 (AlgebraAnswerTwo- if (q>1,convergent, divergent) )==0
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 if (q>1,convergent, divergent)
-</span>
+</calculatorAnswerOnGiveUp>

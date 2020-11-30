@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 f{}0=RandomInteger(0,A);
@@ -15,45 +13,45 @@ leadingTerm=leadingCoefficient n^bottomPower;
 powerDifference = bottomPower-topPower;
 startIndex=RandomInteger(1,20);
 TurnOffRules("ConvertShortDenominatorToNegativePower");
-</span>
+</calculatorHidden>
 Determine whether the series is convergent or divergent. If convergent, write ``<b>convergent</b>'', else write ``<b>divergent</b>''.
 <br>
 In your pen and paper solution, indicate clearly which convergence/divergence tests you used and how you used them.
 <br>
-<span class="calculator">\displaystyle
+<calculator>\displaystyle
 \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression}
-</span>
+</calculator>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer
 -
 convergent 
 ==0
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 convergent
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer"><br>
+<calculatorSolution name="AlgebraAnswer"><br>
 The convergence of a sum whose terms are 
 rational functions of \(n\) can be determined by the
 comparison or the limit-comparison test. 
 For positive \(n\), we have that 
-<span class="calculatorHidden">
+<calculatorHidden>
 leadingTermSimplified=if (topPower>0, "="+ToString(\frac{1}{leadingCoefficient n^powerDifference}), "");
-</span>
-<span class="calculator"> bottomExpression>leadingTerm</span> and so
-\(\displaystyle <span class="calculator">EvaluateSymbols{}("\frac{topTerm }{bottomExpression}
-\lt \frac{topTerm}{leadingTerm} leadingTermSimplified")</span>\).
+</calculatorHidden>
+<calculator> bottomExpression>leadingTerm</calculator> and so
+\(\displaystyle <calculator>EvaluateSymbols{}("\frac{topTerm }{bottomExpression}
+\lt \frac{topTerm}{leadingTerm} leadingTermSimplified")</calculator>\).
 Therefore 
-<span class="calculator">\displaystyle 0< \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression} 
-\lt \sum_{n=startIndex}^\infty  \frac{1}{leadingCoefficient n^powerDifference}</span>. Furthermore,
-<span class="calculator">\displaystyle \sum_{n=startIndex}^\infty  \frac{1}{leadingCoefficient n^powerDifference}</span> 
+<calculator>\displaystyle 0< \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression} 
+\lt \sum_{n=startIndex}^\infty  \frac{1}{leadingCoefficient n^powerDifference}</calculator>. Furthermore,
+<calculator>\displaystyle \sum_{n=startIndex}^\infty  \frac{1}{leadingCoefficient n^powerDifference}</calculator> 
 is a (part of a multiple of) 
-\(p\)-seires with \(\displaystyle p=<span class="calculator" noTags="true">powerDifference</span> \gt 1\) and is therefore convergent. Since all terms of the series 
-<span class="calculator">\displaystyle \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression} </span>
+\(p\)-seires with \(\displaystyle p=<calculator noTags="true">powerDifference</calculator> \gt 1\) and is therefore convergent. Since all terms of the series 
+<calculator>\displaystyle \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression} </calculator>
 are positive and dominated by the terms of a convergent series, 
-the comparison test implies that <span class="calculator">\displaystyle \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression} </span>
+the comparison test implies that <calculator>\displaystyle \sum_{n=startIndex}^\infty \frac{topTerm }{bottomExpression} </calculator>
 is convergent.
-</span>
+</calculatorSolution>
 

@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 rootOne=RandomInteger{}(-5, 5);
@@ -17,8 +15,8 @@ TurnOffRules
 ("IntegratePowerRule", "DistributeMultiplication",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotFill(
 Plot2D(theFun, leftPoint, rootOne)+
 PlotSegment((rootOne, 0), (leftPoint,0), black)
@@ -43,43 +41,42 @@ PlotSegment((rightPoint, 0), (rootThree,0), black)
 +PlotLabel((rootTwo, -0.2), rootTwo)
 +PlotLabel((rootThree, -0.2), rootThree)
 +PlotGrid 0
-+PlotWindow(300,300)
-;
-</span>
++PlotWindow(300,300);
+</calculatorShowToUserOnly>
 <br>
-Find <b style="color:red">signed area</b> locked between the parabola <span class="calculator">theFun</span> and the \(x\) axis. 
+Find <b style="color:red">signed area</b> locked between the parabola <calculator>theFun</calculator> and the \(x\) axis. 
 
 In other words, compute:
 <answerCalculatorHighlight>
-<span class="calculator">\displaystyle \int_leftPoint^rightPoint</span><span class="calculator">
-theFun {\text d} x</span>\(=\)
+<calculator>\displaystyle \int_leftPoint^rightPoint</calculator><calculator>
+theFun {\text d} x</calculator>\(=\)
 </answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer==finalAnswer
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 cfthree=CoefficientOf(x^3,theFun);
 cftwo=CoefficientOf(x^2,theFun);
 cfone=CoefficientOf(x,theFun);
@@ -88,8 +85,8 @@ TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponen
 integralNonSimplified=if (constTerm==0, cfthree \frac{x^{3+1}}{3+1}+ cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1}, cfthree \frac{x^{3+1}}{3+1}+cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1}+constTerm x);
 rightSub=(x=rightPoint; theIntegral)_2;
 leftSub=(x=leftPoint; theIntegral)_2;
-</span>
-<span class="calculator"> 
+</calculatorHidden>
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int_{leftPoint}^{rightPoint} \left( theFun \right){\text d} x&=&
@@ -97,10 +94,7 @@ EvaluateSymbols{}(
 &=&\displaystyle  \left[ theIntegral\right]_{leftPoint}^{rightPoint}   \\\\
 &=&\displaystyle   \left(rightSub\right) - \left(leftSub\right)      \\\\
 &=&\displaystyle  finalAnswer     &&\displaystyle \text{ } \\\\
-
 \end{array}
-"
-)
-
-</span>
-</span>
+")
+</calculator>\)
+</calculatorSolution>

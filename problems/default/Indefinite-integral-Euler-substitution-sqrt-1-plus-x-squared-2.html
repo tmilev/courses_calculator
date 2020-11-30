@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 %UseLnInsteadOfLog
@@ -22,19 +20,17 @@ theAnswer=
 g(
 \frac{\sqrt{a}D}{2}\left(\ln \left(\sqrt{4a\left(a x^2+b x+c\right)}+2x a+b\right)+\frac{\left(2x a+b\right)}{2\sqrt{D}a}\sqrt{\left(\frac{2 x a+b}{2\sqrt{D}a}\right)^2+1}\right)
 )
-</span>
+</calculatorHidden>
 
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b>. 
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int f dx
-</span>\(= \)
+</calculator>\(= \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 (
-theBigBadAnswer=a
-;
-
+theBigBadAnswer=a;
 CompareExpressionsNumerically {} 
 (
 AlgebraAnswer-theAnswer,
@@ -42,15 +38,15 @@ AlgebraAnswer-theAnswer,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("ExpressTanViaSineCosine");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer, C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theAnswer
 +C
-</span>
+</calculatorAnswerOnGiveUp>

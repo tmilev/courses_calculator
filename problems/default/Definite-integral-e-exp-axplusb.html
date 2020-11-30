@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -14,60 +12,56 @@ theFun = e^(a x + b);
 leftHeight=(x=leftPoint; theFun)_2;
 rightHeight=(x=rightPoint; theFun)_2;
 theInt=theFun/a;
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 PlotFill(
  PlotSegment((leftPoint, 0),(leftPoint, leftHeight))
 +Plot2D(theFun, leftPoint,rightPoint)
 +PlotSegment((rightPoint, rightHeight), (rightPoint, rightHeight))
 +PlotSegment( (rightPoint,0),(leftPoint,0)), cyan)
-+
-PlotWindow(300,300)
-
-;
-</span>
++PlotWindow(300,300);
+</calculatorShowToUserOnly>
 <br>
 Integrate. This is a definite integral so your answer should be a constant expression/number. 
 Enter your answer as an expression depending on \(e\). <b style="color:red">Do not approximate \(e\).</b>
 <br>
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} theFun dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 (x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2 -AlgebraAnswer==0
-</textarea>
+</calculatorAnswer>
 
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
-
+<calculatorAnswerOnGiveUp>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
 
 (x=rightPoint; theInt)_2-(x=leftPoint; theInt)_2
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 term = a x + b;
 term1 = 1/a;
 term2 = e^(a(rightPoint) + b);
@@ -79,8 +73,8 @@ TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational",
 "CombineExponents", "AddRationals",  "AddTerms", "MultiplyRationals",  "ConstantExtraction");
 leftSub=e^{a(leftPoint) + b};
 rightSub=e^{a(rightPoint) + b};
-</span>
-<span class="calculator"> 
+</calculatorHidden>
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int_{leftPoint}^{rightPoint} e^{term} {\text d} x   &=&
@@ -88,9 +82,6 @@ EvaluateSymbols{}(
 \displaystyle &=&\displaystyle  \frac{1}{a} \left[ e^{term} \right]_{leftPoint}^{rightPoint}   &&\displaystyle \text{ }  \\\\
 \displaystyle &=&\displaystyle  term1 \left(rightSub  -  leftSub \right)  &&\displaystyle \text{ }  \\\\
 \displaystyle &=&\displaystyle  term1 \left( term2 - term3 \right)  &&\displaystyle \text{ }  \\\\
-\end{array}
-"
-)
-
-</span>
-</span>
+\end{array}")
+</calculator>\)
+</calculatorSolution>

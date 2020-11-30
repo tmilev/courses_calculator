@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 trigFun=SelectAtRandom{}(sin, cos);
@@ -12,36 +10,36 @@ theY=theR sin{} (\theta);
 leftPoint=0;
 rightPoint=2\pi;
 theAntiDerivative=\int 1/2 theR^2 {\text d}{} \theta
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotFill(
 PlotCurve( (theX, theY), 0, 2\pi, blue ),
 pink)
-</span> 
+</calculatorShowToUserOnly> 
 <br>
-Find the area locked by the curve given in polar coordinates by \(r=\) <span class="calculator">theR</span>.
+Find the area locked by the curve given in polar coordinates by \(r=\) <calculator>theR</calculator>.
 
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer"  buttons="algebra, trig, angles">
+<calculatorAnswer id="AlgebraAnswer"  buttons="algebra, trig, angles">
 (\theta=rightPoint; theAntiDerivative)_2
 -
 (\theta=leftPoint; theAntiDerivative)_2-AlgebraAnswer==0
-</textarea>
+</calculatorAnswer>
 
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (\theta=rightPoint; theAntiDerivative)_2
 -
 (\theta=leftPoint; theAntiDerivative)_2;
-</span>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
 TurnOffApproximations(0);
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorSolution">
+<calculatorSolution>
 <br>
 Suppose a curve given in polar coordinates by \(r=r(\theta)\) intersects itself 
 for two parameter values \(\theta_1,\theta_2\). 
@@ -54,19 +52,19 @@ This can happen only when exactly one the three mutually exclusive conditions ho
 <li> \(r(\theta_1)=r(\theta_2)=0\).
 </li>
 </ul>
-Since \(-1\leq <span class="calculator" noTags="true">trigFun{}(a \theta)</span>\leq 1\) it follows that 
-\(r(\theta)=<span class="calculator" noTags="true">trigFun{}(a \theta)+b</span> \gt 0\) for all \(\theta\) and so 
+Since \(-1\leq <calculator noTags="true">trigFun{}(a \theta)</calculator>\leq 1\) it follows that 
+\(r(\theta)=<calculator noTags="true">trigFun{}(a \theta)+b</calculator> \gt 0\) for all \(\theta\) and so 
 the first option is the only one possible. If the curve parameter starts at \(\theta=0\), 
 this implies the curve cannot self-intersect for \(\theta\lt 2\pi\), and since   
-<span class="calculator">trigFun{}(a \theta)</span> 
-is \(2\pi\)-periodic (it is actually <span class="calculator">2\pi/a</span>-periodic),
+<calculator>trigFun{}(a \theta)</calculator> 
+is \(2\pi\)-periodic (it is actually <calculator>2\pi/a</calculator>-periodic),
 it follows that the curve self-intersects for the the first time at \(\theta=2\pi\).
 In other words, a full loop of the curve is traversed for no interval shorter than \(0\leq \theta\leq 2\pi\).
 
 By theory, the area swept by a curve given in polar coordinates by \(r=r(\theta)\) for \(\theta_1\leq \theta\leq \theta_2 \) is
 \(A=\displaystyle \frac{1}{2}\int_{\theta_1}^{\theta_2}r^2(\theta){\text d} \theta  \).
 Therefore
-<span class="calculatorHidden">
+<calculatorHidden>
 rSquaredExpanded=Polynomialize(theR^2);
 theFlaTimesTwo=if (trigFun==sin, (1-\cos(2z)), (1+cos(2z)));
 theTrigFunSquaredReduced=if (trigFun==sin, ((1-\cos(a\theta 2))/2), ((1+\cos(a\theta 2))/2));
@@ -74,32 +72,27 @@ theRestFromTrigFun=rSquaredExpanded- (trigFun{}(a\theta))^2;
 simplifiedIntegrand=rSquaredExpanded- (trigFun{}(a\theta))^2+theTrigFunSquaredReduced;
 theIndefiniteIntegral=\int theR^2 {\text d}\theta;
 TurnOffRules("Sine", "Cosine", "AddTerms");
-
 theDifferenceAtTwoPi = (\theta=2\pi; theIndefiniteIntegral)_2;
 theDifferenceAtZero  = (\theta=0; theIndefiniteIntegral)_2;
 theDifferenceSimplified=(TurnOnRules("Sine", "Cosine"); theDifferenceAtTwoPi-theDifferenceAtZero)_2;
 finalAnswer=(TurnOnRules("Sine", "Cosine", "AddTerms");
-
-
 (\theta=rightPoint; theAntiDerivative)_2
 -
 (\theta=leftPoint; theAntiDerivative)_2;
 )_2
-</span>
+</calculatorHidden>
 
-<span class="calculator">
+\(<calculator>
 \displaystyle EvaluateSymbols(
-"
-\begin{array}{rcll|l}
+"\begin{array}{rcll|l}
 \displaystyle A&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(theR\right)^2 {\text d} \theta\\\\
-&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(rSquaredExpanded\right) {\text d} \theta&&\displaystyle \text{Use }trigFun^2 (z)=\frac{theFlaTimesTwo}{2}\\\\
+&=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(rSquaredExpanded\right) {\text d} \theta&&\displaystyle \text{Use~}trigFun^2 (z)=\frac{theFlaTimesTwo}{2}\\\\
 &=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(\left( theTrigFunSquaredReduced \right)+ theRestFromTrigFun\right) {\text d} \theta\\\\
 &=&\displaystyle \frac{1}{2}\int_{0}^{2\pi} \left(simplifiedIntegrand\right) {\text d} \theta\\\\
 &=&\displaystyle \frac{1}{2}\left[ theIndefiniteIntegral\right]_{0}^{2\pi}\\\\
 &=&\displaystyle \frac{1}{2}\left(theDifferenceAtTwoPi-\left(theDifferenceAtZero\right)\right)\\\\
 &=&\displaystyle \frac{1}{2}\left(theDifferenceSimplified\right)\\\\
 &=&\displaystyle finalAnswer
-\end{array}
-")
-</span>
-</span>
+\end{array}")
+</calculator>\)
+</calculatorSolution>

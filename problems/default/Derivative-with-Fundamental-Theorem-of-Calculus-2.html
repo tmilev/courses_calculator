@@ -1,8 +1,6 @@
-<span class="setCalculatorExamProblem">
-</span>
 Compute the derivative of \(F(x)\) using the Fundamental Theorem of Calculus, where 
 
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
 a=RandomInteger( (1,5));
@@ -12,30 +10,30 @@ g=RandomInteger((1,5));
 lowerBound{}{{x}}=\ln (a x);
 upperBound{}{{x}}=\sqrt[b]{c x+g};
 f{}{{t}}=\frac{e^{t}}{t};
-</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle F{}(x)=\int_{lowerBound{}x}^{upperBound{}x} f{}t dt
-</span>.
-<span class="calculatorHidden">
+</calculator>.
+<calculatorHidden>
 TurnOnRules("sqrt","CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <br>
 <answerCalculatorHighlight>
 Answer: \(F'(x)=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 CompareFunctionsNumerically(
  f{}(upperBound{}x) (d/dx (upperBound{}x))- 
  f{}(lowerBound{}x) (d/dx (lowerBound{}x))
 , AlgebraAnswer, 2, 5, 50, 0.0001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
- f{}(upperBound{}x) (d/dx (upperBound{}x))- 
+<calculatorAnswerOnGiveUp>
+f{}(upperBound{}x) (d/dx (upperBound{}x))- 
 MakeExpression(MakeRationalFunction( f{}(lowerBound{}x) (d/dx (lowerBound{}x))
 ))
-</span>
+</calculatorAnswerOnGiveUp>

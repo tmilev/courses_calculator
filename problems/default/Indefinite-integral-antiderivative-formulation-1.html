@@ -1,30 +1,28 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 b=RandomInteger{}(-5,5);
 f{}{{x}}=x+b;
-</span>
+</calculatorHidden>
 Find the antiderivatives of 
-\(f(x)=\)<span class="calculator">
+\(f(x)=<calculator noTags="true">
 \displaystyle f{}x 
-</span> up to addition of a constant. Since the question asks you to give your answer 
-``<b><span style="color:red">up to constant(s)</span></b>'' 
-you <b><span style="color:red">do not need to include \(+C\)</span></b> in your answer. 
+</calculator> up to addition of a constant. Since the question asks you to give your answer 
+``<b style="color:red">up to constant(s)</b>'' 
+you <b style="color:red">do not need to include \(+C\)</b> in your answer. 
 
 <answerCalculatorHighlight>
 Answer:
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 CompareFunctionsNumerically{}(
 AlgebraAnswer-\int f{}x dx, 
 (theDifference= AlgebraAnswer-\int f{}x dx; x=0; theDifference)_3, 
 f{}0-(x=0; g)_2,-5, 5,50,0.000001);
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 \int f{}x dx
-</span>
+</calculatorAnswerOnGiveUp>

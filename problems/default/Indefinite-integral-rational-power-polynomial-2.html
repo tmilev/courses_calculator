@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 TurnOffRules
@@ -12,16 +10,16 @@ b=RandomInteger{}( (-1,-5),(1,5));
 c=RandomInteger{}( (-1,-5),(1,5));
 g=RandomInteger{}( (-1,-5),(1,5));
 f{}{{x}}=(a x^{3/2}+b x+c x^{-1/2})/\sqrt{}x;
-</span>
+</calculatorHidden>
 
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
-or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+or else your answer <b style="color:red">will be marked wrong</b>.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int f{}x dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
@@ -33,19 +31,19 @@ AlgebraAnswer-\int f{}x dx,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -53,4 +51,4 @@ TurnOnRules
 "IntegratePartialFractions");
 \int (f{}x) dx+C
 )_2
-</span>
+</calculatorAnswerOnGiveUp>

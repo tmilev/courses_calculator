@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 a=RandomInteger{}((-1,-4),(1,4));
@@ -18,32 +16,32 @@ TurnOffRules("DistributeMultiplication",
 "CommonDenominator", 
 "CommonDenominatorOneNonFraction", CommonDenominatorSimple);
 f=(Numerator{}fDenMultipliedOut)/( (g x-h)(a x^2+b x +c)  );
-</span>
+</calculatorHidden>
 
 Split into partial fractions.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle f
-</span>\(= \)
+</calculator>\(= \)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 Sort ((theList= (GetSummandList(AlgebraAnswer));  x=12!+1; theList)_3)
 ==
 Sort((theList=GetSummandList(\sum (UnivariatePartialFractions(f))); x=12!+1; theList )_3)
 ;
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("DistributeMultiplication",
 "ConvertShortDenominatorToNegativePower",
 "CommonDenominator", CommonDenominatorSimple, "CommonDenominatorOneNonFraction"
 );
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 \sum(UnivariatePartialFractions(f));
-</span>
+</calculatorAnswerOnGiveUp>

@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 %UseLnInsteadOfLog
@@ -15,37 +13,36 @@ thePoint=0;
 initialY= (x=thePoint; finalAnswer)_2;
 lowY=Min(f{}(-2), f{}(-1 ), f{}(0 ),f{}(1 ),f{}(2));
 highY=Max(f{}(-2), f{}(-1 ), f{}(0 ),f{}(1 ),f{}(2));
-</span>
-<span class ="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotDirectionField( (1,rightPart), (-2,lowY*1.2),(2,highY*1.2), (15,2 Floor (|lowY-highY|*1.2) ),0.3, blue,0.3);
-</span>
+</calculatorShowToUserOnly>
 <br>
 Solve the separable differential equation 
 
-<span class="calculator">\displaystyle
+\(<calculator noTags="true">\displaystyle
 leftPart
-</span>\(=\)
-<span class="calculator">\displaystyle
+</calculator>=
+<calculator noTags="true">\displaystyle
 rightPart
-</span>
+</calculator>\)
 <br>
 with initial condition
 <br>
-\(y\left(<span class="calculator" noTags="true">thePoint</span>\right)=<span class="calculator" noTags="true">initialY</span>
+\(y\left(<calculator noTags="true">thePoint</calculator>\right)=<calculator noTags="true">initialY</calculator>
 \).
 <answerCalculatorHighlight>Answer: \(y=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerOne"  buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerOne"  buttons="algebra">
 CompareFunctionsNumerically(AlgebraAnswerOne, finalAnswer, \sqrt{|a|}+1, \sqrt{|a|}+4, 20, 0.000001)
-</textarea>
+</calculatorAnswer>
 <br>
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 Plot2D(AlgebraAnswerOne,-2,2,red,2)+
 PlotDirectionField( (1,rightPart), (-2,lowY*1.2),(2,highY*1.2), (20,20),0.3, blue,0.3)
-+PlotWindow(300,300)
-;
-</span>
-<span class="calculatorAnswerOnGiveUp">
++PlotWindow(300,300);
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 \displaystyle
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

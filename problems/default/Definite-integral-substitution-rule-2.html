@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 TurnOffRules
@@ -13,39 +11,38 @@ rightPoint=e/a;
 b=RandomInteger{}( (-1,-5),(1,5));
 theIndefiniteIntegral{}{{x}}= -1/pi \cos (\pi \ln (a x));
 f{}{{x}}= \frac{\sin (\pi ln{}(a x) ) }{x};
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 PlotFill(
 PlotCurve((leftPoint, t), 0 , f{}leftPoint)
 +Plot2D(f{}x, leftPoint,rightPoint)
 +PlotCurve((rightPoint, t), f{}rightPoint,0)
 +PlotCurve((t,0), rightPoint, leftPoint), cyan)
-+PlotWindow(300,300)
-;
-</span>
++PlotWindow(300,300);
+</calculatorShowToUserOnly>
 <br>
 Integrate. This is a definite integral so your answer should be a constant expression/number. 
 If your answer involves natural logarithm do not approximate with calculator (but enter them algebraically).
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, trig">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms, trig">
 AlgebraAnswer==theIndefiniteIntegral{}rightPoint-theIndefiniteIntegral{}leftPoint
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theIndefiniteIntegral{}rightPoint-theIndefiniteIntegral{}leftPoint
-</span>
+</calculatorAnswerOnGiveUp>

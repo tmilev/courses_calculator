@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 a=RandomInteger(0,5);
@@ -11,32 +9,32 @@ f=c(\frac{1}{n+a}-\frac{1}{n+b});
 preAnswer_{startIndex-1}=0;
 preAnswer_{{n}}=preAnswer_{n-1}+c \frac{1}{n+a};
 theAnswer=preAnswer_{startIndex+b-a-1}
-</span>
+</calculatorHidden>
 Sum the series.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle
 \sum_{n=startIndex}^\infty f
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 theAnswer
 -
 AlgebraAnswer 
 ==0
-</textarea>
+</calculatorAnswer>
 
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theAnswer
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, divergent);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorSolution">
+<calculatorSolution>
 <br>
-<span class="calculatorHidden">
+<calculatorHidden>
 indexLeft0=startIndex+a+0;
 indexLeft1=startIndex+a+1;
 indexLeft2=startIndex+a+2;
@@ -44,13 +42,13 @@ indexRight0=startIndex+b+0;
 indexRight1=startIndex+b+1;
 indexRight2=startIndex+b+2;
 firstDen=n+a;
-</span>
-<span class="calculator">
-EvaluateSymbols{}("\(\displaystyle
-\require{cancel}
+</calculatorHidden>
+\(
+<calculator>
+EvaluateSymbols{}("\displaystyle
 \begin{array}{rcll|l}
 \displaystyle \sum_{n=startIndex}^\infty f&=&\displaystyle  \sum_{n=startIndex}^\infty 
-\left( \frac{c}{firstDen}-\frac{c}{n+b}\right) && \text{partial fractions} \\\\
+\left( \frac{c}{firstDen}-\frac{c}{n+b}\right) && \text{partial~fractions} \\\\
 &=&\displaystyle
 \left(\frac{c}{indexLeft0}-\frac{c}{indexRight0} \right)+
 \left(\frac{c}{indexLeft1}-\frac{c}{indexRight1} \right)+
@@ -61,20 +59,19 @@ EvaluateSymbols{}("\(\displaystyle
 +\dots\\\\
 &=& \displaystyle
 \lim_{n\to \infty}\left(
-\left(        \frac{c}{indexLeft0} -\cancel{\frac{c}{indexRight0}} \right)+
+\left(\frac{c}{indexLeft0} -\cancel{\frac{c}{indexRight0}} \right)+
 \left(\cancel{\frac{c}{indexLeft1}}-\cancel{\frac{c}{indexRight1}} \right)+
 \left(\cancel{\frac{c}{indexLeft2}}-\cancel{\frac{c}{indexRight2}} \right)+
 \dots
 +
-\left(\cancel{\frac{c}{n+a}}-               \frac{c}{n+b}\right) 
+\left(\cancel{\frac{c}{n+a}}- \frac{c}{n+b}\right) 
 \right)
 \\\\
 &=& \displaystyle
 \lim_{n\to \infty}\left(\frac{c}{indexLeft0}-\frac{c}{n+b}\right)
 \\\\
 &=&\displaystyle theAnswer
-\end{array}
-\)"
-)
-</span>
-</span>
+\end{array}")
+</calculator>
+\)
+</calculatorSolution>

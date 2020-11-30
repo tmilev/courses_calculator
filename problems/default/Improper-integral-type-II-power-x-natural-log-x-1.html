@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 pointLeft=0;
@@ -17,39 +15,37 @@ pointRight=pointLeft+RandomInteger(1,20);
 f=\frac{ln (a x)}{x^n};
 fIntegral= 1/(-n+1) x^{-n+1} ln{}(a x) -1/((-n+1)^2) x^{-n+1} ;
 epsilon= 0.05;
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotFill(
 Plot2D(f, pointLeft+epsilon, pointRight, red, 2,500)+
 PlotSegment((pointRight,0),( pointLeft+epsilon, 0)) 
 , cyan)
 +PlotViewRectangle((-2, -10), (pointRight+2, 5))
-+PlotWindow(300,300)
-
-;
-</span> 
++PlotWindow(300,300);
+</calculator> 
 <br>
 If the integral is convergent, compute it. Otherwise, determine whether the integral is \(\infty, -\infty\) or \(DNE\) (does not exist and is not \(\pm\infty\)). 
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{ pointLeft}^{pointRight} f  dx
-</span>\(=\) 
+</calculator>\(=\) 
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms, infty">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms, infty">
 if (n>1, (AlgebraAnswer+\infty)==0, 
 |DoubleValue{}(AlgebraAnswer-(x=pointRight; fIntegral)_2)|  
 <
 0.0000001
 )
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("ExpressTanViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,\infty, none);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 if (n>1, -\infty, (x=pointRight; fIntegral)_2) ;
-</span>
+</calculatorAnswerOnGiveUp>

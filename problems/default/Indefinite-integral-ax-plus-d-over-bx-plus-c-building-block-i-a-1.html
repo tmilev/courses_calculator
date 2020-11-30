@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 a=RandomInteger{}((-5,-1),(1,10));
 b=RandomInteger{}( (1,30));
@@ -14,44 +12,43 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosin
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb", 
 "IntegrateBlockIa",
 "IntegratePullConstant");
-</span>
-<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+</calculatorHidden>
+<calculatorCommentsBeforeInterpretation name="AlgebraAnswer">
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", 
 "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "IntegrateBlockIa");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
-or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+or else your answer <b style="color:red">will be marked wrong</b>.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int f dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb","IntegrateBlockIa",
 "IntegratePartialFractions");
-
 CompareExpressionsNumerically {}(
 AlgebraAnswer-theIntegral,
 (x=-c/b+b;AlgebraAnswer-theIntegral)_2, 0.0000001, x\in (-c/b+b,-c/b+b/2), 20, C\in (0,3), 4)
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
+</calculatorAnswer>
 
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnAbsInsteadOfLog
 TurnOnRules("DistributeMultiplication");
 theIntegral+C
-</span>
+</calculatorAnswerOnGiveUp>

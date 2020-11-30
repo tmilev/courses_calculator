@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -16,9 +14,9 @@ theFun = a x^n;
 leftFunHeight=(x=leftPoint; theFun)_2;
 rightFunHeight=(x=rightPoint; theFun)_2;
 theIntegral=a x^{n+1} /(n+1);
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 PlotFill(
 PlotSegment((leftPoint,0), (leftPoint, leftFunHeight))
 +Plot2D(theFun, leftPoint, rightPoint)
@@ -26,15 +24,15 @@ PlotSegment((leftPoint,0), (leftPoint, leftFunHeight))
 +PlotSegment((rightPoint,0) , (leftPoint,0)), cyan)
 +
 PlotWindow(300,300)
-</span>
+</calculatorShowToUserOnly>
 <br>
 Integrate. This is a definite integral so your answer should be a constant expression/number.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} theFun dx 
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 %LogEvaluation
 (
 TurnOnRules
@@ -44,40 +42,36 @@ TurnOnRules
 | DoubleValue((theIndefiniteIntegral= \int theFun dx; x=rightPoint; theIndefiniteIntegral)_3-
 (theIndefiniteIntegral= \int theFun dx; x=leftPoint; theIndefiniteIntegral)_3 -AlgebraAnswer) |<0.0000001
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
  
-<span class="calculatorCommentsBeforeSubmission">
-\(
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
-\)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
-
+<calculatorAnswerOnGiveUp>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-
 (x=rightPoint; theIntegral)_2-
 (x=leftPoint; theIntegral)_2
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 finalAnswer=(x=rightPoint; theIntegral)_2-
 (x=leftPoint; theIntegral)_2;
 TurnOnRules("DistributeMultiplication");
@@ -87,8 +81,8 @@ integralNonSimplified= a \frac{x^{n+1}}{n+1};
 rightSub=(x=rightPoint; theIntegral)_2;
 leftSub=(x=leftPoint; theIntegral)_2;
 rightSubMinusLeftSubNonSimplified=rightSub-leftSub;
-</span>
-<span class="calculator"> 
+</calculatorHidden>
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int_{leftPoint}^{rightPoint}  theFun  {\text d} x&=&
@@ -97,7 +91,6 @@ EvaluateSymbols{}(
 &=&\displaystyle rightSubMinusLeftSubNonSimplified    \\\\
 &=&\displaystyle finalAnswer     &&\displaystyle \text{ } \\\\
 \end{array}
-"
-)
-</span>
-</span>
+")
+</calculator>\)
+</calculatorSolution>

@@ -1,15 +1,12 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 a=RandomInteger(-5,5);
 b=RandomInteger((2,5))+a;
 c=RandomInteger((-1,-5));
 sign=SelectAtRandom(-1,1);
 f{}{{x}}=sign*(x-a)(x-b)+c;
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotSurface(
 (v, (f{}v-c) cos {}u+c, (f{}v-c) sin {}u),    u\in(0, 2\pi), v\in(a+0.0001,b-0.0001), color1=pink, color2=orange, numSegments1=25, numSegments2=12,
 lineWidth=0.2
@@ -18,16 +15,16 @@ lineWidth=0.2
 +PlotCurve((x,f{}x,0),a-0.5, b+0.5, red, 4, 300)+PlotSegment((a-2, c,0),(b+2, c,0), green,2)
 +PlotSetProjectionScreen((1,0,-0.2),(0,1,-0.3))
 +PlotWindow(300,300)
-</span>
+</calculator>
 <br>
-Find the volume of the solid of revolution obtained by rotating the curve given by \(y=\)<span class="calculator">
+Find the volume of the solid of revolution obtained by rotating the curve given by \(y=<calculator noTags="true">
 f{}x 
-</span> around the axis given by <span class="calculator">y=c</span>.
+</calculator>\) around the axis given by <calculator>y=c</calculator>.
 <br>
 <answerCalculatorHighlight>
 Answer: \(V=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, angles">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, angles">
 AlgebraAnswer==
 \pi
 (
@@ -35,16 +32,16 @@ AlgebraAnswer==
 -
 (theInt= \int (f{}x -c)^2 dx; x=a; theInt)_3
 )
-</textarea>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswer>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 \pi
 (
 (theInt= \int (f{}x -c)^2 dx; x=b; theInt)_3
 -
 (theInt= \int (f{}x -c)^2 dx; x=a; theInt)_3
 )
-</span>
+</calculatorAnswerOnGiveUp>

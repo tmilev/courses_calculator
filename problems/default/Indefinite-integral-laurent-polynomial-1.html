@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -9,39 +7,38 @@ TurnOffRules
 a=RandomInteger{}( (2,5));
 b=RandomInteger{}( 1,4);
 f{}{{x}}=1/x^a +1/x^{a+b};
-</span>
+</calculatorHidden>
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
-or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+or else your answer <b style="color:red">will be marked wrong</b>.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int f{}x dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions");
-
 CompareExpressionsNumerically {}(
 AlgebraAnswer-\int f{}x dx,
 (theDifference= AlgebraAnswer-\int f{}x dx; x=1; theDifference)_3, 0.00001, x\in (1,5), 20, C\in (0,3), 4)
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions","CommonDenominator", "CommonDenominatorOneNonFraction");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -49,4 +46,4 @@ TurnOnRules
 "IntegratePartialFractions","CommonDenominator", "CommonDenominatorOneNonFraction");
 \int (f{}x) dx+C
 )_2
-</span>
+</calculatorAnswerOnGiveUp>

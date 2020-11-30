@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 startIndex=RandomInteger(2,10);
@@ -8,22 +6,22 @@ f{}0=RandomInteger(-A,A);
 f{}{{a}}=RandomInteger ((-A,-1),(1,A)) n^a+f{}(a-1);
 A=5;
 numOnePower=(RandomInteger(1,5));
-</span>
+</calculatorHidden>
 Determine whether the series is convergent or divergent. 
 If convergent, write ``<b>convergent</b>'', else write ``<b>divergent</b>''.
 <br>
-<span class="calculator">\displaystyle
+<calculator>\displaystyle
 \sum_{n=startIndex}^\infty (f{}numOnePower/f{}numOnePower)
-</span>    
+</calculator>    
 <answerCalculatorHighlight>Answer:</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer-divergent==0
-</textarea>
+</calculatorAnswer>
 
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 divergent
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,divergent);
-</span>
+</calculatorCommentsBeforeSubmission>

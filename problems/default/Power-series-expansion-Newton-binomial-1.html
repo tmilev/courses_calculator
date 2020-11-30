@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 %UseBracketForIntervals
@@ -12,23 +10,22 @@ f=(1+theConst x)^thePower;
 theSummands{}({{A}},0)= Sequence{}( GetSummand(A,0)); 
 theSummands{}({{A}},{{a}})= Sequence{}( GetSummand(A,a)) \cup theSummands{}(A,a-1); 
 theAnswerOne=\sum_{n=0}^\infty (thePower \choose n)  (theConst x)^n
-
-</span>
+</calculatorHidden>
 For this problem, recall that the binomial coefficient, denoted by \(\displaystyle \binom{n}{k}\) (read "n choose k"), is defined by:
 \(\displaystyle  \binom{n}{k} = \frac{\overbrace{ n(n-1)\dots (n-k+1)}^{k\text{ multiplicands}} }{k!}\)
 <br>
-Expand the function(s) into Taylor/Maclaurin series around \(a=\)<span class="calculator">thePoint</span>. 
+Expand the function(s) into Taylor/Maclaurin series around \(a=\)<calculator>thePoint</calculator>. 
 <br>
 <br>
 
-\(f(x)=\)<span class="calculator">\displaystyle
+\(f(x)=<calculator noTags="true">\displaystyle
 f
-</span>.
+</calculator>\).
 
 <answerCalculatorHighlight>
 Power series:
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra, series">
+<calculatorAnswer id="AlgebraAnswerOne" buttons="algebra, series">
 (  
 Sort ( (tmpSummands = theSummands{}(theAnswerOne,5);   x=12/11; tmpSummands)_3)
 -
@@ -38,10 +35,10 @@ Sort ( (tmpSummands = theSummands{}(AlgebraAnswerOne,5); x=12/11; tmpSummands)_3
 (
 ChildExpression ( ChildExpression( Last{} (GetMultiplicandList{}(GetFirstSummandContaining( AlgebraAnswerOne, \sum))) ,2),3)-\infty==0
 )
-</textarea>
+</calculatorAnswer>
 <br>
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 \displaystyle
 theAnswerOne
-</span>
+</calculatorAnswerOnGiveUp>
 Write your answer using proper \(\sum\)-notation, for example \(\displaystyle \sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!}\).

@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -15,26 +13,24 @@ rightPoint=leftPoint + RandomInteger{}(1,4);
 leftHeight=(x=leftPoint; theFun)_2;
 rightHeight=(x=rightPoint; theFun)_2;
 theIndefiniteIntegral=((a x +b)^{poverq+1})/(a(poverq+1));
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 PlotFill(
 PlotSegment((leftPoint, 0), (leftPoint,leftHeight))
 +Plot2D(theFun, leftPoint,rightPoint )
 +PlotSegment((rightPoint, rightHeight), (rightPoint,0))
 +PlotSegment((rightPoint,0), (leftPoint,0)), cyan)
-+
-PlotWindow(300,300)
-;
-</span>
++PlotWindow(300,300);
+</calculatorShowToUserOnly>
 <br>
 Integrate. The integral is definite so your answer should be a constant expression/number. 
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} theFun dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 %LogEvaluation
 (
 TurnOnRules
@@ -44,39 +40,37 @@ TurnOnRules
 | DoubleValue(( x=rightPoint; theIndefiniteIntegral)_2-
 (x=leftPoint; theIndefiniteIntegral)_2 -AlgebraAnswer) |<0.0001
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
-
+<calculatorAnswerOnGiveUp>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-
 (x=rightPoint; theIndefiniteIntegral)_2-
 (x=leftPoint; theIndefiniteIntegral)_2
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 outTerm = A/a;
 nplus1= n+1;
 term = a x + b;
@@ -94,24 +88,21 @@ TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponen
 "AddTerms", "MultiplyRationals",  "ConstantExtraction");
 leftSub=(a rightPoint + b)^{poverqplus1} ;
 rightSub= (a leftPoint + b)^{poverqplus1};
-</span>
-<span class="calculator"> 
+</calculatorHidden>
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int_{leftPoint}^{rightPoint} ( term)^{poverq} {\text d} x   &=&\displaystyle \int u^{poverq}diffX &&
 \text{Substitute: } {\begin{array}{rcl}term&=&u \\\\
-diffU&=&{\text d} u\\ {\text d} x&=&diffX \end{array}}\\\\
+diffU&=&{\text d} u\\\\ {\text d} x&=&diffX \end{array}}\\\\
 \displaystyle &=&\displaystyle
 \left[ \frac{1}{a} \left( \frac{u^{poverq +1}}{poverq +1} \right) \right]_{x=leftPoint}^{x=rightPoint}  \\\\
 \displaystyle &=&\displaystyle  \frac{1}{a (poverqplus1)}
 \left[ u^{poverqplus1} \right]_{x=leftPoint}^{x=rightPoint} &&\displaystyle \text{ }  \\\\
 \displaystyle &=&\displaystyle  term1 \left[ (term)^{poverqplus1} \right]_{x=leftPoint}^{x=rightPoint}
 &&\displaystyle \text{ }  \\\\
-\displaystyle &=&\displaystyle  term1 \left[(leftSub\right] - \left[rightSub \right]   &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  term1 \left[leftSub\right] - \left[rightSub \right]   &&\displaystyle \text{ }  \\\\
 \displaystyle &=&\displaystyle  term1 \left[ term2 - term3 \right]  &&\displaystyle \text{ }  \\\\
-\displaystyle &\approx&\displaystyle  approxFinalAnswer &&\displaystyle \text{Step requires calculator}  \\\\
-\end{array}
-"
-)
-</span>
-</span>
+\displaystyle &\approx&\displaystyle  approxFinalAnswer &&\displaystyle \text{Step~requires~calculator}  \\\\
+\end{array}")</calculator>\)
+</calculatorSolution>

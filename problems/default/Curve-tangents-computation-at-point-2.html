@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 theT = SelectAtRandom(-3,-2,-1,0,1,2,3);
@@ -19,16 +17,16 @@ thePoint=(t=theT; (theX,theY))_2;
 derivativeX=(theDer= d/dt theX; t=theT; theDer)_3;
 derivativeY=(theDer= d/dt theY; t=theT; theDer)_3;
 1/(|derivativeX|+|derivativeY|)
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotCurve( (theX,theY),  -3.5,3.5 ) +PlotPoint(thePoint, blue);
-</span> 
+</calculatorShowToUserOnly> 
 <br>
 Compute an equation of the tangent line to the curve 
-\( \left|\begin{array}{rcl} x&=&\displaystyle <span class="calculator" noTags="true">theX</span> \\y&=&\displaystyle <span class="calculator" noTags="true">theY</span> \end{array}\right., t\in (-3.5,3.5)\) 
-at the parameter value \(t=\)<span class="calculator">theT</span>. 
+\( \left|\begin{array}{rcl} x&=&\displaystyle <calculator noTags="true">theX</calculator> \\y&=&\displaystyle <calculator noTags="true">theY</calculator> \end{array}\right., t\in (-3.5,3.5)\) 
+at the parameter value \(t=<calculator noTags="true">theT</calculator>\). 
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="variables, algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="variables, algebra">
 (linearizedAnswer=EqualityToArithmeticExpression{}AlgebraAnswer;
  actualAnswer=derivativeX (y-thePoint_2)- derivativeY (x-thePoint_1) ;
  CFY=CoefficientOf{}(y,  linearizedAnswer);
@@ -39,14 +37,13 @@ at the parameter value \(t=\)<span class="calculator">theT</span>.
  realConst=(x=0; y=0; actualAnswer)_3;
  (CFX*realCFY-CFY*realCFX==0) and (CFX* realConst-theConst*realCFX==0) and (not ( linearizedAnswer ==0 ))
 ) _9
-</textarea>
+</calculatorAnswer>
 
-
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 derivativeX (y-thePoint_2)= derivativeY (x-thePoint_1)
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,y);
 %PlotShowJavascriptOnly
 PlotCurve( (theX,theY),  -3.5,3.5 )
@@ -58,6 +55,6 @@ startPt= thePoint + (-cfY, cfX)*2;
 endPt= thePoint + (-cfY, cfX)*(-2);
 PlotSegment(startPt, endPt, blue,2)
 )_5
-</span>
+</calculatorCommentsBeforeSubmission>
 
 <br>Enter your answer in format such as \(5(x-3)=2(y-2) \) or such as \(5x+2y-4=0 \).

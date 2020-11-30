@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -21,27 +19,24 @@ finalAnswer=(TurnOnRules
 "IntegratePartialFractions");
  ( x=rightPoint; theIndefiniteIntegral)_2-
 (x=leftPoint; theIndefiniteIntegral)_2)_2;
-</span>
-
-
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotFill (
 Plot2D(f{}x, leftPoint, rightPoint)
 +PlotSegment( (rightPoint,f{}rightPoint), (rightPoint,0) )   
 +PlotSegment( (rightPoint,0),             (leftPoint,0) )
 +PlotSegment( (leftPoint,0),              (leftPoint, f{}leftPoint) )
 +PlotWindow(300,300)
-, cyan)
-;
-</span>
+, cyan);
+</calculatorShowToUserOnly>
 <br>
 Integrate. This is a definite integral so your answer should be a constant expression/number.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 %LogEvaluation
 (
 TurnOnRules
@@ -50,32 +45,31 @@ TurnOnRules
 "IntegratePartialFractions");
 | DoubleValue{}(finalAnswer -AlgebraAnswer) |<0.0000001
 )_2
-</textarea>
+</calculatorAnswer>
 
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span> 
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation> 
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
-
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction",
 "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 outTerm = A/a;
 nplus1= n+1;
 term =  a x + b;
@@ -89,15 +83,16 @@ term2 = (a rightPoint + b)^poverqplus1;
 term3 = (a leftPoint + b)^poverqplus1;
 answer = term1(term2-term3);
 TurnOnRules("DistributeMultiplication");
-</span>
-<span class="calculator"> 
+</calculatorHidden>
+
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int_{leftPoint}^{rightPoint} ( term)^{poverq} {\text d} x   &=&
 \displaystyle \int_{u=uLeft}^{u=uRight} u^{poverq}diffXviaDiffU &&
  {\begin{array}{l}
-\text{Set } u=term, {\text d} u=diffUviaDiffX, {\text d} x=diffXviaDiffU \\\\
-\text{When } x=leftPoint, u=uLeft, \text{ and when } x=rightPoint,u=uRight
+\text{Set~} u=term, {\text d} u=diffUviaDiffX, {\text d} x=diffXviaDiffU \\\\
+\text{When~} x=leftPoint, u=uLeft, \text{~and~when~} x=rightPoint,u=uRight
 \end{array}}
 \\\\
 &=&\displaystyle  \left[ \frac{1}{a} \left( \frac{u^{poverq +1}}{poverq +1} \right) \right]_{uLeft}^{uRight}  \\\\
@@ -105,8 +100,6 @@ EvaluateSymbols{}(
 \displaystyle &=&\displaystyle  term1 \left[ term2 - term3 \right]    \\\\
 &=&\displaystyle finalAnswer
 \end{array}
-"
-)
-
-</span>
-</span>
+")
+</calculator>\)
+</calculatorSolution>

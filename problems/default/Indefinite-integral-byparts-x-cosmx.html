@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
@@ -12,55 +10,54 @@ g=RandomInteger{}( 2, 9);
 h=RandomInteger{}( -2,-10);
 theIntegral{}{{x}}= (1/m)(x sin(m x) + ((cos(m x))/m));
 f=x cos(m x);
-</span>
+</calculatorHidden>
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
-or else your answer <b><span style="color:red">will be marked wrong</span></b>.
+or else your answer <b style="color:red">will be marked wrong</b>.
 <answerCalculatorHighlight>
-<span class="calculator">
+\(<calculator noTags="true">
 \displaystyle \int f dx  
-</span>\(=\)
+</calculator>=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, trig">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions");
-
 CompareExpressionsNumerically {}(
 AlgebraAnswer-theIntegral{}x,
 (theDifference= AlgebraAnswer-theIntegral{}x; x=1; theDifference)_3, 0.00001, x\in (0.5,1), 20, C\in (0,3), 4)
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-</textarea>
+</calculatorAnswer>
 
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnAbsInsteadOfLog
 TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 btwo=2b;
 b2 = 2*b;
 px = p*x;
@@ -70,9 +67,9 @@ finalTerm = x sin(m x) + ((cos(m x))/m);
 denominator = b + c(cos(px));
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
-</span>
+</calculatorHidden>
 
-<span class="calculator"> 
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  \frac{1}{(m)}  \int x(m)\cos(m x) {\text d} x
@@ -83,7 +80,6 @@ EvaluateSymbols{}(
 &&\displaystyle \text{Using } \int u dv = uv - \int v du \\\\
 &=&\displaystyle  outterm \left(finalTerm \right) + C &&\displaystyle \text{ }\\\\
 \end{array}
-"
-)
-</span>
-</span>
+")
+</calculator>\)
+</calculatorSolution>

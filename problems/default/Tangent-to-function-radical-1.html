@@ -17,12 +17,11 @@ theDerivative=d/dx f;
 theSlope=(x=theX; theDerivative)_2;
 basicPlot=
 Plot2D(f, leftPoint, rightPoint, red)
-+PlotPoint((theX, theY), blue)
-+PlotWindow(300,300);
++ PlotPoint((theX, theY), blue)
++ PlotWindow(300,300);
 </calculatorHidden>
 <calculatorShowToUserOnly>
-basicPlot
-+PlotSetId("canvas1")
+basicPlot + PlotSetId("canvas1")
 </calculatorShowToUserOnly>
 <br>
 Find the equation of the tangent to 

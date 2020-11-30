@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 a=RandomInteger{}((-1,-4),(1,4));
@@ -17,15 +15,15 @@ frac2=(UnivariatePartialFractions(f))_2;
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator","CommonDenominatorSimple", "CommonDenominatorOneNonFraction", "IntegrateBlockIIaIIIa");
-</span>
+</calculatorHidden>
 
 Split into partial fractions.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle f
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 (
 answer1=  ChildExpression(AlgebraAnswer,2); 
 answer2=ChildExpression(AlgebraAnswer,3); 
@@ -34,18 +32,18 @@ TurnOnRules("DistributeMultiplication", "CommonDenominator", "CommonDenominatorO
 or
 ((frac2-answer1==0)and(frac1-answer2==0))
 )_4
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("ConvertShortDenominatorToNegativePower",
 "CommonDenominator",CommonDenominatorSimple, "CommonDenominatorOneNonFraction"
 );
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 frac1+frac2
-</span>
+</calculatorAnswerOnGiveUp>

@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 a=RandomInteger(0,5);
@@ -11,24 +9,24 @@ f=c(\frac{1}{n+a}-\frac{1}{n+b});
 preAnswer_{startIndex-1}=0;
 preAnswer_{{n}}=preAnswer_{n-1}+c \frac{1}{n+a};
 theAnswer=preAnswer_{startIndex+b-a-1}
-</span>
+</calculatorHidden>
 Sum the series.
 <answerCalculatorHighlight>
-<span class="calculator">\displaystyle
+<calculator>\displaystyle
 \sum_{n=startIndex}^\infty f
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 theAnswer
 -
 AlgebraAnswer 
 ==0
-</textarea>
+</calculatorAnswer>
 
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theAnswer
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,divergent);
-</span>
+</calculatorCommentsBeforeSubmission>

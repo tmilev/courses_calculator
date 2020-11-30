@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 g{}0=RandomInteger(0,A);
@@ -13,50 +11,50 @@ bottomPowerTwo=RandomInteger(2,6);
 topPowerTwo=RandomInteger(2, 5);
 bottomPowerThree=RandomInteger(2,6);
 topPowerThree=RandomInteger(2, 5);
-</span>
+</calculatorHidden>
 Determine whether the series is convergent or divergent. If convergent, write ``convergent'', else write ``divergent''.
 <br>
 In your pen and paper solution, indicate clearly which convergence/divergence tests you used and how you used them.
 <br>
-<span class="calculator">\displaystyle
+<calculator>\displaystyle
 \sum_{n=RandomInteger(1,20)}^\infty \frac{f{}topPowerOne }{f{}bottomPowerOne}
-</span>
+</calculator>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerOne" buttons="algebra">
 (AlgebraAnswerOne
 -
 if (bottomPowerOne-topPowerOne>1, convergent, divergent) )
 ==0
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 if (bottomPowerOne-topPowerOne>1, convergent, divergent)
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
-<span class="calculator">\displaystyle
+<calculator>\displaystyle
 \sum_{n=RandomInteger(1,20)}^\infty \frac{f{}topPowerTwo}{f{}bottomPowerTwo}
-</span>
+</calculator>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerTwo" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerTwo" buttons="algebra">
 (AlgebraAnswerTwo
 -
 if (bottomPowerTwo-topPowerTwo>1, convergent, divergent) )
 ==0
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 if (bottomPowerTwo-topPowerTwo>1, convergent, divergent)
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
-<span class="calculator">\displaystyle
+<calculator>\displaystyle
 \sum_{n=RandomInteger(1,20)}^\infty \frac{f{}topPowerThree}{ f{}bottomPowerThree}
-</span>
+</calculator>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerThree" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswerThree" buttons="algebra">
 (AlgebraAnswerThree
 -
 if (bottomPowerThree-topPowerThree>1, convergent, divergent) )
 ==0
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 if (bottomPowerThree-topPowerThree>1, convergent, divergent)
-</span>
+</calculatorAnswerOnGiveUp>
 

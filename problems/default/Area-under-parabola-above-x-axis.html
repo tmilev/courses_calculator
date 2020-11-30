@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 a=1;
@@ -13,15 +11,14 @@ theFun=theFunShifted+2-(x=(xOne+xTwo)/2; theFunShifted)_2;
 theCoeffs=CoefficientsPowersOf (x, theFun);
 c=theCoeffs_1;
 b=theCoeffs_2;
-
 theIntegral=\int theFun dx;
 finalAnswer=(x=rightPoint; theIntegral)_2- (x=leftPoint; theIntegral)_2;
 TurnOffRules
 ("IntegratePowerRule", "DistributeMultiplication",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction");
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotFill(
 Plot2D(theFun, leftPoint, rightPoint)+
 PlotSegment((rightPoint, 0), (leftPoint,0), black)
@@ -30,42 +27,42 @@ PlotSegment((rightPoint, 0), (leftPoint,0), black)
 +PlotGrid 0
 +PlotViewRectangle((leftPoint-1, -1), (rightPoint+1, Max ((x=rightPoint; theFun)_2, (x=rightPoint; theFun)_2)))
 +PlotWindow(200,200)
-</span>
+</calculatorShowToUserOnly>
 <br>
-Find the area between the parabola <span class="calculator">theFun</span> and the \(x\) axis from \(x=\)<span class="calculator"> leftPoint </span> 
-to \(x=\)<span class="calculator"> rightPoint </span>. In other words, compute:
+Find the area between the parabola <calculator>theFun</calculator> and the \(x\) axis from 
+\(x=<calculator noTags="true">leftPoint</calculator>\)
+to \(x=<calculator noTags="true"> rightPoint </calculator>\). In other words, compute:
 <answerCalculatorHighlight>
-<span class="calculator">\displaystyle \int_{leftPoint}^{rightPoint} 
-theFun {\text d} x</span>\(=\)
+\(<calculator noTags="true">\displaystyle \int_{leftPoint}^{rightPoint} 
+theFun {\text d} x</calculator>=\)
 </answerCalculatorHighlight> 
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer==
 finalAnswer
-</textarea>
+</calculatorAnswer>
 
- 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 finalAnswer
-</span>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswerOnGiveUp>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 cftwo=CoefficientOf(x^2,theFun);
 cfone=CoefficientOf(x,theFun);
 constTerm=(CoefficientsPowersOf(x,theFun))_1;
@@ -74,8 +71,8 @@ integralNonSimplified=if (constTerm==0, cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^
 cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1}+constTerm x);
 rightSub=(x=rightPoint; theIntegral)_2;
 leftSub=(x=leftPoint; theIntegral)_2;
-</span>
-<span class="calculator"> 
+</calculatorHidden>
+\(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int_{leftPoint}^{rightPoint} \left( theFun \right){\text d} x&=&
@@ -84,8 +81,6 @@ EvaluateSymbols{}(
 &=&\displaystyle   \left(rightSub\right) - \left(leftSub\right)      \\\\
 &=&\displaystyle  finalAnswer     &&\displaystyle \text{ } \\\\
 \end{array}
-"
-)
-
-</span>
-</span>
+")
+</calculator>\)
+</calculatorSolution>

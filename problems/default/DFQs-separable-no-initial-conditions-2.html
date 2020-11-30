@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 %UseLnInsteadOfLog
@@ -18,36 +16,36 @@ lowY=b/a *1.95 ;
 highY=-b/a ;
 numYs=20;
 theVLength=0.1;
-</span>
-<span class ="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotDirectionField( (1,rightPart), (-2,lowY),(2,highY), (20,20 ),theVLength, blue,0.3);
-</span>
+</calculatorShowToUserOnly>
 <br>
 Solve the separable differential equation 
 
-<span class="calculator">\displaystyle
+\(<calculator noTags="true">\displaystyle
 leftPart
-</span>\(=\)
-<span class="calculator">\displaystyle
+</calculator>=
+<calculator noTags="true">\displaystyle
 rightPart
-</span>
+</calculator>\)
 <br>
 with initial condition
 <br>
-\(\displaystyle y\left(<span class="calculator" noTags="true">thePoint</span>\right)=<span class="calculator" noTags="true">initialY</span>
+\(\displaystyle y\left(<calculator noTags="true">thePoint</calculator>\right)=<calculator noTags="true">initialY</calculator>
 \).
 <answerCalculatorHighlight>Answer: \(y=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerOne" buttons="algebra, logarithms">
+<calculatorAnswer id="AlgebraAnswerOne" buttons="algebra, logarithms">
 CompareFunctionsNumerically(AlgebraAnswerOne, finalAnswer, \sqrt{|a|}+1, \sqrt{|a|}+4, 20, 0.000001)
-</textarea>
+</calculatorAnswer>
 <br>
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 Plot2D(AlgebraAnswerOne,-2,2,red,2)
 +PlotWindow(300,300)
 +PlotDirectionField( (1,rightPart), (-2,lowY),(2,highY), (20,20 ),theVLength, blue,0.3);
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 \displaystyle
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

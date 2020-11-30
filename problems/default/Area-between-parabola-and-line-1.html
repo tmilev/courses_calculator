@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 TurnOffRules
@@ -16,28 +14,27 @@ rightPoint=c+g;
 curve1{}{{x}}= a x +b;
 curve2{}{{x}}= (x-c)(x-g-c)+a x +b;
 theArea{}{{x}}=curve1{}x-curve2{}x;
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 PlotFill(
 Plot2D(curve1{}x, c,c+g )
 +Plot2D(curve2{}x, c,c+g )
 , cyan)
 +Plot2D(curve1{}x, c-1,c+g+1)
 +Plot2D(curve2{}x, c-1,c+g+1)
-+PlotWindow(300,300)
-;
-</span>
++PlotWindow(300,300);
+</calculatorShowToUserOnly>
 <br>
 Find the area locked between the curve \(y=\)
-<span class="calculator">
+<calculator>
 \displaystyle curve1{}x 
-</span> and the curve \(y=\)
-<span class="calculator">
+</calculator> and the curve \(y=\)
+<calculator>
 \displaystyle curve2{}x 
-</span>. Do not include units in your answer.
+</calculator>. Do not include units in your answer.
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer==
 (
 TurnOnRules
@@ -47,19 +44,19 @@ TurnOnRules
 -(theInt=(\int theArea{}x dx); x=leftPoint; theInt)_3+
 (theInt=(\int theArea{}x dx); x=rightPoint; theInt)_3
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -68,4 +65,4 @@ TurnOnRules
 -(theInt=(\int theArea{}x dx); x=leftPoint; theInt)_3+
 (theInt=(\int theArea{}x dx); x=rightPoint; theInt)_3
 )_2
-</span>
+</calculatorAnswerOnGiveUp>

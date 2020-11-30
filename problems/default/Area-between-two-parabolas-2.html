@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
 TurnOffRules
@@ -15,9 +13,9 @@ rightPoint=leftPoint+RandomInteger{}( (4,10));
 curve1{}{{x}}= x^2+b x +c;
 curve2{}{{x}}= -a (x-leftPoint)(x-rightPoint) + curve1{}x;
 theArea{}{{x}}=curve2{}x-curve1{}x;
-</span>
+</calculatorHidden>
 
-<span class="calculatorShowToUserOnly">
+<calculatorShowToUserOnly>
 PlotFill(
 Plot2D(curve1{}x, leftPoint,rightPoint)
 +Plot2D(curve2{}x, rightPoint, leftPoint)
@@ -25,18 +23,18 @@ Plot2D(curve1{}x, leftPoint,rightPoint)
 +Plot2D(curve1{}x, leftPoint-1,rightPoint+1)
 +Plot2D(curve2{}x, leftPoint-1,rightPoint+1)
 +PlotWindow(300,300)
-</span>
+</calculatorShowToUserOnly>
 <br>
 Find the area locked between the curve \(y=\)
-<span class="calculator">
+<calculator>
 \displaystyle curve1{}x
-</span> and the curve \(y=\)
-<span class="calculator">
+</calculator> and the curve \(y=\)
+<calculator>
 \displaystyle curve2{}x 
-</span>. Do not include units in your answer.
+</calculator>. Do not include units in your answer.
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
-AlgebraAnswer==
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
+AlgebraAnswer ==
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -45,19 +43,19 @@ TurnOnRules
 -(theInt=(\int theArea{}x dx); x=leftPoint; theInt)_3+
 (theInt=(\int theArea{}x dx); x=rightPoint; theInt)_3
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -66,4 +64,4 @@ TurnOnRules
 -(theInt=(\int theArea{}x dx); x=leftPoint; theInt)_3+
 (theInt=(\int theArea{}x dx); x=rightPoint; theInt)_3
 )_2
-</span>
+</calculatorAnswerOnGiveUp>

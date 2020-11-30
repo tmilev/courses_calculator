@@ -1,6 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -11,8 +9,8 @@ rightPoint=1;
 a=RandomInteger{}( (-1,-5),(1,5));
 b=RandomInteger{}( (-1,-5),(1,5));
 f{}{{x}}=a x +b;
-</span>
-<span class="calculatorShowToUserOnly">
+</calculatorHidden>
+<calculatorShowToUserOnly>
 PlotFill(
 PlotSegment((leftPoint, 0), (leftPoint , f{}leftPoint))
 +Plot2D(f{}x, leftPoint, rightPoint, red)
@@ -21,15 +19,15 @@ PlotSegment((leftPoint, 0), (leftPoint , f{}leftPoint))
 cyan)
 +Plot2D(f{}x, leftPoint, rightPoint, red)
 +PlotWindow(300,300);
-</span>
+</calculatorShowToUserOnly>
 <br>
 Integrate. This is a definite integral so your answer should be a constant expression/number.
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int_{leftPoint}^{rightPoint} f{}x dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
@@ -38,19 +36,19 @@ TurnOnRules
 | DoubleValue((theIndefiniteIntegral= \int f{}x dx; x=rightPoint; theIndefiniteIntegral)_3-
 (theIndefiniteIntegral= \int f{}x dx; x=leftPoint; theIndefiniteIntegral)_3 -AlgebraAnswer) | <0.0000001
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule", 
@@ -59,4 +57,4 @@ TurnOnRules
 (theIndefiniteIntegral= \int f{}x dx; x=rightPoint; theIndefiniteIntegral)_3-
 (theIndefiniteIntegral= \int f{}x dx; x=leftPoint; theIndefiniteIntegral)_3
 )_2
-</span>
+</calculatorAnswerOnGiveUp>
