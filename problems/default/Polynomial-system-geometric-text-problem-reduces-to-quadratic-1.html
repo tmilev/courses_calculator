@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 cfXOne= RandomInteger{}(1,3);
@@ -23,9 +19,9 @@ xLengthTwo = xSolution *cfXTwo;
 yLength = cfY* (x=xSolution; yFromX)_2 ;
 theUnit=Min( KnownLength, xLengthOne, xLengthTwo, yLength);
 theAnswer=(xLengthTwo+yLength) m
-</span>
+</calculatorHidden>
 
-<span class="calculator">
+<calculator>
 PlotRemoveCoordinateAxes {}0+
 PlotPath( 
 ( (0,0),
@@ -80,29 +76,29 @@ PlotPath( ( (yLength+theUnit/4,KnownLength),(yLength+theUnit/4,KnownLength+theUn
 PlotPath( ( (yLength-theUnit/4,KnownLength+xLengthOne),(yLength-theUnit/4,KnownLength+xLengthOne-theUnit/4),(yLength,KnownLength+xLengthOne-theUnit/4)), gray)
 +
 PlotPath( ( (0+theUnit/4,KnownLength+xLengthOne),(0+theUnit/4,KnownLength+xLengthOne-theUnit/4),(0,KnownLength+xLengthOne-theUnit/4)), gray)
-</span>
+</calculator>
 <br>
 The diagram shows a field enclosed by a wall \(AH\) and fencing along the rest of the boundary \(ABCDEFGH\). 
-The angles marked with the corner symbol are right, the segment \(EF\) equals <span class="calculator">KnownLength</span> \(m\), 
-\(BC=\)<span class="calculator">y cfY</span> \(m\), \(AB=DC=\)<span class="calculator">x cfXOne</span> \(m\) 
-and \(DE=\)<span class="calculator">x cfXTwo</span> \(m\). It is given that the total length of the fencing (excluding the wall) is 
-<span class="calculator">fencingTotal</span> \(m\) and that the area of the rectangle \(HBCG\) is 
-<span class="calculator">areaFactor</span> times the area of rectangle \(DEFG\). 
+The angles marked with the corner symbol are right, the segment \(EF\) equals \(<calculator noTags="true">KnownLength</calculator> m\), 
+\(BC= <calculator noTags="true">y cfY</calculator> m\), \(AB=DC=<calculator noTags="true">x cfXOne</calculator>m\) 
+and \(DE=<calculator noTags="true">x cfXTwo</calculator>m\). It is given that the total length of the fencing (excluding the wall) is 
+<calculator>fencingTotal</calculator> \(m\) and that the area of the rectangle \(HBCG\) is 
+<calculator>areaFactor</calculator> times the area of rectangle \(DEFG\). 
 
 <ul>
-    <li>Show that \(y=\)<span class="calculator">yFromX</span>. </li>
-    <li>Show that <span class="calculator">1/ GCD{}( CoefficientOf(x, thePoly), CoefficientOf(x^2, thePoly) ,ConstantTerm(x, thePoly))  thePoly</span>\(=0\) </li>
-    <li>Find the length of \(HF\). Do not forget to include the measurement unit \(m\).</li>
+<li>Show that \(y=<calculator noTags="true">yFromX</calculator>\).</li>
+<li>Show that \(<calculator noTags="true">1/ GCD{}( CoefficientOf(x, thePoly), CoefficientOf(x^2, thePoly) ,ConstantTerm(x, thePoly))thePoly</calculator>=0\).</li>
+<li>Find the length of \(HF\). Do not forget to include the measurement unit \(m\).</li>
 </ul>
 <answerCalculatorHighlight>\(|HF|=\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 theAnswer-AlgebraAnswer==0
-</textarea>
+</calculatorAnswer>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer, m);
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theAnswer 
-</span>
+</calculatorAnswerOnGiveUp>

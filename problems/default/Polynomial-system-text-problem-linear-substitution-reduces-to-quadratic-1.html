@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 
@@ -11,10 +7,10 @@ yOne=RandomInteger{}((3,30));
 theProduct=xOne*yOne;
 theSum=xOne+yOne;
 1/(theSum>8)+ 1/ (yOne>xOne);
-</span>
+</calculatorHidden>
 
-The sum of two numbers \(x\) and \(y\) is <span class="calculator">theSum </span> 
-and their product is <span class="calculator">theProduct</span>. 
+The sum of two numbers \(x\) and \(y\) is <calculator>theSum </calculator> 
+and their product is <calculator>theProduct</calculator>. 
 Given that \(y\geq x\), find the values of \(x\) and \(y\).
 
 <ul>
@@ -24,7 +20,7 @@ Given that \(y\geq x\), find the values of \(x\) and \(y\).
 </li>
 </ul>
 <answerCalculatorHighlight>Answer:</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, variables, comma">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, variables, comma">
 (p=MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}));
  q=MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}));
  if (p==0 and q==0, 0,
@@ -33,10 +29,9 @@ Given that \(y\geq x\), find the values of \(x\) and \(y\).
      )_3
     )
 )_3
+</calculatorAnswer>
 
-</textarea>
-
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 if (
 MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) )==0 
 and 
@@ -62,8 +57,8 @@ MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}) )==0
       )_3
     )
 )_3
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (x=xOne, y=yOne)
-</span>
+</calculatorAnswerOnGiveUp>

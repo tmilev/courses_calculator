@@ -120,4 +120,6 @@ TopicBundle: PolynomialInequalities_Basics_Theory
 Topic: Basic polynomial inequalities
 TopicBundle: PolynomialInequalities_Examples_Basics
 
-
+Chapter: Polynomial systems
+Section: Polynomial system basics
+TopicBundle: PolynomialSystems_Basics

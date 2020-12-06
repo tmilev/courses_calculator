@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 yCF=RandomInteger{}(1,4);
 xCF=RandomInteger{}(2,4);
@@ -25,8 +21,8 @@ xTwo= SolveFor{}(x, polyInX)_2;
 yOne=(x=xOne; yViaX)_2;
 yTwo=(x=xTwo; yViaX)_2;
 1/((yOne>xOne) +(yTwo>xTwo)-2);
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotRemoveCoordinateAxes {}0+
 PlotPath( 
 ( (0,0),
@@ -77,21 +73,21 @@ PlotPath(
 +PlotLabel(( xLength/2, yLength+theUnit), xSide)
 +PlotLabel(( xLength+theUnit, yLength/2), ySide)
 +PlotViewRectangle((-xLength/5,-yLength/5),(xLength*1.2, yLength*1.2))
-</span>
+</calculator>
 <br>
 
-\(ABCD\) is a rectangle in which \(AB=\)<span class="calculator">xSide</span> \(cm\) and \(BC=\)<span class="calculator">ySide</span> \(cm\). 
+\(ABCD\) is a rectangle in which \(AB=<calculator noTags="true">xSide</calculator>\) \(cm\) and \(BC=<calculator noTags="true">ySide</calculator>\) \(cm\). 
 The point \(E\) is on \(DA\), the point \(G\) is on \(DC\) and the point \(F\) is chosen so that 
 \(DEFG\) is a square of side \(x\) \(cm\), as indicated on the diagram.
-The length of the segment \(BF\) is <span class="calculator">sqrt(DiagonalSquared)</span> \(cm\).
+The length of the segment \(BF\) is \(<calculator noTags="true">sqrt(DiagonalSquared)</calculator>\) \(cm\).
 
 <ul>
-<li>Show that <span class="calculator">thePoly</span>\(=\)<span class="calculator">DiagonalSquared</span>. </li>
-<li>Given that the perimeter of the rectangle \(ABCD\) is <span class="calculator">thePerimeter</span>, find the values of \(x,y\). </li>
+<li>Show that \(<calculator noTags="true">thePoly</calculator>=<calculator noTags="true">DiagonalSquared</calculator>\). </li>
+<li>Given that the perimeter of the rectangle \(ABCD\) is <calculator>thePerimeter</calculator> \(cm\), find the values of \(x,y\). </li>
 <li>Enter your answer in the format \(x=?cm{\color{red}{,}}y=?cm\). Do not forget the comma and the measurement units.</li>
 </ul>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, variables">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, variables">
 (p=MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}));
  q=MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}));
  if (p==0 and q==0, 0,
@@ -100,10 +96,9 @@ The length of the segment \(BF\) is <span class="calculator">sqrt(DiagonalSquare
      )_3
     )
 )_3
+</calculatorAnswer>
 
-</textarea>
-
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,(x,y ,cm));
 if (
 MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) )==0 
@@ -114,8 +109,8 @@ MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}) )==0
 <br>Please do not forget the comma."
 ,
 "");
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 (x=xSolution cm, y=ySolution cm) 
-</span>
+</calculatorAnswerOnGiveUp>

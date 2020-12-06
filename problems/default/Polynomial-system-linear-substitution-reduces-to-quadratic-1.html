@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 xTwoCF=RandomInteger{}((-4,-1),(1,4));
@@ -22,40 +18,46 @@ xSols= (y= (rightSideOne-xCFOne x )/ yCFOne; SolveFor(x,Polynomialize( leftSideT
 xTwo=if (xOne==xSols_1, xSols_2, xSols_1);
 yTwo= (x=xTwo ; (rightSideOne-xCFOne x )/ yCFOne)_2;
 1/(xOne-xTwo);
-</span>
+</calculatorHidden>
 
 Solve the polynomial system. <br>
 
 \(
 \left|
 \begin{array}{rcl}
-<span class="calculator" noTags="true">
+<calculator noTags="true">
 leftSideOne
-</span>
+</calculator>
 &=&
-<span class="calculator" noTags="true">
+<calculator noTags="true">
 rightSideOne
-</span> 
+</calculator> 
 \\
-<span class="calculator" noTags="true">
+<calculator noTags="true">
 leftSideTwo
-</span>
+</calculator>
 &=&
-<span class="calculator" noTags="true">
+<calculator noTags="true">
 rightSideTwo
-</span> 
+</calculator> 
 \end{array}
 \right.
 \)
 
 <ul>
-<li>Please enter your answer in the format \( { \color{red}{\mathbf (}} x=a{\color{red}{\mathbf,}}y=b{\color{red}{\mathbf )}} or {\color{red}{\mathbf(}}x=c{\color{red}{\mathbf,}}y=d{\color{red}{\mathbf)}}\).
+<li>Please enter your answer in the format 
+\( 
+{\color{red}{\mathbf{(\right.}}} 
+x=a
+{\color{red}{\mathbf,}}
+y=b{\color{red}{\mathbf{\left.)}}}  or 
+{\color{red}{\mathbf{(\right.}}}x=c{\color{red}{\mathbf,}}y=d{\color{red}{\mathbf{\left.)}}}\).
 </li>
 <li> Do not forget to put the parenthesis and punctuation marked in red.
 </li>
 </ul>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="variables, algebra, comma, or">
+<calculatorAnswer id="AlgebraAnswer" buttons="variables, algebra, comma, or">
 (a=MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) or (x={{g}}, y={{h}}));
  if (a==0, 0,
      ( a;
@@ -64,9 +66,9 @@ rightSideTwo
      )_2
     )
 )_2
-</textarea>
+</calculatorAnswer>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 if (MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{d}}) or (x={{g}}, y={{j}}))==0,
 "<b style='color:red'>Your answer does not match the pattern</b> \((x=a, y=b)\\ or\\ (x=c, y=d)\). 
 <br>Please do not forget the comma, the parenthesis, and the ``or'' expression.
@@ -103,8 +105,8 @@ if (MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{d}}) or (x={{g}}, y={{j}}))==
    "<br>Could not get constants from the values of \(x\) and \(y\). "
  )
 )_2
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
- (  x=xOne, y=yOne) or( x=xTwo, y=yTwo)
-</span>
+<calculatorAnswerOnGiveUp>
+(x=xOne, y=yOne) or (x=xTwo, y=yTwo)
+</calculatorAnswerOnGiveUp>
