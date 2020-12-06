@@ -17,9 +17,7 @@ aCF = (CoefficientsPowersOf(x,leftSide))_3;
 thePlot = PlotGrid{}(0)+
 Plot2D(leftSide, (Sort( uOne, uTwo))_1 - 3/ aCF, (Sort( uOne, uTwo))_2 + 3/aCF, red, 2)+
 
-Plot2D(rightHandSide, (Sort( uOne, uTwo))_1 - 3extraFactor, (Sort( uOne, uTwo))_2 + 3 extraFactor, green, 2)
-;
-
+Plot2D(rightHandSide, (Sort( uOne, uTwo))_1 - 3extraFactor, (Sort( uOne, uTwo))_2 + 3 extraFactor, green, 2);
 </calculatorHidden>
 The quadratic \(<calculator noTags="true">
 \displaystyle
@@ -34,10 +32,9 @@ Sort(answer) - Sort(uOne, uTwo) == (0,0)
 <calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
 EnsureExpressionDependsOnlyOn(answer, none);
-if (IsNonEmptySequence {}answer, thePlot
-+
-PlotPoint( (answer_1,rightHandSide ), blue)+
-PlotPoint( (answer_2,rightHandSide ), blue)+PlotSetId("thePlot") , "<br><b style='color:red'>Did you forget to use comma?</b>"); 
+if(IsNonEmptySequence {}answer, thePlot +
+PlotPoint((answer_1,rightHandSide ), blue) +
+PlotPoint((answer_2,rightHandSide ), blue) + PlotSetId("thePlot") , "<br><b style='color:red'>Did you forget to use comma?</b>"); 
 </calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
 Sort(uOne, uTwo)
@@ -67,6 +64,3 @@ extraFactor
 <calculator>
 thePlot+PlotSetId("thePlot")
 </calculator>
-
-
-
