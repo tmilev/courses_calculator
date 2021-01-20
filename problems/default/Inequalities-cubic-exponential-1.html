@@ -1,8 +1,4 @@
-<span class="setCalculatorExamProblem">
-</span>
-
-
-<span class="calculatorHidden">
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffApproximations(0); 
@@ -42,13 +38,13 @@ if (  ( ComparisonOpString=="<"   and sign>0 ) or  ( ComparisonOpString==">"   a
 )
 )
 )
-</span>
+</calculatorHidden>
 Plot the cubic on your graphing device.
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle
 leftSide
-</span>
+</calculator>
 <br>
 <button class="showAnswerButton" onclick="if(this.toggleTag===undefined || this.toggleTag==false) this.toggleTag=true; else this.toggleTag=false; if (this.toggleTag){ document.getElementById('thePlotContainer').style.display=''; document.getElementById('thePlotContainer').style.opacity=1;} else {document.getElementById('thePlotContainer').style.display='none';  document.getElementById('thePlotContainer').style.opacity=0;}">
 Show plot
@@ -56,50 +52,50 @@ Show plot
 <span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
 Use the mouse wheel to zoom. Use may use the graph to guess the zeroes of the function.
 <br>
-<span class="calculator">
+<calculator>
 PlotGrid{}(0)+
 Plot2D(leftSide, uOne-0.5, uThree+0.5, red, 2)+
 PlotSetId("thePlot")
 ;
-</span>
+</calculator>
 </span>
 
 Use your plot to factor the cubic. 
-<answerCalculatorHighlight><span class="calculator">
+<answerCalculatorHighlight><calculator>
 \displaystyle
 leftSide
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
 <textarea class="calculatorAnswer" id="factorizationAnswer", buttons="algebra">
 IsProductLinearOrConstantTermsIn{}( u,factorizationAnswer) 
 and
 (Polynomialize{}(factorizationAnswer-leftSide)== 0)
 </textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules("DistributeMultiplication", "DistributeMultiplicationConstants");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculatorCommentsBeforeInterpretation>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 EnsureExpressionDependsOnlyOn(factorizationAnswer,u);
 if (Polynomialize{}(factorizationAnswer-leftSide)== 0,
 "",
 "<b style='color:red'><br>Did you check your answer by uncovering parenthesis?</b>"
 )
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 %UseBracketForIntervals
 leftSideFactored
-</span>
+</calculatorAnswerOnGiveUp>
 <br>
 Solve the inequality.
 <br>
-<span class="calculator">
+<calculator>
 \displaystyle
 leftSide
-</span><span class="calculator">ComparisonOp</span><span class="calculator">
+</calculator><calculator>ComparisonOp</calculator><calculator>
 \displaystyle
 rightSide
-</span>
+</calculator>
 <br>
 Your answer should be in the format a union of intervals. 
 <br>
@@ -107,15 +103,15 @@ When should you use open intervals \((a,b)\) and when closed intervals \([a,b]\)
 <br>
 What about intervals involving \(\pm \infty\)?
 <answerCalculatorHighlight>\(u\in\)</answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswer" buttons="algebra, intervals">
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, intervals">
 NormalizeIntervals{} AlgebraAnswer ==inequalityAnswer
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %UseBracketForIntervals
 ""
-</span>
+</calculatorCommentsBeforeInterpretation>
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 %UseBracketForIntervals
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
@@ -162,13 +158,13 @@ PlotSetId("thePlot")
 ))_3)
 )
 )
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 %UseBracketForIntervals
 inequalityAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 
-<span class="calculatorHidden">
+<calculatorHidden>
 theBase=SelectAtRandom(2,3,4,5,6,e);
 theExpLeadingCF=1/( RandomInteger(1,5));
 u=theBase^{theExpLeadingCF x};
@@ -199,31 +195,31 @@ if (  ( ComparisonOpString=="<"   and sign>0 ) or  ( ComparisonOpString==">"   a
 )
 )
 )
-</span>
+</calculatorHidden>
 <br>
 
 Using your previous work, solve the inequality.
 <br>
-<span class="calculator">
+<calculator>
 leftSide
-</span>
-<span class="calculator">
+</calculator>
+<calculator>
 ComparisonOp
-</span>\(0\)
+</calculator>\(0\)
 <answerCalculatorHighlight>\(x\in\) </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="studentFinalAnswer" buttons="algebra, intervals, logarithms">
+<calculatorAnswer id="studentFinalAnswer" buttons="algebra, intervals, logarithms">
 CompareIntervalsNumerically(studentFinalAnswer, finalAnswer, 0.001);
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 %UseBracketForIntervals
 TurnOffApproximations(0);
 TurnOffRules("LogBase");
-</span>
+</calculatorCommentsBeforeInterpretation>
 <br>
-<span class="calculator">
+<calculator>
 theSecondPlot+PlotSetId("theSecondPlotID");
-</span>
-<span class="calculatorCommentsBeforeSubmission">
+</calculator>
+<calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly    
 %UseBracketForIntervals
 EnsureExpressionDependsOnlyOn(studentFinalAnswer, none);
@@ -272,8 +268,8 @@ PlotSetId("theSecondPlotID")
 )
 )
 );
-</span>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorCommentsBeforeSubmission>
+<calculatorAnswerOnGiveUp>
 %UseBracketForIntervals
 finalAnswer
-</span>
+</calculatorAnswerOnGiveUp>

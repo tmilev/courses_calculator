@@ -1,8 +1,5 @@
-<span class="setCalculatorExamProblem">
-</span>
 Verify that the given point lies on the curve. Find the equation of the tangent line to the curve at the point.
-<span class="calculatorHidden">
-\(
+<calculatorHidden>
 %UseLnInsteadOfLog
 a=RandomInteger(-2,2);
 b=RandomInteger(-2,2);
@@ -18,28 +15,27 @@ x=a;
 y=b;
 answer
 )_4
-\)</span>
+</calculatorHidden>
 
 <br>
-<span class="calculator">
-\(\displaystyle left\) 
-</span>\(=\)<span class="calculator">
-\(\displaystyle right\) 
-</span> at the point: \((x,y)=\)
-<span class="calculator">
-\(\displaystyle  \left(a,b\right)\) 
-</span>.
-<br>
-<span class="calculatorShowToUserOnly">
 \(
+<calculator noTags="true">
+ left
+</calculator>=<calculator noTags="true">
+ right
+</calculator>\) at the point: \((x,y)=\)
+<calculator>
+\left(a,b\right)
+</calculator>.
+<br>
+<calculatorShowToUserOnly>
 PlotImplicit(theFun, (-10, -10), (10, 10), (50,50),2600)
 +PlotWindow(300,300)
 +PlotSetId("canvas1")
-\) 
-</span>
+</calculatorShowToUserOnly>
 
 <br>
-The tangent line equation: <textarea class="calculatorAnswer" id="AlgebraAnswer">
+The tangent line equation: <calculatorAnswer id="AlgebraAnswer">
 y-b-(x-a) *( (answer = (d/dx theFun;
 -(d/dx y=0;d/dx theFun)_2 /CoefficientOf{}(d/dx y, d/dx theFun)
 )_2;
@@ -47,10 +43,10 @@ x=a;
 y=b;
 answer
 )_4)- EqualityToArithmeticExpression( AlgebraAnswer)==0
-</textarea>
+</calculatorAnswer>
 Enter the tangent equation in the form such as \(y= 5 x+3 \). 
 
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,y);
 Thaw
 (
@@ -65,8 +61,8 @@ Plot2D( (theCF=CoefficientOf(y, EqualityToArithmeticExpression{}AlgebraAnswer); 
 EqualityToArithmeticExpression{}( AlgebraAnswer)/(-theCF))_3, -5,5, "blue" )
 +PlotSetId("canvas1")
 )))
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 y-b=theFinalSlope (x-a)
-</span>
+</calculatorAnswerOnGiveUp>

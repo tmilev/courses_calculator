@@ -70,5 +70,9 @@ Problem: problems/solve-quadratic-equation-two-rational-roots-1-non-trivial-cont
 Title: Solve a quadratic equation
 Problem: problems/solve-quadratic-equation-rational-roots-non-standard-form.html
 
+Chapter: Hard-coded problems
+Title: Hard-coded test
+Problem: problems/samples/problem_1.html
+
 %Title: Graph of a parabola
 %Problem: problems/graph-of-parabola-1.html
