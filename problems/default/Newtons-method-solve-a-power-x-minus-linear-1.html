@@ -52,6 +52,7 @@ finding zeroes of \(f\).
 <br>
 <b>Compute the derivative of \(f\).</b>
 <answerCalculatorHighlight>\(\displaystyle \frac{{\text d} f}{{\text d} x}=\)</answerCalculatorHighlight>
+<br>
 <calculatorAnswer id="derivativeAnswer" buttons="algebra, logarithms">
 CompareFunctionsNumerically(derivativeAnswer, d/dx f, 0, 1, 50, 0.00000001) 
 </calculatorAnswer>
@@ -68,6 +69,7 @@ The Newton map is the transformation which we iterate when performing the Newton
 <br>
 <b>Compute the Newton map.</b>
 <answerCalculatorHighlight>\(\displaystyle N(x)=\)</answerCalculatorHighlight>
+<br>
 <calculatorAnswer id="newtonMap" buttons="algebra, logarithms">
 CompareFunctionsNumerically(newtonMap, theNewtonMap, 0.1, 1.12, 53, 0.00000001);
 </calculatorAnswer>
@@ -103,6 +105,7 @@ Alternatively, you may use your personal calculator to compute the approximation
 Don't forget to use the calculator you plan on bringing to your exams.
 
 <answerCalculatorHighlight>\(x_2=N(0)=\)</answerCalculatorHighlight>
+<br>
 <calculatorAnswer id="answerXtwo" buttons="algebra, logarithms">
 DoubleValue|theNewtonMapApprox {}0- answerXtwo| < 0.001
 </calculatorAnswer>
@@ -130,6 +133,7 @@ Use the value of \(x_2\) you found in the previous step to compute \(x_3\)
 with precision \(5\) digits after the decimal point.
 
 <answerCalculatorHighlight>\(x_3=N(x_2)=\)</answerCalculatorHighlight>
+<br>
 <calculatorAnswer id="answerXthree" buttons="algebra, logarithms">
 DoubleValue|theNewtonMapApprox{}theNewtonMapApprox {}0- answerXthree| < 0.001
 </calculatorAnswer>
@@ -158,6 +162,7 @@ Use the value of \(x_3\) you found in the previous step to compute \(x_4\)
 with precision \(5\) digits after the decimal point.
 
 <answerCalculatorHighlight>\(x_4=N(x_3)=\)</answerCalculatorHighlight>
+<br>
 <calculatorAnswer id="answerXfour" buttons="algebra, logarithms">
 DoubleValue|x_4- answerXfour| < 0.001
 </calculatorAnswer>
@@ -188,6 +193,7 @@ Use the value of \(x_4\) you found in the previous step to compute \(x_5\)
 with precision \(5\) digits after the decimal point.
 
 <answerCalculatorHighlight>\(x_5=N(x_4)=\)</answerCalculatorHighlight>
+<br>
 <calculatorAnswer id="answerXfive" buttons="algebra, logarithms">
 DoubleValue|x_5- answerXfive| < 0.001
 </calculatorAnswer>
@@ -217,6 +223,7 @@ Use the value of \(x_5\) you found in the previous step to compute \(x_6\)
 with precision \(5\) digits after the decimal point.
 
 <answerCalculatorHighlight>\(x_6=N(x_5)=\)</answerCalculatorHighlight>
+<br>
 <calculatorAnswer id="answerXsix" buttons="algebra, logarithms">
 DoubleValue|x_6- answerXsix| < 0.001
 </calculatorAnswer>
@@ -246,6 +253,7 @@ Use the value of \(x_6\) you found in the previous step to compute \(x_7\)
 with precision \(5\) digits after the decimal point.
 
 <answerCalculatorHighlight>\(x_7=N(x_6)=\)</answerCalculatorHighlight>
+<br>
 <calculatorAnswer id="answerXseven" buttons="algebra, logarithms">
 DoubleValue|x_7- answerXseven| < 0.001
 </calculatorAnswer>
@@ -285,21 +293,22 @@ The second argument is the starting point. The third and final argument is the n
 <b style="color:red">case sensitive</b>.
 
 <answerCalculatorHighlight>\(x_{20}=\)</answerCalculatorHighlight>
-<calculatorAnswer id="answerNewton20" buttons="algebra, logarithms, NewtonsMethod">
-DoubleValue|answerNewton20- NewtonsMethod(f,0,20) | < 0.000001
+<br>
+<calculatorAnswer id="answerNewtonTwenty" buttons="algebra, logarithms, NewtonsMethod">
+DoubleValue|answerNewtonTwenty- NewtonsMethod(f,0,20) | < 0.000001
 </calculatorAnswer>
 <calculatorCommentsBeforeInterpretation>
 TurnOffRules(PowerRationalByRational);
 TurnOffApproximations 0;    
 </calculatorCommentsBeforeInterpretation>
 <calculatorCommentsBeforeSubmission>
-EnsureExpressionDependsOnlyOn(answerNewton20, none);
-"<br>\(= " +ToString{} DoubleValue{} answerNewton20 +"\)";
-"<br>\(f(" + ToString{} DoubleValue{} answerNewton20 + ")\approx" +ToString{}( (x=answerNewton20; DoubleValue{}f)_2)+"\)";
+EnsureExpressionDependsOnlyOn(answerNewtonTwenty, none);
+"<br>\(= " +ToString{} DoubleValue{} answerNewtonTwenty +"\)";
+"<br>\(f(" + ToString{} DoubleValue{} answerNewtonTwenty + ")\approx" +ToString{}( (x=answerNewtonTwenty; DoubleValue{}f)_2)+"\)";
 %PlotShowJavascriptOnly
 basicPlot+PlotSetId("theCanvas")
-+PlotPoint((answerNewton20, c^answerNewton20),red)
-+PlotPoint((answerNewton20, a*answerNewton20+b),purple)
++PlotPoint((answerNewtonTwenty, c^answerNewtonTwenty),red)
++PlotPoint((answerNewtonTwenty, a*answerNewtonTwenty+b),purple)
 </calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
 TurnOffRules (NewtonsMethod);
