@@ -11,6 +11,7 @@ f = a e^{b/x};
 <calculator noTags="true">
 f
 </calculator>\).
+<br>
 <answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswer" buttons="algebra, logarithms">
 CompareFunctionsNumerically(Polynomialize(d/dx ( f)), AlgebraAnswer, 1, 2, 50, 0.0001);
@@ -23,6 +24,7 @@ EnsureExpressionDependsOnlyOn(AlgebraAnswer,x)
 </calculatorCommentsBeforeSubmission>
 <hr>
 Compute the <b style="color:red">SECOND</b> derivative of \(f(x)\).
+<br>
 <answerCalculatorHighlight>\(f''(x)=\)</answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswerTwo" buttons="algebra, logarithms">
 CompareFunctionsNumerically(MakeExpression MakeRationalFunction{} (d/dx (d/dx f)), AlgebraAnswerTwo, 1, 2, 50, 0.0001);

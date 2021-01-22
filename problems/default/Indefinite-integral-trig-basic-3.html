@@ -16,6 +16,7 @@ fThird=a \tan ^2 x + b \cot^2x;
 </calculatorHidden>
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
 or else your answer <b style="color:red">will be marked wrong</b>.
+<br>
 <answerCalculatorHighlight>
 <calculator>
 \displaystyle \int f dx
@@ -48,6 +49,7 @@ EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
 <calculatorAnswerOnGiveUp>
 theIntegral{}x+C
 </calculatorAnswerOnGiveUp>
+<br>
 <answerCalculatorHighlight>
 <calculator>
 \displaystyle \int fSecond dx
@@ -78,15 +80,16 @@ TurnOffRules
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswerSecond,C, x)
 </calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theIntegralSecond{}x+C
-</span>
+</calculatorAnswerOnGiveUp>
+<br>
 <answerCalculatorHighlight>
-<span class="calculator">
+<calculator>
 \displaystyle \int fThird dx
-</span>\(=\)
+</calculator>\(=\)
 </answerCalculatorHighlight>
-<textarea class="calculatorAnswer" id="AlgebraAnswerThird" buttons="algebra, trig">
+<calculatorAnswer id="AlgebraAnswerThird" buttons="algebra, trig">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
@@ -98,19 +101,19 @@ AlgebraAnswerThird-theIntegralThird{}x,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswerThird,C,x)=="")
 )_2
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
-</span>
+</calculatorCommentsBeforeInterpretation>
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswerThird,C, x)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 theIntegralThird{}x+C
-</span>
+</calculatorAnswerOnGiveUp>
