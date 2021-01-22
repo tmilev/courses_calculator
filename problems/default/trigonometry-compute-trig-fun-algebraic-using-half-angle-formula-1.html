@@ -21,6 +21,7 @@ Compute an exact algebraic expression for the given expressions.
 <br>
 Use only the four arithmetic operations and the radicals \(\sqrt{\dots} \).
 
+<br>
 <answerCalculatorHighlight> \(<calculator noTags="true"> rightSideZero</calculator>=\) </answerCalculatorHighlight>
 <calculatorAnswer id="algebraAnswerZero" buttons="algebra">
 finalAnswerZero-algebraAnswerZero==0
@@ -35,6 +36,7 @@ EnsureExpressionDependsOnlyOn (algebraAnswerZero, none);
 <calculatorAnswerOnGiveUp>
 finalAnswerZero
 </calculatorAnswerOnGiveUp>
+<br>
 <answerCalculatorHighlight> \(<calculator noTags="true"> rightSideOne</calculator>=\) </answerCalculatorHighlight>
 <calculatorAnswer id="algebraAnswer" buttons="algebra">
 (|DoubleValue{}(finalAnswerOne- algebraAnswer)|<0.0000000001 )
@@ -54,6 +56,7 @@ if (IsAlgebraicRadical{}(algebraAnswer),
 <calculatorAnswerOnGiveUp>
 finalAnswerOne
 </calculatorAnswerOnGiveUp>
+<br>
 <answerCalculatorHighlight> \(<calculator noTags="true"> rightSideTwo</calculator>=\) </answerCalculatorHighlight>
 <calculatorAnswer id="algebraAnswerTwo" buttons="algebra">
 (|DoubleValue{}(finalAnswerTwo-algebraAnswerTwo)|<0.0000000001)
