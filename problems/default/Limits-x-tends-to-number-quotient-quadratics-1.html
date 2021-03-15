@@ -1,6 +1,7 @@
 Compute the limit. 
 
 <calculatorHidden>
+TurnOffRules("DivideExpressionsAsIfPolynomial");
 af= RandomInteger((-5,-1), (1,5));
 bf= af+RandomInteger((-5,-1), (1,5));
 bg= af+RandomInteger((-5,-1), (1,5));
@@ -20,7 +21,7 @@ theVeryFinalAnswer=(x=af; (x-bf)/(x-bg) )_2;
 Answer: 
 </answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswer" buttons="algebra">
-AlgebraAnswer-theVeryFinalAnswer ==0
+AlgebraAnswer-theVeryFinalAnswer==0
 </calculatorAnswer>
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
