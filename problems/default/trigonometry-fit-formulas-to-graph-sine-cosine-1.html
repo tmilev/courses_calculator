@@ -1,30 +1,30 @@
 <calculatorHidden>
-theTrigFun=SelectAtRandom(sin, cos);
-A= RandomInteger{}((-7,-1), (1,7));
-b=1;
-c=0 ;
+theTrigFun = SelectAtRandom(sin, cos);
+A = RandomInteger{}((-7,-1), (1,7));
+b = 1;
+c = 0 ;
 
 theFun= A theTrigFun{}( b (x+ c*\pi));
 xPeak= if (theTrigFun==sin, \pi/(2 b)- c \pi ,-c\pi);
 yPeak = (x=xPeak; theFun)_2;
 
-xPeak2= xPeak - \pi/b;
+xPeak2 = xPeak - \pi/b;
 yPeak2 = (x=xPeak2; theFun)_2;
-xPeak3= xPeak + \pi/b;
+xPeak3 = xPeak + \pi/b;
 yPeak3 = (x=xPeak3; theFun)_2;
 
 thePlot=Plot2D( theFun, - Max{}(2, 2/|b|)\pi , Max{}(2, 2/|b|)\pi)+PlotGrid{}0
 +
-PlotPoint ( (xPeak, yPeak), blue)+
-PlotLabel ( (xPeak, yPeak), ToUTF8String( (xPeak, yPeak)) )+
-PlotPoint ( (xPeak2, yPeak2), blue)+
-PlotLabel ( (xPeak2, yPeak2), ToUTF8String( (xPeak2, yPeak2)) )+
-PlotPoint ( (xPeak3, yPeak3), blue)+
-PlotLabel ( (xPeak3, yPeak3), ToUTF8String( (xPeak3, yPeak3)) )
+PlotPoint ( (xPeak, yPeak), blue) +
+PlotLabel ( (xPeak, yPeak), ToUTF8String((xPeak, yPeak)) ) +
+PlotPoint ( (xPeak2, yPeak2), blue) +
+PlotLabel ( (xPeak2, yPeak2), ToUTF8String( (xPeak2, yPeak2))) +
+PlotPoint ( (xPeak3, yPeak3), blue) +
+PlotLabel ( (xPeak3, yPeak3), ToUTF8String( (xPeak3, yPeak3)))
 ;
 </calculatorHidden>
 <calculator>
-thePlot+PlotSetId("plotid1")
+thePlot + PlotSetId("plotid1")
 </calculator>
 <br>
 <ul>
