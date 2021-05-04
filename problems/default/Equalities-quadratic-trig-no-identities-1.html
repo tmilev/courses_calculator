@@ -36,10 +36,13 @@ Plot2D(rightSide, leftPoint, rightPoint, pink, 2 )
 +PlotGrid(0);
 </calculatorHidden>
 <calculatorHidden>
-secondPlot=Plot2D(leftSide, -2\pi, 2\pi, red, 2)+
-Plot2D(rightSide, -2\pi, 2\pi, pink, 2)+
+secondPlot = Plot2D(leftSide, -2\pi, 2\pi, red, 2) +
+Plot2D(rightSide, -2\pi, 2\pi, pink, 2) +
 PlotGrid(0);
 </calculatorHidden>
+<calculator>
+secondPlot + PlotSetId("secondPlotID");
+</calculator>
 <ul>
 <li>Find all solutions of the equation in the interval \([-2\pi, 2\pi]\).</li>
 <li>You may use either degrees or radians; if using degrees, your answer should be in the interval \([-360^\circ, 360^\circ]\).</li>
@@ -61,19 +64,16 @@ rightSide
 <calculatorAnswer id="algebraAnswer" buttons="algebra, angles, comma">
 Sort{} algebraAnswer == finalAnswer 
 </calculatorAnswer>
-<calculatorCommentsBeforeSubmission>
-%PlotShowJavascriptOnly    
-EnsureExpressionDependsOnlyOn(algebraAnswer, none);
-secondPlot+
-PlotPoint( ApplyToList(leftSideAsFun, algebraAnswer), green)+ 
-PlotPoint( ApplyToList(rightSideAsFun, algebraAnswer), blue)+ 
-PlotSetId("secondPlotID");
-</calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
 %UseBracketForIntervals
 finalAnswer
 </calculatorAnswerOnGiveUp>
 <br>
-<calculator>
-secondPlot+PlotSetId("secondPlotID");
-</calculator>
+<calculatorCommentsBeforeSubmission>
+%PlotShowJavascriptOnly
+EnsureExpressionDependsOnlyOn(algebraAnswer, none);
+secondPlot +
+PlotPoint( ApplyToList(leftSideAsFun, algebraAnswer), green) + 
+PlotPoint( ApplyToList(rightSideAsFun, algebraAnswer), blue) +  
+PlotSetId("secondPlotID");
+</calculatorCommentsBeforeSubmission>
