@@ -23,13 +23,16 @@ PlotFill(Plot2D(theFun, leftPoint, rightPoint, red)+PlotSegment((rightPoint, 0),
 ;
 </calculatorShowToUserOnly>
 <br>
-Find the area locked between the parabola <calculator>theFun</calculator> and the \(x\) axis. 
+Find the area locked between the graph of the function <calculator>theFun</calculator>, the \(x\)-axis and the vertical lines 
+\(
+x=<calculator noTags='true'>leftPoint</calculator>
+\) and \(x=<calculator noTags='true'>rightPoint</calculator>\). 
 
 In other words, compute:
 <br>
 <answerCalculatorHighlight>
-<calculator>\displaystyle \int_leftPoint^rightPoint</calculator><calculator>
-theFun {\text d} x</calculator>\(=\)
+\(<calculator noTags='true'>\displaystyle \int_leftPoint^rightPoint 
+theFun {\text d} x</calculator>=\)
 </answerCalculatorHighlight> 
 <calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 |AlgebraAnswer- finalAnswer|<0.00001;

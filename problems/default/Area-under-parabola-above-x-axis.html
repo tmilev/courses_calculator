@@ -67,7 +67,7 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosin
 cftwo=CoefficientOf(x^2,theFun);
 cfone=CoefficientOf(x,theFun);
 constTerm=(CoefficientsPowersOf(x,theFun))_1;
-TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",  "AddTerms");
+TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",  "AddTerms", "CommonDenominatorSimple");
 integralNonSimplified=if (constTerm==0, cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1},
 cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1}+constTerm x);
 rightSub=(x=rightPoint; theIntegral)_2;

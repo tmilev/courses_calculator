@@ -44,13 +44,14 @@ PlotSegment((rightPoint, 0), (rootThree,0), black)
 +PlotWindow(300,300);
 </calculatorShowToUserOnly>
 <br>
-Find <b style="color:red">signed area</b> locked between the parabola <calculator>theFun</calculator> and the \(x\) axis. 
+Find <b style="color:red">signed area</b> locked between the parabola <calculator>theFun</calculator>, the \(x\) axis 
+and the vectical lines \(x=<calculator noTags="true">leftPoint</calculator>\) and \(x=<calculator noTags="true">rightPoint</calculator>\). 
 
 In other words, compute:
 <br>
 <answerCalculatorHighlight>
-<calculator>\displaystyle \int_leftPoint^rightPoint</calculator><calculator>
-theFun {\text d} x</calculator>\(=\)
+\(<calculator noTags="true">\displaystyle \int_leftPoint^rightPoint 
+theFun {\text d} x</calculator>=\)
 </answerCalculatorHighlight> 
 <calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer==finalAnswer
@@ -73,7 +74,8 @@ finalAnswer
 
 <calculatorSolution name="AlgebraAnswer">
 <calculatorHidden>
-TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+TurnOffRules(
+"ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
 </calculatorHidden>
@@ -82,7 +84,11 @@ cfthree=CoefficientOf(x^3,theFun);
 cftwo=CoefficientOf(x^2,theFun);
 cfone=CoefficientOf(x,theFun);
 constTerm=(CoefficientsPowersOf(x,theFun))_1;
-TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",  "AddTerms", "MultiplyRationals",  "ConstantExtraction");
+TurnOffRules(
+"PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", 
+"AddRationals",  "AddTerms", "MultiplyRationals",  "ConstantExtraction",
+"CommonDenominatorOneNonFraction","CommonDenominatorSimple"
+);
 integralNonSimplified=if (constTerm==0, cfthree \frac{x^{3+1}}{3+1}+ cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1}, cfthree \frac{x^{3+1}}{3+1}+cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1}+constTerm x);
 rightSub=(x=rightPoint; theIntegral)_2;
 leftSub=(x=leftPoint; theIntegral)_2;

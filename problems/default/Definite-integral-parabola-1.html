@@ -41,8 +41,8 @@ In other words, compute:
 
 <br>
 <answerCalculatorHighlight>
-<calculator>\displaystyle \int_leftPoint^rightPoint</calculator><calculator>
-theFun {\text d} x</calculator>\(=\)
+\(<calculator noTags='true'>\displaystyle \int_leftPoint^rightPoint
+theFun {\text d} x</calculator>=\)
 </answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 AlgebraAnswer==finalAnswer
@@ -74,7 +74,7 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 cftwo=CoefficientOf(x^2,theFun);
 cfone=CoefficientOf(x,theFun);
 constTerm=(CoefficientsPowersOf(x,theFun))_1;
-TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",  "AddTerms");
+TurnOffRules("PowerIntegerByInteger", "PowerRationalByRational", "CombineExponents", "AddRationals",  "AddTerms", "CommonDenominatorSimple");
 integralNonSimplified=if (constTerm==0, cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1},
 cftwo\frac{x^{2+1}}{2+1}+ cfone \frac{x^{1+1}}{1+1}+constTerm x);
 rightSub=(x=rightPoint; theIntegral)_2;
