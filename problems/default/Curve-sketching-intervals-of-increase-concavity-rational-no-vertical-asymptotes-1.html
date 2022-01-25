@@ -7,13 +7,14 @@ c=RandomInteger(-3, 3);
 %UseLnInsteadOfLog
 goodF{}{{x}}=(x)/(x^2+a);
 f{}{{x}}=MakeExpression{}MakeRationalFunction{}( goodF{}(b x-c));
+TurnOffRules(CommonDenominator);
 firstDerivative=d/dx(f{}x);
 secondDerivative=d/dx firstDerivative;
 fdNumCfs=CoefficientsPowersOf(x, Numerator(firstDerivative));
 increaseInterval=(( -fdNumCfs_2 + sqrt((fdNumCfs_2)^2-4 fdNumCfs_1 fdNumCfs_3))/(2 fdNumCfs_3), 
 (- fdNumCfs_2 - sqrt((fdNumCfs_2)^2-4 fdNumCfs_1 fdNumCfs_3))/(2 fdNumCfs_3));
 sdNum= Numerator(secondDerivative);
-sdNumFactors=FactorOneVarPolyOverRationals( Numerator(secondDerivative));
+sdNumFactors=FactorUnivariatePolynomialOverRationals( Numerator(secondDerivative));
 sdNumFactorLin=sdNumFactors_1;
 sdNumFactorQuad=MakeExpression(MakeRationalFunction (sdNum/sdNumFactorLin));
 inflectionPoints = Sort(SolveFor( x, sdNumFactorQuad));

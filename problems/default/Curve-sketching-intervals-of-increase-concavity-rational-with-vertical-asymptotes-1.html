@@ -6,11 +6,12 @@ c=RandomInteger(-3, 3);
 %UseLnInsteadOfLog
 den{}{{x}}=MakeExpression( Polynomial (( x-a/b )^2)-1);
 f{}{{x}}= (b*( x-a/b ))/(b*den{}x) +3( x-a/b)+c;
+TurnOffRules(CommonDenominator);
 fd= (d/dx f{}x);
 sd= (d/dx (d/dx(f{}x)));
 TurnOffRules("DistributeMultiplication");
-sdNumFactors= FactorOneVarPolyOverRationals{}( Numerator{}(sd));
-fdNumFactors= FactorOneVarPolyOverRationals{}( Numerator{}(fd));
+sdNumFactors= FactorUnivariatePolynomialOverRationals{}( Numerator{}(sd));
+fdNumFactors= FactorUnivariatePolynomialOverRationals{}( Numerator{}(fd));
 fdNumZeroes=Sort( SolveFor{}(x, fdNumFactors_2) \cup SolveFor{}(x, fdNumFactors_3));
 increaseInterval=((-\infty, fdNumZeroes_1)\cup(fdNumZeroes_2, fdNumZeroes_3)\cup (fdNumZeroes_4, \infty));
 inflectionPoint =(SolveFor(x, sdNumFactors_2));
@@ -60,6 +61,7 @@ Product{}(sdNumFactors )/(Denominator(sd))
 Find the vertical asymptotes of \(f\). 
 Enter your vertical asymptotes in the form x=1. 
 If there is more than one, separate them by commas, in a format similar to: x=1,x=2.
+<br>
 <answerCalculatorHighlight>Vertical asymptotes: </answerCalculatorHighlight>
 <calculatorAnswer id="userVerticalAsymptotes" buttons="algebra, variables">
 (
