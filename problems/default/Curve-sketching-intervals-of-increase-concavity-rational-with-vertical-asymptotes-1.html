@@ -6,7 +6,7 @@ c=RandomInteger(-3, 3);
 %UseLnInsteadOfLog
 den{}{{x}}=MakeExpression( Polynomial (( x-a/b )^2)-1);
 f{}{{x}}= (b*( x-a/b ))/(b*den{}x) +3( x-a/b)+c;
-TurnOffRules(CommonDenominator);
+TurnOffRules(CommonDenominator, DivideExpressionsAsIfPolynomial);
 fd= (d/dx f{}x);
 sd= (d/dx (d/dx(f{}x)));
 TurnOffRules("DistributeMultiplication");
@@ -30,33 +30,36 @@ Plot2D(f{}x,-12, -1+a/b, "red" )
 <br>
 The function is given by the following formula.
 <br>
-\(f(x)=\)
-<calculatorShowToUserOnly>
+\(f(x)=
+<calculatorShowToUserOnly noTags="true">
 \displaystyle
 f{}x;
-</calculatorShowToUserOnly>
+</calculatorShowToUserOnly>\)
 <br>
 Computation shows the first derivative is 
-<br>\(f'(x)=\)
-<calculatorShowToUserOnly>
+<br>\( f'(x)=
+<calculatorShowToUserOnly noTags="true">
 \displaystyle
 fd
 </calculatorShowToUserOnly>=
-<calculatorShowToUserOnly>
+<calculatorShowToUserOnly noTags="true">
 \displaystyle
 Product{}(fdNumFactors )/(Denominator{}(fd))
 </calculatorShowToUserOnly>
+\)
 <br>
-and the second derivative is <br> \(f''(x)=\)
-<calculatorShowToUserOnly>
+and the second derivative is <br> 
+\(
+f''(x)=
+<calculatorShowToUserOnly noTags="true">
 \displaystyle
 sd
 </calculatorShowToUserOnly>=
-<calculatorShowToUserOnly>
+<calculatorShowToUserOnly noTags="true">
 \displaystyle
 Product{}(sdNumFactors )/(Denominator(sd))
 </calculatorShowToUserOnly>
-
+\)
 <br>
 Find the vertical asymptotes of \(f\). 
 Enter your vertical asymptotes in the form x=1. 
@@ -103,7 +106,8 @@ PlotCurve((SolveFor(x, userVerticalAsymptotes_2), t), -50, 50, "blue", 1.5)
 Find the <b>open</b> interval(s) on which \(f\) is increasing. Use the union sign to indicate multiple intervals; for example, 
 to enter the intervals (2,3) and (5,6), type in \((2,3)\cup (5,6)\). 
 <br>
-<b>\(f\) increases for:</b>
+<b>\(f\) increases for:</b> 
+<br>
 <answerCalculatorHighlight>\(x\in\)</answerCalculatorHighlight>
 <calculatorAnswer id="userIncreaseInterval" buttons="intervals, algebra">
 CompareIntervalsNumerically( userIncreaseInterval, increaseInterval, 0.000000000000001)

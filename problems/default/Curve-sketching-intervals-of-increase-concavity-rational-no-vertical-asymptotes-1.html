@@ -7,7 +7,7 @@ c=RandomInteger(-3, 3);
 %UseLnInsteadOfLog
 goodF{}{{x}}=(x)/(x^2+a);
 f{}{{x}}=MakeExpression{}MakeRationalFunction{}( goodF{}(b x-c));
-TurnOffRules(CommonDenominator);
+TurnOffRules(CommonDenominator, DivideExpressionsAsIfPolynomial);
 firstDerivative=d/dx(f{}x);
 secondDerivative=d/dx firstDerivative;
 fdNumCfs=CoefficientsPowersOf(x, Numerator(firstDerivative));
@@ -28,16 +28,22 @@ Plot2D(f{}x,-6, 6, "red" )+PlotWindow(300,300)
 <br>
 The function is given by the following formula.
 <br>
-\(f(x)=<calculatorShowToUserOnly noTags="true">
+\(
+f(x)=<calculatorShowToUserOnly noTags="true">
 \displaystyle
 f{}x;
-</calculatorShowToUserOnly>\)
+</calculatorShowToUserOnly>
+\)
 <br>
-Computation shows the first derivative is <br>\(f'(x)=\)
-<calculatorShowToUserOnly>
+Computation shows the first derivative is <br>
+\(
+f'(x)=
+<calculatorShowToUserOnly noTags="true">
 \displaystyle
 firstDerivative
 </calculatorShowToUserOnly>
+\)
+<br>
 and the second derivative is <br> \(f''(x)=
 <calculatorShowToUserOnly noTags="true">
 \displaystyle
@@ -98,7 +104,7 @@ increaseInterval_2
 <b>The minimum of \(f\) is achieved for:</b>
 <br>
 <answerCalculatorHighlight>
-\(x_{min}\)
+\(x_{min} =\)
 </answerCalculatorHighlight>
 <calculatorAnswer id="xMin" buttons="algebra">
 xMin- increaseInterval_1==0;
