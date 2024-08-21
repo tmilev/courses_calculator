@@ -13,7 +13,7 @@ Rewrite the logarithm to an expression that uses the natural logarithm \(\ln\) a
 </answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswerZero"  buttons="algebra, logarithms">
 (DoubleValue{}|AlgebraAnswerZero- \ln {}argument /ln {}base|< 0.0000000001 )
-and (not ( Contains(AlgebraAnswerZero, StringToAtom("LogBase") ) ) )
+and (not ( Contains(AlgebraAnswerZero, StringToAtom("LogBase") ) ) ) and (Contains(AlgebraAnswerZero, ln))
 </calculatorAnswer>
 <calculatorCommentsBeforeInterpretation>
 TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
