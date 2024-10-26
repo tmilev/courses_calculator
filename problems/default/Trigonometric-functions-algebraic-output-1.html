@@ -2,7 +2,7 @@
 %UseLnInsteadOfLog
 %UseBracketForIntervals
 TurnOffApproximations(0);
-TurnOffRules ("DegreesToRadians", "Sine", "Cosine");
+TurnOffRules ("DegreesToRadians", "SineApproximate", "CosineApproximate", "SineExact", "CosineExact");
 rightSide=\pi RandomInteger{}(-10,10) /RandomInteger{}(1,4);
 trigFun=SelectAtRandom(\sin, \cos);
 </calculatorHidden>
