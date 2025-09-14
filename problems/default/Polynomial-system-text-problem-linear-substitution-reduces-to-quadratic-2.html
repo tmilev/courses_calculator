@@ -1,64 +1,65 @@
 <calculatorHidden>
-%UseLnInsteadOfLog
-%UseBracketForIntervals
+  %UseLnInsteadOfLog
+  %UseBracketForIntervals
 
-xOne=RandomInteger{}((3,30)) ;
-yOne=RandomInteger{}((3,30));
-target=xOne^2+yOne^2;
-theSum=xOne+yOne;
-1/(theSum>8)+ 1/ (yOne>xOne);
+  xOne=RandomInteger{}((3,30)) ;
+  yOne=RandomInteger{}((3,30));
+  target=xOne^2+yOne^2;
+  theSum=xOne+yOne;
+  1/(theSum>8)+ 1/ (yOne>xOne);
 </calculatorHidden>
 
-The sum of two numbers \(x\) and \(y\) is <calculator>theSum </calculator> 
-and the sum of their squares is <calculator>target</calculator>. 
+The sum of two numbers \(x\) and \(y\) is <calculator>theSum </calculator>
+and the sum of their squares is <calculator>target</calculator>.
 Given that \(y\geq x\), find the values of \(x\) and \(y\).
 
 <ul>
-<li>Please enter your answer in the format \( x=a{\color{red}{\mathbf,}}y=b\).
-</li>
-<li> Do not forget to put the comma marked in red.
-</li>
+  <li>Please enter your answer in the format \( x=a{\color{red}{\mathbf,}}y=b\).
+  </li>
+  <li> Do not forget to put the comma marked in red.
+  </li>
 </ul>
 <answerCalculatorHighlight>Answer:</answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswer" buttons="algebra, variables, comma">
-(p=MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}));
- q=MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}));
- if (p==0 and q==0, 0,
-     ( p; q;
-       (b==xOne and c==yOne)
-     )_3
-    )
-)_3
+  (p=MatchPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}));
+  q=MatchPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}));
+  if (p==0 and q==0, 0,
+  ( p; q;
+  (b==xOne and c==yOne)
+  )_3
+  )
+  )_3
 </calculatorAnswer>
 
 <calculatorCommentsBeforeSubmission>
-if (
-MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) )==0 
-and 
-MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}) )==0 
-,
-"<br><b style='color:red'>Your answer does not match the pattern</b> \(x=a, y=b\). 
-<br>Please do not forget the comma."
-,
-"");
-(p=MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}));
- q=MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}));
- if (p==0 and q==0, "",
-      (p; q;
-       if (b+c==theSum, "",
-           "<br><b style='color:red'>Your sum \(x+y\) equals " + 
-           ToString(b+c) + ", different from " + ToString(theSum) +"</b>"
-          )+
-       if (b^2+c^2==target, "",
-            "<br><b style='color:red'>The squares sum \(x^2+ y^2\) equals " + 
-            ToString(b^2+c^2) + ", different from " + ToString(target) +"</b>"
-          )+
-       if (b>c, "<br><b style='color:red'>The problem requests that \(y\gt x\)</b>","")
-      )_3
-    )
-)_3
+  if (
+  MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) )==0
+  and
+  MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}) )==0
+  ,
+  "<br><b style='color:red'>Your answer does not match the pattern</b> \(x=a, y=b\).
+  <br>Please do not forget the comma."
+  ,
+  "");
+  (p=MatchPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}));
+  q=MatchPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}));
+  
+  if (not MatchesPattern{}( AlgebraAnswer, (x={{C}}, y={{D}})) and (not MatchesPattern{}( AlgebraAnswer, (y={{E}}, x={{F}}))), "",
+  (p; q;
+  if (b+c==theSum, "",
+  "<br><b style='color:red'>Your sum \(x+y\) equals " +
+    ToString(b+c) + ", different from " + ToString(theSum) +"</b>"
+  )+
+  if (b^2+c^2==target, "",
+  "<br><b style='color:red'>The squares sum \(x^2+ y^2\) equals " +
+    ToString(b^2+c^2) + ", different from " + ToString(target) +"</b>"
+  )+
+  if (b>c, "<br><b style='color:red'>The problem requests that \(y\gt x\)</b>","")
+  )_3
+  )
+  )_3
 </calculatorCommentsBeforeSubmission>
 
 <calculatorAnswerOnGiveUp>
-(x=xOne, y=yOne)
+  (x=xOne, y=yOne)
 </calculatorAnswerOnGiveUp>

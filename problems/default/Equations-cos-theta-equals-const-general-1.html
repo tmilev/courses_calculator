@@ -1,55 +1,51 @@
 <calculatorHidden>
-%UseLnInsteadOfLog
-%UseBracketForIntervals
-TurnOffApproximations(0);
-TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
-leftSide=cos \theta;
-aCF=RandomInteger{}((-11,-1),(1,11));
-rightSide= aCF/(|aCF| + RandomInteger{}(1,20));
-IsApproximatelyInteger{}{{a}}=(|Round{}a-a|<0.0001);
-</calculatorHidden>
-Solve the equation. 
-<br>
+  %UseLnInsteadOfLog
+  %UseBracketForIntervals
+  TurnOffApproximations(0);
+  TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+  leftSide=cos t;
+  aCF=RandomInteger{}((-11,-1),(1,11));
+  rightSide= aCF/(|aCF| + RandomInteger{}(1,20));
+  IsApproximatelyInteger{}{{a}}=(|Round{}a-a|<0.0001); </calculatorHidden>
+    Solve the equation.
+    <br>
 
-<calculator>
-\displaystyle
-leftSide   =rightSide
-</calculator>. 
+    <calculator>
+      \displaystyle
+      leftSide =rightSide
+    </calculator>.
 
-<ul>
-<li>Enter your answer in the format \(\theta=Angle+2k\pi ~or~ \theta=AnotherAngle+2k\pi \). </li>
-<li>A sample answer: <br>
-\(\theta=\frac{\pi}{3}+2k \pi ~or~ \theta=-\frac{\pi}{3}+2k\pi \). </li>
-<li>You may also use degrees, example: \(\theta=60^\circ+k360^\circ ~or~ \theta=120^\circ+k360^\circ \). </li>
+    <ul>
+      <li>Enter your answer in the format \(t=Angle+2k\pi ~or~ t=AnotherAngle+2k\pi \). </li>
+      <li>A sample answer: <br>
+        \(t=\frac{\pi}{3}+2k \pi ~or~ t=-\frac{\pi}{3}+2k\pi \). </li>
+      <li>You may also use degrees, example: \(t=60^\circ+k360^\circ ~or~ t=120^\circ+k360^\circ \). </li>
 
-<li> Use the word ``or'' to separate the different choices for \(\theta\). </li>
-<li>Use the letter \(k\) to signify an arbitrary integer.</li>
-</ul>
-<answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
-<calculatorAnswer id="algebraAnswer" buttons="algebra, inversetrig, or, variables">
-( MatchesPattern(
-algebraAnswer
-, \theta={{angle1}}+2 {{counter1}} \pi or \theta={{angle2}} + 2 {{counter2}} \pi);
-(not IsConstant(counter1)) 
-and
-(not IsConstant(counter2)) 
-and
-((IsApproximatelyInteger{}( (angle1-\arccos(rightSide))/(2\pi) ) and 
-  IsApproximatelyInteger{}( (angle2+\arccos(rightSide))/(2\pi) ) 
- ) or
- (IsApproximatelyInteger{}( (angle2-\arccos(rightSide))/(2\pi) ) and 
-  IsApproximatelyInteger{}( (angle1+\arccos(rightSide))/(2\pi) ) 
- )
-) 
-)_2
-</calculatorAnswer>
-<calculatorCommentsBeforeSubmission>
-%PlotShowJavascriptOnly    
-EnsureExpressionDependsOnlyOn(algebraAnswer,\theta, k);
-</calculatorCommentsBeforeSubmission>
-<calculatorAnswerOnGiveUp>
-(\theta = \arccos(rightSide)+ 2k \pi) or (\theta=- \arccos(rightSide) + 2k \pi)
-</calculatorAnswerOnGiveUp>
-
-
-
+      <li> Use the word ``or'' to separate the different choices for \(t\). </li>
+      <li>Use the letter \(k\) to signify an arbitrary integer.</li>
+    </ul>
+    <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
+    <calculatorAnswer id="algebraAnswer" buttons="algebra, inversetrig, or, variables">
+      ( MatchPattern(
+      algebraAnswer
+      , t={{angle1}}+2 {{counter1}} \pi or t={{angle2}} + 2 {{counter2}} \pi);
+      (not IsConstant(counter1))
+      and
+      (not IsConstant(counter2))
+      and
+      ((IsApproximatelyInteger{}( (angle1-\arccos(rightSide))/(2\pi) ) and
+      IsApproximatelyInteger{}( (angle2+\arccos(rightSide))/(2\pi) )
+      ) or
+      (IsApproximatelyInteger{}( (angle2-\arccos(rightSide))/(2\pi) ) and
+      IsApproximatelyInteger{}( (angle1+\arccos(rightSide))/(2\pi) )
+      )
+      )
+      )_2
+    </calculatorAnswer>
+    <calculatorCommentsBeforeSubmission>
+      %PlotShowJavascriptOnly
+      EnsureExpressionDependsOnlyOn(algebraAnswer,t, k);
+    </calculatorCommentsBeforeSubmission>
+    <calculatorAnswerOnGiveUp>
+      (t = \arccos(rightSide)+ 2k \pi) or (t=- \arccos(rightSide) + 2k \pi)
+    </calculatorAnswerOnGiveUp>

@@ -1,116 +1,120 @@
 <calculatorHidden>
-%UseLnInsteadOfLog
-yCF=RandomInteger{}(1,4);
-xCF=RandomInteger{}(2,4);
-xSolution= RandomInteger{}(2,10);
-ySolution=xSolution+ RandomInteger{}(1,10);
-ySide= yCF y;
-xSide= xCF x;
-xLength=(x=xSolution; xSide)_2;
-yLength=(y=ySolution; ySide)_2;
-DiagonalSquared=(xLength-xSolution)^2+ (yLength-xSolution)^2;
-thePerimeter = 2(xLength+yLength);
-thePoly=Polynomialize( (xSide-x)^2+(ySide-x)^2);
-theUnit=xSolution/5;
-theUnitDiag=theUnit * sqrt(1/2);
+  %UseLnInsteadOfLog
+  yCF=RandomInteger{}(1,4);
+  xCF=RandomInteger{}(2,4);
+  xSolution= RandomInteger{}(2,10);
+  ySolution=xSolution+ RandomInteger{}(1,10);
+  ySide= yCF y;
+  xSide= xCF x;
+  xLength=(x=xSolution; xSide)_2;
+  yLength=(y=ySolution; ySide)_2;
+  DiagonalSquared=(xLength-xSolution)^2+ (yLength-xSolution)^2;
+  thePerimeter = 2(xLength+yLength);
+  thePoly=Polynomialize( (xSide-x)^2+(ySide-x)^2);
+  theUnit=xSolution/5;
+  theUnitDiag=theUnit * sqrt(1/2);
 
-yViaX=(thePerimeter - 2xSide)/(2 yCF);
-polyInX= Polynomialize( (y=yViaX; thePoly)_2-DiagonalSquared);
-xOne= SolveFor{}(x, polyInX)_1;
-xTwo= SolveFor{}(x, polyInX)_2;
-yOne=(x=xOne; yViaX)_2;
-yTwo=(x=xTwo; yViaX)_2;
-1/((yOne>xOne) +(yTwo>xTwo)-2);
+  yViaX=(thePerimeter - 2xSide)/(2 yCF);
+  polyInX= Polynomialize( (y=yViaX; thePoly)_2-DiagonalSquared);
+  xOne= SolveFor{}(x, polyInX)_1;
+  xTwo= SolveFor{}(x, polyInX)_2;
+  yOne=(x=xOne; yViaX)_2;
+  yTwo=(x=xTwo; yViaX)_2;
+  1/((yOne>xOne) +(yTwo>xTwo)-2);
 </calculatorHidden>
 <calculator>
-PlotRemoveCoordinateAxes {}0+
-PlotPath( 
-( (0,0),
-  (xLength,0), 
-  (xLength,yLength), 
+  PlotRemoveCoordinateAxes {}0+
+  PlotPath(
+  ( (0,0),
+  (xLength,0),
+  (xLength,yLength),
   (0,yLength),
   (0,0)
-) , black
-)
-+
-PlotPath( 
-( (xSolution,0), 
-  (xSolution,xSolution), 
+  ) , black
+  )
+  +
+  PlotPath(
+  ( (xSolution,0),
+  (xSolution,xSolution),
   (0,xSolution)
-) , blue
-)
-+
-PlotPath( 
-( (xLength-theUnit,0), 
-  (xLength-theUnit,theUnit), 
+  ) , blue
+  )
+  +
+  PlotPath(
+  ( (xLength-theUnit,0),
+  (xLength-theUnit,theUnit),
   (xLength,theUnit)
-) , gray
-)
-+
-PlotPath( 
-( (xSolution-theUnit,0), 
-  (xSolution-theUnit,theUnit), 
+  ) , gray
+  )
+  +
+  PlotPath(
+  ( (xSolution-theUnit,0),
+  (xSolution-theUnit,theUnit),
   (xSolution,theUnit)
-) , gray
-)
-+
-PlotPath( 
-( (theUnit,xSolution), 
-  (theUnit,xSolution-theUnit), 
+  ) , gray
+  )
+  +
+  PlotPath(
+  ( (theUnit,xSolution),
+  (theUnit,xSolution-theUnit),
   (0,xSolution-theUnit)
-) , gray
-)
-+PlotSegment( (xSolution, xSolution), (xLength, yLength), red,3)
-+PlotLabel((-theUnitDiag, -theUnitDiag),"D")
-+PlotLabel((xSolution, -theUnit),"G")
-+PlotLabel((xLength+theUnitDiag, -theUnitDiag),"C")
-+PlotLabel((xLength+theUnitDiag, yLength+ theUnitDiag),"B")
-+PlotLabel((-theUnitDiag, yLength+ theUnitDiag),"A")
-+PlotLabel((-theUnit, xSolution),"E")
-+PlotLabel((xSolution+theUnitDiag, xSolution+theUnitDiag),"F")
-+PlotLabel((xSolution/2, -theUnit),"x")
-+PlotLabel(( -theUnit,xSolution/2),"x")
-+PlotLabel(( xLength/2, yLength+theUnit), xSide)
-+PlotLabel(( xLength+theUnit, yLength/2), ySide)
-+PlotViewRectangle((-xLength/5,-yLength/5),(xLength*1.2, yLength*1.2))
+  ) , gray
+  )
+  +PlotSegment( (xSolution, xSolution), (xLength, yLength), red,3)
+  +PlotLabel((-theUnitDiag, -theUnitDiag),"D")
+  +PlotLabel((xSolution, -theUnit),"G")
+  +PlotLabel((xLength+theUnitDiag, -theUnitDiag),"C")
+  +PlotLabel((xLength+theUnitDiag, yLength+ theUnitDiag),"B")
+  +PlotLabel((-theUnitDiag, yLength+ theUnitDiag),"A")
+  +PlotLabel((-theUnit, xSolution),"E")
+  +PlotLabel((xSolution+theUnitDiag, xSolution+theUnitDiag),"F")
+  +PlotLabel((xSolution/2, -theUnit),"x")
+  +PlotLabel(( -theUnit,xSolution/2),"x")
+  +PlotLabel(( xLength/2, yLength+theUnit), xSide)
+  +PlotLabel(( xLength+theUnit, yLength/2), ySide)
+  +PlotViewRectangle((-xLength/5,-yLength/5),(xLength*1.2, yLength*1.2))
 </calculator>
 <br>
 
-\(ABCD\) is a rectangle in which \(AB=<calculator noTags="true">xSide</calculator>\) \(cm\) and \(BC=<calculator noTags="true">ySide</calculator>\) \(cm\). 
-The point \(E\) is on \(DA\), the point \(G\) is on \(DC\) and the point \(F\) is chosen so that 
+\(ABCD\) is a rectangle in which \(AB=<calculator noTags="true">xSide</calculator>\) \(cm\) and \(BC=<calculator
+  noTags="true">ySide</calculator>\) \(cm\).
+The point \(E\) is on \(DA\), the point \(G\) is on \(DC\) and the point \(F\) is chosen so that
 \(DEFG\) is a square of side \(x\) \(cm\), as indicated on the diagram.
 The length of the segment \(BF\) is \(<calculator noTags="true">sqrt(DiagonalSquared)</calculator>\) \(cm\).
 
 <ul>
-<li>Show that \(<calculator noTags="true">thePoly</calculator>=<calculator noTags="true">DiagonalSquared</calculator>\). </li>
-<li>Given that the perimeter of the rectangle \(ABCD\) is <calculator>thePerimeter</calculator> \(cm\), find the values of \(x,y\). </li>
-<li>Enter your answer in the format \(x=?cm{\color{red}{,}}y=?cm\). Do not forget the comma and the measurement units.</li>
+  <li>Show that \(<calculator noTags="true">thePoly</calculator>=<calculator noTags="true">DiagonalSquared</calculator>
+    \). </li>
+  <li>Given that the perimeter of the rectangle \(ABCD\) is <calculator>thePerimeter</calculator> \(cm\), find the
+    values of \(x,y\). </li>
+  <li>Enter your answer in the format \(x=?cm{\color{red}{,}}y=?cm\). Do not forget the comma and the measurement units.
+  </li>
 </ul>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswer" buttons="algebra, variables">
-(p=MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}));
- q=MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}));
- if (p==0 and q==0, 0,
-     ( p; q;
-       ( (Polynomialize(b-(xSolution cm))==0) and (Polynomialize(c-(ySolution cm))==0))
-     )_3
-    )
-)_3
+  (p=MatchPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}));
+  q=MatchPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}));
+  if (p==0 and q==0, 0,
+  ( p; q;
+  ( (Polynomialize(b-(xSolution cm))==0) and (Polynomialize(c-(ySolution cm))==0))
+  )_3
+  )
+  )_3
 </calculatorAnswer>
 
 <calculatorCommentsBeforeSubmission>
-EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,(x,y ,cm));
-if (
-MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) )==0 
-and 
-MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}) )==0 
-,
-"<br><b style='color:red'>Your answer does not match the pattern</b> \(x=a, y=b\). 
-<br>Please do not forget the comma."
-,
-"");
+  EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,(x,y ,cm));
+  if (
+  MatchesPattern{}( AlgebraAnswer, (x={{b}}, y={{c}}) )==0
+  and
+  MatchesPattern{}( AlgebraAnswer, (y={{c}}, x={{b}}) )==0
+  ,
+  "<br><b style='color:red'>Your answer does not match the pattern</b> \(x=a, y=b\).
+  <br>Please do not forget the comma."
+  ,
+  "");
 </calculatorCommentsBeforeSubmission>
 
 <calculatorAnswerOnGiveUp>
-(x=xSolution cm, y=ySolution cm) 
+  (x=xSolution cm, y=ySolution cm)
 </calculatorAnswerOnGiveUp>

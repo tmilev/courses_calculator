@@ -1,53 +1,50 @@
 <calculatorHidden>
-%UseLnInsteadOfLog
-%UseBracketForIntervals
-TurnOffApproximations(0);
-TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
-leftSide=sin \theta;
-rightSide= SelectAtRandom(\sqrt{2} /2, -\sqrt{2} /2, \sqrt{3} /2,-\sqrt{3} /2, 1/2, -1/2);
+  %UseLnInsteadOfLog
+  %UseBracketForIntervals
+  TurnOffApproximations(0);
+  TurnOffRules ("LogBase", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction");
+  leftSide=sin t;
+  rightSide= SelectAtRandom(\sqrt{2} /2, -\sqrt{2} /2, \sqrt{3} /2,-\sqrt{3} /2, 1/2, -1/2);
 </calculatorHidden>
-Solve the equation. 
+Solve the equation.
 <br>
 <calculator>
-\displaystyle
-leftSide = rightSide
-</calculator>. 
+  \displaystyle
+  leftSide = rightSide
+</calculator>.
 
 
 <ul>
-<li>Enter your answer in the format \(\theta=Angle+2k\pi ~or~ \theta=AnotherAngle+2k\pi \). </li>
-<li>A sample answer: <br>
-\(\theta=\frac{\pi}{3}+2k \pi ~or~ \theta=\frac{2\pi}{3}+2k\pi \). </li>
-<li>You may also use degrees, example: \(\theta=60^\circ+k 360^\circ ~or~ \theta=120^\circ+k 360^\circ \). </li>
+  <li>Enter your answer in the format \(t=Angle+2k\pi ~or~ t=AnotherAngle+2k\pi \). </li>
+  <li>A sample answer: <br>
+    \(t=\frac{\pi}{3}+2k \pi ~or~ t=\frac{2\pi}{3}+2k\pi \). </li>
+  <li>You may also use degrees, example: \(t=60^\circ+k 360^\circ ~or~ t=120^\circ+k 360^\circ \). </li>
 
-<li> Use the word ``or'' - enter with the button panel - to separate the different choices for \(\theta\). </li>
-<li>Use the letter \(k\) to signify an arbitrary integer.</li>
+  <li> Use the word ``or'' - enter with the button panel - to separate the different choices for \(t\). </li>
+  <li>Use the letter \(k\) to signify an arbitrary integer.</li>
 </ul>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
 <calculatorAnswer id="algebraAnswer" buttons="algebra, or, variables">
-( MatchesPattern(
-algebraAnswer
-, \theta={{angle1}}+2 {{counter1}} \pi or \theta={{angle2}} + 2 {{counter2}} \pi);
-(not IsConstant(counter1)) 
-and
-(not IsConstant(counter2)) 
-and
-((IsInteger{}( (angle1-\arcsin(rightSide))/(2\pi) ) and 
-  IsInteger{}( (angle2-\pi+\arcsin(rightSide))/(2\pi) ) 
- ) or
- (IsInteger{}( (angle2-\arcsin(rightSide))/(2\pi) ) and 
-  IsInteger{}( (angle1-\pi+\arcsin(rightSide))/(2\pi) ) 
- )
-) 
-)_2
+  ( MatchPattern(
+  algebraAnswer
+  , t={{angle1}}+2 {{counter1}} \pi or t={{angle2}} + 2 {{counter2}} \pi);
+  (not IsConstant(counter1))
+  and
+  (not IsConstant(counter2))
+  and
+  ((IsInteger{}( (angle1-\arcsin(rightSide))/(2\pi) ) and
+  IsInteger{}( (angle2-\pi+\arcsin(rightSide))/(2\pi) )
+  ) or
+  (IsInteger{}( (angle2-\arcsin(rightSide))/(2\pi) ) and
+  IsInteger{}( (angle1-\pi+\arcsin(rightSide))/(2\pi) )
+  )
+  )
+  )_2
 </calculatorAnswer>
 <calculatorCommentsBeforeSubmission>
-%PlotShowJavascriptOnly    
-EnsureExpressionDependsOnlyOn(algebraAnswer,\theta, k);
+  %PlotShowJavascriptOnly
+  EnsureExpressionDependsOnlyOn(algebraAnswer,t, k);
 </calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
-(\theta = \arcsin(rightSide)+ 2k \pi) or (\theta=\pi- \arcsin(rightSide) + 2k \pi)
+  (t = \arcsin(rightSide)+ 2k \pi) or (t=\pi- \arcsin(rightSide) + 2k \pi)
 </calculatorAnswerOnGiveUp>
-
-
-
