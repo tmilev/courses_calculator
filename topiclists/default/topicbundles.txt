@@ -2760,6 +2760,7 @@ Topic: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x {\text d} x\)
 Title: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x {\text d} x\), theory
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-sin-cos-version2
 
+
 Title: Integrals of the form \(\displaystyle \int \sin^n x\cos^m x {\text d} x\), at least one power is odd
 Problem: problems/Indefinite-integral-trig-integral-sin-power-n-cos-power-m-not-both-even-1.html
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-ex9
@@ -2781,6 +2782,10 @@ Title: Integrals of the form \(\displaystyle \int \sin(n x)\cos (m x) {\text d} 
 Problem: problems/Indefinite-integral-trig-sinmx-cosnx-1.html
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-sinm-cosn
 SlidesSource: freecalc/modules/trig-integrals/trig-integrals-sinm-cosn-ex9
+
+Title: Integral of the form \(\displaystyle \int a\sin^2(b x) {\text d} x\)
+Problem: problems/Indefinite-integral-asin2bx.html
+
 BundleEnd: Integration_TrigIntegrals_TheoryAndExercises
 
 BundleBegin: Integration_IntegrationOfRadicalsOfQuadratics_TheoryAndExercises
@@ -3005,6 +3010,8 @@ Title: Improper integrals of the form \(\displaystyle \int_{b}^\infty (x-a)^n{\t
 Problem: problems/Improper-integral-type-I-powers-of-x-1.html
 Title: Improper integrals of the form \(\displaystyle \int_{b}^\infty x^n e^{-ax}{\text d} x\), \(a>0\), part 1
 Problem: problems/Improper-integral-type-I-quasipolynomial-1.html
+Title: Improper integrals of the form \(\displaystyle \int_{b}^\infty x^n e^{-ax}{\text d} x\), \(a>0\), part 2
+Problem: problems/Improper-integral-type-I-quasipolynomial-2.html
 
 Section: Improper integrals type II
 

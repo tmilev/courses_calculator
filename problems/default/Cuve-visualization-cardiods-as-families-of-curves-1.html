@@ -23,11 +23,11 @@ This shape change would be even more drastic if the ratio of the radii is irrati
 
 
 <br>
-<button style="color:green" onclick="if(this.toggleTag===undefined || this.toggleTag==false) this.toggleTag=true; else this.toggleTag=false; if (this.toggleTag){ document.getElementById('thePlotContainer').style.display=''; document.getElementById('thePlotContainer').style.opacity=1;} else {document.getElementById('thePlotContainer').style.display='none';  document.getElementById('thePlotContainer').style.opacity=0;}">
+<button style="color:green"  data-action-toggle-visibility="thePlotContainer">
 Show/hide visualization f-las
 </button>
 <br>
-<span id="thePlotContainer" style="opacity:0; transition 0.6s linear; display:none">
+<span id="thePlotContainer" style="display:none">
 <br>
 <calculator noTags="true">
 %HideLHS

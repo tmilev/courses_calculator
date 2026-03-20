@@ -1,11 +1,12 @@
 <span class="setCalculatorExamProblem">
 </span>
 <span class="calculatorHidden">
-\(
+
 %UseLnInsteadOfLog
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
-"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb",
+IntegrateSinPowerNCosPowerM, IntegratePullConstant);
 a=RandomInteger{}((-5,-1),(1,10));
 b=RandomInteger{}( (1, 15));
 c=RandomInteger{}((-5,-2), (2,5));
@@ -13,16 +14,14 @@ g=RandomInteger{}( 2, 9);
 h=RandomInteger{}( -2,-10);
 theIntegral{}{{x}}= a/2(x-(sin(2 b x)/2));
 f=a sin^2(b x);
-\)
 </span>
 <span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
-\(
+
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
 SeparatorBetweenSpans;
-\)
 </span>
 
 <br>
@@ -62,7 +61,7 @@ TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
 </span>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
+<calculatorSolution name="AlgebraAnswer">
 <span class="calculatorHidden">
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
@@ -77,14 +76,14 @@ finalAnswer=theIntegral{}x;
 </span>
 <span class="calculator">
 EvaluateSymbols{}(
-"\begin{array}{rcll|l}
+"\\(\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  a  \int \sin^2(b x) {\text d} x   \\\\
 &=&\displaystyle   a  \int \frac{1-\cos(2 \cdot b x)}{2} {\text d} x
 &&\displaystyle \text{Set } \sin^2 w=\frac{1-\cos(2w)}{2}\\\\
 &=&\displaystyle  a \left(  \frac{ x}{2}-\frac{\sin(btwo x)}{4}  \right)+C \\\\
 &=&\displaystyle  finalAnswer+C\\\\
-\end{array}
+\end{array}\\)
 "
 )
 </span>
-</span>
+</calculatorSolution>
