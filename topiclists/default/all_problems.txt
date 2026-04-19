@@ -1,0 +1,1343 @@
+Chapter: All problems.
+
+Title: Power-series-expansion-related-to-logarithms-2.html
+Problem: problems/Power-series-expansion-related-to-logarithms-2.html
+
+Title: Derivative-exponent-times-monomial-1.html
+Problem: problems/Derivative-exponent-times-monomial-1.html
+
+Title: Derivative-exponent-const-times-x.html
+Problem: problems/Derivative-exponent-const-times-x.html
+
+Title: Indefinite-integral-trig-sinmx-cosnx-1.html
+Problem: problems/Indefinite-integral-trig-sinmx-cosnx-1.html
+
+Title: evaluate-exponent-basic-1.html
+Problem: problems/evaluate-exponent-basic-1.html
+
+Title: Indefinite-integral-rational-power-polynomial-2.html
+Problem: problems/Indefinite-integral-rational-power-polynomial-2.html
+
+Title: Indefinite-integral-asin2bx.html
+Problem: problems/Indefinite-integral-asin2bx.html
+
+Title: Indefinite-integral-x-cubed-sqrt-quadratic-no-lin-term-1.html
+Problem: problems/Indefinite-integral-x-cubed-sqrt-quadratic-no-lin-term-1.html
+
+Title: Indefinite-integral-x-sqrt-quadratic-no-lin-term-1.html
+Problem: problems/Indefinite-integral-x-sqrt-quadratic-no-lin-term-1.html
+
+Title: Derivative-ax2-plus-bx-plus-c.html
+Problem: problems/Derivative-ax2-plus-bx-plus-c.html
+
+Title: Improper-integral-type-I-gaussian-expectation-1.html
+Problem: problems/Improper-integral-type-I-gaussian-expectation-1.html
+
+Title: Series-add-telescoping-series-2.html
+Problem: problems/Series-add-telescoping-series-2.html
+
+Title: Indefinite-integral-byparts-x2-sinmx.html
+Problem: problems/Indefinite-integral-byparts-x2-sinmx.html
+
+Title: Logarithm-evaluate-log-base-a-via-ln.html
+Problem: problems/Logarithm-evaluate-log-base-a-via-ln.html
+
+Title: Definite-integral-Euler-substitution-sqrt-one-minus-x-squared-1.html
+Problem: problems/Definite-integral-Euler-substitution-sqrt-one-minus-x-squared-1.html
+
+Title: Derivative-ae-exp-bx-squared-plus-c.html
+Problem: problems/Derivative-ae-exp-bx-squared-plus-c.html
+
+Title: Normal-to-parametric-cubic-find-parameter-1.html
+Problem: problems/Normal-to-parametric-cubic-find-parameter-1.html
+
+Title: Evaluate-sin-cos-of-k-times-arcsin-arccos.html
+Problem: problems/Evaluate-sin-cos-of-k-times-arcsin-arccos.html
+
+Title: Derivative-1-over-linear-polynomial-1.html
+Problem: problems/Derivative-1-over-linear-polynomial-1.html
+
+Title: evaluate-exponent-basic-power-of-ten-to-decimal-notation-1.html
+Problem: problems/evaluate-exponent-basic-power-of-ten-to-decimal-notation-1.html
+
+Title: Indefinite-integral-byparts-lnax-times-poly-0.html
+Problem: problems/Indefinite-integral-byparts-lnax-times-poly-0.html
+
+Title: Indefinite-integral-sin-cos-of-linear-function-2.html
+Problem: problems/Indefinite-integral-sin-cos-of-linear-function-2.html
+
+Title: Limits-x-tends-to-minus-infinity-quotient-radical-odd-power-basic-1.html
+Problem: problems/Limits-x-tends-to-minus-infinity-quotient-radical-odd-power-basic-1.html
+
+Title: Area-swept-by-polar-curve-a-plus-sinbtheta-1.html
+Problem: problems/Area-swept-by-polar-curve-a-plus-sinbtheta-1.html
+
+Title: Polynomial-system-geometric-text-problem-reduces-to-quadratic-2.html
+Problem: problems/Polynomial-system-geometric-text-problem-reduces-to-quadratic-2.html
+
+Title: trigonometry-fit-formulas-to-graph-sine-cosine-3.html
+Problem: problems/trigonometry-fit-formulas-to-graph-sine-cosine-3.html
+
+Title: Derivative-with-Fundamental-Theorem-of-Calculus-1.html
+Problem: problems/Derivative-with-Fundamental-Theorem-of-Calculus-1.html
+
+Title: Definite-integral-rational-polynomial-squared-1.html
+Problem: problems/Definite-integral-rational-polynomial-squared-1.html
+
+Title: Inequalities-sin-theta-compared-to-const-1.html
+Problem: problems/Inequalities-sin-theta-compared-to-const-1.html
+
+Title: Derivative-constant-1.html
+Problem: problems/Derivative-constant-1.html
+
+Title: Area-under-parabola-above-x-axis.html
+Problem: problems/Area-under-parabola-above-x-axis.html
+
+Title: Power-series-expansion-related-to-logarithms-1.html
+Problem: problems/Power-series-expansion-related-to-logarithms-1.html
+
+Title: Derivative-with-Fundamental-Theorem-of-Calculus-2.html
+Problem: problems/Derivative-with-Fundamental-Theorem-of-Calculus-2.html
+
+Title: LHospitalsRule-from-Maclaurin-series-exponent-higher-order-arctan-ln-1.html
+Problem: problems/LHospitalsRule-from-Maclaurin-series-exponent-higher-order-arctan-ln-1.html
+
+Title: Sandbox-problem4.html
+Problem: problems/Sandbox-problem4.html
+
+Title: solve-linear-equations-1.html
+Problem: problems/solve-linear-equations-1.html
+
+Title: LHospitalsRule-from-Maclaurin-series-exponent-sin-cos-part-3.html
+Problem: problems/LHospitalsRule-from-Maclaurin-series-exponent-sin-cos-part-3.html
+
+Title: Partial-fractions-split-quadratic-den-with-poly-division-1.html
+Problem: problems/Partial-fractions-split-quadratic-den-with-poly-division-1.html
+
+Title: LHospitalsRule-from-Maclaurin-series-exponent-sin-cos-part-2.html
+Problem: problems/LHospitalsRule-from-Maclaurin-series-exponent-sin-cos-part-2.html
+
+Title: Indefinite-integral-e-power-linear-function-1.html
+Problem: problems/Indefinite-integral-e-power-linear-function-1.html
+
+Title: Quadratic-find-parameters-ensure-real-roots-1.html
+Problem: problems/Quadratic-find-parameters-ensure-real-roots-1.html
+
+Title: Area-triangle-from-two-sides-and-angle-between-them-1.html
+Problem: problems/Area-triangle-from-two-sides-and-angle-between-them-1.html
+
+Title: Derivative-polynomial-1.html
+Problem: problems/Derivative-polynomial-1.html
+
+Title: Improper-integral-type-I-quasipolynomial-1.html
+Problem: problems/Improper-integral-type-I-quasipolynomial-1.html
+
+Title: Evalaute-trig-on-inverse-trig-basic-2.html
+Problem: problems/Evalaute-trig-on-inverse-trig-basic-2.html
+
+Title: Area-between-two-parabolas-2.html
+Problem: problems/Area-between-two-parabolas-2.html
+
+Title: Factor-quadratic-rational-root-1.html
+Problem: problems/Factor-quadratic-rational-root-1.html
+
+Title: Find-function-inverse-fractional-linear-1.html
+Problem: problems/Find-function-inverse-fractional-linear-1.html
+
+Title: Inequalities-quadratic-trig-inequality-1.html
+Problem: problems/Inequalities-quadratic-trig-inequality-1.html
+
+Title: Sequence-convergence-limit-related-to-bernoulli-limit-for-e-3.html
+Problem: problems/Sequence-convergence-limit-related-to-bernoulli-limit-for-e-3.html
+
+Title: Series-add-telescoping-series-with-logarithms-1.html
+Problem: problems/Series-add-telescoping-series-with-logarithms-1.html
+
+Title: Inequalities-quadratic-positive-leading-coeff-1.html
+Problem: problems/Inequalities-quadratic-positive-leading-coeff-1.html
+
+Title: Definite-integral-absolute-value-quadratic-1.html
+Problem: problems/Definite-integral-absolute-value-quadratic-1.html
+
+Title: solve-quadratic-equation-two-rational-roots-1.html
+Problem: problems/solve-quadratic-equation-two-rational-roots-1.html
+
+Title: Power-series-interval-of-convergence-1.html
+Problem: problems/Power-series-interval-of-convergence-1.html
+
+Title: Express-sin-cos-of-k-times-x-via-sin-x-cos-x-via-EulerFla-1.html
+Problem: problems/Express-sin-cos-of-k-times-x-via-sin-x-cos-x-via-EulerFla-1.html
+
+Title: Derivative-a-of-x-power-b-of-x-1.html
+Problem: problems/Derivative-a-of-x-power-b-of-x-1.html
+
+Title: Definite-integral-e-exp-axplusb.html
+Problem: problems/Definite-integral-e-exp-axplusb.html
+
+Title: Indefinite-integral-rational-power-monomial-1.html
+Problem: problems/Indefinite-integral-rational-power-monomial-1.html
+
+Title: Logarithm-evaluate-log-linear-combination-multiple-techniques-1.html
+Problem: problems/Logarithm-evaluate-log-linear-combination-multiple-techniques-1.html
+
+Title: Power-series-expansion-related-to-arctan-1.html
+Problem: problems/Power-series-expansion-related-to-arctan-1.html
+
+Title: Improper-integral-type-II-power-x-natural-log-x-1.html
+Problem: problems/Improper-integral-type-II-power-x-natural-log-x-1.html
+
+Title: Definite-integral-ax2-plus-bx-plus-c.html
+Problem: problems/Definite-integral-ax2-plus-bx-plus-c.html
+
+Title: Indefinite-integral-Euler-substitution-sqrt-1-plus-x-squared-1.html
+Problem: problems/Indefinite-integral-Euler-substitution-sqrt-1-plus-x-squared-1.html
+
+Title: Limits-x-tends-to-minus-infinity-RF-deg-den-smaller-1.html
+Problem: problems/Limits-x-tends-to-minus-infinity-RF-deg-den-smaller-1.html
+
+Title: Indefinite-integral-asinpx-over-b-plus-ccospx.html
+Problem: problems/Indefinite-integral-asinpx-over-b-plus-ccospx.html
+
+Title: Exponent-basic-inequality-natural-base-1.html
+Problem: problems/Exponent-basic-inequality-natural-base-1.html
+
+Title: Improper-integral-type-I-powers-of-x-1.html
+Problem: problems/Improper-integral-type-I-powers-of-x-1.html
+
+Title: Indefinite-integral-Ax-plus-B-over-quadratic-with-real-roots.html
+Problem: problems/Indefinite-integral-Ax-plus-B-over-quadratic-with-real-roots.html
+
+Title: Exponent-equation-basic-non-natural-both-sides-different-exponents-1.html
+Problem: problems/Exponent-equation-basic-non-natural-both-sides-different-exponents-1.html
+
+Title: addition-base-10-two-digit-plus-one-digit-no-carry-over-1.html
+Problem: problems/addition-base-10-two-digit-plus-one-digit-no-carry-over-1.html
+
+Title: Indefinite-integral-aepx-over-bepx-plus-c.html
+Problem: problems/Indefinite-integral-aepx-over-bepx-plus-c.html
+
+Title: Area-between-exponent-and-parabola-numeric-cuve-intersection-1.html
+Problem: problems/Area-between-exponent-and-parabola-numeric-cuve-intersection-1.html
+
+Title: Derivative-cubic-raised-to-high-power-1.html
+Problem: problems/Derivative-cubic-raised-to-high-power-1.html
+
+Title: Definite-integral-parabola-1.html
+Problem: problems/Definite-integral-parabola-1.html
+
+Title: Definite-integral-ax-plus-b-exp-poverq.html
+Problem: problems/Definite-integral-ax-plus-b-exp-poverq.html
+
+Title: Series-convergence-integral-test-1.html
+Problem: problems/Series-convergence-integral-test-1.html
+
+Title: Tangent-to-function-parabola-1.html
+Problem: problems/Tangent-to-function-parabola-1.html
+
+Title: Indefinite-integral-e-power-ax-2.html
+Problem: problems/Indefinite-integral-e-power-ax-2.html
+
+Title: Exponent-equation-basic-natural-both-sides-exponents-1.html
+Problem: problems/Exponent-equation-basic-natural-both-sides-exponents-1.html
+
+Title: problem_1.html
+Problem: problems/samples/problem_1.html
+
+Title: Indefinite-integral-cubic-denominator-3.html
+Problem: problems/Indefinite-integral-cubic-denominator-3.html
+
+Title: Definite-integral-cubic-1.html
+Problem: problems/Definite-integral-cubic-1.html
+
+Title: Indefinite-integral-linear-function-rational-power-3.html
+Problem: problems/Indefinite-integral-linear-function-rational-power-3.html
+
+Title: DFQs-separable-no-initial-conditions-1.html
+Problem: problems/DFQs-separable-no-initial-conditions-1.html
+
+Title: Derivative-trig-rat-fun-times-trig-rat-fun-x-1.html
+Problem: problems/Derivative-trig-rat-fun-times-trig-rat-fun-x-1.html
+
+Title: Indefinite-integral-antiderivative-formulation-2.html
+Problem: problems/Indefinite-integral-antiderivative-formulation-2.html
+
+Title: Maxima-minima-text-problem-max-box-volume-constraints-part-1.html
+Problem: problems/Maxima-minima-text-problem-max-box-volume-constraints-part-1.html
+
+Title: Evalaute-trig-on-inverse-trig-basic-1.html
+Problem: problems/Evalaute-trig-on-inverse-trig-basic-1.html
+
+Title: Derivative-trig-rational-expression-1.html
+Problem: problems/Derivative-trig-rational-expression-1.html
+
+Title: trigonometry-fit-formulas-to-graph-sine-cosine-2.html
+Problem: problems/trigonometry-fit-formulas-to-graph-sine-cosine-2.html
+
+Title: Solve-triangle-from-two-sides-and-angle-1.html
+Problem: problems/Solve-triangle-from-two-sides-and-angle-1.html
+
+Title: Limits-x-tends-to-pm-infinity-RF-num-deg-smaller-1.html
+Problem: problems/Limits-x-tends-to-pm-infinity-RF-num-deg-smaller-1.html
+
+Title: Indefinite-integral-Euler-substitution-sqrt-1-minus-x-squared-1.html
+Problem: problems/Indefinite-integral-Euler-substitution-sqrt-1-minus-x-squared-1.html
+
+Title: circle-arclength-from-angle-1.html
+Problem: problems/circle-arclength-from-angle-1.html
+
+Title: Indefinite-integral-Euler-substitution-sqrt-1-plus-x-squared-2.html
+Problem: problems/Indefinite-integral-Euler-substitution-sqrt-1-plus-x-squared-2.html
+
+Title: Equations-sin-theta-equals-const-algebraic-1.html
+Problem: problems/Equations-sin-theta-equals-const-algebraic-1.html
+
+Title: Exponent-basic-inequality-arbitrary-base-1.html
+Problem: problems/Exponent-basic-inequality-arbitrary-base-1.html
+
+Title: angles-find-coterminal-angles-in-interval-1.html
+Problem: problems/angles-find-coterminal-angles-in-interval-1.html
+
+Title: Tangent-to-function-radical-1.html
+Problem: problems/Tangent-to-function-radical-1.html
+
+Title: Quadratic-compute-parabola-given-vertex-passing-through-point-1.html
+Problem: problems/Quadratic-compute-parabola-given-vertex-passing-through-point-1.html
+
+Title: Indefinite-integral-antiderivative-formulation-1.html
+Problem: problems/Indefinite-integral-antiderivative-formulation-1.html
+
+Title: Exponent-basic-inequality-full-template-1.html
+Problem: problems/Exponent-basic-inequality-full-template-1.html
+
+Title: Logarithm-evaluate-log-base-a-use-log-sum-rule-1.html
+Problem: problems/Logarithm-evaluate-log-base-a-use-log-sum-rule-1.html
+
+Title: Indefinite-integral-ax-plus-b-exp-1-over-2.html
+Problem: problems/Indefinite-integral-ax-plus-b-exp-1-over-2.html
+
+Title: Limits-x-tends-to-number-difference-quotient-RF-1.html
+Problem: problems/Limits-x-tends-to-number-difference-quotient-RF-1.html
+
+Title: evaluate-exponent-basic-corner-cases-1.html
+Problem: problems/evaluate-exponent-basic-corner-cases-1.html
+
+Title: Volume-solid-of-revolution-parabola-and-line-around-horizontal-axis-1.html
+Problem: problems/Volume-solid-of-revolution-parabola-and-line-around-horizontal-axis-1.html
+
+Title: Definite-integral-linear-function-negative-power-1.html
+Problem: problems/Definite-integral-linear-function-negative-power-1.html
+
+Title: Volume-solid-of-revolution-parabola-around-horizontal-axis-1.html
+Problem: problems/Volume-solid-of-revolution-parabola-around-horizontal-axis-1.html
+
+Title: evaluate-exponent-basic-base-is-zero-1.html
+Problem: problems/evaluate-exponent-basic-base-is-zero-1.html
+
+Title: Indefinite-integral-linear-function-radical-1.html
+Problem: problems/Indefinite-integral-linear-function-radical-1.html
+
+Title: Indefinite-integral-Ax-plus-B-over-denominator-is-square.html
+Problem: problems/Indefinite-integral-Ax-plus-B-over-denominator-is-square.html
+
+Title: LHospitalsRule-from-Maclaurin-series-exponent-higher-order-exp-over-ln-1.html
+Problem: problems/LHospitalsRule-from-Maclaurin-series-exponent-higher-order-exp-over-ln-1.html
+
+Title: trigonometry-compute-sin-cos-knowing-complementary-angle-trig-1.html
+Problem: problems/trigonometry-compute-sin-cos-knowing-complementary-angle-trig-1.html
+
+Title: Derivative-trig-of-trig-of-trig-of-x-1.html
+Problem: problems/Derivative-trig-of-trig-of-trig-of-x-1.html
+
+Title: solve-quadratic-equation-integer-roots-non-trivial-content-1.html
+Problem: problems/solve-quadratic-equation-integer-roots-non-trivial-content-1.html
+
+Title: Definite-integral-substitution-rule-2.html
+Problem: problems/Definite-integral-substitution-rule-2.html
+
+Title: Indefinite-integral-byparts-x2-cosmx.html
+Problem: problems/Indefinite-integral-byparts-x2-cosmx.html
+
+Title: angles-find-sector-area-1.html
+Problem: problems/angles-find-sector-area-1.html
+
+Title: LHospitalsRule-from-Maclaurin-series-exponent-trig-or-exp-over-ln-1.html
+Problem: problems/LHospitalsRule-from-Maclaurin-series-exponent-trig-or-exp-over-ln-1.html
+
+Title: Inequalities-notation-belongs-to-and-union-1.html
+Problem: problems/Inequalities-notation-belongs-to-and-union-1.html
+
+Title: Derivative-ax-exp-p-over-q.html
+Problem: problems/Derivative-ax-exp-p-over-q.html
+
+Title: Indefinite-integral-a-over-bx-plus-c-power-n-building-block-i-b-1.html
+Problem: problems/Indefinite-integral-a-over-bx-plus-c-power-n-building-block-i-b-1.html
+
+Title: Curve-sketching-intervals-of-increase-concavity-rational-with-vertical-asymptotes-1.html
+Problem: problems/Curve-sketching-intervals-of-increase-concavity-rational-with-vertical-asymptotes-1.html
+
+Title: Series-convergence-comparison-or-limit-comparison-2.html
+Problem: problems/Series-convergence-comparison-or-limit-comparison-2.html
+
+Title: Derivative-log-of-a-times-x-1.html
+Problem: problems/Derivative-log-of-a-times-x-1.html
+
+Title: Derivative-a-ln-bx-plus-c.html
+Problem: problems/Derivative-a-ln-bx-plus-c.html
+
+Title: addition-base-10-one-digit-plus-one-digit.html
+Problem: problems/addition-base-10-one-digit-plus-one-digit.html
+
+Title: Polynomial-system-text-problem-linear-substitution-reduces-to-quadratic-1.html
+Problem: problems/Polynomial-system-text-problem-linear-substitution-reduces-to-quadratic-1.html
+
+Title: Chain-rule-and-arbitrary-radicals-1.html
+Problem: problems/Chain-rule-and-arbitrary-radicals-1.html
+
+Title: Logarithm-arbitrary-base-evaluation-basic-1.html
+Problem: problems/Logarithm-arbitrary-base-evaluation-basic-1.html
+
+Title: Indefinite-integral-linear-function-rational-power-1.html
+Problem: problems/Indefinite-integral-linear-function-rational-power-1.html
+
+Title: Derivative-const-base-power-const-base-power-x-1.html
+Problem: problems/Derivative-const-base-power-const-base-power-x-1.html
+
+Title: Derivative-sum-rational-powers-1.html
+Problem: problems/Derivative-sum-rational-powers-1.html
+
+Title: Definite-integral-const-term.html
+Problem: problems/Definite-integral-const-term.html
+
+Title: Implicit-derivative-polynomial-relation-2.html
+Problem: problems/Implicit-derivative-polynomial-relation-2.html
+
+Title: Series-add-infinite-decimal-to-rational-1.html
+Problem: problems/Series-add-infinite-decimal-to-rational-1.html
+
+Title: Factor-cubic-one-rational-two-real-roots-1.html
+Problem: problems/Factor-cubic-one-rational-two-real-roots-1.html
+
+Title: Indefinite-integral-Ax-plus-B-over-ax2-plus-bx-plus-c-building-block-ii-and-iii-a-1.html
+Problem: problems/Indefinite-integral-Ax-plus-B-over-ax2-plus-bx-plus-c-building-block-ii-and-iii-a-1.html
+
+Title: Maxima-minima-exponential-quazi-polynomial-closed-interval-2.html
+Problem: problems/Maxima-minima-exponential-quazi-polynomial-closed-interval-2.html
+
+Title: Series-add-geometric-progression-2.html
+Problem: problems/Series-add-geometric-progression-2.html
+
+Title: Indefinite-integral-laurent-polynomial-1.html
+Problem: problems/Indefinite-integral-laurent-polynomial-1.html
+
+Title: Complex-multiplication-z-times-w-involves-real-radicals-1.html
+Problem: problems/Complex-multiplication-z-times-w-involves-real-radicals-1.html
+
+Title: evaluate-exponent-basic-negative-base-1.html
+Problem: problems/evaluate-exponent-basic-negative-base-1.html
+
+Title: Implicit-derivative-polynomial-relation-1.html
+Problem: problems/Implicit-derivative-polynomial-relation-1.html
+
+Title: Curve-length-involving-radical-of-perfect-square-2.html
+Problem: problems/Curve-length-involving-radical-of-perfect-square-2.html
+
+Title: Indefinite-integral-trig-integral-sin-power-n-cos-power-m-both-even-1.html
+Problem: problems/Indefinite-integral-trig-integral-sin-power-n-cos-power-m-both-even-1.html
+
+Title: Series-add-telescoping-series-1.html
+Problem: problems/Series-add-telescoping-series-1.html
+
+Title: Definite-integral-Euler-substitution-sqrt-x-squared-minus-one-1.html
+Problem: problems/Definite-integral-Euler-substitution-sqrt-x-squared-minus-one-1.html
+
+Title: Exponent-equation-reduced-to-quadratic-5.html
+Problem: problems/Exponent-equation-reduced-to-quadratic-5.html
+
+Title: Curve-sketching-intervals-of-increase-concavity-rational-no-vertical-asymptotes-1.html
+Problem: problems/Curve-sketching-intervals-of-increase-concavity-rational-no-vertical-asymptotes-1.html
+
+Title: Power-series-expansion-rational-function-related-to-geometric-series-1.html
+Problem: problems/Power-series-expansion-rational-function-related-to-geometric-series-1.html
+
+Title: Find-function-inverse-linear-ln-linear-1.html
+Problem: problems/Find-function-inverse-linear-ln-linear-1.html
+
+Title: trigonometry-eulers-formula-memorization-1.html
+Problem: problems/trigonometry-eulers-formula-memorization-1.html
+
+Title: trigonometry-compute-trig-functions-in-right-angle-triangle-leg-unknown-1.html
+Problem: problems/trigonometry-compute-trig-functions-in-right-angle-triangle-leg-unknown-1.html
+
+Title: trigonometry-memorize-the-angle-sum-formulas-1.html
+Problem: problems/trigonometry-memorize-the-angle-sum-formulas-1.html
+
+Title: Derivative-fraction-monomial-denominator-non-distributed-1.html
+Problem: problems/Derivative-fraction-monomial-denominator-non-distributed-1.html
+
+Title: Derivative-exponent-times-trigonometry-times-monomial-1.html
+Problem: problems/Derivative-exponent-times-trigonometry-times-monomial-1.html
+
+Title: Indefinite-integral-Euler-substitution-sqrt-x-squared-mius-one-1.html
+Problem: problems/Indefinite-integral-Euler-substitution-sqrt-x-squared-mius-one-1.html
+
+Title: Area-between-two-parabolas-1.html
+Problem: problems/Area-between-two-parabolas-1.html
+
+Title: Sandbox-problem3.html
+Problem: problems/Sandbox-problem3.html
+
+Title: Limits-x-tends-to-minus-infinity-RF-equal-deg-1.html
+Problem: problems/Limits-x-tends-to-minus-infinity-RF-equal-deg-1.html
+
+Title: Definite-integral-ax-plus-b-exp-minus1over2.html
+Problem: problems/Definite-integral-ax-plus-b-exp-minus1over2.html
+
+Title: DFQs-separable-no-initial-conditions-3.html
+Problem: problems/DFQs-separable-no-initial-conditions-3.html
+
+Title: Indefinite-integral-poly-ln-x-over-x-1.html
+Problem: problems/Indefinite-integral-poly-ln-x-over-x-1.html
+
+Title: Limits-x-tends-to-number-difference-quotient-poly-1.html
+Problem: problems/Limits-x-tends-to-number-difference-quotient-poly-1.html
+
+Title: Derivative-tan-div-monomial-1.html
+Problem: problems/Derivative-tan-div-monomial-1.html
+
+Title: Derivative-trig-times-polynomial-1.html
+Problem: problems/Derivative-trig-times-polynomial-1.html
+
+Title: Definite-integral-linear-function-1.html
+Problem: problems/Definite-integral-linear-function-1.html
+
+Title: Sandbox-problem2.html
+Problem: problems/Sandbox-problem2.html
+
+Title: Derivative-ln-fractional-linear-1.html
+Problem: problems/Derivative-ln-fractional-linear-1.html
+
+Title: Tangent-to-function-logarithm-of-linear-and-further-tricks-1.html
+Problem: problems/Tangent-to-function-logarithm-of-linear-and-further-tricks-1.html
+
+Title: Definite-integral-substitution-rule-1.html
+Problem: problems/Definite-integral-substitution-rule-1.html
+
+Title: Maxima-minima-text-problem-max-area-constraints-part-2.html
+Problem: problems/Maxima-minima-text-problem-max-area-constraints-part-2.html
+
+Title: Indefinite-integral-x-sqrt-q-exp-p-1.html
+Problem: problems/Indefinite-integral-x-sqrt-q-exp-p-1.html
+
+Title: Power-series-expansion-exponent-1.html
+Problem: problems/Power-series-expansion-exponent-1.html
+
+Title: Derivative-rational-powers-non-distributed-1.html
+Problem: problems/Derivative-rational-powers-non-distributed-1.html
+
+Title: Equations-sin-theta-equals-const-general-1.html
+Problem: problems/Equations-sin-theta-equals-const-general-1.html
+
+Title: Quadratic-find-max-min-quadratic-1.html
+Problem: problems/Quadratic-find-max-min-quadratic-1.html
+
+Title: Trig-of-inverse-trig-sin-simple-1.html
+Problem: problems/Trig-of-inverse-trig-sin-simple-1.html
+
+Title: Exponent-equation-reduced-to-quadratic-4.html
+Problem: problems/Exponent-equation-reduced-to-quadratic-4.html
+
+Title: series-add-infinite-decimal-to-rational-simple-1.html
+Problem: problems/series-add-infinite-decimal-to-rational-simple-1.html
+
+Title: Indefinite-integral-constant-1.html
+Problem: problems/Indefinite-integral-constant-1.html
+
+Title: Linearization-sqrt-function-1.html
+Problem: problems/Linearization-sqrt-function-1.html
+
+Title: Tangent-to-function-hyperbola-1.html
+Problem: problems/Tangent-to-function-hyperbola-1.html
+
+Title: Indefinite-integral-ax3-over-bx4-plus-c.html
+Problem: problems/Indefinite-integral-ax3-over-bx4-plus-c.html
+
+Title: Power-series-expansion-rational-function-linear-denominator-1.html
+Problem: problems/Power-series-expansion-rational-function-linear-denominator-1.html
+
+Title: Horizontal-Vertical-Asymptote-Rational-Function-Equal-Deg-1.html
+Problem: problems/Horizontal-Vertical-Asymptote-Rational-Function-Equal-Deg-1.html
+
+Title: Derivative-ae-exp-nx.html
+Problem: problems/Derivative-ae-exp-nx.html
+
+Title: Factor-quadratic-irrational-real-root-1.html
+Problem: problems/Factor-quadratic-irrational-real-root-1.html
+
+Title: Quadratic-find-parameters-ensure-quadratic-positive-or-negative-1.html
+Problem: problems/Quadratic-find-parameters-ensure-quadratic-positive-or-negative-1.html
+
+Title: Exponent-equation-reduced-to-quadratic-3.html
+Problem: problems/Exponent-equation-reduced-to-quadratic-3.html
+
+Title: Improper-integral-type-I-quasipolynomial-2.html
+Problem: problems/Improper-integral-type-I-quasipolynomial-2.html
+
+Title: Indefinite-integral-ax-over-bx2-plus-c-building-block-ii-a-1.html
+Problem: problems/Indefinite-integral-ax-over-bx2-plus-c-building-block-ii-a-1.html
+
+Title: Sequence-convergence-limit-related-to-bernoulli-limit-for-e-1.html
+Problem: problems/Sequence-convergence-limit-related-to-bernoulli-limit-for-e-1.html
+
+Title: Equations-cos-theta-equals-const-general-1.html
+Problem: problems/Equations-cos-theta-equals-const-general-1.html
+
+Title: trigonometry-compute-trig-fun-algebraic-using-special-angles-1.html
+Problem: problems/trigonometry-compute-trig-fun-algebraic-using-special-angles-1.html
+
+Title: trigonometry-triple-angle-sum-exercise-1.html
+Problem: problems/trigonometry-triple-angle-sum-exercise-1.html
+
+Title: Find-function-inverse-half-parabola-1.html
+Problem: problems/Find-function-inverse-half-parabola-1.html
+
+Title: trigonometry-fit-formulas-to-graph-sine-cosine-1.html
+Problem: problems/trigonometry-fit-formulas-to-graph-sine-cosine-1.html
+
+Title: Partial-fractions-split-quadratic-den-no-poly-division-1.html
+Problem: problems/Partial-fractions-split-quadratic-den-no-poly-division-1.html
+
+Title: solve-linear-equations-shuffled-1.html
+Problem: problems/solve-linear-equations-shuffled-1.html
+
+Title: Equalities-quadratic-trig-no-identities-1.html
+Problem: problems/Equalities-quadratic-trig-no-identities-1.html
+
+Title: Derivative-exponent-rational-expression-1.html
+Problem: problems/Derivative-exponent-rational-expression-1.html
+
+Title: Equalities-quadratic-trig-with-identities-1.html
+Problem: problems/Equalities-quadratic-trig-with-identities-1.html
+
+Title: Power-series-interval-of-convergence-2.html
+Problem: problems/Power-series-interval-of-convergence-2.html
+
+Title: Vector-row-addition-1.html
+Problem: problems/Vector-row-addition-1.html
+
+Title: Logarithm-evaluate-log-base-a-of-power-of-a-base-masked-by-radicals-1.html
+Problem: problems/Logarithm-evaluate-log-base-a-of-power-of-a-base-masked-by-radicals-1.html
+
+Title: Volume-solid-of-revolution-parabola-around-x-axis-1.html
+Problem: problems/Volume-solid-of-revolution-parabola-around-x-axis-1.html
+
+Title: angles-convert-between-degrees-and-radians.html
+Problem: problems/angles-convert-between-degrees-and-radians.html
+
+Title: Indefinite-integral-poly-ln-x-over-x-linear-subbed-1.html
+Problem: problems/Indefinite-integral-poly-ln-x-over-x-linear-subbed-1.html
+
+Title: Quadratic-find-quadratic-x-intercepts-rational-irrational-and-complex-roots-1.html
+Problem: problems/Quadratic-find-quadratic-x-intercepts-rational-irrational-and-complex-roots-1.html
+
+Title: Polynomial-system-linear-substitution-reduces-to-quadratic-1.html
+Problem: problems/Polynomial-system-linear-substitution-reduces-to-quadratic-1.html
+
+Title: Definite-integral-Euler-substitution-sqrt-1-plus-x-squared-1.html
+Problem: problems/Definite-integral-Euler-substitution-sqrt-1-plus-x-squared-1.html
+
+Title: Sandbox-problem6.html
+Problem: problems/Sandbox-problem6.html
+
+Title: Area-swept-by-polar-curve-cardioid-1.html
+Problem: problems/Area-swept-by-polar-curve-cardioid-1.html
+
+Title: Limits-x-tends-to-minus-infinity-RF-deg-den-smaller-2.html
+Problem: problems/Limits-x-tends-to-minus-infinity-RF-deg-den-smaller-2.html
+
+Title: Derivative-a-ln-x.html
+Problem: problems/Derivative-a-ln-x.html
+
+Title: Indefinite-integral-Ax-exp-n.html
+Problem: problems/Indefinite-integral-Ax-exp-n.html
+
+Title: Indefinite-integral-function-ln-x-over-x-linear-subbed-1.html
+Problem: problems/Indefinite-integral-function-ln-x-over-x-linear-subbed-1.html
+
+Title: Tangent-to-function-hyperbola-plus-linear-and-further-tricks-1.html
+Problem: problems/Tangent-to-function-hyperbola-plus-linear-and-further-tricks-1.html
+
+Title: Curve-tangents-computation-at-point-2.html
+Problem: problems/Curve-tangents-computation-at-point-2.html
+
+Title: Logarithm-expand-multiplicative-expressions-as-sums-1.html
+Problem: problems/Logarithm-expand-multiplicative-expressions-as-sums-1.html
+
+Title: Derivative-ax-exp-n.html
+Problem: problems/Derivative-ax-exp-n.html
+
+Title: Riemann-sum-plug-in-the-numbers-2.html
+Problem: problems/Riemann-sum-plug-in-the-numbers-2.html
+
+Title: Power-series-expansion-of-sine-and-cosine.html
+Problem: problems/Power-series-expansion-of-sine-and-cosine.html
+
+Title: Area-swept-by-polar-curve-one-clover-1.html
+Problem: problems/Area-swept-by-polar-curve-one-clover-1.html
+
+Title: Logarithm-evaluate-log-base-a-of-power-of-a-exponent-and-base-masked-by-radicals-and-inverses-1.html
+Problem: problems/Logarithm-evaluate-log-base-a-of-power-of-a-exponent-and-base-masked-by-radicals-and-inverses-1.html
+
+Title: Inverse-trig-evaluated-to-get-special-angles-1.html
+Problem: problems/Inverse-trig-evaluated-to-get-special-angles-1.html
+
+Title: Sequence-convergence-limit-related-to-bernoulli-limit-for-e-4.html
+Problem: problems/Sequence-convergence-limit-related-to-bernoulli-limit-for-e-4.html
+
+Title: Chain-rule-sqrt-trig-rational-1.html
+Problem: problems/Chain-rule-sqrt-trig-rational-1.html
+
+Title: Polynomial-system-text-problem-linear-substitution-reduces-to-quadratic-2.html
+Problem: problems/Polynomial-system-text-problem-linear-substitution-reduces-to-quadratic-2.html
+
+Title: Indefinite-integral-byparts-x2-emx.html
+Problem: problems/Indefinite-integral-byparts-x2-emx.html
+
+Title: Indefinite-integral-trig-basic-1.html
+Problem: problems/Indefinite-integral-trig-basic-1.html
+
+Title: Tangent-to-implicit-curve-at-point-1.html
+Problem: problems/Tangent-to-implicit-curve-at-point-1.html
+
+Title: Vector-column-addition-1.html
+Problem: problems/Vector-column-addition-1.html
+
+Title: Inequalities-quadratic-exponential-1.html
+Problem: problems/Inequalities-quadratic-exponential-1.html
+
+Title: Derivative-1-over-linear-polynomial-squared-1.html
+Problem: problems/Derivative-1-over-linear-polynomial-squared-1.html
+
+Title: Power-series-interval-of-convergence-4.html
+Problem: problems/Power-series-interval-of-convergence-4.html
+
+Title: Derivative-a-over-x.html
+Problem: problems/Derivative-a-over-x.html
+
+Title: evaluate-exponent-basic-rewrite-as-power-of-ten-1.html
+Problem: problems/evaluate-exponent-basic-rewrite-as-power-of-ten-1.html
+
+Title: Derivative-ax3-plus-bx2-plus-cx-plus-d.html
+Problem: problems/Derivative-ax3-plus-bx2-plus-cx-plus-d.html
+
+Title: Polynomial-division-cubic-by-linear-1.html
+Problem: problems/Polynomial-division-cubic-by-linear-1.html
+
+Title: Series-convergence-comparison-or-limit-comparison-1.html
+Problem: problems/Series-convergence-comparison-or-limit-comparison-1.html
+
+Title: Limits-x-tends-to-pm-infinity-quotient-radical-even-power-basic-1.html
+Problem: problems/Limits-x-tends-to-pm-infinity-quotient-radical-even-power-basic-1.html
+
+Title: Trigonometric-functions-algebraic-output-1.html
+Problem: problems/Trigonometric-functions-algebraic-output-1.html
+
+Title: Equations-cos-theta-equals-const-algebraic-1.html
+Problem: problems/Equations-cos-theta-equals-const-algebraic-1.html
+
+Title: Indefinite-integral-cubic-denominator-1.html
+Problem: problems/Indefinite-integral-cubic-denominator-1.html
+
+Title: Derivative-trig-tan-cot-sec-csc-1.html
+Problem: problems/Derivative-trig-tan-cot-sec-csc-1.html
+
+Title: Derivative-ae-exp-bx-over-x.html
+Problem: problems/Derivative-ae-exp-bx-over-x.html
+
+Title: Partial-fractions-split-cubic-den-linear-term-squared-linear-term-no-poly-division-1.html
+Problem: problems/Partial-fractions-split-cubic-den-linear-term-squared-linear-term-no-poly-division-1.html
+
+Title: Indefinite-integral-acotpx.html
+Problem: problems/Indefinite-integral-acotpx.html
+
+Title: Riemann-sum-plug-in-the-numbers-3.html
+Problem: problems/Riemann-sum-plug-in-the-numbers-3.html
+
+Title: Indefinite-integral-byparts-x-emx.html
+Problem: problems/Indefinite-integral-byparts-x-emx.html
+
+Title: Curve-length-involving-radical-of-perfect-square-1.html
+Problem: problems/Curve-length-involving-radical-of-perfect-square-1.html
+
+Title: Exponent-equation-reduced-to-quadratic-2.html
+Problem: problems/Exponent-equation-reduced-to-quadratic-2.html
+
+Title: Indefinite-integral-cubic-denominator-2.html
+Problem: problems/Indefinite-integral-cubic-denominator-2.html
+
+Title: trigonometry-compute-trig-functions-in-right-angle-triangle-hypothenuse-unknown-1.html
+Problem: problems/trigonometry-compute-trig-functions-in-right-angle-triangle-hypothenuse-unknown-1.html
+
+Title: Derivative-log-base-a-of-b-times-x-1.html
+Problem: problems/Derivative-log-base-a-of-b-times-x-1.html
+
+Title: Indefinite-integral-Ae-exp-ax-plus-b.html
+Problem: problems/Indefinite-integral-Ae-exp-ax-plus-b.html
+
+Title: LHospitalsRule-from-Maclaurin-series-exponent-higher-order-cos-over-arctan-1.html
+Problem: problems/LHospitalsRule-from-Maclaurin-series-exponent-higher-order-cos-over-arctan-1.html
+
+Title: Cuve-visualization-cardiods-as-families-of-curves-1.html
+Problem: problems/Cuve-visualization-cardiods-as-families-of-curves-1.html
+
+Title: Complex-addition-z-minus-w.html
+Problem: problems/Complex-addition-z-minus-w.html
+
+Title: Derivative-ln-trig-1.html
+Problem: problems/Derivative-ln-trig-1.html
+
+Title: Power-series-expansion-related-to-exponent-2.html
+Problem: problems/Power-series-expansion-related-to-exponent-2.html
+
+Title: Indefinite-integral-a-over-bsquare-plus-xsquare.html
+Problem: problems/Indefinite-integral-a-over-bsquare-plus-xsquare.html
+
+Title: Series-convergence-basic-test-1.html
+Problem: problems/Series-convergence-basic-test-1.html
+
+Title: Indefinite-integral-a-over-bsquare-minus-xsquare.html
+Problem: problems/Indefinite-integral-a-over-bsquare-minus-xsquare.html
+
+Title: Partial-fractions-split-cubic-den-three-linear-terms-no-poly-division-1.html
+Problem: problems/Partial-fractions-split-cubic-den-three-linear-terms-no-poly-division-1.html
+
+Title: LHospitalsRule-from-Maclaurin-series-exponent-sin-cos-part-1.html
+Problem: problems/LHospitalsRule-from-Maclaurin-series-exponent-sin-cos-part-1.html
+
+Title: Indefinite-integral-trig-integral-Weierstrass-substitution-2.html
+Problem: problems/Indefinite-integral-trig-integral-Weierstrass-substitution-2.html
+
+Title: Indefinite-integral-trig-basic-3.html
+Problem: problems/Indefinite-integral-trig-basic-3.html
+
+Title: graph-of-parabola-1.html
+Problem: problems/graph-of-parabola-1.html
+
+Title: Inequalities-cos-theta-compared-to-const-1.html
+Problem: problems/Inequalities-cos-theta-compared-to-const-1.html
+
+Title: Derivative-trig-plus-polynomial-1.html
+Problem: problems/Derivative-trig-plus-polynomial-1.html
+
+Title: Polynomial-division-use-to-factor-cubic-1.html
+Problem: problems/Polynomial-division-use-to-factor-cubic-1.html
+
+Title: Indefinite-integral-trig-integral-Weierstrass-substitution-1.html
+Problem: problems/Indefinite-integral-trig-integral-Weierstrass-substitution-1.html
+
+Title: Equalities-trig-sum-equals-zero-1.html
+Problem: problems/Equalities-trig-sum-equals-zero-1.html
+
+Title: Indefinite-integral-sin-cos-of-linear-function-1.html
+Problem: problems/Indefinite-integral-sin-cos-of-linear-function-1.html
+
+Title: Chain-rule-and-radicals-1.html
+Problem: problems/Chain-rule-and-radicals-1.html
+
+Title: Derivative-ln-x-power-a-ln-power-a-x-1.html
+Problem: problems/Derivative-ln-x-power-a-ln-power-a-x-1.html
+
+Title: Derivative-a-ln-negative-bx.html
+Problem: problems/Derivative-a-ln-negative-bx.html
+
+Title: LHospitalsRule-at-infinity-2.html
+Problem: problems/LHospitalsRule-at-infinity-2.html
+
+Title: Indefinite-integral-atanpx.html
+Problem: problems/Indefinite-integral-atanpx.html
+
+Title: Inequalities-cubic-exponential-1.html
+Problem: problems/Inequalities-cubic-exponential-1.html
+
+Title: Indefinite-integral-laurent-polynomial-common-denominator-1.html
+Problem: problems/Indefinite-integral-laurent-polynomial-common-denominator-1.html
+
+Title: trigonometry-compute-trig-fun-algebraic-using-half-angle-formula-1.html
+Problem: problems/trigonometry-compute-trig-fun-algebraic-using-half-angle-formula-1.html
+
+Title: trigonometry-compute-trig-functions-special-angle-not-first-quadrant-1.html
+Problem: problems/trigonometry-compute-trig-functions-special-angle-not-first-quadrant-1.html
+
+Title: Sequence-guess-the-formula-quasipolynomial-sequence-1.html
+Problem: problems/Sequence-guess-the-formula-quasipolynomial-sequence-1.html
+
+Title: Derivative-trig-times-monomial-1.html
+Problem: problems/Derivative-trig-times-monomial-1.html
+
+Title: Partial-fractions-split-quadratic-den-no-poly-division-2.html
+Problem: problems/Partial-fractions-split-quadratic-den-no-poly-division-2.html
+
+Title: solve-quadratic-equation-two-rational-roots-1-non-trivial-content-1.html
+Problem: problems/solve-quadratic-equation-two-rational-roots-1-non-trivial-content-1.html
+
+Title: Limits-x-tends-to-number-radical-in-numerator-1.html
+Problem: problems/Limits-x-tends-to-number-radical-in-numerator-1.html
+
+Title: solve-linear-equations-leading-coefficients-1.html
+Problem: problems/solve-linear-equations-leading-coefficients-1.html
+
+Title: Derivative-rational-function-non-simplified-1.html
+Problem: problems/Derivative-rational-function-non-simplified-1.html
+
+Title: Sandbox-problem5.html
+Problem: problems/Sandbox-problem5.html
+
+Title: Exponent-equation-basic-natural-base-1.html
+Problem: problems/Exponent-equation-basic-natural-base-1.html
+
+Title: Implicit-derivative-radical-relation-1.html
+Problem: problems/Implicit-derivative-radical-relation-1.html
+
+Title: Indefinite-integral-atan2bx.html
+Problem: problems/Indefinite-integral-atan2bx.html
+
+Title: Limits-basic-substitution-1.html
+Problem: problems/Limits-basic-substitution-1.html
+
+Title: Riemann-sum-plug-in-the-numbers-1.html
+Problem: problems/Riemann-sum-plug-in-the-numbers-1.html
+
+Title: solve-quadratic-equation-integer-roots-1.html
+Problem: problems/solve-quadratic-equation-integer-roots-1.html
+
+Title: Power-series-expansion-related-to-arctan-2.html
+Problem: problems/Power-series-expansion-related-to-arctan-2.html
+
+Title: Tangent-to-implicit-curve-at-point-ellipse-1.html
+Problem: problems/Tangent-to-implicit-curve-at-point-ellipse-1.html
+
+Title: Newtons-method-solve-a-power-x-minus-linear-1.html
+Problem: problems/Newtons-method-solve-a-power-x-minus-linear-1.html
+
+Title: Limits-x-tends-to-infinity-RF-deg-den-smaller-1.html
+Problem: problems/Limits-x-tends-to-infinity-RF-deg-den-smaller-1.html
+
+Title: trigonometry-compute-trig-functions-in-right-angle-triangle-hypotenuse-unknown-1.html
+Problem: problems/trigonometry-compute-trig-functions-in-right-angle-triangle-hypotenuse-unknown-1.html
+
+Title: Indefinite-integral-x-cubed-nth-radical-quadratic-no-lin-term-1.html
+Problem: problems/Indefinite-integral-x-cubed-nth-radical-quadratic-no-lin-term-1.html
+
+Title: Derivative-polynomial-non-distributed-1.html
+Problem: problems/Derivative-polynomial-non-distributed-1.html
+
+Title: Logarithm-of-quadratic-equation-1.html
+Problem: problems/Logarithm-of-quadratic-equation-1.html
+
+Title: trigonometry-simplify-trig-fun-argument-translated-multiple-half-pi-1.html
+Problem: problems/trigonometry-simplify-trig-fun-argument-translated-multiple-half-pi-1.html
+
+Title: solve-linear-equations-non-integer-answers-1.html
+Problem: problems/solve-linear-equations-non-integer-answers-1.html
+
+Title: Limits-x-tends-to-infinity-RF-equal-deg-1.html
+Problem: problems/Limits-x-tends-to-infinity-RF-equal-deg-1.html
+
+Title: Derivative-x-power-x-power-x.html
+Problem: problems/Derivative-x-power-x-power-x.html
+
+Title: Series-convergence-ratio-test-and-exponents-as-limits-1.html
+Problem: problems/Series-convergence-ratio-test-and-exponents-as-limits-1.html
+
+Title: Derivative-arbitrary-exponent-power-ax-1.html
+Problem: problems/Derivative-arbitrary-exponent-power-ax-1.html
+
+Title: Indefinite-integral-sinmx-or-cosmx-1.html
+Problem: problems/Indefinite-integral-sinmx-or-cosmx-1.html
+
+Title: Indefinite-integral-byparts-x-cosmx.html
+Problem: problems/Indefinite-integral-byparts-x-cosmx.html
+
+Title: DFQs-separable-no-initial-conditions-2.html
+Problem: problems/DFQs-separable-no-initial-conditions-2.html
+
+Title: Inequalities-quadratic-negative-leading-coeff-1.html
+Problem: problems/Inequalities-quadratic-negative-leading-coeff-1.html
+
+Title: Definite-integral-ax-exp-n.html
+Problem: problems/Definite-integral-ax-exp-n.html
+
+Title: LHospitalsRule-from-Maclaurin-series-exponent-higher-order-sin-cos-exp-1.html
+Problem: problems/LHospitalsRule-from-Maclaurin-series-exponent-higher-order-sin-cos-exp-1.html
+
+Title: Series-convergence-n-power-p-series-1.html
+Problem: problems/Series-convergence-n-power-p-series-1.html
+
+Title: Indefinite-integral-trig-integral-tan-power-n-sec-power-m-sec-sub-works-1.html
+Problem: problems/Indefinite-integral-trig-integral-tan-power-n-sec-power-m-sec-sub-works-1.html
+
+Title: Indefinite-integral-byparts-arctanax-times-poly-1.html
+Problem: problems/Indefinite-integral-byparts-arctanax-times-poly-1.html
+
+Title: Sandbox-problem8.html
+Problem: problems/Sandbox-problem8.html
+
+Title: Inequalities-cubic-1.html
+Problem: problems/Inequalities-cubic-1.html
+
+Title: Indefinite-integral-linear-function-rational-power-2.html
+Problem: problems/Indefinite-integral-linear-function-rational-power-2.html
+
+Title: Derivative-fractional-linear-1.html
+Problem: problems/Derivative-fractional-linear-1.html
+
+Title: Indefinite-integral-ax-plus-b-exp-n.html
+Problem: problems/Indefinite-integral-ax-plus-b-exp-n.html
+
+Title: Exponent-equation-reduced-to-masked-quadratic-1.html
+Problem: problems/Exponent-equation-reduced-to-masked-quadratic-1.html
+
+Title: Indefinite-integral-byparts-lnax-times-poly-1.html
+Problem: problems/Indefinite-integral-byparts-lnax-times-poly-1.html
+
+Title: evaluate-exponent-basic-logarithmic-equation-most-basic-form-1.html
+Problem: problems/evaluate-exponent-basic-logarithmic-equation-most-basic-form-1.html
+
+Title: Derivative-rational-function-1.html
+Problem: problems/Derivative-rational-function-1.html
+
+Title: Derivative-x-power-n-ln-x-1.html
+Problem: problems/Derivative-x-power-n-ln-x-1.html
+
+Title: Definite-integral-rational-power-poly-1.html
+Problem: problems/Definite-integral-rational-power-poly-1.html
+
+Title: Maxima-minima-text-problem-max-area-constraints-part-1.html
+Problem: problems/Maxima-minima-text-problem-max-area-constraints-part-1.html
+
+Title: Indefinite-integral-ax-plus-b-exp-p-over-q.html
+Problem: problems/Indefinite-integral-ax-plus-b-exp-p-over-q.html
+
+Title: Indefinite-integral-byparts-x-sinmx.html
+Problem: problems/Indefinite-integral-byparts-x-sinmx.html
+
+Title: Quadratic-find-max-min-quadratic-text-problem-1.html
+Problem: problems/Quadratic-find-max-min-quadratic-text-problem-1.html
+
+Title: Derivative-a-over-x2.html
+Problem: problems/Derivative-a-over-x2.html
+
+Title: Quadratic-complete-the-square-1.html
+Problem: problems/Quadratic-complete-the-square-1.html
+
+Title: Indefinite-integral-a-over-x-ln-bx.html
+Problem: problems/Indefinite-integral-a-over-x-ln-bx.html
+
+Title: Indefinite-integral-rational-power-monomial-2.html
+Problem: problems/Indefinite-integral-rational-power-monomial-2.html
+
+Title: Area-triangle-from-sides-and-two-angles-1.html
+Problem: problems/Area-triangle-from-sides-and-two-angles-1.html
+
+Title: Tangent-to-implicit-curve-at-point-sphere-two-thirds-norm-1.html
+Problem: problems/Tangent-to-implicit-curve-at-point-sphere-two-thirds-norm-1.html
+
+Title: Trig-of-inverse-trig-cos-simple-1.html
+Problem: problems/Trig-of-inverse-trig-cos-simple-1.html
+
+Title: Indefinite-integral-linear-function-power-1.html
+Problem: problems/Indefinite-integral-linear-function-power-1.html
+
+Title: Indefinite-integral-ax-plus-b-exp-minus1-over-2.html
+Problem: problems/Indefinite-integral-ax-plus-b-exp-minus1-over-2.html
+
+Title: Inverse-trig-word-problem-distance-to-horizon-1.html
+Problem: problems/Inverse-trig-word-problem-distance-to-horizon-1.html
+
+Title: Series-convergence-ratio-test-1.html
+Problem: problems/Series-convergence-ratio-test-1.html
+
+Title: LHospitalsRule-at-infinity-1.html
+Problem: problems/LHospitalsRule-at-infinity-1.html
+
+Title: Indefinite-integral-Ax-exp-p-over-q.html
+Problem: problems/Indefinite-integral-Ax-exp-p-over-q.html
+
+Title: Curve-tangents-computation-at-point-1.html
+Problem: problems/Curve-tangents-computation-at-point-1.html
+
+Title: Logarithm-evaluate-log-base-a-use-log-difference-rule-1.html
+Problem: problems/Logarithm-evaluate-log-base-a-use-log-difference-rule-1.html
+
+Title: Inequalities-quadratic-1.html
+Problem: problems/Inequalities-quadratic-1.html
+
+Title: Partial-fractions-split-cubic-den-linear-and-quadratic-term-no-poly-division-1.html
+Problem: problems/Partial-fractions-split-cubic-den-linear-and-quadratic-term-no-poly-division-1.html
+
+Title: Curve-length-parabola-arc-1.html
+Problem: problems/Curve-length-parabola-arc-1.html
+
+Title: Series-add-geometric-progression-1.html
+Problem: problems/Series-add-geometric-progression-1.html
+
+Title: Vector-column-addition-3d-1.html
+Problem: problems/Vector-column-addition-3d-1.html
+
+Title: Sqrt-trig-rational-1.html
+Problem: problems/Sqrt-trig-rational-1.html
+
+Title: Volume-solid-of-revolution-two-parabolas-around-horizontal-axis-1.html
+Problem: problems/Volume-solid-of-revolution-two-parabolas-around-horizontal-axis-1.html
+
+Title: Limits-x-tends-to-number-quotient-quadratics-non-integer-roots-1.html
+Problem: problems/Limits-x-tends-to-number-quotient-quadratics-non-integer-roots-1.html
+
+Title: Indefinite-integral-a-over-sqrt-bsquare-minus-xsquare.html
+Problem: problems/Indefinite-integral-a-over-sqrt-bsquare-minus-xsquare.html
+
+Title: Area-between-hyperbola-and-parabola-rational-intersection-1.html
+Problem: problems/Area-between-hyperbola-and-parabola-rational-intersection-1.html
+
+Title: Express-sin-cos-of-k-times-x-via-sin-x-cos-x-1.html
+Problem: problems/Express-sin-cos-of-k-times-x-via-sin-x-cos-x-1.html
+
+Title: Series-add-geometric-progression-3.html
+Problem: problems/Series-add-geometric-progression-3.html
+
+Title: Power-series-expansion-rational-function-linear-denominator-2.html
+Problem: problems/Power-series-expansion-rational-function-linear-denominator-2.html
+
+Title: Series-convergence-comparison-or-limit-comparison-3.html
+Problem: problems/Series-convergence-comparison-or-limit-comparison-3.html
+
+Title: Indefinite-integral-acospx-over-b-plus-csinpx.html
+Problem: problems/Indefinite-integral-acospx-over-b-plus-csinpx.html
+
+Title: Definite-integral-substitution-rule-3.html
+Problem: problems/Definite-integral-substitution-rule-3.html
+
+Title: Exponent-equation-reduced-to-quadratic-1.html
+Problem: problems/Exponent-equation-reduced-to-quadratic-1.html
+
+Title: Limits-x-tends-to-number-quotient-quadratics-1.html
+Problem: problems/Limits-x-tends-to-number-quotient-quadratics-1.html
+
+Title: Power-series-expansion-related-to-logarithms-3.html
+Problem: problems/Power-series-expansion-related-to-logarithms-3.html
+
+Title: DFQs-separable-no-initial-conditions-4.html
+Problem: problems/DFQs-separable-no-initial-conditions-4.html
+
+Title: Definite-integral-ax.html
+Problem: problems/Definite-integral-ax.html
+
+Title: Indefinite-integral-rational-power-polynomial-1.html
+Problem: problems/Indefinite-integral-rational-power-polynomial-1.html
+
+Title: Derivative-arbitrary-exponent-power-x-1.html
+Problem: problems/Derivative-arbitrary-exponent-power-x-1.html
+
+Title: Derivative-x-power-x.html
+Problem: problems/Derivative-x-power-x.html
+
+Title: Maxima-minima-exponential-of-polynomial-times-polynomial-closed-interval-1.html
+Problem: problems/Maxima-minima-exponential-of-polynomial-times-polynomial-closed-interval-1.html
+
+Title: Exponent-equation-basic-non-natural-base-1.html
+Problem: problems/Exponent-equation-basic-non-natural-base-1.html
+
+Title: Vector-row-cross-product-1.html
+Problem: problems/Vector-row-cross-product-1.html
+
+Title: Logarithm-of-quadratic-equation-extraneous-solutions-1.html
+Problem: problems/Logarithm-of-quadratic-equation-extraneous-solutions-1.html
+
+Title: Limits-x-tends-to-number-radical-in-numerator-2.html
+Problem: problems/Limits-x-tends-to-number-radical-in-numerator-2.html
+
+Title: Functions-composing-fractional-linear-1.html
+Problem: problems/Functions-composing-fractional-linear-1.html
+
+Title: Maxima-minima-polynomial-closed-interval-1.html
+Problem: problems/Maxima-minima-polynomial-closed-interval-1.html
+
+Title: Indefinite-integral-acos2bx.html
+Problem: problems/Indefinite-integral-acos2bx.html
+
+Title: Indefinite-integral-Euler-substitution-sqrt-1-minus-x-squared-2.html
+Problem: problems/Indefinite-integral-Euler-substitution-sqrt-1-minus-x-squared-2.html
+
+Title: Derivative-ln-sqrt-linear-1.html
+Problem: problems/Derivative-ln-sqrt-linear-1.html
+
+Title: Area-between-radical-of-linear-and-linear-function-1.html
+Problem: problems/Area-between-radical-of-linear-and-linear-function-1.html
+
+Title: Sandbox-problem1.html
+Problem: problems/Sandbox-problem1.html
+
+Title: Indefinite-integral-trig-integral-sin-power-n-cos-power-m-not-both-even-1.html
+Problem: problems/Indefinite-integral-trig-integral-sin-power-n-cos-power-m-not-both-even-1.html
+
+Title: Derivative-exponent-times-polynomial-1.html
+Problem: problems/Derivative-exponent-times-polynomial-1.html
+
+Title: Implicit-derivative-trig-polynomial-relation-1.html
+Problem: problems/Implicit-derivative-trig-polynomial-relation-1.html
+
+Title: trigonometry-compute-trig-fun-algebraic-using-special-angles-2.html
+Problem: problems/trigonometry-compute-trig-fun-algebraic-using-special-angles-2.html
+
+Title: Factor-quadratic-no-real-roots-over-the-complex-numbers-1.html
+Problem: problems/Factor-quadratic-no-real-roots-over-the-complex-numbers-1.html
+
+Title: Polynomial-system-geometric-text-problem-reduces-to-quadratic-1.html
+Problem: problems/Polynomial-system-geometric-text-problem-reduces-to-quadratic-1.html
+
+Title: Sandbox-problem9.html
+Problem: problems/Sandbox-problem9.html
+
+Title: Power-series-expansion-related-to-exponent-1.html
+Problem: problems/Power-series-expansion-related-to-exponent-1.html
+
+Title: Sequence-convergence-limit-related-to-bernoulli-limit-for-e-2.html
+Problem: problems/Sequence-convergence-limit-related-to-bernoulli-limit-for-e-2.html
+
+Title: Indefinite-integral-polynomial-1.html
+Problem: problems/Indefinite-integral-polynomial-1.html
+
+Title: Linearization-sqrt-function-2.html
+Problem: problems/Linearization-sqrt-function-2.html
+
+Title: Sequence-guess-the-formula-geometric-sequence-1.html
+Problem: problems/Sequence-guess-the-formula-geometric-sequence-1.html
+
+Title: Area-between-parabola-and-line-2.html
+Problem: problems/Area-between-parabola-and-line-2.html
+
+Title: Derivative-ln-linear-1.html
+Problem: problems/Derivative-ln-linear-1.html
+
+Title: Power-series-expansion-related-to-sine-and-cosine.html
+Problem: problems/Power-series-expansion-related-to-sine-and-cosine.html
+
+Title: Series-convergence-basic-and-alternating-test-1.html
+Problem: problems/Series-convergence-basic-and-alternating-test-1.html
+
+Title: Derivative-ax-exp-poverq-plus-bx-exp-rovers.html
+Problem: problems/Derivative-ax-exp-poverq-plus-bx-exp-rovers.html
+
+Title: Definite-integral-absolute-value-linear-function-1.html
+Problem: problems/Definite-integral-absolute-value-linear-function-1.html
+
+Title: Indefinite-integral-e-power-quadratic-no-lin-term-times-x-1.html
+Problem: problems/Indefinite-integral-e-power-quadratic-no-lin-term-times-x-1.html
+
+Title: Derivative-ae-exp-x.html
+Problem: problems/Derivative-ae-exp-x.html
+
+Title: Power-series-interval-of-convergence-3.html
+Problem: problems/Power-series-interval-of-convergence-3.html
+
+Title: solve-quadratic-equation-rational-roots-non-standard-form.html
+Problem: problems/solve-quadratic-equation-rational-roots-non-standard-form.html
+
+Title: solve-quadratic-equation-rational-and-integer-root-1.html
+Problem: problems/solve-quadratic-equation-rational-and-integer-root-1.html
+
+Title: Derivative-ae-exp-bx-plus-c.html
+Problem: problems/Derivative-ae-exp-bx-plus-c.html
+
+Title: Circle-arc-length-1.html
+Problem: problems/Circle-arc-length-1.html
+
+Title: Derivative-cos-const-times-x.html
+Problem: problems/Derivative-cos-const-times-x.html
+
+Title: Second-derivative-exponent-times-monomial-1.html
+Problem: problems/Second-derivative-exponent-times-monomial-1.html
+
+Title: Indefinite-integral-Ae-exp-ax.html
+Problem: problems/Indefinite-integral-Ae-exp-ax.html
+
+Title: Chain-rule-1-over-arbitrary-radical-1.html
+Problem: problems/Chain-rule-1-over-arbitrary-radical-1.html
+
+Title: Indefinite-integral-a-over-bx-plus-c-building-block-i-a-1.html
+Problem: problems/Indefinite-integral-a-over-bx-plus-c-building-block-i-a-1.html
+
+Title: Sandbox-problem7.html
+Problem: problems/Sandbox-problem7.html
+
+Title: trigonometry-compute-tan-cot-sec-csc-knowing-complementary-angle-trig-1.html
+Problem: problems/trigonometry-compute-tan-cot-sec-csc-knowing-complementary-angle-trig-1.html
+
+Title: Indefinite-integral-trig-basic-2.html
+Problem: problems/Indefinite-integral-trig-basic-2.html
+
+Title: Indefinite-integral-ax-plus-d-over-bx-plus-c-building-block-i-a-1.html
+Problem: problems/Indefinite-integral-ax-plus-d-over-bx-plus-c-building-block-i-a-1.html
+
+Title: Improper-integral-type-II-power-x-translated-1.html
+Problem: problems/Improper-integral-type-II-power-x-translated-1.html
+
+Title: Improper-integral-type-II-power-x-translated-2.html
+Problem: problems/Improper-integral-type-II-power-x-translated-2.html
+
+Title: Derivative-a-sqrt-x.html
+Problem: problems/Derivative-a-sqrt-x.html
+
+Title: Maxima-minima-exponential-quazi-polynomial-closed-interval-1.html
+Problem: problems/Maxima-minima-exponential-quazi-polynomial-closed-interval-1.html
+
+Title: Power-series-expansion-Newton-binomial-1.html
+Problem: problems/Power-series-expansion-Newton-binomial-1.html
+
+Title: Factor-cubic-three-rational-roots-1.html
+Problem: problems/Factor-cubic-three-rational-roots-1.html
+
+Title: trigonometry-double-angle-formula-memorization-1.html
+Problem: problems/trigonometry-double-angle-formula-memorization-1.html
+
+Title: Indefinite-integral-trig-integral-tan-power-n-sec-power-m-tan-sub-works-1.html
+Problem: problems/Indefinite-integral-trig-integral-tan-power-n-sec-power-m-tan-sub-works-1.html
+
+Title: Derivative-sin-const-times-x.html
+Problem: problems/Derivative-sin-const-times-x.html
+
+Title: Normal-to-function-logarithm-of-linear-1.html
+Problem: problems/Normal-to-function-logarithm-of-linear-1.html
+
+Title: Area-between-parabola-and-line-1.html
+Problem: problems/Area-between-parabola-and-line-1.html
+
+Title: Factor-cubic-one-real-root-1.html
+Problem: problems/Factor-cubic-one-real-root-1.html
+
+Title: Sequence-convergence-limit-rational-function.html
+Problem: problems/Sequence-convergence-limit-rational-function.html
+
+Title: Complex-multiplication-z-times-w.html
+Problem: problems/Complex-multiplication-z-times-w.html
+
+Title: Indefinite-integral-polynomial-2.html
+Problem: problems/Indefinite-integral-polynomial-2.html
+
+Title: Exponent-equation-basic-non-natural-both-sides-exponents-1.html
+Problem: problems/Exponent-equation-basic-non-natural-both-sides-exponents-1.html
+
+Title: Derivative-sin-x-power-a-and-sin-power-a-x.html
+Problem: problems/Derivative-sin-x-power-a-and-sin-power-a-x.html
+
+Title: Inequalities-notation-intervals-1.html
+Problem: problems/Inequalities-notation-intervals-1.html
+
+Title: trigonometry-power-reduce-even-powers-sine-cosine.html
+Problem: problems/trigonometry-power-reduce-even-powers-sine-cosine.html
+
+Title: Indefinite-integral-ax-over-bx2-plus-c-power-n-building-block-ii-b-1.html
+Problem: problems/Indefinite-integral-ax-over-bx2-plus-c-power-n-building-block-ii-b-1.html
+
+Title: Indefinite-integral-ax-over-bx2plusc.html
+Problem: problems/Indefinite-integral-ax-over-bx2plusc.html
+

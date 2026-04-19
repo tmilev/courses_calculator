@@ -23,3 +23,9 @@ Html: curriculum-800-cryptography.html
 Topics: curriculum-800-cryptography.txt
 Title: Cryptography 101
 RoughDraft: true
+
+Html: all_problems.html
+Topics: all_problems.txt
+Title: All problems
+RoughDraft: true
+
