@@ -5,14 +5,14 @@ TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorT
 base=RandomInteger(2,9);
 factor1=x + RandomInteger((-5,-1),(1,5));
 power2=RandomInteger{}(2,5);
-factor2base= ( RandomInteger(2,5) y + SelectAtRandom(7,11,13,-7,-11,-13)) ;
-factor2=factor2base^power2;
+factorTwoBase= ( RandomInteger(2,5) y + SelectAtRandom(7,11,13,-7,-11,-13)) ;
+factor2=factorTwoBase^power2;
 radical3=RandomInteger{}(2,7) ;
 randomcf1=RandomInteger(2,5);
 randomcf2=RandomInteger((-5,-1),(1,5)) ;
 1/(GCD(randomcf1,randomcf2)==1)
-factor3base=  randomcf1 z + randomcf2;
-factor3= \sqrt[radical3]{factor3base}
+factorThreeBase=  randomcf1 z + randomcf2;
+factor3= \sqrt[radical3]{factorThreeBase}
 </calculatorHidden>
 Fully expand the expression to a sum of logarithms. Your answer
 should not contain logarithms of products or logarithms of exponents.
@@ -20,7 +20,7 @@ should not contain logarithms of products or logarithms of exponents.
 \(<calculator noTags="true"> \displaystyle \log_base ( (factor1 *factor2)/(factor3) )</calculator>=\)
 </answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswerZero"  buttons="algebra, logarithms">
-AlgebraAnswerZero - (\log_base factor1 +power2 \log_base factor2base- 1/radical3 \log_base factor3base )==0
+AlgebraAnswerZero - (\log_base factor1 +power2 \log_base factorTwoBase- 1/radical3 \log_base factorThreeBase )==0
 </calculatorAnswer>
 <calculatorCommentsBeforeInterpretation>
 TurnOffRules("LogBaseSimpleCases", "\\log", "LogBase", "ConvertShortDenominatorToNegativePower");
@@ -30,5 +30,5 @@ EnsureExpressionDependsMandatoryVariables(AlgebraAnswerZero, (x,y,z));
 </calculatorCommentsBeforeSubmission>
 
 <calculatorAnswerOnGiveUp>
-\log_base factor1 +power2 \log_base factor2base- 1/radical3 \log_base factor3base 
+\log_base factor1 +power2 \log_base factorTwoBase- 1/radical3 \log_base factorThreeBase 
 </calculatorAnswerOnGiveUp>

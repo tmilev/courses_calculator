@@ -10,28 +10,28 @@ leg3= ( -theB+\sqrt{theB^2-4 theC } ) /2;
 theArea=leg3 leg2 sin{}(theAngleTop) /2;
 theHeight= 2 DoubleValue{}theArea/ DoubleValue{}leg1;
 leftHeightSegment=DoubleValue(sqrt(DoubleValue(leg2^2-theHeight^2)));
-vertex2noCamouflage=(leftHeightSegment, theHeight);
-vertex1noCamouflage= (leg1, 0);
+vertexTwoNoCamouflage=(leftHeightSegment, theHeight);
+vertexOneNoCamouflage= (leg1, 0);
 topAngleLeftPart=-90^\circ-arccos(theHeight/leg2);
 
 randomAngle= 2\pi  RandomInteger{}(1,200)/RandomInteger{}(1,200) ;
 randomIsometry=MakeMatrix( (DoubleValue{}( cos randomAngle),DoubleValue{}(  -sin randomAngle)), (DoubleValue{}(sin randomAngle) , DoubleValue{}(cos randomAngle)));
 randomTranslation=(RandomInteger{}(3,8), RandomInteger{}(3,8));
-vertex1=randomTranslation+( randomIsometry vertex1noCamouflage^t)^t ;
-vertex2=randomTranslation+( randomIsometry vertex2noCamouflage^t)^t ;
+vertex1=randomTranslation+( randomIsometry vertexOneNoCamouflage^t)^t ;
+vertex2=randomTranslation+( randomIsometry vertexTwoNoCamouflage^t)^t ;
 labelDist=DoubleValue( Min{}(leg1, leg2) /6);
-leg1LabelLocation=randomTranslation+( randomIsometry (vertex1noCamouflage/2 - (0,labelDist*1.5))^t)^t;
-leg2LabelLocation=randomTranslation+( randomIsometry (vertex2noCamouflage/2 - (labelDist*1.5,0 ))^t)^t;
+legOneLabelLocation=randomTranslation+( randomIsometry (vertexOneNoCamouflage/2 - (0,labelDist*1.5))^t)^t;
+legTwoLabelLocation=randomTranslation+( randomIsometry (vertexTwoNoCamouflage/2 - (labelDist*1.5,0 ))^t)^t;
 
-angleTopLabelLocation= randomTranslation+(randomIsometry*(vertex2noCamouflage-  (0, labelDist ) )^T)^T;
+angleTopLabelLocation= randomTranslation+(randomIsometry*(vertexTwoNoCamouflage-  (0, labelDist ) )^T)^T;
 TurnOffApproximations(0);
 </calculatorHidden>
 <calculator>
 PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)
-+PlotCurve( randomTranslation+(randomIsometry*(vertex2noCamouflage+  (labelDist cos{} t, labelDist sin{} t) )^T)^T, topAngleLeftPart,topAngleLeftPart+theAngleTop)
++PlotCurve( randomTranslation+(randomIsometry*(vertexTwoNoCamouflage+  (labelDist cos{} t, labelDist sin{} t) )^T)^T, topAngleLeftPart,topAngleLeftPart+theAngleTop)
 +PlotLabel(angleTopLabelLocation, ToString(theAngleTopDegs)+ "\u00b0")
-+PlotLabel(leg1LabelLocation, ToString(leg1))
-+PlotLabel(leg2LabelLocation, ToString(leg2))
++PlotLabel(legOneLabelLocation, ToString(leg1))
++PlotLabel(legTwoLabelLocation, ToString(leg2))
 +PlotWindow(300,300)
 +PlotRemoveCoordinateAxes{}0
 ;

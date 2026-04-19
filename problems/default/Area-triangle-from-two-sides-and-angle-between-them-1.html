@@ -1,19 +1,19 @@
 <calculatorHidden>
 leg1=RandomInteger(3,10);
 leg2=RandomInteger(3,10);
-vertex1noCamouflage= (leg1, 0);
+vertexOneNoCamouflage= (leg1, 0);
 theAngleDegs=SelectAtRandom(30, 45, 60, 120, 135, 150);
 theAngle=theAngleDegs*\pi/180;
-vertex2noCamouflage=(leg2 cos{}theAngle, leg2 sin {}theAngle);
+vertexTwoNoCamouflage=(leg2 cos{}theAngle, leg2 sin {}theAngle);
 
 randomAngle=2\pi  RandomInteger{}(1,200)/RandomInteger{}(1,200) ;
 randomIsometry=MakeMatrix( ( cos randomAngle,  -sin randomAngle), (sin randomAngle , cos randomAngle));
 randomTranslation=(RandomInteger{}(1,8), RandomInteger{}(1,8));
-vertex1=randomTranslation+( randomIsometry vertex1noCamouflage^t)^t ;
-vertex2=randomTranslation+( randomIsometry vertex2noCamouflage^t)^t ;
+vertex1=randomTranslation+( randomIsometry vertexOneNoCamouflage^t)^t ;
+vertex2=randomTranslation+( randomIsometry vertexTwoNoCamouflage^t)^t ;
 labelDist=Min{}(leg1, leg2) /9;
-leg1LabelLocation=randomTranslation+( randomIsometry (vertex1noCamouflage/2 - (0,labelDist))^t)^t;
-leg2LabelLocation=randomTranslation+( randomIsometry (vertex2noCamouflage/2 -(labelDist, 0))^t)^t;
+leg1LabelLocation=randomTranslation+( randomIsometry (vertexOneNoCamouflage/2 - (0,labelDist))^t)^t;
+leg2LabelLocation=randomTranslation+( randomIsometry (vertexTwoNoCamouflage/2 -(labelDist, 0))^t)^t;
 angleLabelLocation=randomTranslation+( randomIsometry ( (labelDist*1.2) cos{}(theAngle/2),  (labelDist*1.2) sin{}(theAngle/2))^t)^t;
 TurnOffApproximations(0);
 </calculatorHidden>
