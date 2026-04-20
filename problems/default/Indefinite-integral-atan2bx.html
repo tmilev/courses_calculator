@@ -62,21 +62,21 @@ TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
 </span>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorSolution name="AlgebraAnswer">
+<calculatorHidden>
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
 "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
+</calculatorHidden>
+<calculatorHidden>  
 btwo=2b;
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
-</span>
-<span class="calculator">
+</calculatorHidden>
+\(<calculator>
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  a  \int \tan^2 (b x) {\text d} x  \\\\
@@ -87,5 +87,5 @@ EvaluateSymbols{}(
 \end{array}
 "
 )
-</span>
-</span>
+</calculator>\)
+</calculatorSolution>

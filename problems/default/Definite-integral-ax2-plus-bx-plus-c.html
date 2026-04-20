@@ -81,7 +81,7 @@ TurnOnRules
 (theIndefiniteIntegral= \int f{}x dx; x=leftPoint; theIndefiniteIntegral)_3
 </span>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
+<calculatorSolution name="AlgebraAnswer">
 <span class="calculatorHidden">
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
@@ -90,31 +90,35 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosin
 </span>
 <span class="calculatorHidden">  
 outTerm = A/a;
-nplus1= n+1;
+nplusOne= n+1;
 term = a x^2 + b x + c;
-term1a = a \left( \frac{x^{2+1}}{2+1} \right) + b \left( \frac{x^{1+1}}{1+1} \right) + c x ; 
-term1b = a \left( \frac {x^{3}}{3} \right) + b \left( \frac{x^{2}}{2} \right) + c x ;
-term1 = a \frac{rightPoint^{3}}{3} + b \frac{rightPoint^{2}}{2} + c rightPoint;
-term2 = a \frac{leftPoint^{3}}{3} + b \frac{leftPoint^{2}}{2} + c leftPoint;
-answer = term1 - term2;
+plusC = if (c>=0, EvaluateSymbols("+c"), c);
+plusB = if (b>=0, EvaluateSymbols("+b"), b);
+termOneA = a \left( \frac{x^{2+1}}{2+1} \right) + b \left( \frac{x^{1+1}}{1+1} \right) + c x ; 
+termOneB = a \left( \frac {x^{3}}{3} \right) + b \left( \frac{x^{2}}{2} \right) + c x ;
+termOne = a \frac{rightPoint^{3}}{3} + b \frac{rightPoint^{2}}{2} + c rightPoint;
+termTwo = a \frac{leftPoint^{3}}{3} + b \frac{leftPoint^{2}}{2} + c leftPoint;
+answer = termOne - termTwo;
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
 </span>
-<span class="calculator"> 
+
+\(
+<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int_{leftPoint}^{rightPoint} \left( term \right) dx &=&
-\displaystyle  \left[ a \left( \frac{x^{2+1}}{2+1} \right) +
-b \left( \frac{x^{1+1}}{1+1} \right) + c x  \right]_{leftPoint}^{rightPoint}  \\\\
-\displaystyle &=&\displaystyle  \left[ term1b \right]_{leftPoint}^{rightPoint}   &&\displaystyle \text{ }  \\\\
-\displaystyle &=&\displaystyle  \left[ a \left( \frac{rightPoint^{3}}{3} \right) +
-b \left( \frac{rightPoint^{2}}{2} \right) + c (rightPoint) \right] -
-\left[ a \left( \frac{leftPoint^{3}}{3} \right) +
-b \left( \frac{leftPoint^{2}}{2} \right) + c (leftPoint) \right]   &&\displaystyle \text{ }  \\\\
-\displaystyle &=&\displaystyle  term1 - term2  &&\displaystyle \text{ }  \\\\
-\displaystyle &=&\displaystyle  answer &&\displaystyle \text{ }  \\\\
+\displaystyle  \left[ a \left( \frac{x^{2+1}}{2+1} \right) plusB \left( \frac{x^{1+1}}{1+1} \right) plusC x  \right]_{leftPoint}^{rightPoint}  \\\\
+\displaystyle &=&\displaystyle  \left[ termOneB \right]_{leftPoint}^{rightPoint}   &&\displaystyle \text{~}  \\\\
+\displaystyle &=&\displaystyle  \left[ a \left( \frac{rightPoint^{3}}{3} \right) 
+plusB \left( \frac{rightPoint^{2}}{2} \right) plusC (rightPoint) \right] -
+\left[ a \left( \frac{leftPoint^{3}}{3} \right) 
+plusB \left( \frac{leftPoint^{2}}{2} \right) plusC (leftPoint) \right]   &&\displaystyle \text{~}  \\\\
+\displaystyle &=&\displaystyle  termOne - termTwo  &&\displaystyle \text{~}  \\\\
+\displaystyle &=&\displaystyle  answer &&\displaystyle \text{~}  \\\\
 \end{array}
 "
 )
-</span>
-</span>
+</calculator>
+\)
+</calculatorSolution>

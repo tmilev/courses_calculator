@@ -53,7 +53,7 @@ TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
 </span>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
+<calculatorSolution name="AlgebraAnswer">
 <span class="calculatorHidden">
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
@@ -75,17 +75,17 @@ diffU= a {\text d} x;
 diffX= 1/a {\text d} u;
 TurnOnRules("DistributeMultiplication");
 finalAnswer= oneovera  \frac{inTerm^{n + 1}}{n +1};
-</span>
+</span>\(
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle \int u^{n}\frac{1}{a} {\text d} u
 && {\begin{array}{l}\text{Set } u=inTerm \\\\
-{\text d} u=diffU \\ {\text d} x=diffX\end{array} }\\\\
+{\text d} u=diffU \\\\ {\text d} x=diffX\end{array} }\\\\
 &=&\displaystyle oneovera  \frac{u^{n + 1}}{n +1} + C &&\displaystyle \text{ }  \\\\
 &=&\displaystyle  finalAnswer+ C &&\displaystyle \text{ }  \\\\
 \end{array}
 "
 )
-</span>
-</span>
+</span>\)
+</calculatorSolution>

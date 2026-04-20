@@ -62,7 +62,7 @@ TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
 </span>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
+<calculatorSolution name="AlgebraAnswer">
 <span class="calculatorHidden">
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
@@ -71,16 +71,17 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 </span>
 <span class="calculatorHidden">  
 btwo=2b;
-b2 = 2*b;
+twoTimesB = 2*b;
 aoverbtwo = a/btwo;
 denom=b*(x^2)+c;
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
 </span>
-<span class="calculator"> 
+
+\(<span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int f {\text d} x&=&\displaystyle  \frac{a}{b2}  \int \frac{b2 x}{denom} {\text d} x
+\displaystyle \int f {\text d} x&=&\displaystyle  \frac{a}{twoTimesB}  \int \frac{twoTimesB x}{denom} {\text d} x
 &&\displaystyle \text{Set } w(x) = b x^2 + c \text{ so that } w'(x) = btwo x.  \\\\
 &&\displaystyle &&\displaystyle \text{Adjust the nominator of the integrand so that it equals }   w'(x)  \\\\
 &=&\displaystyle  aoverbtwo \ln \left|denom \right| + C
@@ -88,5 +89,6 @@ EvaluateSymbols{}(
 \end{array}
 "
 )
-</span>
-</span>
+</span>\)
+
+</calculatorSolution>

@@ -52,7 +52,7 @@ TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
 </span>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
+<calculatorSolution name="AlgebraAnswer">
 <span class="calculatorHidden">
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
@@ -65,25 +65,26 @@ btwo=2b;
 b2 = 2*b;
 oneOvera=1/a;
 aoverbtwo = a/btwo;
-poverqplus1 = (1/2) + 1;
-outTerm = (1/a)/poverqplus1;
+poverqplusOne = (1/2) + 1;
+outTerm = (1/a)/poverqplusOne;
 diffU= a {\text d} x;
 diffX= 1/a {\text d} u;
 integrandU=(1/a) \sqrt{u};
 inTerm = a x + b;
 TurnOnRules("DistributeMultiplication");
-finalAnswer= outTerm (inTerm)^{poverqplus1};
+finalAnswer= outTerm (inTerm)^{poverqplusOne};
 </span>
-<span class="calculator"> 
+\(
+<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  \int integrandU {\text d} u
 &&{\begin{array}{l}\text{Set } u=inTerm\\\\ {\text d} u=diffU \\\\
 {\text d} x=diffX\end{array} } \\\\
-&=&\displaystyle oneOvera  \frac{(u)^{poverqplus1}}{poverqplus1} + C    &&\displaystyle \text{ } \\\\
+&=&\displaystyle oneOvera  \frac{(u)^{poverqplusOne}}{poverqplusOne} + C    &&\displaystyle \text{ } \\\\
 &=&\displaystyle finalAnswer + C &&\displaystyle \text{ } \\\\
 \end{array}
 "
 )
-</span>
-</span>
+</calculator>\)
+</calculatorSolution>

@@ -9,12 +9,12 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosin
 a=RandomInteger{}((-5, -1),(1, 10));
 b=RandomInteger{}( (1, 20));
 c=RandomInteger{}((1, 20));
-d=RandomInteger{}((1, 20));
+xsquareCoefficient=RandomInteger{}((1, 20));
 g=RandomInteger{}( 2, 9);
 h=RandomInteger{}( -2,-10);
-theIntegral{}{{x}}= (a/sqrt(d))(arcsin(sqrt(d/c) x));
-f= a/sqrt(c - (d x^2));
-thePoint= sqrt(c/d);
+theIntegral{}{{x}}= (a/sqrt(xsquareCoefficient))(arcsin(sqrt(xsquareCoefficient/c) x));
+f= a/sqrt(c - (xsquareCoefficient x^2));
+thePoint= sqrt(c/xsquareCoefficient);
 \)
 </span>
 <span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
@@ -67,7 +67,7 @@ TurnOnRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine
 theIntegral{}x+C
 </span>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
+<calculatorSolution name="AlgebraAnswer">
 <span class="calculatorHidden">
 TurnOnRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
@@ -77,20 +77,21 @@ TurnOnRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine
 </span>
 <span class="calculatorHidden">  
 btwo=2b;
-coverd=c/d;
+coverd=c/xsquareCoefficient;
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
 </span>
+\(
 <span class="calculator">
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int f {\text d} x&=&\displaystyle  a  \int \frac {1}{\sqrt{d \left( \frac{c}{d}-x^2 \right)}} {\text d} x   \\\\
-&=&\displaystyle   \frac{a}{\sqrt{d}} \int \frac{1}{\sqrt{\left(\sqrt{coverd}\right)^2 - x^2}} {\text d} x   \\\\
-&=&\displaystyle   \frac{a}{\sqrt{d}} \arcsin \left( \frac{x}{\sqrt{coverd}} \right) + C
+\displaystyle \int f {\text d} x&=&\displaystyle  a  \int \frac {1}{\sqrt{d \left( \frac{c}{xsquareCoefficient}-x^2 \right)}} {\text d} x   \\\\
+&=&\displaystyle   \frac{a}{\sqrt{xsquareCoefficient}} \int \frac{1}{\sqrt{\left(\sqrt{coverd}\right)^2 - x^2}} {\text d} x   \\\\
+&=&\displaystyle   \frac{a}{\sqrt{xsquareCoefficient}} \arcsin \left( \frac{x}{\sqrt{coverd}} \right) + C
 &&\displaystyle \text{Using } \int \frac{1}{\sqrt{w^2 - x^2}} {\text d} x = \arcsin \left(\frac{x}{w} \right) + C\\\\
 &=&\displaystyle  finalAnswer+C \\\\
 \end{array}
 "
 )
-</span>
-</span>
+</span>\)
+</calculatorSolution>

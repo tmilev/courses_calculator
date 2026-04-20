@@ -5,7 +5,7 @@
 %UseLnInsteadOfLog
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
-"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb",IntegratePullConstant,IntegrateSinPowerNCosPowerM);
 a=RandomInteger{}((-5,-1),(1,10));
 b=RandomInteger{}( (1,15));
 c=RandomInteger{}((-5,-2), (2,5));
@@ -62,7 +62,7 @@ TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
 </span>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
+<calculatorSolution name="AlgebraAnswer">
 <span class="calculatorHidden">
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
@@ -75,7 +75,8 @@ btwo=2b;
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
 </span>
-<span class="calculator">
+
+\(<span class="calculator">
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  a  \int \frac{1}{2} (1 + \cos^2(2 \cdot b x)) {\text d} x
@@ -85,5 +86,5 @@ EvaluateSymbols{}(
 \end{array}
 "
 )
-</span>
-</span>
+</span>\)
+</calculatorSolution>

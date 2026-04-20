@@ -56,7 +56,7 @@ TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
 </span>
 
-<span class="calculatorSolution" name="AlgebraAnswer">
+<calculatorSolution name="AlgebraAnswer">
 <span class="calculatorHidden">
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
@@ -69,25 +69,26 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 btwo=2b;
 b2 = 2*b;
 aoverbtwo = a/btwo;
-poverqplus1 = (p/q) + 1;
+poverqplusone = (p/q) + 1;
 integrandU=1/a u^poverq{\text d} u;
 diffU= a {\text d} x;
 diffX= 1/a {\text d} u;
 inTerm=a x+b;
-outTerm = (1/a)/poverqplus1;
+outTerm = (1/a)/poverqplusone;
 TurnOnRules("DistributeMultiplication");
-finalAnswer=outTerm (a x + b)^{poverqplus1};
+finalAnswer=outTerm (a x + b)^{poverqplusone};
 </span>
+\(
 <span class="calculator"> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  \int integrandU
 &&{\begin{array}{l}\text{Set } u=inTerm \\\\
-{\text d} u=diffU \\ {\text d} x=diffX\end{array} } \\\\
-&=&\displaystyle  \frac{1}{a}  \frac{u^{poverqplus1}}{poverqplus1} + C    &&\displaystyle \text{ } \\\\
+{\text d} u=diffU \\\\ {\text d} x=diffX\end{array} } \\\\
+&=&\displaystyle  \frac{1}{a}  \frac{u^{poverqplusone}}{poverqplusone} + C    &&\displaystyle \text{ } \\\\
 &=&\displaystyle   finalAnswer+ C    &&\displaystyle \text{ } \\\\
 \end{array}
 "
 )
-</span>
-</span>
+</span>\)
+</calculatorSolution>
