@@ -3,6 +3,7 @@ Determine whether the sequence converges, and if convergent, compute the limit. 
 <calculatorHidden>
 %UseLnInsteadOfLog
 TurnOffApproximations(0);
+TurnOffRules(ConvertShortDenominatorToNegativePower, CommonDenominatorOneNonFraction, AddTerms);
 a=1/(RandomInteger{}(2,5));
 b=RandomInteger{}((-7,-1),(1,7));
 c=RandomInteger{}((1,5));
