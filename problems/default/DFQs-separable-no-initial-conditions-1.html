@@ -13,9 +13,11 @@ thePoint=0;
 initialY= (x=thePoint; finalAnswer)_2;
 lowY=Min(f{}(-2), f{}(-1 ), f{}(0 ),f{}(1 ),f{}(2));
 highY=Max(f{}(-2), f{}(-1 ), f{}(0 ),f{}(1 ),f{}(2));
+dfqplot =PlotDirectionField( (1,rightPart), (-2,lowY*1.2),(2,highY*1.2), (15,2 Floor (|lowY-highY|*1.2) ),0.3, blue,0.3)+PlotSetId("dfqplot");
+
 </calculatorHidden>
 <calculatorShowToUserOnly>
-PlotDirectionField( (1,rightPart), (-2,lowY*1.2),(2,highY*1.2), (15,2 Floor (|lowY-highY|*1.2) ),0.3, blue,0.3);
+    dfqplot
 </calculatorShowToUserOnly>
 <br>
 Solve the separable differential equation 
@@ -39,9 +41,7 @@ CompareFunctionsNumerically(AlgebraAnswerOne, finalAnswer, \sqrt{|a|}+1, \sqrt{|
 <br>
 <calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
-Plot2D(AlgebraAnswerOne,-2,2,red,2)+
-PlotDirectionField( (1,rightPart), (-2,lowY*1.2),(2,highY*1.2), (20,20),0.3, blue,0.3)
-+PlotWindow(300,300);
+    dfqplot+Plot2D(AlgebraAnswerOne,-2,2,red,2)
 </calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
 \displaystyle

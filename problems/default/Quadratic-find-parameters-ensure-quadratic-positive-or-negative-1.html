@@ -40,10 +40,9 @@ theAnswer-AlgebraAnswer==0;
 EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
 %PlotShowJavascriptOnly
  plotOneParam{}(AlgebraAnswer_1,orange)  
-+plotOneParam{}(2/3AlgebraAnswer_1 + 1/3 AlgebraAnswer_2,orange)  
-+plotOneParam{}(1/3AlgebraAnswer_1 + 2/3 AlgebraAnswer_2, orange)  
 +plotOneParam{}(AlgebraAnswer_2, orange)  
-+PlotGrid{}0+PlotSetId("theCanvas");
++plotOneParam{}(kPlot, red) + PlotGrid{}0 + PlotSetId("theCanvas")
++PlotGrid{}0;
 
 </span>
 
@@ -51,8 +50,8 @@ EnsureExpressionDependsOnlyOn(AlgebraAnswer, none);
 theAnswer
 </span>
 <br>
-<span class="calculator">
+<calculator>
 plotOneParam{}(kPlot, red) + PlotGrid{}0 + PlotSetId("theCanvas");
-</span>
+</calculator>
 
 

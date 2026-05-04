@@ -21,7 +21,8 @@ thePoint=-D/(b a) ;
 initialY=0;
 </calculatorHidden>
 <calculatorShowToUserOnly>
-PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3);
+    PlotViewRectangle((leftX,lowY),(rightX,highY))+
+PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)+PlotSetId("directionfieldplot");
 </calculatorShowToUserOnly>
 <br>
 Solve the separable differential equation 
@@ -45,11 +46,13 @@ CompareFunctionsNumerically(AlgebraAnswerOne, finalAnswer, leftX, rightX, 20, 0.
 <br>
 <calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
+    PlotViewRectangle((leftX,lowY),(rightX,highY))+
+
 Plot2D(AlgebraAnswerOne,leftX,rightX,red,2)
 +
 PlotWindow(300,300)
 +
-PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3);
+PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)+PlotSetId("directionfieldplot");
 </calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
 \displaystyle

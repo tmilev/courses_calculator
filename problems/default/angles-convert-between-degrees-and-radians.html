@@ -1,23 +1,23 @@
 <calculatorHidden>
 TurnOffApproximations(0);
 TurnOffRules("DegreesToRadians", "ConvertShortDenominatorToNegativePower");
-angle1inDegrees=SelectAtRandom(30,45,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360);
-angle2inDegrees=RandomInteger(1,700);
-angle1inRadians=\pi RandomInteger{}(1,10) /SelectAtRandom{}(1,2,3,4,6,8,12);
-angle2inRadians=RandomInteger{}(1,10) /SelectAtRandom{}(1,2,3,4,6,8,12);
+angleOneinDegrees=SelectAtRandom(30,45,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360);
+angleTwoInDegrees=RandomInteger(1,700);
+angleOneInRadians=\pi RandomInteger{}(1,10) /SelectAtRandom{}(1,2,3,4,6,8,12);
+angleTwoInRadians=RandomInteger{}(1,10) /SelectAtRandom{}(1,2,3,4,6,8,12);
 </calculatorHidden>
 Convert from degrees to radians. Do not approximate, use the constant \(\pi\).
 <br>
 <answerCalculatorHighlight>
 <calculator>
 \displaystyle
-angle1inDegrees^\circ
+angleOneinDegrees^\circ
 </calculator>\(=\)</answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswerOne" buttons="algebra, degrees">
-AlgebraAnswerOne==\pi*angle1inDegrees/180
+AlgebraAnswerOne==\pi*angleOneinDegrees/180
 </calculatorAnswer>
 <calculatorAnswerOnGiveUp>
-\pi*angle1inDegrees/180
+\pi*angleOneinDegrees/180
 </calculatorAnswerOnGiveUp>
 
 <calculatorCommentsBeforeSubmission>
@@ -29,13 +29,13 @@ Convert from degrees to radians.
 <br>
 <answerCalculatorHighlight><calculator>
 \displaystyle
-angle2inDegrees^\circ
+angleTwoInDegrees^\circ
 </calculator>\(=\)</answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswerTwo" buttons="algebra, degrees, angles">
-AlgebraAnswerTwo==\pi*angle2inDegrees/180;
+AlgebraAnswerTwo==\pi*angleTwoInDegrees/180;
 </calculatorAnswer>
 <calculatorAnswerOnGiveUp>
-\pi*angle2inDegrees/180
+\pi*angleTwoInDegrees/180
 </calculatorAnswerOnGiveUp>
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariablesIncludeNamedConstants(AlgebraAnswerTwo,\pi,none);
@@ -47,17 +47,17 @@ Convert from radians to degrees. Use the degrees symbol.
 <br>
 <answerCalculatorHighlight><calculator>
 \displaystyle
-angle1inRadians
+angleOneInRadians
 </calculator>\(=\)</answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswerThree" buttons="algebra, degrees, angles">
 (TurnOnRules("ConvertShortDenominatorToNegativePower");
 
-AlgebraAnswerThree==(180 angle1inRadians/\pi)^\circ
+AlgebraAnswerThree==(180 angleOneInRadians/\pi)^\circ
 )_2
 </calculatorAnswer>
 <calculatorAnswerOnGiveUp>
 TurnOnRules("ConvertShortDenominatorToNegativePower");
-(180 angle1inRadians/\pi)^\circ 
+(180 angleOneInRadians/\pi)^\circ 
 </calculatorAnswerOnGiveUp>
 <calculatorCommentsBeforeInterpretation>
 TurnOffRules("DegreesToRadians","ConvertShortDenominatorToNegativePower");
@@ -72,13 +72,13 @@ Convert from radians to degrees. Use the degrees symbol.
 <br>
 <answerCalculatorHighlight><calculator>
 \displaystyle
-angle2inRadians
+angleTwoInRadians
 </calculator>\(=\)</answerCalculatorHighlight>
 <calculatorAnswer id="AlgebraAnswerFour" buttons="algebra, degrees, angles">
-AlgebraAnswerFour==(180 angle2inRadians/\pi)^\circ 
+AlgebraAnswerFour==(180 angleTwoInRadians/\pi)^\circ 
 </calculatorAnswer>
 <calculatorAnswerOnGiveUp>
-(180 angle2inRadians/\pi)^\circ 
+(180 angleTwoInRadians/\pi)^\circ 
 </calculatorAnswerOnGiveUp>
 <calculatorCommentsBeforeInterpretation>
 TurnOffRules("DegreesToRadians","ConvertShortDenominatorToNegativePower");

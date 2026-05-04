@@ -20,10 +20,11 @@ sdNumFactorQuad=MakeExpression(MakeRationalFunction (sdNum/sdNumFactorLin));
 inflectionPoints = Sort(SolveFor( x, sdNumFactorQuad));
 concaveUpIntervals = (inflectionPoints_1, inflectionPoints_2)\cup (inflectionPoints_3, \infty)  ;
 TurnOffRules("DistributeMultiplication");
+mainPlot = Plot2D(f{}x,-6, 6, "red" )+PlotWindow(300,300)+PlotSetId("canvasfunctionplot");
 </calculatorHidden>
 
 <calculatorShowToUserOnly>
-Plot2D(f{}x,-6, 6, "red" )+PlotWindow(300,300)
+mainPlot
 </calculatorShowToUserOnly>
 <br>
 The function is given by the following formula.
@@ -66,9 +67,8 @@ userIncreaseInterval== increaseInterval;
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(userIncreaseInterval,none);
 %PlotShowJavascriptOnly
-Plot2D(f{}x, -6,6,  "red" )
+mainPlot
 +Plot2D(f{}x, userIncreaseInterval, "blue",5 )
-+PlotWindow(300,300)
 ;
 if (IsReal{}(userIncreaseInterval_1) and IsReal{}(userIncreaseInterval_2),
 if ( (userIncreaseInterval_1)>(userIncreaseInterval_2), 
@@ -92,9 +92,8 @@ xMax - increaseInterval_2==0;
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(xMax,none);
 %PlotShowJavascriptOnly
-Plot2D(f{}x, -6,6, "red" )
+mainPlot
 +PlotPoint((xMax, f{}xMax), "blue" )
-+PlotWindow(300,300)
 ;
 </calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
@@ -112,9 +111,9 @@ xMin- increaseInterval_1==0;
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(xMin,none);
 %PlotShowJavascriptOnly
-Plot2D(f{}x, -6,6, "red" )
+mainPlot
+
 +PlotPoint((xMin, f{}xMin), "blue" )
-+PlotWindow(300,300)
 ;
 </calculatorCommentsBeforeSubmission>
 
@@ -136,9 +135,9 @@ CompareIntervalsNumerically( userConcaveUp,concaveUpIntervals, 0.000000001)
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(userConcaveUp,\infty);
 %PlotShowJavascriptOnly
-Plot2D(f{}x, -6,6, "red" )
+mainPlot
+
 +Plot2D(f{}x, userConcaveUp, "blue",5 )
-+PlotWindow(300,300);
 </calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
 concaveUpIntervals
@@ -155,7 +154,8 @@ Inflection points:
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(userInflectionPoints,none);
 %PlotShowJavascriptOnly
-Plot2D(f{}x, -6,6, "red" )+
+mainPlot
++
 if (Length(userInflectionPoints)==3, 
 PlotPoint((userInflectionPoints_1, f{}userInflectionPoints_1), "blue" )
 +PlotPoint((userInflectionPoints_2, f{}userInflectionPoints_2), "blue" )

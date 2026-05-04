@@ -6,9 +6,9 @@ bCoeff=RandomInteger{}( -5,5);
 cCoeff=RandomInteger{}( (-3,3));
 leftPoint=RandomInteger{}(-4,4);
 rightPoint=leftPoint+RandomInteger{}( (1,5));
-curve1= x^2+bCoeff x +cCoeff;
-curve2= aCoeff (x-leftPoint)(x-rightPoint) + curve1;
-theDifference=curve1-curve2;
+curveOne= x^2+bCoeff x +cCoeff;
+curveTwo= aCoeff (x-leftPoint)(x-rightPoint) + curveOne;
+theDifference=curveOne-curveTwo;
 theInt=\int theDifference dx;
 TurnOffRules
 ("IntegratePowerRule", 
@@ -17,20 +17,20 @@ TurnOffRules
 </calculatorHidden>
 <calculatorShowToUserOnly>
 PlotFill(
-Plot2D(curve1, leftPoint,rightPoint)
-+Plot2D(curve2, rightPoint, leftPoint)
+Plot2D(curveOne, leftPoint,rightPoint)
++Plot2D(curveTwo, rightPoint, leftPoint)
 , cyan)
-+Plot2D(curve1, leftPoint-1,rightPoint+1)
-+Plot2D(curve2, leftPoint-1,rightPoint+1)
++Plot2D(curveOne, leftPoint-1,rightPoint+1)
++Plot2D(curveTwo, leftPoint-1,rightPoint+1)
 +PlotWindow(300,300)
 </calculatorShowToUserOnly>
 <br>
 Find the area locked between the curve \(y=
 <calculator noTags='true'>
-\displaystyle curve1
+\displaystyle curveOne
 </calculator>\) and the curve \(y=
 <calculator noTags='true'>
-\displaystyle curve2
+\displaystyle curveTwo
 </calculator>\). Do not include units in your answer.
 <br>
 <answerCalculatorHighlight>Answer: </answerCalculatorHighlight>
@@ -65,7 +65,7 @@ We start by finding the intersection of the two curves.
 \(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-curve1&=&curve2 &&\text{Transfer~all~terms~to~one~side}\\\\
+curveOne&=&curveTwo &&\text{Transfer~all~terms~to~one~side}\\\\
 theDifference&=&0&& \displaystyle \text{Solve~using~}x_1,x_2=\frac{-b\pm \sqrt{b^2-4 a c}}{2a}\\\\
 x_1&=&leftPoint\\\\
 x_2&=&rightPoint
@@ -76,15 +76,15 @@ x_2&=&rightPoint
 Since both parabolas open upwards, the ``steeper'' (higher leading coefficient) 
 parabola must be the lower one (as seen on the computer generated plot). 
 Therefore, between the two intersection points, we have that 
-<calculator> curve1>curve2</calculator>, 
+<calculator> curveOne>curveTwo</calculator>, 
 and so the area \(A\) between the two curves becomes:
 <br>
 \(<calculator> 
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-A&=&\displaystyle \int_{leftPoint}^{rightPoint} \left|curve1-\left(curve2\right) \right|{\text d} x && curve1>curve2,
+A&=&\displaystyle \int_{leftPoint}^{rightPoint} \left|curveOne-\left(curveTwo\right) \right|{\text d} x && curveOne>curveTwo,
 \text{so~we~can~drop~the~absolute~values}\\\\
-&=&\displaystyle \int_{leftPoint}^{rightPoint} \left(curve1-\left(curve2\right) \right){\text d} x\\\\
+&=&\displaystyle \int_{leftPoint}^{rightPoint} \left(curveOne-\left(curveTwo\right) \right){\text d} x\\\\
 &=&\displaystyle \int_{leftPoint}^{rightPoint} \left(theDifference \right){\text d} x\\\\
 &=&\displaystyle \left[theInt\right]_{leftPoint}^{rightPoint} \\\\
 &=&\displaystyle \left(rightSub\right)-\left(leftSub\right)\\\\

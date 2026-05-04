@@ -36,12 +36,12 @@ EnsureExpressionDependsOnlyOn(AlgebraAnswer, divergent);
 <calculatorSolution>
 <br>
 <calculatorHidden>
-indexLeft0=startIndex+a+0;
-indexLeft1=startIndex+a+1;
-indexLeft2=startIndex+a+2;
-indexRight0=startIndex+b+0;
-indexRight1=startIndex+b+1;
-indexRight2=startIndex+b+2;
+indexLeftZero=startIndex+a+0;
+indexLeftOne=startIndex+a+1;
+indexLeftTwo=startIndex+a+2;
+indexRightZero=startIndex+b+0;
+indexRightOne=startIndex+b+1;
+indexRightTwo=startIndex+b+2;
 firstDen=n+a;
 </calculatorHidden>
 \(
@@ -51,25 +51,25 @@ EvaluateSymbols{}("\displaystyle
 \displaystyle \sum_{n=startIndex}^\infty f&=&\displaystyle  \sum_{n=startIndex}^\infty 
 \left( \frac{c}{firstDen}-\frac{c}{n+b}\right) && \text{partial~fractions} \\\\
 &=&\displaystyle
-\left(\frac{c}{indexLeft0}-\frac{c}{indexRight0} \right)+
-\left(\frac{c}{indexLeft1}-\frac{c}{indexRight1} \right)+
-\left(\frac{c}{indexLeft2}-\frac{c}{indexRight2} \right)+
+\left(\frac{c}{indexLeftZero}-\frac{c}{indexRightZero} \right)+
+\left(\frac{c}{indexLeftOne}-\frac{c}{indexRightOne} \right)+
+\left(\frac{c}{indexLeftTwo}-\frac{c}{indexRightTwo} \right)+
 \dots
 +
 \left( \frac{c}{n+a}-\frac{c}{n+b}\right) 
 +\dots\\\\
 &=& \displaystyle
 \lim_{n\to \infty}\left(
-\left(\frac{c}{indexLeft0} -\cancel{\frac{c}{indexRight0}} \right)+
-\left(\cancel{\frac{c}{indexLeft1}}-\cancel{\frac{c}{indexRight1}} \right)+
-\left(\cancel{\frac{c}{indexLeft2}}-\cancel{\frac{c}{indexRight2}} \right)+
+\left(\frac{c}{indexLeftZero} -\cancel{\frac{c}{indexRightZero}} \right)+
+\left(\cancel{\frac{c}{indexLeftOne}}-\cancel{\frac{c}{indexRightOne}} \right)+
+\left(\cancel{\frac{c}{indexLeftTwo}}-\cancel{\frac{c}{indexRightTwo}} \right)+
 \dots
 +
 \left(\cancel{\frac{c}{n+a}}- \frac{c}{n+b}\right) 
 \right)
 \\\\
 &=& \displaystyle
-\lim_{n\to \infty}\left(\frac{c}{indexLeft0}-\frac{c}{n+b}\right)
+\lim_{n\to \infty}\left(\frac{c}{indexLeftZero}-\frac{c}{n+b}\right)
 \\\\
 &=&\displaystyle theAnswer
 \end{array}")
