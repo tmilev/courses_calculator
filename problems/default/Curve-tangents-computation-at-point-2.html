@@ -16,11 +16,12 @@ theY=aY t^3+bY t^2 + cY t + gY ;
 thePoint=(t=theT; (theX,theY))_2;
 derivativeX=(theDer= d/dt theX; t=theT; theDer)_3;
 derivativeY=(theDer= d/dt theY; t=theT; theDer)_3;
-1/(|derivativeX|+|derivativeY|)
+1/(|derivativeX|+|derivativeY|);
+plot  = PlotCurve( (theX,theY),  -3.5,3.5 ) +PlotPoint(thePoint, blue) +PlotSetId("parametriccurveplot");
+
 </calculatorHidden>
 <calculatorShowToUserOnly>
-PlotCurve( (theX,theY),  -3.5,3.5 ) +PlotPoint(thePoint, blue);
-</calculatorShowToUserOnly> 
+plot</calculatorShowToUserOnly> 
 <br>
 Compute an equation of the tangent line to the curve 
 <br>
@@ -48,8 +49,7 @@ derivativeX (y-thePoint_2)= derivativeY (x-thePoint_1)
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,y);
 %PlotShowJavascriptOnly
-PlotCurve( (theX,theY),  -3.5,3.5 )
-+PlotPoint(thePoint, blue)
+plot
 +(
 cfY=CoefficientOf(y, EqualityToArithmeticExpression{}AlgebraAnswer);
 cfX=CoefficientOf(x, EqualityToArithmeticExpression{}AlgebraAnswer);

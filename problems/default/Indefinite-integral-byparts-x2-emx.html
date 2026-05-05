@@ -64,14 +64,14 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 btwo=2b;
 b2 = 2*b;
 px = p*x;
-outTerm1 = 1/m;
-outTerm2 = (e^(mx))/m;
+outTermOne = 1/m;
+outTermTwo = (e^(mx))/m;
 inTerm = -2/m;
 inTerm2 = -1/m;
 term1 = (x^2)/m;
 term2 = -(2/(m^2))x;
 term3 = 2/(m^3);
-term12 = (x^2) e^{m x} + inTerm;
+termOneTwo = (x^2) e^{m x} + inTerm;
 finalterm = term1+term2+term3;
 denominator = b + c(cos(px));
 TurnOnRules("DistributeMultiplication");
@@ -83,19 +83,19 @@ EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  \frac{1}{m}  \int {x^2}(m e^{m x}) {\text d} x
 &&\displaystyle \text{Note~that~} m e^{m x} {\text d} x = {\text d} \left( e^{m x} \right)  \\\\
-&=&\displaystyle  outTerm1  \int {x^2} {\text d} \left(e^{m x} \right)
+&=&\displaystyle  outTermOne  \int {x^2} {\text d} \left(e^{m x} \right)
 &&\displaystyle \text{Set } u = x^2 \text{~and~}  v = e^{m x}  \\\\
-&=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - \int e^{m x} {\text d} (x^2) \right]
+&=&\displaystyle  outTermOne \left[{x^2} e^{m x} - \int e^{m x} {\text d} (x^2) \right]
 &&\displaystyle \text{Using } \int u dv = uv - \int v du\\\\
-&=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - 2 \int x e^{m x} {\text d} x \right]
+&=&\displaystyle  outTermOne \left[{x^2} e^{m x} - 2 \int x e^{m x} {\text d} x \right]
 &&\displaystyle \text{ }\\\\
-&=&\displaystyle  outTerm1 \left[{x^2} e^{m x} - \frac{2}{m} \int x (m e^{m x}) {\text d} x \right]
+&=&\displaystyle  outTermOne \left[{x^2} e^{m x} - \frac{2}{m} \int x (m e^{m x}) {\text d} x \right]
 &&\displaystyle \text{ }\\\\
-&=&\displaystyle  outTerm1 \left[term12 \int x {\text d} \left( e^{m x} \right) \right]
+&=&\displaystyle  outTermOne \left[termOneTwo \int x {\text d} \left( e^{m x} \right) \right]
 &&\displaystyle \text{Set~} u = x \text{~and~}  v = e^{m x}\\\\
-&=&\displaystyle outTerm1 \left[term12 \left(x e^{m x} - \int e^{m x} {\text d} x \right) \right]
+&=&\displaystyle outTermOne \left[termOneTwo \left(x e^{m x} - \int e^{m x} {\text d} x \right) \right]
 &&\displaystyle \text{Again, using~} \int u dv = uv - \int v du \\\\
-&=&\displaystyle outTerm1 \left[term12 \left(x e^{m x} - \frac{e^{m x}}{m}\right) \right] + C    
+&=&\displaystyle outTermOne \left[termOneTwo \left(x e^{m x} - \frac{e^{m x}}{m}\right) \right] + C    
 &&\displaystyle \text{ }\\\\
 &=&\displaystyle  e^{m x} \left[finalterm \right] + C  &&\displaystyle \text{ }\\\\
 \end{array}")
