@@ -4,10 +4,10 @@ Solve.
 TurnOffApproximations(0);
 TurnOffRules ("LogBase");
 %UseLnInsteadOfLog
-a= RandomInteger((-10,-1),(2,10));
-b= RandomInteger((-10,-1),(1,10));
+coefficientA= RandomInteger((-10,-1),(2,10));
+coefficientB= RandomInteger((-10,-1),(1,10));
 A=RandomInteger(-2,25);
-leftSide=e^{a x+ b};
+leftSide=e^{coefficientA x+ coefficientB};
 </calculatorHidden>
 <br>
 \(<calculator noTags="true">
@@ -22,7 +22,7 @@ Thaw
 (
 if (A==0, (AlgebraAnswer== nosolution) or (AlgebraAnswer==no solution) or (AlgebraAnswer==nosolutions) or (AlgebraAnswer==no solutions),
 if (A<0, AlgebraAnswer==norealsolution or (AlgebraAnswer==no real solution) or (AlgebraAnswer==norealsolutions) or (AlgebraAnswer==no real solutions),
-Freeze( |AlgebraAnswer-(ln(A)-b)/a| <0.000000001)
+Freeze( |AlgebraAnswer-(ln(A)-coefficientB)/coefficientA| <0.000000001)
 )
 )
 )
@@ -40,19 +40,19 @@ TurnOffRules ("LogBase");
 Thaw (
 if (A==0, "no solution", 
 if (A<0, "no real solution",
-Freeze ((ln(A)-b)/a))
+Freeze ((ln(A)-coefficientB)/coefficientA))
 )
 )
 </calculatorAnswerOnGiveUp>
 
 <calculatorSolution><br>
 <calculatorHidden>
-theLinFun= a x+ b;
+theLinFun= coefficientA x+ coefficientB;
 simplifiedLnQuote= if(A==1, EvaluateSymbols "=0","");
 simplifiedLn=Thaw (if (A>0,Freeze( \ln A), ""  ));
-theLinTerm=a x;
-rightSideBeforeDivision=simplifiedLn-b;
-finalAnswer=Thaw (if (A>0,Freeze( (ln(A)-b)/a), ""  ))
+theLinTerm=coefficientA x;
+rightSideBeforeDivision=simplifiedLn-coefficientB;
+finalAnswer=Thaw (if (A>0,Freeze( (ln(A)-coefficientB)/coefficientA), ""  ))
 </calculatorHidden>
 <calculator>
 Thaw(

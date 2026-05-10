@@ -1,43 +1,51 @@
 <span class="setCalculatorExamProblem">
 </span>
-<span class="calculatorHidden">
+<calculatorHidden>
 \(
 %UseLnInsteadOfLog
-TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
+TurnOffRules(
+"ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", 
+"ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
-"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+"IntegratePartialFractions", "CommonDenominator", 
+"CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", 
+"IntegrateBlockIIb", "IntegrateBlockIIIb",
+IntegratePullConstant,IntegrateTanPowerNSecPowerM);
 a=RandomInteger{}((-5,-1),(1,10));
-b=RandomInteger{}( (1,20));
+b=RandomInteger{}( (2,20));
 c=RandomInteger{}((-5,-2), (2,5));
 g=RandomInteger{}( 2, 9);
 h=RandomInteger{}( -2,-10);
 theIntegral{}{{x}}= (a/b)(tan(b x) - (b x));
 f=a tan^2(b x);
 \)
-</span>
-<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
+</calculatorHidden>
+<calculatorCommentsBeforeInterpretation name="AlgebraAnswer">
 \(
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
-"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
+"ExpressTanViaSineCosine", "ExpressCotViaSineCosine",
+IntegrateTanPowerNSecPowerM,IntegratePullConstant
+);
 SeparatorBetweenSpans;
 \)
-</span>
+</calculatorCommentsBeforeInterpretation>
 
 <br>
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
 or else your answer <b><span style="color:red">will be marked wrong</span></b>.
 <br>
-<span class="calculator">
+<calculator>
 \(\displaystyle \int f dx  \) 
-</span>=
-<textarea class="calculatorAnswer" id="AlgebraAnswer">
+</calculator>=
+<calculatorAnswer id="AlgebraAnswer">
 \(
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
-"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
+"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",IntegrateTanPowerNSecPowerM,
 "IntegratePartialFractions");
 
 CompareExpressionsNumerically {}(
@@ -47,20 +55,20 @@ and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
 \)
-</textarea>
+</calculatorAnswer>
 
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 \(
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
 \)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnAbsInsteadOfLog
 TurnOnRules("DistributeMultiplication");
 theIntegral{}x+C
-</span>
+</calculatorAnswerOnGiveUp>
 
 <calculatorSolution name="AlgebraAnswer">
 <calculatorHidden>

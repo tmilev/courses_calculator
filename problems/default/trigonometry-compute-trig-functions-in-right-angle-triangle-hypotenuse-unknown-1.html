@@ -1,6 +1,6 @@
 <span class="setCalculatorExamProblem">
 </span>
-<span class="calculatorHidden">
+<calculatorHidden>
 leg1=RandomInteger(1,10);
 leg2=RandomInteger(1,10);
 hypo=sqrt(leg1^2+leg2^2);
@@ -17,8 +17,8 @@ leg2LabelLocation=randomTranslation+( randomIsometry (leg1+heelSize/2, leg2/2)^t
 hypoLabelLocation= randomTranslation+( randomIsometry (leg1/2-heelSize, leg2/2+heelSize)^t)^t;
 angleLabelLocation=randomTranslation+( randomIsometry ( (heelSize*1.2) cos{}(theAngle/2),  (heelSize*1.2) sin{}(theAngle/2))^t)^t;
 TurnOffApproximations(0);
-</span>
-<span class="calculator">
+</calculatorHidden>
+<calculator>
 PlotPath((randomTranslation, vertex1, vertex2, randomTranslation), blue)+
 PlotPath(heel, red)+
 PlotCurve( randomTranslation+(randomIsometry* (heelSize cos{} t, heelSize sin{} t)^T)^T, 0, theAngle)+
@@ -26,7 +26,7 @@ PlotLabel(angleLabelLocation, "\u03b8")+
 PlotLabel(leg1LabelLocation, leg1)+
 PlotLabel(leg2LabelLocation, leg2)
 ;
-</span>
+</calculator>
 <br>
 Let \(\theta\) be the angle indicated in the plot above. Find the indicated trigonometric functions. 
 <ul>
