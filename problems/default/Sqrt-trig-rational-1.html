@@ -2,29 +2,27 @@
 </span>
 Compute the derivative of the function. 
 
-<span class="calculatorHidden">
-\(
+<calculatorHidden>
 a=RandomInteger((2,6));
 b=RandomInteger((-5,-1), (1,5));
 c=RandomInteger( (1,5));
 TurnOffRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-\)</span>
+</calculatorHidden>
 <br>
-<span class="calculator">
-\(\displaystyle f{}{{x}}=\sqrt[a]{b\sin x + c}  \) 
-</span>.
-<span class="calculatorHidden">
+<calculator>
+\displaystyle f{}{{x}}=\sqrt[a]{b\sin x + c}
+</calculator>.
+<calculatorHidden>
 TurnOnRules("sqrt", "ConvertShortDenominatorToNegativePower", "CommonDenominatorOneNonFraction", "CommuteIfUnivariate");
-</span>
+</calculatorHidden>
 <br>
-Answer: \(f'(x)=\)<textarea class="calculatorAnswer" id="AlgebraAnswer">
-\(
+<answerCalculatorHighlight>\(f'(x)=\)</answerCalculatorHighlight> 
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 CompareFunctionsNumerically(d/dx(f{}x), AlgebraAnswer, 0, -c/(2b), 50, 0.0001);
-\)
-</textarea>
-<span class="calculatorAnswerOnGiveUp">
+</calculatorAnswer>
+<calculatorAnswerOnGiveUp>
 d/dx (f{}x)
-</span>
+</calculatorAnswerOnGiveUp>
 
 
 

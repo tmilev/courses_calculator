@@ -20,10 +20,11 @@ highY=5;
 theVLength=0.3;
 thePoint=0;
 initialY=f{}thePoint;
+plot = PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)
++ PlotViewRectangle((leftX, lowY), (rightX, highY))+PlotWindow(300,300)+PlotSetId("directionfieldPlot");
 </calculatorHidden>
 <calculatorShowToUserOnly>
-PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)
-+ PlotViewRectangle((leftX, lowY), (rightX, highY))
+plot
 </calculatorShowToUserOnly>
 <br>
 Solve the separable differential equation 
@@ -47,10 +48,8 @@ CompareFunctionsNumerically(AlgebraAnswerOne, finalAnswer, leftX, rightX, 20, 0.
 <br>
 <calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
-Plot2D(AlgebraAnswerOne,leftX,rightX,red,2)+
-PlotDirectionField( (1,rightPart), (leftX,lowY),(rightX,highY), (20,20 ),theVLength, blue,0.3)+
-PlotViewRectangle((leftX, lowY), (rightX, highY))+
-PlotWindow(300,300);
+plot+Plot2D(AlgebraAnswerOne,leftX,rightX,red,2)
+
 </calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
 \displaystyle

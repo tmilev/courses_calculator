@@ -4,11 +4,13 @@ b=RandomInteger(3,6);
 %UseLnInsteadOfLog
 f{}{{x}}=x e^{a x} ;
 theCFs=CoefficientsPowersOf(x, CoefficientOf(e^{a x},d/dx f{}x));
+plot =Plot2D(f{}x,-1, 1/b, "red" )
++PlotWindow(300,300) +PlotSetId("canvas1");
+
 </calculatorHidden>
 
 <calculatorShowToUserOnly>
-Plot2D(f{}x,-1, 1/b, "red" )
-+PlotWindow(300,300)
+plot 
 </calculatorShowToUserOnly>
 <br>
 Find the values of \(x\) for which the maximum and minimum value of \(f\) is attained over the given interval. 
@@ -34,9 +36,7 @@ EnsureExpressionDependsOnlyOn(AlgebraAnswerMax,none)
 answer.</span> Instead, use square roots to give an exact answer. To write \(\sqrt{5}\) you need to type sqrt(5) or \sqrt(5). 
 <calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
-Plot2D(f{}x,-1, 1/b, "red" )
-+PlotWindow(300,300)
-+PlotPoint((AlgebraAnswerMax, f{}AlgebraAnswerMax), "blue");
+plot+PlotPoint((AlgebraAnswerMax, f{}AlgebraAnswerMax), "blue");
 </calculatorCommentsBeforeSubmission>
 
 <calculatorAnswerOnGiveUp>
@@ -55,8 +55,7 @@ EnsureExpressionDependsOnlyOn(AlgebraAnswerMin,none)
 </calculatorCommentsBeforeSubmission>
 <calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
-Plot2D(f{}x,-1, 1/b, "red" )
-+PlotWindow(300,300)
+plot
 +PlotPoint((AlgebraAnswerMin, f{}AlgebraAnswerMin), "blue")
 </calculatorCommentsBeforeSubmission>
 

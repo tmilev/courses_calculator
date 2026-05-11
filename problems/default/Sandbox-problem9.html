@@ -1,7 +1,6 @@
 <span class="setCalculatorExamProblem">
 </span>
-<span class="calculatorHidden">
-\(
+<calculatorHidden>
 %UseLnInsteadOfLog
 %UseLnAbsInsteadOfLog
 %UseLnInsteadOfLog
@@ -20,16 +19,14 @@ f=(Numerator{}fDenMultipliedOut)/( (g x-a)(x-b)(x-c)  );
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-\)
-</span>
+</calculatorHidden>
 
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b>. 
 <br>
-<span class="calculator">
-\(\displaystyle \int f dx  \)  
-</span>= 
-<textarea class="calculatorAnswer" id="AlgebraAnswer">
-\(
+<calculator>
+\displaystyle \int f dx
+</calculator>= 
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra, trig">
 (
 ( 
 TurnOnRules
@@ -45,31 +42,26 @@ AlgebraAnswer-theIntegral,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 ) _2
-\)
-</textarea>
-<span class="calculatorCommentsBeforeInterpretation">
-\(
+</calculatorAnswer>
+<calculatorCommentsBeforeInterpretation>
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
 SeparatorBetweenSpans;
-\)
-</span>
+</calculatorCommentsBeforeInterpretation>
 
 
 
  
-<span class="calculatorCommentsBeforeSubmission">
-\(
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
-\)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 TurnOnRules
 ( "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions");
 \int f dx+C
-</span>
+</calculatorAnswerOnGiveUp>

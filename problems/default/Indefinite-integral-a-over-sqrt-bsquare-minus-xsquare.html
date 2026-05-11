@@ -1,7 +1,7 @@
 <span class="setCalculatorExamProblem">
 </span>
-<span class="calculatorHidden">
-\(
+<calculatorHidden>
+
 %UseLnInsteadOfLog
 TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
@@ -15,27 +15,24 @@ h=RandomInteger{}( -2,-10);
 theIntegral{}{{x}}= (a/sqrt(xsquareCoefficient))(arcsin(sqrt(xsquareCoefficient/c) x));
 f= a/sqrt(c - (xsquareCoefficient x^2));
 thePoint= sqrt(c/xsquareCoefficient);
-\)
-</span>
-<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
-\(
+</calculatorHidden>
+<calculatorCommentsBeforeInterpretation name="AlgebraAnswer">
+
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
 "IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
 SeparatorBetweenSpans;
-\)
-</span>
+</calculatorCommentsBeforeInterpretation>
 
 <br>
 Integrate. Do not forget to <b><span style="color:red">include +C</span> (case sensitive) <span style="color:red">in your answer</span></b> 
 or else your answer <b><span style="color:red">will be marked wrong</span></b>.
 <br>
-<span class="calculator">
+<calculator>
 \(\displaystyle \int f dx  \) 
-</span>=
-<textarea class="calculatorAnswer" id="AlgebraAnswer">
-\(
+</calculator>=
+<calculatorAnswer id="AlgebraAnswer" buttons="algebra">
 (
 TurnOnRules
 ("DistributeMultiplication", "IntegratePowerRule",
@@ -48,44 +45,41 @@ AlgebraAnswer-theIntegral{}x,
 and
 (EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C,x)=="")
 )_2
-\)
-</textarea>
+</calculatorAnswer>
 
  
-<span class="calculatorCommentsBeforeSubmission">
+<calculatorCommentsBeforeSubmission>
 \(
 EnsureExpressionDependsMandatoryVariables(AlgebraAnswer,C, x)
 \)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnAbsInsteadOfLog
 TurnOnRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
 
 theIntegral{}x+C
-</span>
+</calculatorAnswerOnGiveUp>
 
 <calculatorSolution name="AlgebraAnswer">
-<span class="calculatorHidden">
+<calculatorHidden>
 TurnOnRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine",
 "ExpressCotViaSineCosine", "DistributeMultiplication", "IntegratePowerRule",
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
 "IntegratePartialFractions", "CommonDenominator",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
-</span>
-<span class="calculatorHidden">  
 btwo=2b;
 coverd=c/xsquareCoefficient;
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
-</span>
+</calculatorHidden>
 \(
-<span class="calculator">
+<calculator>
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
-\displaystyle \int f {\text d} x&=&\displaystyle  a  \int \frac {1}{\sqrt{d \left( \frac{c}{xsquareCoefficient}-x^2 \right)}} {\text d} x   \\\\
+\displaystyle \int f {\text d} x&=&\displaystyle  a  \int \frac {1}{\sqrt{xsquareCoefficient \left( \frac{c}{xsquareCoefficient}-x^2 \right)}} {\text d} x   \\\\
 &=&\displaystyle   \frac{a}{\sqrt{xsquareCoefficient}} \int \frac{1}{\sqrt{\left(\sqrt{coverd}\right)^2 - x^2}} {\text d} x   \\\\
 &=&\displaystyle   \frac{a}{\sqrt{xsquareCoefficient}} \arcsin \left( \frac{x}{\sqrt{coverd}} \right) + C
 &&\displaystyle \text{Using } \int \frac{1}{\sqrt{w^2 - x^2}} {\text d} x = \arcsin \left(\frac{x}{w} \right) + C\\\\
@@ -93,5 +87,5 @@ EvaluateSymbols{}(
 \end{array}
 "
 )
-</span>\)
+</calculator>\)
 </calculatorSolution>

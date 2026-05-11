@@ -67,10 +67,10 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosin
 <calculatorHidden>  
 outTerm = A/a;
 nplus1= n+1;
-term1 = a/2;
-term2 = rightPoint^2;
-term3 = leftPoint^2;
-answer = term1(term2 - term3);
+termOne = a/2;
+termTwo = rightPoint^2;
+termThree = leftPoint^2;
+answer = termOne(termTwo - termThree);
 sideLeft= a*leftPoint;
 sideRight=a*rightPoint;
 width=rightPoint-leftPoint;
@@ -86,8 +86,8 @@ EvaluateSymbols{}(
 \displaystyle \int_{leftPoint}^{rightPoint} a x dx   &=&
 \displaystyle  a \left[ \frac{x^{1+1}}{1+1} \right]_{leftPoint}^{rightPoint}  \\\\
 \displaystyle &=&\displaystyle  \frac{a}{2} \left[ x^{2} \right]_{leftPoint}^{rightPoint}   &&\displaystyle \text{ }  \\\\
-\displaystyle &=&\displaystyle  term1 \left[ rightPoint^2 - leftPoint^2 \right]  &&\displaystyle \text{ }  \\\\
-\displaystyle &=&\displaystyle  term1 \left[ term2 - term3 \right]  &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  termOne \left[ rightPoint^2 - leftPoint^2 \right]  &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  termOne \left[ termTwo - termThree \right]  &&\displaystyle \text{ }  \\\\
 \displaystyle &=&\displaystyle  answer &&\displaystyle \text{ }  \\\\
 \end{array}
 ")

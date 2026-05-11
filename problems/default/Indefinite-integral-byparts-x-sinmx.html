@@ -1,8 +1,14 @@
 <calculatorHidden>
 %UseLnInsteadOfLog
-TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
-"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
-"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+TurnOffRules(
+ExpressSecViaCosine, ExpressCscViaSine, ExpressTanViaSineCosine, 
+ExpressCotViaSineCosine, DistributeMultiplication, IntegratePowerRule,
+ConvertShortDenominatorToNegativePower, IntegrateBlockIb,
+IntegratePartialFractions, CommonDenominator, CommonDenominatorOneNonFraction, 
+"sqrt", IntegrateBlockIIaIIIa, IntegrateBlockIIb, IntegrateBlockIIIb,
+IntegratePullConstant, IntegrateSinPowerNCosPowerM,
+IntegrateXPowerNTrigonometryAxPlusB
+);
 a = RandomInteger{}((-15, -2),(2, 15));
 b = RandomInteger{}((1, 20));
 m = RandomInteger{}((-15, -2), (2, 15));

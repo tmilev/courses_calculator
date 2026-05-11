@@ -5,12 +5,14 @@ b= RandomInteger(1,4);
 c= RandomInteger(1,4);
 f{}{{x}}=(x-a)(x-(a+b))(x-(a+b+c));
 theCFs=CoefficientsPowersOf(x,d/dx f{}x);
+plot =Plot2D(f{}x,a, a+b+c, "red" )
++PlotWindow(300,300)
++PlotGrid 0+PlotSetId("canvas1");
+
 </calculatorHidden>
 
 <calculatorShowToUserOnly>
-Plot2D(f{}x,a, a+b+c, "red" )
-+PlotWindow(300,300)
-+PlotGrid 0
+plot
 </calculatorShowToUserOnly>
 
 <br>
@@ -41,10 +43,7 @@ EnsureExpressionDependsOnlyOn(AlgebraAnswerMax,none)
 answer.</span> Instead, use square roots to give an exact answer. To write \(\sqrt{5}\) you need to type sqrt(5) or \sqrt(5). 
 <calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
-Plot2D(f{}x,a, a+b+c, "red" )
-+PlotWindow(300,300)
-+PlotPoint((AlgebraAnswerMax, f{}AlgebraAnswerMax), "blue")
-+PlotGrid 0
+plot+PlotPoint((AlgebraAnswerMax, f{}AlgebraAnswerMax), "blue")
 </calculatorCommentsBeforeSubmission>
 
 <calculatorAnswerOnGiveUp>
@@ -63,10 +62,7 @@ EnsureExpressionDependsOnlyOn(AlgebraAnswerMin,none)
 
 <calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
-Plot2D(f{}x,a, a+b+c, "red" )
-+PlotWindow(300,300)
-+PlotPoint((AlgebraAnswerMin, f{}AlgebraAnswerMin), "blue")
-+PlotGrid 0
+plot+PlotPoint((AlgebraAnswerMin, f{}AlgebraAnswerMin), "blue")
 </calculatorCommentsBeforeSubmission>
 
 <calculatorAnswerOnGiveUp>

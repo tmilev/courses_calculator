@@ -16,9 +16,14 @@ lowY=b/a *1.95 ;
 highY=-b/a ;
 numYs=20;
 theVLength=0.1;
+plot = 
+PlotDirectionField( (1,rightPart), (-2,lowY),(2,highY), (20,20 ),theVLength, blue,0.3)
++PlotSetId("directionFieldPlot")
++PlotWindow(300,300)
+;
 </calculatorHidden>
 <calculatorShowToUserOnly>
-PlotDirectionField( (1,rightPart), (-2,lowY),(2,highY), (20,20 ),theVLength, blue,0.3);
+plot
 </calculatorShowToUserOnly>
 <br>
 Solve the separable differential equation 
@@ -42,9 +47,7 @@ CompareFunctionsNumerically(AlgebraAnswerOne, finalAnswer, \sqrt{|a|}+1, \sqrt{|
 <br>
 <calculatorCommentsBeforeSubmission>
 %PlotShowJavascriptOnly
-Plot2D(AlgebraAnswerOne,-2,2,red,2)
-+PlotWindow(300,300)
-+PlotDirectionField( (1,rightPart), (-2,lowY),(2,highY), (20,20 ),theVLength, blue,0.3);
+plot+Plot2D(AlgebraAnswerOne,-2,2,red,2)
 </calculatorCommentsBeforeSubmission>
 <calculatorAnswerOnGiveUp>
 \displaystyle

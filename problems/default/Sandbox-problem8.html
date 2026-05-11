@@ -14,7 +14,7 @@ theFinalSlope=(answer = (d/dx theFun;
 x=a;
 y=b;
 answer
-)_4
+)_4;
 </calculatorHidden>
 
 <br>
@@ -30,7 +30,7 @@ answer
 <br>
 <calculatorShowToUserOnly>
 PlotImplicit(theFun, (-10, -10), (10, 10), (50,50),2600)
-+PlotWindow(300,300)
++PlotWindow(300,300)+PlotPoint((a,b), blue)
 +PlotSetId("canvas1")
 </calculatorShowToUserOnly>
 
@@ -55,7 +55,7 @@ if (not Contains(AlgebraAnswer,StringToAtom("=")),
 Freeze(
 %PlotShowJavascriptOnly
 PlotImplicit(theFun, (-10, -10), (10, 10), (42,42), 2000)
-+PlotWindow(300,300)
++PlotWindow(300,300)+PlotPoint((a,b), blue)
 +
 Plot2D( (theCF=CoefficientOf(y, EqualityToArithmeticExpression{}AlgebraAnswer); y=0;
 EqualityToArithmeticExpression{}( AlgebraAnswer)/(-theCF))_3, -5,5, "blue" )

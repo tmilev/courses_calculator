@@ -11,7 +11,7 @@ thePoint=(t=theT; (theX,theY))_2;
 1/ (sin{}(b theT));
 </calculatorHidden>
 <calculatorShowToUserOnly>
-PlotCurve( (theX,theY), 0, 2\pi ) +PlotPoint(thePoint, blue);
+PlotCurve( (theX,theY), 0, 2\pi ) +PlotPoint(thePoint, blue) +PlotSetId("curvePlot");
 </calculatorShowToUserOnly> 
 <br>
 Compute an equation of the tangent line to the curve 
@@ -40,7 +40,7 @@ at the parameter value \(t=<calculator noTags="true">theT</calculator>\).
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,x,y);
 %PlotShowJavascriptOnly
-PlotCurve( (theX,theY), 0, 2\pi ) +PlotPoint(thePoint, blue)
+PlotCurve( (theX,theY), 0, 2\pi ) +PlotPoint(thePoint, blue) +PlotSetId("curvePlot")
 +Plot2D ( ( theCF=CoefficientOf(y, EqualityToArithmeticExpression{}AlgebraAnswer); y=0;EqualityToArithmeticExpression{}( AlgebraAnswer)/(-theCF) )_3, -1,1, "blue" )
 </calculatorCommentsBeforeSubmission>
 

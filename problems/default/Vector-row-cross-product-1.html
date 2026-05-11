@@ -1,7 +1,7 @@
 <span class="setCalculatorExamProblem">
 </span>
-<span class="calculatorHidden">
-\(
+<calculatorHidden>
+
 %UseLnInsteadOfLog
 TurnOffRules("AddSequences", "ScalarTimesSequence");
 u=(RandomInteger{}(-3,3) ,RandomInteger{}(-3,3),RandomInteger{}(-3,3)) ;
@@ -16,55 +16,45 @@ b=RandomInteger{}((-10,-1),(1,10));
 c=RandomInteger{}((-10,-1),(1,10));
 theActualAnswer=  u \times  v;
 TurnOffRules("crossProduct");
-\)
-</span>
-<span class="calculatorShowToUserOnly">
-\(
-PlotSegment(zeroV, u , blue,2  )+
+plot=PlotSegment(zeroV, u , blue,2  )+
 PlotSegment(zeroV, v ,red,2 )+
-PlotCoordinateSystem((-3,-3,-3),(3,3,3));
-\) 
-</span>
+PlotCoordinateSystem((-3,-3,-3),(3,3,3)) +PlotSetId("canvas1");
 
-<span class="calculatorCommentsBeforeInterpretation" name="AlgebraAnswer">
-\(
+</calculatorHidden>
+<calculatorShowToUserOnly>
+plot
+</calculatorShowToUserOnly>
+
+<calculatorCommentsBeforeInterpretation name="AlgebraAnswer">
 TurnOffRules("crossProduct");
-\)
-</span>
+</calculatorCommentsBeforeInterpretation>
 
 <br>
-Simplify the linear combination to a single vector. 
+Compute the cross product.
 <br>
-<span class="calculator">
+<calculator>
 \(\displaystyle u \times v\) 
-</span>=
-<textarea class="calculatorAnswer" id="AlgebraAnswer" mqMatrices="true">
-\(
+</calculator>=
+<calculatorAnswer id="AlgebraAnswer" mqMatrices="true">
 TurnOnRules("AddSequences", "ScalarTimesSequence");
 AlgebraAnswer==theActualAnswer
-\)
-</textarea>
+</calculatorAnswer>
 
  
-<span class="calculatorCommentsBeforeSubmission">
-\(
+<calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,none)
-\)
-</span>
+</calculatorCommentsBeforeSubmission>
 
-<span class="calculatorCommentsBeforeSubmission">
-\(%PlotShowJavascriptOnly
-PlotSegment(zeroV, u, blue,2 )
-+PlotSegment(zeroV, v, red,2 )
-+PlotSegment(zeroV, AlgebraAnswer, green,3 )
-+PlotCoordinateSystem((-3,-3,-3),(3,3,3));
-\)
-</span>
+<calculatorCommentsBeforeSubmission>
+%PlotShowJavascriptOnly
+plot
++PlotSegment(zeroV, AlgebraAnswer, purple,3 )
+</calculatorCommentsBeforeSubmission>
 
 
-<span class="calculatorAnswerOnGiveUp">
+<calculatorAnswerOnGiveUp>
 %UseLnAbsInsteadOfLog
 TurnOnRules("AddSequences", "ScalarTimesSequence");
 theActualAnswer
-</span>
+</calculatorAnswerOnGiveUp>
 

@@ -1,8 +1,14 @@
 <calculatorHidden>
 %UseLnInsteadOfLog
-TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine","DistributeMultiplication", "IntegratePowerRule",
-"ConvertShortDenominatorToNegativePower", "IntegrateBlockIb",
-"IntegratePartialFractions", "CommonDenominator", "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa", "IntegrateBlockIIb", "IntegrateBlockIIIb");
+TurnOffRules(
+ExpressSecViaCosine, ExpressCscViaSine, ExpressTanViaSineCosine, 
+ExpressCotViaSineCosine, DistributeMultiplication, IntegratePowerRule,
+ConvertShortDenominatorToNegativePower, IntegrateBlockIb,
+IntegratePartialFractions, CommonDenominator, CommonDenominatorOneNonFraction, 
+"sqrt", IntegrateBlockIIaIIIa, IntegrateBlockIIb, IntegrateBlockIIIb,
+IntegrateSinPowerNCosPowerM,
+IntegrateXPowerNTrigonometryAxPlusB
+);
 a=RandomInteger{}((-15,-2),(2,15));
 b=RandomInteger{}((1,30));
 m=RandomInteger{}((-15,-2), (2,15));
@@ -37,7 +43,8 @@ and
 TurnOffRules
 ("DistributeMultiplication", "IntegratePowerRule", 
 "ConvertShortDenominatorToNegativePower", "IntegrateBlockIb", 
-"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", "ExpressTanViaSineCosine", "ExpressCotViaSineCosine");
+"IntegratePartialFractions", "ExpressSecViaCosine", "ExpressCscViaSine", 
+ExpressTanViaSineCosine, ExpressCotViaSineCosine);
 </calculatorCommentsBeforeInterpretation>
  
 <calculatorCommentsBeforeSubmission>

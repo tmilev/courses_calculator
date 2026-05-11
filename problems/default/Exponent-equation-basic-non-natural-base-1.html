@@ -46,7 +46,8 @@ Freeze ((log_theBase (theRightSide)-theB)/theA))
 )
 </calculatorAnswerOnGiveUp>
 
-<calculatorSolution><br>
+<calculatorSolution>
+<br>
 <calculatorHidden>
 theLinFun= theA x+ theB;
 simplifiedLn=Thaw (if (theRightSide>0,Freeze(  \log_theBase theRightSide), ""  ));
@@ -59,14 +60,20 @@ finalAnswer=Thaw (if (theRightSide >0,Freeze( (\log_theBase(theRightSide)-theB)/
 <calculator>
 Thaw(
 if (theRightSide<0, 
-EvaluateSymbols "Exponents (of real numbers) are positive and so the equation \\(leftSide=theRightSide\\) has no real solutions (our final answer).
-Please note that exponents of complex non-real numbers can be negative, so the answer ``no solution'' would be wrong. "
-,
-if (theRightSide==0, "Exponents with non-zero base never produce negative outputs (including over the complex numbers). 
+EvaluateSymbols{}( 
+"Exponents (of real numbers) are positive and so the equation 
+ <span class=\"mathcalculator\">leftSide =theRightSide</span> has no real solutions (our final answer).
+Please note that exponents of complex non-real numbers can be negative, 
+so the answer ``no solution'' would be wrong. "
+),
+if (theRightSide==0, 
+"Exponents with non-zero base never produce negative outputs 
+(including over the complex numbers). 
 Our final answer is ``no solution''. " ,
 Freeze(
 EvaluateSymbols "
-When solving exponential equations with two terms, it is a good idea to keep the two terms on separate sides of the equation.
+When solving exponential equations with two terms, it is a good idea to keep 
+the two terms on separate sides of the equation.
 <br>
 \(\begin{array}{rcll}
 \displaystyle leftSide &=& \displaystyle  theRightSide\\\\
@@ -84,8 +91,10 @@ When solving exponential equations with two terms, it is a good idea to keep the
 
 <ul>
 <li>If there is more than one answer, separate the answers by commas. </li>
-<li>If there are no real solutions, write <b>no real solution</b> (you can ignore the space bars and write <b>norealsolution</b>).</li>
-<li>If there aren't any solutions (even over the complex numbers), write <b>no solution</b> (you can ignore the space bars and write <b>nosolution</b>).</li>  
+<li>If there are no real solutions, write <b>no real solution</b>
+(you can ignore the space bars and write <b>norealsolution</b>).</li>
+<li>If there aren't any solutions (even over the complex numbers), 
+write <b>no solution</b> (you can ignore the space bars and write <b>nosolution</b>).</li>  
 </ul>
 
 

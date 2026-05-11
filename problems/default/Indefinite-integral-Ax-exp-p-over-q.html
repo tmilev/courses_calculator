@@ -65,8 +65,8 @@ TurnOffRules("ExpressSecViaCosine", "ExpressCscViaSine",
 "CommonDenominatorOneNonFraction", "sqrt", "IntegrateBlockIIaIIIa");
 </calculatorHidden>
 <calculatorHidden>  
-poverqplus1 = poverq + 1;
-outTerm = A/(poverqplus1);
+poverqplusOne = poverq + 1;
+outTerm = A/(poverqplusOne);
 TurnOnRules("DistributeMultiplication");
 finalAnswer=theIntegral{}x;
 </calculatorHidden>
@@ -74,7 +74,7 @@ finalAnswer=theIntegral{}x;
 EvaluateSymbols{}(
 "\begin{array}{rcll|l}
 \displaystyle \int f {\text d} x&=&\displaystyle  A \frac{x^{(poverq+1)}}{poverq+1} + C &&\displaystyle \text{ }  \\\\
-\displaystyle &=&\displaystyle  outTerm x^{poverqplus1} + C &&\displaystyle \text{ }  \\\\
+\displaystyle &=&\displaystyle  outTerm x^{poverqplusOne} + C &&\displaystyle \text{ }  \\\\
 \end{array}
 "
 )
