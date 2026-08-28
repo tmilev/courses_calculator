@@ -3262,6 +3262,10 @@ HomeworkSolutionSource: freecalc/modules/series/homework/telescoping-series-1-so
 
 Topic: Infinite recurring decimals
 
+Title: Decimal notation to rational number, simple
+Problem: problems/Series-add-infinite-decimal-to-rational-simple-1.html
+SlidesSource: freecalc/modules/series/series-geometric-ex4
+
 Title: Decimal notation to rational number
 Problem: problems/Series-add-infinite-decimal-to-rational-1.html
 SlidesSource: freecalc/modules/series/series-geometric-ex4
