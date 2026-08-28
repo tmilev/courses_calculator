@@ -44,3 +44,34 @@ a/10+(1/10000) *b* 1/(1-1/1000)
 <calculatorCommentsBeforeSubmission>
 EnsureExpressionDependsOnlyOn(AlgebraAnswer,divergent);
 </calculatorCommentsBeforeSubmission>
+
+<calculatorSolution>
+<calculatorHidden>
+    aDividedByTen = DoubleValue{}(a/10);
+    finalAnswerTimesTen = a+(1/1000) *b* 1/(1-1/1000);
+    finalAnswer = a/10+(1/10000) *b* 1/(1-1/1000);
+    
+</calculatorHidden>
+\(
+<calculator>
+EvaluateSymbols("
+\begin{array}{rcl}
+aDividedByTen\overline{b}&=&aDividedByTen+0.0\overline{b}\\\\
+&=&\frac{a}{10}+ \frac{1}{10}\cdot 0.\overline{b}\\\\
+&=&\frac{a}{10}+ \frac{1}{10}\cdot \left(\frac{b}{1000}+\frac{b}{1000^2}+\dots \right)\\\\
+&=&\frac{a}{10}+ \frac{1}{10}\cdot\frac{b}{1000}\cdot {\color{red}{\left(1+\frac{1}{1000}+\frac{1}{1000^2}+\dots \right)}}\\\\
+&=&\frac{a}{10}+ \frac{1}{10}\cdot\frac{b}{1000}\cdot {\color{red}{ \frac{1}{1-\frac{1}{1000}}}}\\\\
+&=&\frac{a}{10}+ \frac{1}{10}\cdot\frac{b}{1000}\cdot  \frac{1}{1-\frac{1}{1000}}\\\\
+&=&\frac{1}{10}\left( a+\frac{b}{1000}\cdot  \frac{1}{1-\frac{1}{1000}}\right)\\\\
+&=&\frac{1}{10}\left( a+\frac{b}{1000}\cdot  \frac{1}{\frac{999}{1000}}\right)\\\\
+&=&\frac{1}{10}\left( a+\frac{b}{\cancel{1000}}\cdot  \frac{\cancel{1000}}{999}\right)\\\\
+&=&\frac{1}{10}\left( a+\frac{b}{999}\right)\\\\
+&=&\frac{1}{10}\left( \frac{a\cdot 999 + b}{999}\right)\\\\
+&=&\frac{1}{10}\cdot finalAnswerTimesTen\\\\
+&=&finalAnswer\\\\
+\end{array}
+"
+)
+</calculator>
+\)
+</calculatorSolution>
