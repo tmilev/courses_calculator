@@ -28,7 +28,23 @@ c
 <calculatorAnswer id="AlgebraAnswerZero" buttons="none" layout="horizontal">
 c/9 -AlgebraAnswerZero ==0
 </calculatorAnswer>
-
+<calculatorSolution name= "AlgebraAnswerZero">
+\(
+<calculator noTags="true">
+EvaluateSymbols("
+\begin{array}{rcl}
+0.\overline{c}&=&0.c c c\dots\\\\
+&=&\frac{c}{10}+\frac{c}{100}+\frac{c}{1000}+\dots \\\\
+&=&\frac{c}{10}\left(1+\frac{1}{10}+\frac{1}{100}+\dots\right)\\\\
+&=&\frac{c}{10}\cdot \frac{1}{1-\frac{1}{10}}\\\\
+&=&\frac{c}{10}\cdot \frac{1}{\frac{9}{10}}\\\\
+&=&\frac{c}{10}\cdot \frac{10}{9}\\\\
+&=&\frac{c}{9}
+\end{array}
+");        
+</calculator>
+\)
+</calculatorSolution>
 
 <calculatorAnswerOnGiveUp>
 c/9

@@ -547,7 +547,7 @@ Title: Exponent-equation-reduced-to-quadratic-4.html
 Problem: problems/Exponent-equation-reduced-to-quadratic-4.html
 
 Title: series-add-infinite-decimal-to-rational-simple-1.html
-Problem: problems/series-add-infinite-decimal-to-rational-simple-1.html
+Problem: problems/Series-add-infinite-decimal-to-rational-simple-1.html
 
 Title: Indefinite-integral-constant-1.html
 Problem: problems/Indefinite-integral-constant-1.html

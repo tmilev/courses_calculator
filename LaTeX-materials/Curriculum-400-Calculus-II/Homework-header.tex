@@ -108,6 +108,12 @@ Due #2 at \deadline}}%
 
 
 
+\providecommand{\refBad}[3]{%
+\ifthenelse{\equal{#1}{??}}%
+{#2}%
+{#3}%
+}%example usage: \refBad{\ref{eqMacLaurinDef}}{their definition}{their definition (Definition \ref{eqMacLaurinDef})}
+
 
 
 \renewcommand{\fcProblemRef}{\theenumi.\alph*}

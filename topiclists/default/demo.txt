@@ -7,7 +7,7 @@ Section: Decimal notation
 Topic: Recurring decimal notation
 
 Title: Convert recurring decimal notation to rational number.
-Problem: problems/series-add-infinite-decimal-to-rational-simple-1.html
+Problem: problems/Series-add-infinite-decimal-to-rational-simple-1.html
 
 Title: [Advanced topic] Convert recurring decimal notation to rational number.
 Problem: problems/Series-add-infinite-decimal-to-rational-1.html

@@ -3262,13 +3262,18 @@ HomeworkSolutionSource: freecalc/modules/series/homework/telescoping-series-1-so
 
 Topic: Infinite recurring decimals
 
+Title: Rational numbers to decimal notation
+SlidesSource: freecalc/modules/series/series-rational-to-repeating-decimal-algorithm
+SlidesSource: freecalc/modules/series/series-rational-to-repeating-decimal-example-1
+SlidesSource: freecalc/modules/series/series-rational-to-repeating-decimal-example-2
+
 Title: Decimal notation to rational number, simple
 Problem: problems/Series-add-infinite-decimal-to-rational-simple-1.html
-SlidesSource: freecalc/modules/series/series-geometric-ex4
+SlidesSource: freecalc/modules/series/series-geometric-repeating-decimal-as-rational-example-1
 
 Title: Decimal notation to rational number
 Problem: problems/Series-add-infinite-decimal-to-rational-1.html
-SlidesSource: freecalc/modules/series/series-geometric-ex4
+SlidesSource: freecalc/modules/series/series-geometric-repeating-decimal-as-rational-example-1
 
 Topic: Geometric progressions
 
