@@ -2280,7 +2280,7 @@ Title: \(\S\) Area between radical of linear function and linear function
 Problem: problems/Area-between-radical-of-linear-and-linear-function-1.html
 
 Title: \(\S\) Area between exponent and parabola with numeric curve intersection
-Problem: problems/Area-between-exponent-and-parabola-numeric-cuve-intersection-1.html
+Problem: problems/Area-between-exponent-and-parabola-numeric-curve-intersection-1.html
 
 BundleEnd: Integration_Basics_AreasBetweenCurvesWithSubstitutionRule_ExercisesAndTheory
 
@@ -3104,7 +3104,7 @@ HomeworkSolutionSource: freecalc/modules/parametric-curves/homework/curve-length
 HomeworkSource: freecalc/modules/parametric-curves/homework/curve-length-2
 
 Title: Curve visualization cardiods as families of curves
-Problem: problems/Cuve-visualization-cardiods-as-families-of-curves-1.html
+Problem: problems/Curve-visualization-cardiods-as-families-of-curves-1.html
 
 Topic: Tangents to parametric curves in Cartesian coordinates
 Title: Tangent computation, part 1
